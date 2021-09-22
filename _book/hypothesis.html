@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 Formulating a hypothesis | A concise guide to reproducible research using secondary data</title>
+  <meta name="description" content="Data Science Campus - A study guide for reproducible research using secondary (health care) data" />
+  <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 Formulating a hypothesis | A concise guide to reproducible research using secondary data" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Data Science Campus - A study guide for reproducible research using secondary (health care) data" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 Formulating a hypothesis | A concise guide to reproducible research using secondary data" />
+  
+  <meta name="twitter:description" content="Data Science Campus - A study guide for reproducible research using secondary (health care) data" />
+  
+
+<meta name="author" content="Maryna Ivets, Eva Goetjes, Katharina Blankart" />
+
+
+<meta name="date" content="2021-09-21" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="intro.html"/>
+<link rel="next" href="designstudy.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Reproducible research using 2ndary data</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>A study guide to empirical research in economics and management using secondary data</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#objective"><i class="fa fa-check"></i>Objective</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#learning-objectives"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#structure-of-the-study-guide"><i class="fa fa-check"></i>Structure of the study guide</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#this-is-a-living-document"><i class="fa fa-check"></i>This is a living document</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="acknowledgements.html"><a href="acknowledgements.html"><i class="fa fa-check"></i>Acknowledgements</a></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction to reproducible research</a><ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#what-is-reproducible-research"><i class="fa fa-check"></i><b>1.1</b> What is reproducible research?</a></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#why-you-as-a-student-and-researcher-should-care-about-reproducible-research"><i class="fa fa-check"></i><b>1.2</b> Why you, as a student and researcher, should care about reproducible research?</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="intro.html"><a href="intro.html#avoid-common-biases-that-lead-to-biased-or-false-research-results"><i class="fa fa-check"></i><b>1.2.1</b> Avoid common biases that lead to biased or false research results</a></li>
+<li class="chapter" data-level="1.2.2" data-path="intro.html"><a href="intro.html#increase-productivity-of-your-work-and-the-work-of-the-scientific-community-by-performing-reproducible-research"><i class="fa fa-check"></i><b>1.2.2</b> Increase productivity of your work and the work of the scientific community by performing reproducible research</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#main-steps-to-produce-reproducible-research"><i class="fa fa-check"></i><b>1.3</b> Main steps to produce reproducible research</a></li>
+<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#secondary-health-care-data"><i class="fa fa-check"></i><b>1.4</b> Secondary (health care) data</a></li>
+<li class="chapter" data-level="1.5" data-path="intro.html"><a href="intro.html#creating-an-environment-for-productive-research-projects"><i class="fa fa-check"></i><b>1.5</b> Creating an environment for productive research projects</a></li>
+<li class="chapter" data-level="1.6" data-path="intro.html"><a href="intro.html#resources-box"><i class="fa fa-check"></i><b>1.6</b> Resources Box</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="hypothesis.html"><a href="hypothesis.html"><i class="fa fa-check"></i><b>2</b> Formulating a hypothesis</a><ul>
+<li class="chapter" data-level="2.1" data-path="hypothesis.html"><a href="hypothesis.html#basic-steps-to-formulate-a-hypothesis"><i class="fa fa-check"></i><b>2.1</b> Basic steps to formulate a hypothesis</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="hypothesis.html"><a href="hypothesis.html#what-is-a-hypothesis"><i class="fa fa-check"></i><b>2.1.1</b> What is a hypothesis?</a></li>
+<li class="chapter" data-level="2.1.2" data-path="hypothesis.html"><a href="hypothesis.html#how-do-you-develop-a-research-question-and-formulate-a-hypothesis"><i class="fa fa-check"></i><b>2.1.2</b> How do you develop a research question and formulate a hypothesis?</a></li>
+<li class="chapter" data-level="2.1.3" data-path="hypothesis.html"><a href="hypothesis.html#develop-a-hypothesis"><i class="fa fa-check"></i><b>2.1.3</b> Develop a Hypothesis</a></li>
+<li class="chapter" data-level="2.1.4" data-path="hypothesis.html"><a href="hypothesis.html#identify-relevant-literature"><i class="fa fa-check"></i><b>2.1.4</b> Identify Relevant Literature</a></li>
+<li class="chapter" data-level="2.1.5" data-path="hypothesis.html"><a href="hypothesis.html#research-question-or-literature-review-a-hen-and-egg-problem"><i class="fa fa-check"></i><b>2.1.5</b> Research question or literature review, a hen and egg problem?</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="hypothesis.html"><a href="hypothesis.html#resources-box-1"><i class="fa fa-check"></i><b>2.2</b> Resources box</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="hypothesis.html"><a href="hypothesis.html#how-to-develop-strong-research-questions"><i class="fa fa-check"></i><b>2.2.1</b> How to develop strong research questions</a></li>
+<li class="chapter" data-level="2.2.2" data-path="hypothesis.html"><a href="hypothesis.html#identify-relevant-literature-from-major-general-interest-and-field-literature"><i class="fa fa-check"></i><b>2.2.2</b> Identify relevant literature from major general interest and field literature</a></li>
+<li class="chapter" data-level="2.2.3" data-path="hypothesis.html"><a href="hypothesis.html#assess-the-quality-of-a-journal-article"><i class="fa fa-check"></i><b>2.2.3</b> Assess the quality of a journal article</a></li>
+<li class="chapter" data-level="2.2.4" data-path="hypothesis.html"><a href="hypothesis.html#investigate-how-a-journal-article-is-connected-to-other-works"><i class="fa fa-check"></i><b>2.2.4</b> Investigate how a journal article is connected to other works</a></li>
+<li class="chapter" data-level="2.2.5" data-path="hypothesis.html"><a href="hypothesis.html#organize-your-literature"><i class="fa fa-check"></i><b>2.2.5</b> Organize your literature</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="hypothesis.html"><a href="hypothesis.html#example-hellerstein-1998"><i class="fa fa-check"></i><b>2.3</b> Example: Hellerstein (1998)</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="hypothesis.html"><a href="hypothesis.html#relevance-of-the-topic---escalating-health-expenditures"><i class="fa fa-check"></i><b>2.3.1</b> <strong>Relevance of the topic - escalating health expenditures</strong></a></li>
+<li class="chapter" data-level="2.3.2" data-path="hypothesis.html"><a href="hypothesis.html#development-of-a-research-question---identifying-the-role-of-physician-practice-in-choosing-generic-drugs"><i class="fa fa-check"></i><b>2.3.2</b> <strong>Development of a research question - identifying the role of physician practice in choosing generic drugs</strong></a></li>
+<li class="chapter" data-level="2.3.3" data-path="hypothesis.html"><a href="hypothesis.html#hypothesis---insurance-status-drives-generic-drug-use"><i class="fa fa-check"></i><b>2.3.3</b> <strong>Hypothesis - insurance status drives generic drug use</strong></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="designstudy.html"><a href="designstudy.html"><i class="fa fa-check"></i><b>3</b> Designing the Study</a><ul>
+<li class="chapter" data-level="3.1" data-path="designstudy.html"><a href="designstudy.html#basic-steps-in-designing-your-study"><i class="fa fa-check"></i><b>3.1</b> Basic steps in designing your study</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="designstudy.html"><a href="designstudy.html#clarify-your-study-goal-association-causation-counterfactuals"><i class="fa fa-check"></i><b>3.1.1</b> Clarify your study goal: association, causation, counterfactuals</a></li>
+<li class="chapter" data-level="3.1.2" data-path="designstudy.html"><a href="designstudy.html#develop-a-causal-model-and-identify-estimable-effects"><i class="fa fa-check"></i><b>3.1.2</b> Develop a causal model and identify estimable effects</a></li>
+<li class="chapter" data-level="3.1.3" data-path="designstudy.html"><a href="designstudy.html#develop-the-empirical-strategy-to-investigate-causal-effects"><i class="fa fa-check"></i><b>3.1.3</b> Develop the empirical strategy to investigate causal effects</a></li>
+<li class="chapter" data-level="3.1.4" data-path="designstudy.html"><a href="designstudy.html#investigate-suitable-source-data"><i class="fa fa-check"></i><b>3.1.4</b> Investigate suitable source data</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="designstudy.html"><a href="designstudy.html#resources-box-2"><i class="fa fa-check"></i><b>3.2</b> Resources box</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="designstudy.html"><a href="designstudy.html#key-terminology-in-causal-inference-based-on-matthay_alternative_2020"><i class="fa fa-check"></i><b>3.2.1</b> Key terminology in causal inference based on <span class="citation">Matthay et al. (<span>2020</span>)</span></a></li>
+<li class="chapter" data-level="3.2.2" data-path="designstudy.html"><a href="designstudy.html#openly-available-textbooks-and-resources-on-econometrics-with-a-causal-inference-focus"><i class="fa fa-check"></i><b>3.2.2</b> Openly-available textbooks and resources on econometrics with a causal inference focus</a></li>
+<li class="chapter" data-level="3.2.3" data-path="designstudy.html"><a href="designstudy.html#drawing-causal-diagrams"><i class="fa fa-check"></i><b>3.2.3</b> Drawing Causal Diagrams</a></li>
+<li class="chapter" data-level="3.2.4" data-path="designstudy.html"><a href="designstudy.html#replication-examples"><i class="fa fa-check"></i><b>3.2.4</b> Replication examples</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="designstudy.html"><a href="designstudy.html#example-hellerstein-1998-1"><i class="fa fa-check"></i><b>3.3</b> Example: Hellerstein (1998)</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="run-study.html"><a href="run-study.html"><i class="fa fa-check"></i><b>4</b> Running the study and collecting the data</a><ul>
+<li class="chapter" data-level="4.1" data-path="run-study.html"><a href="run-study.html#basic-steps-when-running-the-study-and-collecting-the-data"><i class="fa fa-check"></i><b>4.1</b> Basic steps when running the study and collecting the data</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="run-study.html"><a href="run-study.html#identify-secondary-data-sources"><i class="fa fa-check"></i><b>4.1.1</b> Identify secondary data sources</a></li>
+<li class="chapter" data-level="4.1.2" data-path="run-study.html"><a href="run-study.html#develop-a-data-collection-and-analysis-plan"><i class="fa fa-check"></i><b>4.1.2</b> Develop a data collection and analysis plan</a></li>
+<li class="chapter" data-level="4.1.3" data-path="run-study.html"><a href="run-study.html#obtain-access-to-source-data-or-generate-the-data"><i class="fa fa-check"></i><b>4.1.3</b> Obtain access to source data or generate the data</a></li>
+<li class="chapter" data-level="4.1.4" data-path="run-study.html"><a href="run-study.html#process-and-prepare-the-source-data"><i class="fa fa-check"></i><b>4.1.4</b> Process and prepare the source data</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="run-study.html"><a href="run-study.html#resources-box-3"><i class="fa fa-check"></i><b>4.2</b> Resources Box</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="run-study.html"><a href="run-study.html#how-to-organize-your-research-project"><i class="fa fa-check"></i><b>4.2.1</b> How to organize your research project:</a></li>
+<li class="chapter" data-level="4.2.2" data-path="run-study.html"><a href="run-study.html#coding-practices-best-practices-for-data-and-code-management-in-projects"><i class="fa fa-check"></i><b>4.2.2</b> Coding practices: Best Practices for Data and Code Management in Projects</a></li>
+<li class="chapter" data-level="4.2.3" data-path="run-study.html"><a href="run-study.html#data-cleaning"><i class="fa fa-check"></i><b>4.2.3</b> Data cleaning</a></li>
+<li class="chapter" data-level="4.2.4" data-path="run-study.html"><a href="run-study.html#collecting-data-from-meta-data-and-web-scraping"><i class="fa fa-check"></i><b>4.2.4</b> Collecting data from meta-data and web-scraping</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="run-study.html"><a href="run-study.html#example-hellerstein-1998-2"><i class="fa fa-check"></i><b>4.3</b> Example: Hellerstein (1998)</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="analyzing.html"><a href="analyzing.html"><i class="fa fa-check"></i><b>5</b> Analyzing the Data</a><ul>
+<li class="chapter" data-level="5.1" data-path="analyzing.html"><a href="analyzing.html#basic-steps-when-analyzing-the-data"><i class="fa fa-check"></i><b>5.1</b> Basic steps when analyzing the data</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="analyzing.html"><a href="analyzing.html#generate-the-analysis-data-set"><i class="fa fa-check"></i><b>5.1.1</b> Generate the analysis data set</a></li>
+<li class="chapter" data-level="5.1.2" data-path="analyzing.html"><a href="analyzing.html#describe-your-data-assess-validity-and-plausiblity"><i class="fa fa-check"></i><b>5.1.2</b> Describe your data, assess validity and plausiblity</a></li>
+<li class="chapter" data-level="5.1.3" data-path="analyzing.html"><a href="analyzing.html#generate-estimates-of-your-investigated-effect-using-regression-techniques"><i class="fa fa-check"></i><b>5.1.3</b> Generate estimates of your investigated effect using regression techniques</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="analyzing.html"><a href="analyzing.html#resources-box-4"><i class="fa fa-check"></i><b>5.2</b> Resources box</a></li>
+<li class="chapter" data-level="5.3" data-path="analyzing.html"><a href="analyzing.html#example-hellerstein-1998-3"><i class="fa fa-check"></i><b>5.3</b> Example: Hellerstein (1998)</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="analyzing.html"><a href="analyzing.html#describe-your-data-assess-validity-and-plausiblity-1"><i class="fa fa-check"></i><b>5.3.1</b> Describe your data, assess validity and plausiblity</a></li>
+<li class="chapter" data-level="5.3.2" data-path="analyzing.html"><a href="analyzing.html#generate-estimates-of-your-investigated-effect-using-regression-techniques-1"><i class="fa fa-check"></i><b>5.3.2</b> Generate estimates of your investigated effect using regression techniques</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="report-study.html"><a href="report-study.html"><i class="fa fa-check"></i><b>6</b> Reporting the Study</a><ul>
+<li class="chapter" data-level="6.1" data-path="report-study.html"><a href="report-study.html#basic-steps-to-reporting-the-study"><i class="fa fa-check"></i><b>6.1</b> Basic steps to reporting the study</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="report-study.html"><a href="report-study.html#the-writing-process"><i class="fa fa-check"></i><b>6.1.1</b> The writing process</a></li>
+<li class="chapter" data-level="6.1.2" data-path="report-study.html"><a href="report-study.html#general-guidance-on-the-use-of-language-in-the-research-paper"><i class="fa fa-check"></i><b>6.1.2</b> General guidance on the use of language in the research paper</a></li>
+<li class="chapter" data-level="6.1.3" data-path="report-study.html"><a href="report-study.html#tables"><i class="fa fa-check"></i><b>6.1.3</b> Tables</a></li>
+<li class="chapter" data-level="6.1.4" data-path="report-study.html"><a href="report-study.html#figures"><i class="fa fa-check"></i><b>6.1.4</b> Figures</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="report-study.html"><a href="report-study.html#resources-box-5"><i class="fa fa-check"></i><b>6.2</b> Resources box</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="report-study.html"><a href="report-study.html#collections-of-writing-tips-and-short-articles"><i class="fa fa-check"></i><b>6.2.1</b> Collections of writing tips and short articles</a></li>
+<li class="chapter" data-level="6.2.2" data-path="report-study.html"><a href="report-study.html#books"><i class="fa fa-check"></i><b>6.2.2</b> Books</a></li>
+<li class="chapter" data-level="6.2.3" data-path="report-study.html"><a href="report-study.html#videos"><i class="fa fa-check"></i><b>6.2.3</b> Videos</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="report-study.html"><a href="report-study.html#example-hellerstein-1998-4"><i class="fa fa-check"></i><b>6.3</b> Example: Hellerstein (1998)</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="report-study.html"><a href="report-study.html#descriptive-analysis"><i class="fa fa-check"></i><b>6.3.1</b> Descriptive Analysis</a></li>
+<li class="chapter" data-level="6.3.2" data-path="report-study.html"><a href="report-study.html#empirical-analysis"><i class="fa fa-check"></i><b>6.3.2</b> Empirical Analysis</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A concise guide to reproducible research using secondary data</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="hypothesis" class="section level1">
+<h1><span class="header-section-number">Chapter 2</span> Formulating a hypothesis</h1>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
+<img src="_book/DataLiteracy_files/figure-html/idea.png" alt="idea" width="100%" />
+<p class="caption">
+Figure 2.1: idea
+</p>
+</div>
+<p>Source: <a href="https://dlpng.com/png/6808837">DLPNG</a></p>
+<div id="basic-steps-to-formulate-a-hypothesis" class="section level2">
+<h2><span class="header-section-number">2.1</span> Basic steps to formulate a hypothesis</h2>
+<p>You decided to undertake a scientific project. Where do you start? First, you need to find a research question that interests you and formulate a hypothesis. We will introduce some key terminology, steps you can undertake and examples how to develop research questions. Note that there is no single best way to develop a research idea <span class="citation">(Pischke <a href="#ref-pischke_how_2012" role="doc-biblioref">2012</a>)</span>.</p>
+<p><em>What if someone assigns a topic to me? For students attending undergraduate and graduate courses that often pick topics from a list, all of these steps are equally important and necessary. You still need to formulate a research question and a hypothesis. And it is important to clarify the relevance of your topic for yourself.</em></p>
+<div id="what-is-a-hypothesis" class="section level3">
+<h3><span class="header-section-number">2.1.1</span> What is a hypothesis?</h3>
+<p>A hypothesis is a statement that introduces your research question and suggests the results you might find in your research. You will test your hypothesis with your empirical analysis. Thus, hypothesis constitutes the main basis of your scientific investigation. You should be careful when creating it.</p>
+<p>A hypothesis is an educated guess. You start by posing an economic question and formulate a hypothesis about this question. Then you test it with your data and analyses and either accept or reject the hypothesis.</p>
+</div>
+<div id="how-do-you-develop-a-research-question-and-formulate-a-hypothesis" class="section level3">
+<h3><span class="header-section-number">2.1.2</span> How do you develop a research question and formulate a hypothesis?</h3>
+<p>When thinking about a research question <span class="citation">(Trochim <a href="#ref-trochim_problem_nodate" role="doc-biblioref">n.d.</a>)</span>, you need to identify a topic that is</p>
+<ul>
+<li><em>Relevant</em>, important in the world and interesting to you as researcher: Does working on the topic excites you? You will spend many hours working on it. Therefore, it should be interesting and engaging enough for you to motivate your continued work on this topic.</li>
+<li><em>Specific</em>: not too broad and not too narrow</li>
+<li><em>Feasible</em> to research within a given timeframe: Is it possible to answer the research question based on your time budget, data and additional resources.</li>
+</ul>
+<p>How do you find a topic or develop a feasible research idea in the first place? Finding an idea is not difficult, the critical part is to find a <strong>good</strong> idea. How do you do that? There is no one specific way how one gets an idea, rather there is a myriad of ways how people come up with potential ideas <span class="citation">(Varian <a href="#ref-varian_how_2016" role="doc-biblioref">2016</a>)</span>. Once you decide on an idea, run it by a few people. That means approach your supervisor and other fellow students to see whether it is interesting enough to pursue it.</p>
+<p>For example, you can find inspiration by</p>
+<ul>
+<li>Looking at insights from the world around you: your own life and experiences, observe the behavior of people around you</li>
+<li>Talking to people around you, experts, other students, family members</li>
+<li>Talking to individuals outside your field (non-economists)</li>
+<li>Talking to professionals working in the area you are investigating (you may use social media and professional platforms like LinkedIN or Twitter to make contact)</li>
+<li>Reading journal articles from other non-economic social sciences and the medical literature</li>
+<li>Reading economic and non-economic newspaper and magazine articles (e.g. Süddeutsche, Frankfurter Allgemeine, Tagesspiegel, The Economist, the Wall Street Journal, The New York Times, The Guardian), watching TV programs
+<ul>
+<li>What are the issues being discussed?</li>
+<li>How do these issues affect people’s lives?</li>
+</ul></li>
+</ul>
+<p>You could in addition</p>
+<ul>
+<li>Go to virtual and in-person seminars, for example the <a href="https://www.goek.wiwi.uni-due.de/forschung/essen-health-economics-seminar/winter-2020-21/">Essen Health Economics Seminar</a></li>
+<li>Look at abstracts of scientific articles and working papers</li>
+<li>Look at the literature in a specific field you are interested in, for example sceening complete issues of journals or editorials about certain research advancements. By reading this literature you might come up with the idea on how to extend and refine previous research.</li>
+</ul>
+<!--Once you choose a topic, you need to ask an empirical research question that 
+
+- is interesting, feasible and original
+- is not too broad or too narrow
+- focuses on one economic issue
+- is analytical in nature: should drive you, as a researcher, to explain rather than describe the issue
+- is interesting and significant to motivate you, as a researcher, and engage the audience
+- is possible to answer within a given time frame
+- does not have an obvious answer
+- generates new insights and implications for future research
+- is possible to execute with the existing data sources.
+-->
+</div>
+<div id="develop-a-hypothesis" class="section level3">
+<h3><span class="header-section-number">2.1.3</span> Develop a Hypothesis</h3>
+<p>Before you formulate your hypothesis, read up on the topic of interest. This reading should provide you with sufficient information to narrow down your research question. The research question comes from the topic you are contemplating. Once you find your question you need to develop a hypothesis. A hypothesis is your research question distilled into a one sentence statement. It presents a statement of your expectations regarding your research question’s results. You propose to prove your hypothesis with your research by testing the relationship between two variables of interest. Thus, a hypothesis should be testable with the data at hand. There are two types of hypotheses: alternative or null. Null states that there is no effect. Alternative states that there is an effect.</p>
+<p>It should be noted that there is an alternative view on this that suggests one should not look at the literature too early on in the idea-generating process in order not to be influenced and shaped by someone else’s ideas. According to this view you can spend some time (i.e. a few weeks) trying to develop your own original idea. Even if you end up with an idea that has already been pursued by someone else, this will still provide you with good practice in developing publishable ideas. After you have developed an idea and made sure that it was not yet investigated in the literature, you can start conducting a systematic literature review. By doing this, you can find some other interesting insights from the work of others that you can synthesize in your own work to produce something novel and original.</p>
+<!--References
+- https://www.economicsnetwork.ac.uk/handbook/ugresearch/31
+- [Forming Hypotheses & Questions About Economic Issues](https://study.com/academy/lesson/forming-hypotheses-questions-about-economic-issues.html)
+- [RESEARCH HYPOTHESIS](https://oakland.edu/Assets/upload/docs/AIS/Syllabi/Tayler_Research_Hypothesis.pdf)
+-->
+</div>
+<div id="identify-relevant-literature" class="section level3">
+<h3><span class="header-section-number">2.1.4</span> Identify Relevant Literature</h3>
+<p>For your research project you will need to identify and collect previous relevant literature. It should involve a thorough search of the keywords in relevant databases and journals. Place emphasis on articles from high-ranking journals with significant numbers of citations. This will give you an indication of the most influential and important work in the field. Once you identify and collect the relevant literature for your topic, you will need to <strong>critically</strong> synthesize it in your literature review.</p>
+<p>When you perform your literature review, consider theories that may inform your research question. For example when studying physician behavior, you may consider approaches made using principal-agency theory.</p>
+</div>
+<div id="research-question-or-literature-review-a-hen-and-egg-problem" class="section level3">
+<h3><span class="header-section-number">2.1.5</span> Research question or literature review, a hen and egg problem?</h3>
+<p>Whether you start reading the literature first or by developing an idea may depend on your stage (graduate student, early career researcher) and other goals. However, thinking freely about what you like to investigate first may help to critically develop a feasible and interesting research question.</p>
+<p>We highlight an example how to start with investigating the real-world and subsequently posing a research question <span class="citation">(“How to Write a Strong Hypothesis Steps and Examples” <a href="#ref-noauthor_how_2019" role="doc-biblioref">2019</a>; “Developing Strong Research Questions Criteria and Examples” <a href="#ref-noauthor_developing_2019" role="doc-biblioref">2019</a>; Schilbach <a href="#ref-schilbach_5_2019" role="doc-biblioref">2019</a>)</span>. For example, based on your own observation you notice that people seem to spend extensive amount of time looking at their smartphones. Maybe even you yourself engage in the same behavior. In addition, you read a BBC News article <a href="https://www.bbc.com/news/technology-55826238">Social media damages teenagers’ mental health, report says</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
+<img src="_book/DataLiteracy_files/figure-html/Social-media.png" alt="social_media" width="100%" />
+<p class="caption">
+Figure 2.2: social_media
+</p>
+</div>
+<p>Source: <a href="https://www.bbc.com/news/technology-55826238">BBC</a></p>
+<p>You decided to translate this article and your observations into a research question. A <strong>research question</strong> could be: <em>How does daily social media use influence our mental health?</em> Before you formulate your hypothesis, read up on the topic of interest. This reading should provide you with sufficient information to narrow down your research question. Read economic, medical and other social science literature on the topic. There is likely to be a vast amount of non-econ literature from non-econ fields that are doing research on your topic of interest, for example psychology or neuroscience. Familiarize yourself with it and master it. Do not get distracted by different scientific methodologies and techniques that might seem not up-to-par to the economic studies (small sample sizes, endogeneity, uncovering association rather than causation, etc.), but rather focus on suggestions of potential mechanisms.</p>
+<p>A hypothesis is then your research question distilled into a one sentence statement. It presents a statement of your expectations regarding your research question’s results. You propose to prove your hypothesis with your research by testing the relationship between two variables of interest. Thus, a hypothesis should be testable with the data at hand. There are two types of hypotheses: alternative or null. The <strong>null</strong>* hypothesis states that there is no effect. The <strong>alternative</strong> hypothesis states that there is an effect.</p>
+<p>A hypothesis related to the above-stated research question could be: <em>The increased use of social media among teenagers leads to (is associated with) worse mental health outcomes, i.e. increased incidence of depression, worse well-being and lower self-esteem.</em> Your hypothesis suggests a direction of a relationship that you expect to find. It is not a blind guess, but is guided by your observations and existing evidence, that means the reports that you have collected. It is testable with scientific research methods, that means by using statistical analysis of the relevant data.</p>
+<p>Your hypothesis suggests a relationship between two variables: social media use (your independent variable <span class="math inline">\(X\)</span>) and mental health (dependent variable <span class="math inline">\(Y\)</span>). Note, that this hypothesis could be framed in terms of correlation (is associated with) or causation (leads to). This should be reflected in the choice of scientific investigation you decide to undertake.</p>
+<p>The <strong>null</strong> hypothesis is: <em>There is no relationship between social media use among teenagers and their mental health</em>.</p>
+<p>It should be noted that there is an alternative view on this idea - a hypothesis-generating process that suggests that one should not look at the literature too early on in the idea-generating process not to be influenced and shaped by someone else’s ideas. According to this view you can spend some time like a few weeks trying to develop your own original idea. Even if you end up with an idea that has already been pursued by someone else and published, this will still provide you with good practice in developing publishable ideas. After you have developed an idea and made sure that it was not yet investigated in the literature, you can start conducting a systematic literature review. By doing this, you can find some other interesting insights from the work of others that you can synthesize in your own work to produce something novel and original.</p>
+<!-- https://people.ischool.berkeley.edu/~hal/Papers/how.pdf
+-->
+<!-- https://libguides.usc.edu/writingguide/researchproblem
+-->
+<!--  https://www.editage.com/insights/how-to-write-the-literature-review-of-your-research-paper -->
+<!--  [How to write the literature review of your research paper](https://www.editage.com/insights/how-to-write-the-literature-review-of-your-research-paper) -->
+</div>
+</div>
+<div id="resources-box-1" class="section level2">
+<h2><span class="header-section-number">2.2</span> Resources box</h2>
+<div id="how-to-develop-strong-research-questions" class="section level3">
+<h3><span class="header-section-number">2.2.1</span> How to develop strong research questions</h3>
+<ul>
+<li><a href="https://www.economicsnetwork.ac.uk/handbook/ugresearch/31">The form of the research process</a></li>
+</ul>
+</div>
+<div id="identify-relevant-literature-from-major-general-interest-and-field-literature" class="section level3">
+<h3><span class="header-section-number">2.2.2</span> Identify relevant literature from major general interest and field literature</h3>
+<p>To identify the relevant literature you can</p>
+<ul>
+<li>use academic search engines such as Google Scholar, Web of Science, EconLit, PubMed. <!--[INCLUDE LINKS]--></li>
+<li>search working paper series such as the <a href="www.nber.org">National Bureau of Economic Research</a>, <a href="http://netec.wustl.edu/NetEc.html">NetEc</a> or <a href="www.iza.org">IZA</a></li>
+<li>search more general resource sites such as <a href="http://rfe.org">Resources for Economists</a></li>
+<li>go to the library/use library database</li>
+</ul>
+</div>
+<div id="assess-the-quality-of-a-journal-article" class="section level3">
+<h3><span class="header-section-number">2.2.3</span> Assess the quality of a journal article</h3>
+<p>Several rankings may help to assess the quality of research you consider</p>
+<ul>
+<li>Journals of general interest and by field in economics and management
+- For German speaking countries, consider the <a href="https://www.forschungsmonitoring.org/">VWL / BWL Handelsblatt Ranking</a> for economics and management
+- The German Association of Management Scholars provides an expert based ranking<a href="https://vhbonline.org/vhb4you/vhb-jourqual/vhb-jourqual-3/tabellen-zum-download">VHB JourQual 3.0, Teilranking Management im Gesundheitswesen</a>
+- Web of Science Impact Factors
+- Scimago</li>
+<li>Health Economics, Health Services and Health Care Managment Research: <a href="https://www.mthooddiabeteschallenge.com/journal-list">Health Economics Journals List</a></li>
+<li>Be aware that like in any other domain, there are <a href="https://predatoryjournals.com/">predatory publishing practices</a>.</li>
+</ul>
+</div>
+<div id="investigate-how-a-journal-article-is-connected-to-other-works" class="section level3">
+<h3><span class="header-section-number">2.2.4</span> Investigate how a journal article is connected to other works</h3>
+<ul>
+<li><a href="https://citationgecko.azurewebsites.net/">Citationgecko</a></li>
+<li><a href="https://www.connectedpapers.com">Connected papers</a></li>
+<li><a href="https://scite.ai/">scite_</a> – a tool to get a first impression whether a study is disputed or academic consensus</li>
+</ul>
+</div>
+<div id="organize-your-literature" class="section level3">
+<h3><span class="header-section-number">2.2.5</span> Organize your literature</h3>
+<ul>
+<li><a href="https://www.zotero.org/">Zotero</a> (free of charge)</li>
+<li><a href="https://www.mendeley.com/guides/desktop">Mendeley</a> (free of charge)</li>
+<li><a href="https://endnote.com/">EndNote</a> (potentially free of charge via your university)</li>
+<li><a href="https://www.citavi.com/de">Citavi</a> (potentially free of charge via your university)</li>
+<li>BibTEX if you work with TEX</li>
+<li>Excel spread sheet
+<!--- https://www.uni-due.de/ub/abisz/literaturverwaltung.shtml--></li>
+</ul>
+</div>
+</div>
+<div id="example-hellerstein-1998" class="section level2">
+<h2><span class="header-section-number">2.3</span> Example: Hellerstein (1998)</h2>
+<p>As an illustration of the research process of formulating a hypothesis, designing the study, running the study and collecting the data, analysing the data and, finally, reporting the study, we provide an example of the partly reproduction of a highly cited paper in the field of health economics <!--[report number of cites in Google Scholar and Repec as of a certain date, show using connected papers and citation gecko how this paper has impacted literature]-->. At the end of each chapter, we demonstrate insides into the study “The importance of the Physician in the Generic versus Trade-Name Prescription Decision” by Judith K. Hellerstein from the year 1998 <span class="citation">(Hellerstein <a href="#ref-hellerstein_importance_1998" role="doc-biblioref">1998</a>)</span> that we reproduced.</p>
+<div id="relevance-of-the-topic---escalating-health-expenditures" class="section level3">
+<h3><span class="header-section-number">2.3.1</span> <strong>Relevance of the topic - escalating health expenditures</strong></h3>
+<p>Worldwide, health systems face constantly increasing prescription drug expenditures. In the United States, the total prescription drug expenditure in 2020 marked about 358.7 billion US-Dollars <span class="citation">(Statista <a href="#ref-statista_prescription_2020" role="doc-biblioref">2020</a>)</span>. The prescription of generic drugs is an option in reducing the total health care expenditure. Generic drugs are bioequivalent in the active ingredients but have discounts of up to 80 percent compared to the trade-name alternative <span class="citation">(Pruckner and Schober <a href="#ref-pruckner_hospitals_2018" role="doc-biblioref">2018</a>)</span>.</p>
+</div>
+<div id="development-of-a-research-question---identifying-the-role-of-physician-practice-in-choosing-generic-drugs" class="section level3">
+<h3><span class="header-section-number">2.3.2</span> <strong>Development of a research question - identifying the role of physician practice in choosing generic drugs</strong></h3>
+<p>Physicians are faced with a multitude of different medication options, including generic and trade-name drugs. Physicians ideally act as agents for their patients to identify the best available treatment option. However, choosing the best treatment entails cost of coordination and cognition. The prescription of generic drugs may serve as an example to what extent physicians customize treatments according to patient’s needs with regards to cost. From an economic point of view one might suggest that once a generic drug is available, a perfectly rational consumer would demand a generic drug instead of the trade-name version <span class="citation">(Fischer and Stargardt <a href="#ref-fischer_diffusion_2016" role="doc-biblioref">2016</a>)</span><!--find better source-->. This asks for the research question, whether <em>“physicians vary their prescription decisions on a patient-by-patient basis or whether they systematically prescribe the same version, trade-name or generic, to all patients”</em>. The aim of this study is to identify the role the physician plays in prescribing a generic over a trade-name drug and the role of a patient’s insurance status.</p>
+</div>
+<div id="hypothesis---insurance-status-drives-generic-drug-use" class="section level3">
+<h3><span class="header-section-number">2.3.3</span> <strong>Hypothesis - insurance status drives generic drug use</strong></h3>
+<p>To empirically analyse the research question, one needs to make use of different groups<!--this is still rather unspecific--> to draw conclusions. Hellerstein (1998) considers a patient’s insurance status as a matter of dividing the study population in groups. The hypothesis to test the underlying research question can be formulated as <em>“Physicians are more likely to prescribe generics to patients who do not have insurance coverage for prescription pharmaceuticals”</em> <span class="citation">(Hellerstein <a href="#ref-hellerstein_importance_1998" role="doc-biblioref">1998</a>)</span>. So a relationship between the two variables, prescription of a generic drug (dependent variable) and insurance status (independent variable) of the patient is suggested.<!--Formulate that more precisely in terms of a hypothesis--></p>
+
+</div>
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-noauthor_developing_2019">
+<p>“Developing Strong Research Questions Criteria and Examples.” 2019. <em>Scribbr</em>. <a href="https://www.scribbr.com/research-process/research-questions/">https://www.scribbr.com/research-process/research-questions/</a>.</p>
+</div>
+<div id="ref-fischer_diffusion_2016">
+<p>Fischer, Katharina Elisabeth, and Tom Stargardt. 2016. “The Diffusion of Generics After Patent Expiry in Germany.” <em>The European Journal of Health Economics</em> 17 (8): 1027–40. <a href="https://doi.org/10.1007/s10198-015-0744-3">https://doi.org/10.1007/s10198-015-0744-3</a>.</p>
+</div>
+<div id="ref-hellerstein_importance_1998">
+<p>Hellerstein, Judith K. 1998. “The Importance of the Physician in the Generic Versus Trade-Name Prescription Decision.” <em>The RAND Journal of Economics</em> 29 (1): 108–36. <a href="https://doi.org/10.2307/2555818">https://doi.org/10.2307/2555818</a>.</p>
+</div>
+<div id="ref-noauthor_how_2019">
+<p>“How to Write a Strong Hypothesis Steps and Examples.” 2019. <em>Scribbr</em>. <a href="https://www.scribbr.com/research-process/hypotheses/">https://www.scribbr.com/research-process/hypotheses/</a>.</p>
+</div>
+<div id="ref-pischke_how_2012">
+<p>Pischke, Steve. 2012. “How to Get Started on Research in Economics?” <a href="http://econ.lse.ac.uk/staff/spischke/phds/get_started.pdf">http://econ.lse.ac.uk/staff/spischke/phds/get_started.pdf</a>.</p>
+</div>
+<div id="ref-pruckner_hospitals_2018">
+<p>Pruckner, Gerald J., and Thomas Schober. 2018. “Hospitals and the Generic Versus Brand-Name Prescription Decision in the Outpatient Sector: The Generic Versus Brand-Name Prescription Decision.” <em>Health Economics</em> 27 (8): 1264–83. <a href="https://doi.org/10.1002/hec.3774">https://doi.org/10.1002/hec.3774</a>.</p>
+</div>
+<div id="ref-schilbach_5_2019">
+<p>Schilbach, Frank. 2019. “5 Steps Toward a Paper.” MIT 14.192 guest lecture. <a href="https://www.dropbox.com/s/q7wjaidl5w91srt/Guest%20lecture%20FS.pdf?dl=0">https://www.dropbox.com/s/q7wjaidl5w91srt/Guest%20lecture%20FS.pdf?dl=0</a>.</p>
+</div>
+<div id="ref-statista_prescription_2020">
+<p>Statista. 2020. “Prescription Drug Spending in U.S. 1960-2020.” <a href="https://www.statista.com/statistics/184914/pre-scription-drug-expenditures-in-the-us-since-1960/">https://www.statista.com/statistics/184914/pre-scription-drug-expenditures-in-the-us-since-1960/</a>.</p>
+</div>
+<div id="ref-trochim_problem_nodate">
+<p>Trochim, William. n.d. “Problem Formulation.” Accessed May 13, 2021. <a href="https://conjointly.com/kb/problem-formulation/">https://conjointly.com/kb/problem-formulation/</a>.</p>
+</div>
+<div id="ref-varian_how_2016">
+<p>Varian, Hal R. 2016. “How to Build an Economic Model in Your Spare Time.” <em>The American Economist</em> 61 (1): 81–90. <a href="https://doi.org/10.1177/0569434515627089">https://doi.org/10.1177/0569434515627089</a>.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="designstudy.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["DataLiteracy.pdf", "DataLiteracy.epub"],
+"search": {
+"engine": "lunr",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

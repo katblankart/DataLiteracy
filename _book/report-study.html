@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 6 Reporting the Study | A concise guide to reproducible research using secondary data</title>
+  <meta name="description" content="Data Science Campus - A study guide for reproducible research using secondary (health care) data" />
+  <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 6 Reporting the Study | A concise guide to reproducible research using secondary data" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Data Science Campus - A study guide for reproducible research using secondary (health care) data" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 6 Reporting the Study | A concise guide to reproducible research using secondary data" />
+  
+  <meta name="twitter:description" content="Data Science Campus - A study guide for reproducible research using secondary (health care) data" />
+  
+
+<meta name="author" content="Maryna Ivets, Eva Goetjes, Katharina Blankart" />
+
+
+<meta name="date" content="2021-09-21" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="analyzing.html"/>
+<link rel="next" href="references.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Reproducible research using 2ndary data</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>A study guide to empirical research in economics and management using secondary data</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#objective"><i class="fa fa-check"></i>Objective</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#learning-objectives"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#structure-of-the-study-guide"><i class="fa fa-check"></i>Structure of the study guide</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#this-is-a-living-document"><i class="fa fa-check"></i>This is a living document</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="acknowledgements.html"><a href="acknowledgements.html"><i class="fa fa-check"></i>Acknowledgements</a></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction to reproducible research</a><ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#what-is-reproducible-research"><i class="fa fa-check"></i><b>1.1</b> What is reproducible research?</a></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#why-you-as-a-student-and-researcher-should-care-about-reproducible-research"><i class="fa fa-check"></i><b>1.2</b> Why you, as a student and researcher, should care about reproducible research?</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="intro.html"><a href="intro.html#avoid-common-biases-that-lead-to-biased-or-false-research-results"><i class="fa fa-check"></i><b>1.2.1</b> Avoid common biases that lead to biased or false research results</a></li>
+<li class="chapter" data-level="1.2.2" data-path="intro.html"><a href="intro.html#increase-productivity-of-your-work-and-the-work-of-the-scientific-community-by-performing-reproducible-research"><i class="fa fa-check"></i><b>1.2.2</b> Increase productivity of your work and the work of the scientific community by performing reproducible research</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#main-steps-to-produce-reproducible-research"><i class="fa fa-check"></i><b>1.3</b> Main steps to produce reproducible research</a></li>
+<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#secondary-health-care-data"><i class="fa fa-check"></i><b>1.4</b> Secondary (health care) data</a></li>
+<li class="chapter" data-level="1.5" data-path="intro.html"><a href="intro.html#creating-an-environment-for-productive-research-projects"><i class="fa fa-check"></i><b>1.5</b> Creating an environment for productive research projects</a></li>
+<li class="chapter" data-level="1.6" data-path="intro.html"><a href="intro.html#resources-box"><i class="fa fa-check"></i><b>1.6</b> Resources Box</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="hypothesis.html"><a href="hypothesis.html"><i class="fa fa-check"></i><b>2</b> Formulating a hypothesis</a><ul>
+<li class="chapter" data-level="2.1" data-path="hypothesis.html"><a href="hypothesis.html#basic-steps-to-formulate-a-hypothesis"><i class="fa fa-check"></i><b>2.1</b> Basic steps to formulate a hypothesis</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="hypothesis.html"><a href="hypothesis.html#what-is-a-hypothesis"><i class="fa fa-check"></i><b>2.1.1</b> What is a hypothesis?</a></li>
+<li class="chapter" data-level="2.1.2" data-path="hypothesis.html"><a href="hypothesis.html#how-do-you-develop-a-research-question-and-formulate-a-hypothesis"><i class="fa fa-check"></i><b>2.1.2</b> How do you develop a research question and formulate a hypothesis?</a></li>
+<li class="chapter" data-level="2.1.3" data-path="hypothesis.html"><a href="hypothesis.html#develop-a-hypothesis"><i class="fa fa-check"></i><b>2.1.3</b> Develop a Hypothesis</a></li>
+<li class="chapter" data-level="2.1.4" data-path="hypothesis.html"><a href="hypothesis.html#identify-relevant-literature"><i class="fa fa-check"></i><b>2.1.4</b> Identify Relevant Literature</a></li>
+<li class="chapter" data-level="2.1.5" data-path="hypothesis.html"><a href="hypothesis.html#research-question-or-literature-review-a-hen-and-egg-problem"><i class="fa fa-check"></i><b>2.1.5</b> Research question or literature review, a hen and egg problem?</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="hypothesis.html"><a href="hypothesis.html#resources-box-1"><i class="fa fa-check"></i><b>2.2</b> Resources box</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="hypothesis.html"><a href="hypothesis.html#how-to-develop-strong-research-questions"><i class="fa fa-check"></i><b>2.2.1</b> How to develop strong research questions</a></li>
+<li class="chapter" data-level="2.2.2" data-path="hypothesis.html"><a href="hypothesis.html#identify-relevant-literature-from-major-general-interest-and-field-literature"><i class="fa fa-check"></i><b>2.2.2</b> Identify relevant literature from major general interest and field literature</a></li>
+<li class="chapter" data-level="2.2.3" data-path="hypothesis.html"><a href="hypothesis.html#assess-the-quality-of-a-journal-article"><i class="fa fa-check"></i><b>2.2.3</b> Assess the quality of a journal article</a></li>
+<li class="chapter" data-level="2.2.4" data-path="hypothesis.html"><a href="hypothesis.html#investigate-how-a-journal-article-is-connected-to-other-works"><i class="fa fa-check"></i><b>2.2.4</b> Investigate how a journal article is connected to other works</a></li>
+<li class="chapter" data-level="2.2.5" data-path="hypothesis.html"><a href="hypothesis.html#organize-your-literature"><i class="fa fa-check"></i><b>2.2.5</b> Organize your literature</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="hypothesis.html"><a href="hypothesis.html#example-hellerstein-1998"><i class="fa fa-check"></i><b>2.3</b> Example: Hellerstein (1998)</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="hypothesis.html"><a href="hypothesis.html#relevance-of-the-topic---escalating-health-expenditures"><i class="fa fa-check"></i><b>2.3.1</b> <strong>Relevance of the topic - escalating health expenditures</strong></a></li>
+<li class="chapter" data-level="2.3.2" data-path="hypothesis.html"><a href="hypothesis.html#development-of-a-research-question---identifying-the-role-of-physician-practice-in-choosing-generic-drugs"><i class="fa fa-check"></i><b>2.3.2</b> <strong>Development of a research question - identifying the role of physician practice in choosing generic drugs</strong></a></li>
+<li class="chapter" data-level="2.3.3" data-path="hypothesis.html"><a href="hypothesis.html#hypothesis---insurance-status-drives-generic-drug-use"><i class="fa fa-check"></i><b>2.3.3</b> <strong>Hypothesis - insurance status drives generic drug use</strong></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="designstudy.html"><a href="designstudy.html"><i class="fa fa-check"></i><b>3</b> Designing the Study</a><ul>
+<li class="chapter" data-level="3.1" data-path="designstudy.html"><a href="designstudy.html#basic-steps-in-designing-your-study"><i class="fa fa-check"></i><b>3.1</b> Basic steps in designing your study</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="designstudy.html"><a href="designstudy.html#clarify-your-study-goal-association-causation-counterfactuals"><i class="fa fa-check"></i><b>3.1.1</b> Clarify your study goal: association, causation, counterfactuals</a></li>
+<li class="chapter" data-level="3.1.2" data-path="designstudy.html"><a href="designstudy.html#develop-a-causal-model-and-identify-estimable-effects"><i class="fa fa-check"></i><b>3.1.2</b> Develop a causal model and identify estimable effects</a></li>
+<li class="chapter" data-level="3.1.3" data-path="designstudy.html"><a href="designstudy.html#develop-the-empirical-strategy-to-investigate-causal-effects"><i class="fa fa-check"></i><b>3.1.3</b> Develop the empirical strategy to investigate causal effects</a></li>
+<li class="chapter" data-level="3.1.4" data-path="designstudy.html"><a href="designstudy.html#investigate-suitable-source-data"><i class="fa fa-check"></i><b>3.1.4</b> Investigate suitable source data</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="designstudy.html"><a href="designstudy.html#resources-box-2"><i class="fa fa-check"></i><b>3.2</b> Resources box</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="designstudy.html"><a href="designstudy.html#key-terminology-in-causal-inference-based-on-matthay_alternative_2020"><i class="fa fa-check"></i><b>3.2.1</b> Key terminology in causal inference based on <span class="citation">Matthay et al. (<span>2020</span>)</span></a></li>
+<li class="chapter" data-level="3.2.2" data-path="designstudy.html"><a href="designstudy.html#openly-available-textbooks-and-resources-on-econometrics-with-a-causal-inference-focus"><i class="fa fa-check"></i><b>3.2.2</b> Openly-available textbooks and resources on econometrics with a causal inference focus</a></li>
+<li class="chapter" data-level="3.2.3" data-path="designstudy.html"><a href="designstudy.html#drawing-causal-diagrams"><i class="fa fa-check"></i><b>3.2.3</b> Drawing Causal Diagrams</a></li>
+<li class="chapter" data-level="3.2.4" data-path="designstudy.html"><a href="designstudy.html#replication-examples"><i class="fa fa-check"></i><b>3.2.4</b> Replication examples</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="designstudy.html"><a href="designstudy.html#example-hellerstein-1998-1"><i class="fa fa-check"></i><b>3.3</b> Example: Hellerstein (1998)</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="run-study.html"><a href="run-study.html"><i class="fa fa-check"></i><b>4</b> Running the study and collecting the data</a><ul>
+<li class="chapter" data-level="4.1" data-path="run-study.html"><a href="run-study.html#basic-steps-when-running-the-study-and-collecting-the-data"><i class="fa fa-check"></i><b>4.1</b> Basic steps when running the study and collecting the data</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="run-study.html"><a href="run-study.html#identify-secondary-data-sources"><i class="fa fa-check"></i><b>4.1.1</b> Identify secondary data sources</a></li>
+<li class="chapter" data-level="4.1.2" data-path="run-study.html"><a href="run-study.html#develop-a-data-collection-and-analysis-plan"><i class="fa fa-check"></i><b>4.1.2</b> Develop a data collection and analysis plan</a></li>
+<li class="chapter" data-level="4.1.3" data-path="run-study.html"><a href="run-study.html#obtain-access-to-source-data-or-generate-the-data"><i class="fa fa-check"></i><b>4.1.3</b> Obtain access to source data or generate the data</a></li>
+<li class="chapter" data-level="4.1.4" data-path="run-study.html"><a href="run-study.html#process-and-prepare-the-source-data"><i class="fa fa-check"></i><b>4.1.4</b> Process and prepare the source data</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="run-study.html"><a href="run-study.html#resources-box-3"><i class="fa fa-check"></i><b>4.2</b> Resources Box</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="run-study.html"><a href="run-study.html#how-to-organize-your-research-project"><i class="fa fa-check"></i><b>4.2.1</b> How to organize your research project:</a></li>
+<li class="chapter" data-level="4.2.2" data-path="run-study.html"><a href="run-study.html#coding-practices-best-practices-for-data-and-code-management-in-projects"><i class="fa fa-check"></i><b>4.2.2</b> Coding practices: Best Practices for Data and Code Management in Projects</a></li>
+<li class="chapter" data-level="4.2.3" data-path="run-study.html"><a href="run-study.html#data-cleaning"><i class="fa fa-check"></i><b>4.2.3</b> Data cleaning</a></li>
+<li class="chapter" data-level="4.2.4" data-path="run-study.html"><a href="run-study.html#collecting-data-from-meta-data-and-web-scraping"><i class="fa fa-check"></i><b>4.2.4</b> Collecting data from meta-data and web-scraping</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="run-study.html"><a href="run-study.html#example-hellerstein-1998-2"><i class="fa fa-check"></i><b>4.3</b> Example: Hellerstein (1998)</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="analyzing.html"><a href="analyzing.html"><i class="fa fa-check"></i><b>5</b> Analyzing the Data</a><ul>
+<li class="chapter" data-level="5.1" data-path="analyzing.html"><a href="analyzing.html#basic-steps-when-analyzing-the-data"><i class="fa fa-check"></i><b>5.1</b> Basic steps when analyzing the data</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="analyzing.html"><a href="analyzing.html#generate-the-analysis-data-set"><i class="fa fa-check"></i><b>5.1.1</b> Generate the analysis data set</a></li>
+<li class="chapter" data-level="5.1.2" data-path="analyzing.html"><a href="analyzing.html#describe-your-data-assess-validity-and-plausiblity"><i class="fa fa-check"></i><b>5.1.2</b> Describe your data, assess validity and plausiblity</a></li>
+<li class="chapter" data-level="5.1.3" data-path="analyzing.html"><a href="analyzing.html#generate-estimates-of-your-investigated-effect-using-regression-techniques"><i class="fa fa-check"></i><b>5.1.3</b> Generate estimates of your investigated effect using regression techniques</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="analyzing.html"><a href="analyzing.html#resources-box-4"><i class="fa fa-check"></i><b>5.2</b> Resources box</a></li>
+<li class="chapter" data-level="5.3" data-path="analyzing.html"><a href="analyzing.html#example-hellerstein-1998-3"><i class="fa fa-check"></i><b>5.3</b> Example: Hellerstein (1998)</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="analyzing.html"><a href="analyzing.html#describe-your-data-assess-validity-and-plausiblity-1"><i class="fa fa-check"></i><b>5.3.1</b> Describe your data, assess validity and plausiblity</a></li>
+<li class="chapter" data-level="5.3.2" data-path="analyzing.html"><a href="analyzing.html#generate-estimates-of-your-investigated-effect-using-regression-techniques-1"><i class="fa fa-check"></i><b>5.3.2</b> Generate estimates of your investigated effect using regression techniques</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="report-study.html"><a href="report-study.html"><i class="fa fa-check"></i><b>6</b> Reporting the Study</a><ul>
+<li class="chapter" data-level="6.1" data-path="report-study.html"><a href="report-study.html#basic-steps-to-reporting-the-study"><i class="fa fa-check"></i><b>6.1</b> Basic steps to reporting the study</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="report-study.html"><a href="report-study.html#the-writing-process"><i class="fa fa-check"></i><b>6.1.1</b> The writing process</a></li>
+<li class="chapter" data-level="6.1.2" data-path="report-study.html"><a href="report-study.html#general-guidance-on-the-use-of-language-in-the-research-paper"><i class="fa fa-check"></i><b>6.1.2</b> General guidance on the use of language in the research paper</a></li>
+<li class="chapter" data-level="6.1.3" data-path="report-study.html"><a href="report-study.html#tables"><i class="fa fa-check"></i><b>6.1.3</b> Tables</a></li>
+<li class="chapter" data-level="6.1.4" data-path="report-study.html"><a href="report-study.html#figures"><i class="fa fa-check"></i><b>6.1.4</b> Figures</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="report-study.html"><a href="report-study.html#resources-box-5"><i class="fa fa-check"></i><b>6.2</b> Resources box</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="report-study.html"><a href="report-study.html#collections-of-writing-tips-and-short-articles"><i class="fa fa-check"></i><b>6.2.1</b> Collections of writing tips and short articles</a></li>
+<li class="chapter" data-level="6.2.2" data-path="report-study.html"><a href="report-study.html#books"><i class="fa fa-check"></i><b>6.2.2</b> Books</a></li>
+<li class="chapter" data-level="6.2.3" data-path="report-study.html"><a href="report-study.html#videos"><i class="fa fa-check"></i><b>6.2.3</b> Videos</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="report-study.html"><a href="report-study.html#example-hellerstein-1998-4"><i class="fa fa-check"></i><b>6.3</b> Example: Hellerstein (1998)</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="report-study.html"><a href="report-study.html#descriptive-analysis"><i class="fa fa-check"></i><b>6.3.1</b> Descriptive Analysis</a></li>
+<li class="chapter" data-level="6.3.2" data-path="report-study.html"><a href="report-study.html#empirical-analysis"><i class="fa fa-check"></i><b>6.3.2</b> Empirical Analysis</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A concise guide to reproducible research using secondary data</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="report-study" class="section level1">
+<h1><span class="header-section-number">Chapter 6</span> Reporting the Study</h1>
+<div id="basic-steps-to-reporting-the-study" class="section level2">
+<h2><span class="header-section-number">6.1</span> Basic steps to reporting the study</h2>
+<p>At this stage you need to report all your performed work in detail in a scientific research paper.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:writepaper"></span>
+<img src="_book/DataLiteracy_files/figure-html/comics.png" alt="How to report your paper" width="100%" />
+<p class="caption">
+Figure 6.1: How to report your paper
+</p>
+</div>
+<p>Source: <a href="https://towardsdatascience.com/how-to-keep-your-research-projects-organized-part-1-folder-structure-10bd56034d3a" class="uri">https://towardsdatascience.com/how-to-keep-your-research-projects-organized-part-1-folder-structure-10bd56034d3a</a></p>
+<p>By reporting your study you provide readers with the information necessary for them to assess the contribution of your study and the soundness of methods used, allows them to reproduce the study if they wish, and decide whether they agree with the conclusions that you draw given your data, methods, and results. Thus, from the instructions from your paper a reader should understand and be able to reproduce every table and figure.</p>
+<p>A research paper usually includes the following sections:</p>
+<ul>
+<li>Title</li>
+<li>Abstract</li>
+<li>Introduction</li>
+<li>Previous Literature Review</li>
+<li>Data and Variables</li>
+<li>Empirical Methods</li>
+<li>Results</li>
+<li>Discussion</li>
+<li>Summary and Conclusion</li>
+<li>References</li>
+<li>Appendices</li>
+</ul>
+<p>We will briefly summarize each of these items.</p>
+<p>The <strong>Title</strong> should be short (15 words or less) and reflect your research question. It needs to reflect the purpose (what is the question that you are addressing?), scope (i.e. if you cover a specific time period or population) of the study. Sometimes you might want to include the methods of your study in the title, if, e.g. you conduct a cohort study. All this information should help the reader to decide whether or not they are interested in reading it.</p>
+<p>The <strong>Abstract</strong> is usually around 300 words and includes a very short summary of your research question, data and methods used, main findings, and conclusions.</p>
+<p>The <strong>Introduction</strong> should be part of the paper that is written at the very end. It should motivate your research topic and give a more extensive overview of the context, data, methods and findings. You should provide context by referencing the existing literature regarding the things that we know and things that we do not know and then parlay the latter part into your research question. You need to interest your reader to a degree that they would want to continue reading the rest of your paper. The <strong>Introduction</strong> is said to the most important part of the paper, as you have to grab the readers’ attention.</p>
+<p>The <strong>Previous literature review</strong> are standard in economic papers. They are either included in the <strong>Introduction</strong> or are placed in a separate section. It contains a critical review of the most relevant and influential (well-cited) studies on the topic. It should also contain a summary and a connection how your study is related to what has been done before and how your study is going to contribute to it.</p>
+<p>A significant part of your empirical project is conducting a thorough literature review. Once you choose your topic and pose a research question, one of the first thing you usually do is look at the previous research and theories related to the research problem. By doing this, you will create a comprehensive overview of all the published knowledge on your topic available to date. This will provide a description, summary, background, context, relevance, and critical evaluation to the research idea you are working on. The main purpose of the review is to provide an overview of sources you are considering and to convince the reader of the need to conduct the research in question, and to show how it fits into the larger field of study. It will help you to establish whether the topic has been researched before, and show what problems others faced during their research.</p>
+<p>In a literature review, you need to identify and summarize key scholarly publications from the fields that are pertinent to your research topic. It should involve a thorough search of the main key words in the relevant databases and journals.</p>
+<p>The <strong>Data</strong> and variables section should contain a detailed information about the data source used in the paper as well as information about the variables used in the analysis.</p>
+<p>Describe the data you are using in your study in great detail. Is it a secondary data? Did you collect it yourself, if yes, how? Describe your sample and variable selection.</p>
+<p>The <strong>Empirical method</strong> section should in great detail describe the statistical method used in the paper and the assumptions that are necessary to be fulfilled in order to get an unbiased and consistent estimation of your parameter of interest. Also describe the limitations and how you addressed them.</p>
+<p>Ideally, you should describe each step that readers should perform, if they would like to reproduce your results and conclusions.</p>
+<p>The <strong>Results</strong> section should contain a set of tables and figures that show your empirical results. Make sure that tables are reader-friendly and are easy to comprehend. Place figures and tables as close as possible to the place in the text where you first referred to them.</p>
+<p>Do not discuss or explain the results in this section, and do not provide any interpretation or speculation here. Keep it factual and simply describe in words what the tables display.</p>
+<p>The <strong>Discussion</strong> section should contain the interpretation and discussion of the results, as well as potential mechanisms, and suggest a direction for future research.</p>
+<p>You should start your discussion by reiterating your research question and based on your findings, state what you think an answer to your question is. Do not introduce any new data or results in this section. It should reflect only the results already presented in the paper. You need to interpret your results in the context of the literature that you identified and discussed in the Introduction and the Related Literature sections.</p>
+<p>Are your findings consistent with what the other literature have found? Do your data fill the gap in the knowledge that you identified? Here you want to show how your work added to and extended the knowledge on the topic.</p>
+<p>You can also discuss implications of your study, for example for public policy. You also should acknowledge and discuss the limitations of the study here and what implications these limitations might have for the results. The more accurate, open and detailed you are about the limitations, the more credibility your results will have. Offer any alternative explanations for your findings.</p>
+<p>Discuss any negative effects in your findings and the impact they had on your conclusion. You can also talk about next steps and the implications of your findings for future research.</p>
+<p>The <strong>Summary and conclusion</strong> section is usually short and contains the most important information on the topic, findings and concluding remarks. It should reflect main points mentioned in the Introduction.</p>
+<p>Here you should underline why your research matters and state the answer to your research question. Also state here any recommendations that can be made based on your findings.</p>
+<p>At the very end of your paper you need to provide a complete list of <strong>References</strong>. The bibliography includes a compete list of academic papers and books referenced and cited in your study.</p>
+<p>The easiest way to keep track of your reference list is to write down the information, i.e. the title, author(s), journal/book, publisher, and publication date, about the original source each time you use it. Decide in advance on one citation and reference style and follow it throughout the paper.</p>
+<p>The <strong>Appendices</strong> are a handy tool. In order to keep your main part of the paper focused, of reasonable length, and not overburdened, you can place all the still relevant, but secondary and less critical information, i.e. various robustness checks, descriptive statistics, etc., in appendices.</p>
+<p>As a careful researcher you will conduct and document a number of various robustness checks of your main results. However, once you confirm and verified that your results are robust, it does not make sense to keep all of the robustness checks in the main body of the paper. Appendices allow you to save space. You can just summarize hat you did and refer to the tables in the appendix. Some journals also provide possibilities of online appendix.</p>
+<div class="figure" style="text-align: center">
+<img src="_book/DataLiteracy_files/figure-html/paperstructure.png" alt="Paper Structure" width="80%" />
+<p class="caption">
+(#fig:paper_structure)Paper Structure
+</p>
+</div>
+<p>Source: <a href="http://www.fresnostate.edu/academics/gradstudies/graduatewritingstudio.html">Fresno State Graduate Writing Studio.</a> <a href="https://fresnostategraduatewritingstudio.files.wordpress.com/2015/09/elements-of-a-research-paper.pdf">Elements of a Research Paper.</a></p>
+<div id="the-writing-process" class="section level3">
+<h3><span class="header-section-number">6.1.1</span> The writing process</h3>
+<ul>
+<li>producing a good empirical paper takes time. You should start working on it and drafting as soon as possible.</li>
+<li>allow yourself sufficient time for collecting and analyzing the data, writing and revising the paper. Writing a paper is a recursive process that will take many revisions.</li>
+<li>read the text yourself and let others read it. (“Is the text fun to read?”, “Would I want to read beyond the introduction myself?”, “Are the questions guiding the research comprehensible?”)</li>
+<li>keep it short. When editing ask yourself whether you can make the same point using fewer words?</li>
+<li>avoid repetition. Repeating things uses extra space and tests readers’ patience.<br />
+</li>
+<li>use “I” in a single-author project, and “we” in the project with more than one author.</li>
+</ul>
+<p>More principles on writing in economics are summarized in <a href="http://www3.nccu.edu.tw/~jthuang/rules.html">Top Ten Rules of Economical Writing</a> and more comprehensively in <span class="citation">(McCloskey and Ziliak <a href="#ref-mccloskey_economical_2019" role="doc-biblioref">2019</a>)</span> abd by <span class="citation">(Hall <a href="#ref-hall_how_2013" role="doc-biblioref">2013</a>)</span></p>
+</div>
+<div id="general-guidance-on-the-use-of-language-in-the-research-paper" class="section level3">
+<h3><span class="header-section-number">6.1.2</span> General guidance on the use of language in the research paper</h3>
+<ul>
+<li>use present tense, that means <em>“in this paper I attempt to…”</em></li>
+<li>generally stick to one tense</li>
+<li>use active voice</li>
+<li>use in-text citations, that means <em>“Hellerstein (1998) finds that…”</em> – even though it was a while ago; <em>“Table 1 shows…”</em>, not <em>“Table 1 will show…”</em></li>
+<li>use simple and direct sentences. Keep them short.</li>
+<li>check your paper for repetition and cut whenever you detect it in your paper.</li>
+<li>try to be as clear as possible with a few words as possible.</li>
+<li>place minor or secondary details and digressions from the main paragraph into footnotes.</li>
+</ul>
+</div>
+<div id="tables" class="section level3">
+<h3><span class="header-section-number">6.1.3</span> Tables</h3>
+<ul>
+<li>each table should be self-explanatory</li>
+<li>use 2 to 4 digits after the comma when reporting the results, not all the numbers produced by the statistical program.</li>
+<li>show results with and without controls. For example, start with a column that includes only the main coeffitient(s) of interest and then progressively inlcude various controls (for example patient characteristics, hospital FEs, etc.) in subsequent columns.</li>
+</ul>
+</div>
+<div id="figures" class="section level3">
+<h3><span class="header-section-number">6.1.4</span> Figures</h3>
+<ul>
+<li>use figures to show patterns in the data–they demonstrate it better that big tables with a lots of numbers,</li>
+<li>label the axes properly,</li>
+<li>provide self-explanatory captions.</li>
+</ul>
+</div>
+</div>
+<div id="resources-box-5" class="section level2">
+<h2><span class="header-section-number">6.2</span> Resources box</h2>
+<div id="collections-of-writing-tips-and-short-articles" class="section level3">
+<h3><span class="header-section-number">6.2.1</span> Collections of writing tips and short articles</h3>
+<ul>
+<li>Varian, H. R. (2016). <a href="https://journals.sagepub.com/doi/pdf/10.1177/0569434515627089">How to build an economic model in your spare time.</a> The American Economist, 61(1), 81-90.</li>
+<li>Dudenhefer, P. (2009). <a href="https://econ.duke.edu/sites/econ.duke.edu/files/file-attachments/Dudenhefer%2C%20Paul%20-%20Guide%20to%20Writing%20in%20Economics.pdf">A guide to Writing in Economics. EcoTeach Center and Department of Economics, Duke University.</a></li>
+<li>Nikolov, P. (2020). <a href="http://www.people.fas.harvard.edu/~pnikolov/resources/writingtips.pdf">Writing tips for economics research papers</a></li>
+<li><a href="https://www.johnhcochrane.com/">Cochrane, J. H.</a> (2005). <a href="http://mayoral.iae-csic.org/timeseries_bgse13/phd_paper_writing.pdf">Writing tips for Ph.D. students.</a> Chicago, IL: University of Chicago.</li>
+</ul>
+</div>
+<div id="books" class="section level3">
+<h3><span class="header-section-number">6.2.2</span> Books</h3>
+<ul>
+<li>Hall, G. M. (Ed.). (2013). <a href="https://onlinelibrary.wiley.com/doi/book/10.1002/9781118488713">How to write a paper (5th ed). Wiley-Blackwell.</a></li>
+<li>McCloskey, D. N., &amp; Ziliak, S. T. (2019). Economical Writing, Third Edition: Thirty-Five Rules for Clear and Persuasive Prose (Third Edition). University of Chicago Press.</li>
+</ul>
+</div>
+<div id="videos" class="section level3">
+<h3><span class="header-section-number">6.2.3</span> Videos</h3>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=Vky9PDKx5KU">Greg Martin (2018). How to write a paper.</a></li>
+</ul>
+</div>
+</div>
+<div id="example-hellerstein-1998-4" class="section level2">
+<h2><span class="header-section-number">6.3</span> Example: Hellerstein (1998)</h2>
+<p>We show the results of the reproduction of tables 1-3 and figures 1-2 of the descriptive analysis, and the reproduction of the empirical analysis in table 4-6. Please keep in mind that our results are based on data from 1991. This in contrast to <span class="citation">Hellerstein (<a href="#ref-hellerstein_importance_1998" role="doc-biblioref">1998</a>)</span> which is based on three datasets of the year 1989. As the confidential data is key to identifying physicians and patients in the data of 1989 we resort to the 1991 data, that provides these identifiers in two publically available datasets. We present our results and discuss the differences compared to <span class="citation">Hellerstein (<a href="#ref-hellerstein_importance_1998" role="doc-biblioref">1998</a>)</span> briefly. For a detailed discussion and interpretation of the results, we refer to the original study by <span class="citation">Hellerstein (<a href="#ref-hellerstein_importance_1998" role="doc-biblioref">1998</a>)</span>.</p>
+<div id="descriptive-analysis" class="section level3">
+<h3><span class="header-section-number">6.3.1</span> Descriptive Analysis</h3>
+<p>The summary statistics shown in Table 1, representing the overall NAMCS patient sample of the year 1991 are similar to the summary statistics shown by Hellerstein (1998). When looking at the dristribution of insurance coverage, we see differences especially at Blue Cross/Blue Shield (<span class="math inline">\(2%\)</span> compared to <span class="math inline">\(13%\)</span> in 1989), other commercial insurer (<span class="math inline">\(38%\)</span> compared to <span class="math inline">\(24%\)</span> in 1989) and HMO/prepaid plan (14% compared to <span class="math inline">\(24%\)</span> in 1989). Additionally, about <span class="math inline">\(14%\)</span> more specialist physicians are represented by the sample.</p>
+<p><strong>Table 1 - Summary Statistics for Overall NAMCS Patient Sample</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Mean</th>
+<th>Standard Deviation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Age</td>
+<td>42.58</td>
+<td>24.63</td>
+</tr>
+<tr class="even">
+<td>Female</td>
+<td>0.59</td>
+<td>0.49</td>
+</tr>
+<tr class="odd">
+<td>Nonwhite</td>
+<td>0.11</td>
+<td>0.32</td>
+</tr>
+<tr class="even">
+<td>Hispanic</td>
+<td>0.06</td>
+<td>0.23</td>
+</tr>
+<tr class="odd">
+<td>Self-pay</td>
+<td>0.24</td>
+<td>0.43</td>
+</tr>
+<tr class="even">
+<td>Medicare</td>
+<td>0.12</td>
+<td>0.33</td>
+</tr>
+<tr class="odd">
+<td>Medicaid</td>
+<td>0.09</td>
+<td>0.29</td>
+</tr>
+<tr class="even">
+<td>Blue Cross/Blue Shield</td>
+<td>0.02</td>
+<td>0.15</td>
+</tr>
+<tr class="odd">
+<td>Other commercial insurer</td>
+<td>0.38</td>
+<td>0.49</td>
+</tr>
+<tr class="even">
+<td>HMO/prepaid plan</td>
+<td>0.24</td>
+<td>0.43</td>
+</tr>
+<tr class="odd">
+<td>Specialist</td>
+<td>0.69</td>
+<td>0.46</td>
+</tr>
+<tr class="even">
+<td>Northeast</td>
+<td>0.23</td>
+<td>0.42</td>
+</tr>
+<tr class="odd">
+<td>Midwest</td>
+<td>0.25</td>
+<td>0.44</td>
+</tr>
+<tr class="even">
+<td>South</td>
+<td>0.28</td>
+<td>0.45</td>
+</tr>
+<tr class="odd">
+<td>West</td>
+<td>0.24</td>
+<td>0.43</td>
+</tr>
+<tr class="even">
+<td>N</td>
+<td>32407</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Notes: see Hellerstein (1998)
+Datasource: NAMSC91</p>
+<p>Table 2 shows very similar statistics for the patients of the NAMCSd sample compared to the data from 1989. We see a 5% increase in the proportion of generic drug prescription in specialist compared to Hellerstein (1998).</p>
+<p><strong>Table 2 - Summary Statistics for Patients in NAMCS Drug Sample</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>Variables</th>
+<th>Mean</th>
+<th>Standard Deviation</th>
+<th>Proportion Generic</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Age</td>
+<td>43.09</td>
+<td>24.98</td>
+<td>.</td>
+</tr>
+<tr class="even">
+<td>Female</td>
+<td>0.589</td>
+<td>0.492</td>
+<td>0.27</td>
+</tr>
+<tr class="odd">
+<td>Nonwhite</td>
+<td>0.122</td>
+<td>0.327</td>
+<td>0.33</td>
+</tr>
+<tr class="even">
+<td>Hispanic</td>
+<td>0.062</td>
+<td>0.242</td>
+<td>0.32</td>
+</tr>
+<tr class="odd">
+<td>Self-pay</td>
+<td>0.283</td>
+<td>0.451</td>
+<td>0.28</td>
+</tr>
+<tr class="even">
+<td>Medicare</td>
+<td>0.128</td>
+<td>0.335</td>
+<td>0.22</td>
+</tr>
+<tr class="odd">
+<td>Medicaid</td>
+<td>0.101</td>
+<td>0.301</td>
+<td>0.32</td>
+</tr>
+<tr class="even">
+<td>Private</td>
+<td>0.336</td>
+<td>0.472</td>
+<td>0.27</td>
+</tr>
+<tr class="odd">
+<td>HMO/prepaid plan</td>
+<td>0.142</td>
+<td>0.349</td>
+<td>0.35</td>
+</tr>
+<tr class="even">
+<td>Specialist</td>
+<td>0.4</td>
+<td>0.49</td>
+<td>0.31</td>
+</tr>
+<tr class="odd">
+<td>Northeast</td>
+<td>0.208</td>
+<td>0.406</td>
+<td>0.28</td>
+</tr>
+<tr class="even">
+<td>Midwest</td>
+<td>0.27</td>
+<td>0.444</td>
+<td>0.26</td>
+</tr>
+<tr class="odd">
+<td>South</td>
+<td>0.294</td>
+<td>0.456</td>
+<td>0.25</td>
+</tr>
+<tr class="even">
+<td>West</td>
+<td>0.228</td>
+<td>0.42</td>
+<td>0.35</td>
+</tr>
+<tr class="odd">
+<td>Full sample</td>
+<td>.</td>
+<td>.</td>
+<td>0.28</td>
+</tr>
+</tbody>
+</table>
+<p>Notes: see Hellerstein (1998), Datasource: NAMSCd91</p>
+<p>Compared to 1989, we observe larger sample size in the 1991 data. Table 3 shows the absolute number of observations and the share of generics over all drugs as well as the 8 largest drug categories. While the absolute number of observations is higher, the share of generics overall and per drug class stays similar to Hellerstein (1998).</p>
+<p><strong>Table 3 - Frequency of Generic Prescription by Drug Class</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>Name of Class</th>
+<th>Observations</th>
+<th>% Generics</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>All drugs</td>
+<td>14,008</td>
+<td>29.20</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Antimicrobials</td>
+<td>4,236</td>
+<td>43.77</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Cardiovascular-renals</td>
+<td>3,042</td>
+<td>25.02</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Central Nervous System</td>
+<td>1,213</td>
+<td>31.82</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Hormones/Hormonal mechanisms</td>
+<td>1,799</td>
+<td>37.80</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Skin/Mucous membrane</td>
+<td>827</td>
+<td>5.56</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Ophthalmics</td>
+<td>524</td>
+<td>18.89</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Relief of pain</td>
+<td>1,711</td>
+<td>11.63</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Respiratory tract</td>
+<td>656</td>
+<td>10.06</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Figure 1 - Distribution of Physician Generic Prescription Rates (Source: NAMSCd91)</strong></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:HellFig1"></span>
+<img src="_book/DataLiteracy_files/figure-html/Hellerstein_Fig_1.png" alt="Generic prescription rates" width="100%" />
+<p class="caption">
+Figure 6.2: Generic prescription rates
+</p>
+</div>
+<p>The distribution of physicians over the different generic prescription rates (figure 1) is similar to Hellerstein (1998).
+When looking at figure 2, we see an decrease from about 90% to about 50% in “only trade name” prescriptions by physicians. This seems to be driven by a rather small increase of prescription of “both versions” an “only generics”.</p>
+<p><strong>Figure 2 - Physician decisions for physicians who prescribe a drug to at least six patients (Source: NAMSCd91)</strong></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:HellFig2"></span>
+<img src="_book/DataLiteracy_files/figure-html/Hellerstein_Fig_2.png" alt="Physician decisions" width="100%" />
+<p class="caption">
+Figure 6.3: Physician decisions
+</p>
+</div>
+</div>
+<div id="empirical-analysis" class="section level3">
+<h3><span class="header-section-number">6.3.2</span> Empirical Analysis</h3>
+<p>In the following we present our results of the empirical analyses. Please keep in mind, that, due to data restrictions, we were not able to control for some covariates that Hellerstein (1998) accounted for. An example of such are legislation laws like mandatory or permissive substitution or one- or two-line prescription. For this reason, we cannot present all tables produced by Hellerstein (1998). Given these restrictions, we cannot run the analysis with the same underlying model specifications.
+This restricts us from comparing the results of the years 1991 and 1989, however for the completion of this example we represent the results of table 4, 5 and 6 in the following:</p>
+<p><strong>Table 4 Estimated Coefficients on Demographic Variables, Geographic Variables, and Average Characteristics for Full Sample</strong></p>
+<table>
+<colgroup>
+<col width="19%" />
+<col width="28%" />
+<col width="28%" />
+<col width="23%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Random-Effects Probit Coefficient</th>
+<th>Random-Effects Probit t-statistic</th>
+<th>% Change in Generic</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Constant</td>
+<td>0.71</td>
+<td>0.94</td>
+<td>-</td>
+</tr>
+<tr class="even">
+<td>Age</td>
+<td>-0.01</td>
+<td>-1.50</td>
+<td>-0.002</td>
+</tr>
+<tr class="odd">
+<td>Female</td>
+<td>-0.16</td>
+<td>-1.11</td>
+<td>-0.0463</td>
+</tr>
+<tr class="even">
+<td>Hispanic</td>
+<td>-0.54</td>
+<td>-1.46</td>
+<td>-0.154</td>
+</tr>
+<tr class="odd">
+<td>Nonwhite</td>
+<td>0.19</td>
+<td>0.73</td>
+<td>0.0534</td>
+</tr>
+<tr class="even">
+<td>Specialist</td>
+<td>0.00</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr class="odd">
+<td>Mean age</td>
+<td>0.01</td>
+<td>0.54</td>
+<td>0.0017</td>
+</tr>
+<tr class="even">
+<td>Percent female</td>
+<td>-1.73*</td>
+<td>-2.11</td>
+<td>-0.494*</td>
+</tr>
+<tr class="odd">
+<td>Percent black</td>
+<td>-0.95</td>
+<td>-1.52</td>
+<td>-0.270</td>
+</tr>
+<tr class="even">
+<td>Percent Hispanic</td>
+<td>0.45</td>
+<td>0.29</td>
+<td>0.127</td>
+</tr>
+<tr class="odd">
+<td>Percent Medicaid</td>
+<td>-0.01</td>
+<td>-0.01</td>
+<td>-0.0027</td>
+</tr>
+<tr class="even">
+<td>Percent Medicare</td>
+<td>-2.53**</td>
+<td>-3.01</td>
+<td>-0.722**</td>
+</tr>
+<tr class="odd">
+<td>Percent private</td>
+<td>-0.99</td>
+<td>-1.70</td>
+<td>-0.282</td>
+</tr>
+<tr class="even">
+<td>Percent HMO/prepaid</td>
+<td>-1.12*</td>
+<td>-2.09</td>
+<td>-0.321*</td>
+</tr>
+</tbody>
+</table>
+<p>Notes: <span class="math inline">\(*p &lt; 0.05, **p &lt; 0.01, ***p &lt; 0.001\)</span>; see Hellerstein (1998); Datasource: NAMSCd91</p>
+<p><strong>Table 5 - Estimated Coefficients for Drug-Class Dummy Variable for Full Sample</strong></p>
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Drug Class</th>
+<th>Random-Effects Probit Coefficient</th>
+<th>Random-Effects Probit t-statistic</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Antimicrobials</td>
+<td>0.989***</td>
+<td>4.25</td>
+</tr>
+<tr class="even">
+<td>Cardiovascular/renals</td>
+<td>-0.231</td>
+<td>-0.78</td>
+</tr>
+<tr class="odd">
+<td>Central Nervous System</td>
+<td>-1.118*</td>
+<td>-2.03</td>
+</tr>
+<tr class="even">
+<td>Hormones/Hormonal mechanisms</td>
+<td>0.280</td>
+<td>0.87</td>
+</tr>
+<tr class="odd">
+<td>Skin/Mucous membrane</td>
+<td>-0.198</td>
+<td>-0.44</td>
+</tr>
+<tr class="even">
+<td>Respiratory tract</td>
+<td>-0.736</td>
+<td>-1.29</td>
+</tr>
+</tbody>
+</table>
+<p>Notes: <span class="math inline">\(*p &lt; 0.05, **p &lt; 0.01, ***p &lt; 0.001\)</span>; Omitted category is Ophthalmics; Notes: see Hellerstein (1998); Datasource: NAMSCd91</p>
+<p><strong>Table 6 - Tests for Moral Hazard for the Full Sample Equality of Individual Insurance Variables with Self-Payment Random-Effects Probit Results</strong></p>
+<table style="width:100%;">
+<colgroup>
+<col width="13%" />
+<col width="10%" />
+<col width="11%" />
+<col width="9%" />
+<col width="8%" />
+<col width="15%" />
+<col width="9%" />
+<col width="9%" />
+<col width="12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Insurance Variable</th>
+<th>Antimicrobial</th>
+<th>Cardiovaskulars</th>
+<th>Metabolics</th>
+<th>Hormones</th>
+<th>Skin/Muchous Membranes</th>
+<th>Ophthalmics</th>
+<th>Pain relief</th>
+<th>Respiratory Tract</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Medicaid</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Coefficient</td>
+<td>0.178</td>
+<td>-0.0345</td>
+<td>-0.192</td>
+<td>0.497</td>
+<td>0.189</td>
+<td>-0.280</td>
+<td>0.634</td>
+<td>-1.017</td>
+</tr>
+<tr class="odd">
+<td>t-statistic</td>
+<td>1.49</td>
+<td>-0.15</td>
+<td>-0.74</td>
+<td>1.68</td>
+<td>0.31</td>
+<td>-0.74</td>
+<td>1.53</td>
+<td>-1.04</td>
+</tr>
+<tr class="even">
+<td>% change</td>
+<td>0.042</td>
+<td>-0.008</td>
+<td>-0.078</td>
+<td>-0.054</td>
+<td>0.062</td>
+<td>-0.099</td>
+<td>0.023</td>
+<td>-0.034</td>
+</tr>
+<tr class="odd">
+<td>Medicare</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Coefficient</td>
+<td>0.156</td>
+<td>-0.0397</td>
+<td>-0.388</td>
+<td>-0.259</td>
+<td>0.684</td>
+<td>-0.515</td>
+<td>0.164</td>
+<td>-0.413</td>
+</tr>
+<tr class="odd">
+<td>t-statistic</td>
+<td>1.08</td>
+<td>-0.23</td>
+<td>-1.43</td>
+<td>-1.07</td>
+<td>1.15</td>
+<td>-1.29</td>
+<td>0.40</td>
+<td>-0.50</td>
+</tr>
+<tr class="even">
+<td>% change</td>
+<td>0.047</td>
+<td>-0.007</td>
+<td>-0.039</td>
+<td>0.103</td>
+<td>0.017</td>
+<td>-0.054</td>
+<td>0.090</td>
+<td>-0.085</td>
+</tr>
+<tr class="odd">
+<td>Private</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Coefficient</td>
+<td>-0.0012</td>
+<td>-0.085</td>
+<td>-0.170</td>
+<td>-0.053</td>
+<td>0.226</td>
+<td>-0.394</td>
+<td>0.201</td>
+<td>-1.146</td>
+</tr>
+<tr class="odd">
+<td>t-statistic</td>
+<td>-0.01</td>
+<td>-0.54</td>
+<td>-1.02</td>
+<td>-0.27</td>
+<td>0.59</td>
+<td>-1.32</td>
+<td>0.71</td>
+<td>-1.42</td>
+</tr>
+<tr class="even">
+<td>% change</td>
+<td>0.070</td>
+<td>-0.032</td>
+<td>0.007</td>
+<td>-0.025</td>
+<td>-0.036</td>
+<td>-0.046</td>
+<td>0.052</td>
+<td>-0.023</td>
+</tr>
+<tr class="odd">
+<td>HMO/ Prepaid</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Coefficient</td>
+<td>0.262</td>
+<td>-0.156</td>
+<td>0.0353</td>
+<td>-0.120</td>
+<td>-0.395</td>
+<td>-0.238</td>
+<td>0.362</td>
+<td>-0.272</td>
+</tr>
+<tr class="odd">
+<td>t-statistic</td>
+<td>2.29</td>
+<td>-0.68</td>
+<td>0.13</td>
+<td>-0.42</td>
+<td>-0.72</td>
+<td>-0.43</td>
+<td>1.08</td>
+<td>-0.29</td>
+</tr>
+<tr class="even">
+<td>% change</td>
+<td>-0.000</td>
+<td>-0.018</td>
+<td>-0.034</td>
+<td>-0.011</td>
+<td>0.020</td>
+<td>-0.076</td>
+<td>0.029</td>
+<td>-0.096</td>
+</tr>
+</tbody>
+</table>
+<p>Notes: see Hellerstein (1998); Datasource: NAMSCd91</p>
+
+</div>
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-hall_how_2013">
+<p>Hall, George M., ed. 2013. <em>How to Write a Paper</em>. 5th ed. Chichester, West Sussex: Wiley-Blackwell.</p>
+</div>
+<div id="ref-hellerstein_importance_1998">
+<p>Hellerstein, Judith K. 1998. “The Importance of the Physician in the Generic Versus Trade-Name Prescription Decision.” <em>The RAND Journal of Economics</em> 29 (1): 108–36. <a href="https://doi.org/10.2307/2555818">https://doi.org/10.2307/2555818</a>.</p>
+</div>
+<div id="ref-mccloskey_economical_2019">
+<p>McCloskey, Deirdre N., and Stephen T. Ziliak. 2019. <em>Economical Writing, Third Edition: Thirty-Five Rules for Clear and Persuasive Prose</em>. Third Edition. Chicago ; London: University of Chicago Press.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="analyzing.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["DataLiteracy.pdf", "DataLiteracy.epub"],
+"search": {
+"engine": "lunr",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

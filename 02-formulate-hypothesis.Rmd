@@ -1,0 +1,191 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+# Formulating a hypothesis {#hypothesis}
+
+```{r, out.width='100%', fig.align='center', fig.cap='idea', echo=FALSE}
+knitr::include_graphics("C:/Users/KFischer/sciebo/Date Literacy Project/06 Manuscript/bookdown/DataLiteracy/_book/DataLiteracy_files/figure-html/idea.png")
+```
+Source: [DLPNG](https://dlpng.com/png/6808837)
+
+
+## Basic steps to formulate a hypothesis
+
+You decided to undertake a scientific project. Where do you start? First, you need to find a research question that interests you and formulate a hypothesis. We will introduce some key terminology, steps you can undertake and examples how to develop research questions. Note that there is no single best way to develop a research idea [@pischke_how_2012].
+
+*What if someone assigns a topic to me? For students attending undergraduate and graduate courses that often pick topics from a list, all of these steps are equally important and necessary. You still need to formulate a research question and a hypothesis. And it is important to clarify the relevance of your topic for yourself.*
+
+### What is a hypothesis?
+
+A hypothesis is a statement that introduces your research question and suggests the results you might find in your research. You will test your hypothesis with your empirical analysis. Thus, hypothesis constitutes the main basis of your scientific investigation. You should be careful when creating it. 
+
+A hypothesis is an educated guess. You start by posing an economic question and formulate a hypothesis about this question. Then you test it with your data and analyses and either accept or reject the hypothesis.
+
+
+### How do you develop a research question and formulate a hypothesis?
+
+When thinking about a research question [@trochim_problem_nodate],  you need to identify a topic that is
+
+- *Relevant*, important in the world and interesting to you as researcher: Does working on the topic excites you? You will spend many hours working on it. Therefore, it should be interesting and engaging enough for you to motivate your continued work on this topic.
+- *Specific*: not too broad and not too narrow
+- *Feasible* to research within a given timeframe: Is it possible to answer the research question based on your time budget, data and additional resources.
+
+
+How do you find a topic or develop a feasible research idea in the first place? Finding an idea is not difficult, the critical part is to find a **good** idea. How do you do that? There is no one specific way how one gets an idea, rather there is a myriad of ways how people come up with potential ideas [@varian_how_2016]. Once you decide on an idea, run it by a few people. That means approach your supervisor and other fellow students to see whether it is interesting enough to pursue it.
+
+For example, you can find inspiration by
+
+- Looking at insights from the world around you: your own life and experiences, observe the behavior of people around you
+- Talking to people around you, experts, other students, family members
+- Talking to individuals outside your field (non-economists)
+- Talking to professionals working in the area you are investigating (you may use social media and professional platforms like LinkedIN or Twitter to make contact)
+- Reading journal articles from other non-economic social sciences and the medical literature
+- Reading economic and non-economic newspaper and magazine articles (e.g. Süddeutsche, Frankfurter Allgemeine, Tagesspiegel, The Economist, the Wall Street Journal, The New York Times, The Guardian), watching TV programs
+	- What are the issues being discussed?
+	- How do these issues affect people's lives?
+
+
+You could in addition
+
+- Go to virtual and in-person seminars, for example the [Essen Health Economics Seminar](https://www.goek.wiwi.uni-due.de/forschung/essen-health-economics-seminar/winter-2020-21/) 
+- Look at abstracts of scientific articles and working papers
+- Look at the literature in a specific field you are interested in, for example sceening complete issues of journals or editorials about certain research advancements. By reading this literature you might come up with the idea on how to extend and refine previous research.
+	
+
+
+<!--Once you choose a topic, you need to ask an empirical research question that 
+
+- is interesting, feasible and original
+- is not too broad or too narrow
+- focuses on one economic issue
+- is analytical in nature: should drive you, as a researcher, to explain rather than describe the issue
+- is interesting and significant to motivate you, as a researcher, and engage the audience
+- is possible to answer within a given time frame
+- does not have an obvious answer
+- generates new insights and implications for future research
+- is possible to execute with the existing data sources.
+-->
+
+### Develop a Hypothesis
+
+Before you formulate your hypothesis, read up on the topic of interest. This reading should provide you with sufficient information to narrow down your research question. The research question comes from the topic you are contemplating. Once you find your question you need to develop a hypothesis. A hypothesis is your research question distilled into a one sentence statement. It presents a statement of your expectations regarding your research question's results. You propose to prove your hypothesis with your research by testing the relationship between two variables of interest. Thus, a hypothesis should be testable with the data at hand. There are two types of hypotheses: alternative or null. Null states that there is no effect. Alternative states that there is an effect. 
+
+It should be noted that there is an alternative view on this that suggests one should not look at the literature too early on in the idea-generating process in order not to be influenced and shaped by someone else's ideas. According to this view you can spend some time (i.e. a few weeks) trying to develop your own original idea. Even if you end up with an idea that has already been pursued by someone else, this will still provide you with good practice in developing publishable ideas. After you have developed an idea and made sure that it was not yet investigated in the literature, you can start conducting a systematic literature review. By doing this, you can find some other interesting insights from the work of others that you can synthesize in your own work to produce something novel and original.
+
+
+<!--References
+- https://www.economicsnetwork.ac.uk/handbook/ugresearch/31
+- [Forming Hypotheses & Questions About Economic Issues](https://study.com/academy/lesson/forming-hypotheses-questions-about-economic-issues.html)
+- [RESEARCH HYPOTHESIS](https://oakland.edu/Assets/upload/docs/AIS/Syllabi/Tayler_Research_Hypothesis.pdf)
+-->
+
+
+### Identify Relevant Literature
+
+For your research project you will need to identify and collect previous relevant literature. It should involve a thorough search of the keywords in relevant databases and journals. Place emphasis on articles from high-ranking journals with significant numbers of citations. This will give you an indication of the most influential and important work in the field. Once you identify and collect the relevant literature for your topic, you will need to **critically** synthesize it in your literature review.
+
+When you perform your literature review, consider theories that may inform your research question. For example when studying physician behavior, you may consider approaches made using principal-agency theory.
+
+
+### Research question or literature review, a hen and egg problem?
+
+Whether you start reading the literature first or by developing an idea may depend on your stage (graduate student, early career researcher) and other goals. However, thinking freely about what you like to investigate first may help to critically develop a feasible and interesting research question.
+
+We highlight an example how to start with investigating the real-world and subsequently posing a research question [@noauthor_how_2019;@noauthor_developing_2019;@schilbach_5_2019]. For example, based on your own observation you notice that people seem to spend extensive amount of time looking at their smartphones. Maybe even you yourself engage in the same behavior. In addition, you  read a BBC News article [Social media damages teenagers' mental health, report says](https://www.bbc.com/news/technology-55826238).
+
+```{r, out.width='100%', fig.align='center', fig.cap='social_media', echo=FALSE}
+knitr::include_graphics("C:/Users/KFischer/sciebo/Date Literacy Project/06 Manuscript/bookdown/DataLiteracy/_book/DataLiteracy_files/figure-html/Social-media.png")
+```
+
+Source: [BBC](https://www.bbc.com/news/technology-55826238)
+
+You decided to translate this article and your observations into a research question. A **research question** could be: *How does daily social media use influence our mental health?* Before you formulate your hypothesis, read up on the topic of interest. This reading should provide you with sufficient information to narrow down your research question. Read economic, medical and other social science literature on the topic. There is likely to be a vast amount of non-econ literature from non-econ fields that are doing research on your topic of interest, for example psychology or neuroscience. Familiarize yourself with it and master it. Do not get distracted by different scientific methodologies and techniques that might seem not up-to-par to the economic studies (small sample sizes, endogeneity, uncovering association rather than causation, etc.), but rather focus on suggestions of potential mechanisms.
+
+A hypothesis is then your research question distilled into a one sentence statement. It presents a statement of your expectations regarding your research question's results. You propose to prove your hypothesis with your research by testing the relationship between two variables of interest. Thus, a hypothesis should be testable with the data at hand. There are two types of hypotheses: alternative or null. The **null*** hypothesis states that there is no effect. The **alternative** hypothesis states that there is an effect.
+
+
+A hypothesis related to the above-stated research question could be: *The increased use of social media among teenagers leads to (is associated with) worse mental health outcomes, i.e. increased incidence of depression, worse well-being and lower self-esteem.* Your hypothesis suggests a direction of a relationship that you expect to find. It is not a blind guess, but is guided by your observations and existing evidence, that means the reports that you have collected. It is testable with scientific research methods, that means by using statistical analysis of the relevant data.  
+
+Your hypothesis suggests a relationship between two variables: social media use (your independent variable $X$) and mental health (dependent variable $Y$). Note, that this hypothesis could be framed in terms of correlation (is associated with) or causation (leads to). This should be reflected in the choice of scientific investigation you decide to undertake.
+
+
+The **null** hypothesis is: *There is no relationship between social media use among teenagers and their mental health*.
+
+It should be noted that there is an alternative view on this idea - a hypothesis-generating process that suggests that one should not look at the literature too early on in the idea-generating process not to be influenced and shaped by someone else's ideas. According to this view you can spend some time like a few weeks trying to develop your own original idea. Even if you end up with an idea that has already been pursued by someone else and published, this will still provide you with good practice in developing publishable ideas. After you have developed an idea and made sure that it was not yet investigated in the literature, you can start conducting a systematic literature review. By doing this, you can find some other interesting insights from the work of others that you can synthesize in your own work to produce something novel and original. 
+
+
+
+<!-- https://people.ischool.berkeley.edu/~hal/Papers/how.pdf
+-->
+<!-- https://libguides.usc.edu/writingguide/researchproblem
+-->
+<!--  https://www.editage.com/insights/how-to-write-the-literature-review-of-your-research-paper -->
+<!--  [How to write the literature review of your research paper](https://www.editage.com/insights/how-to-write-the-literature-review-of-your-research-paper) -->
+
+## Resources box
+
+### How to develop strong research questions
+
+- [The form of the research process](https://www.economicsnetwork.ac.uk/handbook/ugresearch/31)
+
+
+
+### Identify relevant literature from major general interest and field literature
+
+To identify the relevant literature you can
+
+- use academic search engines such as Google Scholar, Web of Science, EconLit, PubMed. <!--[INCLUDE LINKS]-->
+- search working paper series such as the [National Bureau of Economic Research](www.nber.org), [NetEc](http://netec.wustl.edu/NetEc.html) or [IZA](www.iza.org)
+- search more general resource sites such as [Resources for Economists](http://rfe.org)
+- go to the library/use library database
+
+### Assess the quality of a journal article
+
+Several rankings may help to assess the quality of research you consider
+
+ - Journals of general interest and by field in economics and management
+        - For German speaking countries, consider the [VWL / BWL Handelsblatt Ranking](https://www.forschungsmonitoring.org/) for economics and management
+        - The German Association of Management Scholars provides an expert based ranking[VHB JourQual 3.0, Teilranking Management im Gesundheitswesen](https://vhbonline.org/vhb4you/vhb-jourqual/vhb-jourqual-3/tabellen-zum-download)
+        - Web of Science Impact Factors
+        - Scimago
+ - Health Economics, Health Services and Health Care Managment Research: [Health Economics Journals List](https://www.mthooddiabeteschallenge.com/journal-list)
+ - Be aware that like in any other domain, there are [predatory publishing practices](https://predatoryjournals.com/).
+ 
+ 
+### Investigate how a journal article is connected to other works
+
+ - [Citationgecko](https://citationgecko.azurewebsites.net/)
+ - [Connected papers](https://www.connectedpapers.com)
+ - [scite_](https://scite.ai/) -- a tool to get a first impression whether a study is disputed or academic consensus
+
+### Organize your literature
+
+- [Zotero](https://www.zotero.org/) (free of charge)
+- [Mendeley](https://www.mendeley.com/guides/desktop) (free of charge)
+- [EndNote](https://endnote.com/) (potentially free of charge via your university)
+- [Citavi](https://www.citavi.com/de) (potentially free of charge via your university)
+- BibTEX if you work with TEX
+- Excel spread sheet
+<!--- https://www.uni-due.de/ub/abisz/literaturverwaltung.shtml-->
+
+
+
+## Example: Hellerstein (1998)
+
+As an illustration of the research process of formulating a hypothesis, designing the study, running the study and collecting the data, analysing the data and, finally, reporting the study, we provide an example of the partly reproduction of a highly cited paper in the field of health economics <!--[report number of cites in Google Scholar and Repec as of a certain date, show using connected papers and citation gecko how this paper has impacted literature]-->. At the end of each chapter, we demonstrate insides into the study "The importance of the Physician in the Generic versus Trade-Name Prescription Decision" by Judith K. Hellerstein from the year 1998 [@hellerstein_importance_1998] that we reproduced. 
+
+### **Relevance of the topic - escalating health expenditures**
+
+Worldwide, health systems face constantly increasing prescription drug expenditures. In the United States, the total prescription drug expenditure in 2020 marked about 358.7 billion US-Dollars [@statista_prescription_2020]. The prescription of generic drugs is an option in reducing the total health care expenditure. Generic drugs are bioequivalent in the active ingredients but have discounts of up to 80 percent compared to the trade-name alternative [@pruckner_hospitals_2018].
+ 
+### **Development of a research question - identifying the role of physician practice in choosing generic drugs**
+
+Physicians are faced with a multitude of different medication options, including generic and trade-name drugs. Physicians ideally act as agents for their patients to identify the best available treatment option. However, choosing the best treatment entails cost of coordination and cognition. The prescription of generic drugs may serve as an example to what extent physicians customize treatments according to patient's needs with regards to cost. From an economic point of view one might suggest that once a generic drug is available, a perfectly rational consumer would demand a generic drug instead of the trade-name version [@fischer_diffusion_2016]<!--find better source-->.  This asks for the research question, whether *"physicians vary their prescription decisions on a patient-by-patient basis or whether they systematically prescribe the same version, trade-name or generic, to all patients"*. The aim of this study is to identify the role the physician plays in prescribing a generic over a trade-name drug and the role of a patient's insurance status.
+
+### **Hypothesis - insurance status drives generic drug use**
+
+To empirically analyse the research question, one needs to make use of different groups<!--this is still rather unspecific--> to draw conclusions. Hellerstein (1998) considers a patient's insurance status as a matter of dividing the study population in groups. The hypothesis to test the underlying research question can be formulated as *"Physicians are more likely to prescribe generics to patients who do not have insurance coverage for prescription pharmaceuticals"* [@hellerstein_importance_1998]. So a relationship between the two variables, prescription of a generic drug (dependent variable) and insurance status (independent variable) of the patient is suggested.<!--Formulate that more precisely in terms of a hypothesis-->
+
+

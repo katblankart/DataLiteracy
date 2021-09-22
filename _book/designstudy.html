@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Designing the Study | A concise guide to reproducible research using secondary data</title>
+  <meta name="description" content="Data Science Campus - A study guide for reproducible research using secondary (health care) data" />
+  <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Designing the Study | A concise guide to reproducible research using secondary data" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Data Science Campus - A study guide for reproducible research using secondary (health care) data" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Designing the Study | A concise guide to reproducible research using secondary data" />
+  
+  <meta name="twitter:description" content="Data Science Campus - A study guide for reproducible research using secondary (health care) data" />
+  
+
+<meta name="author" content="Maryna Ivets, Eva Goetjes, Katharina Blankart" />
+
+
+<meta name="date" content="2021-09-21" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="hypothesis.html"/>
+<link rel="next" href="run-study.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Reproducible research using 2ndary data</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>A study guide to empirical research in economics and management using secondary data</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#objective"><i class="fa fa-check"></i>Objective</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#learning-objectives"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#structure-of-the-study-guide"><i class="fa fa-check"></i>Structure of the study guide</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#this-is-a-living-document"><i class="fa fa-check"></i>This is a living document</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="acknowledgements.html"><a href="acknowledgements.html"><i class="fa fa-check"></i>Acknowledgements</a></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction to reproducible research</a><ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#what-is-reproducible-research"><i class="fa fa-check"></i><b>1.1</b> What is reproducible research?</a></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#why-you-as-a-student-and-researcher-should-care-about-reproducible-research"><i class="fa fa-check"></i><b>1.2</b> Why you, as a student and researcher, should care about reproducible research?</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="intro.html"><a href="intro.html#avoid-common-biases-that-lead-to-biased-or-false-research-results"><i class="fa fa-check"></i><b>1.2.1</b> Avoid common biases that lead to biased or false research results</a></li>
+<li class="chapter" data-level="1.2.2" data-path="intro.html"><a href="intro.html#increase-productivity-of-your-work-and-the-work-of-the-scientific-community-by-performing-reproducible-research"><i class="fa fa-check"></i><b>1.2.2</b> Increase productivity of your work and the work of the scientific community by performing reproducible research</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#main-steps-to-produce-reproducible-research"><i class="fa fa-check"></i><b>1.3</b> Main steps to produce reproducible research</a></li>
+<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#secondary-health-care-data"><i class="fa fa-check"></i><b>1.4</b> Secondary (health care) data</a></li>
+<li class="chapter" data-level="1.5" data-path="intro.html"><a href="intro.html#creating-an-environment-for-productive-research-projects"><i class="fa fa-check"></i><b>1.5</b> Creating an environment for productive research projects</a></li>
+<li class="chapter" data-level="1.6" data-path="intro.html"><a href="intro.html#resources-box"><i class="fa fa-check"></i><b>1.6</b> Resources Box</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="hypothesis.html"><a href="hypothesis.html"><i class="fa fa-check"></i><b>2</b> Formulating a hypothesis</a><ul>
+<li class="chapter" data-level="2.1" data-path="hypothesis.html"><a href="hypothesis.html#basic-steps-to-formulate-a-hypothesis"><i class="fa fa-check"></i><b>2.1</b> Basic steps to formulate a hypothesis</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="hypothesis.html"><a href="hypothesis.html#what-is-a-hypothesis"><i class="fa fa-check"></i><b>2.1.1</b> What is a hypothesis?</a></li>
+<li class="chapter" data-level="2.1.2" data-path="hypothesis.html"><a href="hypothesis.html#how-do-you-develop-a-research-question-and-formulate-a-hypothesis"><i class="fa fa-check"></i><b>2.1.2</b> How do you develop a research question and formulate a hypothesis?</a></li>
+<li class="chapter" data-level="2.1.3" data-path="hypothesis.html"><a href="hypothesis.html#develop-a-hypothesis"><i class="fa fa-check"></i><b>2.1.3</b> Develop a Hypothesis</a></li>
+<li class="chapter" data-level="2.1.4" data-path="hypothesis.html"><a href="hypothesis.html#identify-relevant-literature"><i class="fa fa-check"></i><b>2.1.4</b> Identify Relevant Literature</a></li>
+<li class="chapter" data-level="2.1.5" data-path="hypothesis.html"><a href="hypothesis.html#research-question-or-literature-review-a-hen-and-egg-problem"><i class="fa fa-check"></i><b>2.1.5</b> Research question or literature review, a hen and egg problem?</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="hypothesis.html"><a href="hypothesis.html#resources-box-1"><i class="fa fa-check"></i><b>2.2</b> Resources box</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="hypothesis.html"><a href="hypothesis.html#how-to-develop-strong-research-questions"><i class="fa fa-check"></i><b>2.2.1</b> How to develop strong research questions</a></li>
+<li class="chapter" data-level="2.2.2" data-path="hypothesis.html"><a href="hypothesis.html#identify-relevant-literature-from-major-general-interest-and-field-literature"><i class="fa fa-check"></i><b>2.2.2</b> Identify relevant literature from major general interest and field literature</a></li>
+<li class="chapter" data-level="2.2.3" data-path="hypothesis.html"><a href="hypothesis.html#assess-the-quality-of-a-journal-article"><i class="fa fa-check"></i><b>2.2.3</b> Assess the quality of a journal article</a></li>
+<li class="chapter" data-level="2.2.4" data-path="hypothesis.html"><a href="hypothesis.html#investigate-how-a-journal-article-is-connected-to-other-works"><i class="fa fa-check"></i><b>2.2.4</b> Investigate how a journal article is connected to other works</a></li>
+<li class="chapter" data-level="2.2.5" data-path="hypothesis.html"><a href="hypothesis.html#organize-your-literature"><i class="fa fa-check"></i><b>2.2.5</b> Organize your literature</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="hypothesis.html"><a href="hypothesis.html#example-hellerstein-1998"><i class="fa fa-check"></i><b>2.3</b> Example: Hellerstein (1998)</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="hypothesis.html"><a href="hypothesis.html#relevance-of-the-topic---escalating-health-expenditures"><i class="fa fa-check"></i><b>2.3.1</b> <strong>Relevance of the topic - escalating health expenditures</strong></a></li>
+<li class="chapter" data-level="2.3.2" data-path="hypothesis.html"><a href="hypothesis.html#development-of-a-research-question---identifying-the-role-of-physician-practice-in-choosing-generic-drugs"><i class="fa fa-check"></i><b>2.3.2</b> <strong>Development of a research question - identifying the role of physician practice in choosing generic drugs</strong></a></li>
+<li class="chapter" data-level="2.3.3" data-path="hypothesis.html"><a href="hypothesis.html#hypothesis---insurance-status-drives-generic-drug-use"><i class="fa fa-check"></i><b>2.3.3</b> <strong>Hypothesis - insurance status drives generic drug use</strong></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="designstudy.html"><a href="designstudy.html"><i class="fa fa-check"></i><b>3</b> Designing the Study</a><ul>
+<li class="chapter" data-level="3.1" data-path="designstudy.html"><a href="designstudy.html#basic-steps-in-designing-your-study"><i class="fa fa-check"></i><b>3.1</b> Basic steps in designing your study</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="designstudy.html"><a href="designstudy.html#clarify-your-study-goal-association-causation-counterfactuals"><i class="fa fa-check"></i><b>3.1.1</b> Clarify your study goal: association, causation, counterfactuals</a></li>
+<li class="chapter" data-level="3.1.2" data-path="designstudy.html"><a href="designstudy.html#develop-a-causal-model-and-identify-estimable-effects"><i class="fa fa-check"></i><b>3.1.2</b> Develop a causal model and identify estimable effects</a></li>
+<li class="chapter" data-level="3.1.3" data-path="designstudy.html"><a href="designstudy.html#develop-the-empirical-strategy-to-investigate-causal-effects"><i class="fa fa-check"></i><b>3.1.3</b> Develop the empirical strategy to investigate causal effects</a></li>
+<li class="chapter" data-level="3.1.4" data-path="designstudy.html"><a href="designstudy.html#investigate-suitable-source-data"><i class="fa fa-check"></i><b>3.1.4</b> Investigate suitable source data</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="designstudy.html"><a href="designstudy.html#resources-box-2"><i class="fa fa-check"></i><b>3.2</b> Resources box</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="designstudy.html"><a href="designstudy.html#key-terminology-in-causal-inference-based-on-matthay_alternative_2020"><i class="fa fa-check"></i><b>3.2.1</b> Key terminology in causal inference based on <span class="citation">Matthay et al. (<span>2020</span>)</span></a></li>
+<li class="chapter" data-level="3.2.2" data-path="designstudy.html"><a href="designstudy.html#openly-available-textbooks-and-resources-on-econometrics-with-a-causal-inference-focus"><i class="fa fa-check"></i><b>3.2.2</b> Openly-available textbooks and resources on econometrics with a causal inference focus</a></li>
+<li class="chapter" data-level="3.2.3" data-path="designstudy.html"><a href="designstudy.html#drawing-causal-diagrams"><i class="fa fa-check"></i><b>3.2.3</b> Drawing Causal Diagrams</a></li>
+<li class="chapter" data-level="3.2.4" data-path="designstudy.html"><a href="designstudy.html#replication-examples"><i class="fa fa-check"></i><b>3.2.4</b> Replication examples</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="designstudy.html"><a href="designstudy.html#example-hellerstein-1998-1"><i class="fa fa-check"></i><b>3.3</b> Example: Hellerstein (1998)</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="run-study.html"><a href="run-study.html"><i class="fa fa-check"></i><b>4</b> Running the study and collecting the data</a><ul>
+<li class="chapter" data-level="4.1" data-path="run-study.html"><a href="run-study.html#basic-steps-when-running-the-study-and-collecting-the-data"><i class="fa fa-check"></i><b>4.1</b> Basic steps when running the study and collecting the data</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="run-study.html"><a href="run-study.html#identify-secondary-data-sources"><i class="fa fa-check"></i><b>4.1.1</b> Identify secondary data sources</a></li>
+<li class="chapter" data-level="4.1.2" data-path="run-study.html"><a href="run-study.html#develop-a-data-collection-and-analysis-plan"><i class="fa fa-check"></i><b>4.1.2</b> Develop a data collection and analysis plan</a></li>
+<li class="chapter" data-level="4.1.3" data-path="run-study.html"><a href="run-study.html#obtain-access-to-source-data-or-generate-the-data"><i class="fa fa-check"></i><b>4.1.3</b> Obtain access to source data or generate the data</a></li>
+<li class="chapter" data-level="4.1.4" data-path="run-study.html"><a href="run-study.html#process-and-prepare-the-source-data"><i class="fa fa-check"></i><b>4.1.4</b> Process and prepare the source data</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="run-study.html"><a href="run-study.html#resources-box-3"><i class="fa fa-check"></i><b>4.2</b> Resources Box</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="run-study.html"><a href="run-study.html#how-to-organize-your-research-project"><i class="fa fa-check"></i><b>4.2.1</b> How to organize your research project:</a></li>
+<li class="chapter" data-level="4.2.2" data-path="run-study.html"><a href="run-study.html#coding-practices-best-practices-for-data-and-code-management-in-projects"><i class="fa fa-check"></i><b>4.2.2</b> Coding practices: Best Practices for Data and Code Management in Projects</a></li>
+<li class="chapter" data-level="4.2.3" data-path="run-study.html"><a href="run-study.html#data-cleaning"><i class="fa fa-check"></i><b>4.2.3</b> Data cleaning</a></li>
+<li class="chapter" data-level="4.2.4" data-path="run-study.html"><a href="run-study.html#collecting-data-from-meta-data-and-web-scraping"><i class="fa fa-check"></i><b>4.2.4</b> Collecting data from meta-data and web-scraping</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="run-study.html"><a href="run-study.html#example-hellerstein-1998-2"><i class="fa fa-check"></i><b>4.3</b> Example: Hellerstein (1998)</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="analyzing.html"><a href="analyzing.html"><i class="fa fa-check"></i><b>5</b> Analyzing the Data</a><ul>
+<li class="chapter" data-level="5.1" data-path="analyzing.html"><a href="analyzing.html#basic-steps-when-analyzing-the-data"><i class="fa fa-check"></i><b>5.1</b> Basic steps when analyzing the data</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="analyzing.html"><a href="analyzing.html#generate-the-analysis-data-set"><i class="fa fa-check"></i><b>5.1.1</b> Generate the analysis data set</a></li>
+<li class="chapter" data-level="5.1.2" data-path="analyzing.html"><a href="analyzing.html#describe-your-data-assess-validity-and-plausiblity"><i class="fa fa-check"></i><b>5.1.2</b> Describe your data, assess validity and plausiblity</a></li>
+<li class="chapter" data-level="5.1.3" data-path="analyzing.html"><a href="analyzing.html#generate-estimates-of-your-investigated-effect-using-regression-techniques"><i class="fa fa-check"></i><b>5.1.3</b> Generate estimates of your investigated effect using regression techniques</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="analyzing.html"><a href="analyzing.html#resources-box-4"><i class="fa fa-check"></i><b>5.2</b> Resources box</a></li>
+<li class="chapter" data-level="5.3" data-path="analyzing.html"><a href="analyzing.html#example-hellerstein-1998-3"><i class="fa fa-check"></i><b>5.3</b> Example: Hellerstein (1998)</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="analyzing.html"><a href="analyzing.html#describe-your-data-assess-validity-and-plausiblity-1"><i class="fa fa-check"></i><b>5.3.1</b> Describe your data, assess validity and plausiblity</a></li>
+<li class="chapter" data-level="5.3.2" data-path="analyzing.html"><a href="analyzing.html#generate-estimates-of-your-investigated-effect-using-regression-techniques-1"><i class="fa fa-check"></i><b>5.3.2</b> Generate estimates of your investigated effect using regression techniques</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="report-study.html"><a href="report-study.html"><i class="fa fa-check"></i><b>6</b> Reporting the Study</a><ul>
+<li class="chapter" data-level="6.1" data-path="report-study.html"><a href="report-study.html#basic-steps-to-reporting-the-study"><i class="fa fa-check"></i><b>6.1</b> Basic steps to reporting the study</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="report-study.html"><a href="report-study.html#the-writing-process"><i class="fa fa-check"></i><b>6.1.1</b> The writing process</a></li>
+<li class="chapter" data-level="6.1.2" data-path="report-study.html"><a href="report-study.html#general-guidance-on-the-use-of-language-in-the-research-paper"><i class="fa fa-check"></i><b>6.1.2</b> General guidance on the use of language in the research paper</a></li>
+<li class="chapter" data-level="6.1.3" data-path="report-study.html"><a href="report-study.html#tables"><i class="fa fa-check"></i><b>6.1.3</b> Tables</a></li>
+<li class="chapter" data-level="6.1.4" data-path="report-study.html"><a href="report-study.html#figures"><i class="fa fa-check"></i><b>6.1.4</b> Figures</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="report-study.html"><a href="report-study.html#resources-box-5"><i class="fa fa-check"></i><b>6.2</b> Resources box</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="report-study.html"><a href="report-study.html#collections-of-writing-tips-and-short-articles"><i class="fa fa-check"></i><b>6.2.1</b> Collections of writing tips and short articles</a></li>
+<li class="chapter" data-level="6.2.2" data-path="report-study.html"><a href="report-study.html#books"><i class="fa fa-check"></i><b>6.2.2</b> Books</a></li>
+<li class="chapter" data-level="6.2.3" data-path="report-study.html"><a href="report-study.html#videos"><i class="fa fa-check"></i><b>6.2.3</b> Videos</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="report-study.html"><a href="report-study.html#example-hellerstein-1998-4"><i class="fa fa-check"></i><b>6.3</b> Example: Hellerstein (1998)</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="report-study.html"><a href="report-study.html#descriptive-analysis"><i class="fa fa-check"></i><b>6.3.1</b> Descriptive Analysis</a></li>
+<li class="chapter" data-level="6.3.2" data-path="report-study.html"><a href="report-study.html#empirical-analysis"><i class="fa fa-check"></i><b>6.3.2</b> Empirical Analysis</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A concise guide to reproducible research using secondary data</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="designstudy" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> Designing the Study</h1>
+<!-- https://voxeu.org/article/simple-rules-designing-economic-experiments
+-->
+<!-- https://www.questionpro.com/blog/empirical-research/
+-->
+<div id="basic-steps-in-designing-your-study" class="section level2">
+<h2><span class="header-section-number">3.1</span> Basic steps in designing your study</h2>
+<p>We have arrived at the heart of your research study to specify how you will empirically test your hypothesis. We focus on study designs make use of secondary data with the aim to identify the magnitude of effects of causal relationships between a variable of interest <span class="math inline">\(X\)</span> and a certain outcome <span class="math inline">\(Y\)</span>. Note that there is extensive literature and guidance to perform causal inference, some of which we guide you to below. We will highlight the most important elements and point to the relevant resources.</p>
+<p>You have chosen your research questions and formulated a hypothesis. You also have collected and reviewed all the relevant literature on your topic. Now, you need to decide on your research design. Are you planning to uncover associations, or do you want to examine a causal relationship between your variables of interest <span class="citation">(Pearl <a href="#ref-pearl_causality_2009" role="doc-biblioref">2009</a>; Pearl, Glymour, and Jewell <a href="#ref-pearl_causal_2016" role="doc-biblioref">2016</a>)</span>? To translate direct observations in data to investigate cause-and-effect relationships, you will need to rely on a workable model that describes the elements reflected by your hypothesis. For that reason, it is recommended that you first describe the causal structures of the elements that you are studying, including any other observed or unobserved structures that may disturb the cause-and-effect relationship under investigation.</p>
+<p>The design of your study will depend on the causal model that suggests which effects are estimable, given that there are suitable data to empirically identify the effect. Consider that you describe cause-and-effect relationship first, assess how it is estimable (that means that you ask the question “Can you infer a causal effect from your data?”) and then investigate the effect by direct observations using secondary data. The alternative is to start out with a regression estimated effect and then investigate whether it has a causal interpretation.</p>
+<p>Consider the subsequent steps as an iterative process, allowing that not all data you may need to estimate effects of your causal model will be readily available. Some elements will remain unobserved.</p>
+<div id="clarify-your-study-goal-association-causation-counterfactuals" class="section level3">
+<h3><span class="header-section-number">3.1.1</span> Clarify your study goal: association, causation, counterfactuals</h3>
+<p>(see Pearl (2009) on the <em>“ladder of causality”</em>)</p>
+</div>
+<div id="develop-a-causal-model-and-identify-estimable-effects" class="section level3">
+<h3><span class="header-section-number">3.1.2</span> Develop a causal model and identify estimable effects</h3>
+<p>Once you have made this decision, you should specify a causal model that describes the relationships between the elements that you are studying. This causal model will help to identify empirical model by defining your main relationship of interest.</p>
+<p>You need to specify your</p>
+<ul>
+<li>main outcomes variable of interest (<span class="math inline">\(X\)</span>)</li>
+<li>main independent variable of interest (<span class="math inline">\(Y\)</span>)</li>
+<li>other independent variables (confounders of the effect of <span class="math inline">\(X\)</span> on <span class="math inline">\(Y\)</span>), that means any additional <span class="math inline">\(Z\)</span>’s</li>
+<li>unobserved variables (<span class="math inline">\(U\)</span>)</li>
+</ul>
+<p>For better visualization, you may plot the corresponding <a href="https://cran.r-project.org/web/packages/ggdag/vignettes/intro-to-dags.html">directed acyclic graph</a> to describe the relationships between your variable of interest and any confounding variable. It is recommended to do this step before data collection. That way, you avoid collection of data that may not be needed. You also avoid forgetting variables that are necessary to for causal effect identification. And you may <a href="https://ftp.cs.ucla.edu/pub/stat_ser/r493.pdf">check for so-called bad controls</a> that may bias your estimates.</p>
+</div>
+<div id="develop-the-empirical-strategy-to-investigate-causal-effects" class="section level3">
+<h3><span class="header-section-number">3.1.3</span> Develop the empirical strategy to investigate causal effects</h3>
+<p>Potential outcomes framework notation</p>
+<p>Write down your estimate, your estimand, notation</p>
+<p>After you have specified your causal model, ask yourself how you can capture the causal relationship between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>. In other words, can you apply an appropriate research design that can accommodate you in determining causality with the data at hand? Following the classification by <span class="citation">Matthay et al. (<a href="#ref-matthay_alternative_2020" role="doc-biblioref">2020</a>)</span>, that means by performing a</p>
+<ul>
+<li>Randomized Controlled Trial (RCT): this would be the ideal world case where we could randomize treatments to study effect</li>
+</ul>
+<p>Secondary data will not allow performing a RCT as you will not be able to randomly assign subjects, such that you need to run a quasi-experiment to identify treatment effects using a</p>
+<ul>
+<li><p>Confounder Control Study</p>
+<ul>
+<li>Regression adjustment</li>
+<li>Matching Techniques</li>
+<li>Two-way fixed-effects (TWFE) panel regressions</li>
+</ul></li>
+<li><p>Instruments</p>
+<ul>
+<li>Regression discontinuity design (RDD)</li>
+<li>Difference-in-difference (DiD) analysis</li>
+<li>Instrumental variable (IV) approach</li>
+</ul></li>
+<li><p>Structural equation models</p></li>
+</ul>
+<p>Think about what type of treatment effect you are investigating in your causal analysis. The treatment effect is the average (across the population or across some subpopulation) of the change in outcome (<span class="math inline">\(Y\)</span>) that results from a change in a covariate (the treatment <span class="math inline">\(X\)</span>) <span class="citation">(Lewbel <a href="#ref-lewbel_identification_2019" role="doc-biblioref">2019</a>)</span>.</p>
+<p>Common types of treatment effect parameters are</p>
+<ul>
+<li>average treatment effects (ATE)</li>
+<li>average treatment effects on the treated (ATT)</li>
+<li>marginal treatment effects (MTE)</li>
+<li>local average treatment effects (LATE)</li>
+<li>quantile treatment effects (QTE)</li>
+</ul>
+<!-- include a note on ML and causal ML -->
+</div>
+<div id="investigate-suitable-source-data" class="section level3">
+<h3><span class="header-section-number">3.1.4</span> Investigate suitable source data</h3>
+<p>You need to find and collect suitable data to populate your causal model. This might take some time, and not all of the variables can be found in one dataset. You might frequently need to collect and combine a few different data sources. When searching for the data sources, you can turn to already existing datasets specifically designed for scientific use, for example surveys (NAMCS, CPS, NLSY, HILDA, RLMS HSE, KiGGS); panels (for example GSOEP, SHARE, HRS, ELSA); censuses (e.g. Microcensus). [INCLUDE LINKS]</p>
+<p>Some data are available from statistical offices (Eurostat in the European Union, DESTATIS for Germany), private companies (health insurances), Social Media and App based data (Mappiness, Fitbit, Facebook, Twitter, WayBetter) or governmental and non-governmental institutions (EMA, FDA, BfARM). Sometimes you have to hand-collect and digitize the necessary data, for example from historical documents, data from governmental and non-governmental agencies, commercial providers and library search engines, archives; download statistical tables from INKAR’s or Unemployment Agency’s websites. Therefore, you need to plan whether and how these can be accessed and how much time is needed for extraction. Consider automated tools like scraping.</p>
+<p>You need to decide on what aggregation level you need to conduct your analysis to estimate the cause-and-effect relationships postulated, for example individual (patient, student), organization (hopstial), regional (country, state). Given that, you need to identify appropriate data sources that contain your variables of interest at the given aggregation level.</p>
+</div>
+</div>
+<div id="resources-box-2" class="section level2">
+<h2><span class="header-section-number">3.2</span> Resources box</h2>
+<div id="key-terminology-in-causal-inference-based-on-matthay_alternative_2020" class="section level3">
+<h3><span class="header-section-number">3.2.1</span> Key terminology in causal inference based on <span class="citation">Matthay et al. (<a href="#ref-matthay_alternative_2020" role="doc-biblioref">2020</a>)</span></h3>
+<ul>
+<li><strong>Causal model</strong>: A description, most often expressed as a system of equations or a diagram, of a researcher’s assumptions about hypothesized known causal relationships among variables relevant to a particular research question.</li>
+<li><strong>Treatment, exposure, or independent variable</strong>: The explanatory variable of interest in a study. Some also describe this as the “right-hand-side variable”.</li>
+<li><strong>Outcome, dependent variable, or left-hand-side variable</strong>: The causal effect of interest in a research study is the impact of an exposure(s) on an outcome(s).</li>
+<li><strong>Potential outcome</strong>: The outcome that an individual (or other unit of analysis, such as family or neighborhood) would experience if his/her treatment takes any particular value. Each individual is conceptualized as having a potential outcome for each possible treatment value. Potential outcomes are sometimes referred to as counterfactual outcomes.</li>
+<li><strong>Exogenous versus endogenous variables</strong>: These terms are common in economics, where a variable is described as exogenous if its values are not determined by other variables in the causal model. The variable is called endogenous if it is influenced by other variables in the causal model. If a third variable influences both the exposure and outcome, this implies the exposure is endogenous.</li>
+</ul>
+</div>
+<div id="openly-available-textbooks-and-resources-on-econometrics-with-a-causal-inference-focus" class="section level3">
+<h3><span class="header-section-number">3.2.2</span> Openly-available textbooks and resources on econometrics with a causal inference focus</h3>
+<ul>
+<li><a href="https://mixtape.scunning.com/">Causal Inference: The Mixtape</a> by <a href="http://www.scunning.com/">Scott Cunningham</a></li>
+<li><a href="https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/">What If</a> by Jamie Robin and Miguel Hernan</li>
+<li><a href="http://nickchk.com/causalitybook.html">The Effect: An Introduction to Research Design and Causality</a> by <a href="http://nickchk.com/">Nick Huntington-Klein</a></li>
+<li><a href="https://www.measureevaluation.org/resources/publications/ms-14-87-en.html">How Do We Know if a Program Made a Difference? A Guide to Statistical Methods for Program Impact Evaluation</a> by MEASURE Evaluation</li>
+<li><a href="https://ose-data-science.readthedocs.io/en/latest/lectures/index.html">Open Source Economics Basics to microeconometric methods</a></li>
+<li><a href="https://www.econometrics-with-r.org/">Introduction to Econometrics using R</a> by <a href="https://www.oek.wiwi.uni-due.de/en/team/christoph-hanck/">Christoph Hanck</a></li>
+<li><a href="https://www.ssc.wisc.edu/~bhansen/econometrics/">Econometrics</a> by <a href="https://www.ssc.wisc.edu/~bhansen/">Bruce E. Hansen</a></li>
+<li><a href="https://mru.org/mastering-econometrics">Mastering Econometrics</a> by <a href="https://economics.mit.edu/faculty/angrist">Joshua Angrist</a></li>
+<li><a href="https://diff.healthpolicydatascience.org/">Differences-in-Difference design, Health Care Policy Science Lab</a></li>
+<li><a href="https://chabefer.github.io/STCI/">Statistical Tools for Causal Inference</a> by the SKY Community</li>
+</ul>
+</div>
+<div id="drawing-causal-diagrams" class="section level3">
+<h3><span class="header-section-number">3.2.3</span> Drawing Causal Diagrams</h3>
+<ul>
+<li>A tool to draw Directed Acyclic Graphs (DAGs) is <a href="http://www.dagitty.net/">DAGitty</a></li>
+</ul>
+</div>
+<div id="replication-examples" class="section level3">
+<h3><span class="header-section-number">3.2.4</span> Replication examples</h3>
+<ul>
+<li><a href="https://github.com/vikjam/mostly-harmless-replication">Replication of “Mostly Harmless Econometrics” in Stata, R, Python and Julia</a></li>
+</ul>
+</div>
+</div>
+<div id="example-hellerstein-1998-1" class="section level2">
+<h2><span class="header-section-number">3.3</span> Example: Hellerstein (1998)</h2>
+<p>With the identified research question and the hypothesis that physicians are more likely to prescribe generics to patients who do not have insurance coverage for prescription pharmaceuticals at hand an observational, retrospective analysis of secondary data, including patient and physician characteristics is needed. The goal of the analysis is to identify a causal effect of the patient’s insurance status (independent variable <span class="math inline">\(X\)</span>) on the prescription of a generic over a trade-name drug (dependent variable, <span class="math inline">\(Y\)</span>). As the prescription decision of the physician is prone to involve information imperfections and agency problems, the empirical model needs to control for physician specific effects among other possible influencing factors.</p>
+<!--Write down regression equation and estimand-->
+<p>The confounder control study design chosen by Hellerstein (1998) applies a random effects probit specification at physician level. This includes the variable of interest (estimate), a binary variable, which indicates whether a patient got a trade-name or a generic drug prescribed. The estimate takes the value 1 if a generic drug or the value 0 if a trade-name drug was prescribed. Of interest is the causal effect of the patients different insurance types. Those include Medicare, Medicaid, HMO/prepaid and private insurance. Other independent variables included in the analysis for the purpose of reducing possible bias are the drug class, patient characteristics (age, gender, race), if the physician is a specialist, the region and the averages of patient characteristics per physician. The choice of covariates to be included in a study depends on the study design, the relevant literature in the field and on possible restriction by the underlying data. Sometimes a certain creativity is needed, to use the data at hand in such way to be able to account for possible bias. An example from Hellerstein’s (1998) study design is the explicit need to include prices into the empirical analysis. Though prices are not given in the data used, they were accounted for by including drug class dummy variables assuming that prices vary across different drug classes. This way, though we cannot identify the effect of the individual prices directly, we account for possible bias of the different prices of drug classes.</p>
+
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-lewbel_identification_2019">
+<p>Lewbel, Arthur. 2019. “The Identification Zoo: Meanings of Identification in Econometrics.” <em>Journal of Economic Literature</em> 57 (4): 835–903. <a href="https://doi.org/10.1257/jel.20181361">https://doi.org/10.1257/jel.20181361</a>.</p>
+</div>
+<div id="ref-matthay_alternative_2020">
+<p>Matthay, Ellicott C., Erin Hagan, Laura M. Gottlieb, May Lynn Tan, David Vlahov, Nancy E. Adler, and M. Maria Glymour. 2020. “Alternative Causal Inference Methods in Population Health Research: Evaluating Tradeoffs and Triangulating Evidence.” <em>SSM - Population Health</em> 10 (April): 100526. <a href="https://doi.org/10.1016/j.ssmph.2019.100526">https://doi.org/10.1016/j.ssmph.2019.100526</a>.</p>
+</div>
+<div id="ref-pearl_causality_2009">
+<p>Pearl, Judea. 2009. <em>Causality</em>. Cambridge: Cambridge University Press. <a href="https://doi.org/10.1017/CBO9780511803161">https://doi.org/10.1017/CBO9780511803161</a>.</p>
+</div>
+<div id="ref-pearl_causal_2016">
+<p>Pearl, Judea, Madelyn Glymour, and Nicholas P. Jewell. 2016. <em>Causal Inference in Statistics: A Primer</em>. Chichester, West Sussex: Wiley.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="hypothesis.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="run-study.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["DataLiteracy.pdf", "DataLiteracy.epub"],
+"search": {
+"engine": "lunr",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

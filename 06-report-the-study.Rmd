@@ -1,0 +1,322 @@
+# Reporting the Study {#report-study}
+
+## Basic steps to reporting the study
+
+At this stage you need to report all your performed work in detail in a scientific research paper.
+
+```{r writepaper, out.width='100%', fig.align='center', fig.cap='How to report your paper', echo=FALSE}
+knitr::include_graphics("C:/Users/KFischer/sciebo/Date Literacy Project/06 Manuscript/bookdown/DataLiteracy/_book/DataLiteracy_files/figure-html/comics.png")
+```
+
+Source: https://towardsdatascience.com/how-to-keep-your-research-projects-organized-part-1-folder-structure-10bd56034d3a
+
+By reporting your study you provide readers with the information necessary for them to assess the contribution of your study and the soundness of methods used, allows them to reproduce the study if they wish, and decide whether they agree with the conclusions that you draw given your data, methods, and results. Thus, from the instructions from your paper a reader should understand and be able to reproduce every table and figure.  
+
+A research paper usually includes the following sections:
+
+- Title
+- Abstract
+- Introduction
+- Previous Literature Review
+- Data and Variables
+- Empirical Methods
+- Results
+- Discussion
+- Summary and Conclusion
+- References
+- Appendices 
+
+
+We will briefly summarize each of these items. 
+
+The **Title** should be short (15 words or less) and reflect your research question. It needs to reflect the purpose (what is the question that you are addressing?), scope (i.e. if you cover a specific time period or population) of the study. Sometimes you might want to include the methods of your study in the title, if, e.g. you conduct a cohort study. All this information should help the reader to decide whether or not they are interested in reading it.
+
+The **Abstract** is usually around 300 words and includes a very short summary of your research question, data and methods used, main findings, and conclusions.
+
+The **Introduction** should be part of the paper that is written at the very end. It should motivate your research topic and give a more extensive overview of the context, data, methods and findings. You should provide context by referencing the existing literature regarding the things that we know and things that we do not know and then parlay the latter part into your research question. You need to interest your reader to a degree that they would want to continue reading the rest of your paper. The **Introduction** is said to the most important part of the paper, as you have to grab the readers' attention.
+
+
+The **Previous literature review** are standard in economic papers. They are either included in the **Introduction** or are placed in a separate section. It contains a critical review of the most relevant and influential (well-cited) studies on the topic. It should also contain a summary and a connection how your study is related to what has been done before and how your study is going to contribute to it. 
+
+A significant part of your empirical project is conducting a thorough literature review. Once you choose your topic and pose a research question, one of the first thing you usually do is look at the previous research and theories related to the research problem. By doing this, you will create a comprehensive overview of all the published knowledge on your topic available to date. This will provide a description, summary, background, context, relevance, and critical evaluation to the research idea you are working on. The main purpose of the review is to provide an overview of sources you are considering and to convince the reader of the need to conduct the research in question, and to show how it fits into the larger field of study. It will help you to establish whether the topic has been researched before, and show what problems others faced during their research.
+
+In a literature review, you need to identify and summarize key scholarly publications from the fields that are pertinent to your research topic. It should involve a thorough search of the main key words in the relevant databases and journals.
+
+The **Data** and variables section should contain a detailed information about the data source used in the paper as well as information about the variables used in the analysis.
+
+Describe the data you are using in your study in great detail. Is it a secondary data? Did you collect it yourself, if yes, how? Describe your sample and variable selection. 
+
+The **Empirical method** section should in great detail describe the statistical method used in the paper and the assumptions that are necessary to be fulfilled in order to get an unbiased and consistent estimation of your parameter of interest. Also describe the limitations and how you addressed them.
+
+Ideally, you should describe each step that readers should perform, if they would like to reproduce your results and conclusions.
+
+
+The **Results** section should contain a set of tables and figures that show your empirical results. Make sure that tables are reader-friendly and are easy to comprehend. Place figures and tables as close as possible to the place in the text where you first referred to them. 
+
+
+Do not discuss or explain the results in this section, and do not provide any interpretation or speculation here. Keep it factual and simply describe in words what the tables display. 
+
+
+The **Discussion** section should contain the interpretation and discussion of the results, as well as potential mechanisms, and suggest a direction for future research.
+
+You should start your discussion by reiterating your research question and based on your findings, state what you think an answer to your question is. Do not introduce any new data or results in this section. It should reflect only the results already presented in the paper. You need to interpret your results in the context of the literature that you identified and discussed in the Introduction and the Related Literature sections. 
+
+Are your findings consistent with what the other literature have found? Do your data fill the gap in the knowledge that you identified? Here you want to show how your work added to and extended the knowledge on the topic.
+
+You can also discuss implications of your study, for example for public policy. You also should acknowledge and discuss the limitations of the study here and what implications these limitations might have for the results. The more accurate, open and detailed you are about the limitations, the more credibility your results will have. Offer any alternative explanations for your findings. 
+ 
+
+Discuss any negative effects in your findings and the impact they had on your conclusion. You can also talk about next steps and the implications of your findings for future research.  
+
+The **Summary and conclusion** section is usually short and contains the most important information on the topic, findings and concluding remarks. It should reflect main points mentioned in the Introduction. 
+
+Here you should underline why your research matters and state the answer to your research question. Also state here any recommendations that can be made based on your findings. 
+
+At the very end of your paper you need to provide a complete list of **References**. The bibliography includes a compete list of academic papers and books referenced and cited in your study. 
+
+The easiest way to keep track of your reference list is to write down the information, i.e. the title, author(s), journal/book, publisher, and publication date, about the original source each time you use it. Decide in advance on one citation and reference style and follow it throughout the paper. 
+
+
+The **Appendices** are a handy tool. In order to keep your main part of the paper focused, of reasonable length, and not overburdened, you can place all the still relevant, but secondary and less critical information, i.e. various robustness checks, descriptive statistics, etc., in appendices.
+
+As a careful researcher you will conduct and document a number of various robustness checks of your main results. However, once you confirm and verified that your results are robust, it does not make sense to keep all of the robustness checks in the main body of the paper. Appendices allow you to save space. You can just summarize hat you did and refer to the tables in the appendix. Some journals also provide possibilities of online appendix. 
+
+
+```{r paper_structure, out.width='80%', fig.align='center', fig.cap='Paper Structure', echo=FALSE}
+knitr::include_graphics("C:/Users/KFischer/sciebo/Date Literacy Project/06 Manuscript/bookdown/DataLiteracy/_book/DataLiteracy_files/figure-html/paperstructure.png")
+```
+
+Source: [Fresno State Graduate Writing Studio.](http://www.fresnostate.edu/academics/gradstudies/graduatewritingstudio.html) [Elements of a Research Paper.](https://fresnostategraduatewritingstudio.files.wordpress.com/2015/09/elements-of-a-research-paper.pdf)  
+
+
+### The writing process
+
+- producing a good empirical paper takes time. You should start working on it and drafting as soon as possible. 
+- allow yourself sufficient time for collecting and analyzing the data, writing and revising the paper. Writing a paper is a recursive process that will take many revisions.
+- read the text yourself and let others read it. ("Is the text fun to read?", "Would I want to read beyond the introduction myself?", "Are the questions guiding the research comprehensible?")
+- keep it short. When editing ask yourself whether you can make the same point using fewer words?
+- avoid repetition. Repeating things uses extra space and tests readers' patience.  
+- use "I" in a single-author project, and "we" in the project with more than one author. 
+
+More principles on writing in economics are summarized in [Top Ten Rules of Economical Writing](http://www3.nccu.edu.tw/~jthuang/rules.html) and more comprehensively in [@mccloskey_economical_2019] abd by [@hall_how_2013]
+
+
+### General guidance on the use of language in the research paper
+
+- use present tense, that means *"in this paper I attempt to..."*
+- generally stick to one tense
+- use active voice
+- use in-text citations, that means *"Hellerstein (1998) finds that..."* -- even though it was a while ago; *"Table 1 shows..."*, not *"Table 1 will show..."*
+- use simple and direct sentences. Keep them short.
+- check your paper for repetition and cut whenever you detect it in your paper.
+- try to be as clear as possible with a few words as possible.
+- place minor or secondary details and digressions from the main paragraph into footnotes.
+
+
+
+### Tables
+
+- each table should be self-explanatory
+- use 2 to 4 digits after the comma when reporting the results, not all the numbers produced by the statistical program. 
+- show results with and without controls. For example, start with a column that includes only the main coeffitient(s) of interest and then progressively inlcude various controls (for example patient characteristics, hospital FEs, etc.) in subsequent columns. 
+
+
+### Figures
+
+- use figures to show patterns in the data--they demonstrate it better that big tables with a lots of numbers, 
+- label the axes properly,
+- provide self-explanatory captions.
+
+
+
+
+## Resources box
+
+### Collections of writing tips and short articles
+
+- Varian, H. R. (2016). [How to build an economic model in your spare time.](https://journals.sagepub.com/doi/pdf/10.1177/0569434515627089) The American Economist, 61(1), 81-90.
+- Dudenhefer, P. (2009). [A guide to Writing in Economics. EcoTeach Center and Department of Economics, Duke University.](https://econ.duke.edu/sites/econ.duke.edu/files/file-attachments/Dudenhefer%2C%20Paul%20-%20Guide%20to%20Writing%20in%20Economics.pdf)
+- Nikolov, P. (2020). [Writing tips for economics research papers](http://www.people.fas.harvard.edu/~pnikolov/resources/writingtips.pdf)
+- [Cochrane, J. H.](https://www.johnhcochrane.com/) (2005). [Writing tips for Ph.D. students.](http://mayoral.iae-csic.org/timeseries_bgse13/phd_paper_writing.pdf) Chicago, IL: University of Chicago.
+
+
+### Books
+
+- Hall, G. M. (Ed.). (2013). [How to write a paper (5th ed). Wiley-Blackwell.](https://onlinelibrary.wiley.com/doi/book/10.1002/9781118488713)
+- McCloskey, D. N., & Ziliak, S. T. (2019). Economical Writing, Third Edition: Thirty-Five Rules for Clear and Persuasive Prose (Third Edition). University of Chicago Press.
+
+### Videos
+
+- [Greg Martin (2018). How to write a paper.](https://www.youtube.com/watch?v=Vky9PDKx5KU)
+
+
+## Example: Hellerstein (1998)
+
+We show the results of the reproduction of tables 1-3 and figures 1-2 of the descriptive analysis, and the reproduction of the empirical analysis in table 4-6. Please keep in mind that our results are based on data from 1991. This in contrast to @hellerstein_importance_1998 which is based on three datasets of the year 1989. As the confidential data is key to identifying physicians and patients in the data of 1989 we resort to the 1991 data, that provides these identifiers in two publically available datasets. We present our results and discuss the differences compared to @hellerstein_importance_1998 briefly. For a detailed discussion and interpretation of the results, we refer to the original study by @hellerstein_importance_1998.
+ 
+### Descriptive Analysis
+
+The summary statistics shown in Table 1, representing the overall NAMCS patient sample of the year 1991 are similar to the summary statistics shown by Hellerstein (1998). When looking at the dristribution of insurance coverage, we see differences especially at Blue Cross/Blue Shield ($2%$ compared to $13%$ in 1989), other commercial insurer ($38%$ compared to $24%$ in 1989) and HMO/prepaid plan (14% compared to $24%$ in 1989). Additionally, about $14%$ more specialist physicians are represented by the sample. 
+
+**Table 1 - Summary Statistics for Overall NAMCS Patient Sample**
+
+|           Variable              |           Mean    |      Standard Deviation    |
+|---------------------------------|-------------------|----------------------------|
+|     Age                         |     42.58         |     24.63                  |
+|     Female                      |     0.59          |     0.49                   |
+|     Nonwhite                    |     0.11          |     0.32                   |
+|     Hispanic                    |     0.06          |     0.23                   |
+|     Self-pay                    |     0.24          |     0.43                   |
+|     Medicare                    |     0.12          |     0.33                   |
+|     Medicaid                    |     0.09          |     0.29                   |
+|     Blue Cross/Blue Shield      |     0.02          |     0.15                   |
+|     Other commercial insurer    |     0.38          |     0.49                   |
+|     HMO/prepaid plan            |     0.24          |     0.43                   |
+|     Specialist                  |     0.69          |     0.46                   |
+|     Northeast                   |     0.23          |     0.42                   |
+|     Midwest                     |     0.25          |     0.44                   |
+|     South                       |     0.28          |     0.45                   |
+|     West                        |     0.24          |     0.43                   |
+|     N                           |     32407         |                            |
+Notes: see Hellerstein (1998) 
+Datasource: NAMSC91
+
+
+Table 2 shows very similar statistics for the patients of the NAMCSd sample compared to the data from 1989. We see a 5% increase in the proportion of generic drug prescription in specialist compared to Hellerstein (1998). 
+
+**Table 2 - Summary Statistics for Patients in NAMCS Drug Sample**
+
+|           Variables     |           Mean    |     Standard Deviation    |      Proportion Generic   |
+|-------------------------|-------------------|---------------------------|---------------------------|
+|     Age                 |     43.09         |     24.98                 |     .                     |
+|     Female              |     0.589         |     0.492                 |     0.27                  |
+|     Nonwhite            |     0.122         |     0.327                 |     0.33                  |
+|     Hispanic            |     0.062         |     0.242                 |     0.32                  |
+|     Self-pay            |     0.283         |     0.451                 |     0.28                  |
+|     Medicare            |     0.128         |     0.335                 |     0.22                  |
+|     Medicaid            |     0.101         |     0.301                 |     0.32                  |
+|     Private             |     0.336         |     0.472                 |     0.27                  |
+|     HMO/prepaid plan    |     0.142         |     0.349                 |     0.35                  |
+|     Specialist          |     0.4           |     0.49                  |     0.31                  |
+|     Northeast           |     0.208         |     0.406                 |     0.28                  |
+|     Midwest             |     0.27          |     0.444                 |     0.26                  |
+|     South               |     0.294         |     0.456                 |     0.25                  |
+|     West                |     0.228         |     0.42                  |     0.35                  |
+|     Full sample         |     .             |     .                     |     0.28                  |			
+
+Notes: see Hellerstein (1998), Datasource: NAMSCd91
+
+Compared to 1989, we observe larger sample size in the 1991 data. Table 3 shows the absolute number of observations and the share of generics over all drugs as well as the 8 largest drug categories. While the absolute number of observations is higher, the share of generics overall and per drug class stays similar to Hellerstein (1998). 
+
+**Table 3 - Frequency of Generic Prescription by Drug Class**
+
+|     Name of Class                   |     Observations    |     % Generics    |
+|-------------------------------------|---------------------|-------------------|
+|     All drugs                       |     14,008          |     29.20         |
+|                                     |                     |                   |
+|     Antimicrobials                  |     4,236           |     43.77         |
+|                                     |                     |                   |
+|     Cardiovascular-renals           |     3,042           |     25.02         |
+|                                     |                     |                   |
+|     Central Nervous System          |     1,213           |     31.82         |
+|                                     |                     |                   |
+|     Hormones/Hormonal mechanisms    |     1,799           |     37.80         |
+|                                     |                     |                   |
+|     Skin/Mucous membrane            |     827             |     5.56          |
+|                                     |                     |                   |
+|     Ophthalmics                     |     524             |     18.89         |
+|                                     |                     |                   |
+|     Relief of pain                  |     1,711           |     11.63         |
+|                                     |                     |                   |
+|     Respiratory tract               |     656             |     10.06         |
+
+
+**Figure 1 - Distribution of Physician Generic Prescription Rates (Source: NAMSCd91)**
+
+```{r HellFig1, out.width='100%', fig.align='center', fig.cap='Generic prescription rates', echo=FALSE}
+knitr::include_graphics("C:/Users/KFischer/sciebo/Date Literacy Project/06 Manuscript/bookdown/DataLiteracy/_book/DataLiteracy_files/figure-html/Hellerstein_Fig_1.png")
+```
+
+
+
+
+The distribution of physicians over the different generic prescription rates (figure 1) is similar to Hellerstein (1998).
+When looking at figure 2, we see an decrease from about 90% to about 50% in "only trade name" prescriptions by physicians. This seems to be driven by a rather small increase of prescription of "both versions" an "only generics". 
+
+**Figure 2 - Physician decisions for physicians who prescribe a drug to at least six patients (Source: NAMSCd91)**
+
+```{r HellFig2, out.width='100%', fig.align='center', fig.cap='Physician decisions', echo=FALSE}
+knitr::include_graphics("C:/Users/KFischer/sciebo/Date Literacy Project/06 Manuscript/bookdown/DataLiteracy/_book/DataLiteracy_files/figure-html/Hellerstein_Fig_2.png")
+```
+
+
+
+ 
+### Empirical Analysis
+
+In the following we present our results of the empirical analyses. Please keep in mind, that, due to data restrictions, we were not able to control for some covariates that Hellerstein (1998) accounted for. An example of such are legislation laws like mandatory or permissive substitution or one- or two-line prescription. For this reason, we cannot present all tables produced by Hellerstein (1998). Given these restrictions, we cannot run the analysis with the same underlying model specifications. 
+This restricts us from comparing the results of the years 1991 and 1989, however for the completion of this example we represent the results of table 4, 5 and 6 in the following: 
+
+**Table 4 Estimated Coefficients on Demographic Variables, Geographic Variables, and Average Characteristics for Full Sample**
+
+|           Variable         |     Random-Effects Probit Coefficient    |     Random-Effects Probit t-statistic    |           % Change in Generic    |
+|----------------------------|------------------------------------------|------------------------------------------|----------------------------------|
+|     Constant               |     0.71                                 |     0.94                                 |     -                            |
+|     Age                    |     -0.01                                |     -1.50                                |     -0.002                       |
+|     Female                 |     -0.16                                |     -1.11                                |     -0.0463                      |
+|     Hispanic               |     -0.54                                |     -1.46                                |     -0.154                       |
+|     Nonwhite               |     0.19                                 |     0.73                                 |     0.0534                       |
+|     Specialist             |     0.00                                 |     -                                    |     -                            |
+|     Mean age               |     0.01                                 |     0.54                                 |     0.0017                       |
+|     Percent female         |     -1.73*                               |     -2.11                                |     -0.494*                      |
+|     Percent black          |     -0.95                                |     -1.52                                |     -0.270                       |
+|     Percent Hispanic       |     0.45                                 |     0.29                                 |     0.127                        |
+|     Percent Medicaid       |     -0.01                                |     -0.01                                |     -0.0027                      |
+|     Percent Medicare       |     -2.53**                              |     -3.01                                |     -0.722**                     |
+|     Percent private        |     -0.99                                |     -1.70                                |     -0.282                       |
+|     Percent HMO/prepaid    |     -1.12*                               |     -2.09                                |     -0.321*                      |			
+
+Notes: $*p < 0.05, **p < 0.01, ***p < 0.001$; see Hellerstein (1998); Datasource: NAMSCd91
+
+
+**Table 5 - Estimated Coefficients for Drug-Class Dummy Variable for Full Sample**
+
+|                 Drug Class                |     Random-Effects Probit Coefficient    |     Random-Effects Probit t-statistic    |
+|-------------------------------------------|------------------------------------------|------------------------------------------|
+|     Antimicrobials                        |     0.989***                             |     4.25                                 |
+|     Cardiovascular/renals                 |     -0.231                               |     -0.78                                |
+|     Central Nervous System                |     -1.118*                              |     -2.03                                |
+|     Hormones/Hormonal mechanisms          |     0.280                                |     0.87                                 |
+|     Skin/Mucous membrane                  |     -0.198                               |     -0.44                                |
+|     Respiratory tract                     |     -0.736                               |     -1.29                                |		
+
+
+Notes: $*p < 0.05, **p < 0.01, ***p < 0.001$; Omitted category is Ophthalmics; Notes: see Hellerstein (1998); Datasource: NAMSCd91
+
+
+
+
+**Table 6 - Tests for Moral Hazard for the Full Sample Equality of Individual Insurance Variables with Self-Payment Random-Effects Probit Results**
+
+|     Insurance Variable    |     Antimicrobial    |     Cardiovaskulars    |     Metabolics    |     Hormones    |     Skin/Muchous Membranes    |     Ophthalmics    |     Pain relief    |     Respiratory Tract    |
+|---------------------------|----------------------|------------------------|-------------------|-----------------|-------------------------------|--------------------|--------------------|--------------------------|
+|     Medicaid              |                      |                        |                   |                 |                               |                    |                    |                          |
+|     Coefficient           |     0.178            |     -0.0345            |     -0.192        |     0.497       |     0.189                     |     -0.280         |     0.634          |     -1.017               |
+|     t-statistic           |     1.49             |     -0.15              |     -0.74         |     1.68        |     0.31                      |     -0.74          |     1.53           |     -1.04                |
+|     % change              |     0.042            |     -0.008             |     -0.078        |     -0.054      |     0.062                     |     -0.099         |     0.023          |     -0.034               |
+|     Medicare              |                      |                        |                   |                 |                               |                    |                    |                          |
+|     Coefficient           |     0.156            |     -0.0397            |     -0.388        |     -0.259      |     0.684                     |     -0.515         |     0.164          |     -0.413               |
+|     t-statistic           |     1.08             |     -0.23              |     -1.43         |     -1.07       |     1.15                      |     -1.29          |     0.40           |     -0.50                |
+|     % change              |     0.047            |     -0.007             |     -0.039        |     0.103       |     0.017                     |     -0.054         |     0.090          |     -0.085               |
+|     Private               |                      |                        |                   |                 |                               |                    |                    |                          |
+|     Coefficient           |     -0.0012          |     -0.085             |     -0.170        |     -0.053      |     0.226                     |     -0.394         |     0.201          |     -1.146               |
+|     t-statistic           |     -0.01            |     -0.54              |     -1.02         |     -0.27       |     0.59                      |     -1.32          |     0.71           |     -1.42                |
+|     % change              |     0.070            |     -0.032             |     0.007         |     -0.025      |     -0.036                    |     -0.046         |     0.052          |     -0.023               |
+|     HMO/     Prepaid      |                      |                        |                   |                 |                               |                    |                    |                          |
+|     Coefficient           |     0.262            |     -0.156             |     0.0353        |     -0.120      |     -0.395                    |     -0.238         |     0.362          |     -0.272               |
+|     t-statistic           |     2.29             |     -0.68              |     0.13          |     -0.42       |     -0.72                     |     -0.43          |     1.08           |     -0.29                |
+|     % change              |     -0.000           |     -0.018             |     -0.034        |     -0.011      |     0.020                     |     -0.076         |     0.029          |     -0.096               |
+
+
+Notes: see Hellerstein (1998); Datasource: NAMSCd91
+

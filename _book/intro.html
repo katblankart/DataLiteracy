@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 1 Introduction to reproducible research | A concise guide to reproducible research using secondary data</title>
+  <meta name="description" content="Data Science Campus - A study guide for reproducible research using secondary (health care) data" />
+  <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 1 Introduction to reproducible research | A concise guide to reproducible research using secondary data" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Data Science Campus - A study guide for reproducible research using secondary (health care) data" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 1 Introduction to reproducible research | A concise guide to reproducible research using secondary data" />
+  
+  <meta name="twitter:description" content="Data Science Campus - A study guide for reproducible research using secondary (health care) data" />
+  
+
+<meta name="author" content="Maryna Ivets, Eva Goetjes, Katharina Blankart" />
+
+
+<meta name="date" content="2021-09-21" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="acknowledgements.html"/>
+<link rel="next" href="hypothesis.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Reproducible research using 2ndary data</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>A study guide to empirical research in economics and management using secondary data</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#objective"><i class="fa fa-check"></i>Objective</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#learning-objectives"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#structure-of-the-study-guide"><i class="fa fa-check"></i>Structure of the study guide</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#this-is-a-living-document"><i class="fa fa-check"></i>This is a living document</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="acknowledgements.html"><a href="acknowledgements.html"><i class="fa fa-check"></i>Acknowledgements</a></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction to reproducible research</a><ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#what-is-reproducible-research"><i class="fa fa-check"></i><b>1.1</b> What is reproducible research?</a></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#why-you-as-a-student-and-researcher-should-care-about-reproducible-research"><i class="fa fa-check"></i><b>1.2</b> Why you, as a student and researcher, should care about reproducible research?</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="intro.html"><a href="intro.html#avoid-common-biases-that-lead-to-biased-or-false-research-results"><i class="fa fa-check"></i><b>1.2.1</b> Avoid common biases that lead to biased or false research results</a></li>
+<li class="chapter" data-level="1.2.2" data-path="intro.html"><a href="intro.html#increase-productivity-of-your-work-and-the-work-of-the-scientific-community-by-performing-reproducible-research"><i class="fa fa-check"></i><b>1.2.2</b> Increase productivity of your work and the work of the scientific community by performing reproducible research</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#main-steps-to-produce-reproducible-research"><i class="fa fa-check"></i><b>1.3</b> Main steps to produce reproducible research</a></li>
+<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#secondary-health-care-data"><i class="fa fa-check"></i><b>1.4</b> Secondary (health care) data</a></li>
+<li class="chapter" data-level="1.5" data-path="intro.html"><a href="intro.html#creating-an-environment-for-productive-research-projects"><i class="fa fa-check"></i><b>1.5</b> Creating an environment for productive research projects</a></li>
+<li class="chapter" data-level="1.6" data-path="intro.html"><a href="intro.html#resources-box"><i class="fa fa-check"></i><b>1.6</b> Resources Box</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="hypothesis.html"><a href="hypothesis.html"><i class="fa fa-check"></i><b>2</b> Formulating a hypothesis</a><ul>
+<li class="chapter" data-level="2.1" data-path="hypothesis.html"><a href="hypothesis.html#basic-steps-to-formulate-a-hypothesis"><i class="fa fa-check"></i><b>2.1</b> Basic steps to formulate a hypothesis</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="hypothesis.html"><a href="hypothesis.html#what-is-a-hypothesis"><i class="fa fa-check"></i><b>2.1.1</b> What is a hypothesis?</a></li>
+<li class="chapter" data-level="2.1.2" data-path="hypothesis.html"><a href="hypothesis.html#how-do-you-develop-a-research-question-and-formulate-a-hypothesis"><i class="fa fa-check"></i><b>2.1.2</b> How do you develop a research question and formulate a hypothesis?</a></li>
+<li class="chapter" data-level="2.1.3" data-path="hypothesis.html"><a href="hypothesis.html#develop-a-hypothesis"><i class="fa fa-check"></i><b>2.1.3</b> Develop a Hypothesis</a></li>
+<li class="chapter" data-level="2.1.4" data-path="hypothesis.html"><a href="hypothesis.html#identify-relevant-literature"><i class="fa fa-check"></i><b>2.1.4</b> Identify Relevant Literature</a></li>
+<li class="chapter" data-level="2.1.5" data-path="hypothesis.html"><a href="hypothesis.html#research-question-or-literature-review-a-hen-and-egg-problem"><i class="fa fa-check"></i><b>2.1.5</b> Research question or literature review, a hen and egg problem?</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="hypothesis.html"><a href="hypothesis.html#resources-box-1"><i class="fa fa-check"></i><b>2.2</b> Resources box</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="hypothesis.html"><a href="hypothesis.html#how-to-develop-strong-research-questions"><i class="fa fa-check"></i><b>2.2.1</b> How to develop strong research questions</a></li>
+<li class="chapter" data-level="2.2.2" data-path="hypothesis.html"><a href="hypothesis.html#identify-relevant-literature-from-major-general-interest-and-field-literature"><i class="fa fa-check"></i><b>2.2.2</b> Identify relevant literature from major general interest and field literature</a></li>
+<li class="chapter" data-level="2.2.3" data-path="hypothesis.html"><a href="hypothesis.html#assess-the-quality-of-a-journal-article"><i class="fa fa-check"></i><b>2.2.3</b> Assess the quality of a journal article</a></li>
+<li class="chapter" data-level="2.2.4" data-path="hypothesis.html"><a href="hypothesis.html#investigate-how-a-journal-article-is-connected-to-other-works"><i class="fa fa-check"></i><b>2.2.4</b> Investigate how a journal article is connected to other works</a></li>
+<li class="chapter" data-level="2.2.5" data-path="hypothesis.html"><a href="hypothesis.html#organize-your-literature"><i class="fa fa-check"></i><b>2.2.5</b> Organize your literature</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="hypothesis.html"><a href="hypothesis.html#example-hellerstein-1998"><i class="fa fa-check"></i><b>2.3</b> Example: Hellerstein (1998)</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="hypothesis.html"><a href="hypothesis.html#relevance-of-the-topic---escalating-health-expenditures"><i class="fa fa-check"></i><b>2.3.1</b> <strong>Relevance of the topic - escalating health expenditures</strong></a></li>
+<li class="chapter" data-level="2.3.2" data-path="hypothesis.html"><a href="hypothesis.html#development-of-a-research-question---identifying-the-role-of-physician-practice-in-choosing-generic-drugs"><i class="fa fa-check"></i><b>2.3.2</b> <strong>Development of a research question - identifying the role of physician practice in choosing generic drugs</strong></a></li>
+<li class="chapter" data-level="2.3.3" data-path="hypothesis.html"><a href="hypothesis.html#hypothesis---insurance-status-drives-generic-drug-use"><i class="fa fa-check"></i><b>2.3.3</b> <strong>Hypothesis - insurance status drives generic drug use</strong></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="designstudy.html"><a href="designstudy.html"><i class="fa fa-check"></i><b>3</b> Designing the Study</a><ul>
+<li class="chapter" data-level="3.1" data-path="designstudy.html"><a href="designstudy.html#basic-steps-in-designing-your-study"><i class="fa fa-check"></i><b>3.1</b> Basic steps in designing your study</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="designstudy.html"><a href="designstudy.html#clarify-your-study-goal-association-causation-counterfactuals"><i class="fa fa-check"></i><b>3.1.1</b> Clarify your study goal: association, causation, counterfactuals</a></li>
+<li class="chapter" data-level="3.1.2" data-path="designstudy.html"><a href="designstudy.html#develop-a-causal-model-and-identify-estimable-effects"><i class="fa fa-check"></i><b>3.1.2</b> Develop a causal model and identify estimable effects</a></li>
+<li class="chapter" data-level="3.1.3" data-path="designstudy.html"><a href="designstudy.html#develop-the-empirical-strategy-to-investigate-causal-effects"><i class="fa fa-check"></i><b>3.1.3</b> Develop the empirical strategy to investigate causal effects</a></li>
+<li class="chapter" data-level="3.1.4" data-path="designstudy.html"><a href="designstudy.html#investigate-suitable-source-data"><i class="fa fa-check"></i><b>3.1.4</b> Investigate suitable source data</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="designstudy.html"><a href="designstudy.html#resources-box-2"><i class="fa fa-check"></i><b>3.2</b> Resources box</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="designstudy.html"><a href="designstudy.html#key-terminology-in-causal-inference-based-on-matthay_alternative_2020"><i class="fa fa-check"></i><b>3.2.1</b> Key terminology in causal inference based on <span class="citation">Matthay et al. (<span>2020</span>)</span></a></li>
+<li class="chapter" data-level="3.2.2" data-path="designstudy.html"><a href="designstudy.html#openly-available-textbooks-and-resources-on-econometrics-with-a-causal-inference-focus"><i class="fa fa-check"></i><b>3.2.2</b> Openly-available textbooks and resources on econometrics with a causal inference focus</a></li>
+<li class="chapter" data-level="3.2.3" data-path="designstudy.html"><a href="designstudy.html#drawing-causal-diagrams"><i class="fa fa-check"></i><b>3.2.3</b> Drawing Causal Diagrams</a></li>
+<li class="chapter" data-level="3.2.4" data-path="designstudy.html"><a href="designstudy.html#replication-examples"><i class="fa fa-check"></i><b>3.2.4</b> Replication examples</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="designstudy.html"><a href="designstudy.html#example-hellerstein-1998-1"><i class="fa fa-check"></i><b>3.3</b> Example: Hellerstein (1998)</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="run-study.html"><a href="run-study.html"><i class="fa fa-check"></i><b>4</b> Running the study and collecting the data</a><ul>
+<li class="chapter" data-level="4.1" data-path="run-study.html"><a href="run-study.html#basic-steps-when-running-the-study-and-collecting-the-data"><i class="fa fa-check"></i><b>4.1</b> Basic steps when running the study and collecting the data</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="run-study.html"><a href="run-study.html#identify-secondary-data-sources"><i class="fa fa-check"></i><b>4.1.1</b> Identify secondary data sources</a></li>
+<li class="chapter" data-level="4.1.2" data-path="run-study.html"><a href="run-study.html#develop-a-data-collection-and-analysis-plan"><i class="fa fa-check"></i><b>4.1.2</b> Develop a data collection and analysis plan</a></li>
+<li class="chapter" data-level="4.1.3" data-path="run-study.html"><a href="run-study.html#obtain-access-to-source-data-or-generate-the-data"><i class="fa fa-check"></i><b>4.1.3</b> Obtain access to source data or generate the data</a></li>
+<li class="chapter" data-level="4.1.4" data-path="run-study.html"><a href="run-study.html#process-and-prepare-the-source-data"><i class="fa fa-check"></i><b>4.1.4</b> Process and prepare the source data</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="run-study.html"><a href="run-study.html#resources-box-3"><i class="fa fa-check"></i><b>4.2</b> Resources Box</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="run-study.html"><a href="run-study.html#how-to-organize-your-research-project"><i class="fa fa-check"></i><b>4.2.1</b> How to organize your research project:</a></li>
+<li class="chapter" data-level="4.2.2" data-path="run-study.html"><a href="run-study.html#coding-practices-best-practices-for-data-and-code-management-in-projects"><i class="fa fa-check"></i><b>4.2.2</b> Coding practices: Best Practices for Data and Code Management in Projects</a></li>
+<li class="chapter" data-level="4.2.3" data-path="run-study.html"><a href="run-study.html#data-cleaning"><i class="fa fa-check"></i><b>4.2.3</b> Data cleaning</a></li>
+<li class="chapter" data-level="4.2.4" data-path="run-study.html"><a href="run-study.html#collecting-data-from-meta-data-and-web-scraping"><i class="fa fa-check"></i><b>4.2.4</b> Collecting data from meta-data and web-scraping</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="run-study.html"><a href="run-study.html#example-hellerstein-1998-2"><i class="fa fa-check"></i><b>4.3</b> Example: Hellerstein (1998)</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="analyzing.html"><a href="analyzing.html"><i class="fa fa-check"></i><b>5</b> Analyzing the Data</a><ul>
+<li class="chapter" data-level="5.1" data-path="analyzing.html"><a href="analyzing.html#basic-steps-when-analyzing-the-data"><i class="fa fa-check"></i><b>5.1</b> Basic steps when analyzing the data</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="analyzing.html"><a href="analyzing.html#generate-the-analysis-data-set"><i class="fa fa-check"></i><b>5.1.1</b> Generate the analysis data set</a></li>
+<li class="chapter" data-level="5.1.2" data-path="analyzing.html"><a href="analyzing.html#describe-your-data-assess-validity-and-plausiblity"><i class="fa fa-check"></i><b>5.1.2</b> Describe your data, assess validity and plausiblity</a></li>
+<li class="chapter" data-level="5.1.3" data-path="analyzing.html"><a href="analyzing.html#generate-estimates-of-your-investigated-effect-using-regression-techniques"><i class="fa fa-check"></i><b>5.1.3</b> Generate estimates of your investigated effect using regression techniques</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="analyzing.html"><a href="analyzing.html#resources-box-4"><i class="fa fa-check"></i><b>5.2</b> Resources box</a></li>
+<li class="chapter" data-level="5.3" data-path="analyzing.html"><a href="analyzing.html#example-hellerstein-1998-3"><i class="fa fa-check"></i><b>5.3</b> Example: Hellerstein (1998)</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="analyzing.html"><a href="analyzing.html#describe-your-data-assess-validity-and-plausiblity-1"><i class="fa fa-check"></i><b>5.3.1</b> Describe your data, assess validity and plausiblity</a></li>
+<li class="chapter" data-level="5.3.2" data-path="analyzing.html"><a href="analyzing.html#generate-estimates-of-your-investigated-effect-using-regression-techniques-1"><i class="fa fa-check"></i><b>5.3.2</b> Generate estimates of your investigated effect using regression techniques</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="report-study.html"><a href="report-study.html"><i class="fa fa-check"></i><b>6</b> Reporting the Study</a><ul>
+<li class="chapter" data-level="6.1" data-path="report-study.html"><a href="report-study.html#basic-steps-to-reporting-the-study"><i class="fa fa-check"></i><b>6.1</b> Basic steps to reporting the study</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="report-study.html"><a href="report-study.html#the-writing-process"><i class="fa fa-check"></i><b>6.1.1</b> The writing process</a></li>
+<li class="chapter" data-level="6.1.2" data-path="report-study.html"><a href="report-study.html#general-guidance-on-the-use-of-language-in-the-research-paper"><i class="fa fa-check"></i><b>6.1.2</b> General guidance on the use of language in the research paper</a></li>
+<li class="chapter" data-level="6.1.3" data-path="report-study.html"><a href="report-study.html#tables"><i class="fa fa-check"></i><b>6.1.3</b> Tables</a></li>
+<li class="chapter" data-level="6.1.4" data-path="report-study.html"><a href="report-study.html#figures"><i class="fa fa-check"></i><b>6.1.4</b> Figures</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="report-study.html"><a href="report-study.html#resources-box-5"><i class="fa fa-check"></i><b>6.2</b> Resources box</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="report-study.html"><a href="report-study.html#collections-of-writing-tips-and-short-articles"><i class="fa fa-check"></i><b>6.2.1</b> Collections of writing tips and short articles</a></li>
+<li class="chapter" data-level="6.2.2" data-path="report-study.html"><a href="report-study.html#books"><i class="fa fa-check"></i><b>6.2.2</b> Books</a></li>
+<li class="chapter" data-level="6.2.3" data-path="report-study.html"><a href="report-study.html#videos"><i class="fa fa-check"></i><b>6.2.3</b> Videos</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="report-study.html"><a href="report-study.html#example-hellerstein-1998-4"><i class="fa fa-check"></i><b>6.3</b> Example: Hellerstein (1998)</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="report-study.html"><a href="report-study.html#descriptive-analysis"><i class="fa fa-check"></i><b>6.3.1</b> Descriptive Analysis</a></li>
+<li class="chapter" data-level="6.3.2" data-path="report-study.html"><a href="report-study.html#empirical-analysis"><i class="fa fa-check"></i><b>6.3.2</b> Empirical Analysis</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A concise guide to reproducible research using secondary data</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="intro" class="section level1">
+<h1><span class="header-section-number">Chapter 1</span> Introduction to reproducible research</h1>
+<p><em>“Only results that can be replicated are truly scientific results. If there is no chance to replicate research results, they can be regarded as no more than personal views in the opinion or review section of a daily newspaper.”</em> <span class="citation">(Huschka <a href="#ref-huschka_why_2013" role="doc-biblioref">2013</a>)</span></p>
+<div id="what-is-reproducible-research" class="section level2">
+<h2><span class="header-section-number">1.1</span> What is reproducible research?</h2>
+<p>Scientific journal editors and research funders are increasingly promoting transparency in research. To encourage the principles of reproducible research, the related institutions are requesting authors to make their research reproducible. To overcome criticisms regarding the validity and power of empirical tests, this means that data and program code need to be shared upon manuscript acceptance, or earlier stages of the submission process. The purpose is that third-parties have the possibility to reproduce the content and analysis of a study, and conclusions of a study on their own.</p>
+<p>Efforts to increase reproducability have been expressed by multiple institutions within the social sciences, for example:</p>
+<ul>
+<li>The best practices statement by the <a href="https://social-science-data-editors.github.io/template_README/">Social Science Data Editors</a>,</li>
+<li>In Germany, by the German Research Foundation (DFG) and the Consortium for the Social, Behavioural, Educational and Economic Sciences <a href="https://www.ratswd.de/en/publikationen/output">RatWSD</a></li>
+<li>In editorial statement of journals, for example American Economic Review, Management Science or the Journal of International Business Studies <span class="citation">(Meyer, Witteloostuijn, and Beugelsdijk <a href="#ref-meyer_whats_2017" role="doc-biblioref">2017</a>; Orozco et al. <a href="#ref-orozco_how_2020" role="doc-biblioref">2020</a>)</span></li>
+</ul>
+<!-- Show recent advancements in health econ, health services research, health care management
+-->
+<p>Generally, <strong><em>reproducibility</em></strong> of research can be defined as “the ability of a researcher to duplicate the results of a prior study using the same materials and procedures as were used by the original investigator. In an attempt to reproduce a published statistical analysis, a second researcher might use the same raw data to build the same analysis files and implement the same statistical analysis to determine whether they yield the same results.” <span class="citation">(Bollen et al. <a href="#ref-bollen_social_2015" role="doc-biblioref">2015</a>)</span>. Study results are considered reproducible if after an article publication another researcher can conduct the analyses using identical data and obtain the same results using the material provided.</p>
+<p>Since empirical economic research is based on the application of a code to a dataset to answer a pre-defined research question, ensuring the reproducibility includes sharing the data and code to allow others to re-analyze the data and to reproduce the reported results <span class="citation">(Orozco et al. <a href="#ref-orozco_how_2020" role="doc-biblioref">2020</a>)</span>. To achieve this, the data and code need to be properly managed while working on a project.</p>
+<p>Another concept closely related to <strong><em>reproducibility</em></strong> is the concept of <strong><em>replicability</em></strong> that “refers to the ability of a researcher to duplicate the results of a prior study if the same procedures are followed but new data are collected.” <span class="citation">(Bollen et al. <a href="#ref-bollen_social_2015" role="doc-biblioref">2015</a>)</span>. Thus, for example, if an investigator tries to replicate a scientific finding that documents a relationship between two or more variables by using the same scientific methodology but in a new setting, i.e. with new data, and fails and to reach a similar conclusion, i.e. replicate it – a failure to replicate occurs. The opposite is said to be true if the results are replicated. Thus, <strong><em>reproducibility</em></strong> and <strong><em>replicability</em></strong> are considered to be the two main elements of empirical research.</p>
+<p>To adapt reproducible practices early on, undergraduate and graduate students are encouraged to perform reproducible research in their term papers, theses, and practical applications as soon as possbile. For this reason, university teachers are increasingly asking to submit reproduction material (source data information, data programming and analysis code) at all stages of study.</p>
+<p>The concept of reproducible research is not new and goes back as far as the late 1800s <span class="citation">(Vilhuber <a href="#ref-vilhuber_reproducibility_2020" role="doc-biblioref">2020</a>)</span>. However, reproducibility studies have disclosed that many rearchers do not follow the principles of reproducible research. At the same time, the increase in availability and use of public and especially non-public data sources, and the increase in the reliance of research methods based on specific software bringing the principles of reproducible research on the agenda of many researchers.</p>
+<p>The resources box in each chapter provides material of best practices in data and code management to perform a reproducible research project, as well as provides resources for best practices in cleaning the data and conducting data analysis.</p>
+</div>
+<div id="why-you-as-a-student-and-researcher-should-care-about-reproducible-research" class="section level2">
+<h2><span class="header-section-number">1.2</span> Why you, as a student and researcher, should care about reproducible research?</h2>
+<div id="avoid-common-biases-that-lead-to-biased-or-false-research-results" class="section level3">
+<h3><span class="header-section-number">1.2.1</span> Avoid common biases that lead to biased or false research results</h3>
+<p>There is a number of threats to reproducible research process that can undermine scientific research or lead to false or biased conclusions and publications, see, e.g. <a href="#fig:munafo"><strong>??</strong></a> illustrating main threats to reproducible science <span class="citation">(Munafò et al. <a href="#ref-munafo_manifesto_2017" role="doc-biblioref">2017</a>)</span>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-1"></span>
+<img src="_book/DataLiteracy_files/figure-html/munafo.png" alt="munafo" width="100%" />
+<p class="caption">
+Figure 1.1: munafo
+</p>
+</div>
+</div>
+<div id="increase-productivity-of-your-work-and-the-work-of-the-scientific-community-by-performing-reproducible-research" class="section level3">
+<h3><span class="header-section-number">1.2.2</span> Increase productivity of your work and the work of the scientific community by performing reproducible research</h3>
+<p>Following the reproducible research principles allows you to be a part of a good academic practice that strives to improve the quality, efficiency and reliability of scientific research.</p>
+</div>
+</div>
+<div id="main-steps-to-produce-reproducible-research" class="section level2">
+<h2><span class="header-section-number">1.3</span> Main steps to produce reproducible research</h2>
+<p>To follow the best practices of reproducible research, you will need to consider <strong><em>how</em></strong> to perform your project and the <strong><em>steps a reproducible research project</em></strong> contains.</p>
+<p>There are three main principles to enhance reproducible research <span class="citation">(Orozco et al. <a href="#ref-orozco_how_2020" role="doc-biblioref">2020</a>)</span>:</p>
+<ol style="list-style-type: decimal">
+<li><strong><em>Organize your work:</em></strong> consider and plan your steps at the beginning of the project</li>
+<li><strong><em>Code for others:</em></strong> set up each step of your project such that an outsider could follow your documentation</li>
+<li><strong><em>Automate as much as you can:</em></strong> avoid processing analyses and results using point-and-click softare (MS Excel), export results directly and create a reproducible project documentation.</li>
+</ol>
+<p>In this study guide we follow the main steps of performing a reproducible data science project <span class="citation">(Bezjak et al. <a href="#ref-bezjak_open_2018" role="doc-biblioref">2018</a>)</span>. To make your empirical research study process reproducible, you need to follow these five steps (Figure <a href="#fig:reproducible"><strong>??</strong></a>):</p>
+<ol style="list-style-type: decimal">
+<li><strong><em>Formulating a hypothesis</em></strong> (Section <a href="hypothesis.html#hypothesis">2</a>)</li>
+<li><strong><em>Designing the study</em></strong> (Section <a href="designstudy.html#designstudy">3</a>)</li>
+<li><strong><em>Running the study and collecting the data</em></strong> (Section <a href="run-study.html#run-study">4</a>)</li>
+<li><strong><em>Analyzing the data</em></strong> (Section <a href="analyzing.html#analyzing">5</a>)</li>
+<li><strong><em>Reporting the study</em></strong> (Section <a href="report-study.html#report-study">6</a>)</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
+<img src="_book/DataLiteracy_files/figure-html/02_reproducible_research_data_analysis.png" alt="reproducible" width="75%" />
+<p class="caption">
+Figure 1.2: reproducible
+</p>
+</div>
+</div>
+<div id="secondary-health-care-data" class="section level2">
+<h2><span class="header-section-number">1.4</span> Secondary (health care) data</h2>
+<p>This study guide concentrates on empirical investigation using secondary data, that means data that is not originally collected or generated by the researcher for the purpose of the study. Secondary data covers any existing data generated by companies, institutions, and individuals.</p>
+<p>Examples of secondary data sources are routinelly collected health data (administrative claims, electronic medical records), bibliometric data, survey data, regulatory data, data generated in mobile applications.</p>
+</div>
+<div id="creating-an-environment-for-productive-research-projects" class="section level2">
+<h2><span class="header-section-number">1.5</span> Creating an environment for productive research projects</h2>
+<p>Before you start running the study you should assess your available resources, that means time and own expertise to see whether the study design is feasible. If there is an opportunity to work collaboratively and you think that the project can benefit from the expertise of another researcher, you can approach the person and ask whether they would be interested to work together on the project. Joining resources might relax your resource availability contraints. It may further ensure that you engage in a reproducible research process.</p>
+</div>
+<div id="resources-box" class="section level2">
+<h2><span class="header-section-number">1.6</span> Resources Box</h2>
+<ul>
+<li><p>An overview article of the principles of reproducible reserach and practical application: Orozco V, Bontemps C, Maigné E, Piguet V, Hofstetter A, Lacroix A, et al. How to Make a Pie: Reproducible Research for Empirical Economics and Econometrics. Journal of Economic Surveys. 2020;34(5):1134–69. <a href="https://doi.org/10.1111/joes.12389" class="uri">https://doi.org/10.1111/joes.12389</a></p></li>
+<li><p>A guideline to minimize the risk of reporting false positives (type I errors), improve the quality of hypothesis-testing research and statistical reporting: Meyer, Klaus E., Arjen van Witteloostuijn, and Sjoerd Beugelsdijk. 2017. “What’s in a p? Reassessing Best Practices for Conducting and Reporting Hypothesis-Testing Research.” Journal of International Business Studies 48 (5): 535–51. <a href="https://doi.org/10.1057/s41267-017-0078-8" class="uri">https://doi.org/10.1057/s41267-017-0078-8</a>.</p></li>
+<li><p><a href="https://blogs.worldbank.org/impactevaluations/curated-list-our-postings-technical-topics-your-one-stop-shop-methodology-0">The Worldbank blog provides “A Curated List of Our Postings on Technical Topics – Your One-Stop Shop for Methodology”</a></p></li>
+</ul>
+
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-bezjak_open_2018">
+<p>Bezjak, Sonja, April Clyburne-Sherin, Philipp Conzett, Pedro Fernandes, Edit Görögh, Kerstin Helbig, Bianca Kramer, et al. 2018. <em>Open Science Training Handbook</em>. Zenodo. <a href="https://doi.org/10.5281/ZENODO.1212496">https://doi.org/10.5281/ZENODO.1212496</a>.</p>
+</div>
+<div id="ref-bollen_social_2015">
+<p>Bollen, K., J. T. Cacioppo, R. M. Kaplan, Krosnick J. A., and J. L. Olds. 2015. “Social, Behavioral, and Economic Sciences Perspectives on Robust and Reliable Science.” National Science Foundation. <a href="https://www.nsf.gov/sbe/AC_Materials/SBE_Robust_and_Reliable_Research_Report.pdf">https://www.nsf.gov/sbe/AC_Materials/SBE_Robust_and_Reliable_Research_Report.pdf</a>.</p>
+</div>
+<div id="ref-huschka_why_2013">
+<p>Huschka, Denis. 2013. “Why Should We Share Our Data, How Can It Be Organized, and What Are the Challenges Ahead?” <em>SSRN Electronic Journal</em>. <a href="https://doi.org/10.2139/ssrn.2272028">https://doi.org/10.2139/ssrn.2272028</a>.</p>
+</div>
+<div id="ref-meyer_whats_2017">
+<p>Meyer, Klaus E., Arjen van Witteloostuijn, and Sjoerd Beugelsdijk. 2017. “What’s in a P? Reassessing Best Practices for Conducting and Reporting Hypothesis-Testing Research.” <em>Journal of International Business Studies</em> 48 (5): 535–51. <a href="https://doi.org/10.1057/s41267-017-0078-8">https://doi.org/10.1057/s41267-017-0078-8</a>.</p>
+</div>
+<div id="ref-munafo_manifesto_2017">
+<p>Munafò, Marcus R., Brian A. Nosek, Dorothy V. M. Bishop, Katherine S. Button, Christopher D. Chambers, Nathalie Percie du Sert, Uri Simonsohn, Eric-Jan Wagenmakers, Jennifer J. Ware, and John P. A. Ioannidis. 2017. “A Manifesto for Reproducible Science.” <em>Nature Human Behaviour</em> 1 (1): 1–9. <a href="https://doi.org/10.1038/s41562-016-0021">https://doi.org/10.1038/s41562-016-0021</a>.</p>
+</div>
+<div id="ref-orozco_how_2020">
+<p>Orozco, Valérie, Christophe Bontemps, Elise Maigné, Virginie Piguet, Annie Hofstetter, Anne Lacroix, Fabrice Levert, and Jean-Marc Rousselle. 2020. “How to Make a Pie: Reproducible Research for Empirical Economics and Econometrics.” <em>Journal of Economic Surveys</em> 34 (5): 1134–69. <a href="https://doi.org/https://doi.org/10.1111/joes.12389">https://doi.org/https://doi.org/10.1111/joes.12389</a>.</p>
+</div>
+<div id="ref-vilhuber_reproducibility_2020">
+<p>Vilhuber, Lars. 2020. “Reproducibility and Replicability in Economics.” <em>Harvard Data Science Review</em> 2 (4). <a href="https://doi.org/10.1162/99608f92.4f6b9e67">https://doi.org/10.1162/99608f92.4f6b9e67</a>.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="acknowledgements.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="hypothesis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["DataLiteracy.pdf", "DataLiteracy.epub"],
+"search": {
+"engine": "lunr",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

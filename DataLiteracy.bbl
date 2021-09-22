@@ -1,0 +1,43 @@
+\begin{thebibliography}{}
+
+\bibitem[noa, ]{noauthor_template_nodate}
+A template {README} for social science replication packages.
+
+\bibitem[Bezjak et~al., 2018]{bezjak_open_2018}
+Bezjak, S., Clyburne-Sherin, A., Conzett, P., Fernandes, P., G{\"o}r{\"o}gh,
+  E., Helbig, K., Kramer, B., Labastida, I., Niemeyer, K., Psomopoulos, F.,
+  Ross-Hellauer, T., Schneider, R., Tennant, J., Verbakel, E., Brinken, H., and
+  Heller, L. (2018).
+\newblock {\em Open {Science} {Training} {Handbook}}.
+\newblock Zenodo.
+
+\bibitem[Bollen et~al., 2015]{bollen_social_2015}
+Bollen, K., Cacioppo, J.~T., Kaplan, R.~M., Krosnick, J.~A., and Olds, J.~L.
+  (2015).
+\newblock Social, behavioral, and economic sciences perspectives on robust and
+  reliable science.
+\newblock Technical report, National Science Foundation.
+
+\bibitem[Munaf{\`o} et~al., 2017]{munafo_manifesto_2017}
+Munaf{\`o}, M.~R., Nosek, B.~A., Bishop, D. V.~M., Button, K.~S., Chambers,
+  C.~D., Percie~du Sert, N., Simonsohn, U., Wagenmakers, E.-J., Ware, J.~J.,
+  and Ioannidis, J. P.~A. (2017).
+\newblock A manifesto for reproducible science.
+\newblock {\em Nature Human Behaviour}, 1(1):1--9.
+\newblock Number: 1 Publisher: Nature Publishing Group.
+
+\bibitem[Orozco et~al., 2020]{orozco_how_2020}
+Orozco, V., Bontemps, C., Maign{\'e}, E., Piguet, V., Hofstetter, A., Lacroix,
+  A., Levert, F., and Rousselle, J.-M. (2020).
+\newblock How to {Make} a {Pie}: {Reproducible} {Research} for {Empirical}
+  {Economics} and {Econometrics}.
+\newblock {\em Journal of Economic Surveys}, 34(5):1134--1169.
+\newblock \_eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1111/joes.12389.
+
+\bibitem[Vilhuber, 2020]{vilhuber_reproducibility_2020}
+Vilhuber, L. (2020).
+\newblock Reproducibility and {Replicability} in {Economics}.
+\newblock {\em Harvard Data Science Review}, 2(4).
+\newblock Publisher: PubPub.
+
+\end{thebibliography}
