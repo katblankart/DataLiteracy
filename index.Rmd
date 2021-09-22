@@ -43,7 +43,7 @@ The study guide consists of five chapters that include the essential steps of a 
 
 
 ## This is a living document {-}
-	    	
+
 How you can contribute to this study guide? Best practices how to perform reproducible research are constantly developing. We aim to keep resources up to date. If you come across a good open access resource or suggestions for improvement, please share it by emailing to:
 
 # Acknowledgements {-}
