@@ -117,28 +117,48 @@ Start the data analysis by doing some descriptive analyses of your data and samp
 
 ## Example: Hellerstein (1998)
 
-Hellerstein's (1998) study aims to answer the research question if physicians vary their prescription decisions on a patient-by-patient basis or whether they systematically prescribe the same version of a drug, trade-name or generic, to all patients. This means that the secondary data of the CDC (NAMCS and NAMCSd) will be analysed on physician level in a cross-sectional format. This, as we are not looking at the prescription behaviour over time (panel data) but rather if the physicians do or do not prescribe a generic drug.
-Over the course of your analysis, you want to explore your dataset, this includes describing and assessing the validity and plausibility. Thus before generating estimates of your investigated effect using regression techniques, you want to describe your data with descriptive statistics tables and, if applicable, figures.
-We first reproduce the descriptive statistics of Hellerstein (1998), namely table 1-3 and figure 1-2. Details of created variables can be found in the data preparation .do-file and the notes of the tables and figures in Hellerstein's (1998) paper. Please keep in mind that we used the data of 1991, thus our numbers are not matching with the original paper. 
+Hellerstein's (1998) study aims to answer the research question if physicians vary their prescription decisions on a patient-by-patient basis or whether they systematically prescribe the same version of a drug, trade-name or generic, to all patients.
 
+<!-- That is not in line with Chapters 2 and 3 that emphasizes the effect of the insurance status -->
 
-In the following we explain the steps taken to reproduce table 1-3 and figure 1-2, as well as the reproduction of the empirical analysis. Details and the code can be found in the Appendix <!--[include reference]--> and at the end of the next chapter when reporting the study results.
+This means that secondary data (NAMCS and NAMCSd) that is publicly available via the websites of the CDC will be analysed on physician level in a cross-sectional format. Thus, the primary interest is to investigate if the physicians do or do not prescribe a generic drug. We are not investigating prescription behaviour of physicians over time using panel data.
+Over the course of your analysis, you want to explore your dataset, this includes describing and assessing the validity and plausibility. Thus before generating estimates of your investigated effect using regression techniques, you want to describe your data using descriptive statistics presented in tables and figures.
+
+<!-- The language and how the reader is addressed is changing throughout the text. At times, you talk about, what we have done and then what the reader should do -- adjust.-->
+
+We first reproduce the descriptive statistics of Hellerstein (1998), namely table 1-3 and figure 1-2. Details of created variables can be found in the data preparation .do-file and the notes of the tables and figures in Hellerstein's (1998) paper.
+
+<!-- Table that describes the dataset-->
+
+Please keep in mind that we used the data of 1991. Thus, our numbers are not matching with the numbers provided in the original paper. 
+
+We explain the steps taken to reproduce table 1-3 and figure 1-2, and the reproduction of the empirical analyses. Details and the code can be found in the Appendix<!--[include reference / link, recommend to split the code into the separate tables and figures and show below]--> and at the end of the next chapter when reporting the study results.
 
 ### Describe your data, assess validity and plausiblity
 
-**Table 1:** Compute the mean and summary statistics for the age and the previously established dummies in the NAMCS data.
+**Table 1:**
 
-**Table 2:** For the first two columns, repeat the procedure of table 1 using the NAMCSd data. For the third column, compute the mean of the generic indicator for all subpopulations defined by the dummies.
+Compute the mean and summary statistics for the age and the previously established dummies in the NAMCS data.
 
-**Table 3:** Using summary statistics command, count the number of observations for the full sample and for each of the eight defined drug classes. Further, compute the mean of the generic indicator in the full sample and each drug class subsample. 
+**Table 2:**
 
-**Figure 1:** For each physician, compute the mean of the generic indicator and drop duplicate observations per physician. This way every physician has a unique observation with a respective share of generic prescriptions. To approximate the distribution shown in figure 1, some specifications are not elaborated sufficiently, so we assumed by visual approximation. The assumed specifications are:
+For the first two columns, repeat the procedure of table 1 using the NAMCSd data. For the third column, compute the mean of the generic indicator for all subpopulations defined by the dummies.
 
-  - On what decimal place the generic means were rounded (we chose $.01$)
-  - The bandwidth (we chose $0.02$)
-  - The kernel function (we chose a bilinear form)
+**Table 3:**
 
-**Figure 2:** Keep physicians that prescribe the same multisource drug to at least six patients, so either in its generic or tradename form. Compute the mean of the generic indicator for each remaining physician and create a dummy variable on whether this mean is zero (i.e. only trade names), one (i.e. only generics), or something in between (i.e. both versions). These three dummies are then plotted in a bar plot. 
+Using summary statistics command, count the number of observations for the full sample and for each of the eight defined drug classes. Further, compute the mean of the generic indicator in the full sample and each drug class subsample. 
+
+**Figure 1:**
+
+For each physician, compute the mean of the generic indicator and drop duplicate observations per physician. This way, every physician has a unique observation with a respective share of generic prescriptions. To approximate the distribution shown in figure 1, we chose the following specifications based on visual approximation like:
+
+  - The decimal places at which the average generic share was rounded: $.01$
+  - The bandwidth: $0.02$
+  - The kernel function: bilinear form
+
+**Figure 2:**
+
+To display Figure 2, keep physicians that prescribe the same multisource drug to at least six patients, independent of whether it is in its generic or trade-name form. Compute the mean of the generic share for each remaining physician and create a categorical<!--dummy variable often implies 2 categories--> variable on whether this mean is zero (only trade name drugs), one (only generic drugs), or something in between (both, that means a mix of generic and brand name versions). The frequencies of these three categories across physicians is then plotted in a bar plot. 
 
 ### Generate estimates of your investigated effect using regression techniques
 
@@ -146,23 +166,34 @@ Hellerstein applies a random effects probit regression model aggregated on physi
 
 **Dependent variable $Y$**
 
-  - G		*Generic status*
+  - $G$: *Generic compared to brand name drug use*
+  
+*Note that Hellerstein uses a somewhat different notation for the outcome variable which is denoted as $G$. Today, it is often common to denote this variably by $Y$.*
 	
-**Independent variables $X$**	<!--what about insurance status? That should be X if we follow section 3-->
+**Variable of interest or treatment $X$**	<!--what about insurance status? That should be X if we follow section 3, we somehow need to align this with chapter 3-->
 
-  - $C$: 	*Drug class (Pain relief omitted, see footnote table 5)*
-  - $X$:	*Age, female, Hispanic nonwhite*
-  - $P$:	*Medicare, Medicaid, HMO/prepaid, private insurance	(Self-paid omitted)*
-  - $S$:	*Specialist*
-  - $R$:	*Midwest, South, West (Northeast omitted)*
-  - vector $X$, vector $P$:	*Averages across physician*
+  - $P$:	*Insurance status by: Medicare, Medicaid, HMO/prepaid, private insurance, self-paid (this is the omitted category)*
+  
+*Note that Hellerstein uses a somewhat different notation for the variable of interest which is denoted as $P$. Today, it is often common to denote this variably by $X$ or $D$.*
+
+**Confounders $Z$ of the effect of insurance status $X$ and generic compared to brand name drug use $Y$.**
+
+  - $C$: 	*Drug class identifiers among 8 classes (Pain relief omitted, see footnote table 5)*
+  - $X$:	*Patient characteristics: age, sex, race*
+  - $S$:	*Physician specialist status: Specialist, general practicioner (omitted)*
+  - $R$:	*Region as classified by: Midwest, South, West, Northeast (omitted)*
+  - vector $X$, vector $P$:	*Averages <!-Of WHAT?--> across physician*
+  
+*Note that Hellerstein uses a somewhat different notation for confounding variables. It is often common to denote the variable of interest using the index $X$, but not necessarily confounders.*
 
 **Table 4 and 5:**
 
 Estimate the regression coefficients, t-statistics and marginal effects of the regression model. It is not specified whether the model for both tables contain all covariates specified in equation 10 or just the variables mentioned in the tables. We decided to use the full model for both tables. Marginal effects are the average marginal effects (AME) across individuals (footnote table 4).
 
-**Table 6:** Run a separate regression using only observations of a single drug class and report the coefficients of the payment dummies and their AMEs.
+**Table 6:**
+
+Run a separate regression using only observations of a single drug class and report the coefficients of the payment dummies and their average marginal effects (AMEs).
 
 
-Tables 7, 8 and 9 cannot be reproduced due to the missing state identifier in the publicly available data of NACMS.
+Tables 7, 8 and 9 cannot be reproduced. The publicly available data of NACMS does not provide a variable to identify physicians and patients by region.
 

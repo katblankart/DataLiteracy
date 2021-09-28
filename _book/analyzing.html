@@ -21,10 +21,10 @@
   <meta name="twitter:description" content="Data Science Campus - A study guide for reproducible research using secondary (health care) data" />
   
 
-<meta name="author" content="Maryna Ivets, Eva Goetjes, Katharina Blankart" />
+<meta name="author" content="Maryna Ivets, Eva Goetjes, Kai Miele, Katharina Blankart" />
 
 
-<meta name="date" content="2021-09-21" />
+<meta name="date" content="2021-09-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -113,15 +113,14 @@
 </ul></li>
 <li class="chapter" data-level="3" data-path="designstudy.html"><a href="designstudy.html"><i class="fa fa-check"></i><b>3</b> Designing the Study</a><ul>
 <li class="chapter" data-level="3.1" data-path="designstudy.html"><a href="designstudy.html#basic-steps-in-designing-your-study"><i class="fa fa-check"></i><b>3.1</b> Basic steps in designing your study</a><ul>
-<li class="chapter" data-level="3.1.1" data-path="designstudy.html"><a href="designstudy.html#clarify-your-study-goal-association-causation-counterfactuals"><i class="fa fa-check"></i><b>3.1.1</b> Clarify your study goal: association, causation, counterfactuals</a></li>
-<li class="chapter" data-level="3.1.2" data-path="designstudy.html"><a href="designstudy.html#develop-a-causal-model-and-identify-estimable-effects"><i class="fa fa-check"></i><b>3.1.2</b> Develop a causal model and identify estimable effects</a></li>
-<li class="chapter" data-level="3.1.3" data-path="designstudy.html"><a href="designstudy.html#develop-the-empirical-strategy-to-investigate-causal-effects"><i class="fa fa-check"></i><b>3.1.3</b> Develop the empirical strategy to investigate causal effects</a></li>
-<li class="chapter" data-level="3.1.4" data-path="designstudy.html"><a href="designstudy.html#investigate-suitable-source-data"><i class="fa fa-check"></i><b>3.1.4</b> Investigate suitable source data</a></li>
+<li class="chapter" data-level="3.1.1" data-path="designstudy.html"><a href="designstudy.html#develop-a-causal-model-and-identify-estimable-effects"><i class="fa fa-check"></i><b>3.1.1</b> Develop a causal model and identify estimable effects</a></li>
+<li class="chapter" data-level="3.1.2" data-path="designstudy.html"><a href="designstudy.html#develop-the-empirical-strategy-to-investigate-causal-effects"><i class="fa fa-check"></i><b>3.1.2</b> Develop the empirical strategy to investigate causal effects</a></li>
+<li class="chapter" data-level="3.1.3" data-path="designstudy.html"><a href="designstudy.html#investigate-suitable-source-data"><i class="fa fa-check"></i><b>3.1.3</b> Investigate suitable source data</a></li>
 </ul></li>
 <li class="chapter" data-level="3.2" data-path="designstudy.html"><a href="designstudy.html#resources-box-2"><i class="fa fa-check"></i><b>3.2</b> Resources box</a><ul>
 <li class="chapter" data-level="3.2.1" data-path="designstudy.html"><a href="designstudy.html#key-terminology-in-causal-inference-based-on-matthay_alternative_2020"><i class="fa fa-check"></i><b>3.2.1</b> Key terminology in causal inference based on <span class="citation">Matthay et al. (<span>2020</span>)</span></a></li>
 <li class="chapter" data-level="3.2.2" data-path="designstudy.html"><a href="designstudy.html#openly-available-textbooks-and-resources-on-econometrics-with-a-causal-inference-focus"><i class="fa fa-check"></i><b>3.2.2</b> Openly-available textbooks and resources on econometrics with a causal inference focus</a></li>
-<li class="chapter" data-level="3.2.3" data-path="designstudy.html"><a href="designstudy.html#drawing-causal-diagrams"><i class="fa fa-check"></i><b>3.2.3</b> Drawing Causal Diagrams</a></li>
+<li class="chapter" data-level="3.2.3" data-path="designstudy.html"><a href="designstudy.html#directed-acyclic-graphs"><i class="fa fa-check"></i><b>3.2.3</b> Directed Acyclic Graphs</a></li>
 <li class="chapter" data-level="3.2.4" data-path="designstudy.html"><a href="designstudy.html#replication-examples"><i class="fa fa-check"></i><b>3.2.4</b> Replication examples</a></li>
 </ul></li>
 <li class="chapter" data-level="3.3" data-path="designstudy.html"><a href="designstudy.html#example-hellerstein-1998-1"><i class="fa fa-check"></i><b>3.3</b> Example: Hellerstein (1998)</a></li>
@@ -289,50 +288,64 @@
 
 - Fresno State Graduate Writing Studio. [A Statistical Checklist for Your Spring Thesis](https://fresnostategraduatewritingstudio.wordpress.com/)
 
-
-
-
 - https://blog.feedspot.com/data_visualization_blogs/-->
 </div>
 <div id="example-hellerstein-1998-3" class="section level2">
 <h2><span class="header-section-number">5.3</span> Example: Hellerstein (1998)</h2>
-<p>Hellerstein’s (1998) study aims to answer the research question if physicians vary their prescription decisions on a patient-by-patient basis or whether they systematically prescribe the same version of a drug, trade-name or generic, to all patients. This means that the secondary data of the CDC (NAMCS and NAMCSd) will be analysed on physician level in a cross-sectional format. This, as we are not looking at the prescription behaviour over time (panel data) but rather if the physicians do or do not prescribe a generic drug.
-Over the course of your analysis, you want to explore your dataset, this includes describing and assessing the validity and plausibility. Thus before generating estimates of your investigated effect using regression techniques, you want to describe your data with descriptive statistics tables and, if applicable, figures.
-We first reproduce the descriptive statistics of Hellerstein (1998), namely table 1-3 and figure 1-2. Details of created variables can be found in the data preparation .do-file and the notes of the tables and figures in Hellerstein’s (1998) paper. Please keep in mind that we used the data of 1991, thus our numbers are not matching with the original paper.</p>
-<p>In the following we explain the steps taken to reproduce table 1-3 and figure 1-2, as well as the reproduction of the empirical analysis. Details and the code can be found in the Appendix <!--[include reference]--> and at the end of the next chapter when reporting the study results.</p>
+<p>Hellerstein’s (1998) study aims to answer the research question if physicians vary their prescription decisions on a patient-by-patient basis or whether they systematically prescribe the same version of a drug, trade-name or generic, to all patients.</p>
+<!-- That is not in line with Chapters 2 and 3 that emphasizes the effect of the insurance status -->
+<p>This means that secondary data (NAMCS and NAMCSd) that is publicly available via the websites of the CDC will be analysed on physician level in a cross-sectional format. Thus, the primary interest is to investigate if the physicians do or do not prescribe a generic drug. We are not investigating prescription behaviour of physicians over time using panel data.
+Over the course of your analysis, you want to explore your dataset, this includes describing and assessing the validity and plausibility. Thus before generating estimates of your investigated effect using regression techniques, you want to describe your data using descriptive statistics presented in tables and figures.</p>
+<!-- The language and how the reader is addressed is changing throughout the text. At times, you talk about, what we have done and then what the reader should do -- adjust.-->
+<p>We first reproduce the descriptive statistics of Hellerstein (1998), namely table 1-3 and figure 1-2. Details of created variables can be found in the data preparation .do-file and the notes of the tables and figures in Hellerstein’s (1998) paper.</p>
+<!-- Table that describes the dataset-->
+<p>Please keep in mind that we used the data of 1991. Thus, our numbers are not matching with the numbers provided in the original paper.</p>
+<p>We explain the steps taken to reproduce table 1-3 and figure 1-2, and the reproduction of the empirical analyses. Details and the code can be found in the Appendix<!--[include reference / link, recommend to split the code into the separate tables and figures and show below]--> and at the end of the next chapter when reporting the study results.</p>
 <div id="describe-your-data-assess-validity-and-plausiblity-1" class="section level3">
 <h3><span class="header-section-number">5.3.1</span> Describe your data, assess validity and plausiblity</h3>
-<p><strong>Table 1:</strong> Compute the mean and summary statistics for the age and the previously established dummies in the NAMCS data.</p>
-<p><strong>Table 2:</strong> For the first two columns, repeat the procedure of table 1 using the NAMCSd data. For the third column, compute the mean of the generic indicator for all subpopulations defined by the dummies.</p>
-<p><strong>Table 3:</strong> Using summary statistics command, count the number of observations for the full sample and for each of the eight defined drug classes. Further, compute the mean of the generic indicator in the full sample and each drug class subsample.</p>
-<p><strong>Figure 1:</strong> For each physician, compute the mean of the generic indicator and drop duplicate observations per physician. This way every physician has a unique observation with a respective share of generic prescriptions. To approximate the distribution shown in figure 1, some specifications are not elaborated sufficiently, so we assumed by visual approximation. The assumed specifications are:</p>
+<p><strong>Table 1:</strong></p>
+<p>Compute the mean and summary statistics for the age and the previously established dummies in the NAMCS data.</p>
+<p><strong>Table 2:</strong></p>
+<p>For the first two columns, repeat the procedure of table 1 using the NAMCSd data. For the third column, compute the mean of the generic indicator for all subpopulations defined by the dummies.</p>
+<p><strong>Table 3:</strong></p>
+<p>Using summary statistics command, count the number of observations for the full sample and for each of the eight defined drug classes. Further, compute the mean of the generic indicator in the full sample and each drug class subsample.</p>
+<p><strong>Figure 1:</strong></p>
+<p>For each physician, compute the mean of the generic indicator and drop duplicate observations per physician. This way, every physician has a unique observation with a respective share of generic prescriptions. To approximate the distribution shown in figure 1, we chose the following specifications based on visual approximation like:</p>
 <ul>
-<li>On what decimal place the generic means were rounded (we chose <span class="math inline">\(.01\)</span>)</li>
-<li>The bandwidth (we chose <span class="math inline">\(0.02\)</span>)</li>
-<li>The kernel function (we chose a bilinear form)</li>
+<li>The decimal places at which the average generic share was rounded: <span class="math inline">\(.01\)</span></li>
+<li>The bandwidth: <span class="math inline">\(0.02\)</span></li>
+<li>The kernel function: bilinear form</li>
 </ul>
-<p><strong>Figure 2:</strong> Keep physicians that prescribe the same multisource drug to at least six patients, so either in its generic or tradename form. Compute the mean of the generic indicator for each remaining physician and create a dummy variable on whether this mean is zero (i.e. only trade names), one (i.e. only generics), or something in between (i.e. both versions). These three dummies are then plotted in a bar plot.</p>
+<p><strong>Figure 2:</strong></p>
+<p>To display Figure 2, keep physicians that prescribe the same multisource drug to at least six patients, independent of whether it is in its generic or trade-name form. Compute the mean of the generic share for each remaining physician and create a categorical<!--dummy variable often implies 2 categories--> variable on whether this mean is zero (only trade name drugs), one (only generic drugs), or something in between (both, that means a mix of generic and brand name versions). The frequencies of these three categories across physicians is then plotted in a bar plot.</p>
 </div>
 <div id="generate-estimates-of-your-investigated-effect-using-regression-techniques-1" class="section level3">
 <h3><span class="header-section-number">5.3.2</span> Generate estimates of your investigated effect using regression techniques</h3>
 <p>Hellerstein applies a random effects probit regression model aggregated on physician level. The parameterization of the model is implemented as follows:</p>
 <p><strong>Dependent variable <span class="math inline">\(Y\)</span></strong></p>
 <ul>
-<li>G <em>Generic status</em></li>
+<li><span class="math inline">\(G\)</span>: <em>Generic compared to brand name drug use</em></li>
 </ul>
-<p><strong>Independent variables <span class="math inline">\(X\)</span></strong> <!--what about insurance status? That should be X if we follow section 3--></p>
+<p><em>Note that Hellerstein uses a somewhat different notation for the outcome variable which is denoted as <span class="math inline">\(G\)</span>. Today, it is often common to denote this variably by <span class="math inline">\(Y\)</span>.</em></p>
+<p><strong>Variable of interest or treatment <span class="math inline">\(X\)</span></strong> <!--what about insurance status? That should be X if we follow section 3, we somehow need to align this with chapter 3--></p>
 <ul>
-<li><span class="math inline">\(C\)</span>: <em>Drug class (Pain relief omitted, see footnote table 5)</em></li>
-<li><span class="math inline">\(X\)</span>: <em>Age, female, Hispanic nonwhite</em></li>
-<li><span class="math inline">\(P\)</span>: <em>Medicare, Medicaid, HMO/prepaid, private insurance (Self-paid omitted)</em></li>
-<li><span class="math inline">\(S\)</span>: <em>Specialist</em></li>
-<li><span class="math inline">\(R\)</span>: <em>Midwest, South, West (Northeast omitted)</em></li>
-<li>vector <span class="math inline">\(X\)</span>, vector <span class="math inline">\(P\)</span>: <em>Averages across physician</em></li>
+<li><span class="math inline">\(P\)</span>: <em>Insurance status by: Medicare, Medicaid, HMO/prepaid, private insurance, self-paid (this is the omitted category)</em></li>
 </ul>
+<p><em>Note that Hellerstein uses a somewhat different notation for the variable of interest which is denoted as <span class="math inline">\(P\)</span>. Today, it is often common to denote this variably by <span class="math inline">\(X\)</span> or <span class="math inline">\(D\)</span>.</em></p>
+<p><strong>Confounders <span class="math inline">\(Z\)</span> of the effect of insurance status <span class="math inline">\(X\)</span> and generic compared to brand name drug use <span class="math inline">\(Y\)</span>.</strong></p>
+<ul>
+<li><span class="math inline">\(C\)</span>: <em>Drug class identifiers among 8 classes (Pain relief omitted, see footnote table 5)</em></li>
+<li><span class="math inline">\(X\)</span>: <em>Patient characteristics: age, sex, race</em></li>
+<li><span class="math inline">\(S\)</span>: <em>Physician specialist status: Specialist, general practicioner (omitted)</em></li>
+<li><span class="math inline">\(R\)</span>: <em>Region as classified by: Midwest, South, West, Northeast (omitted)</em></li>
+<li>vector <span class="math inline">\(X\)</span>, vector <span class="math inline">\(P\)</span>: <em>Averages &lt;!-Of WHAT?–&gt; across physician</em></li>
+</ul>
+<p><em>Note that Hellerstein uses a somewhat different notation for confounding variables. It is often common to denote the variable of interest using the index <span class="math inline">\(X\)</span>, but not necessarily confounders.</em></p>
 <p><strong>Table 4 and 5:</strong></p>
 <p>Estimate the regression coefficients, t-statistics and marginal effects of the regression model. It is not specified whether the model for both tables contain all covariates specified in equation 10 or just the variables mentioned in the tables. We decided to use the full model for both tables. Marginal effects are the average marginal effects (AME) across individuals (footnote table 4).</p>
-<p><strong>Table 6:</strong> Run a separate regression using only observations of a single drug class and report the coefficients of the payment dummies and their AMEs.</p>
-<p>Tables 7, 8 and 9 cannot be reproduced due to the missing state identifier in the publicly available data of NACMS.</p>
+<p><strong>Table 6:</strong></p>
+<p>Run a separate regression using only observations of a single drug class and report the coefficients of the payment dummies and their average marginal effects (AMEs).</p>
+<p>Tables 7, 8 and 9 cannot be reproduced. The publicly available data of NACMS does not provide a variable to identify physicians and patients by region.</p>
 
 </div>
 </div>

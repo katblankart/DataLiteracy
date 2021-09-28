@@ -5,8 +5,14 @@ output:
 ---
 # Formulating a hypothesis {#hypothesis}
 
+```{r path2, echo=FALSE}
+path <- "C:/Users/KFischer/Documents/GitHub/DataLiteracy/_bookdown_files/DataLiteracy_files/figure-html"
+```
+
+<!--C:/Users/KFischer/sciebo/Date Literacy Project/06 Manuscript/bookdown/DataLiteracy/_book/DataLiteracy_files/figure-html-->
+
 ```{r, out.width='100%', fig.align='center', fig.cap='idea', echo=FALSE}
-knitr::include_graphics("C:/Users/KFischer/sciebo/Date Literacy Project/06 Manuscript/bookdown/DataLiteracy/_book/DataLiteracy_files/figure-html/idea.png")
+knitr::include_graphics(paste(path,"/idea.png",sep=""))
 ```
 Source: [DLPNG](https://dlpng.com/png/6808837)
 
@@ -96,7 +102,7 @@ Whether you start reading the literature first or by developing an idea may depe
 We highlight an example how to start with investigating the real-world and subsequently posing a research question [@noauthor_how_2019;@noauthor_developing_2019;@schilbach_5_2019]. For example, based on your own observation you notice that people seem to spend extensive amount of time looking at their smartphones. Maybe even you yourself engage in the same behavior. In addition, you  read a BBC News article [Social media damages teenagers' mental health, report says](https://www.bbc.com/news/technology-55826238).
 
 ```{r, out.width='100%', fig.align='center', fig.cap='social_media', echo=FALSE}
-knitr::include_graphics("C:/Users/KFischer/sciebo/Date Literacy Project/06 Manuscript/bookdown/DataLiteracy/_book/DataLiteracy_files/figure-html/Social-media.png")
+knitr::include_graphics(paste(path,"/Social_media.png",sep=""))
 ```
 
 Source: [BBC](https://www.bbc.com/news/technology-55826238)
@@ -178,14 +184,29 @@ As an illustration of the research process of formulating a hypothesis, designin
 
 ### **Relevance of the topic - escalating health expenditures**
 
-Worldwide, health systems face constantly increasing prescription drug expenditures. In the United States, the total prescription drug expenditure in 2020 marked about 358.7 billion US-Dollars [@statista_prescription_2020]. The prescription of generic drugs is an option in reducing the total health care expenditure. Generic drugs are bioequivalent in the active ingredients but have discounts of up to 80 percent compared to the trade-name alternative [@pruckner_hospitals_2018].
+Worldwide, many health systems face constantly increasing health expenditures, especially for prescription drugs. In the United States, the total prescription drug expenditure in 2020 marked about 358.7 billion US-Dollars [@statista_prescription_2020]. Prescribing generic instead of brand name drugs is an option in reducing the total health care expenditure. Generic drugs are bioequivalent in the active ingredients but are often less costly compared to their counterpart brand name alternatives. Discounts are as high as 80 percent [@pruckner_hospitals_2018]<!--Alternative Quelle-->.
  
 ### **Development of a research question - identifying the role of physician practice in choosing generic drugs**
 
-Physicians are faced with a multitude of different medication options, including generic and trade-name drugs. Physicians ideally act as agents for their patients to identify the best available treatment option. However, choosing the best treatment entails cost of coordination and cognition. The prescription of generic drugs may serve as an example to what extent physicians customize treatments according to patient's needs with regards to cost. From an economic point of view one might suggest that once a generic drug is available, a perfectly rational consumer would demand a generic drug instead of the trade-name version [@fischer_diffusion_2016]<!--find better source-->.  This asks for the research question, whether *"physicians vary their prescription decisions on a patient-by-patient basis or whether they systematically prescribe the same version, trade-name or generic, to all patients"*. The aim of this study is to identify the role the physician plays in prescribing a generic over a trade-name drug and the role of a patient's insurance status.
+Physicians are faced with a multitude of different medication options, including the choice between generic and trade-name products when prescribing the same active pharmaceutical ingredient. Physicians ideally act as agents for their patients to identify the best available treatment option. Choosing the best treatment entails cost of coordination and cognition. The prescription of generic drugs may serve as an example to what extent physicians customize treatments according to patient's needs with regards to cost. From an economic point of view, once generic versions of is available a drug that has been previously subject to patent protection, a perfectly rational consumer would demand a generic drug instead of the trade-name version [@fischer_diffusion_2016]<!--find better source-->. Accordingly, Hellerstein investigates the following research question: Do *"physicians vary their prescription decisions on a patient-by-patient basis or whether they systematically prescribe the same version, trade-name or generic, to all patients"*.
+
+<!-- example of sources that may be better suited: Frank, R. G., & Salkever, D. S. (1993). Pricing, Patent Loss and the Market For Pharmaceuticals (Working Paper No. 3803). National Bureau of Economic Research. http://www.nber.org/papers/w3803
+Danzon, P. M., & Furukawa, M. F. (2011). Cross-National Evidence on Generic Pharmaceuticals: Pharmacy vs. Physician-Driven Markets. NBER Working Paper 17226, http://www.nber.org/papers/w17226.
+Wouters, O. J., Kanavos, P. G., & McKee, M. (2017). Comparing generic drug markets in Europe and the U.S.: Prices, volumes, and spending. The Milbank Quarterly. http://onlinelibrary.wiley.com/journal/10.1111/(ISSN)1468-0009-->
+
+
+
+The study focuses on two aspects:
+
+1. identify the of role the physician in prescribing a generic over a brand name drug
+2. investigate role of a patient's insurance status in the choice between generic and brand name drugs by the physician
+
+*We will focus on the second aspect.*
 
 ### **Hypothesis - insurance status drives generic drug use**
+<!-- Hier geht es noch weniger um die empirische Umsetzung als eher die Motivation, warum es überhaupt einen Unterschied nach Versichertenstatus geben sollte -->
+To further investigate the stated research question and formulate a hypothesis, a motivation is needed why different groups by insurance status matter in the choice between generic and brand name prescription drugs<!--this is still rather unspecific--> to draw conclusions. Hellerstein (1998) considers a patient's insurance status as a matter of dividing the study population in groups for which the choice between generic and brand name drugs differs. The hypothesis to test the underlying hypothesis is *"Physicians are more likely to prescribe generics to patients who do not have insurance coverage for prescription pharmaceuticals"* [@hellerstein_importance_1998].
 
-To empirically analyse the research question, one needs to make use of different groups<!--this is still rather unspecific--> to draw conclusions. Hellerstein (1998) considers a patient's insurance status as a matter of dividing the study population in groups. The hypothesis to test the underlying research question can be formulated as *"Physicians are more likely to prescribe generics to patients who do not have insurance coverage for prescription pharmaceuticals"* [@hellerstein_importance_1998]. So a relationship between the two variables, prescription of a generic drug (dependent variable) and insurance status (independent variable) of the patient is suggested.<!--Formulate that more precisely in terms of a hypothesis-->
+@hellerstein_importance_1998 hypothesises that there is a relationship between prescription of a generic drug (dependent variable) and insurance status (independent variable) of the patient is suggested.<!--Formulate that more precisely in terms of a hypothesis-->
 
 

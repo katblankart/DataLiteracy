@@ -2,10 +2,17 @@
 
 ## Basic steps to reporting the study
 
+```{r path6, echo=FALSE}
+path <- "C:/Users/KFischer/Documents/GitHub/DataLiteracy/_bookdown_files/DataLiteracy_files/figure-html"
+```
+
+<!--C:/Users/KFischer/sciebo/Date Literacy Project/06 Manuscript/bookdown/DataLiteracy/_book/DataLiteracy_files/figure-html-->
+
+
 At this stage you need to report all your performed work in detail in a scientific research paper.
 
 ```{r writepaper, out.width='100%', fig.align='center', fig.cap='How to report your paper', echo=FALSE}
-knitr::include_graphics("C:/Users/KFischer/sciebo/Date Literacy Project/06 Manuscript/bookdown/DataLiteracy/_book/DataLiteracy_files/figure-html/comics.png")
+knitr::include_graphics(paste(path,"/comics.png",sep=""))
 ```
 
 Source: https://towardsdatascience.com/how-to-keep-your-research-projects-organized-part-1-folder-structure-10bd56034d3a
@@ -83,7 +90,7 @@ As a careful researcher you will conduct and document a number of various robust
 
 
 ```{r paper_structure, out.width='80%', fig.align='center', fig.cap='Paper Structure', echo=FALSE}
-knitr::include_graphics("C:/Users/KFischer/sciebo/Date Literacy Project/06 Manuscript/bookdown/DataLiteracy/_book/DataLiteracy_files/figure-html/paperstructure.png")
+knitr::include_graphics(paste(path,"/paperstructure.png",sep=""))
 ```
 
 Source: [Fresno State Graduate Writing Studio.](http://www.fresnostate.edu/academics/gradstudies/graduatewritingstudio.html) [Elements of a Research Paper.](https://fresnostategraduatewritingstudio.files.wordpress.com/2015/09/elements-of-a-research-paper.pdf)  
@@ -152,11 +159,11 @@ More principles on writing in economics are summarized in [Top Ten Rules of Econ
 
 ## Example: Hellerstein (1998)
 
-We show the results of the reproduction of tables 1-3 and figures 1-2 of the descriptive analysis, and the reproduction of the empirical analysis in table 4-6. Please keep in mind that our results are based on data from 1991. This in contrast to @hellerstein_importance_1998 which is based on three datasets of the year 1989. As the confidential data is key to identifying physicians and patients in the data of 1989 we resort to the 1991 data, that provides these identifiers in two publically available datasets. We present our results and discuss the differences compared to @hellerstein_importance_1998 briefly. For a detailed discussion and interpretation of the results, we refer to the original study by @hellerstein_importance_1998.
+We show the results of the reproduction of tables 1-3 and figures 1-2 of the descriptive analysis, and the reproduction of the empirical analysis in table 4-6. Please keep in mind that our results are based on data from 1991. This in contrast to @hellerstein_importance_1998 which is based on three datasets of the year 1989. As the confidential data is key to identifying physicians and patients in the data of 1989 we resorted to the 1991 data, that provide state<!--Please check whether it is state--> identifiers in two publically available datasets. We present our results and discuss the differences compared to @hellerstein_importance_1998 briefly. For a detailed discussion and interpretation, we refer to the original study.
  
 ### Descriptive Analysis
 
-The summary statistics shown in Table 1, representing the overall NAMCS patient sample of the year 1991 are similar to the summary statistics shown by Hellerstein (1998). When looking at the dristribution of insurance coverage, we see differences especially at Blue Cross/Blue Shield ($2%$ compared to $13%$ in 1989), other commercial insurer ($38%$ compared to $24%$ in 1989) and HMO/prepaid plan (14% compared to $24%$ in 1989). Additionally, about $14%$ more specialist physicians are represented by the sample. 
+The summary statistics shown in Table 1, representing the overall NAMCS patient sample of the year 1991 are similar to the summary statistics shown by Hellerstein (1998). When looking at the dristribution of insurance coverage, we see differences especially at Blue Cross/Blue Shield ($2%$ compared to $13%$ in 1989), other commercial insurers ($38%$ compared to $24%$ in 1989) and HMO/prepaid plan ($14%$ compared to $24%$ in 1989). Additionally, about $14%$ more specialist physicians are represented by the sample. 
 
 **Table 1 - Summary Statistics for Overall NAMCS Patient Sample**
 
@@ -182,7 +189,7 @@ Notes: see Hellerstein (1998)
 Datasource: NAMSC91
 
 
-Table 2 shows very similar statistics for the patients of the NAMCSd sample compared to the data from 1989. We see a 5% increase in the proportion of generic drug prescription in specialist compared to Hellerstein (1998). 
+Table 2 shows very similar statistics for the patients of the NAMCSd sample compared to the data from 1989. We see a $5%$ increase in the proportion of generic drug prescription in specialist compared to Hellerstein (1998). 
 
 **Table 2 - Summary Statistics for Patients in NAMCS Drug Sample**
 
@@ -206,7 +213,7 @@ Table 2 shows very similar statistics for the patients of the NAMCSd sample comp
 
 Notes: see Hellerstein (1998), Datasource: NAMSCd91
 
-Compared to 1989, we observe larger sample size in the 1991 data. Table 3 shows the absolute number of observations and the share of generics over all drugs as well as the 8 largest drug categories. While the absolute number of observations is higher, the share of generics overall and per drug class stays similar to Hellerstein (1998). 
+Compared to 1989, we observe larger sample size in the 1991 data. Table 3 shows the absolute number of observations and the share of generics over all drugs as well as the 8 largest drug categories. While the absolute number of observations is higher, the share of generics overall and by drug class stays similar to Hellerstein (1998). 
 
 **Table 3 - Frequency of Generic Prescription by Drug Class**
 
@@ -233,20 +240,25 @@ Compared to 1989, we observe larger sample size in the 1991 data. Table 3 shows 
 
 **Figure 1 - Distribution of Physician Generic Prescription Rates (Source: NAMSCd91)**
 
+The distribution of physicians over the different generic prescription rates (figure 1) is similar to Hellerstein (1998).
+
+
 ```{r HellFig1, out.width='100%', fig.align='center', fig.cap='Generic prescription rates', echo=FALSE}
-knitr::include_graphics("C:/Users/KFischer/sciebo/Date Literacy Project/06 Manuscript/bookdown/DataLiteracy/_book/DataLiteracy_files/figure-html/Hellerstein_Fig_1.png")
+knitr::include_graphics(paste(path,"/Hellerstein_Fig_1.png",sep=""))
 ```
 
 
 
 
-The distribution of physicians over the different generic prescription rates (figure 1) is similar to Hellerstein (1998).
-When looking at figure 2, we see an decrease from about 90% to about 50% in "only trade name" prescriptions by physicians. This seems to be driven by a rather small increase of prescription of "both versions" an "only generics". 
+
 
 **Figure 2 - Physician decisions for physicians who prescribe a drug to at least six patients (Source: NAMSCd91)**
 
+When looking at figure 2, we see an decrease from about 90% to about 50% in *"only trade name"* prescriptions by physicians. This seems to be driven by a rather small increase of prescription of *"both versions"* and *"only generics"*. 
+
+
 ```{r HellFig2, out.width='100%', fig.align='center', fig.cap='Physician decisions', echo=FALSE}
-knitr::include_graphics("C:/Users/KFischer/sciebo/Date Literacy Project/06 Manuscript/bookdown/DataLiteracy/_book/DataLiteracy_files/figure-html/Hellerstein_Fig_2.png")
+knitr::include_graphics(paste(path,"/Hellerstein_Fig_2.png",sep=""))
 ```
 
 
@@ -254,10 +266,10 @@ knitr::include_graphics("C:/Users/KFischer/sciebo/Date Literacy Project/06 Manus
  
 ### Empirical Analysis
 
-In the following we present our results of the empirical analyses. Please keep in mind, that, due to data restrictions, we were not able to control for some covariates that Hellerstein (1998) accounted for. An example of such are legislation laws like mandatory or permissive substitution or one- or two-line prescription. For this reason, we cannot present all tables produced by Hellerstein (1998). Given these restrictions, we cannot run the analysis with the same underlying model specifications. 
+Please keep in mind, that, due to data restrictions, we were not able to control for certain covariates that Hellerstein (1998) included. An example of such are legislation laws like mandatory or permissive substitution, and one- or two-line prescription. For this reason, we cannot present all tables produced by Hellerstein (1998). Given these restrictions, we cannot run the analysis with the same underlying model specifications. 
 This restricts us from comparing the results of the years 1991 and 1989, however for the completion of this example we represent the results of table 4, 5 and 6 in the following: 
 
-**Table 4 Estimated Coefficients on Demographic Variables, Geographic Variables, and Average Characteristics for Full Sample**
+**Table 4 Estimated Coefficients on Demographic Variables, Geographic Variables, and Average Characteristics for Full Sample, excluding regional identifiers**
 
 |           Variable         |     Random-Effects Probit Coefficient    |     Random-Effects Probit t-statistic    |           % Change in Generic    |
 |----------------------------|------------------------------------------|------------------------------------------|----------------------------------|
@@ -278,6 +290,8 @@ This restricts us from comparing the results of the years 1991 and 1989, however
 
 Notes: $*p < 0.05, **p < 0.01, ***p < 0.001$; see Hellerstein (1998); Datasource: NAMSCd91
 
+<!--Adapt notes accordingly from original table, especially number of observations and rho -->
+
 
 **Table 5 - Estimated Coefficients for Drug-Class Dummy Variable for Full Sample**
 
@@ -293,12 +307,12 @@ Notes: $*p < 0.05, **p < 0.01, ***p < 0.001$; see Hellerstein (1998); Datasource
 
 Notes: $*p < 0.05, **p < 0.01, ***p < 0.001$; Omitted category is Ophthalmics; Notes: see Hellerstein (1998); Datasource: NAMSCd91
 
-
+<!-- Why is the omitted variable not pain relief such as in the original table? Change in Generic is missing as a column. Please recheck-->
 
 
 **Table 6 - Tests for Moral Hazard for the Full Sample Equality of Individual Insurance Variables with Self-Payment Random-Effects Probit Results**
 
-|     Insurance Variable    |     Antimicrobial    |     Cardiovaskulars    |     Metabolics    |     Hormones    |     Skin/Muchous Membranes    |     Ophthalmics    |     Pain relief    |     Respiratory Tract    |
+|     Insurance Variable    |     Antimicrobial    |     Cardiovaskulars    |     Metabolics    |     Hormones    |     Skin/Mucous Membranes    |     Ophthalmics    |     Pain relief    |     Respiratory Tract    |
 |---------------------------|----------------------|------------------------|-------------------|-----------------|-------------------------------|--------------------|--------------------|--------------------------|
 |     Medicaid              |                      |                        |                   |                 |                               |                    |                    |                          |
 |     Coefficient           |     0.178            |     -0.0345            |     -0.192        |     0.497       |     0.189                     |     -0.280         |     0.634          |     -1.017               |

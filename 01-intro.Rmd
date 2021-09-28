@@ -5,9 +5,10 @@ output:
 ---
 
 ```{r path, echo=FALSE}
-path <- "C:/Users/KFischer/sciebo/Date Literacy Project/"
+path <- "C:/Users/KFischer/Documents/GitHub/DataLiteracy/_bookdown_files/DataLiteracy_files/figure-html"
 ```
 
+<!--C:/Users/KFischer/sciebo/Date Literacy Project/06 Manuscript/bookdown/DataLiteracy/_book/DataLiteracy_files/figure-html-->
 
 # Introduction to reproducible research {#intro}
 
@@ -51,7 +52,7 @@ There is a number of threats to reproducible research process that can undermine
 
 
 ```{r, out.width='100%', fig.align='center', fig.cap='munafo', echo=FALSE}
-knitr::include_graphics(paste(path,"/06 Manuscript/bookdown/DataLiteracy/_book/DataLiteracy_files/figure-html/munafo.png",sep=""))
+knitr::include_graphics(paste(path,"/munafo.png",sep=""))
 ```
 
 ### Increase productivity of your work and the work of the scientific community by performing reproducible research
@@ -81,7 +82,7 @@ In this study guide we follow the main steps of performing a reproducible data s
 
 
 ```{r, out.width='75%', fig.align='center', fig.cap='reproducible', echo=FALSE}
-knitr::include_graphics(paste(path,"/06 Manuscript/bookdown/DataLiteracy/_book/DataLiteracy_files/figure-html/02_reproducible_research_data_analysis.png",sep=""))
+knitr::include_graphics(paste(path,"/02_reproducible_research_data_analysis.png",sep=""))
 ```
 
 ## Secondary (health care) data

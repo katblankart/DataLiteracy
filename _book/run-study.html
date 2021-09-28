@@ -21,10 +21,10 @@
   <meta name="twitter:description" content="Data Science Campus - A study guide for reproducible research using secondary (health care) data" />
   
 
-<meta name="author" content="Maryna Ivets, Eva Goetjes, Katharina Blankart" />
+<meta name="author" content="Maryna Ivets, Eva Goetjes, Kai Miele, Katharina Blankart" />
 
 
-<meta name="date" content="2021-09-21" />
+<meta name="date" content="2021-09-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -113,15 +113,14 @@
 </ul></li>
 <li class="chapter" data-level="3" data-path="designstudy.html"><a href="designstudy.html"><i class="fa fa-check"></i><b>3</b> Designing the Study</a><ul>
 <li class="chapter" data-level="3.1" data-path="designstudy.html"><a href="designstudy.html#basic-steps-in-designing-your-study"><i class="fa fa-check"></i><b>3.1</b> Basic steps in designing your study</a><ul>
-<li class="chapter" data-level="3.1.1" data-path="designstudy.html"><a href="designstudy.html#clarify-your-study-goal-association-causation-counterfactuals"><i class="fa fa-check"></i><b>3.1.1</b> Clarify your study goal: association, causation, counterfactuals</a></li>
-<li class="chapter" data-level="3.1.2" data-path="designstudy.html"><a href="designstudy.html#develop-a-causal-model-and-identify-estimable-effects"><i class="fa fa-check"></i><b>3.1.2</b> Develop a causal model and identify estimable effects</a></li>
-<li class="chapter" data-level="3.1.3" data-path="designstudy.html"><a href="designstudy.html#develop-the-empirical-strategy-to-investigate-causal-effects"><i class="fa fa-check"></i><b>3.1.3</b> Develop the empirical strategy to investigate causal effects</a></li>
-<li class="chapter" data-level="3.1.4" data-path="designstudy.html"><a href="designstudy.html#investigate-suitable-source-data"><i class="fa fa-check"></i><b>3.1.4</b> Investigate suitable source data</a></li>
+<li class="chapter" data-level="3.1.1" data-path="designstudy.html"><a href="designstudy.html#develop-a-causal-model-and-identify-estimable-effects"><i class="fa fa-check"></i><b>3.1.1</b> Develop a causal model and identify estimable effects</a></li>
+<li class="chapter" data-level="3.1.2" data-path="designstudy.html"><a href="designstudy.html#develop-the-empirical-strategy-to-investigate-causal-effects"><i class="fa fa-check"></i><b>3.1.2</b> Develop the empirical strategy to investigate causal effects</a></li>
+<li class="chapter" data-level="3.1.3" data-path="designstudy.html"><a href="designstudy.html#investigate-suitable-source-data"><i class="fa fa-check"></i><b>3.1.3</b> Investigate suitable source data</a></li>
 </ul></li>
 <li class="chapter" data-level="3.2" data-path="designstudy.html"><a href="designstudy.html#resources-box-2"><i class="fa fa-check"></i><b>3.2</b> Resources box</a><ul>
 <li class="chapter" data-level="3.2.1" data-path="designstudy.html"><a href="designstudy.html#key-terminology-in-causal-inference-based-on-matthay_alternative_2020"><i class="fa fa-check"></i><b>3.2.1</b> Key terminology in causal inference based on <span class="citation">Matthay et al. (<span>2020</span>)</span></a></li>
 <li class="chapter" data-level="3.2.2" data-path="designstudy.html"><a href="designstudy.html#openly-available-textbooks-and-resources-on-econometrics-with-a-causal-inference-focus"><i class="fa fa-check"></i><b>3.2.2</b> Openly-available textbooks and resources on econometrics with a causal inference focus</a></li>
-<li class="chapter" data-level="3.2.3" data-path="designstudy.html"><a href="designstudy.html#drawing-causal-diagrams"><i class="fa fa-check"></i><b>3.2.3</b> Drawing Causal Diagrams</a></li>
+<li class="chapter" data-level="3.2.3" data-path="designstudy.html"><a href="designstudy.html#directed-acyclic-graphs"><i class="fa fa-check"></i><b>3.2.3</b> Directed Acyclic Graphs</a></li>
 <li class="chapter" data-level="3.2.4" data-path="designstudy.html"><a href="designstudy.html#replication-examples"><i class="fa fa-check"></i><b>3.2.4</b> Replication examples</a></li>
 </ul></li>
 <li class="chapter" data-level="3.3" data-path="designstudy.html"><a href="designstudy.html#example-hellerstein-1998-1"><i class="fa fa-check"></i><b>3.3</b> Example: Hellerstein (1998)</a></li>
@@ -193,6 +192,7 @@
             <section class="normal" id="section-">
 <div id="run-study" class="section level1">
 <h1><span class="header-section-number">Chapter 4</span> Running the study and collecting the data</h1>
+<!--C:/Users/KFischer/sciebo/Date Literacy Project/06 Manuscript/bookdown/DataLiteracy/_book/DataLiteracy_files/figure-html-->
 <div id="basic-steps-when-running-the-study-and-collecting-the-data" class="section level2">
 <h2><span class="header-section-number">4.1</span> Basic steps when running the study and collecting the data</h2>
 <p>In this step it is about to specify which data to use and collect the data. As this study guide focuses on secondary data, you will need to identify relevant data sources, obtain the source data and process the data. As many data sources are not primarily developed for the particular purpose of your study, you often will need to modify the source data to reflect the measurements of your <span class="math inline">\(Y&#39;s,X&#39;s\)</span> and <span class="math inline">\(Z&#39;s\)</span> you wish to examine in your causal model. It is also often that secondary data is not readily available for analysis such that you will need to collect and process these data (for example by writing program that extracts data from a website, search engine, or API, or by applying for permission to access the data).</p>
@@ -290,13 +290,24 @@
 <div id="example-hellerstein-1998-2" class="section level2">
 <h2><span class="header-section-number">4.3</span> Example: Hellerstein (1998)</h2>
 <!-- Give this text more structure and relate to data appendix -->
-<p>The empirical application of Hellerstein (1998) is based on three datasets from the year 1989. As the confidential data is key to identifying physicians and patients we, for the purpose of this example, resort to the 1991 data, that provides these identifiers in two publicly available datasets. The two available datasets are called NAMCS and NAMCSd. The former contains demographic and medical information on the full sample of patients and is mainly used to introduce the analysis population. NAMCSd dataset contains information on medications, that were mentioned, prescribed or given to a subsample of patients of the NAMCS data.</p>
-<p>The publically available data can be downloaded at the <a href="https://www.cdc.gov/nchs/ahcd">Centers for Disease Control and Prevention (CDC)</a>. The data come in an .exe format. We use the unpacking software 7-zip to convert the files in a .txt format. It usually is the case, that you need to perform certain transformations to the raw dataset. This can apply to the file or data format, the structure of the dataset or you might need to combine different datasets. The raw data we downloaded from the CDC are a good example for that. When importing the text file into Stata, all data lies in one string in the first column, meaning that we do not have different variables for the individual information (i.e. patient characteristics). To be able to use the data, we need to manually split the string into the wanted format, so every information in a separate variable. Which digits in the initial string belong to which variable is elaborated in the documentation files (also often referred to as code book) that also can be found on the CDC website<!--include link-->. Almost every dataset comes with a codebook, containing useful information on the coding or handling of the data at hand. This can often help and provide the necessary information needed to successfully prepare your data for empirical analysis.</p>
-<p>The preparation of your data can be done with different software for statistical analysis, for the reproduction of our Hellerstein (1998) example we use Stata, creating a .do -file containing the code. It is of importance to develop a file of your code, containing every step you performed with your data. This ensures the reproducibility of your research and enables you to go back to earlier versions of your data if necessary.
-After downloading the NAMCS and NAMCSd we performed the following cleaning (i.e. exclusion of certain observations), transforming and preparation steps, that are needed to reproduce the tables and figures originally produced by Hellerstein (1998):</p>
-<p>For NAMCS, used for the reproduction of table 1:</p>
+<p>The empirical application of Hellerstein (1998) is based on three datasets as provided by the National Ambulatory Care Survey from the year 1989:</p>
+<!-- List these three datasets -->
+<p>As the confidential data is key to identifying physicians and patients, for the purpose of reproducing Hellerstein’s results, we resort to the publicly available data of 1991, that provides these identifiers in two publicly available datasets:</p>
 <ul>
-<li>Observations of patients, who were not charged, were dropped.</li>
+<li>NAMCS: contains demographic and medical information on the full sample of patients and is mainly used to introduce the analysis population <!--refine: what is analysis population? --></li>
+<li>NAMCSd: contains information on medications, that were mentioned, prescribed or given to a subsample of patients of the NAMCS data. <!--Include EXACT links to both dataset descriptions--></li>
+</ul>
+<p>The publically available data of NAMCS can be downloaded at the <a href="https://www.cdc.gov/nchs/ahcd">Centers for Disease Control and Prevention (CDC)</a>. The data come in an .exe format. We use the unpacking software 7-zip to convert the files in a .txt format.</p>
+<p>Usually, certain transformations need to be performed to be able to use the raw dataset. This can apply to the file or data format, the structure of the dataset or you might need to combine different datasets.</p>
+<p>To process the raw data after we downloaded the raw data from CDC website, a challenge was to structure the raw data set to be able to use the relevant variables in Stata. When we importet the text file into Stata, all data was condensed to one string of characters in a single column. This means that we first need to indicate the different data items (variables) for the individual information (i.e. patient characteristics). Therefore, to be able to use the data, we need to manually split the string into the wanted format, so every information in a separate variable. Which digits in the initial string belong to one data items is defined in the documentation files (also often referred to as code book), provided by the CDC website<!--include link-->. Almost every dataset comes with a codebook, containing useful information on the coding or handling of the data. This can often help and provide the necessary information needed to successfully prepare your data for empirical analysis.</p>
+<p>For the reproduction of Hellerstein (1998), we use Stata, creating a .do -file containing the code. It is of importance to develop all necessary steps of your research project to manipulate and analyze data using program files, containing every step you performed with your data. This ensures the reproducibility of your research and enables you to go back to earlier versions of your data preparation and analysis, if necessary.</p>
+<!--Highlight the main structure of .do files, i.e. the names of the programs and their purpose -->
+<!--Explain the level of aggregation of the analysis dataset -->
+<p>After downloading the NAMCS and NAMCSd we performed the following steps to clean (by excluding non-relevant certain observations), transform and prepare the data for analysis. We concentrate on reproducin all tables and figures originally produced by Hellerstein (1998):</p>
+<p>For NAMCS, used for the reproduction of table 1:</p>
+<!--make reference to where in the code (e.g. indicating lines) students will find this code-->
+<ul>
+<li>Observations of patients, who were not charged for prescription pharmaceuticals, were dropped.</li>
 <li>Missing data must be relabeled according to the syntax of the statistic software and observations with missing data were not considered.</li>
 <li>The setup of the dummy variables for Medicare and Specialists underlie special conditions (details can be found in the do-file attached), whereas the remaining dummies were not created straight away.</li>
 </ul>
@@ -311,7 +322,8 @@ After downloading the NAMCS and NAMCSd we performed the following cleaning (i.e.
 <li>Using the variable on whether a drug is a generic or trade-name drug to create an indicator on whether the drug is a generic (dependable variable).</li>
 <li>Creating physician averages of variables listed on p. 123 of Hellerstein (1998).</li>
 </ul>
-<p>After these steps are taken, the dataset is ready for statistical analysis (see at the end of the next chapter). Of importance is to ensure that the raw data, the data preparation .do -file and the analysis dataset are stored safely.</p>
+<p>After completion of these steps, the analysis dataset included x variables and y observations. The dataset is now ready for statistical analysis (see at the end of the next chapter). Of importance is to ensure that the raw data, the data preparation .do -file and the analysis dataset are stored safely.</p>
+<!-- Include table that shows the variables included in the dataset, use the "describe" command in Stata. -->
 
 </div>
 </div>

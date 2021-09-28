@@ -1,6 +1,6 @@
 --- 
 title: "A concise guide to reproducible research using secondary data"
-author: "Maryna Ivets, Eva Goetjes, Katharina Blankart"
+author: "Maryna Ivets, Eva Goetjes, Kai Miele, Katharina Blankart"
 date: "`r Sys.Date()`"
 output: pdf_document
 description: Data Science Campus - A study guide for reproducible research using secondary (health care) data
@@ -20,7 +20,7 @@ biblio-style: apalike
 
 The objective of this study guide is to provide a resource to graduate students, early career PhD candidates and researchers performing applied empirical research in economics and management sciences. The pratical application is in the field of analysis of health care markets using secondary data. Many textbook examples use readily available data sets for analysis of econometric problems. For students aiming to conduct research by generating their own analysis data set, important steps that lead to a final analysis data set are missing. Besides, many resources focus on labour economics problems. Resources that consider processing and generating secondary data are scarce. One reason is that often these data sources are subject to confientiality and data protection issues such these cannot be made available.
 
-The objective of this study guide is to provide a resource that covers the major steps of a reproducible research project in 5 steps. We will introduce important terminology, highlight the relevant taks to be performed, and to provide key resources in the form of text books and websites available via open access. We aim to provide a concise guide that user of this guide can easily access when starting academic research. Each section is to be read within 10-15 minutes. For this reason, we will not cover any specific data science or econometric method, but point to the relevant resources. Therefore, users of this guide should have knowledge in statistics and econometrics. Also, they should have background knowledge on the subject matter they aim to study.
+The objective of this study guide is to provide a resource that covers the major steps of a reproducible research project in 5 steps. We will introduce important terminology, highlight the relevant taks to be performed, and to provide key resources in the form of text books and websites available via open access. We aim to provide a concise guide that user of this guide can easily access when starting academic research. Each section is to be read within 10-15 minutes. For this reason, we will not cover any specific data science or econometric method, but point to the relevant resources. Therefore, users of this guide should have basic knowledge in statistics, econometrics and program evaluation. We further recommend basic knowledge in a statistical package such as R or Stata. For the study guide to be of most benefit, readers should have background knowledge and a research idea in mind while reading.
 
 ## Learning objectives {-}
 
@@ -48,7 +48,7 @@ How you can contribute to this study guide? Best practices how to perform reprod
 
 # Acknowledgements {-}
 
-The authors thank Christoph Kronenberg for comments and suggestions. The authors thank Kai Miele for invaluable research support.
+The authors thank Christoph Kronenberg for comments and suggestions. 
 
 Development of this resource has received funding by [*Data Literacy Education.nrw*](https://www.dh.nrw/aktuelles/ausschreibung). It is part of the [DataCampus project of the University of Duisburg-Essen](https://www.uni-due.de/ub/datacampus/index.php).
 

@@ -11,25 +11,32 @@ output:
 <!-- https://www.questionpro.com/blog/empirical-research/
 -->
 
+```{r path3, echo=FALSE}
+path <- "C:/Users/KFischer/Documents/GitHub/DataLiteracy/_bookdown_files/DataLiteracy_files/figure-html"
+```
+
+<!--C:/Users/KFischer/sciebo/Date Literacy Project/06 Manuscript/bookdown/DataLiteracy/_book/DataLiteracy_files/figure-html-->
+
+
 ## Basic steps in designing your study
 
-We have arrived at the heart of your research study to specify how you will empirically test your hypothesis. We focus on study designs make use of secondary data with the aim to identify the magnitude of effects of causal relationships between a variable of interest $X$ and a certain outcome $Y$. Note that there is extensive literature and guidance to perform causal inference, some of which we guide you to below. We will highlight the most important elements and point to the relevant resources.
+We have arrived at the heart of your research study to specify how you will empirically test your hypothesis. We focus on study designs make use of secondary data with the aim to identify the magnitude of effects of causal relationships between a variable of interest $X$ and a certain outcome $Y$, controlling for potential confounders $Z$. Note that there is extensive literature and guidance about designing and performing causal inference studies, some of which we guide you to below. We will highlight the most important elements and point to the relevant resources.
 
-You have chosen your research questions and formulated a hypothesis. You also have collected and reviewed all the relevant literature on your topic. Now, you need to decide on your research design. Are you planning to uncover associations, or do you want to examine a causal relationship between your variables of interest [@pearl_causality_2009;@pearl_causal_2016]? To translate direct observations in data to investigate cause-and-effect relationships, you will need to rely on a workable model that describes the elements reflected by your hypothesis. For that reason, it is recommended that you first describe the causal structures of the elements that you are studying, including any other observed or unobserved structures that may disturb the cause-and-effect relationship under investigation.
+You have chosen your research questions and formulated a hypothesis. You also have collected and reviewed all the relevant literature on your topic. Now, you need to decide on your research design looks like. Are you planning to uncover associations, or do you want to examine a causal relationship between your variables of interest [@pearl_causality_2009;@pearl_causal_2016]? We will focus on investigating causal relationships. To translate direct observations in data to investigate cause-and-effect relationships, you will need to rely on a workable model that describes the elements and relationships of concepts reflected in your hypothesis. For that reason, it is recommended that you first describe the causal structures of the elements that you are studying, including any other observed or unobserved structures that may disturb the cause-and-effect relationship under investigation.
 
 The design of your study will depend on the causal model that suggests which effects are estimable, given that there are suitable data to empirically identify the effect. Consider that you describe cause-and-effect relationship first, assess how it is estimable (that means that you ask the question "Can you infer a causal effect from your data?") and then investigate the effect by direct observations using secondary data. The alternative is to start out with a regression estimated effect and then investigate whether it has a causal interpretation.
 
-Consider the subsequent steps as an iterative process, allowing that not all data you may need to estimate effects of your causal model will be readily available. Some elements will remain unobserved.
+Consider the subsequent steps as an iterative process, allowing that not all data you may need to estimate effects of your causal model will be readily available. Some elements will remain unobserved. For others, you may need to find proxies.
 
 
-### Clarify your study goal: association, causation, counterfactuals
+<!--### Clarify your study goal: association, causation, counterfactuals
 
-(see Pearl (2009) on the *"ladder of causality"*)
+(see Pearl (2009) on the *"ladder of causality"*)-->
 
 
 ### Develop a causal model and identify estimable effects
 
-Once you have made this decision, you should specify a causal model that describes the relationships between the elements that you are studying. This causal model will help to identify empirical model by defining your main relationship of interest. 
+You should specify a causal model that describes the relationships between the elements that you are studying. This causal model will help to identify empirical model by defining your main relationship of interest. 
 
 You need to specify your
 
@@ -38,7 +45,9 @@ You need to specify your
 - other independent variables (confounders of the effect of $X$ on $Y$), that means any additional $Z$'s
 - unobserved variables ($U$)
 
-For better visualization, you may plot the corresponding [directed acyclic graph](https://cran.r-project.org/web/packages/ggdag/vignettes/intro-to-dags.html) to describe the relationships between your variable of interest and any confounding variable. It is recommended to do this step before data collection. That way, you avoid collection of data that may not be needed. You also avoid forgetting variables that are necessary to for causal effect identification. And you may [check for so-called bad controls](https://ftp.cs.ucla.edu/pub/stat_ser/r493.pdf) that may bias your estimates.
+You need to think about how these concepts can be measured and what the relationships between these concepts are.
+
+For better visualization, you may plot a corresponding [directed acyclic graph](https://cran.r-project.org/web/packages/ggdag/vignettes/intro-to-dags.html) to describe the relationships between your variable of interest and any confounding variable. It is recommended to do this step before data collection. That way, you avoid collection of data that may not be needed. You also avoid forgetting variables that are necessary to for causal effect identification. And you may [check for so-called bad controls](https://ftp.cs.ucla.edu/pub/stat_ser/r493.pdf) that may bias your estimates.
 
 
 
@@ -51,7 +60,7 @@ Write down your estimate, your estimand, notation
 
 
 
-After you have specified your causal model, ask yourself how you can capture the causal relationship between $X$ and $Y$. In other words, can you apply an appropriate research design that can accommodate you in determining causality with the data at hand? Following the classification by @matthay_alternative_2020, that means by performing a
+After you have specified your causal model, ask yourself how you can capture the causal relationship between $X$ and $Y$? In other words, can you apply an appropriate research design that can accommodate you in determining causality with the data at hand? Following the classification by @matthay_alternative_2020, that means by performing, for example a
 
 
 - Randomized Controlled Trial (RCT): this would be the ideal world case where we could randomize treatments to study effect
@@ -62,7 +71,8 @@ Secondary data will not allow performing a RCT as you will not be able to random
 
   - Regression adjustment
   - Matching Techniques
-  - Two-way fixed-effects (TWFE) panel regressions
+  - Simulation
+  - Fixed effects regressions
 
 - Instruments
 
@@ -70,7 +80,7 @@ Secondary data will not allow performing a RCT as you will not be able to random
   - Difference-in-difference (DiD) analysis
   - Instrumental variable (IV) approach
 
-- Structural equation models
+- Any other method such as synthetic control groups. structural equation models, causal machine learning
 
 
 Think about what type of treatment effect you are investigating in your causal analysis. The treatment effect is the average (across the population or across some subpopulation) of the change in outcome ($Y$) that results from a change in a covariate (the treatment $X$) [@lewbel_identification_2019].
@@ -83,8 +93,6 @@ Common types of treatment effect parameters are
 - local average treatment effects (LATE)
 - quantile treatment effects (QTE)
 
-<!-- include a note on ML and causal ML -->
-
 
 
 ### Investigate suitable source data
@@ -93,7 +101,7 @@ You need to find and collect suitable data to populate your causal model. This m
 
 Some data are available from statistical offices (Eurostat in the European Union, DESTATIS for Germany), private companies (health insurances), Social Media and App based data (Mappiness, Fitbit, Facebook, Twitter, WayBetter) or governmental and non-governmental institutions (EMA, FDA, BfARM). Sometimes you have to hand-collect and digitize the necessary data, for example from historical documents, data from governmental and non-governmental agencies, commercial providers and library search engines, archives; download statistical tables from INKAR's or Unemployment Agency's websites. Therefore, you need to plan whether and how these can be accessed and how much time is needed for extraction. Consider automated tools like scraping.
 
-You need to decide on what aggregation level you need to conduct your analysis to estimate the cause-and-effect relationships postulated, for example individual (patient, student), organization (hopstial), regional (country, state). Given that, you need to identify appropriate data sources that contain your variables of interest at the given aggregation level.
+You need to decide on what aggregation level you need to conduct your analysis to estimate the cause-and-effect relationships postulated, for example individual (patient, student), organization (hosptial), regional (country, state). Given that, you need to identify appropriate data sources that contain your variables of interest at the given aggregation level.
 
 
 ## Resources box
@@ -123,9 +131,9 @@ You need to decide on what aggregation level you need to conduct your analysis t
 
 
 
-### Drawing Causal Diagrams
+### Directed Acyclic Graphs
 
-
+- [A more comprehensive overview of causal paths is provided by Nick Huntington Klein](https://theeffectbook.net/ch-CausalPaths.html)
 - A tool to draw Directed Acyclic Graphs (DAGs) is [DAGitty](http://www.dagitty.net/)
 
 ### Replication examples
@@ -136,9 +144,20 @@ You need to decide on what aggregation level you need to conduct your analysis t
 
 ## Example: Hellerstein (1998)
 
-With the identified research question and the hypothesis that physicians are more likely to prescribe generics to patients who do not have insurance coverage for prescription pharmaceuticals at hand an observational, retrospective analysis of secondary data, including patient and physician characteristics is needed. The goal of the analysis is to identify a causal effect of the patient's insurance status (independent variable $X$) on the prescription of a generic over a trade-name drug (dependent variable, $Y$). As the prescription decision of the physician is prone to involve information imperfections and agency problems, the empirical model needs to control for physician specific effects among other possible influencing factors.
+<!--Draw a DAG of the relationship-->
+With the identified research question and the hypothesis that physicians are more likely to prescribe generics to patients who do not have insurance coverage for prescription pharmaceuticals at hand.
+
+Hellerstein sets up an observational, retrospective analysis of secondary data, including patient and physician characteristics. The goal of the analysis is to identify a causal effect of the patient's insurance status (independent variable $X$) on the prescription of a generic over a trade-name drug (dependent variable, $Y$). As the prescription decision of the physician is prone to involve information imperfections and agency problems, the empirical model needs to control for physician specific effects among other possible influencing factors (confounders $Z$). Another factor, Hellerstein is concerned about is random variation in the choice between generic and trade-name drugs.
+
+<!--Shortly describe what type of data are needed to investigate that research question. Say why NAMCS is perfeclty suited-->
 
 <!--Write down regression equation and estimand-->
 
-The confounder control study design chosen by Hellerstein (1998) applies a random effects probit specification at physician level. This includes the variable of interest (estimate), a binary variable, which indicates whether a patient got a trade-name or a generic drug prescribed. The estimate takes the value 1 if a generic drug or the value 0 if a trade-name drug was prescribed. Of interest is the causal effect of the patients different insurance types. Those include Medicare, Medicaid, HMO/prepaid and private insurance. Other independent variables included in the analysis for the purpose of reducing possible bias are the drug class, patient characteristics (age, gender, race), if the physician is a specialist, the region and the averages of patient characteristics per physician. The choice of covariates to be included in a study depends on the study design, the relevant literature in the field and on possible restriction by the underlying data. Sometimes a certain creativity is needed, to use the data at hand in such way to be able to account for possible bias. An example from Hellerstein's (1998) study design is the explicit need to include prices into the empirical analysis. Though prices are not given in the data used, they were accounted for by including drug class dummy variables assuming that prices vary across different drug classes. This way, though we cannot identify the effect of the individual prices directly, we account for possible bias of the different prices of drug classes.  
+
+
+The confounder control study design chosen by Hellerstein (1998) uses a random effects probit specification at physician level to estimate the effect of insurance status on generic vs trade-name drug choice. This includes the variable of interest (estimate), a binary variable, which indicates whether a patient got a trade-name or a generic drug prescribed. <!-- Isn't that the dependent variable?--> The estimate <!--NO, the variable takes the value of one not, the estimate -->  takes the value 1 if a generic drug or the value 0 if a trade-name drug was prescribed. Of interest is the causal effect of the patients different insurance types. Those include Medicare, Medicaid, HMO/prepaid and private insurance. Other independent variables included in the analysis for the purpose of reducing possible bias are the drug class as proxy for prices, patient characteristics (age, gender, race), physician specialist status, the region and the averages of patient characteristics per physician <!-- How do these averages differ from the patient characteristics?-->.
+
+The choice of covariates to be included in a study depends on the study design, the relevant literature in the field and on possible restriction by the underlying data. <!-- NO, the choice of the covariates depends on the underlying causal model that is rooted by theoretical considerations -->
+
+Often you will not find all variables that are potential confounders directly. Thus, your creativity is needed to find appropriate proxies, to use the data at hand to be able to account for any relevant possible biases. An example from Hellerstein's (1998) study design is the need to include prices into the empirical analysis. <!--What is the potential bias of prices on the effect --> Though prices are not provided in NAMCS, unobservable price differences are accounted for by including drug class dummy variables assuming that prices vary across different drug classes. This way, though we cannot capture variation in the prices of products directly, we account for possible bias of the different price level by drug classes.  
 
