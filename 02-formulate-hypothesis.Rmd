@@ -19,6 +19,8 @@ Source: [DLPNG](https://dlpng.com/png/6808837)
 
 ## Basic steps to formulate a hypothesis
 
+TEST TEST 
+
 You decided to undertake a scientific project. Where do you start? First, you need to find a research question that interests you and formulate a hypothesis. We will introduce some key terminology, steps you can undertake and examples how to develop research questions. Note that there is no single best way to develop a research idea [@pischke_how_2012].
 
 *What if someone assigns a topic to me? For students attending undergraduate and graduate courses that often pick topics from a list, all of these steps are equally important and necessary. You still need to formulate a research question and a hypothesis. And it is important to clarify the relevance of your topic for yourself.*
