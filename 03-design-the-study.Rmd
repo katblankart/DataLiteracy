@@ -154,6 +154,7 @@ Hellerstein sets up an observational, retrospective analysis of secondary data, 
 <!--Write down regression equation and estimand-->
 
 
+P(〖Generic〗_ij=1│C_k,X_i,P_i 〖,S〗_j,M_j,T_j 〖,R〗_j,¯X_j,¯P_j )= C_k λ+ X_i β + C_k  P_i  γ+S_j  π_1+M_j  π_2+ T_j 〖 π_3+ R〗_j  π_4+ ¯X_j  π_5+ ¯P_j  π_6+v_j+ϵ_ij
 
 The confounder control study design chosen by Hellerstein (1998) uses a random effects probit specification at physician level to estimate the effect of insurance status on generic vs trade-name drug choice. This includes the variable of interest (estimate), a binary variable, which indicates whether a patient got a trade-name or a generic drug prescribed. <!-- Isn't that the dependent variable?--> The estimate <!--NO, the variable takes the value of one not, the estimate -->  takes the value 1 if a generic drug or the value 0 if a trade-name drug was prescribed. Of interest is the causal effect of the patients different insurance types. Those include Medicare, Medicaid, HMO/prepaid and private insurance. Other independent variables included in the analysis for the purpose of reducing possible bias are the drug class as proxy for prices, patient characteristics (age, gender, race), physician specialist status, the region and the averages of patient characteristics per physician <!-- How do these averages differ from the patient characteristics?-->.
 
