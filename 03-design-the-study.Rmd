@@ -151,7 +151,6 @@ Hellerstein sets up an observational, retrospective analysis of secondary data, 
 
 <!--Shortly describe what type of data are needed to investigate that research question. Say why NAMCS is perfeclty suited-->
 
-<!--Write down regression equation and estimand-->
 
 
 P(〖Generic〗_ij=1│C_k,X_i,P_i 〖,S〗_j,M_j,T_j 〖,R〗_j,¯X_j,¯P_j )= C_k λ+ X_i β + C_k  P_i  γ+S_j  π_1+M_j  π_2+ T_j 〖 π_3+ R〗_j  π_4+ ¯X_j  π_5+ ¯P_j  π_6+v_j+ϵ_ij
@@ -160,5 +159,4 @@ The confounder control study design chosen by Hellerstein (1998) uses a random e
 
 The choice of covariates to be included in a study depends on the study design, the relevant literature in the field and on possible restriction by the underlying data. <!-- NO, the choice of the covariates depends on the underlying causal model that is rooted by theoretical considerations -->
 
-Often you will not find all variables that are potential confounders directly. Thus, your creativity is needed to find appropriate proxies, to use the data at hand to be able to account for any relevant possible biases. An example from Hellerstein's (1998) study design is the need to include prices into the empirical analysis. <!--What is the potential bias of prices on the effect --> Though prices are not provided in NAMCS, unobservable price differences are accounted for by including drug class dummy variables assuming that prices vary across different drug classes. This way, though we cannot capture variation in the prices of products directly, we account for possible bias of the different price level by drug classes.  
-
+Often you will not find all variables that are potential confounders directly. Thus, your creativity is needed to find appropriate proxies, to use the data at hand to be able to account for any relevant possible biases. An example from Hellerstein's (1998) study design is the need to include prices into the empirical analysis. Hellerstein’s assumes in her model, that physicians are price sensitive and, though the physician might not know the true price difference between trade-name and generic drug, has an expectation of this difference in prices. This poses potential bias, as the physician might alter her prescription style to these expectations. Though prices are not provided in NAMCS, unobservable price differences are accounted for by including drug class dummy variables assuming that prices vary across different drug classes. This way, though we cannot capture variation in the prices of products directly, we account for possible bias of the different price level by drug classes.
