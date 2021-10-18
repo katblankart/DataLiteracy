@@ -40,8 +40,8 @@ You should specify a causal model that describes the relationships between the e
 
 You need to specify your
 
-- main outcomes variable of interest ($X$)
-- main independent variable of interest ($Y$)
+- main outcomes variable of interest ($Y$)
+- main independent variable of interest ($X$)
 - other independent variables (confounders of the effect of $X$ on $Y$), that means any additional $Z$'s
 - unobserved variables ($U$)
 
