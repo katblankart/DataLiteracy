@@ -1,4 +1,4 @@
-#Appendix
+# Appendix
 
 The appendix contains the Stata code used for the reproduction of the Hellerstein (1998) example. The structure of this file is as follows:
 
@@ -7,7 +7,7 @@ The appendix contains the Stata code used for the reproduction of the Hellerstei
 		3) Appendix A3: Empirical analysis
 
 
-##Appendix A1: Preparing the data
+## Appendix A1: Preparing the data
 
 * Pathing and setup
 log close _all
@@ -136,7 +136,7 @@ save namcs91d.dta, replace
 
 
 
-##Appendix A2: Descriptive statistics
+## Appendix A2: Descriptive statistics
 
 
 * 		Table 1:
@@ -235,8 +235,7 @@ cd $data
 
 
 
-
-* 		Table 3:
+* Table 3:
 ****************
 cd $data
 use namcs91d.dta, clear
@@ -262,7 +261,7 @@ collabels("Observations" "% Generics") noobs nonumber gaps refcat(3 "By drug cla
 
 
 
-* 		Figure 1:
+* Figure 1:
 *****************
 
 /* Comment:
@@ -296,7 +295,7 @@ graph export "Figure_1.png", replace
 
 
 
-* 		Figure 2:
+* Figure 2:
 *****************
 cd $data
 use namcs91d.dta, clear
@@ -342,7 +341,7 @@ cd $descriptive_figures
 graph export "Figure_2.png", replace
 
 
-##Appendix A3: Empirical analysis
+## Appendix A3: Empirical analysis
 
 * Setting up the regression input, equivalent to the notation in the paper
 cd $data 
@@ -406,7 +405,7 @@ addnote("Notes: The ommitted drug category is pain relief" "Datasource: NAMSC91"
 
 
 
-* 		Table 6:
+* Table 6:
 ****************
 return clear
 ereturn clear
