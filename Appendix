@@ -1,6 +1,7 @@
 # Appendix
 
-The appendix contains the Stata code used for the reproduction of the Hellerstein (1998) example. The structure of this file is as follows:
+The Appendix is split into three subchapters containing the Stata code for the reproduction of the Hellerstein (1998) paper. It contains the code for data preparation, the code for the reproduction of the descriptive tables and figures and the code for the reproduction of the empirical analysis and tables. 
+The structure of this file is as follows:
 
 		1) Appendix A1: Preparing the data
 		2) Appendix A2: Descriptive statistics
