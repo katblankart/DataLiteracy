@@ -150,6 +150,9 @@ After completion of these steps, the analysis dataset NAMCS included 43 variable
 The NAMCSd dataset serves as a source for the empirical analysis of Hellerstein (1998). Table 1 shows the variables included in the dataset. 
 
 
+**Table 1 - NAMCSd - variables of the analysis data set**
+
+
 | Variable Name     | Label                                                                           |
 |-------------------|---------------------------------------------------------------------------------|
 | generic_status    | 1 if patient receives generic drug, 1 if trade-name                             |
