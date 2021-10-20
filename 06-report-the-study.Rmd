@@ -263,71 +263,74 @@ knitr::include_graphics(paste(path,"/Hellerstein_Fig_2.png",sep=""))
  
 ### Empirical Analysis
 
+
 Please keep in mind, that, due to data restrictions, we were not able to control for certain covariates that Hellerstein (1998) included. An example of such are legislation laws like mandatory or permissive substitution, and one- or two-line prescription. For this reason, we cannot present all tables produced by Hellerstein (1998). Given these restrictions, we cannot run the analysis with the same underlying model specifications. 
 This restricts us from comparing the results of the years 1991 and 1989, however for the completion of this example we represent the results of table 4, 5 and 6 in the following: 
 
 **Table 4 Estimated Coefficients on Demographic Variables, Geographic Variables, and Average Characteristics for Full Sample, excluding regional identifiers**
 
-|           Variable         |     Random-Effects Probit Coefficient    |     Random-Effects Probit t-statistic    |           % Change in Generic    |
-|----------------------------|------------------------------------------|------------------------------------------|----------------------------------|
-|     Constant               |     0.71                                 |     0.94                                 |     -                            |
-|     Age                    |     -0.01                                |     -1.50                                |     -0.002                       |
-|     Female                 |     -0.16                                |     -1.11                                |     -0.0463                      |
-|     Hispanic               |     -0.54                                |     -1.46                                |     -0.154                       |
-|     Nonwhite               |     0.19                                 |     0.73                                 |     0.0534                       |
-|     Specialist             |     0.00                                 |     -                                    |     -                            |
-|     Mean age               |     0.01                                 |     0.54                                 |     0.0017                       |
-|     Percent female         |     -1.73*                               |     -2.11                                |     -0.494*                      |
-|     Percent black          |     -0.95                                |     -1.52                                |     -0.270                       |
-|     Percent Hispanic       |     0.45                                 |     0.29                                 |     0.127                        |
-|     Percent Medicaid       |     -0.01                                |     -0.01                                |     -0.0027                      |
-|     Percent Medicare       |     -2.53**                              |     -3.01                                |     -0.722**                     |
-|     Percent private        |     -0.99                                |     -1.70                                |     -0.282                       |
-|     Percent HMO/prepaid    |     -1.12*                               |     -2.09                                |     -0.321*                      |			
+|          Variable              |     Random-Effects Probit  Coefficient    |     Random-Effects Probit t-statistic     |     % Change in Generic    |
+|--------------------------------|-------------------------------------------|-------------------------------------------|----------------------------|
+|     Constant                   |     -0.611***                             |     (-3.30)                               |         -                  |
+|     Age                        |     -0.003*                               |     (-2.44)                               |     -0.001*                |
+|     Female                     |     -0.114**                              |     (-3.12)                               |     -0.029**               |
+|     Hispanic                   |     0.029                                 |     (0.34)                                |     0.007                  |
+|     Nonwhite                   |     0.067                                 |     (1.00)                                |     0.017                  |
+|     Specialist                 |     -0.009                                |     (-0.12)                               |     -0.002                 |
+|     Mean age                   |     -0.002                                |     (-0.75)                               |     -0.000                 |
+|     Percent female             |     -0.206                                |     (-1.30)                               |     -0.052                 |
+|     Percent black              |     -0.007                                |     (-0.04)                               |     -0.002                 |
+|     Percent Hispanic           |     -0.142                                |     (-0.57)                               |     -0.036                 |
+|     Percent Medicaid           |     0.091                                 |     (0.39)                                |     0.023                  |
+|     Percent Medicare           |     -0.124                                |     (-0.58)                               |     -0.031                 |
+|     Percent private insured    |     0.179                                 |     (1.30)                                |     0.045                  |
+|     Percent HMO/prepaid        |     0.054                                 |     (0.31)                                |     0.014                  |
+|     Midwest                    |     -0.158                                |     (-1.71)                               |     -0.040                 |
+|     South                      |     -0.178*                               |     (-1.99)                               |     -0.045*                |
+|     West                       |     0.059                                 |     (0.61)                                |     0.015                  |
+|     rho                        |     0.345                                 |                                           |                            |
 
-Notes: $*p < 0.05, **p < 0.01, ***p < 0.001$; see Hellerstein (1998); Datasource: NAMSCd91
-
-<!--Adapt notes accordingly from original table, especially number of observations and rho -->
+Notes: $*p < 0.05, **p < 0.01, ***p < 0.001$; The sample size is 8,416. For further notes see Hellerstein (1998); Datasource: NAMSCd91
 
 
 **Table 5 - Estimated Coefficients for Drug-Class Dummy Variable for Full Sample**
 
-|                 Drug Class                |     Random-Effects Probit Coefficient    |     Random-Effects Probit t-statistic    |
-|-------------------------------------------|------------------------------------------|------------------------------------------|
-|     Antimicrobials                        |     0.989***                             |     4.25                                 |
-|     Cardiovascular/renals                 |     -0.231                               |     -0.78                                |
-|     Central Nervous System                |     -1.118*                              |     -2.03                                |
-|     Hormones/Hormonal mechanisms          |     0.280                                |     0.87                                 |
-|     Skin/Mucous membrane                  |     -0.198                               |     -0.44                                |
-|     Respiratory tract                     |     -0.736                               |     -1.29                                |		
+|           Drug Class                |     Random-Effects Probit Coefficient    |     Random-Effects Probit t-Statistic |     % Change in Generic    |
+|-------------------------------------|------------------------------------------|---------------------------------------|----------------------------|
+|     Antimicrobials                  |     0.637***                             |     9.02                              |     0.160***               |
+|     Cardiovascular-renals           |     -0.106                               |     -1.29                             |     -0.0267                |
+|     Central Nervous System          |     0.101                                |     1.10                              |     0.0253                 |
+|     Hormones/Hormonal mechanisms    |     0.589***                             |    7.32                               |     0.148***               |
+|     Skin/Mucous membrane            |     -0.721***                            |     -6.45                             |     -0.181***              |
+|     Ophthalmics                     |     -0.351*                              |     -2.33                             |     -0.0883*               |
+|     Resperatory tract               |     -0.691***                            |     -5.02                             |     -0.174***              |
 
-
-Notes: $*p < 0.05, **p < 0.01, ***p < 0.001$; Omitted category is Ophthalmics; Notes: see Hellerstein (1998); Datasource: NAMSCd91
-
-<!-- Why is the omitted variable not pain relief such as in the original table? Change in Generic is missing as a column. Please recheck-->
+	
+Notes: $*p < 0.05, **p < 0.01, ***p < 0.001$; The sample size is 8,416. Omitted category is pain relief. For further notes see Hellerstein (1998); Datasource: NAMSCd91
 
 
 **Table 6 - Tests for Moral Hazard for the Full Sample Equality of Individual Insurance Variables with Self-Payment Random-Effects Probit Results**
 
-|     Insurance Variable    |     Antimicrobial    |     Cardiovaskulars    |     Metabolics    |     Hormones    |     Skin/Mucous Membranes    |     Ophthalmics    |     Pain relief    |     Respiratory Tract    |
-|---------------------------|----------------------|------------------------|-------------------|-----------------|-------------------------------|--------------------|--------------------|--------------------------|
-|     Medicaid              |                      |                        |                   |                 |                               |                    |                    |                          |
-|     Coefficient           |     0.178            |     -0.0345            |     -0.192        |     0.497       |     0.189                     |     -0.280         |     0.634          |     -1.017               |
-|     t-statistic           |     1.49             |     -0.15              |     -0.74         |     1.68        |     0.31                      |     -0.74          |     1.53           |     -1.04                |
-|     % change              |     0.042            |     -0.008             |     -0.078        |     -0.054      |     0.062                     |     -0.099         |     0.023          |     -0.034               |
-|     Medicare              |                      |                        |                   |                 |                               |                    |                    |                          |
-|     Coefficient           |     0.156            |     -0.0397            |     -0.388        |     -0.259      |     0.684                     |     -0.515         |     0.164          |     -0.413               |
-|     t-statistic           |     1.08             |     -0.23              |     -1.43         |     -1.07       |     1.15                      |     -1.29          |     0.40           |     -0.50                |
-|     % change              |     0.047            |     -0.007             |     -0.039        |     0.103       |     0.017                     |     -0.054         |     0.090          |     -0.085               |
-|     Private               |                      |                        |                   |                 |                               |                    |                    |                          |
-|     Coefficient           |     -0.0012          |     -0.085             |     -0.170        |     -0.053      |     0.226                     |     -0.394         |     0.201          |     -1.146               |
-|     t-statistic           |     -0.01            |     -0.54              |     -1.02         |     -0.27       |     0.59                      |     -1.32          |     0.71           |     -1.42                |
-|     % change              |     0.070            |     -0.032             |     0.007         |     -0.025      |     -0.036                    |     -0.046         |     0.052          |     -0.023               |
-|     HMO/     Prepaid      |                      |                        |                   |                 |                               |                    |                    |                          |
-|     Coefficient           |     0.262            |     -0.156             |     0.0353        |     -0.120      |     -0.395                    |     -0.238         |     0.362          |     -0.272               |
-|     t-statistic           |     2.29             |     -0.68              |     0.13          |     -0.42       |     -0.72                     |     -0.43          |     1.08           |     -0.29                |
-|     % change              |     -0.000           |     -0.018             |     -0.034        |     -0.011      |     0.020                     |     -0.076         |     0.029          |     -0.096               |
+|  Insurance Variable |     Antimicrobial    |     Cardio- vaskulars    |     Central  Nervous System    |     Hormones    |     Skin/Muchous Membranes    |     Ophthalmics    |     Pain  Relief    |     Respiratory Tract    |
+|---------------------|----------------------|--------------------------|--------------------------------|-----------------|-------------------------------|--------------------|---------------------|--------------------------|
+|     Medicaid        |                      |                          |                                |                 |                               |                    |                     |                          |
+|     Coefficient     |     0.18             |     -0.03                |     -0.19                      |     0.50        |     0.19                      |     -0.28          |     0.63            |     -1.02                |
+|     t-statistic     |     1.49             |     -0.15                |     -0.74                      |     1.68        |     0.31                      |     -0.74          |     1.53            |     -1.04                |
+|     % change        |     0.05             |     -0.01                |     -0.04                      |     0.10        |     0.02                      |     -0.05          |     0.09            |     -0.08                |
+|     Medicare        |                      |                          |                                |                 |                               |                    |                     |                          |
+|     Coefficient     |     0.16             |     -0.04                |     -0.39                      |     -0.26       |     0.68                      |     -0.51          |     0.16            |     -0.41                |
+|     t-statistic     |     1.08             |     -0.23                |     -1.43                      |     -1.07       |     1.15                      |     -1.29          |     0.40            |     -0.50                |
+|     % change        |     0.04             |     -0.01                |     -0.08                      |     -0.05       |     0.06                      |     -0.10          |     0.02            |     -0.03                |
+|     Private         |                      |                          |                                |                 |                               |                    |                     |                          |
+|     Coefficient     |     -0.00            |     -0.09                |     -0.17                      |     -0.05       |     0.23                      |     -0.39          |     0.20            |     -1.15                |
+|     t-statistic     |     -0.01            |     -0.54                |     -1.02                      |     -0.27       |     0.59                      |     -1.32          |     0.71            |     -1.42                |
+|     % change        |     -0.00            |     -0.02                |     -0.03                      |     -0.01       |     0.02                      |     -0.08          |     0.03            |     -0.10                |
+|     HMO/Prepaid     |                      |                          |                                |                 |                               |                    |                     |                          |
+|     Coefficient     |     0.26             |     -0.16                |     0.04                       |     -0.12       |     -0.39                     |     -0.24          |     0.36            |     -0.27                |
+|     t-statistic     |     2.29             |     -0.68                |     0.13                       |     -0.42       |     -0.72                     |     -0.43          |     1.08            |     -0.29                |
+|     % change        |     0.07             |     -0.03                |     0.01                       |     -0.02       |     -0.04                     |     -0.05          |     0.05            |     -0.02                |
 
 
 Notes: see Hellerstein (1998); Datasource: NAMSCd91
+
 
