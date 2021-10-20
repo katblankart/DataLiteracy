@@ -224,12 +224,12 @@ Table 3 shows the absolute number of observations and the share of generics over
 
 |  Name of Class                      |     Observations    |     % Generics    |
 |-------------------------------------|---------------------|-------------------|
-|     All_drugs                       |     8,397            |     28.12         |
+|     All_drugs                       |     8,397           |     28.12         |
 |     By drug class                   |                     |                   |
-|     Antimicrobials                  |     3,196            |     39.71         |
-|     Cardiovascular-renals           |     1,401            |     16.63         |
+|     Antimicrobials                  |     3,196           |     39.71         |
+|     Cardiovascular-renals           |     1,401           |     16.63         |
 |     Central Nervous System          |     896             |     25.78         |
-|     Hormones/Hormonal mechanisms    |     1,006            |     35.09         |
+|     Hormones/Hormonal mechanisms    |     1,006           |     35.09         |
 |     Skin/Mucous membrane            |     583             |     8.92          |
 |     Ophthalmics                     |     318             |     14.78         |
 |     Pain relief                     |     734             |     20.30         |
