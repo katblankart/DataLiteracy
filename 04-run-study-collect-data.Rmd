@@ -128,18 +128,11 @@ Before going into further detail on the data preparation, we want to emphasize o
 
 The Stata code is the heart of your empirical analysis. To make it as comprehensible as possible, we divided the code into four parts. The first part translates the raw data into a readable format, the second one applies Hellerstein’s preparatory processes, the third reproduces the descriptive statistics and the last contains the code to run the empirical analysis. Corresponding to these do files, we created sub-folders that contain required data or offer a place to store the output. By saving the paths to all your relevant subfolders as global, you can easily navigate through your working directory. Setting up your working directory at the start of a project will also help you to keep an overview on what is done and what’s to come. You can find an example of the pathing and setup in Appendix A1 line 12 to 21.
 
+Once the NAMCS and NAMCSd are turned into readable formats we performed the following cleaning (i.e. exclusion of certain observations), transforming and preparation steps, that are needed to reproduce the tables and figures originally produced by Hellerstein (1998):
+For NAMCS, used for the reproduction of table 1 (see Appendix A1):
 
-
-<!--Explain the level of aggregation of the analysis dataset --> 
-
-After downloading the NAMCS and NAMCSd we performed the following steps to clean (by excluding non-relevant certain observations), transform and prepare the data for analysis. We concentrate on reproducin all tables and figures originally produced by Hellerstein (1998):
-
-For NAMCS, used for the reproduction of table 1:
-
-<!--make reference to where in the code (e.g. indicating lines) students will find this code--> 
-
-  - Observations of patients, who were not charged for prescription pharmaceuticals, were dropped.
-  - Missing data must be relabeled according to the syntax of the statistic software and observations with missing data were not considered.
+  - Observations of patients, who were not charged, were dropped.
+  - Missing data must be relabelled according to the syntax of the statistic software and observations with missing data were not considered.
   - The setup of the dummy variables for Medicare and Specialists underlie special conditions (details can be found in the do-file attached), whereas the remaining dummies were not created straight away.
 
 For NAMCSd, used for all other figures and tables:
@@ -153,7 +146,5 @@ For NAMCSd, used for all other figures and tables:
   - Using the variable on whether a drug is a generic or trade-name drug to create an indicator on whether the drug is a generic (dependable variable).
   - Creating physician averages of variables listed on p. 123 of Hellerstein (1998).
 
-After completion of these steps, the analysis dataset included x variables and y observations. The dataset is now ready for statistical analysis (see at the end of the next chapter). Of importance is to ensure that the raw data, the data preparation .do -file and the analysis dataset are stored safely. 
-
-<!-- Include table that shows the variables included in the dataset, use the "describe" command in Stata. -->
+After completion of these steps, the analysis dataset NAMCS included 43 variables and 33,123 observations and NAMCSd 38 variables and 8,397 observations. The dataset is now ready for statistical analysis (see at the end of the next chapter). Of importance is to ensure that the raw data, the data preparation .do -file and the analysis dataset are stored safely. 
 
