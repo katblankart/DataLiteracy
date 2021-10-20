@@ -293,6 +293,9 @@ This restricts us from comparing the results of the years 1991 and 1989, however
 Notes: $*p < 0.05, **p < 0.01, ***p < 0.001$; The sample size is 8,416. For further notes see Hellerstein (1998); Datasource: NAMSCd91
 
 
+Table 5 shows the estimated coefficients for the 8 largest drug classes as well as the % change in the generic share. The greatest change compared to Hellerstein (1998) is the change in sign from positive to negative for cardiovascular/renals, though not significant in our model. 
+
+
 **Table 5 - Estimated Coefficients for Drug-Class Dummy Variable for Full Sample**
 
 |           Drug Class                |     Random-Effects Probit Coefficient    |     Random-Effects Probit t-Statistic |     % Change in Generic  |
@@ -307,6 +310,8 @@ Notes: $*p < 0.05, **p < 0.01, ***p < 0.001$; The sample size is 8,416. For furt
 
 	
 Notes: $*p < 0.05, **p < 0.01, ***p < 0.001$; The sample size is 8,416. Omitted category is pain relief. For further notes see Hellerstein (1998); Datasource: NAMSCd91
+
+
 
 
 **Table 6 - Tests for Moral Hazard for the Full Sample Equality of Individual Insurance Variables with Self-Payment Random-Effects Probit Results**
