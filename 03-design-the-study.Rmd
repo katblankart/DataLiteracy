@@ -40,8 +40,8 @@ You should specify a causal model that describes the relationships between the e
 
 You need to specify your
 
-- main outcomes variable of interest ($X$)
-- main independent variable of interest ($Y$)
+- main outcomes variable of interest ($Y$)
+- main independent variable of interest ($X$)
 - other independent variables (confounders of the effect of $X$ on $Y$), that means any additional $Z$'s
 - unobserved variables ($U$)
 
@@ -144,20 +144,33 @@ You need to decide on what aggregation level you need to conduct your analysis t
 
 ## Example: Hellerstein (1998)
 
-<!--Draw a DAG of the relationship-->
-With the identified research question and the hypothesis that physicians are more likely to prescribe generics to patients who do not have insurance coverage for prescription pharmaceuticals at hand.
+The identified research question and the hypothesis that physicians are more likely to prescribe generics to patients who do not have insurance coverage for prescription pharmaceuticals can be modelled with the help of a directed acyclic graph (DAG). It points out the effect of interest as well as potential confounders. 
 
-Hellerstein sets up an observational, retrospective analysis of secondary data, including patient and physician characteristics. The goal of the analysis is to identify a causal effect of the patient's insurance status (independent variable $X$) on the prescription of a generic over a trade-name drug (dependent variable, $Y$). As the prescription decision of the physician is prone to involve information imperfections and agency problems, the empirical model needs to control for physician specific effects among other possible influencing factors (confounders $Z$). Another factor, Hellerstein is concerned about is random variation in the choice between generic and trade-name drugs.
+```{r, out.width='100%', fig.align='center', fig.cap='Directed Acyclic Graph', echo=FALSE}
 
-<!--Shortly describe what type of data are needed to investigate that research question. Say why NAMCS is perfeclty suited-->
+knitr::include_graphics(paste(path,"/DAG.png",sep=""))
 
-<!--Write down regression equation and estimand-->
+```
 
+Hellerstein sets up an observational, retrospective analysis of secondary data, including patient and physician characteristics. The goal of the analysis is to identify a causal effect of the patient's insurance status (independent variable, $X$) on the prescription of a generic over a trade-name drug (dependent variable, $Y$). As the prescription decision of the physician is prone to involve information imperfections and agency problems, the empirical model needs to control for physician specific effects among other possible influencing factors (confounders $Z$). Another factor, Hellerstein is concerned about is random variation in the choice between generic and trade-name drugs.
+The study is based on data from the National Ambulatory Medical Care Survey (NAMCS) 2014. The NAMCS is a national sample survey administered by the National Center for Health Statistics. It collects data on patient visits to non-federally employed physicians in the United States. For each visit, the physician or other staff members have to complete a one-page survey form containing inter alia patient demographics including the patient’s insurance status, diagnoses, types of health behaviour counselling or medications ordered or provided as well as provider characteristics. As the physicians are randomly chosen and randomly assigned to a two-week reporting period, the NAMCS is able to create a nationally representative sample. The NAMCS data contain all actions taken by a physician in this period and, thus, allows to control for physician specific behaviour. This is necessary to draw conclusions of our estimand, namely the effect of the patient’s insurance status. With the following equation we can calculate the estimate γ: 
 
+```{r, out.width='100%', fig.align='center', fig.cap='Regression Equation', echo=FALSE}
 
-The confounder control study design chosen by Hellerstein (1998) uses a random effects probit specification at physician level to estimate the effect of insurance status on generic vs trade-name drug choice. This includes the variable of interest (estimate), a binary variable, which indicates whether a patient got a trade-name or a generic drug prescribed. <!-- Isn't that the dependent variable?--> The estimate <!--NO, the variable takes the value of one not, the estimate -->  takes the value 1 if a generic drug or the value 0 if a trade-name drug was prescribed. Of interest is the causal effect of the patients different insurance types. Those include Medicare, Medicaid, HMO/prepaid and private insurance. Other independent variables included in the analysis for the purpose of reducing possible bias are the drug class as proxy for prices, patient characteristics (age, gender, race), physician specialist status, the region and the averages of patient characteristics per physician <!-- How do these averages differ from the patient characteristics?-->.
+knitr::include_graphics(paste(path,"/Regression Equation.png",sep=""))
 
-The choice of covariates to be included in a study depends on the study design, the relevant literature in the field and on possible restriction by the underlying data. <!-- NO, the choice of the covariates depends on the underlying causal model that is rooted by theoretical considerations -->
+```
 
-Often you will not find all variables that are potential confounders directly. Thus, your creativity is needed to find appropriate proxies, to use the data at hand to be able to account for any relevant possible biases. An example from Hellerstein's (1998) study design is the need to include prices into the empirical analysis. <!--What is the potential bias of prices on the effect --> Though prices are not provided in NAMCS, unobservable price differences are accounted for by including drug class dummy variables assuming that prices vary across different drug classes. This way, though we cannot capture variation in the prices of products directly, we account for possible bias of the different price level by drug classes.  
+**C**	* different drug classes *
+**X**	* patient demographics *
+**P**	* insurance categories *
+**S**	* indicator if the physician is a specialist *
+**R**	* region *
+**¯X**	* average patient characteristics in one practice*
+**¯P**	* average of physicians patients in each insurance category *
 
+Contrary to Hellerstein (1998), this equation leaves out indicators for mandatory substitution laws, M and T, as this was information of the confidential data files. 
+The confounder control study design chosen by Hellerstein (1998) uses a random effects probit specification at physician level to estimate the effect of insurance status on generic vs trade-name drug choice. This includes the outcome variable ($Y$), a binary variable, which indicates whether a patient got a trade-name or a generic drug prescribed. The treatment variable (independent variable of interest $X$) takes the value 1 if a generic drug or the value 0 if a trade-name drug was prescribed. Of interest is the causal effect of the patient’s different insurance types. Those include Medicare, Medicaid, HMO/prepaid and private insurance. Other independent variables included in the analysis for the purpose of reducing possible bias are the drug class as proxy for prices, patient characteristics (age, gender, race), physician specialist status, the region and the averages of patient characteristics per physician. These help portraying the physicians practice as a whole, as they contain all patients of the practice, including the patients that did not receive any drug prescription. 
+
+The choice of choice of the covariates depends on the underlying causal model that is rooted by theoretical considerations.
+Often you will not find all variables that are potential confounders directly. Thus, your creativity is needed to find appropriate proxies, to use the data at hand to be able to account for any relevant possible biases. An example from Hellerstein's (1998) study design is the need to include prices into the empirical analysis. Hellerstein’s assumes in her model, that physicians are price sensitive and, though the physician might not know the true price difference between trade-name and generic drug, has an expectation of this difference in prices. This poses potential bias, as the physician might alter her prescription style to these expectations. Though prices are not provided in NAMCS, unobservable price differences are accounted for by including drug class dummy variables assuming that prices vary across different drug classes. This way, though we cannot capture variation in the prices of products directly, we account for possible bias of the different price level by drug classes.
