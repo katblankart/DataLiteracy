@@ -86,7 +86,7 @@ The easiest way to keep track of your reference list is to write down the inform
 
 The **Appendices** are a handy tool. In order to keep your main part of the paper focused, of reasonable length, and not overburdened, you can place all the still relevant, but secondary and less critical information, i.e. various robustness checks, descriptive statistics, etc., in appendices.
 
-As a careful researcher you will conduct and document a number of various robustness checks of your main results. However, once you confirm and verified that your results are robust, it does not make sense to keep all of the robustness checks in the main body of the paper. Appendices allow you to save space. You can just summarize hat you did and refer to the tables in the appendix. Some journals also provide possibilities of online appendix. 
+As a careful researcher you will conduct and document a number of various robustness checks of your main results. However, once you confirm and verified that your results are robust, it does not make sense to keep all of the robustness checks in the main body of the paper. Appendices allow you to save space. You can just summarize what you did and refer to the tables in the appendix. Most journals provide possibilities of an online appendix or supplementary material. 
 
 
 ```{r paper_structure, out.width='80%', fig.align='center', fig.cap='Paper Structure', echo=FALSE}
@@ -100,7 +100,7 @@ Source: [Fresno State Graduate Writing Studio.](http://www.fresnostate.edu/acade
 
 - producing a good empirical paper takes time. You should start working on it and drafting as soon as possible. 
 - allow yourself sufficient time for collecting and analyzing the data, writing and revising the paper. Writing a paper is a recursive process that will take many revisions.
-- read the text yourself and let others read it. ("Is the text fun to read?", "Would I want to read beyond the introduction myself?", "Are the questions guiding the research comprehensible?")
+- read the text yourself and let others read it. (*"Is the text fun to read?"*, *"Would I want to read beyond the introduction myself?"*, *"Are the questions guiding the research comprehensible?"*)
 - keep it short. When editing ask yourself whether you can make the same point using fewer words?
 - avoid repetition. Repeating things uses extra space and tests readers' patience.  
 - use "I" in a single-author project, and "we" in the project with more than one author. 
@@ -133,8 +133,6 @@ More principles on writing in economics are summarized in [Top Ten Rules of Econ
 - use figures to show patterns in the data--they demonstrate it better that big tables with a lots of numbers, 
 - label the axes properly,
 - provide self-explanatory captions.
-
-
 
 
 ## Resources box
@@ -257,8 +255,6 @@ When looking at figure 2, we see a decrease from about 90% to about 50% in *"onl
 ```{r HellFig2, out.width='100%', fig.align='center', fig.cap='Physician decisions', echo=FALSE}
 knitr::include_graphics(paste(path,"/Hellerstein_Fig_2.png",sep=""))
 ```
-
-
 
  
 ### Empirical Analysis

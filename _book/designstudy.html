@@ -24,7 +24,7 @@
 <meta name="author" content="Maryna Ivets, Eva Goetjes, Kai Miele, Katharina Blankart" />
 
 
-<meta name="date" content="2021-09-28" />
+<meta name="date" content="2021-10-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -170,6 +170,11 @@
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="7" data-path="stata-reproduction-code-of-hellerstein-1998.html"><a href="stata-reproduction-code-of-hellerstein-1998.html"><i class="fa fa-check"></i><b>7</b> Stata reproduction code of Hellerstein (1998)</a><ul>
+<li class="chapter" data-level="7.1" data-path="stata-reproduction-code-of-hellerstein-1998.html"><a href="stata-reproduction-code-of-hellerstein-1998.html#A1"><i class="fa fa-check"></i><b>7.1</b> Preparing the data</a></li>
+<li class="chapter" data-level="7.2" data-path="stata-reproduction-code-of-hellerstein-1998.html"><a href="stata-reproduction-code-of-hellerstein-1998.html#A2"><i class="fa fa-check"></i><b>7.2</b> Descriptive statistics</a></li>
+<li class="chapter" data-level="7.3" data-path="stata-reproduction-code-of-hellerstein-1998.html"><a href="stata-reproduction-code-of-hellerstein-1998.html#A3"><i class="fa fa-check"></i><b>7.3</b> Empirical analyses and tables</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -211,8 +216,8 @@
 <p>You should specify a causal model that describes the relationships between the elements that you are studying. This causal model will help to identify empirical model by defining your main relationship of interest.</p>
 <p>You need to specify your</p>
 <ul>
-<li>main outcomes variable of interest (<span class="math inline">\(X\)</span>)</li>
-<li>main independent variable of interest (<span class="math inline">\(Y\)</span>)</li>
+<li>main outcomes variable of interest (<span class="math inline">\(Y\)</span>)</li>
+<li>main independent variable of interest (<span class="math inline">\(X\)</span>)</li>
 <li>other independent variables (confounders of the effect of <span class="math inline">\(X\)</span> on <span class="math inline">\(Y\)</span>), that means any additional <span class="math inline">\(Z\)</span>’s</li>
 <li>unobserved variables (<span class="math inline">\(U\)</span>)</li>
 </ul>
@@ -221,8 +226,9 @@
 </div>
 <div id="develop-the-empirical-strategy-to-investigate-causal-effects" class="section level3">
 <h3><span class="header-section-number">3.1.2</span> Develop the empirical strategy to investigate causal effects</h3>
-<p>Potential outcomes framework notation</p>
-<p>Write down your estimate, your estimand, notation</p>
+<!--Potential outcomes framework notation
+
+Write down your estimate, your estimand, notation-->
 <p>After you have specified your causal model, ask yourself how you can capture the causal relationship between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>? In other words, can you apply an appropriate research design that can accommodate you in determining causality with the data at hand? Following the classification by <span class="citation">Matthay et al. (<a href="#ref-matthay_alternative_2020" role="doc-biblioref">2020</a>)</span>, that means by performing, for example a</p>
 <ul>
 <li>Randomized Controlled Trial (RCT): this would be the ideal world case where we could randomize treatments to study effect</li>
@@ -304,14 +310,34 @@
 </div>
 <div id="example-hellerstein-1998-1" class="section level2">
 <h2><span class="header-section-number">3.3</span> Example: Hellerstein (1998)</h2>
-<!--Draw a DAG of the relationship-->
-<p>With the identified research question and the hypothesis that physicians are more likely to prescribe generics to patients who do not have insurance coverage for prescription pharmaceuticals at hand.</p>
-<p>Hellerstein sets up an observational, retrospective analysis of secondary data, including patient and physician characteristics. The goal of the analysis is to identify a causal effect of the patient’s insurance status (independent variable <span class="math inline">\(X\)</span>) on the prescription of a generic over a trade-name drug (dependent variable, <span class="math inline">\(Y\)</span>). As the prescription decision of the physician is prone to involve information imperfections and agency problems, the empirical model needs to control for physician specific effects among other possible influencing factors (confounders <span class="math inline">\(Z\)</span>). Another factor, Hellerstein is concerned about is random variation in the choice between generic and trade-name drugs.</p>
-<!--Shortly describe what type of data are needed to investigate that research question. Say why NAMCS is perfeclty suited-->
-<!--Write down regression equation and estimand-->
-<p>The confounder control study design chosen by Hellerstein (1998) uses a random effects probit specification at physician level to estimate the effect of insurance status on generic vs trade-name drug choice. This includes the variable of interest (estimate), a binary variable, which indicates whether a patient got a trade-name or a generic drug prescribed. <!-- Isn't that the dependent variable?--> The estimate <!--NO, the variable takes the value of one not, the estimate --> takes the value 1 if a generic drug or the value 0 if a trade-name drug was prescribed. Of interest is the causal effect of the patients different insurance types. Those include Medicare, Medicaid, HMO/prepaid and private insurance. Other independent variables included in the analysis for the purpose of reducing possible bias are the drug class as proxy for prices, patient characteristics (age, gender, race), physician specialist status, the region and the averages of patient characteristics per physician <!-- How do these averages differ from the patient characteristics?-->.</p>
-<p>The choice of covariates to be included in a study depends on the study design, the relevant literature in the field and on possible restriction by the underlying data. <!-- NO, the choice of the covariates depends on the underlying causal model that is rooted by theoretical considerations --></p>
-<p>Often you will not find all variables that are potential confounders directly. Thus, your creativity is needed to find appropriate proxies, to use the data at hand to be able to account for any relevant possible biases. An example from Hellerstein’s (1998) study design is the need to include prices into the empirical analysis. <!--What is the potential bias of prices on the effect --> Though prices are not provided in NAMCS, unobservable price differences are accounted for by including drug class dummy variables assuming that prices vary across different drug classes. This way, though we cannot capture variation in the prices of products directly, we account for possible bias of the different price level by drug classes.</p>
+<p>The identified research question and the hypothesis that physicians are more likely to prescribe generics to patients who do not have insurance coverage for prescription pharmaceuticals can be modelled with the help of a directed acyclic graph (DAG). It points out the effect of interest as well as potential confounders.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-5"></span>
+<img src="_bookdown_files/DataLiteracy_files/figure-html/DAG.PNG" alt="Directed Acyclic Graph" width="100%" />
+<p class="caption">
+Figure 3.1: Directed Acyclic Graph
+</p>
+</div>
+<p>Hellerstein sets up an observational, retrospective analysis of secondary data, including patient and physician characteristics. The goal of the analysis is to identify a causal effect of the patient’s insurance status (independent variable, <span class="math inline">\(X\)</span>) on the prescription of a generic over a trade-name drug (dependent variable, <span class="math inline">\(Y\)</span>). As the prescription decision of the physician is prone to involve information imperfections and agency problems, the empirical model needs to control for physician specific effects among other possible influencing factors (confounders <span class="math inline">\(Z\)</span>). Another factor, Hellerstein is concerned about is random variation in the choice between generic and trade-name drugs.</p>
+<p>The study is based on data from the National Ambulatory Medical Care Survey (NAMCS) 2014. The NAMCS is a national sample survey administered by the National Center for Health Statistics. It collects data on patient visits to non-federally employed physicians in the United States. For each visit, the physician or other staff members have to complete a one-page survey form containing inter alia patient demographics including the patient’s insurance status, diagnoses, types of health behaviour counselling or medications ordered or provided as well as provider characteristics. As the physicians are randomly chosen and randomly assigned to a two-week reporting period, the NAMCS is able to create a nationally representative sample. The NAMCS data contain all actions taken by a physician in this period and, thus, allows to control for physician specific behaviour. This is necessary to draw conclusions of our estimand, namely the effect of the patient’s insurance status. With the following equation we can calculate the estimate of the insurance status:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-6"></span>
+<img src="_bookdown_files/DataLiteracy_files/figure-html/Regression%20Equation.PNG" alt="Regression Equation" width="100%" />
+<p class="caption">
+Figure 3.2: Regression Equation
+</p>
+</div>
+<ul>
+<li><span class="math inline">\(C_k\)</span>: drug classes</li>
+<li><span class="math inline">\(X_i\)</span>: patient demographics</li>
+<li><span class="math inline">\(\overline{P}_j\)</span>: insurance categories</li>
+<li><span class="math inline">\(S_j\)</span>: indicator if the physician is a specialist</li>
+<li><span class="math inline">\(R_j\)</span>: region</li>
+<li><span class="math inline">\(X_i\)</span>: average patient characteristics in one practice</li>
+<li><span class="math inline">\(\overline{P}_j\)</span>: share of patients in each insurance category in the physician’s practice</li>
+</ul>
+<p>Contrary to Hellerstein (1998), this equation leaves out indicators for mandatory substitution laws, <span class="math inline">\(M\)</span> and <span class="math inline">\(T\)</span>, as this was information of the confidential data files.</p>
+<p>The confounder control study design chosen by Hellerstein (1998) uses a random effects probit specification at physician level to estimate the effect of insurance status on generic compared to trade-name drug choice. This includes the outcome variable (<span class="math inline">\(Y\)</span>), a binary variable, which indicates whether a patient got a trade-name or a generic drug prescribed. The treatment variable (independent variable of interest <span class="math inline">\(X\)</span>) takes the value <span class="math inline">\(1\)</span> if a generic drug or the value <span class="math inline">\(0\)</span> if a trade-name drug was prescribed. Of interest is the causal effect of the patient’s different insurance types. Those include Medicare, Medicaid, HMO/prepaid and private insurance. Other independent variables included in the analysis for the purpose of reducing possible bias are the drug class as proxy for prices, patient characteristics (age, gender, race), physician specialist status, the region and the averages of patient characteristics per physician. These help portraying the physicians practice as a whole, as they contain all patients of the practice, including the patients that did not receive any drug prescription.</p>
+<p>The choice of the covariates depends on the underlying causal model that is rooted by theoretical considerations.
+Often you will not find all variables that are potential confounders directly. Thus, your creativity is needed to find appropriate proxies, to use the data at hand to be able to account for any relevant possible biases. An example from Hellerstein’s (1998) study design is the need to include prices into the empirical analysis. Hellerstein’s assumes in her model, that physicians are price sensitive and, though the physician might not know the true price difference between trade-name and generic drug, has an expectation of this difference in prices. This poses potential bias, as the physician might alter her prescription style to these expectations. Though prices are not provided in NAMCS, unobservable price differences are accounted for by including drug class dummy variables assuming that prices vary across different drug classes. This way, though we cannot capture variation in the prices of products directly, we account for possible bias of the different price level by drug classes.</p>
 
 </div>
 </div>

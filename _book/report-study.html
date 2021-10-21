@@ -24,7 +24,7 @@
 <meta name="author" content="Maryna Ivets, Eva Goetjes, Kai Miele, Katharina Blankart" />
 
 
-<meta name="date" content="2021-09-28" />
+<meta name="date" content="2021-10-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -170,6 +170,11 @@
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="7" data-path="stata-reproduction-code-of-hellerstein-1998.html"><a href="stata-reproduction-code-of-hellerstein-1998.html"><i class="fa fa-check"></i><b>7</b> Stata reproduction code of Hellerstein (1998)</a><ul>
+<li class="chapter" data-level="7.1" data-path="stata-reproduction-code-of-hellerstein-1998.html"><a href="stata-reproduction-code-of-hellerstein-1998.html#A1"><i class="fa fa-check"></i><b>7.1</b> Preparing the data</a></li>
+<li class="chapter" data-level="7.2" data-path="stata-reproduction-code-of-hellerstein-1998.html"><a href="stata-reproduction-code-of-hellerstein-1998.html#A2"><i class="fa fa-check"></i><b>7.2</b> Descriptive statistics</a></li>
+<li class="chapter" data-level="7.3" data-path="stata-reproduction-code-of-hellerstein-1998.html"><a href="stata-reproduction-code-of-hellerstein-1998.html#A3"><i class="fa fa-check"></i><b>7.3</b> Empirical analyses and tables</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -241,7 +246,7 @@ Figure 6.1: How to report your paper
 <p>At the very end of your paper you need to provide a complete list of <strong>References</strong>. The bibliography includes a compete list of academic papers and books referenced and cited in your study.</p>
 <p>The easiest way to keep track of your reference list is to write down the information, i.e. the title, author(s), journal/book, publisher, and publication date, about the original source each time you use it. Decide in advance on one citation and reference style and follow it throughout the paper.</p>
 <p>The <strong>Appendices</strong> are a handy tool. In order to keep your main part of the paper focused, of reasonable length, and not overburdened, you can place all the still relevant, but secondary and less critical information, i.e. various robustness checks, descriptive statistics, etc., in appendices.</p>
-<p>As a careful researcher you will conduct and document a number of various robustness checks of your main results. However, once you confirm and verified that your results are robust, it does not make sense to keep all of the robustness checks in the main body of the paper. Appendices allow you to save space. You can just summarize hat you did and refer to the tables in the appendix. Some journals also provide possibilities of online appendix.</p>
+<p>As a careful researcher you will conduct and document a number of various robustness checks of your main results. However, once you confirm and verified that your results are robust, it does not make sense to keep all of the robustness checks in the main body of the paper. Appendices allow you to save space. You can just summarize what you did and refer to the tables in the appendix. Most journals provide possibilities of an online appendix or supplementary material.</p>
 <div class="figure" style="text-align: center">
 <img src="_bookdown_files/DataLiteracy_files/figure-html/paperstructure.png" alt="Paper Structure" width="80%" />
 <p class="caption">
@@ -254,7 +259,7 @@ Figure 6.1: How to report your paper
 <ul>
 <li>producing a good empirical paper takes time. You should start working on it and drafting as soon as possible.</li>
 <li>allow yourself sufficient time for collecting and analyzing the data, writing and revising the paper. Writing a paper is a recursive process that will take many revisions.</li>
-<li>read the text yourself and let others read it. (“Is the text fun to read?”, “Would I want to read beyond the introduction myself?”, “Are the questions guiding the research comprehensible?”)</li>
+<li>read the text yourself and let others read it. (<em>“Is the text fun to read?”</em>, <em>“Would I want to read beyond the introduction myself?”</em>, <em>“Are the questions guiding the research comprehensible?”</em>)</li>
 <li>keep it short. When editing ask yourself whether you can make the same point using fewer words?</li>
 <li>avoid repetition. Repeating things uses extra space and tests readers’ patience.<br />
 </li>
@@ -319,10 +324,10 @@ Figure 6.1: How to report your paper
 </div>
 <div id="example-hellerstein-1998-4" class="section level2">
 <h2><span class="header-section-number">6.3</span> Example: Hellerstein (1998)</h2>
-<p>We show the results of the reproduction of tables 1-3 and figures 1-2 of the descriptive analysis, and the reproduction of the empirical analysis in table 4-6. Please keep in mind that our results are based on data from 1991. This in contrast to <span class="citation">Hellerstein (<a href="#ref-hellerstein_importance_1998" role="doc-biblioref">1998</a>)</span> which is based on three datasets of the year 1989. As the confidential data is key to identifying physicians and patients in the data of 1989 we resorted to the 1991 data, that provide state<!--Please check whether it is state--> identifiers in two publically available datasets. We present our results and discuss the differences compared to <span class="citation">Hellerstein (<a href="#ref-hellerstein_importance_1998" role="doc-biblioref">1998</a>)</span> briefly. For a detailed discussion and interpretation, we refer to the original study.</p>
+<p>We show the results of the reproduction of tables 1-3 and figures 1-2 of the descriptive analysis, and the reproduction of the empirical analysis in table 4-6. Please keep in mind that our results are based on data from 1991. This in contrast to <span class="citation">(Hellerstein <a href="#ref-hellerstein_importance_1998" role="doc-biblioref">1998</a>)</span> which is based on three datasets of the year 1989. As the confidential data is key to identifying physicians and patients in the data of 1989 we resorted to the 1991 data, that provide state identifiers in two publically available datasets. We present our results and discuss the differences compared to <span class="citation">(Hellerstein <a href="#ref-hellerstein_importance_1998" role="doc-biblioref">1998</a>)</span> briefly. For a detailed discussion and interpretation, we refer to the original study.</p>
 <div id="descriptive-analysis" class="section level3">
 <h3><span class="header-section-number">6.3.1</span> Descriptive Analysis</h3>
-<p>The summary statistics shown in Table 1, representing the overall NAMCS patient sample of the year 1991 are similar to the summary statistics shown by Hellerstein (1998). When looking at the dristribution of insurance coverage, we see differences especially at Blue Cross/Blue Shield (<span class="math inline">\(2%\)</span> compared to <span class="math inline">\(13%\)</span> in 1989), other commercial insurers (<span class="math inline">\(38%\)</span> compared to <span class="math inline">\(24%\)</span> in 1989) and HMO/prepaid plan (<span class="math inline">\(14%\)</span> compared to <span class="math inline">\(24%\)</span> in 1989). Additionally, about <span class="math inline">\(14%\)</span> more specialist physicians are represented by the sample.</p>
+<p>The summary statistics shown in Table 1, representing the overall NAMCS patient sample of the year 1991 are similar to the summary statistics shown by <span class="citation">(Hellerstein <a href="#ref-hellerstein_importance_1998" role="doc-biblioref">1998</a>)</span>. When looking at the distribution of insurance coverage, we see differences especially at other commercial insurers (<span class="math inline">\(2%\)</span> compared to <span class="math inline">\(24%\)</span> in 1989) and we do not report Blue Cross/Blue Shield, as those were not covered by 1991 data. Additionally, our sample has about <span class="math inline">\(24%\)</span> less specialist physicians than Hellerstein’s sample from 1989.</p>
 <p><strong>Table 1 - Summary Statistics for Overall NAMCS Patient Sample</strong></p>
 <table>
 <thead>
@@ -369,60 +374,49 @@ Figure 6.1: How to report your paper
 <td>0.29</td>
 </tr>
 <tr class="even">
-<td>Blue Cross/Blue Shield</td>
+<td>Other com. insurer</td>
 <td>0.02</td>
 <td>0.15</td>
 </tr>
 <tr class="odd">
-<td>Other commercial insurer</td>
-<td>0.38</td>
-<td>0.49</td>
+<td>HMO/prepaid plan</td>
+<td>0.15</td>
+<td>0.35</td>
 </tr>
 <tr class="even">
-<td>HMO/prepaid plan</td>
-<td>0.24</td>
-<td>0.43</td>
-</tr>
-<tr class="odd">
 <td>Specialist</td>
-<td>0.69</td>
+<td>0.31</td>
 <td>0.46</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Northeast</td>
 <td>0.23</td>
 <td>0.42</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Midwest</td>
 <td>0.25</td>
 <td>0.44</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>South</td>
 <td>0.28</td>
 <td>0.45</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>West</td>
 <td>0.24</td>
 <td>0.43</td>
 </tr>
-<tr class="even">
-<td>N</td>
-<td>32407</td>
-<td></td>
-</tr>
 </tbody>
 </table>
-<p>Notes: see Hellerstein (1998)
-Datasource: NAMSC91</p>
-<p>Table 2 shows very similar statistics for the patients of the NAMCSd sample compared to the data from 1989. We see a <span class="math inline">\(5%\)</span> increase in the proportion of generic drug prescription in specialist compared to Hellerstein (1998).</p>
+<p>Notes: Sample size is 32,407. For further notes see table 1 notes in Hellerstein (1998); Sample size differs as data from different years is used (Datasource: NAMSC91)</p>
+<p>Table 2 shows very similar statistics for the patients of the NAMCSd sample compared to the data from 1989. We see a <span class="math inline">\(5%\)</span> increase in the proportion of generic drug prescription in specialist compared to <span class="citation">(Hellerstein <a href="#ref-hellerstein_importance_1998" role="doc-biblioref">1998</a>)</span>. Compared to 1989, we observe a slightly smaller sample size in the 1991 data.</p>
 <p><strong>Table 2 - Summary Statistics for Patients in NAMCS Drug Sample</strong></p>
 <table>
 <thead>
 <tr class="header">
-<th>Variables</th>
+<th>Variable</th>
 <th>Mean</th>
 <th>Standard Deviation</th>
 <th>Proportion Generic</th>
@@ -431,98 +425,98 @@ Datasource: NAMSC91</p>
 <tbody>
 <tr class="odd">
 <td>Age</td>
-<td>43.09</td>
-<td>24.98</td>
-<td>.</td>
+<td>43,09003</td>
+<td>24,97459</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>Female</td>
-<td>0.589</td>
-<td>0.492</td>
-<td>0.27</td>
+<td>0,589377</td>
+<td>0,491976</td>
+<td>0,26571</td>
 </tr>
 <tr class="odd">
 <td>Nonwhite</td>
-<td>0.122</td>
-<td>0.327</td>
-<td>0.33</td>
+<td>0,121591</td>
+<td>0,326832</td>
+<td>0,32713</td>
 </tr>
 <tr class="even">
 <td>Hispanic</td>
-<td>0.062</td>
-<td>0.242</td>
-<td>0.32</td>
+<td>0,062403</td>
+<td>0,241901</td>
+<td>0,322519</td>
 </tr>
 <tr class="odd">
-<td>Self-pay</td>
-<td>0.283</td>
-<td>0.451</td>
-<td>0.28</td>
+<td>Self-Pay</td>
+<td>0,283196</td>
+<td>0,450578</td>
+<td>0,283011</td>
 </tr>
 <tr class="even">
 <td>Medicare</td>
-<td>0.128</td>
-<td>0.335</td>
-<td>0.22</td>
+<td>0,128379</td>
+<td>0,334531</td>
+<td>0,220779</td>
 </tr>
 <tr class="odd">
 <td>Medicaid</td>
-<td>0.101</td>
-<td>0.301</td>
-<td>0.32</td>
+<td>0,101108</td>
+<td>0,301489</td>
+<td>0,320377</td>
 </tr>
 <tr class="even">
 <td>Private</td>
-<td>0.336</td>
-<td>0.472</td>
-<td>0.27</td>
+<td>0,335834</td>
+<td>0,472309</td>
+<td>0,271277</td>
 </tr>
 <tr class="odd">
 <td>HMO/prepaid plan</td>
-<td>0.142</td>
-<td>0.349</td>
-<td>0.35</td>
+<td>0,142194</td>
+<td>0,349269</td>
+<td>0,346734</td>
 </tr>
 <tr class="even">
 <td>Specialist</td>
-<td>0.4</td>
-<td>0.49</td>
-<td>0.31</td>
+<td>0,400024</td>
+<td>0,489932</td>
+<td>0,3117</td>
 </tr>
 <tr class="odd">
 <td>Northeast</td>
-<td>0.208</td>
-<td>0.406</td>
-<td>0.28</td>
+<td>0,20817</td>
+<td>0,406023</td>
+<td>0,28032</td>
 </tr>
 <tr class="even">
 <td>Midwest</td>
-<td>0.27</td>
-<td>0.444</td>
-<td>0.26</td>
+<td>0,269739</td>
+<td>0,443851</td>
+<td>0,262252</td>
 </tr>
 <tr class="odd">
 <td>South</td>
-<td>0.294</td>
-<td>0.456</td>
-<td>0.25</td>
+<td>0,294034</td>
+<td>0,455634</td>
+<td>0,249494</td>
 </tr>
 <tr class="even">
 <td>West</td>
-<td>0.228</td>
-<td>0.42</td>
-<td>0.35</td>
+<td>0,228058</td>
+<td>0,419605</td>
+<td>0,34517</td>
 </tr>
 <tr class="odd">
 <td>Full sample</td>
-<td>.</td>
-<td>.</td>
-<td>0.28</td>
+<td></td>
+<td></td>
+<td>0,281172</td>
 </tr>
 </tbody>
 </table>
-<p>Notes: see Hellerstein (1998), Datasource: NAMSCd91</p>
-<p>Compared to 1989, we observe larger sample size in the 1991 data. Table 3 shows the absolute number of observations and the share of generics over all drugs as well as the 8 largest drug categories. While the absolute number of observations is higher, the share of generics overall and by drug class stays similar to Hellerstein (1998).</p>
+<p>Notes: The sample size is 8,416. For further notes see Hellerstein (1998), Datasource: NAMSCd91</p>
+<p>Table 3 shows the absolute number of observations and the share of generics over all drugs as well as the 8 largest drug categories. We see an overall similar generic share over all drug classes compared to <span class="citation">(Hellerstein <a href="#ref-hellerstein_importance_1998" role="doc-biblioref">1998</a>)</span>. Yet in the drug class pain relief we see an increase of generic share by about <span class="math inline">\(7%\)</span>.</p>
 <p><strong>Table 3 - Frequency of Generic Prescription by Drug Class</strong></p>
 <table>
 <thead>
@@ -534,89 +528,54 @@ Datasource: NAMSC91</p>
 </thead>
 <tbody>
 <tr class="odd">
-<td>All drugs</td>
-<td>14,008</td>
-<td>29.20</td>
+<td>All_drugs</td>
+<td>8,397</td>
+<td>28.12</td>
 </tr>
 <tr class="even">
-<td></td>
+<td>By drug class</td>
 <td></td>
 <td></td>
 </tr>
 <tr class="odd">
 <td>Antimicrobials</td>
-<td>4,236</td>
-<td>43.77</td>
+<td>3,196</td>
+<td>39.71</td>
 </tr>
 <tr class="even">
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
 <td>Cardiovascular-renals</td>
-<td>3,042</td>
-<td>25.02</td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td></td>
+<td>1,401</td>
+<td>16.63</td>
 </tr>
 <tr class="odd">
 <td>Central Nervous System</td>
-<td>1,213</td>
-<td>31.82</td>
+<td>896</td>
+<td>25.78</td>
 </tr>
 <tr class="even">
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
 <td>Hormones/Hormonal mechanisms</td>
-<td>1,799</td>
-<td>37.80</td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td></td>
+<td>1,006</td>
+<td>35.09</td>
 </tr>
 <tr class="odd">
 <td>Skin/Mucous membrane</td>
-<td>827</td>
-<td>5.56</td>
+<td>583</td>
+<td>8.92</td>
 </tr>
 <tr class="even">
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
 <td>Ophthalmics</td>
-<td>524</td>
-<td>18.89</td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td></td>
+<td>318</td>
+<td>14.78</td>
 </tr>
 <tr class="odd">
-<td>Relief of pain</td>
-<td>1,711</td>
-<td>11.63</td>
+<td>Pain relief</td>
+<td>734</td>
+<td>20.30</td>
 </tr>
 <tr class="even">
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>Respiratory tract</td>
-<td>656</td>
-<td>10.06</td>
+<td>Resperatory tract</td>
+<td>263</td>
+<td>10.27</td>
 </tr>
 </tbody>
 </table>
@@ -629,7 +588,7 @@ Figure 6.2: Generic prescription rates
 </p>
 </div>
 <p><strong>Figure 2 - Physician decisions for physicians who prescribe a drug to at least six patients (Source: NAMSCd91)</strong></p>
-<p>When looking at figure 2, we see an decrease from about 90% to about 50% in <em>“only trade name”</em> prescriptions by physicians. This seems to be driven by a rather small increase of prescription of <em>“both versions”</em> and <em>“only generics”</em>.</p>
+<p>When looking at figure 2, we see a decrease from about 90% to about 50% in <em>“only trade name”</em> prescriptions by physicians. This seems to be driven by a rather small increase of prescription of <em>“both versions”</em> and <em>“only generics”</em>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:HellFig2"></span>
 <img src="_bookdown_files/DataLiteracy_files/figure-html/Hellerstein_Fig_2.png" alt="Physician decisions" width="100%" />
 <p class="caption">
@@ -644,10 +603,10 @@ This restricts us from comparing the results of the years 1991 and 1989, however
 <p><strong>Table 4 Estimated Coefficients on Demographic Variables, Geographic Variables, and Average Characteristics for Full Sample, excluding regional identifiers</strong></p>
 <table>
 <colgroup>
-<col width="19%" />
-<col width="28%" />
-<col width="28%" />
-<col width="23%" />
+<col width="22%" />
+<col width="29%" />
+<col width="29%" />
+<col width="18%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -660,152 +619,189 @@ This restricts us from comparing the results of the years 1991 and 1989, however
 <tbody>
 <tr class="odd">
 <td>Constant</td>
-<td>0.71</td>
-<td>0.94</td>
+<td>-0.611***</td>
+<td>(-3.30)</td>
 <td>-</td>
 </tr>
 <tr class="even">
 <td>Age</td>
-<td>-0.01</td>
-<td>-1.50</td>
-<td>-0.002</td>
+<td>-0.003*</td>
+<td>(-2.44)</td>
+<td>-0.1*</td>
 </tr>
 <tr class="odd">
 <td>Female</td>
-<td>-0.16</td>
-<td>-1.11</td>
-<td>-0.0463</td>
+<td>-0.114**</td>
+<td>(-3.12)</td>
+<td>-2.9**</td>
 </tr>
 <tr class="even">
 <td>Hispanic</td>
-<td>-0.54</td>
-<td>-1.46</td>
-<td>-0.154</td>
+<td>0.029</td>
+<td>(0.34)</td>
+<td>0.7</td>
 </tr>
 <tr class="odd">
 <td>Nonwhite</td>
-<td>0.19</td>
-<td>0.73</td>
-<td>0.0534</td>
+<td>0.067</td>
+<td>(1.00)</td>
+<td>1.7</td>
 </tr>
 <tr class="even">
 <td>Specialist</td>
-<td>0.00</td>
-<td>-</td>
-<td>-</td>
+<td>-0.009</td>
+<td>(-0.12)</td>
+<td>-0.2</td>
 </tr>
 <tr class="odd">
 <td>Mean age</td>
-<td>0.01</td>
-<td>0.54</td>
-<td>0.0017</td>
+<td>-0.002</td>
+<td>(-0.75)</td>
+<td>-0.0</td>
 </tr>
 <tr class="even">
 <td>Percent female</td>
-<td>-1.73*</td>
-<td>-2.11</td>
-<td>-0.494*</td>
+<td>-0.206</td>
+<td>(-1.30)</td>
+<td>-5.2</td>
 </tr>
 <tr class="odd">
 <td>Percent black</td>
-<td>-0.95</td>
-<td>-1.52</td>
-<td>-0.270</td>
+<td>-0.007</td>
+<td>(-0.04)</td>
+<td>-0.2</td>
 </tr>
 <tr class="even">
 <td>Percent Hispanic</td>
-<td>0.45</td>
-<td>0.29</td>
-<td>0.127</td>
+<td>-0.142</td>
+<td>(-0.57)</td>
+<td>-3.6</td>
 </tr>
 <tr class="odd">
 <td>Percent Medicaid</td>
-<td>-0.01</td>
-<td>-0.01</td>
-<td>-0.0027</td>
+<td>0.091</td>
+<td>(0.39)</td>
+<td>2.3</td>
 </tr>
 <tr class="even">
 <td>Percent Medicare</td>
-<td>-2.53**</td>
-<td>-3.01</td>
-<td>-0.722**</td>
+<td>-0.124</td>
+<td>(-0.58)</td>
+<td>-3.1</td>
 </tr>
 <tr class="odd">
-<td>Percent private</td>
-<td>-0.99</td>
-<td>-1.70</td>
-<td>-0.282</td>
+<td>Percent private insured</td>
+<td>0.179</td>
+<td>(1.30)</td>
+<td>4.5</td>
 </tr>
 <tr class="even">
 <td>Percent HMO/prepaid</td>
-<td>-1.12*</td>
-<td>-2.09</td>
-<td>-0.321*</td>
+<td>0.054</td>
+<td>(0.31)</td>
+<td>1.4</td>
+</tr>
+<tr class="odd">
+<td>Midwest</td>
+<td>-0.158</td>
+<td>(-1.71)</td>
+<td>-4.0</td>
+</tr>
+<tr class="even">
+<td>South</td>
+<td>-0.178*</td>
+<td>(-1.99)</td>
+<td>-4.5*</td>
+</tr>
+<tr class="odd">
+<td>West</td>
+<td>0.059</td>
+<td>(0.61)</td>
+<td>1.5</td>
+</tr>
+<tr class="even">
+<td>rho</td>
+<td>0.345</td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<p>Notes: <span class="math inline">\(*p &lt; 0.05, **p &lt; 0.01, ***p &lt; 0.001\)</span>; see Hellerstein (1998); Datasource: NAMSCd91</p>
-<!--Adapt notes accordingly from original table, especially number of observations and rho -->
+<p>Notes: <span class="math inline">\(*p &lt; 0.05, **p &lt; 0.01, ***p &lt; 0.001\)</span>; The sample size is 8,416. For further notes see Hellerstein (1998); Datasource: NAMSCd91</p>
+<p>Table 5 shows the estimated coefficients for the 8 largest drug classes as well as the % change in the generic share. The greatest change compared to Hellerstein (1998) is the change in sign from positive to negative for cardiovascular/renals, though not significant in our model.</p>
 <p><strong>Table 5 - Estimated Coefficients for Drug-Class Dummy Variable for Full Sample</strong></p>
 <table>
 <colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
+<col width="25%" />
+<col width="29%" />
+<col width="27%" />
+<col width="18%" />
 </colgroup>
 <thead>
 <tr class="header">
 <th>Drug Class</th>
 <th>Random-Effects Probit Coefficient</th>
-<th>Random-Effects Probit t-statistic</th>
+<th>Random-Effects Probit t-Statistic</th>
+<th>% Change in Generic</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Antimicrobials</td>
-<td>0.989***</td>
-<td>4.25</td>
+<td>0.637***</td>
+<td>9.02</td>
+<td>16.0***</td>
 </tr>
 <tr class="even">
-<td>Cardiovascular/renals</td>
-<td>-0.231</td>
-<td>-0.78</td>
+<td>Cardiovascular-renals</td>
+<td>-0.106</td>
+<td>-1.29</td>
+<td>-2.67</td>
 </tr>
 <tr class="odd">
 <td>Central Nervous System</td>
-<td>-1.118*</td>
-<td>-2.03</td>
+<td>0.101</td>
+<td>1.10</td>
+<td>2.53</td>
 </tr>
 <tr class="even">
 <td>Hormones/Hormonal mechanisms</td>
-<td>0.280</td>
-<td>0.87</td>
+<td>0.589***</td>
+<td>7.32</td>
+<td>14.8***</td>
 </tr>
 <tr class="odd">
 <td>Skin/Mucous membrane</td>
-<td>-0.198</td>
-<td>-0.44</td>
+<td>-0.721***</td>
+<td>-6.45</td>
+<td>-18.1***</td>
 </tr>
 <tr class="even">
-<td>Respiratory tract</td>
-<td>-0.736</td>
-<td>-1.29</td>
+<td>Ophthalmics</td>
+<td>-0.351*</td>
+<td>-2.33</td>
+<td>-8.83*</td>
+</tr>
+<tr class="odd">
+<td>Resperatory tract</td>
+<td>-0.691***</td>
+<td>-5.02</td>
+<td>-17.4***</td>
 </tr>
 </tbody>
 </table>
-<p>Notes: <span class="math inline">\(*p &lt; 0.05, **p &lt; 0.01, ***p &lt; 0.001\)</span>; Omitted category is Ophthalmics; Notes: see Hellerstein (1998); Datasource: NAMSCd91</p>
-<!-- Why is the omitted variable not pain relief such as in the original table? Change in Generic is missing as a column. Please recheck-->
+<p>Notes: <span class="math inline">\(*p &lt; 0.05, **p &lt; 0.01, ***p &lt; 0.001\)</span>; The sample size is 8,416. Omitted category is pain relief. For further notes see Hellerstein (1998); Datasource: NAMSCd91</p>
 <p><strong>Table 6 - Tests for Moral Hazard for the Full Sample Equality of Individual Insurance Variables with Self-Payment Random-Effects Probit Results</strong></p>
-<table style="width:100%;">
+<table>
 <colgroup>
-<col width="13%" />
-<col width="10%" />
 <col width="11%" />
 <col width="9%" />
+<col width="10%" />
+<col width="14%" />
+<col width="7%" />
+<col width="14%" />
 <col width="8%" />
-<col width="15%" />
-<col width="9%" />
-<col width="9%" />
+<col width="8%" />
 <col width="12%" />
 </colgroup>
 <thead>
@@ -813,9 +809,9 @@ This restricts us from comparing the results of the years 1991 and 1989, however
 <th>Insurance Variable</th>
 <th>Antimicrobial</th>
 <th>Cardiovaskulars</th>
-<th>Metabolics</th>
+<th>Central Nervous System</th>
 <th>Hormones</th>
-<th>Skin/Mucous Membranes</th>
+<th>Skin/Muchous Membranes</th>
 <th>Ophthalmics</th>
 <th>Pain relief</th>
 <th>Respiratory Tract</th>
@@ -835,14 +831,14 @@ This restricts us from comparing the results of the years 1991 and 1989, however
 </tr>
 <tr class="even">
 <td>Coefficient</td>
-<td>0.178</td>
-<td>-0.0345</td>
-<td>-0.192</td>
-<td>0.497</td>
-<td>0.189</td>
-<td>-0.280</td>
-<td>0.634</td>
-<td>-1.017</td>
+<td>0.18</td>
+<td>-0.03</td>
+<td>-0.19</td>
+<td>0.50</td>
+<td>0.19</td>
+<td>-0.28</td>
+<td>0.63</td>
+<td>-1.02</td>
 </tr>
 <tr class="odd">
 <td>t-statistic</td>
@@ -857,14 +853,14 @@ This restricts us from comparing the results of the years 1991 and 1989, however
 </tr>
 <tr class="even">
 <td>% change</td>
-<td>0.042</td>
-<td>-0.008</td>
-<td>-0.078</td>
-<td>-0.054</td>
-<td>0.062</td>
-<td>-0.099</td>
-<td>0.023</td>
-<td>-0.034</td>
+<td>4.93</td>
+<td>-0.00787</td>
+<td>-3.75</td>
+<td>10.0</td>
+<td>1.54</td>
+<td>-6.37</td>
+<td>9.26</td>
+<td>-7.9</td>
 </tr>
 <tr class="odd">
 <td>Medicare</td>
@@ -879,14 +875,14 @@ This restricts us from comparing the results of the years 1991 and 1989, however
 </tr>
 <tr class="even">
 <td>Coefficient</td>
-<td>0.156</td>
-<td>-0.0397</td>
-<td>-0.388</td>
-<td>-0.259</td>
-<td>0.684</td>
-<td>-0.515</td>
-<td>0.164</td>
-<td>-0.413</td>
+<td>0.16</td>
+<td>-0.04</td>
+<td>-0.39</td>
+<td>-0.26</td>
+<td>0.68</td>
+<td>-0.51</td>
+<td>0.16</td>
+<td>-0.41</td>
 </tr>
 <tr class="odd">
 <td>t-statistic</td>
@@ -901,14 +897,14 @@ This restricts us from comparing the results of the years 1991 and 1989, however
 </tr>
 <tr class="even">
 <td>% change</td>
-<td>0.047</td>
-<td>-0.007</td>
-<td>-0.039</td>
-<td>0.103</td>
-<td>0.017</td>
-<td>-0.054</td>
-<td>0.090</td>
-<td>-0.085</td>
+<td>4.42</td>
+<td>-0.656</td>
+<td>-7.9</td>
+<td>-5.74</td>
+<td>5.97</td>
+<td>-10.7</td>
+<td>2.45</td>
+<td>-2.9</td>
 </tr>
 <tr class="odd">
 <td>Private</td>
@@ -923,14 +919,14 @@ This restricts us from comparing the results of the years 1991 and 1989, however
 </tr>
 <tr class="even">
 <td>Coefficient</td>
-<td>-0.0012</td>
-<td>-0.085</td>
-<td>-0.170</td>
-<td>-0.053</td>
-<td>0.226</td>
-<td>-0.394</td>
-<td>0.201</td>
-<td>-1.146</td>
+<td>-0.00</td>
+<td>-0.09</td>
+<td>-0.17</td>
+<td>-0.05</td>
+<td>0.23</td>
+<td>-0.39</td>
+<td>0.20</td>
+<td>-1.15</td>
 </tr>
 <tr class="odd">
 <td>t-statistic</td>
@@ -945,17 +941,17 @@ This restricts us from comparing the results of the years 1991 and 1989, however
 </tr>
 <tr class="even">
 <td>% change</td>
-<td>0.070</td>
-<td>-0.032</td>
-<td>0.007</td>
-<td>-0.025</td>
-<td>-0.036</td>
-<td>-0.046</td>
-<td>0.052</td>
-<td>-0.023</td>
+<td>0.0118</td>
+<td>-1.67</td>
+<td>-3.29</td>
+<td>-1.39</td>
+<td>1.89</td>
+<td>-8.4</td>
+<td>3.06</td>
+<td>-8.6</td>
 </tr>
 <tr class="odd">
-<td>HMO/ Prepaid</td>
+<td>HMO/Prepaid</td>
 <td></td>
 <td></td>
 <td></td>
@@ -967,14 +963,14 @@ This restricts us from comparing the results of the years 1991 and 1989, however
 </tr>
 <tr class="even">
 <td>Coefficient</td>
-<td>0.262</td>
-<td>-0.156</td>
-<td>0.0353</td>
-<td>-0.120</td>
-<td>-0.395</td>
-<td>-0.238</td>
-<td>0.362</td>
-<td>-0.272</td>
+<td>0.26</td>
+<td>-0.16</td>
+<td>0.04</td>
+<td>-0.12</td>
+<td>-0.39</td>
+<td>-0.24</td>
+<td>0.36</td>
+<td>-0.27</td>
 </tr>
 <tr class="odd">
 <td>t-statistic</td>
@@ -989,14 +985,14 @@ This restricts us from comparing the results of the years 1991 and 1989, however
 </tr>
 <tr class="even">
 <td>% change</td>
-<td>-0.000</td>
-<td>-0.018</td>
-<td>-0.034</td>
-<td>-0.011</td>
-<td>0.020</td>
-<td>-0.076</td>
-<td>0.029</td>
-<td>-0.096</td>
+<td>7.19*</td>
+<td>-3.07</td>
+<td>0.815</td>
+<td>-3.03</td>
+<td>-3.61</td>
+<td>-4.79</td>
+<td>5.18</td>
+<td>-1.5</td>
 </tr>
 </tbody>
 </table>

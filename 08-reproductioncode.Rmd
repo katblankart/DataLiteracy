@@ -1,16 +1,33 @@
-# Repoduction Code of Hellerstein (1998)
+---
+output:
+  html_document: default
+  pdf_document: default
+---
 
-The subsequent program code reproduces the empirical analyses of: Hellerstein, Judith K. 1998. “The Importance of the Physician in the Generic versus Trade-Name Prescription Decision.” The RAND Journal of Economics 29(1):108–36. doi: 10.2307/2555818.
-This file contains program code for data preparation, reproduction of the descriptive tables and figures, and treproduction of the empirical analysis and tables. 
+<!-- Stata and Markdown: https://www.ssc.wisc.edu/~hemken/Stataworkshops/Stata%20and%20R%20Markdown/StataMarkdown-->
+
+```{r, echo=FALSE, message=FALSE}
+stataexe <- "Y:/STATA16/Windows 10 (x64)/StataMP-64.exe"
+knitr::opts_chunk$set(engine.path=list(stata=stataexe))
+library(Statamarkdown)
+```
+
+
+
+# Stata reproduction code of Hellerstein (1998)
+
+The subsequent Stata program reproduces the empirical analyses of: Hellerstein, Judith K. 1998. “The Importance of the Physician in the Generic versus Trade-Name Prescription Decision.” The RAND Journal of Economics 29(1):108–36. doi: 10.2307/2555818.
+This file contains program code for data preparation, reproduction of the descriptive tables and figures, and reproduction of the empirical analyses and tables.
 The structure of this file is as follows:
 
-		1) Appendix A1: Preparing the data (Running the study and collecting the data)
-		2) Appendix A2: Descriptive statistics (Analysing the data)
-		3) Appendix A3: Empirical analysis (Analysing the data)
-
-
-## Appendix A1: Preparing the data
-
+1. Preparing the data (Section \@ref(run-study))
+2. Descriptive statistics (Section \@ref(analyzing))
+3. Empirical analyses (Section \@ref(analyzing) and Section \@ref(report-study))
+		
+		
+## Preparing the data {#A1}
+		
+```{stata, collectcode=TRUE, error=FALSE}
 * Pathing and setup
 log close _all
 snapshot erase _all
@@ -135,11 +152,15 @@ geo_reg phys_special phys_type physician_id patient_id
 compress
 cd $data
 save namcs91d.dta, replace
+```
 
 
 
-## Appendix A2: Descriptive statistics
 
+## Descriptive statistics {#A2}
+
+
+```{stata, collectcode=TRUE}
 
 * 		Table 1:
 ****************
@@ -341,9 +362,12 @@ ytitle("") intensity(60) lintensity(100) bar(1, color("black") fcolor("gs5")) yl
 
 cd $descriptive_figures
 graph export "Figure_2.png", replace
+```
 
 
-## Appendix A3: Empirical analysis
+## Empirical analyses and tables {#A3}
+
+```{stata, collectcode=TRUE}
 
 * Setting up the regression input, equivalent to the notation in the paper
 cd $data 
@@ -432,3 +456,4 @@ mtitle("Antimicrobial" "m1" "Cardiovaskulars" "m2" "Central Nervous System" "m3"
 
 
 * Tables 7, 8 and 9 are not reproducible, due to missing state id in the publically available data sets
+```

@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 1 Introduction to reproducible research | A concise guide to reproducible research using secondary data</title>
+  <title>Chapter 7 Repoduction Code of Hellerstein (1998) | A concise guide to reproducible research using secondary data</title>
   <meta name="description" content="Data Science Campus - A study guide for reproducible research using secondary (health care) data" />
   <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 1 Introduction to reproducible research | A concise guide to reproducible research using secondary data" />
+  <meta property="og:title" content="Chapter 7 Repoduction Code of Hellerstein (1998) | A concise guide to reproducible research using secondary data" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 1 Introduction to reproducible research | A concise guide to reproducible research using secondary data" />
+  <meta name="twitter:title" content="Chapter 7 Repoduction Code of Hellerstein (1998) | A concise guide to reproducible research using secondary data" />
   
   <meta name="twitter:description" content="Data Science Campus - A study guide for reproducible research using secondary (health care) data" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="acknowledgements.html"/>
-<link rel="next" href="hypothesis.html"/>
+<link rel="prev" href="references.html"/>
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -78,7 +78,6 @@
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#structure-of-the-study-guide"><i class="fa fa-check"></i>Structure of the study guide</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#this-is-a-living-document"><i class="fa fa-check"></i>This is a living document</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="acknowledgements.html"><a href="acknowledgements.html"><i class="fa fa-check"></i>Acknowledgements</a></li>
 <li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction to reproducible research</a><ul>
 <li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#what-is-reproducible-research"><i class="fa fa-check"></i><b>1.1</b> What is reproducible research?</a></li>
 <li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#why-you-as-a-student-and-researcher-should-care-about-reproducible-research"><i class="fa fa-check"></i><b>1.2</b> Why you, as a student and researcher, should care about reproducible research?</a><ul>
@@ -170,10 +169,10 @@
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
-<li class="chapter" data-level="7" data-path="stata-reproduction-code-of-hellerstein-1998.html"><a href="stata-reproduction-code-of-hellerstein-1998.html"><i class="fa fa-check"></i><b>7</b> Stata reproduction code of Hellerstein (1998)</a><ul>
-<li class="chapter" data-level="7.1" data-path="stata-reproduction-code-of-hellerstein-1998.html"><a href="stata-reproduction-code-of-hellerstein-1998.html#A1"><i class="fa fa-check"></i><b>7.1</b> Preparing the data</a></li>
-<li class="chapter" data-level="7.2" data-path="stata-reproduction-code-of-hellerstein-1998.html"><a href="stata-reproduction-code-of-hellerstein-1998.html#A2"><i class="fa fa-check"></i><b>7.2</b> Descriptive statistics</a></li>
-<li class="chapter" data-level="7.3" data-path="stata-reproduction-code-of-hellerstein-1998.html"><a href="stata-reproduction-code-of-hellerstein-1998.html#A3"><i class="fa fa-check"></i><b>7.3</b> Empirical analyses and tables</a></li>
+<li class="chapter" data-level="7" data-path="repoduction-code-of-hellerstein-1998.html"><a href="repoduction-code-of-hellerstein-1998.html"><i class="fa fa-check"></i><b>7</b> Repoduction Code of Hellerstein (1998)</a><ul>
+<li class="chapter" data-level="7.1" data-path="repoduction-code-of-hellerstein-1998.html"><a href="repoduction-code-of-hellerstein-1998.html#A1"><i class="fa fa-check"></i><b>7.1</b> Preparing the data</a></li>
+<li class="chapter" data-level="7.2" data-path="repoduction-code-of-hellerstein-1998.html"><a href="repoduction-code-of-hellerstein-1998.html#A2"><i class="fa fa-check"></i><b>7.2</b> Descriptive statistics</a></li>
+<li class="chapter" data-level="7.3" data-path="repoduction-code-of-hellerstein-1998.html"><a href="repoduction-code-of-hellerstein-1998.html#A3"><i class="fa fa-check"></i><b>7.3</b> Empirical analyses and tables</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -195,109 +194,468 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="intro" class="section level1">
-<h1><span class="header-section-number">Chapter 1</span> Introduction to reproducible research</h1>
-<p><em>“Only results that can be replicated are truly scientific results. If there is no chance to replicate research results, they can be regarded as no more than personal views in the opinion or review section of a daily newspaper.”</em> <span class="citation">(Huschka <a href="#ref-huschka_why_2013" role="doc-biblioref">2013</a>)</span></p>
-<div id="what-is-reproducible-research" class="section level2">
-<h2><span class="header-section-number">1.1</span> What is reproducible research?</h2>
-<p>Scientific journal editors and research funders are increasingly promoting transparency in research. To encourage the principles of reproducible research, the related institutions are requesting authors to make their research reproducible. To overcome criticisms regarding the validity and power of empirical tests, this means that data and program code need to be shared upon manuscript acceptance, or earlier stages of the submission process. The purpose is that third-parties have the possibility to reproduce the content and analysis of a study, and conclusions of a study on their own.</p>
-<p>Efforts to increase reproducability have been expressed by multiple institutions within the social sciences, for example:</p>
-<ul>
-<li>The best practices statement by the <a href="https://social-science-data-editors.github.io/template_README/">Social Science Data Editors</a>,</li>
-<li>In Germany, by the German Research Foundation (DFG) and the Consortium for the Social, Behavioural, Educational and Economic Sciences <a href="https://www.ratswd.de/en/publikationen/output">RatWSD</a></li>
-<li>In editorial statement of journals, for example American Economic Review, Management Science or the Journal of International Business Studies <span class="citation">(Meyer, Witteloostuijn, and Beugelsdijk <a href="#ref-meyer_whats_2017" role="doc-biblioref">2017</a>; Orozco et al. <a href="#ref-orozco_how_2020" role="doc-biblioref">2020</a>)</span></li>
-</ul>
-<!-- Show recent advancements in health econ, health services research, health care management
--->
-<p>Generally, <strong><em>reproducibility</em></strong> of research can be defined as “the ability of a researcher to duplicate the results of a prior study using the same materials and procedures as were used by the original investigator. In an attempt to reproduce a published statistical analysis, a second researcher might use the same raw data to build the same analysis files and implement the same statistical analysis to determine whether they yield the same results.” <span class="citation">(Bollen et al. <a href="#ref-bollen_social_2015" role="doc-biblioref">2015</a>)</span>. Study results are considered reproducible if after an article publication another researcher can conduct the analyses using identical data and obtain the same results using the material provided.</p>
-<p>Since empirical economic research is based on the application of a code to a dataset to answer a pre-defined research question, ensuring the reproducibility includes sharing the data and code to allow others to re-analyze the data and to reproduce the reported results <span class="citation">(Orozco et al. <a href="#ref-orozco_how_2020" role="doc-biblioref">2020</a>)</span>. To achieve this, the data and code need to be properly managed while working on a project.</p>
-<p>Another concept closely related to <strong><em>reproducibility</em></strong> is the concept of <strong><em>replicability</em></strong> that “refers to the ability of a researcher to duplicate the results of a prior study if the same procedures are followed but new data are collected.” <span class="citation">(Bollen et al. <a href="#ref-bollen_social_2015" role="doc-biblioref">2015</a>)</span>. Thus, for example, if an investigator tries to replicate a scientific finding that documents a relationship between two or more variables by using the same scientific methodology but in a new setting, i.e. with new data, and fails and to reach a similar conclusion, i.e. replicate it – a failure to replicate occurs. The opposite is said to be true if the results are replicated. Thus, <strong><em>reproducibility</em></strong> and <strong><em>replicability</em></strong> are considered to be the two main elements of empirical research.</p>
-<p>To adapt reproducible practices early on, undergraduate and graduate students are encouraged to perform reproducible research in their term papers, theses, and practical applications as soon as possbile. For this reason, university teachers are increasingly asking to submit reproduction material (source data information, data programming and analysis code) at all stages of study.</p>
-<p>The concept of reproducible research is not new and goes back as far as the late 1800s <span class="citation">(Vilhuber <a href="#ref-vilhuber_reproducibility_2020" role="doc-biblioref">2020</a>)</span>. However, reproducibility studies have disclosed that many rearchers do not follow the principles of reproducible research. At the same time, the increase in availability and use of public and especially non-public data sources, and the increase in the reliance of research methods based on specific software bringing the principles of reproducible research on the agenda of many researchers.</p>
-<p>The resources box in each chapter provides material of best practices in data and code management to perform a reproducible research project, as well as provides resources for best practices in cleaning the data and conducting data analysis.</p>
-</div>
-<div id="why-you-as-a-student-and-researcher-should-care-about-reproducible-research" class="section level2">
-<h2><span class="header-section-number">1.2</span> Why you, as a student and researcher, should care about reproducible research?</h2>
-<div id="avoid-common-biases-that-lead-to-biased-or-false-research-results" class="section level3">
-<h3><span class="header-section-number">1.2.1</span> Avoid common biases that lead to biased or false research results</h3>
-<p>There is a number of threats to reproducible research process that can undermine scientific research or lead to false or biased conclusions and publications, see, e.g. <a href="#fig:munafo"><strong>??</strong></a> illustrating main threats to reproducible science <span class="citation">(Munafò et al. <a href="#ref-munafo_manifesto_2017" role="doc-biblioref">2017</a>)</span>.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-1"></span>
-<img src="_bookdown_files/DataLiteracy_files/figure-html/munafo.png" alt="munafo" width="100%" />
-<p class="caption">
-Figure 1.1: munafo
-</p>
-</div>
-</div>
-<div id="increase-productivity-of-your-work-and-the-work-of-the-scientific-community-by-performing-reproducible-research" class="section level3">
-<h3><span class="header-section-number">1.2.2</span> Increase productivity of your work and the work of the scientific community by performing reproducible research</h3>
-<p>Following the reproducible research principles allows you to be a part of a good academic practice that strives to improve the quality, efficiency and reliability of scientific research.</p>
-</div>
-</div>
-<div id="main-steps-to-produce-reproducible-research" class="section level2">
-<h2><span class="header-section-number">1.3</span> Main steps to produce reproducible research</h2>
-<p>To follow the best practices of reproducible research, you will need to consider <strong><em>how</em></strong> to perform your project and the <strong><em>steps a reproducible research project</em></strong> contains.</p>
-<p>There are three main principles to enhance reproducible research <span class="citation">(Orozco et al. <a href="#ref-orozco_how_2020" role="doc-biblioref">2020</a>)</span>:</p>
-<ol style="list-style-type: decimal">
-<li><strong><em>Organize your work:</em></strong> consider and plan your steps at the beginning of the project</li>
-<li><strong><em>Code for others:</em></strong> set up each step of your project such that an outsider could follow your documentation</li>
-<li><strong><em>Automate as much as you can:</em></strong> avoid processing analyses and results using point-and-click softare (MS Excel), export results directly and create a reproducible project documentation.</li>
-</ol>
-<p>In this study guide we follow the main steps of performing a reproducible data science project <span class="citation">(Bezjak et al. <a href="#ref-bezjak_open_2018" role="doc-biblioref">2018</a>)</span>. To make your empirical research study process reproducible, you need to follow these five steps (Figure <a href="#fig:reproducible"><strong>??</strong></a>):</p>
-<ol style="list-style-type: decimal">
-<li><strong><em>Formulating a hypothesis</em></strong> (Section <a href="hypothesis.html#hypothesis">2</a>)</li>
-<li><strong><em>Designing the study</em></strong> (Section <a href="designstudy.html#designstudy">3</a>)</li>
-<li><strong><em>Running the study and collecting the data</em></strong> (Section <a href="run-study.html#run-study">4</a>)</li>
-<li><strong><em>Analyzing the data</em></strong> (Section <a href="analyzing.html#analyzing">5</a>)</li>
-<li><strong><em>Reporting the study</em></strong> (Section <a href="report-study.html#report-study">6</a>)</li>
-</ol>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
-<img src="_bookdown_files/DataLiteracy_files/figure-html/02_reproducible_research_data_analysis.png" alt="reproducible" width="75%" />
-<p class="caption">
-Figure 1.2: reproducible
-</p>
-</div>
-</div>
-<div id="secondary-health-care-data" class="section level2">
-<h2><span class="header-section-number">1.4</span> Secondary (health care) data</h2>
-<p>This study guide concentrates on empirical investigation using secondary data, that means data that is not originally collected or generated by the researcher for the purpose of the study. Secondary data covers any existing data generated by companies, institutions, and individuals.</p>
-<p>Examples of secondary data sources are routinelly collected health data (administrative claims, electronic medical records), bibliometric data, survey data, regulatory data, data generated in mobile applications.</p>
-</div>
-<div id="creating-an-environment-for-productive-research-projects" class="section level2">
-<h2><span class="header-section-number">1.5</span> Creating an environment for productive research projects</h2>
-<p>Before you start running the study you should assess your available resources, that means time and own expertise to see whether the study design is feasible. If there is an opportunity to work collaboratively and you think that the project can benefit from the expertise of another researcher, you can approach the person and ask whether they would be interested to work together on the project. Joining resources might relax your resource availability contraints. It may further ensure that you engage in a reproducible research process.</p>
-</div>
-<div id="resources-box" class="section level2">
-<h2><span class="header-section-number">1.6</span> Resources Box</h2>
-<ul>
-<li><p>An overview article of the principles of reproducible reserach and practical application: Orozco V, Bontemps C, Maigné E, Piguet V, Hofstetter A, Lacroix A, et al. How to Make a Pie: Reproducible Research for Empirical Economics and Econometrics. Journal of Economic Surveys. 2020;34(5):1134–69. <a href="https://doi.org/10.1111/joes.12389" class="uri">https://doi.org/10.1111/joes.12389</a></p></li>
-<li><p>A guideline to minimize the risk of reporting false positives (type I errors), improve the quality of hypothesis-testing research and statistical reporting: Meyer, Klaus E., Arjen van Witteloostuijn, and Sjoerd Beugelsdijk. 2017. “What’s in a p? Reassessing Best Practices for Conducting and Reporting Hypothesis-Testing Research.” Journal of International Business Studies 48 (5): 535–51. <a href="https://doi.org/10.1057/s41267-017-0078-8" class="uri">https://doi.org/10.1057/s41267-017-0078-8</a>.</p></li>
-<li><p><a href="https://blogs.worldbank.org/impactevaluations/curated-list-our-postings-technical-topics-your-one-stop-shop-methodology-0">The Worldbank blog provides “A Curated List of Our Postings on Technical Topics – Your One-Stop Shop for Methodology”</a></p></li>
-</ul>
+<div id="repoduction-code-of-hellerstein-1998" class="section level1">
+<h1><span class="header-section-number">Chapter 7</span> Repoduction Code of Hellerstein (1998)</h1>
+<p>The subsequent program code reproduces the empirical analyses of: Hellerstein, Judith K. 1998. “The Importance of the Physician in the Generic versus Trade-Name Prescription Decision.” The RAND Journal of Economics 29(1):108–36. doi: 10.2307/2555818.
+This file contains program code for data preparation, reproduction of the descriptive tables and figures, and reproduction of the empirical analyses and tables.
+The structure of this file is as follows:</p>
+<pre><code>    1. Preparing the data (Section \@ref(run-study))
+    2. Descriptive statistics (Section \@ref(analyzing))
+    3. Empirical analysis (Section \@ref(analyzing) and Section \@ref(report-study))
+    
+    </code></pre>
+<div id="A1" class="section level2">
+<h2><span class="header-section-number">7.1</span> Preparing the data</h2>
+<pre class="stata"><code>library(Statamarkdown)
 
+* Pathing and setup
+log close _all
+snapshot erase _all
+clear all
+
+global raw                      `&quot;  &quot;C:\Users\my name\my project\raw data\&quot; &quot;&#39;
+global data                     `&quot;  &quot;C:\Users\my name\my project\data\&quot; &quot;&#39;
+global descriptive_tables       `&quot;  &quot;C:\Users\my name\my project\descriptive tables\&quot; &quot;&#39;
+global descriptive_figures      `&quot;  &quot;C:\Users\my name\my project\descriptive figures\&quot; &quot;&#39;
+global results                  `&quot;  &quot;C:\Users\my name\my project\descriptive figures\estimation results\&quot; &quot;&#39;
+
+*       Preparing NAMCS91:
+******************************
+cd $raw
+use namcs91_raw.dta , clear
+
+* 1) Set up relevant dummies
+gen female = sex == 1
+gen nonwhite = race != 1
+gen hispanic = ethnicity == 1
+gen northeast = geo_reg == 1
+gen midwest = geo_reg == 2
+gen south = geo_reg == 3
+gen west = geo_reg == 4
+//Hellerstein defines specialists as physicians who are not in general practice, family practice, or basic pediatrics.
+gen specialist = (phys_special == &quot;GP&quot; | phys_special == &quot;FP&quot; | phys_special == &quot;PD&quot;) 
+//Medicare patients 
+gen temp = selfpay + medicaid + other_gov_ins + private_ins + hmo_pre_paid + other_pay
+replace medicare = 0 if temp != 0  
+drop temp
+
+
+* 2) Drop observations with unknown payment
+drop if unknown_pay == 1 
+
+compress
+cd $data
+save namcs91.dta, replace
+
+
+
+*       Preparing NAMCS91D:
+****************************
+cd $raw
+use namcs91d_raw.dta , clear
+
+
+* 1) Removing observations with missing values:
+***********************************************
+replace generic_id = .b if generic_id == 50000
+replace generic_status = .b if generic_status == 3
+replace prescription_status = .b if prescription_status == 3
+replace composition_status = .b if composition_status == 3 | composition_status == 6
+
+drop if missing(generic_id) |  missing(generic_status) | missing(prescription_status) | missing(composition_status)
+
+ 
+* 2) Creating required variables:
+**********************************
+** 2.1) Define 8 largest drug classes, see Table 3 and page 79 in Hellerstein&#39;s paper
+gen major_drug_class = ///
+    drug_class == 3 | drug_class == 5 | drug_class == 6 | drug_class == 10 | ///
+    drug_class == 12 | drug_class == 15 | drug_class == 17 | drug_class ==  19
+
+
+** 2.2) Creating some dummies
+gen female = sex == 1
+gen nonwhite = race != 1
+gen hispanic = ethnicity == 1
+gen northeast = geo_reg == 1
+gen midwest = geo_reg == 2
+gen south = geo_reg == 3
+gen west = geo_reg == 4
+
+gen specialist = (phys_special == &quot;GP&quot; | phys_special == &quot;FP&quot; | phys_special == &quot;PD&quot;) 
+gen x = selfpay + medicaid + other_gov_ins + private_ins + hmo_pre_paid + other_pay
+replace medicare = 0 if x != 0
+
+replace generic_status = 0 if generic_status == 2
+replace prescription_status = 0 if prescription_status == 2
+
+tab drug_class, gen (drug_class_)
+label variable drug_class_1 &quot;Antimicrobial&quot;
+label variable drug_class_2 &quot;Cardiovascular-renals&quot;
+label variable drug_class_3 &quot;Central Nervous System&quot;
+label variable drug_class_4 &quot;Hormones&quot;
+label variable drug_class_5 &quot;Skin/Mucous Membranes&quot;
+label variable drug_class_6 &quot;Ophthalmics&quot;
+label variable drug_class_7 &quot;Pain Relief&quot;
+label variable drug_class_8 &quot;Respiratory Test&quot;
+
+
+** 2.3) Create multisource indicator
+*** 2.3.1) Create id for drugs with multiple ingrediants
+replace ingredients = generic_id if ingredients == .
+
+*** 2.3.2) Check whether there are both generic and tradename drugs for each ingredients
+bys ingredients: egen counter = mean(generic_status) 
+bys ingredients: gen multisource = (counter &gt;0 &amp; counter &lt;1)
+drop counter
+
+
+** 2.4) Set up physician averages
+foreach x in age female nonwhite hispanic medicare medicaid hmo_pre_paid private_ins{
+    cap: drop mean_`x&#39;
+    bys physician_id: egen mean_`x&#39; = mean(`x&#39;)
+}
+
+
+* 3) Keeping relevant variables
+****************************
+//Dropping conditions
+keep if prescription_status == 1 &amp; multisource == 1 &amp; major_drug_class == 1 &amp; order_of_drug == 1 &amp; no_charge == 0 &amp; unknown_pay == 0
+
+
+keep ///
+drug_id drug_name generic_id generic_name generic_status drug_class drug_class_* ingredients ///
+age female nonwhite hispanic west northeast midwest south geo_reg specialist mean_* /// 
+selfpay medicare medicaid other_gov_ins private_ins hmo_pre_paid no_charge other_pay unknown_pay ///
+geo_reg phys_special phys_type physician_id patient_id
+
+compress
+cd $data
+save namcs91d.dta, replace</code></pre>
+<pre><code>## 
+## 
+## . library(Statamarkdocommand library is unrecognized
+## r(199);
+## 
+## end of do-file
+## r(199);</code></pre>
 </div>
+<div id="A2" class="section level2">
+<h2><span class="header-section-number">7.2</span> Descriptive statistics</h2>
+<pre class="stata"><code>library(Statamarkdown)
+
+*       Table 1:
+****************
+
+/* Comment:
+All information required to recreate table 1 can be found in the footer of table 1 in the paper by Hellerstein (1998).
+It is stated that the table only uses data without missing values. This applies to all tables and figures and was done in the initial data preparation already.
+
+Further the footnote defines that the dummy variable &quot;specialist&quot; indicates whether a physician is
+not a general practice, family practice, or basic pediatrics. The dummy medicare only takes the value of 1 if medicare was the only source of payment
+
+Last, the footnote mentions that observations of patient visits in which the patient was not charged were excluded.
+*/
+cd $data
+use namcs91.dta, clear
+
+qui eststo table1: estpost summarize age female nonwhite hispanic selfpay medicare medicaid  hmo_pre_paid specialist northeast midwest south west  if no_charge == 0
+
+cd $descriptive_tables
+
+esttab table1 using Table_1.rtf, replace  title(&quot;Summary Statistics for Overall NAMCS Patient Sample&quot;) cells (&quot;mean(fmt(%12.2f)) sd(fmt(%12.2f))&quot;) nonumber noobs ///
+coeflabels(age &quot;Age&quot; female &quot;Female&quot; nonwhite &quot;Nonwhite&quot; hispanic &quot;Hispanic&quot; selfpay &quot;Self-pay&quot; medicare &quot;Medicare&quot; medicaid &quot;Medicaid&quot;  hmo_pre_paid &quot;HMO/prepaid plan&quot; ///
+specialist &quot;Specialist&quot; northeast &quot;Northeast&quot; midwest &quot;Midwest&quot; south &quot;South&quot; west &quot;West&quot; ) ///
+addnote(&quot;Notes: Sample size is 32,407. For further notes see table 1 notes in Hellerstein (1998); Sample size differs as data from different years is used&quot; &quot;Datasource: NAMSC91&quot;) ///
+
+
+
+
+*       Table 2:
+****************
+
+/* Comment:
+Variables and data preparing processes equivalent to table 1.
+
+For the reproduction, create a matrix resembling the table and store each value in its respective cell.
+*/
+cd $data
+use namcs91d.dta, clear
+
+
+* 1) Saving all values in locals:
+**********************************
+* For all rows besides the last one
+foreach x in age female nonwhite hispanic selfpay medicare medicaid  private_ins hmo_pre_paid specialist northeast midwest south west {
+    
+    * Computing mean and sd
+    qui: sum `x&#39;
+    local `x&#39;_m = r(mean)
+    local `x&#39;_std = r(sd)
+    
+    * Computing the share of generics for all rows exept for the row age
+    if &quot;`x&#39;&quot; != &quot;age&quot;{
+        qui: sum  generic_status if `x&#39; == 1
+        local `x&#39;_share = r(mean)
+    }
+    }
+    
+* Last row (Share of generics in the full sample)
+qui: sum generic_status
+local fullsample_share = r(mean)
+    
+
+* 2) Filling a matrix with the locals:
+***************************************
+mat input table2 = ( /// 
+`age_m&#39;, `age_std&#39; , . \ ///
+`female_m&#39;, `female_std&#39;, `female_share&#39; \ ///
+`nonwhite_m&#39;, `nonwhite_std&#39;, `nonwhite_share&#39; \ ///
+`hispanic_m&#39;, `hispanic_std&#39;, `hispanic_share&#39; \ ///
+`selfpay_m&#39;, `selfpay_std&#39;, `selfpay_share&#39; \ ///
+`medicare_m&#39;, `medicare_std&#39;, `medicare_share&#39; \ ///
+`medicaid_m&#39;, `medicaid_std&#39;, `medicaid_share&#39; \ ///
+`private_ins_m&#39;, `private_ins_std&#39;, `private_ins_share&#39; \ ///
+`hmo_pre_paid_m&#39;, `hmo_pre_paid_std&#39;, `hmo_pre_paid_share&#39; \ ///
+`specialist_m&#39;, `specialist_std&#39;, `specialist_share&#39; \ ///
+`northeast_m&#39;, `northeast_std&#39;, `northeast_share&#39; \ ///
+`midwest_m&#39;, `midwest_std&#39;, `midwest_share&#39; \ ///
+`south_m&#39;, `south_std&#39;, `south_share&#39; \ ///
+`west_m&#39;, `west_std&#39;, `west_share&#39; \ ///
+. , . , `fullsample_share&#39; ///
+ )
+
+ 
+* 3) Labelling and exporting:
+**************************************
+matrix rownames table2 = ///
+&quot;Age&quot; &quot;Female&quot; &quot;Nonwhite&quot; &quot;Hispanic&quot; &quot;Self-Pay&quot; &quot;Medicare&quot; &quot;Medicaid&quot; &quot;Private&quot; &quot;HMO/prepaid plan&quot; ///
+&quot;Specialist&quot; &quot;Northeast&quot; &quot;Midwest&quot; &quot;South&quot; &quot;West&quot; &quot;Full sample&quot;
+matrix colnames table2 = &quot;Mean&quot; &quot;Standard Deviation&quot; &quot;Proportion Generic&quot;
+
+cd $descriptive_tables
+putexcel set Table_2, replace
+putexcel A1 = matrix(table2 ), names
+cd $data
+
+
+
+* Table 3:
+****************
+cd $data
+use namcs91d.dta, clear
+return clear
+ereturn clear
+
+* Turn decimal numbers into percentage
+gen All_drugs = generic_status * 100
+
+* generic share for all drugs
+eststo t10: quietly estpost tabstat All_drugs, ///
+statistics(mean N) columns(statistics) listwise
+
+* generic share by drug class
+eststo t20: quietly estpost tabstat All_drugs, by(drug_class) ///
+statistics(mean N) columns(statistics) listwise notot
+
+cd $descriptive_tables
+esttab t10 t20 using &quot;Table_3.rtf&quot;, replace   cells(&quot;count(fmt(%12.0f)) mean(fmt(%12.2f))&quot;) title(&quot;Table 3 - Frequency of Generic Prescription by Drug Class&quot;) ///
+collabels(&quot;Observations&quot; &quot;% Generics&quot;) noobs nonumber gaps refcat(3 &quot;By drug class&quot; , nolabel) coeflabels(generic &quot;All drugs&quot; 3 &quot;Antimicrobials&quot; 5 &quot;Cardiovascular-renals&quot; ///
+ 6 &quot;Central Nervous System&quot; 10 &quot;Hormones/Hormonal mechanisms&quot; 12 &quot;Skin/Mucous membrane&quot; 15 &quot;Ophthalmics&quot; 17 &quot;Pain relief&quot; 19 &quot;Resperatory tract&quot;) 
+
+
+
+
+* Figure 1:
+*****************
+
+/* Comment:
+Visualizations of kernel densities vary heavily depending on the underlying specifications. 
+The three key specifications for recreating the figure are the density function, the bandwidth and whether/how to round the data.
+Hellerstein does not provide information on either of these specifications.
+We can visually rule out that she rounds on the first decimal place, since there are fluctuations between the first decimal places.
+Rounding to the third or higher decimal places produces much more noisy curves, hence we infer that she rounded to the second decimal place.
+Regarding bandwidth and density function, there are no obvious clues, so that the reproduction relies on visual approximation of the original figure.
+*/
+
+
+* 1) Estimate the mean share of prescribed generics per physician
+bys physician_id: egen temp2 = mean(generic_status)
+gen generic_share = round(temp2, .01) 
+
+
+* 2) Collapse the data so that one observation per physician remains
+duplicates drop physician_id, force
+
+
+* 3) Recreate figure 1
+set scheme  s1manual
+twoway kdensity generic_share, range(0 1) bw( 0.02) kernel(bi)  ///
+xtitle(&quot;Physician generic prescription rates&quot;) ytitle(&quot;Percent of physicians&quot;) ///
+xlabel(0 (0.1) 1) lc(black)
+
+cd $descriptive_figures
+graph export &quot;Figure_1.png&quot;, replace
+
+
+
+
+* Figure 2:
+*****************
+cd $data
+use namcs91d.dta, clear
+
+/* Comment:
+The figure only uses observations, if the respective drug was prescribed a minimum of 6 times by a single physician. 
+In Hellerstein, 158 unique physicians remain, whereas we are left with 122 physicians (see p. 116 first paragraph).
+*/
+
+
+* 1) Apply dropping conditions
+bys physician_id ingredient : gen temp = _N
+drop if temp &lt; 6
+* Check the number of remaining physicians. 158 in Hellerstein
+qui: tab physician_id
+di r(r)
+
+
+* 2) Create the categories for the bars
+** 2.1) Avg generic prescription rate for each per physician
+bys physician_id ingredients: egen temp2 = mean(generic_status) 
+
+ * 2.2) Use the share to set up the groups
+gen counter = .
+replace counter = 0 if temp2 == 0 /* Never generic */
+replace counter = 1 if temp2 &gt; 0 &amp; temp2 &lt; 1 /* Sometimes */
+replace counter = 2 if temp2 == 1 /* Always */
+
+label define l 0 &quot;Only trade names&quot; 1 &quot;Both versions&quot; 2 &quot;Only generics&quot;
+label values counter l
+
+
+* 3) Collapse the data so that one observation per physician remains
+duplicates drop physician_id, force
+
+
+* 4) Recreating the figure
+set scheme  s1manual
+graph bar (count), over(counter) ///
+ytitle(&quot;&quot;) intensity(60) lintensity(100) bar(1, color(&quot;black&quot;) fcolor(&quot;gs5&quot;)) ylab(, nogrid)
+
+cd $descriptive_figures
+graph export &quot;Figure_2.png&quot;, replace</code></pre>
+<pre><code>## 
+## 
+## . library(Statamarkdocommand library is unrecognized
+## r(199);
+## 
+## end of do-file
+## r(199);</code></pre>
 </div>
-<h3>References</h3>
+<div id="A3" class="section level2">
+<h2><span class="header-section-number">7.3</span> Empirical analyses and tables</h2>
+<pre class="stata"><code>library(Statamarkdown)
+
+* Setting up the regression input, equivalent to the notation in the paper
+cd $data 
+use namcs91d.dta, clear
+xtset physician_id
+
+
+gen G = generic_status
+
+global C drug_class_1 drug_class_2 drug_class_3 drug_class_4 drug_class_5 drug_class_6 drug_class_8 /* drug classes */
+
+global X age female hispanic nonwhite                                           /* patient demographics */
+
+global P medicare medicaid hmo_pre_paid private_ins                             /* insurance */
+
+global S specialist                                                             /* is phys a specialist */
+
+global R midwest south west                                                     /* region */
+
+global X_dash mean_age mean_female mean_nonwhite mean_hispanic                  /* patient avgs */
+
+global P_dash mean_medicaid mean_medicare  mean_private_ins mean_hmo_pre_paid   /* insurance avgs */
+
+* M and T must be ommitted due to missing state id
+
+
+
+*       Table 4:
+****************
+return clear
+ereturn clear
+eststo clear
+
+eststo table4: xtprobit G $C $X $P $S $X_dash $P_dash $R, re
+eststo marginstable4: margins, dydx( $X $S $X_dash $P_dash $R) post
+
+*Reporting table 4
+esttab table4 marginstable4 using Table-4.rtf, replace wide keep(_cons $X $S $X_dash $P_dash $R) stats(rho) noobs b(3) order(_cons) ///
+coeflabels(_cons &quot;Constant&quot; age &quot;Age&quot; female &quot;Female&quot; nonwhite &quot;Nonwhite&quot; hispanic &quot;Hispanic&quot; specialist &quot;Specialist&quot; mean_age &quot;Mean age&quot; /// 
+mean_female &quot;Percent female&quot; mean_nonwhite &quot;Percent black&quot; mean_hispanic &quot;Percent Hispanic&quot; mean_medicaid &quot;Percent Medicaid&quot; mean_medicare ///
+&quot;Percent Medicare&quot; mean_private_ins &quot;Percent private insured&quot; mean_hmo_pre_paid &quot;Percent HMO/prepaid&quot;  northeast &quot;Northeast&quot; midwest ///
+&quot;Midwest&quot; south &quot;South&quot; west &quot;West&quot;) mtitles(&quot;Random-Effects Probit Coefficient&quot; &quot;% Change in Generic&quot;) nonumber addnote(&quot;Datasource: NAMSC91&quot;) 
+
+
+
+
+*       Table 5:
+****************
+return clear
+ereturn clear
+eststo clear
+
+eststo table5:   xtprobit G $C $X $P $S $R $X_dash $P_dash, re
+eststo marginstable5: margins, dydx($C) post
+
+*Reporting table 5
+esttab table5 marginstable5 using Table-5.rtf, replace noobs wide keep($C) nonumber ///
+coeflabels(drug_class_1 &quot;Antimicrobials&quot; drug_class_2 &quot;Cardiovascular-renals&quot; drug_class_3 &quot;Central Nervous System&quot; drug_class_4 ///
+&quot;Hormones/Hormonal mechanisms&quot; drug_class_5 &quot;Skin/Mucous membrane&quot; drug_class_6 &quot;Ophthalmics&quot; drug_class_8 &quot;Resperatory tract&quot;) ///
+addnote(&quot;Notes: The ommitted drug category is pain relief&quot; &quot;Datasource: NAMSC91&quot;) mtitles(&quot;Random-Effects Probit Coefficient&quot; &quot;% Change in Generic&quot;) 
+
+
+
+* Table 6:
+****************
+return clear
+ereturn clear
+eststo clear
+
+foreach x in 1 2 3 4 5 6 7 8 {
+
+* Estimating and saving the coefs
+eststo c_`x&#39;: quietly xtprobit G  $X $P $S $R $X_dash $P_dash if drug_class_`x&#39; == 1, re
+* Estimating and saving the marginal effects (AME, see table footer)
+eststo m_`x&#39;: qui margins, dydx($P) post 
+}
+
+
+esttab c_1 m_1 c_2 m_2 c_3 m_3 c_4 m_4 c_5 m_5 c_6 m_6 c_7 m_7 c_8 m_8 using Table6.rtf, replace ///
+nostar nopar  keep($P)  noobs b(2)  order(medicaid medicare private_ins hmo_pre_paid) ///
+refcat(medicare &quot;Medicare&quot; medicaid &quot;Medicaid&quot; hmo_pre_paid &quot;HMO/Prepaid&quot; private_ins &quot;Private&quot;, nolabel) ///
+coeflabels(medicare &quot;Coefficient&quot; medicaid &quot;Coefficient&quot; hmo_pre_paid &quot;Coefficient&quot; private_ins &quot;Coefficient&quot;) ///
+mtitle(&quot;Antimicrobial&quot; &quot;m1&quot; &quot;Cardiovaskulars&quot; &quot;m2&quot; &quot;Central Nervous System&quot; &quot;m3&quot; &quot;Hormones&quot; &quot; m4&quot; &quot;Skin/Muchous Membranes&quot; &quot;m5&quot; &quot;Ophthalmics&quot; ///
+&quot;m6&quot; &quot;Pain relief&quot; &quot;m7&quot; &quot;Respiratory Tract&quot; &quot;m8&quot; ) nonumbers eqlabels(none) collabels(none) nonumbers compress
+
+
+
+* Tables 7, 8 and 9 are not reproducible, due to missing state id in the publically available data sets</code></pre>
+<pre><code>## 
+## 
+## . library(Statamarkdocommand library is unrecognized
+## r(199);
+## 
+## end of do-file
+## r(199);</code></pre>
+
 <div id="refs" class="references">
-<div id="ref-bezjak_open_2018">
-<p>Bezjak, Sonja, April Clyburne-Sherin, Philipp Conzett, Pedro Fernandes, Edit Görögh, Kerstin Helbig, Bianca Kramer, et al. 2018. <em>Open Science Training Handbook</em>. Zenodo. <a href="https://doi.org/10.5281/ZENODO.1212496">https://doi.org/10.5281/ZENODO.1212496</a>.</p>
+<div>
+<p>Matthay, Ellicott C., Erin Hagan, Laura M. Gottlieb, May Lynn Tan, David Vlahov, Nancy E. Adler, and M. Maria Glymour. 2020. “Alternative Causal Inference Methods in Population Health Research: Evaluating Tradeoffs and Triangulating Evidence.” <em>SSM - Population Health</em> 10 (April): 100526. <a href="https://doi.org/10.1016/j.ssmph.2019.100526">https://doi.org/10.1016/j.ssmph.2019.100526</a>.</p>
 </div>
-<div id="ref-bollen_social_2015">
-<p>Bollen, K., J. T. Cacioppo, R. M. Kaplan, Krosnick J. A., and J. L. Olds. 2015. “Social, Behavioral, and Economic Sciences Perspectives on Robust and Reliable Science.” National Science Foundation. <a href="https://www.nsf.gov/sbe/AC_Materials/SBE_Robust_and_Reliable_Research_Report.pdf">https://www.nsf.gov/sbe/AC_Materials/SBE_Robust_and_Reliable_Research_Report.pdf</a>.</p>
 </div>
-<div id="ref-huschka_why_2013">
-<p>Huschka, Denis. 2013. “Why Should We Share Our Data, How Can It Be Organized, and What Are the Challenges Ahead?” <em>SSRN Electronic Journal</em>. <a href="https://doi.org/10.2139/ssrn.2272028">https://doi.org/10.2139/ssrn.2272028</a>.</p>
-</div>
-<div id="ref-meyer_whats_2017">
-<p>Meyer, Klaus E., Arjen van Witteloostuijn, and Sjoerd Beugelsdijk. 2017. “What’s in a P? Reassessing Best Practices for Conducting and Reporting Hypothesis-Testing Research.” <em>Journal of International Business Studies</em> 48 (5): 535–51. <a href="https://doi.org/10.1057/s41267-017-0078-8">https://doi.org/10.1057/s41267-017-0078-8</a>.</p>
-</div>
-<div id="ref-munafo_manifesto_2017">
-<p>Munafò, Marcus R., Brian A. Nosek, Dorothy V. M. Bishop, Katherine S. Button, Christopher D. Chambers, Nathalie Percie du Sert, Uri Simonsohn, Eric-Jan Wagenmakers, Jennifer J. Ware, and John P. A. Ioannidis. 2017. “A Manifesto for Reproducible Science.” <em>Nature Human Behaviour</em> 1 (1): 1–9. <a href="https://doi.org/10.1038/s41562-016-0021">https://doi.org/10.1038/s41562-016-0021</a>.</p>
-</div>
-<div id="ref-orozco_how_2020">
-<p>Orozco, Valérie, Christophe Bontemps, Elise Maigné, Virginie Piguet, Annie Hofstetter, Anne Lacroix, Fabrice Levert, and Jean-Marc Rousselle. 2020. “How to Make a Pie: Reproducible Research for Empirical Economics and Econometrics.” <em>Journal of Economic Surveys</em> 34 (5): 1134–69. <a href="https://doi.org/https://doi.org/10.1111/joes.12389">https://doi.org/https://doi.org/10.1111/joes.12389</a>.</p>
-</div>
-<div id="ref-vilhuber_reproducibility_2020">
-<p>Vilhuber, Lars. 2020. “Reproducibility and Replicability in Economics.” <em>Harvard Data Science Review</em> 2 (4). <a href="https://doi.org/10.1162/99608f92.4f6b9e67">https://doi.org/10.1162/99608f92.4f6b9e67</a>.</p>
 </div>
 </div>
             </section>
@@ -305,8 +663,8 @@ Figure 1.2: reproducible
           </div>
         </div>
       </div>
-<a href="acknowledgements.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="hypothesis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="references.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -361,20 +719,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>
