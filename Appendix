@@ -1,11 +1,12 @@
-# Appendix
+# Repoduction Code of Hellerstein (1998)
 
-The Appendix is split into three subchapters containing the Stata code for the reproduction of the Hellerstein (1998) paper. It contains the code for data preparation, the code for the reproduction of the descriptive tables and figures and the code for the reproduction of the empirical analysis and tables. 
+The subsequent program code reproduces the empirical analyses of: Hellerstein, Judith K. 1998. “The Importance of the Physician in the Generic versus Trade-Name Prescription Decision.” The RAND Journal of Economics 29(1):108–36. doi: 10.2307/2555818.
+This file contains program code for data preparation, reproduction of the descriptive tables and figures, and treproduction of the empirical analysis and tables. 
 The structure of this file is as follows:
 
-		1) Appendix A1: Preparing the data
-		2) Appendix A2: Descriptive statistics
-		3) Appendix A3: Empirical analysis
+		1) Appendix A1: Preparing the data (Running the study and collecting the data)
+		2) Appendix A2: Descriptive statistics (Analysing the data)
+		3) Appendix A3: Empirical analysis (Analysing the data)
 
 
 ## Appendix A1: Preparing the data
