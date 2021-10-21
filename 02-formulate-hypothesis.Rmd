@@ -101,7 +101,7 @@ Whether you start reading the literature first or by developing an idea may depe
 
 We highlight an example how to start with investigating the real-world and subsequently posing a research question [@noauthor_how_2019;@noauthor_developing_2019;@schilbach_5_2019]. For example, based on your own observation you notice that people seem to spend extensive amount of time looking at their smartphones. Maybe even you yourself engage in the same behavior. In addition, you  read a BBC News article [Social media damages teenagers' mental health, report says](https://www.bbc.com/news/technology-55826238).
 
-```{r, out.width='100%', fig.align='center', fig.cap='social_media', echo=FALSE}
+```{r social_media, out.width='100%', fig.align='center', fig.cap='Social media and mental health', echo=FALSE}
 knitr::include_graphics(paste(path,"/Social_media.png",sep=""))
 ```
 

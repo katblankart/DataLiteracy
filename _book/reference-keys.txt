@@ -1,9 +1,7 @@
+fig:munafo
 fig:unnamed-chunk-1
 fig:unnamed-chunk-2
 fig:unnamed-chunk-3
-fig:unnamed-chunk-4
-fig:unnamed-chunk-5
-fig:unnamed-chunk-6
 fig:writepaper
 fig:HellFig1
 fig:HellFig2
