@@ -101,7 +101,7 @@ Whether you start reading the literature first or by developing an idea may depe
 
 We highlight an example how to start with investigating the real-world and subsequently posing a research question [@noauthor_how_2019;@noauthor_developing_2019;@schilbach_5_2019]. For example, based on your own observation you notice that people seem to spend extensive amount of time looking at their smartphones. Maybe even you yourself engage in the same behavior. In addition, you  read a BBC News article [Social media damages teenagers' mental health, report says](https://www.bbc.com/news/technology-55826238).
 
-```{r, out.width='100%', fig.align='center', fig.cap='social_media', echo=FALSE}
+```{r social_media, out.width='100%', fig.align='center', fig.cap='Social media and mental health', echo=FALSE}
 knitr::include_graphics(paste(path,"/Social_media.png",sep=""))
 ```
 
@@ -180,8 +180,19 @@ Several rankings may help to assess the quality of research you consider
 
 ## Example: Hellerstein (1998)
 
-As an illustration of the research process of formulating a hypothesis, designing the study, running the study and collecting the data, analysing the data and, finally, reporting the study, we provide an example of the partly reproduction of Judith K. Hellerstein’s paper “The importance of the Physician in the Generic versus Trade-Name Prescription Decision” of 1998. With 434 citations on Google Scholar since 1998 and recent publications in top field journals such as Journal of Public Economics (2021), Journal of Health Economics (2019) and Health Economics (2019) Hellerstein’s (1998) paper has impacted literature over two decades. Using tools like “connected papers” or “citation gecko” can support you in finding the relevant literature that your project is linked to. The work of Hellerstein (1998) has impacted literature researching the role of physician behaviour and its influence on access, adoption and diffusion of health services, moral hazard and incentives in prescription and treatment decisions and the influence of different payment schemes as well as vast body of literature studying the pharmaceutical market. This includes research focus on generic drug entries, advertisement on pharmaceutical, price regulations, influence of patents and dynamics of market segmentation. 
-At the end of each chapter, we demonstrate insides into the study by Judith K. Hellerstein from 1998 [@hellerstein_importance_1998] that we reproduced.
+As an illustration of the research process of formulating a hypothesis, designing the study, running the study and collecting the data, analysing the data and, finally, reporting the study, we provide an example by reproducing the study by Judith K. Hellerstein’s paper “The importance of the Physician in the Generic versus Trade-Name Prescription Decision” of 1998.
+
+With 434 citations on Google Scholar since 1998 and recent publications in top field journals such as Journal of Public Economics (2021), Journal of Health Economics (2019) and Health Economics (2019), Hellerstein’s (1998) paper has impacted literature over two decades. Using tools like “connected papers” or “citation gecko” can support you in finding the relevant literature that your project is linked to. The work of Hellerstein (1998) has impacted literature researching the role of physician behaviour and its influence on access, adoption and diffusion of health services, moral hazard and incentives in prescription and treatment decisions and the influence of different payment schemes as well as vast body of literature studying the pharmaceutical market.
+
+This includes research on:
+
+  - generic drug entries
+  - pharmaceutical promotion
+  - price regulations
+  - influence of patents and dynamics of market segmentation
+
+
+At the end of each chapter, we demonstrate insights into the study by Judith K. Hellerstein from 1998 [@hellerstein_importance_1998] that we reproduced.
 
 ### **Relevance of the topic - escalating health expenditures**
 
@@ -189,15 +200,23 @@ Worldwide, health systems face constantly increasing prescription drug expenditu
  
 ### **Development of a research question - identifying the role of physician practice in choosing generic drugs**
 
-Physicians are faced with a multitude of different medication options, including generic and trade-name drugs. Physicians ideally act as agents for their patients to identify the best available treatment option. However, choosing the best treatment entails cost of coordination and cognition. The prescription of generic drugs may serve as an example to what extent physicians customize treatments according to patient's needs with regards to cost. From an economic point of view one might suggest that once a generic drug is available, a perfectly rational agent (i.e. physician) would prescribe a generic drug instead of the trade-name version if therapeutically identical [@dranove_medicaid_1989]. This asks for the research question, whether *"physicians vary their prescription decisions on a patient-by-patient basis or whether they systematically prescribe the same version, trade-name or generic, to all patients"*. 
+Physicians are faced with a multitude of different medication options, including the choice between generic and trade-name drugs. Physicians ideally act as agents for their patients to identify the best available treatment option. However, choosing the best treatment entails cost of coordination and cognition. The prescription of generic drugs may serve as an example to what extent physicians customize treatments according to patient's needs with regards to cost. From an economic point of view one might suggest that once a generic drug is available, a perfectly rational agent (i.e. physician) would prescribe a generic drug instead of the trade-name version if therapeutically identical [@dranove_medicaid_1989]. This asks for the research question, whether *"physicians vary their prescription decisions on a patient-by-patient basis or whether they systematically prescribe the same version, trade-name or generic, to all patients"*. 
 
-The study of Hellerstein (1998) focuses on two aspects: 1. To identify the role of the physician in prescribing a generic over a brand name drug and 2. To investigate the role of a patient's insurance status in the physician's choice between generic vs. brand name drugs. For the purpose of this example we will focus on the reproduction of the second aspect.  
+The study of Hellerstein (1998) focuses on two aspects:
+
+1. To identify the role of the physician in prescribing a generic over a brand name drug
+2. To investigate the role of a patient's insurance status in the physician's choice between generic vs. brand name drugs.
+
+For the purpose of this example we will focus on the reproduction of the second aspect.  
 
 ### **Hypothesis - insurance status drives generic drug use**
 
-We laid out the potential role of the physician in the prescription of generic vs. brand name drug, though literature mentions the potential influence of the patient. Hellerstein (1998) discusses that the patient might demand certain care more than other and, if reimbursement by an insurance given, even overconsumes health care. This behaviour can potentially differ by the patient’s insurance scheme. A patient that has no insurance and, thus, does not get any reimbursement for prescription drugs, might have a higher incentive to demand cheaper generic drugs [@danzon_cross-national_2011] than a patient with insurance that covers prescription drugs, either generic or trade name. Given the United States have different insurance schemes with varying prescription drug coverage, it is of interest to investigate the role of a patient's insurance status in the physician's choice between generic vs. brand name drugs.  
+We laid out the potential role of the physician in the prescription of generic vs. brand name drug, though literature mentions the potential influence of the patient. Hellerstein (1998) discusses that some patients may demand certain care more than others. If the prescription drug is reimbursed by the patient's health insurance, this may cause overconsumption. This behaviour can potentially differ by the patient’s insurance scheme. A patient that has no insurance and, thus, does not get any reimbursement for prescription drugs, might have a higher incentive to demand cheaper generic drugs [@danzon_cross-national_2011] than a patient with insurance that covers prescription drugs, either generic or trade name. Given the United States have different insurance schemes with varying prescription drug coverage, it is of interest to investigate the role of a patient's insurance status in the physician's choice between generic vs. brand name drugs.
+
 Hellerstein (1998) considers a patient's insurance status as a matter of dividing the study population in groups for which the choice between generic and brand name drugs differs. She hypothesises that *There is a relationship between the prescription of a generic drug and insurance status of the patient. * [@hellerstein_importance_1998].
-Therefore the null hypothesis is:
-*Physicians are more likely to prescribe generics (dependent variable) to patients who do not have insurance coverage for prescription pharmaceuticals (independent variable).*
+
+Providing answers to such a research question requires formulating and testing a hypothesis. Based on logic, theory or previous research, a hypothesis proposes an expected relationship within the given data. According to her research question, Hellerstein hypothesizes that:
+*Physicians are more likely to prescribe generics to patients who do not have insurance coverage for prescription pharmaceuticals.*
+In other terms, we would expect the effect of the insurance status on whether a patient receives a generic to be different from zero, with patients that obtain insurance coverage having a higher likelihood of receiving a generic drug. To obtain a testable null hypothesis, we must now reformulate this relationship so that we reject, if our expectations were correct. This means, if we expect to see an effect of insurance on prescriptions of generics, our null hypothesis is, that insurance status has no effect on the outcome (prescription of generic drug).
 
 

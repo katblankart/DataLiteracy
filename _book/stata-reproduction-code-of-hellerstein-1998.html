@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 7 Stata reproduction code of Hellerstein (1998) | A concise guide to reproducible research using secondary data</title>
+  <meta name="description" content="Data Science Campus - A study guide for reproducible research using secondary (health care) data" />
+  <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 7 Stata reproduction code of Hellerstein (1998) | A concise guide to reproducible research using secondary data" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Data Science Campus - A study guide for reproducible research using secondary (health care) data" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 7 Stata reproduction code of Hellerstein (1998) | A concise guide to reproducible research using secondary data" />
+  
+  <meta name="twitter:description" content="Data Science Campus - A study guide for reproducible research using secondary (health care) data" />
+  
+
+<meta name="author" content="Maryna Ivets, Eva Goetjes, Kai Miele, Katharina Blankart" />
+
+
+<meta name="date" content="2021-10-21" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="report-study.html"/>
+<link rel="next" href="references.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Reproducible research using 2ndary data</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>A study guide to empirical research in economics and management using secondary data</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#objective"><i class="fa fa-check"></i>Objective</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#learning-objectives"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#structure-of-the-study-guide"><i class="fa fa-check"></i>Structure of the study guide</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#this-is-a-living-document"><i class="fa fa-check"></i>This is a living document</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="acknowledgements.html"><a href="acknowledgements.html"><i class="fa fa-check"></i>Acknowledgements</a></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction to reproducible research</a><ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#what-is-reproducible-research"><i class="fa fa-check"></i><b>1.1</b> What is reproducible research?</a></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#why-you-as-a-student-and-researcher-should-care-about-reproducible-research"><i class="fa fa-check"></i><b>1.2</b> Why you, as a student and researcher, should care about reproducible research?</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="intro.html"><a href="intro.html#avoid-common-biases-that-lead-to-biased-or-false-research-results"><i class="fa fa-check"></i><b>1.2.1</b> Avoid common biases that lead to biased or false research results</a></li>
+<li class="chapter" data-level="1.2.2" data-path="intro.html"><a href="intro.html#increase-productivity-of-your-work-and-the-work-of-the-scientific-community-by-performing-reproducible-research"><i class="fa fa-check"></i><b>1.2.2</b> Increase productivity of your work and the work of the scientific community by performing reproducible research</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#main-steps-to-produce-reproducible-research"><i class="fa fa-check"></i><b>1.3</b> Main steps to produce reproducible research</a></li>
+<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#secondary-health-care-data"><i class="fa fa-check"></i><b>1.4</b> Secondary (health care) data</a></li>
+<li class="chapter" data-level="1.5" data-path="intro.html"><a href="intro.html#creating-an-environment-for-productive-research-projects"><i class="fa fa-check"></i><b>1.5</b> Creating an environment for productive research projects</a></li>
+<li class="chapter" data-level="1.6" data-path="intro.html"><a href="intro.html#resources-box"><i class="fa fa-check"></i><b>1.6</b> Resources Box</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="hypothesis.html"><a href="hypothesis.html"><i class="fa fa-check"></i><b>2</b> Formulating a hypothesis</a><ul>
+<li class="chapter" data-level="2.1" data-path="hypothesis.html"><a href="hypothesis.html#basic-steps-to-formulate-a-hypothesis"><i class="fa fa-check"></i><b>2.1</b> Basic steps to formulate a hypothesis</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="hypothesis.html"><a href="hypothesis.html#what-is-a-hypothesis"><i class="fa fa-check"></i><b>2.1.1</b> What is a hypothesis?</a></li>
+<li class="chapter" data-level="2.1.2" data-path="hypothesis.html"><a href="hypothesis.html#how-do-you-develop-a-research-question-and-formulate-a-hypothesis"><i class="fa fa-check"></i><b>2.1.2</b> How do you develop a research question and formulate a hypothesis?</a></li>
+<li class="chapter" data-level="2.1.3" data-path="hypothesis.html"><a href="hypothesis.html#develop-a-hypothesis"><i class="fa fa-check"></i><b>2.1.3</b> Develop a Hypothesis</a></li>
+<li class="chapter" data-level="2.1.4" data-path="hypothesis.html"><a href="hypothesis.html#identify-relevant-literature"><i class="fa fa-check"></i><b>2.1.4</b> Identify Relevant Literature</a></li>
+<li class="chapter" data-level="2.1.5" data-path="hypothesis.html"><a href="hypothesis.html#research-question-or-literature-review-a-hen-and-egg-problem"><i class="fa fa-check"></i><b>2.1.5</b> Research question or literature review, a hen and egg problem?</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="hypothesis.html"><a href="hypothesis.html#resources-box-1"><i class="fa fa-check"></i><b>2.2</b> Resources box</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="hypothesis.html"><a href="hypothesis.html#how-to-develop-strong-research-questions"><i class="fa fa-check"></i><b>2.2.1</b> How to develop strong research questions</a></li>
+<li class="chapter" data-level="2.2.2" data-path="hypothesis.html"><a href="hypothesis.html#identify-relevant-literature-from-major-general-interest-and-field-literature"><i class="fa fa-check"></i><b>2.2.2</b> Identify relevant literature from major general interest and field literature</a></li>
+<li class="chapter" data-level="2.2.3" data-path="hypothesis.html"><a href="hypothesis.html#assess-the-quality-of-a-journal-article"><i class="fa fa-check"></i><b>2.2.3</b> Assess the quality of a journal article</a></li>
+<li class="chapter" data-level="2.2.4" data-path="hypothesis.html"><a href="hypothesis.html#investigate-how-a-journal-article-is-connected-to-other-works"><i class="fa fa-check"></i><b>2.2.4</b> Investigate how a journal article is connected to other works</a></li>
+<li class="chapter" data-level="2.2.5" data-path="hypothesis.html"><a href="hypothesis.html#organize-your-literature"><i class="fa fa-check"></i><b>2.2.5</b> Organize your literature</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="hypothesis.html"><a href="hypothesis.html#example-hellerstein-1998"><i class="fa fa-check"></i><b>2.3</b> Example: Hellerstein (1998)</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="hypothesis.html"><a href="hypothesis.html#relevance-of-the-topic---escalating-health-expenditures"><i class="fa fa-check"></i><b>2.3.1</b> <strong>Relevance of the topic - escalating health expenditures</strong></a></li>
+<li class="chapter" data-level="2.3.2" data-path="hypothesis.html"><a href="hypothesis.html#development-of-a-research-question---identifying-the-role-of-physician-practice-in-choosing-generic-drugs"><i class="fa fa-check"></i><b>2.3.2</b> <strong>Development of a research question - identifying the role of physician practice in choosing generic drugs</strong></a></li>
+<li class="chapter" data-level="2.3.3" data-path="hypothesis.html"><a href="hypothesis.html#hypothesis---insurance-status-drives-generic-drug-use"><i class="fa fa-check"></i><b>2.3.3</b> <strong>Hypothesis - insurance status drives generic drug use</strong></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="designstudy.html"><a href="designstudy.html"><i class="fa fa-check"></i><b>3</b> Designing the Study</a><ul>
+<li class="chapter" data-level="3.1" data-path="designstudy.html"><a href="designstudy.html#basic-steps-in-designing-your-study"><i class="fa fa-check"></i><b>3.1</b> Basic steps in designing your study</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="designstudy.html"><a href="designstudy.html#develop-a-causal-model-and-identify-estimable-effects"><i class="fa fa-check"></i><b>3.1.1</b> Develop a causal model and identify estimable effects</a></li>
+<li class="chapter" data-level="3.1.2" data-path="designstudy.html"><a href="designstudy.html#develop-the-empirical-strategy-to-investigate-causal-effects"><i class="fa fa-check"></i><b>3.1.2</b> Develop the empirical strategy to investigate causal effects</a></li>
+<li class="chapter" data-level="3.1.3" data-path="designstudy.html"><a href="designstudy.html#investigate-suitable-source-data"><i class="fa fa-check"></i><b>3.1.3</b> Investigate suitable source data</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="designstudy.html"><a href="designstudy.html#resources-box-2"><i class="fa fa-check"></i><b>3.2</b> Resources box</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="designstudy.html"><a href="designstudy.html#key-terminology-in-causal-inference-based-on-matthay_alternative_2020"><i class="fa fa-check"></i><b>3.2.1</b> Key terminology in causal inference based on <span class="citation">Matthay et al. (<span>2020</span>)</span></a></li>
+<li class="chapter" data-level="3.2.2" data-path="designstudy.html"><a href="designstudy.html#openly-available-textbooks-and-resources-on-econometrics-with-a-causal-inference-focus"><i class="fa fa-check"></i><b>3.2.2</b> Openly-available textbooks and resources on econometrics with a causal inference focus</a></li>
+<li class="chapter" data-level="3.2.3" data-path="designstudy.html"><a href="designstudy.html#directed-acyclic-graphs"><i class="fa fa-check"></i><b>3.2.3</b> Directed Acyclic Graphs</a></li>
+<li class="chapter" data-level="3.2.4" data-path="designstudy.html"><a href="designstudy.html#replication-examples"><i class="fa fa-check"></i><b>3.2.4</b> Replication examples</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="designstudy.html"><a href="designstudy.html#example-hellerstein-1998-1"><i class="fa fa-check"></i><b>3.3</b> Example: Hellerstein (1998)</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="run-study.html"><a href="run-study.html"><i class="fa fa-check"></i><b>4</b> Running the study and collecting the data</a><ul>
+<li class="chapter" data-level="4.1" data-path="run-study.html"><a href="run-study.html#basic-steps-when-running-the-study-and-collecting-the-data"><i class="fa fa-check"></i><b>4.1</b> Basic steps when running the study and collecting the data</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="run-study.html"><a href="run-study.html#identify-secondary-data-sources"><i class="fa fa-check"></i><b>4.1.1</b> Identify secondary data sources</a></li>
+<li class="chapter" data-level="4.1.2" data-path="run-study.html"><a href="run-study.html#develop-a-data-collection-and-analysis-plan"><i class="fa fa-check"></i><b>4.1.2</b> Develop a data collection and analysis plan</a></li>
+<li class="chapter" data-level="4.1.3" data-path="run-study.html"><a href="run-study.html#obtain-access-to-source-data-or-generate-the-data"><i class="fa fa-check"></i><b>4.1.3</b> Obtain access to source data or generate the data</a></li>
+<li class="chapter" data-level="4.1.4" data-path="run-study.html"><a href="run-study.html#process-and-prepare-the-source-data"><i class="fa fa-check"></i><b>4.1.4</b> Process and prepare the source data</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="run-study.html"><a href="run-study.html#resources-box-3"><i class="fa fa-check"></i><b>4.2</b> Resources Box</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="run-study.html"><a href="run-study.html#how-to-organize-your-research-project"><i class="fa fa-check"></i><b>4.2.1</b> How to organize your research project:</a></li>
+<li class="chapter" data-level="4.2.2" data-path="run-study.html"><a href="run-study.html#coding-practices-best-practices-for-data-and-code-management-in-projects"><i class="fa fa-check"></i><b>4.2.2</b> Coding practices: Best Practices for Data and Code Management in Projects</a></li>
+<li class="chapter" data-level="4.2.3" data-path="run-study.html"><a href="run-study.html#data-cleaning"><i class="fa fa-check"></i><b>4.2.3</b> Data cleaning</a></li>
+<li class="chapter" data-level="4.2.4" data-path="run-study.html"><a href="run-study.html#collecting-data-from-meta-data-and-web-scraping"><i class="fa fa-check"></i><b>4.2.4</b> Collecting data from meta-data and web-scraping</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="run-study.html"><a href="run-study.html#example-hellerstein-1998-2"><i class="fa fa-check"></i><b>4.3</b> Example: Hellerstein (1998)</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="analyzing.html"><a href="analyzing.html"><i class="fa fa-check"></i><b>5</b> Analyzing the Data</a><ul>
+<li class="chapter" data-level="5.1" data-path="analyzing.html"><a href="analyzing.html#basic-steps-when-analyzing-the-data"><i class="fa fa-check"></i><b>5.1</b> Basic steps when analyzing the data</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="analyzing.html"><a href="analyzing.html#generate-the-analysis-data-set"><i class="fa fa-check"></i><b>5.1.1</b> Generate the analysis data set</a></li>
+<li class="chapter" data-level="5.1.2" data-path="analyzing.html"><a href="analyzing.html#describe-your-data-assess-validity-and-plausiblity"><i class="fa fa-check"></i><b>5.1.2</b> Describe your data, assess validity and plausiblity</a></li>
+<li class="chapter" data-level="5.1.3" data-path="analyzing.html"><a href="analyzing.html#generate-estimates-of-your-investigated-effect-using-regression-techniques"><i class="fa fa-check"></i><b>5.1.3</b> Generate estimates of your investigated effect using regression techniques</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="analyzing.html"><a href="analyzing.html#resources-box-4"><i class="fa fa-check"></i><b>5.2</b> Resources box</a></li>
+<li class="chapter" data-level="5.3" data-path="analyzing.html"><a href="analyzing.html#example-hellerstein-1998-3"><i class="fa fa-check"></i><b>5.3</b> Example: Hellerstein (1998)</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="analyzing.html"><a href="analyzing.html#describe-your-data-assess-validity-and-plausiblity-1"><i class="fa fa-check"></i><b>5.3.1</b> Describe your data, assess validity and plausiblity</a></li>
+<li class="chapter" data-level="5.3.2" data-path="analyzing.html"><a href="analyzing.html#generate-estimates-of-your-investigated-effect-using-regression-techniques-1"><i class="fa fa-check"></i><b>5.3.2</b> Generate estimates of your investigated effect using regression techniques</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="report-study.html"><a href="report-study.html"><i class="fa fa-check"></i><b>6</b> Reporting the Study</a><ul>
+<li class="chapter" data-level="6.1" data-path="report-study.html"><a href="report-study.html#basic-steps-to-reporting-the-study"><i class="fa fa-check"></i><b>6.1</b> Basic steps to reporting the study</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="report-study.html"><a href="report-study.html#the-writing-process"><i class="fa fa-check"></i><b>6.1.1</b> The writing process</a></li>
+<li class="chapter" data-level="6.1.2" data-path="report-study.html"><a href="report-study.html#general-guidance-on-the-use-of-language-in-the-research-paper"><i class="fa fa-check"></i><b>6.1.2</b> General guidance on the use of language in the research paper</a></li>
+<li class="chapter" data-level="6.1.3" data-path="report-study.html"><a href="report-study.html#tables"><i class="fa fa-check"></i><b>6.1.3</b> Tables</a></li>
+<li class="chapter" data-level="6.1.4" data-path="report-study.html"><a href="report-study.html#figures"><i class="fa fa-check"></i><b>6.1.4</b> Figures</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="report-study.html"><a href="report-study.html#resources-box-5"><i class="fa fa-check"></i><b>6.2</b> Resources box</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="report-study.html"><a href="report-study.html#collections-of-writing-tips-and-short-articles"><i class="fa fa-check"></i><b>6.2.1</b> Collections of writing tips and short articles</a></li>
+<li class="chapter" data-level="6.2.2" data-path="report-study.html"><a href="report-study.html#books"><i class="fa fa-check"></i><b>6.2.2</b> Books</a></li>
+<li class="chapter" data-level="6.2.3" data-path="report-study.html"><a href="report-study.html#videos"><i class="fa fa-check"></i><b>6.2.3</b> Videos</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="report-study.html"><a href="report-study.html#example-hellerstein-1998-4"><i class="fa fa-check"></i><b>6.3</b> Example: Hellerstein (1998)</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="report-study.html"><a href="report-study.html#descriptive-analysis"><i class="fa fa-check"></i><b>6.3.1</b> Descriptive Analysis</a></li>
+<li class="chapter" data-level="6.3.2" data-path="report-study.html"><a href="report-study.html#empirical-analysis"><i class="fa fa-check"></i><b>6.3.2</b> Empirical Analysis</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="stata-reproduction-code-of-hellerstein-1998.html"><a href="stata-reproduction-code-of-hellerstein-1998.html"><i class="fa fa-check"></i><b>7</b> Stata reproduction code of Hellerstein (1998)</a><ul>
+<li class="chapter" data-level="7.1" data-path="stata-reproduction-code-of-hellerstein-1998.html"><a href="stata-reproduction-code-of-hellerstein-1998.html#A1"><i class="fa fa-check"></i><b>7.1</b> Preparing the data</a></li>
+<li class="chapter" data-level="7.2" data-path="stata-reproduction-code-of-hellerstein-1998.html"><a href="stata-reproduction-code-of-hellerstein-1998.html#A2"><i class="fa fa-check"></i><b>7.2</b> Descriptive statistics</a></li>
+<li class="chapter" data-level="7.3" data-path="stata-reproduction-code-of-hellerstein-1998.html"><a href="stata-reproduction-code-of-hellerstein-1998.html#A3"><i class="fa fa-check"></i><b>7.3</b> Empirical analyses and tables</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A concise guide to reproducible research using secondary data</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="stata-reproduction-code-of-hellerstein-1998" class="section level1">
+<h1><span class="header-section-number">Chapter 7</span> Stata reproduction code of Hellerstein (1998)</h1>
+<p>The subsequent Stata program reproduces the empirical analyses of: Hellerstein, Judith K. 1998. “The Importance of the Physician in the Generic versus Trade-Name Prescription Decision.” The RAND Journal of Economics 29(1):108–36. doi: 10.2307/2555818.
+This file contains program code for data preparation, reproduction of the descriptive tables and figures, and reproduction of the empirical analyses and tables.
+The structure of this file is as follows:</p>
+<ol style="list-style-type: decimal">
+<li>Preparing the data (Section <a href="run-study.html#run-study">4</a>)</li>
+<li>Descriptive statistics (Section <a href="analyzing.html#analyzing">5</a>)</li>
+<li>Empirical analyses (Section <a href="analyzing.html#analyzing">5</a> and Section <a href="report-study.html#report-study">6</a>)</li>
+</ol>
+<div id="A1" class="section level2">
+<h2><span class="header-section-number">7.1</span> Preparing the data</h2>
+<pre class="stata"><code>* Pathing and setup
+log close _all
+snapshot erase _all
+clear all
+
+global raw                      `&quot;  &quot;C:\Users\my name\my project\raw data\&quot; &quot;&#39;
+global data                     `&quot;  &quot;C:\Users\my name\my project\data\&quot; &quot;&#39;
+global descriptive_tables       `&quot;  &quot;C:\Users\my name\my project\descriptive tables\&quot; &quot;&#39;
+global descriptive_figures      `&quot;  &quot;C:\Users\my name\my project\descriptive figures\&quot; &quot;&#39;
+global results                  `&quot;  &quot;C:\Users\my name\my project\descriptive figures\estimation results\&quot; &quot;&#39;
+
+*       Preparing NAMCS91:
+******************************
+cd $raw
+use namcs91_raw.dta , clear
+
+* 1) Set up relevant dummies
+gen female = sex == 1
+gen nonwhite = race != 1
+gen hispanic = ethnicity == 1
+gen northeast = geo_reg == 1
+gen midwest = geo_reg == 2
+gen south = geo_reg == 3
+gen west = geo_reg == 4
+//Hellerstein defines specialists as physicians who are not in general practice, family practice, or basic pediatrics.
+gen specialist = (phys_special == &quot;GP&quot; | phys_special == &quot;FP&quot; | phys_special == &quot;PD&quot;) 
+//Medicare patients 
+gen temp = selfpay + medicaid + other_gov_ins + private_ins + hmo_pre_paid + other_pay
+replace medicare = 0 if temp != 0  
+drop temp
+
+
+* 2) Drop observations with unknown payment
+drop if unknown_pay == 1 
+
+compress
+cd $data
+save namcs91.dta, replace
+
+
+
+*       Preparing NAMCS91D:
+****************************
+cd $raw
+use namcs91d_raw.dta , clear
+
+
+* 1) Removing observations with missing values:
+***********************************************
+replace generic_id = .b if generic_id == 50000
+replace generic_status = .b if generic_status == 3
+replace prescription_status = .b if prescription_status == 3
+replace composition_status = .b if composition_status == 3 | composition_status == 6
+
+drop if missing(generic_id) |  missing(generic_status) | missing(prescription_status) | missing(composition_status)
+
+ 
+* 2) Creating required variables:
+**********************************
+** 2.1) Define 8 largest drug classes, see Table 3 and page 79 in Hellerstein&#39;s paper
+gen major_drug_class = ///
+    drug_class == 3 | drug_class == 5 | drug_class == 6 | drug_class == 10 | ///
+    drug_class == 12 | drug_class == 15 | drug_class == 17 | drug_class ==  19
+
+
+** 2.2) Creating some dummies
+gen female = sex == 1
+gen nonwhite = race != 1
+gen hispanic = ethnicity == 1
+gen northeast = geo_reg == 1
+gen midwest = geo_reg == 2
+gen south = geo_reg == 3
+gen west = geo_reg == 4
+
+gen specialist = (phys_special == &quot;GP&quot; | phys_special == &quot;FP&quot; | phys_special == &quot;PD&quot;) 
+gen x = selfpay + medicaid + other_gov_ins + private_ins + hmo_pre_paid + other_pay
+replace medicare = 0 if x != 0
+
+replace generic_status = 0 if generic_status == 2
+replace prescription_status = 0 if prescription_status == 2
+
+tab drug_class, gen (drug_class_)
+label variable drug_class_1 &quot;Antimicrobial&quot;
+label variable drug_class_2 &quot;Cardiovascular-renals&quot;
+label variable drug_class_3 &quot;Central Nervous System&quot;
+label variable drug_class_4 &quot;Hormones&quot;
+label variable drug_class_5 &quot;Skin/Mucous Membranes&quot;
+label variable drug_class_6 &quot;Ophthalmics&quot;
+label variable drug_class_7 &quot;Pain Relief&quot;
+label variable drug_class_8 &quot;Respiratory Test&quot;
+
+
+** 2.3) Create multisource indicator
+*** 2.3.1) Create id for drugs with multiple ingrediants
+replace ingredients = generic_id if ingredients == .
+
+*** 2.3.2) Check whether there are both generic and tradename drugs for each ingredients
+bys ingredients: egen counter = mean(generic_status) 
+bys ingredients: gen multisource = (counter &gt;0 &amp; counter &lt;1)
+drop counter
+
+
+** 2.4) Set up physician averages
+foreach x in age female nonwhite hispanic medicare medicaid hmo_pre_paid private_ins{
+    cap: drop mean_`x&#39;
+    bys physician_id: egen mean_`x&#39; = mean(`x&#39;)
+}
+
+
+* 3) Keeping relevant variables
+****************************
+//Dropping conditions
+keep if prescription_status == 1 &amp; multisource == 1 &amp; major_drug_class == 1 &amp; order_of_drug == 1 &amp; no_charge == 0 &amp; unknown_pay == 0
+
+
+keep ///
+drug_id drug_name generic_id generic_name generic_status drug_class drug_class_* ingredients ///
+age female nonwhite hispanic west northeast midwest south geo_reg specialist mean_* /// 
+selfpay medicare medicaid other_gov_ins private_ins hmo_pre_paid no_charge other_pay unknown_pay ///
+geo_reg phys_special phys_type physician_id patient_id
+
+compress
+cd $data
+save namcs91d.dta, replace</code></pre>
+<pre><code>unable to change to C:\Users\my name\my project\raw data\
+r(170);
+
+end of do-file
+r(170);</code></pre>
+</div>
+<div id="A2" class="section level2">
+<h2><span class="header-section-number">7.2</span> Descriptive statistics</h2>
+<pre class="stata"><code>
+*       Table 1:
+****************
+
+/* Comment:
+All information required to recreate table 1 can be found in the footer of table 1 in the paper by Hellerstein (1998).
+It is stated that the table only uses data without missing values. This applies to all tables and figures and was done in the initial data preparation already.
+
+Further the footnote defines that the dummy variable &quot;specialist&quot; indicates whether a physician is
+not a general practice, family practice, or basic pediatrics. The dummy medicare only takes the value of 1 if medicare was the only source of payment
+
+Last, the footnote mentions that observations of patient visits in which the patient was not charged were excluded.
+*/
+cd $data
+use namcs91.dta, clear
+
+qui eststo table1: estpost summarize age female nonwhite hispanic selfpay medicare medicaid  hmo_pre_paid specialist northeast midwest south west  if no_charge == 0
+
+cd $descriptive_tables
+
+esttab table1 using Table_1.rtf, replace  title(&quot;Summary Statistics for Overall NAMCS Patient Sample&quot;) cells (&quot;mean(fmt(%12.2f)) sd(fmt(%12.2f))&quot;) nonumber noobs ///
+coeflabels(age &quot;Age&quot; female &quot;Female&quot; nonwhite &quot;Nonwhite&quot; hispanic &quot;Hispanic&quot; selfpay &quot;Self-pay&quot; medicare &quot;Medicare&quot; medicaid &quot;Medicaid&quot;  hmo_pre_paid &quot;HMO/prepaid plan&quot; ///
+specialist &quot;Specialist&quot; northeast &quot;Northeast&quot; midwest &quot;Midwest&quot; south &quot;South&quot; west &quot;West&quot; ) ///
+addnote(&quot;Notes: Sample size is 32,407. For further notes see table 1 notes in Hellerstein (1998); Sample size differs as data from different years is used&quot; &quot;Datasource: NAMSC91&quot;) ///
+
+
+
+
+*       Table 2:
+****************
+
+/* Comment:
+Variables and data preparing processes equivalent to table 1.
+
+For the reproduction, create a matrix resembling the table and store each value in its respective cell.
+*/
+cd $data
+use namcs91d.dta, clear
+
+
+* 1) Saving all values in locals:
+**********************************
+* For all rows besides the last one
+foreach x in age female nonwhite hispanic selfpay medicare medicaid  private_ins hmo_pre_paid specialist northeast midwest south west {
+    
+    * Computing mean and sd
+    qui: sum `x&#39;
+    local `x&#39;_m = r(mean)
+    local `x&#39;_std = r(sd)
+    
+    * Computing the share of generics for all rows exept for the row age
+    if &quot;`x&#39;&quot; != &quot;age&quot;{
+        qui: sum  generic_status if `x&#39; == 1
+        local `x&#39;_share = r(mean)
+    }
+    }
+    
+* Last row (Share of generics in the full sample)
+qui: sum generic_status
+local fullsample_share = r(mean)
+    
+
+* 2) Filling a matrix with the locals:
+***************************************
+mat input table2 = ( /// 
+`age_m&#39;, `age_std&#39; , . \ ///
+`female_m&#39;, `female_std&#39;, `female_share&#39; \ ///
+`nonwhite_m&#39;, `nonwhite_std&#39;, `nonwhite_share&#39; \ ///
+`hispanic_m&#39;, `hispanic_std&#39;, `hispanic_share&#39; \ ///
+`selfpay_m&#39;, `selfpay_std&#39;, `selfpay_share&#39; \ ///
+`medicare_m&#39;, `medicare_std&#39;, `medicare_share&#39; \ ///
+`medicaid_m&#39;, `medicaid_std&#39;, `medicaid_share&#39; \ ///
+`private_ins_m&#39;, `private_ins_std&#39;, `private_ins_share&#39; \ ///
+`hmo_pre_paid_m&#39;, `hmo_pre_paid_std&#39;, `hmo_pre_paid_share&#39; \ ///
+`specialist_m&#39;, `specialist_std&#39;, `specialist_share&#39; \ ///
+`northeast_m&#39;, `northeast_std&#39;, `northeast_share&#39; \ ///
+`midwest_m&#39;, `midwest_std&#39;, `midwest_share&#39; \ ///
+`south_m&#39;, `south_std&#39;, `south_share&#39; \ ///
+`west_m&#39;, `west_std&#39;, `west_share&#39; \ ///
+. , . , `fullsample_share&#39; ///
+ )
+
+ 
+* 3) Labelling and exporting:
+**************************************
+matrix rownames table2 = ///
+&quot;Age&quot; &quot;Female&quot; &quot;Nonwhite&quot; &quot;Hispanic&quot; &quot;Self-Pay&quot; &quot;Medicare&quot; &quot;Medicaid&quot; &quot;Private&quot; &quot;HMO/prepaid plan&quot; ///
+&quot;Specialist&quot; &quot;Northeast&quot; &quot;Midwest&quot; &quot;South&quot; &quot;West&quot; &quot;Full sample&quot;
+matrix colnames table2 = &quot;Mean&quot; &quot;Standard Deviation&quot; &quot;Proportion Generic&quot;
+
+cd $descriptive_tables
+putexcel set Table_2, replace
+putexcel A1 = matrix(table2 ), names
+cd $data
+
+
+
+* Table 3:
+****************
+cd $data
+use namcs91d.dta, clear
+return clear
+ereturn clear
+
+* Turn decimal numbers into percentage
+gen All_drugs = generic_status * 100
+
+* generic share for all drugs
+eststo t10: quietly estpost tabstat All_drugs, ///
+statistics(mean N) columns(statistics) listwise
+
+* generic share by drug class
+eststo t20: quietly estpost tabstat All_drugs, by(drug_class) ///
+statistics(mean N) columns(statistics) listwise notot
+
+cd $descriptive_tables
+esttab t10 t20 using &quot;Table_3.rtf&quot;, replace   cells(&quot;count(fmt(%12.0f)) mean(fmt(%12.2f))&quot;) title(&quot;Table 3 - Frequency of Generic Prescription by Drug Class&quot;) ///
+collabels(&quot;Observations&quot; &quot;% Generics&quot;) noobs nonumber gaps refcat(3 &quot;By drug class&quot; , nolabel) coeflabels(generic &quot;All drugs&quot; 3 &quot;Antimicrobials&quot; 5 &quot;Cardiovascular-renals&quot; ///
+ 6 &quot;Central Nervous System&quot; 10 &quot;Hormones/Hormonal mechanisms&quot; 12 &quot;Skin/Mucous membrane&quot; 15 &quot;Ophthalmics&quot; 17 &quot;Pain relief&quot; 19 &quot;Resperatory tract&quot;) 
+
+
+
+
+* Figure 1:
+*****************
+
+/* Comment:
+Visualizations of kernel densities vary heavily depending on the underlying specifications. 
+The three key specifications for recreating the figure are the density function, the bandwidth and whether/how to round the data.
+Hellerstein does not provide information on either of these specifications.
+We can visually rule out that she rounds on the first decimal place, since there are fluctuations between the first decimal places.
+Rounding to the third or higher decimal places produces much more noisy curves, hence we infer that she rounded to the second decimal place.
+Regarding bandwidth and density function, there are no obvious clues, so that the reproduction relies on visual approximation of the original figure.
+*/
+
+
+* 1) Estimate the mean share of prescribed generics per physician
+bys physician_id: egen temp2 = mean(generic_status)
+gen generic_share = round(temp2, .01) 
+
+
+* 2) Collapse the data so that one observation per physician remains
+duplicates drop physician_id, force
+
+
+* 3) Recreate figure 1
+set scheme  s1manual
+twoway kdensity generic_share, range(0 1) bw( 0.02) kernel(bi)  ///
+xtitle(&quot;Physician generic prescription rates&quot;) ytitle(&quot;Percent of physicians&quot;) ///
+xlabel(0 (0.1) 1) lc(black)
+
+cd $descriptive_figures
+graph export &quot;Figure_1.png&quot;, replace
+
+
+
+
+* Figure 2:
+*****************
+cd $data
+use namcs91d.dta, clear
+
+/* Comment:
+The figure only uses observations, if the respective drug was prescribed a minimum of 6 times by a single physician. 
+In Hellerstein, 158 unique physicians remain, whereas we are left with 122 physicians (see p. 116 first paragraph).
+*/
+
+
+* 1) Apply dropping conditions
+bys physician_id ingredient : gen temp = _N
+drop if temp &lt; 6
+* Check the number of remaining physicians. 158 in Hellerstein
+qui: tab physician_id
+di r(r)
+
+
+* 2) Create the categories for the bars
+** 2.1) Avg generic prescription rate for each per physician
+bys physician_id ingredients: egen temp2 = mean(generic_status) 
+
+ * 2.2) Use the share to set up the groups
+gen counter = .
+replace counter = 0 if temp2 == 0 /* Never generic */
+replace counter = 1 if temp2 &gt; 0 &amp; temp2 &lt; 1 /* Sometimes */
+replace counter = 2 if temp2 == 1 /* Always */
+
+label define l 0 &quot;Only trade names&quot; 1 &quot;Both versions&quot; 2 &quot;Only generics&quot;
+label values counter l
+
+
+* 3) Collapse the data so that one observation per physician remains
+duplicates drop physician_id, force
+
+
+* 4) Recreating the figure
+set scheme  s1manual
+graph bar (count), over(counter) ///
+ytitle(&quot;&quot;) intensity(60) lintensity(100) bar(1, color(&quot;black&quot;) fcolor(&quot;gs5&quot;)) ylab(, nogrid)
+
+cd $descriptive_figures
+graph export &quot;Figure_2.png&quot;, replace</code></pre>
+<pre><code> unable to change to C:\Users\my name\my project\raw data\
+r(170);
+
+
+unable to change to C:\Users\my name\my project\data\
+r(170);
+
+end of do-file
+r(170);</code></pre>
+</div>
+<div id="A3" class="section level2">
+<h2><span class="header-section-number">7.3</span> Empirical analyses and tables</h2>
+<pre class="stata"><code>
+* Setting up the regression input, equivalent to the notation in the paper
+cd $data 
+use namcs91d.dta, clear
+xtset physician_id
+
+
+gen G = generic_status
+
+global C drug_class_1 drug_class_2 drug_class_3 drug_class_4 drug_class_5 drug_class_6 drug_class_8 /* drug classes */
+
+global X age female hispanic nonwhite                                           /* patient demographics */
+
+global P medicare medicaid hmo_pre_paid private_ins                             /* insurance */
+
+global S specialist                                                             /* is phys a specialist */
+
+global R midwest south west                                                     /* region */
+
+global X_dash mean_age mean_female mean_nonwhite mean_hispanic                  /* patient avgs */
+
+global P_dash mean_medicaid mean_medicare  mean_private_ins mean_hmo_pre_paid   /* insurance avgs */
+
+* M and T must be ommitted due to missing state id
+
+
+
+*       Table 4:
+****************
+return clear
+ereturn clear
+eststo clear
+
+eststo table4: xtprobit G $C $X $P $S $X_dash $P_dash $R, re
+eststo marginstable4: margins, dydx( $X $S $X_dash $P_dash $R) post
+
+*Reporting table 4
+esttab table4 marginstable4 using Table-4.rtf, replace wide keep(_cons $X $S $X_dash $P_dash $R) stats(rho) noobs b(3) order(_cons) ///
+coeflabels(_cons &quot;Constant&quot; age &quot;Age&quot; female &quot;Female&quot; nonwhite &quot;Nonwhite&quot; hispanic &quot;Hispanic&quot; specialist &quot;Specialist&quot; mean_age &quot;Mean age&quot; /// 
+mean_female &quot;Percent female&quot; mean_nonwhite &quot;Percent black&quot; mean_hispanic &quot;Percent Hispanic&quot; mean_medicaid &quot;Percent Medicaid&quot; mean_medicare ///
+&quot;Percent Medicare&quot; mean_private_ins &quot;Percent private insured&quot; mean_hmo_pre_paid &quot;Percent HMO/prepaid&quot;  northeast &quot;Northeast&quot; midwest ///
+&quot;Midwest&quot; south &quot;South&quot; west &quot;West&quot;) mtitles(&quot;Random-Effects Probit Coefficient&quot; &quot;% Change in Generic&quot;) nonumber addnote(&quot;Datasource: NAMSC91&quot;) 
+
+
+
+
+*       Table 5:
+****************
+return clear
+ereturn clear
+eststo clear
+
+eststo table5:   xtprobit G $C $X $P $S $R $X_dash $P_dash, re
+eststo marginstable5: margins, dydx($C) post
+
+*Reporting table 5
+esttab table5 marginstable5 using Table-5.rtf, replace noobs wide keep($C) nonumber ///
+coeflabels(drug_class_1 &quot;Antimicrobials&quot; drug_class_2 &quot;Cardiovascular-renals&quot; drug_class_3 &quot;Central Nervous System&quot; drug_class_4 ///
+&quot;Hormones/Hormonal mechanisms&quot; drug_class_5 &quot;Skin/Mucous membrane&quot; drug_class_6 &quot;Ophthalmics&quot; drug_class_8 &quot;Resperatory tract&quot;) ///
+addnote(&quot;Notes: The ommitted drug category is pain relief&quot; &quot;Datasource: NAMSC91&quot;) mtitles(&quot;Random-Effects Probit Coefficient&quot; &quot;% Change in Generic&quot;) 
+
+
+
+* Table 6:
+****************
+return clear
+ereturn clear
+eststo clear
+
+foreach x in 1 2 3 4 5 6 7 8 {
+
+* Estimating and saving the coefs
+eststo c_`x&#39;: quietly xtprobit G  $X $P $S $R $X_dash $P_dash if drug_class_`x&#39; == 1, re
+* Estimating and saving the marginal effects (AME, see table footer)
+eststo m_`x&#39;: qui margins, dydx($P) post 
+}
+
+
+esttab c_1 m_1 c_2 m_2 c_3 m_3 c_4 m_4 c_5 m_5 c_6 m_6 c_7 m_7 c_8 m_8 using Table6.rtf, replace ///
+nostar nopar  keep($P)  noobs b(2)  order(medicaid medicare private_ins hmo_pre_paid) ///
+refcat(medicare &quot;Medicare&quot; medicaid &quot;Medicaid&quot; hmo_pre_paid &quot;HMO/Prepaid&quot; private_ins &quot;Private&quot;, nolabel) ///
+coeflabels(medicare &quot;Coefficient&quot; medicaid &quot;Coefficient&quot; hmo_pre_paid &quot;Coefficient&quot; private_ins &quot;Coefficient&quot;) ///
+mtitle(&quot;Antimicrobial&quot; &quot;m1&quot; &quot;Cardiovaskulars&quot; &quot;m2&quot; &quot;Central Nervous System&quot; &quot;m3&quot; &quot;Hormones&quot; &quot; m4&quot; &quot;Skin/Muchous Membranes&quot; &quot;m5&quot; &quot;Ophthalmics&quot; ///
+&quot;m6&quot; &quot;Pain relief&quot; &quot;m7&quot; &quot;Respiratory Tract&quot; &quot;m8&quot; ) nonumbers eqlabels(none) collabels(none) nonumbers compress
+
+
+
+* Tables 7, 8 and 9 are not reproducible, due to missing state id in the publically available data sets</code></pre>
+<pre><code> unable to change to C:\Users\my name\my project\raw data\
+r(170);
+
+
+unable to change to C:\Users\my name\my project\data\
+r(170);
+
+end of do-file
+r(170);</code></pre>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="report-study.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["DataLiteracy.pdf", "DataLiteracy.epub"],
+"search": {
+"engine": "lunr",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

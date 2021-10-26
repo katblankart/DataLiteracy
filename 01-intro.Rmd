@@ -49,13 +49,12 @@ The resources box in each chapter provides material of best practices in data an
 ### Avoid common biases that lead to biased or false research results
 
 
-There is a number of threats to reproducible research process that can undermine scientific research or lead to false or biased conclusions and publications, see, e.g. \@ref(fig:munafo) illustrating main threats to reproducible science [@munafo_manifesto_2017].
-
-
-
-```{r, out.width='100%', fig.align='center', fig.cap='munafo', echo=FALSE}
+```{r munafo, out.width='100%', fig.align='center', fig.cap='Threats to reproducible science', echo=FALSE}
 knitr::include_graphics(paste(path,"/munafo.png",sep=""))
 ```
+
+There is a number of threats to reproducible research process that can undermine scientific research or lead to false or biased conclusions and publications. Figure \@ref(fig:munafo) illustrates the main threats to reproducible science [@munafo_manifesto_2017].
+
 
 ### Increase productivity of your work and the work of the scientific community by performing reproducible research
 
@@ -72,7 +71,13 @@ There are three main principles to enhance reproducible research [@orozco_how_20
 2. ***Code for others:*** set up each step of your project such that an outsider could follow your documentation
 3. ***Automate as much as you can:*** avoid processing analyses and results using point-and-click softare (MS Excel), export results directly and create a reproducible project documentation.
 
-In this study guide we follow the main steps of performing a reproducible data science project [@bezjak_open_2018]. To make your empirical research study process reproducible, you need to follow these five steps (Figure \@ref(fig:reproducible)):
+
+
+```{r reproducible_research, out.width='75%', fig.align='center', fig.cap='Reproducible research', echo=FALSE}
+knitr::include_graphics(paste(path,"/02_reproducible_research_data_analysis.png",sep=""))
+```
+
+In this study guide we follow the main steps of performing a reproducible data science project [@bezjak_open_2018]. To make your empirical research study process reproducible, you need to follow these five steps (Figure \@ref(fig:reproducible_research)):
 
 
 1. ***Formulating a hypothesis*** (Section \@ref(hypothesis))
@@ -82,10 +87,6 @@ In this study guide we follow the main steps of performing a reproducible data s
 5. ***Reporting the study*** (Section \@ref(report-study))
 
 
-
-```{r, out.width='75%', fig.align='center', fig.cap='reproducible', echo=FALSE}
-knitr::include_graphics(paste(path,"/02_reproducible_research_data_analysis.png",sep=""))
-```
 
 ## Secondary (health care) data
 
