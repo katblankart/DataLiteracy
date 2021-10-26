@@ -161,10 +161,11 @@ We show the results of the reproduction of tables 1-3 and figures 1-2 of the des
  
 ### Descriptive Analysis
 
-The summary statistics shown in Table 1, representing the overall NAMCS patient sample of the year 1991 are similar to the summary statistics shown by [@hellerstein_importance_1998]. When looking at the distribution of insurance coverage, we see differences especially at other commercial insurers ($2%$ compared to $24%$ in 1989) and we do not report Blue Cross/Blue Shield, as those were not covered by 1991 data. Additionally, our sample has about $24%$ less specialist physicians than Hellerstein’s sample from 1989. 
+The summary statistics shown in Table 1, representing the overall NAMCS patient sample of the year 1991 are similar to the summary statistics shown by [@hellerstein_importance_1998]. However, some categories for the sources of payment differ slightly. Four categories, Self-pay, Medicare, Madicaid and HMO/prepaid plan match. The categories Blue Cross/ Blue Shild and Other commerical insurer seem to have merged into the category seem to have merged into the category Private/Commercial.
+When looking at the distribution of insurance coverage, we see that the frequency of Private/Commercial perfectly adds up to the frequencies of Blue Cross and other commercial insurer. Differences in the distribution of other covariates are slim. The most noticable differnce lies in the share of specialist, which account for X% of visited physicians in our 1991 sample and for 55% in Hellerstein’s sample from 1989
+
 
 **Table 1 - Summary Statistics for Overall NAMCS Patient Sample**
-
 
 |    Variable                       |     mean     |     sd       |
 |-----------------------------------|--------------|--------------|
@@ -175,10 +176,10 @@ The summary statistics shown in Table 1, representing the overall NAMCS patient 
 |     Self-pay                      |     0.22     |     0.41     |
 |     Medicare                      |     0.14     |     0.35     |
 |     Medicaid                      |     0.10     |     0.30     |
-|     Private/commercial            |     0.37     |     0.48     |
+|     Private/Commercial            |     0.37     |     0.48     |
 |     Other government insurance    |     0.02     |     0.15     |
 |     HMO/prepaid plan              |     0.15     |     0.36     |
-|     Specialist                    |     0.32     |     0.46     |
+|     Specialist                    |     0.68     |     0.46     |
 |     Northeast                     |     0.23     |     0.42     |
 |     Midwest                       |     0.25     |     0.44     |
 |     South                         |     0.28     |     0.45     |
@@ -193,25 +194,23 @@ Table 2 shows very similar statistics for the patients of the NAMCSd sample comp
 
 **Table 2 - Summary Statistics for Patients in NAMCS Drug Sample**
 
-
-|                    | Mean     | Standard Deviation | Proportion Generic |
-|--------------------|----------|--------------------|--------------------|
-| Age                | 43.786   | 25.13171           |                    |
-| Female             | 0.591575 | 0.491574           | 0.268405           |
-| Nonwhite           | 0.117563 | 0.322111           | 0.336273           |
-| Hispanic           | 0.061828 | 0.240858           | 0.331237           |
-| Self-Pay           | 0.266105 | 0.441948           | 0.28641            |
-| Medicare           | 0.151393 | 0.358455           | 0.214897           |
-| Medicaid           | 0.106675 | 0.30872            | 0.320778           |
-| Private/Commercial | 0.328321 | 0.469633           | 0.273983           |
-| HMO/prepaid plan   | 0.147505 | 0.354631           | 0.344464           |
-| Specialist         | 0.403111 | 0.490554           | 0.31672            |
-| Northeast          | 0.207518 | 0.405556           | 0.282948           |
-| Midwest            | 0.270382 | 0.444186           | 0.267498           |
-| South              | 0.292806 | 0.45508            | 0.245684           |
-| West               | 0.229294 | 0.420406           | 0.352176           |
-| Full sample        |          |                    | 0.283733           |
-
+|                    | Mean  | Standard Deviation | Proportion Generic |
+|--------------------|-------|--------------------|--------------------|
+| Age                | 43.79 | 25.13              |                    |
+| Female             | 0.59  | 0.49               | 0.27               |
+| Nonwhite           | 0.12  | 0.32               | 0.34               |
+| Hispanic           | 0.06  | 0.24               | 0.33               |
+| Self-Pay           | 0.27  | 0.44               | 0.29               |
+| Medicare           | 0.15  | 0.36               | 0.21               |
+| Medicaid           | 0.11  | 0.31               | 0.32               |
+| Private/Commercial | 0.33  | 0.47               | 0.27               |
+| HMO/prepaid plan   | 0.15  | 0.35               | 0.34               |
+| Specialist         | 0.60  | 0.49               | 0.26               |
+| Northeast          | 0.21  | 0.41               | 0.28               |
+| Midwest            | 0.27  | 0.44               | 0.27               |
+| South              | 0.29  | 0.46               | 0.25               |
+| West               | 0.23  | 0.42               | 0.35               |
+| Full sample        |       |                    | 0.28               |
 
 Notes: The sample size is 7,715. For further notes see Hellerstein (1998), Datasource: NAMSCd91
 
@@ -219,7 +218,6 @@ Table 3 shows the absolute number of observations and the share of generics over
 
 
 **Table 3 - Frequency of Generic Prescription by Drug Class**
-
 
 |                                     |     Observations    |     %   Generics    |
 |-------------------------------------|---------------------|---------------------|
@@ -265,16 +263,17 @@ knitr::include_graphics(paste(path,"/Hellerstein_Fig_2.png",sep=""))
 Please keep in mind, that, due to data restrictions, we were not able to control for certain covariates that Hellerstein (1998) included. An example of such are legislation laws like mandatory or permissive substitution, and one- or two-line prescription. For this reason, we cannot present all tables produced by Hellerstein (1998). Given these restrictions, we cannot run the analysis with the same underlying model specifications. 
 This restricts us from comparing the results of the years 1991 and 1989, however for the completion of this example we represent the results of table 4, 5 and 6 in the following: 
 
+
 **Table 4 Estimated Coefficients on Demographic Variables, Geographic Variables, and Average Characteristics for Full Sample, excluding regional identifiers**
 
 |                                |     Random-Effects   Probit Coefficient    |                |     %   Change in Generic    |                |
 |--------------------------------|--------------------------------------------|----------------|------------------------------|----------------|
-|     Constant                   |     -0.537**                               |     (-2.83)    |                              |                |
+|     Constant                   |     -0.556**                               |     (-3.17)    |                              |                |
 |     Age                        |     -0.002*                                |     (-1.99)    |     -0.001*                  |     (-1.99)    |
 |     Female                     |     -0.112**                               |     (-2.94)    |     -0.028**                 |     (-2.94)    |
 |     Hispanic                   |     0.025                                  |     (0.28)     |     0.006                    |     (0.28)     |
 |     Nonwhite                   |     0.044                                  |     (0.62)     |     0.011                    |     (0.62)     |
-|     Specialist                 |     -0.019                                 |     (-0.25)    |     -0.005                   |     (-0.25)    |
+|     Specialist                 |     0.019                                  |     (0.25)     |     0.005                    |     (0.25)     |
 |     Mean age                   |     -0.003                                 |     (-1.10)    |     -0.001                   |     (-1.10)    |
 |     Percent female             |     -0.189                                 |     (-1.16)    |     -0.048                   |     (-1.16)    |
 |     Percent black              |     0.075                                  |     (0.41)     |     0.019                    |     (0.41)     |
@@ -286,7 +285,6 @@ This restricts us from comparing the results of the years 1991 and 1989, however
 |     Midwest                    |     -0.141                                 |     (-1.53)    |     -0.036                   |     (-1.53)    |
 |     South                      |     -0.206*                                |     (-2.28)    |     -0.052*                  |     (-2.29)    |
 |     West                       |     0.065                                  |     (0.67)     |     0.016                    |     (0.67)     |
-|     rho                        |     0.333                                  |                |                              |                |
 
 Notes: $*p < 0.05, **p < 0.01, ***p < 0.001$; The sample size is 7,715. For further notes see Hellerstein (1998); Datasource: NAMSCd91
 
@@ -314,7 +312,6 @@ Notes: $*p < 0.05, **p < 0.01, ***p < 0.001$; The sample size is 7,715. Omitted 
 
 
 **Table 6 - Tests for Moral Hazard for the Full Sample Equality of Individual Insurance Variables with Self-Payment Random-Effects Probit Results**
-
 
 |                    |     Antimicrobial    |     %   change    |     Cardiovaskulars    |     %   change    |     Central   Nervous System    |     %   change    |     Hormones    |     %   change    |     Skin/Muchous   Membranes    |     %   change    |     Ophthalmics    |     %   change    |     Pain   relief    |     %   change    |     Respiratory   Tract    |     %   change    |
 |--------------------|----------------------|-------------------|------------------------|-------------------|---------------------------------|-------------------|-----------------|-------------------|---------------------------------|-------------------|--------------------|-------------------|----------------------|-------------------|----------------------------|-------------------|
