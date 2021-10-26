@@ -129,14 +129,15 @@ Before going into further detail on the data preparation, we want to emphasize o
 The Stata code is the heart of your empirical analysis. To make it as comprehensible as possible, we divided the code into four parts. The first part translates the raw data into a readable format, the second one applies Hellerstein’s preparatory processes, the third reproduces the descriptive statistics and the last contains the code to run the empirical analysis. Corresponding to these do files, we created sub-folders that contain required data or offer a place to store the output. By saving the paths to all your relevant subfolders as global, you can easily navigate through your working directory. Setting up your working directory at the start of a project will also help you to keep an overview on what is done and what’s to come. You can find an example of the pathing and setup in (Section \@ref(A1) line 12 to 21).
 
 Once the NAMCS and NAMCSd are turned into readable formats we performed the following cleaning (i.e. exclusion of certain observations), transforming and preparation steps, that are needed to reproduce the tables and figures originally produced by Hellerstein (1998):
-For NAMCS, used for the reproduction of table 1 (Section \@ref(A1)):
 
-  - Observations of patients, who were not charged, were dropped.
+For the NAMCS, used exclusively for the reproduction of table 1 (Section \@ref(A1)):
   - Missing data must be relabelled according to the syntax of the statistic software and observations with missing data were not considered.
+  - Keep only those observations that uniquely identify a single source of payment, meaning to drop observations with (A) missing insurance status, or (B) multiple insurance statuses. Step (B) is not mentioned in the text but can be inferred by the values of Table 1. Despite some observations reporting multiple sources of payment, the means of the mentioned payment/insurance options aggrgate to 1. Thus, Hellerstein must have treated these observations as invalid.
   - The setup of the dummy variables for Medicare and Specialists underlie special conditions (details can be found in the do-file attached), whereas the remaining dummies were not created straight away.
 
-For NAMCSd, used for all other figures and tables:
-
+For the NAMCSd, used for all other figures and tables:
+  - Clear missing values and perform staps (A) and (B) as in the NAMCS data.
+  - Although reported in the table 1, drop observations that report 'other government insurance' as source of payment.
   - Keeping only those observations of drugs that are the first mentioned drug in a patient visit. 
   - Keeping only those observations of drug mentions, that are part of the eight largest drug classes. The names of the included drug classes can be found in table 3 and the labels the data uses in the documentation files.
   - Keeping only those observations of drugs, that were prescribed.
