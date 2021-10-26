@@ -177,7 +177,7 @@ Last, the footnote mentions that observations of patient visits in which the pat
 cd $data
 use namcs91.dta, clear
 
-qui eststo table1: estpost summarize age female nonwhite hispanic selfpay medicare medicaid  hmo_pre_paid specialist northeast midwest south west  if no_charge == 0
+qui eststo table1: estpost summarize age female nonwhite hispanic selfpay medicare medicaid private_ins hmo_pre_paid specialist northeast midwest south west  if no_charge == 0
 
 cd $descriptive_tables
 
