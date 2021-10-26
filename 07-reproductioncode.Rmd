@@ -54,7 +54,7 @@ gen midwest = geo_reg == 2
 gen south = geo_reg == 3
 gen west = geo_reg == 4
 //Hellerstein defines specialists as physicians who are not in general practice, family practice, or basic pediatrics.
-gen specialist = (phys_special == "GP" | phys_special == "FP" | phys_special == "PD") 
+gen specialist = (phys_special != "GP" & phys_special != "FP" & phys_special != "PD") 
 //Medicare patients 
 gen temp = selfpay + medicaid + other_gov_ins + private_ins + hmo_pre_paid
 replace medicare = 0 if temp != 0  
@@ -104,7 +104,7 @@ gen midwest = geo_reg == 2
 gen south = geo_reg == 3
 gen west = geo_reg == 4
 
-gen specialist = (phys_special == "GP" | phys_special == "FP" | phys_special == "PD") 
+gen specialist = (phys_special != "GP" & phys_special != "FP" & phys_special != "PD") 
 gen temp = selfpay + medicaid + private_ins + hmo_pre_paid
 replace medicare = 0 if temp != 0
 
@@ -188,12 +188,12 @@ cd $descriptive_tables
 esttab table1 using Table_1.rtf, replace  title("Summary Statistics for Overall NAMCS Patient Sample") cells ("mean(fmt(%12.2f)) sd(fmt(%12.2f))") nonumber noobs ///
 coeflabels(age "Age" female "Female" nonwhite "Nonwhite" hispanic "Hispanic" selfpay "Self-pay" medicare "Medicare" medicaid "Medicaid" private_ins "Private/commercial" ///
 other_gov_ins "Other government insurance" hmo_pre_paid "HMO/prepaid plan" specialist "Specialist" northeast "Northeast" midwest "Midwest" south "South" west "West" ) ///
-addnote("Notes: Sample size is 32,407. For further notes see table 1 notes in Hellerstein (1998); Sample size differs as data from different years is used" "Datasource: NAMSC91") ///
+addnote("Notes: Sample size is 32,407. For further notes see table 1 notes in Hellerstein (1998); Sample size differs as data from different years is used" "Datasource: NAMSC91")
 
 
 
 
-* 		Table 2:
+* 	Table 2:
 ****************
 
 /* Comment:
@@ -263,7 +263,7 @@ cd $data
 
 
 
-* 		Table 3:
+* 	Table 3:
 ****************
 cd $data
 use namcs91d.dta, clear
@@ -289,7 +289,7 @@ collabels("Observations" "% Generics") noobs nonumber gaps refcat(3 "By drug cla
 
 
 
-* 		Figure 1:
+* 	Figure 1:
 *****************
 
 /* Comment:
@@ -323,7 +323,7 @@ graph export "Figure_1.png", replace
 
 
 
-* 		Figure 2:
+* 	Figure 2:
 *****************
 cd $data
 use namcs91d.dta, clear
@@ -383,26 +383,26 @@ xtset physician_id
 
 gen G = generic_status
 
-global C drug_class_3 drug_class_5 drug_class_6 drug_class_10 drug_class_12 drug_class_15 drug_class_19 /* drug classes */
+global C drug_class_3 drug_class_5 drug_class_6 drug_class_10 drug_class_12 drug_class_15 drug_class_19 	/* drug classes */
 
-global X age female hispanic nonwhite 											/* patient demographics */
+global X age female hispanic nonwhite 										/* patient demographics */
 
 global P medicare medicaid hmo_pre_paid private_ins								/* insurance */
 
-global S specialist																/* is phys a specialist */
+global S specialist												/* is phys a specialist */
 
-global R midwest south west														/* region */
+global R midwest south west											/* region */
 
-global X_dash mean_age mean_female mean_nonwhite mean_hispanic 					/* patient avgs */
+global X_dash mean_age mean_female mean_nonwhite mean_hispanic 							/* patient avgs */
 
-global P_dash mean_medicaid mean_medicare  mean_private_ins mean_hmo_pre_paid  	/* insurance avgs */
+global P_dash mean_medicaid mean_medicare  mean_private_ins mean_hmo_pre_paid 		 			/* insurance avgs */
 
 * M and T must be ommitted due to missing state id
 
 
 
 
-* 		Table 4:
+* 	Table 4:
 ****************
 return clear
 ereturn clear
@@ -421,7 +421,7 @@ mean_female "Percent female" mean_nonwhite "Percent black" mean_hispanic "Percen
 
 
 
-* 		Table 5:
+* 	Table 5:
 ****************
 return clear
 ereturn clear
@@ -437,7 +437,7 @@ coeflabels(drug_class_1 "Antimicrobials" drug_class_2 "Cardiovascular-renals" dr
 addnote("Notes: The ommitted drug category is pain relief" "Datasource: NAMSC91") mtitles("Random-Effects Probit Coefficient" "% Change in Generic") 
 
 
-* 		Table 6:
+* 	Table 6:
 ****************
 return clear
 ereturn clear
