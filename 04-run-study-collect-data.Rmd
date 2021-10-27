@@ -131,11 +131,13 @@ The Stata code is the heart of your empirical analysis. To make it as comprehens
 Once the NAMCS and NAMCSd are turned into readable formats we performed the following cleaning (i.e. exclusion of certain observations), transforming and preparation steps, that are needed to reproduce the tables and figures originally produced by Hellerstein (1998):
 
 For the NAMCS, used exclusively for the reproduction of table 1 (Section \@ref(A1)):
+
   - Missing data must be relabelled according to the syntax of the statistic software and observations with missing data were not considered.
   - Keep only those observations that uniquely identify a single source of payment, meaning to drop observations with (A) missing insurance status, or (B) multiple insurance statuses. Step (B) is not mentioned in the text but can be inferred by the values of Table 1. Despite some observations reporting multiple sources of payment, the means of the mentioned payment/insurance options aggrgate to 1. Thus, Hellerstein must have treated these observations as invalid.
   - The setup of the dummy variables for Medicare and Specialists underlie special conditions (details can be found in the do-file attached), whereas the remaining dummies were not created straight away.
 
 For the NAMCSd, used for all other figures and tables:
+
   - Clear missing values and perform staps (A) and (B) as in the NAMCS data.
   - Although reported in the table 1, drop observations that report 'other government insurance' as source of payment.
   - Keeping only those observations of drugs that are the first mentioned drug in a patient visit. 
@@ -185,4 +187,5 @@ The NAMCSd dataset serves as a source for the empirical analysis of Hellerstein 
 | mean_medicaid     | Mean percentage of patients with medicaid insurance in an individual   practice |
 | mean_hmo_pre_paid | Mean percentage of patients with HMO insurance in an individual practice        |
 | mean_private_ins  | Mean percentage of patients with private insurance in an individual   practice  |
+
 
