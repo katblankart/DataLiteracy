@@ -24,7 +24,7 @@
 <meta name="author" content="Maryna Ivets, Eva Goetjes, Kai Miele, Katharina Blankart" />
 
 
-<meta name="date" content="2021-10-21" />
+<meta name="date" content="2021-10-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -312,15 +312,17 @@ Usually, certain transformations need to be performed to be able to use the raw 
 <p>The preparation of your data can be done with different software for statistical analysis, for the reproduction of our Hellerstein (1998) example we use Stata, creating a .do -file containing the code. It is of importance to develop a file of your code, containing every step you performed with your data. This ensures the reproducibility of your research and enables you to go back to earlier versions of your data if necessary.</p>
 <p>Before going into further detail on the data preparation, we want to emphasize on the importance of properly setting up your working directory. In a single project you are likely to save use, override and delete a multitude of files. Without using strict system of organising your files and folders, you will inevitably run into trouble. There is no optimal structure, and you must find what works best for you, but in general, contents of folders and subfolders should be as homogenous as possible. To make this less abstract, let us demonstrate how we manage our working directory on the data related part of this reproduction paper.</p>
 <p>The Stata code is the heart of your empirical analysis. To make it as comprehensible as possible, we divided the code into four parts. The first part translates the raw data into a readable format, the second one applies Hellerstein’s preparatory processes, the third reproduces the descriptive statistics and the last contains the code to run the empirical analysis. Corresponding to these do files, we created sub-folders that contain required data or offer a place to store the output. By saving the paths to all your relevant subfolders as global, you can easily navigate through your working directory. Setting up your working directory at the start of a project will also help you to keep an overview on what is done and what’s to come. You can find an example of the pathing and setup in (Section <a href="stata-reproduction-code-of-hellerstein-1998.html#A1">7.1</a> line 12 to 21).</p>
-<p>Once the NAMCS and NAMCSd are turned into readable formats we performed the following cleaning (i.e. exclusion of certain observations), transforming and preparation steps, that are needed to reproduce the tables and figures originally produced by Hellerstein (1998):
-For NAMCS, used for the reproduction of table 1 (Section <a href="stata-reproduction-code-of-hellerstein-1998.html#A1">7.1</a>):</p>
+<p>Once the NAMCS and NAMCSd are turned into readable formats we performed the following cleaning (i.e. exclusion of certain observations), transforming and preparation steps, that are needed to reproduce the tables and figures originally produced by Hellerstein (1998):</p>
+<p>For the NAMCS, used exclusively for the reproduction of table 1 (Section <a href="stata-reproduction-code-of-hellerstein-1998.html#A1">7.1</a>):</p>
 <ul>
-<li>Observations of patients, who were not charged, were dropped.</li>
 <li>Missing data must be relabelled according to the syntax of the statistic software and observations with missing data were not considered.</li>
+<li>Keep only those observations that uniquely identify a single source of payment, meaning to drop observations with (A) missing insurance status, or (B) multiple insurance statuses. Step (B) is not mentioned in the text but can be inferred by the values of Table 1. Despite some observations reporting multiple sources of payment, the means of the mentioned payment/insurance options aggrgate to 1. Thus, Hellerstein must have treated these observations as invalid.</li>
 <li>The setup of the dummy variables for Medicare and Specialists underlie special conditions (details can be found in the do-file attached), whereas the remaining dummies were not created straight away.</li>
 </ul>
-<p>For NAMCSd, used for all other figures and tables:</p>
+<p>For the NAMCSd, used for all other figures and tables:</p>
 <ul>
+<li>Clear missing values and perform staps (A) and (B) as in the NAMCS data.</li>
+<li>Although reported in the table 1, drop observations that report ‘other government insurance’ as source of payment.</li>
 <li>Keeping only those observations of drugs that are the first mentioned drug in a patient visit.</li>
 <li>Keeping only those observations of drug mentions, that are part of the eight largest drug classes. The names of the included drug classes can be found in table 3 and the labels the data uses in the documentation files.</li>
 <li>Keeping only those observations of drugs, that were prescribed.</li>

@@ -24,7 +24,7 @@
 <meta name="author" content="Maryna Ivets, Eva Goetjes, Kai Miele, Katharina Blankart" />
 
 
-<meta name="date" content="2021-10-21" />
+<meta name="date" content="2021-10-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -201,9 +201,9 @@
 This file contains program code for data preparation, reproduction of the descriptive tables and figures, and reproduction of the empirical analyses and tables.
 The structure of this file is as follows:</p>
 <ol style="list-style-type: decimal">
-<li>Preparing the data (Section <a href="run-study.html#run-study">4</a>)</li>
-<li>Descriptive statistics (Section <a href="analyzing.html#analyzing">5</a>)</li>
-<li>Empirical analyses (Section <a href="analyzing.html#analyzing">5</a> and Section <a href="report-study.html#report-study">6</a>)</li>
+<li>Preparing the NAMCS and NAMCSd data (Section <a href="run-study.html#run-study">4</a>)</li>
+<li>Descriptive statistics using NAMCS and NAMCSd data (Section <a href="analyzing.html#analyzing">5</a>)</li>
+<li>Empirical analyses using NAMCSd data (Section <a href="analyzing.html#analyzing">5</a> and Section <a href="report-study.html#report-study">6</a>)</li>
 </ol>
 <div id="A1" class="section level2">
 <h2><span class="header-section-number">7.1</span> Preparing the data</h2>
@@ -212,13 +212,14 @@ log close _all
 snapshot erase _all
 clear all
 
-global raw                      `&quot;  &quot;C:\Users\my name\my project\raw data\&quot; &quot;&#39;
-global data                     `&quot;  &quot;C:\Users\my name\my project\data\&quot; &quot;&#39;
+global raw                  `&quot;  &quot;C:\Users\my name\my project\raw data\&quot; &quot;&#39;
+global data                 `&quot;  &quot;C:\Users\my name\my project\data\&quot; &quot;&#39;
 global descriptive_tables       `&quot;  &quot;C:\Users\my name\my project\descriptive tables\&quot; &quot;&#39;
 global descriptive_figures      `&quot;  &quot;C:\Users\my name\my project\descriptive figures\&quot; &quot;&#39;
-global results                  `&quot;  &quot;C:\Users\my name\my project\descriptive figures\estimation results\&quot; &quot;&#39;
+global results              `&quot;  &quot;C:\Users\my name\my project\descriptive figures\estimation results\&quot; &quot;&#39;
 
-*       Preparing NAMCS91:
+
+*   Preparing NAMCS91:
 ******************************
 cd $raw
 use namcs91_raw.dta , clear
@@ -232,15 +233,15 @@ gen midwest = geo_reg == 2
 gen south = geo_reg == 3
 gen west = geo_reg == 4
 //Hellerstein defines specialists as physicians who are not in general practice, family practice, or basic pediatrics.
-gen specialist = (phys_special == &quot;GP&quot; | phys_special == &quot;FP&quot; | phys_special == &quot;PD&quot;) 
+gen specialist = (phys_special != &quot;GP&quot; &amp; phys_special != &quot;FP&quot; &amp; phys_special != &quot;PD&quot;) 
 //Medicare patients 
-gen temp = selfpay + medicaid + other_gov_ins + private_ins + hmo_pre_paid + other_pay
+gen temp = selfpay + medicaid + other_gov_ins + private_ins + hmo_pre_paid
 replace medicare = 0 if temp != 0  
-drop temp
 
 
 * 2) Drop observations with unknown payment
-drop if unknown_pay == 1 
+gen temp1 = selfpay + medicaid  + medicare + other_gov_ins + private_ins + hmo_pre_paid
+keep if temp1 == 1
 
 compress
 cd $data
@@ -248,7 +249,8 @@ save namcs91.dta, replace
 
 
 
-*       Preparing NAMCS91D:
+
+*   Preparing NAMCS91d:
 ****************************
 cd $raw
 use namcs91d_raw.dta , clear
@@ -281,22 +283,22 @@ gen midwest = geo_reg == 2
 gen south = geo_reg == 3
 gen west = geo_reg == 4
 
-gen specialist = (phys_special == &quot;GP&quot; | phys_special == &quot;FP&quot; | phys_special == &quot;PD&quot;) 
-gen x = selfpay + medicaid + other_gov_ins + private_ins + hmo_pre_paid + other_pay
-replace medicare = 0 if x != 0
+gen specialist = (phys_special != &quot;GP&quot; &amp; phys_special != &quot;FP&quot; &amp; phys_special != &quot;PD&quot;) 
+gen temp = selfpay + medicaid + private_ins + hmo_pre_paid
+replace medicare = 0 if temp != 0
 
 replace generic_status = 0 if generic_status == 2
 replace prescription_status = 0 if prescription_status == 2
 
 tab drug_class, gen (drug_class_)
-label variable drug_class_1 &quot;Antimicrobial&quot;
-label variable drug_class_2 &quot;Cardiovascular-renals&quot;
-label variable drug_class_3 &quot;Central Nervous System&quot;
-label variable drug_class_4 &quot;Hormones&quot;
-label variable drug_class_5 &quot;Skin/Mucous Membranes&quot;
-label variable drug_class_6 &quot;Ophthalmics&quot;
-label variable drug_class_7 &quot;Pain Relief&quot;
-label variable drug_class_8 &quot;Respiratory Test&quot;
+label variable drug_class_3 &quot;Antimicrobial&quot;
+label variable drug_class_5 &quot;Cardiovascular-renals&quot;
+label variable drug_class_6 &quot;Central Nervous System&quot;
+label variable drug_class_10 &quot;Hormones&quot;
+label variable drug_class_12 &quot;Skin/Mucous Membranes&quot;
+label variable drug_class_15 &quot;Ophthalmics&quot;
+label variable drug_class_17 &quot;Pain Relief&quot;
+label variable drug_class_19 &quot;Respiratory Test&quot;
 
 
 ** 2.3) Create multisource indicator
@@ -319,13 +321,15 @@ foreach x in age female nonwhite hispanic medicare medicaid hmo_pre_paid private
 * 3) Keeping relevant variables
 ****************************
 //Dropping conditions
-keep if prescription_status == 1 &amp; multisource == 1 &amp; major_drug_class == 1 &amp; order_of_drug == 1 &amp; no_charge == 0 &amp; unknown_pay == 0
-
+keep if prescription_status == 1 &amp; multisource == 1 &amp; major_drug_class == 1 &amp; order_of_drug == 1  
+* (selfpay == 1 | medicaid == 1 | private_ins == 1 | hmo_pre_paid == 1 | medicare == 1)
+gen temp1 = selfpay + medicaid + medicare + private_ins + hmo_pre_paid
+keep if temp1 == 1
 
 keep ///
 drug_id drug_name generic_id generic_name generic_status drug_class drug_class_* ingredients ///
 age female nonwhite hispanic west northeast midwest south geo_reg specialist mean_* /// 
-selfpay medicare medicaid other_gov_ins private_ins hmo_pre_paid no_charge other_pay unknown_pay ///
+selfpay medicare medicaid private_ins hmo_pre_paid   ///
 geo_reg phys_special phys_type physician_id patient_id
 
 compress
@@ -340,7 +344,7 @@ r(170);</code></pre>
 <div id="A2" class="section level2">
 <h2><span class="header-section-number">7.2</span> Descriptive statistics</h2>
 <pre class="stata"><code>
-*       Table 1:
+*   Table 1:
 ****************
 
 /* Comment:
@@ -355,19 +359,19 @@ Last, the footnote mentions that observations of patient visits in which the pat
 cd $data
 use namcs91.dta, clear
 
-qui eststo table1: estpost summarize age female nonwhite hispanic selfpay medicare medicaid  hmo_pre_paid specialist northeast midwest south west  if no_charge == 0
+qui eststo table1: estpost summarize age female nonwhite hispanic selfpay medicare medicaid private_ins other_gov_ins  hmo_pre_paid specialist northeast midwest south west
 
 cd $descriptive_tables
-
+ 
 esttab table1 using Table_1.rtf, replace  title(&quot;Summary Statistics for Overall NAMCS Patient Sample&quot;) cells (&quot;mean(fmt(%12.2f)) sd(fmt(%12.2f))&quot;) nonumber noobs ///
-coeflabels(age &quot;Age&quot; female &quot;Female&quot; nonwhite &quot;Nonwhite&quot; hispanic &quot;Hispanic&quot; selfpay &quot;Self-pay&quot; medicare &quot;Medicare&quot; medicaid &quot;Medicaid&quot;  hmo_pre_paid &quot;HMO/prepaid plan&quot; ///
-specialist &quot;Specialist&quot; northeast &quot;Northeast&quot; midwest &quot;Midwest&quot; south &quot;South&quot; west &quot;West&quot; ) ///
-addnote(&quot;Notes: Sample size is 32,407. For further notes see table 1 notes in Hellerstein (1998); Sample size differs as data from different years is used&quot; &quot;Datasource: NAMSC91&quot;) ///
+coeflabels(age &quot;Age&quot; female &quot;Female&quot; nonwhite &quot;Nonwhite&quot; hispanic &quot;Hispanic&quot; selfpay &quot;Self-pay&quot; medicare &quot;Medicare&quot; medicaid &quot;Medicaid&quot; private_ins &quot;Private/commercial&quot; ///
+other_gov_ins &quot;Other government insurance&quot; hmo_pre_paid &quot;HMO/prepaid plan&quot; specialist &quot;Specialist&quot; northeast &quot;Northeast&quot; midwest &quot;Midwest&quot; south &quot;South&quot; west &quot;West&quot; ) ///
+addnote(&quot;Notes: Sample size is 32,407. For further notes see table 1 notes in Hellerstein (1998); Sample size differs as data from different years is used&quot; &quot;Datasource: NAMSC91&quot;)
 
 
 
 
-*       Table 2:
+*   Table 2:
 ****************
 
 /* Comment:
@@ -425,7 +429,7 @@ mat input table2 = ( ///
 * 3) Labelling and exporting:
 **************************************
 matrix rownames table2 = ///
-&quot;Age&quot; &quot;Female&quot; &quot;Nonwhite&quot; &quot;Hispanic&quot; &quot;Self-Pay&quot; &quot;Medicare&quot; &quot;Medicaid&quot; &quot;Private&quot; &quot;HMO/prepaid plan&quot; ///
+&quot;Age&quot; &quot;Female&quot; &quot;Nonwhite&quot; &quot;Hispanic&quot; &quot;Self-Pay&quot; &quot;Medicare&quot; &quot;Medicaid&quot; &quot;Private/Commercial&quot; &quot;HMO/prepaid plan&quot; ///
 &quot;Specialist&quot; &quot;Northeast&quot; &quot;Midwest&quot; &quot;South&quot; &quot;West&quot; &quot;Full sample&quot;
 matrix colnames table2 = &quot;Mean&quot; &quot;Standard Deviation&quot; &quot;Proportion Generic&quot;
 
@@ -436,7 +440,8 @@ cd $data
 
 
 
-* Table 3:
+
+*   Table 3:
 ****************
 cd $data
 use namcs91d.dta, clear
@@ -462,9 +467,8 @@ collabels(&quot;Observations&quot; &quot;% Generics&quot;) noobs nonumber gaps r
 
 
 
-* Figure 1:
+*   Figure 1:
 *****************
-
 /* Comment:
 Visualizations of kernel densities vary heavily depending on the underlying specifications. 
 The three key specifications for recreating the figure are the density function, the bandwidth and whether/how to round the data.
@@ -495,8 +499,7 @@ graph export &quot;Figure_1.png&quot;, replace
 
 
 
-
-* Figure 2:
+*   Figure 2:
 *****************
 cd $data
 use namcs91d.dta, clear
@@ -559,27 +562,29 @@ use namcs91d.dta, clear
 xtset physician_id
 
 
+
 gen G = generic_status
 
-global C drug_class_1 drug_class_2 drug_class_3 drug_class_4 drug_class_5 drug_class_6 drug_class_8 /* drug classes */
+global C drug_class_3 drug_class_5 drug_class_6 drug_class_10 drug_class_12 drug_class_15 drug_class_19     /* drug classes */
 
-global X age female hispanic nonwhite                                           /* patient demographics */
+global X age female hispanic nonwhite                                       /* patient demographics */
 
 global P medicare medicaid hmo_pre_paid private_ins                             /* insurance */
 
-global S specialist                                                             /* is phys a specialist */
+global S specialist                                             /* is phys a specialist */
 
-global R midwest south west                                                     /* region */
+global R midwest south west                                         /* region */
 
-global X_dash mean_age mean_female mean_nonwhite mean_hispanic                  /* patient avgs */
+global X_dash mean_age mean_female mean_nonwhite mean_hispanic                          /* patient avgs */
 
-global P_dash mean_medicaid mean_medicare  mean_private_ins mean_hmo_pre_paid   /* insurance avgs */
+global P_dash mean_medicaid mean_medicare mean_private_ins mean_hmo_pre_paid                    /* insurance avgs */
 
-* M and T must be ommitted due to missing state id
+* M and T are not included due to missing state id
 
 
 
-*       Table 4:
+
+*   Table 4:
 ****************
 return clear
 ereturn clear
@@ -598,7 +603,7 @@ mean_female &quot;Percent female&quot; mean_nonwhite &quot;Percent black&quot; m
 
 
 
-*       Table 5:
+*   Table 5:
 ****************
 return clear
 ereturn clear
@@ -614,29 +619,27 @@ coeflabels(drug_class_1 &quot;Antimicrobials&quot; drug_class_2 &quot;Cardiovasc
 addnote(&quot;Notes: The ommitted drug category is pain relief&quot; &quot;Datasource: NAMSC91&quot;) mtitles(&quot;Random-Effects Probit Coefficient&quot; &quot;% Change in Generic&quot;) 
 
 
-
-* Table 6:
+*   Table 6:
 ****************
 return clear
 ereturn clear
 eststo clear
 
-foreach x in 1 2 3 4 5 6 7 8 {
+foreach x in 3 5 6 10 12 15 17 19 {
 
 * Estimating and saving the coefs
-eststo c_`x&#39;: quietly xtprobit G  $X $P $S $R $X_dash $P_dash if drug_class_`x&#39; == 1, re
+eststo c_`x&#39;: quietly xtprobit G $X $P $S $R $X_dash $P_dash  if drug_class_`x&#39; == 1, re
 * Estimating and saving the marginal effects (AME, see table footer)
-eststo m_`x&#39;: qui margins, dydx($P) post 
+eststo m_`x&#39;: qui margins, dydx($P) post
 }
 
 
-esttab c_1 m_1 c_2 m_2 c_3 m_3 c_4 m_4 c_5 m_5 c_6 m_6 c_7 m_7 c_8 m_8 using Table6.rtf, replace ///
+esttab c_3 m_3 c_5 m_5 c_6 m_6 c_10 m_10 c_12 m_12 c_15 m_15 c_17 m_17 c_19 m_19 using Table6.rtf, replace ///
 nostar nopar  keep($P)  noobs b(2)  order(medicaid medicare private_ins hmo_pre_paid) ///
 refcat(medicare &quot;Medicare&quot; medicaid &quot;Medicaid&quot; hmo_pre_paid &quot;HMO/Prepaid&quot; private_ins &quot;Private&quot;, nolabel) ///
 coeflabels(medicare &quot;Coefficient&quot; medicaid &quot;Coefficient&quot; hmo_pre_paid &quot;Coefficient&quot; private_ins &quot;Coefficient&quot;) ///
-mtitle(&quot;Antimicrobial&quot; &quot;m1&quot; &quot;Cardiovaskulars&quot; &quot;m2&quot; &quot;Central Nervous System&quot; &quot;m3&quot; &quot;Hormones&quot; &quot; m4&quot; &quot;Skin/Muchous Membranes&quot; &quot;m5&quot; &quot;Ophthalmics&quot; ///
-&quot;m6&quot; &quot;Pain relief&quot; &quot;m7&quot; &quot;Respiratory Tract&quot; &quot;m8&quot; ) nonumbers eqlabels(none) collabels(none) nonumbers compress
-
+mtitle(&quot;Antimicrobial&quot; &quot;% change&quot; &quot;Cardiovaskulars&quot; &quot;% change&quot; &quot;Central Nervous System&quot; &quot;% change&quot; &quot;Hormones&quot; &quot;% change&quot; &quot;Skin/Muchous Membranes&quot; &quot;% change&quot; &quot;Ophthalmics&quot; ///
+&quot;% change&quot; &quot;Pain relief&quot; &quot;% change&quot; &quot;Respiratory Tract&quot; &quot;% change&quot; ) nonumbers eqlabels(none) collabels(none) nonumbers compress
 
 
 * Tables 7, 8 and 9 are not reproducible, due to missing state id in the publically available data sets</code></pre>
