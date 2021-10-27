@@ -20,9 +20,9 @@ The subsequent Stata program reproduces the empirical analyses of: Hellerstein, 
 This file contains program code for data preparation, reproduction of the descriptive tables and figures, and reproduction of the empirical analyses and tables.
 The structure of this file is as follows:
 
-1. Preparing the data (Section \@ref(run-study))
-2. Descriptive statistics (Section \@ref(analyzing))
-3. Empirical analyses (Section \@ref(analyzing) and Section \@ref(report-study))
+1. Preparing the NAMCS and NAMCSd data (Section \@ref(run-study))
+2. Descriptive statistics using NAMCS and NAMCSd data (Section \@ref(analyzing))
+3. Empirical analyses using NAMCSd data (Section \@ref(analyzing) and Section \@ref(report-study))
 		
 		
 ## Preparing the data {#A1}
@@ -33,13 +33,14 @@ log close _all
 snapshot erase _all
 clear all
 
-global raw  					`"  "C:\Users\my name\my project\raw data\" "'
-global data 					`"  "C:\Users\my name\my project\data\" "'
+global raw  				`"  "C:\Users\my name\my project\raw data\" "'
+global data 				`"  "C:\Users\my name\my project\data\" "'
 global descriptive_tables  		`"  "C:\Users\my name\my project\descriptive tables\" "'
 global descriptive_figures		`"  "C:\Users\my name\my project\descriptive figures\" "'
-global results  				`"  "C:\Users\my name\my project\descriptive figures\estimation results\" "'
+global results  			`"  "C:\Users\my name\my project\descriptive figures\estimation results\" "'
 
-*		Preparing NAMCS91:
+
+*	Preparing NAMCS91:
 ******************************
 cd $raw
 use namcs91_raw.dta , clear
@@ -53,15 +54,15 @@ gen midwest = geo_reg == 2
 gen south = geo_reg == 3
 gen west = geo_reg == 4
 //Hellerstein defines specialists as physicians who are not in general practice, family practice, or basic pediatrics.
-gen specialist = (phys_special == "GP" | phys_special == "FP" | phys_special == "PD") 
+gen specialist = (phys_special != "GP" & phys_special != "FP" & phys_special != "PD") 
 //Medicare patients 
-gen temp = selfpay + medicaid + other_gov_ins + private_ins + hmo_pre_paid + other_pay
+gen temp = selfpay + medicaid + other_gov_ins + private_ins + hmo_pre_paid
 replace medicare = 0 if temp != 0  
-drop temp
 
 
 * 2) Drop observations with unknown payment
-drop if unknown_pay == 1 
+gen temp1 = selfpay + medicaid  + medicare + other_gov_ins + private_ins + hmo_pre_paid
+keep if temp1 == 1
 
 compress
 cd $data
@@ -69,7 +70,8 @@ save namcs91.dta, replace
 
 
 
-*		Preparing NAMCS91D:
+
+*	Preparing NAMCS91d:
 ****************************
 cd $raw
 use namcs91d_raw.dta , clear
@@ -102,22 +104,22 @@ gen midwest = geo_reg == 2
 gen south = geo_reg == 3
 gen west = geo_reg == 4
 
-gen specialist = (phys_special == "GP" | phys_special == "FP" | phys_special == "PD") 
-gen x = selfpay + medicaid + other_gov_ins + private_ins + hmo_pre_paid + other_pay
-replace medicare = 0 if x != 0
+gen specialist = (phys_special != "GP" & phys_special != "FP" & phys_special != "PD") 
+gen temp = selfpay + medicaid + private_ins + hmo_pre_paid
+replace medicare = 0 if temp != 0
 
 replace generic_status = 0 if generic_status == 2
 replace prescription_status = 0 if prescription_status == 2
 
 tab drug_class, gen (drug_class_)
-label variable drug_class_1 "Antimicrobial"
-label variable drug_class_2 "Cardiovascular-renals"
-label variable drug_class_3 "Central Nervous System"
-label variable drug_class_4 "Hormones"
-label variable drug_class_5 "Skin/Mucous Membranes"
-label variable drug_class_6 "Ophthalmics"
-label variable drug_class_7 "Pain Relief"
-label variable drug_class_8 "Respiratory Test"
+label variable drug_class_3 "Antimicrobial"
+label variable drug_class_5 "Cardiovascular-renals"
+label variable drug_class_6 "Central Nervous System"
+label variable drug_class_10 "Hormones"
+label variable drug_class_12 "Skin/Mucous Membranes"
+label variable drug_class_15 "Ophthalmics"
+label variable drug_class_17 "Pain Relief"
+label variable drug_class_19 "Respiratory Test"
 
 
 ** 2.3) Create multisource indicator
@@ -140,13 +142,15 @@ foreach x in age female nonwhite hispanic medicare medicaid hmo_pre_paid private
 * 3) Keeping relevant variables
 ****************************
 //Dropping conditions
-keep if prescription_status == 1 & multisource == 1 & major_drug_class == 1 & order_of_drug == 1 & no_charge == 0 & unknown_pay == 0
-
+keep if prescription_status == 1 & multisource == 1 & major_drug_class == 1 & order_of_drug == 1  
+* (selfpay == 1 | medicaid == 1 | private_ins == 1 | hmo_pre_paid == 1 | medicare == 1)
+gen temp1 = selfpay + medicaid + medicare + private_ins + hmo_pre_paid
+keep if temp1 == 1
 
 keep ///
 drug_id drug_name generic_id generic_name generic_status drug_class drug_class_* ingredients ///
 age female nonwhite hispanic west northeast midwest south geo_reg specialist mean_* /// 
-selfpay medicare medicaid other_gov_ins private_ins hmo_pre_paid no_charge other_pay unknown_pay ///
+selfpay medicare medicaid private_ins hmo_pre_paid   ///
 geo_reg phys_special phys_type physician_id patient_id
 
 compress
@@ -162,7 +166,7 @@ save namcs91d.dta, replace
 
 ```{stata, collectcode=TRUE}
 
-* 		Table 1:
+* 	Table 1:
 ****************
 
 /* Comment:
@@ -177,19 +181,19 @@ Last, the footnote mentions that observations of patient visits in which the pat
 cd $data
 use namcs91.dta, clear
 
-qui eststo table1: estpost summarize age female nonwhite hispanic selfpay medicare medicaid  hmo_pre_paid specialist northeast midwest south west  if no_charge == 0
+qui eststo table1: estpost summarize age female nonwhite hispanic selfpay medicare medicaid private_ins other_gov_ins  hmo_pre_paid specialist northeast midwest south west
 
 cd $descriptive_tables
-
+ 
 esttab table1 using Table_1.rtf, replace  title("Summary Statistics for Overall NAMCS Patient Sample") cells ("mean(fmt(%12.2f)) sd(fmt(%12.2f))") nonumber noobs ///
-coeflabels(age "Age" female "Female" nonwhite "Nonwhite" hispanic "Hispanic" selfpay "Self-pay" medicare "Medicare" medicaid "Medicaid"  hmo_pre_paid "HMO/prepaid plan" ///
-specialist "Specialist" northeast "Northeast" midwest "Midwest" south "South" west "West" ) ///
-addnote("Notes: Sample size is 32,407. For further notes see table 1 notes in Hellerstein (1998); Sample size differs as data from different years is used" "Datasource: NAMSC91") ///
+coeflabels(age "Age" female "Female" nonwhite "Nonwhite" hispanic "Hispanic" selfpay "Self-pay" medicare "Medicare" medicaid "Medicaid" private_ins "Private/commercial" ///
+other_gov_ins "Other government insurance" hmo_pre_paid "HMO/prepaid plan" specialist "Specialist" northeast "Northeast" midwest "Midwest" south "South" west "West" ) ///
+addnote("Notes: Sample size is 32,407. For further notes see table 1 notes in Hellerstein (1998); Sample size differs as data from different years is used" "Datasource: NAMSC91")
 
 
 
 
-* 		Table 2:
+* 	Table 2:
 ****************
 
 /* Comment:
@@ -247,7 +251,7 @@ mat input table2 = ( ///
 * 3) Labelling and exporting:
 **************************************
 matrix rownames table2 = ///
-"Age" "Female" "Nonwhite" "Hispanic" "Self-Pay" "Medicare" "Medicaid" "Private" "HMO/prepaid plan" ///
+"Age" "Female" "Nonwhite" "Hispanic" "Self-Pay" "Medicare" "Medicaid" "Private/Commercial" "HMO/prepaid plan" ///
 "Specialist" "Northeast" "Midwest" "South" "West" "Full sample"
 matrix colnames table2 = "Mean" "Standard Deviation" "Proportion Generic"
 
@@ -258,7 +262,8 @@ cd $data
 
 
 
-* Table 3:
+
+* 	Table 3:
 ****************
 cd $data
 use namcs91d.dta, clear
@@ -284,9 +289,8 @@ collabels("Observations" "% Generics") noobs nonumber gaps refcat(3 "By drug cla
 
 
 
-* Figure 1:
+* 	Figure 1:
 *****************
-
 /* Comment:
 Visualizations of kernel densities vary heavily depending on the underlying specifications. 
 The three key specifications for recreating the figure are the density function, the bandwidth and whether/how to round the data.
@@ -317,8 +321,7 @@ graph export "Figure_1.png", replace
 
 
 
-
-* Figure 2:
+* 	Figure 2:
 *****************
 cd $data
 use namcs91d.dta, clear
@@ -375,27 +378,29 @@ use namcs91d.dta, clear
 xtset physician_id
 
 
+
 gen G = generic_status
 
-global C drug_class_1 drug_class_2 drug_class_3 drug_class_4 drug_class_5 drug_class_6 drug_class_8 /* drug classes */
+global C drug_class_3 drug_class_5 drug_class_6 drug_class_10 drug_class_12 drug_class_15 drug_class_19 	/* drug classes */
 
-global X age female hispanic nonwhite 											/* patient demographics */
+global X age female hispanic nonwhite 										/* patient demographics */
 
 global P medicare medicaid hmo_pre_paid private_ins								/* insurance */
 
-global S specialist																/* is phys a specialist */
+global S specialist												/* is phys a specialist */
 
-global R midwest south west														/* region */
+global R midwest south west											/* region */
 
-global X_dash mean_age mean_female mean_nonwhite mean_hispanic 					/* patient avgs */
+global X_dash mean_age mean_female mean_nonwhite mean_hispanic 							/* patient avgs */
 
-global P_dash mean_medicaid mean_medicare  mean_private_ins mean_hmo_pre_paid  	/* insurance avgs */
+global P_dash mean_medicaid mean_medicare mean_private_ins mean_hmo_pre_paid 		 			/* insurance avgs */
 
-* M and T must be ommitted due to missing state id
+* M and T are not included due to missing state id
 
 
 
-* 		Table 4:
+
+* 	Table 4:
 ****************
 return clear
 ereturn clear
@@ -414,7 +419,7 @@ mean_female "Percent female" mean_nonwhite "Percent black" mean_hispanic "Percen
 
 
 
-* 		Table 5:
+* 	Table 5:
 ****************
 return clear
 ereturn clear
@@ -430,29 +435,27 @@ coeflabels(drug_class_1 "Antimicrobials" drug_class_2 "Cardiovascular-renals" dr
 addnote("Notes: The ommitted drug category is pain relief" "Datasource: NAMSC91") mtitles("Random-Effects Probit Coefficient" "% Change in Generic") 
 
 
-
-* Table 6:
+* 	Table 6:
 ****************
 return clear
 ereturn clear
 eststo clear
 
-foreach x in 1 2 3 4 5 6 7 8 {
+foreach x in 3 5 6 10 12 15 17 19 {
 
 * Estimating and saving the coefs
-eststo c_`x': quietly xtprobit G  $X $P $S $R $X_dash $P_dash if drug_class_`x' == 1, re
+eststo c_`x': quietly xtprobit G $X $P $S $R $X_dash $P_dash  if drug_class_`x' == 1, re
 * Estimating and saving the marginal effects (AME, see table footer)
-eststo m_`x': qui margins, dydx($P) post 
+eststo m_`x': qui margins, dydx($P) post
 }
 
 
-esttab c_1 m_1 c_2 m_2 c_3 m_3 c_4 m_4 c_5 m_5 c_6 m_6 c_7 m_7 c_8 m_8 using Table6.rtf, replace ///
+esttab c_3 m_3 c_5 m_5 c_6 m_6 c_10 m_10 c_12 m_12 c_15 m_15 c_17 m_17 c_19 m_19 using Table6.rtf, replace ///
 nostar nopar  keep($P)  noobs b(2)  order(medicaid medicare private_ins hmo_pre_paid) ///
 refcat(medicare "Medicare" medicaid "Medicaid" hmo_pre_paid "HMO/Prepaid" private_ins "Private", nolabel) ///
 coeflabels(medicare "Coefficient" medicaid "Coefficient" hmo_pre_paid "Coefficient" private_ins "Coefficient") ///
-mtitle("Antimicrobial" "m1" "Cardiovaskulars" "m2" "Central Nervous System" "m3" "Hormones" " m4" "Skin/Muchous Membranes" "m5" "Ophthalmics" ///
-"m6" "Pain relief" "m7" "Respiratory Tract" "m8" ) nonumbers eqlabels(none) collabels(none) nonumbers compress
-
+mtitle("Antimicrobial" "% change" "Cardiovaskulars" "% change" "Central Nervous System" "% change" "Hormones" "% change" "Skin/Muchous Membranes" "% change" "Ophthalmics" ///
+"% change" "Pain relief" "% change" "Respiratory Tract" "% change" ) nonumbers eqlabels(none) collabels(none) nonumbers compress
 
 
 * Tables 7, 8 and 9 are not reproducible, due to missing state id in the publically available data sets
