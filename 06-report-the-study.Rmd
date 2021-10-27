@@ -167,6 +167,7 @@ When looking at the distribution of insurance coverage, we see that the frequenc
 
 **Table 1 - Summary Statistics for Overall NAMCS Patient Sample**
 
+
 |    Variable                       |     mean     |     sd       |
 |-----------------------------------|--------------|--------------|
 |     Age                           |     43.07    |     24.81    |
@@ -186,6 +187,7 @@ When looking at the distribution of insurance coverage, we see that the frequenc
 |     West                          |     0.24     |     0.43     |
 
 
+
 Notes: Sample size is 29,854. For further notes see table 1 notes in Hellerstein (1998); Sample size differs as we use data from a different year. However, the public data from 1989 (the one Hellerstein uses) allows for reproduction of table 1. With the specifications we infer from her paper, we cannot perfectly reproduce the table.  (Datasource: NAMSC91)
 
 
@@ -193,6 +195,7 @@ Table 2 shows very similar statistics for the patients of the NAMCSd sample comp
 
 
 **Table 2 - Summary Statistics for Patients in NAMCS Drug Sample**
+
 
 |                    | Mean  | Standard Deviation | Proportion Generic |
 |--------------------|-------|--------------------|--------------------|
@@ -212,12 +215,14 @@ Table 2 shows very similar statistics for the patients of the NAMCSd sample comp
 | West               | 0.23  | 0.42               | 0.35               |
 | Full sample        |       |                    | 0.28               |
 
+
 Notes: The sample size is 7,715. For further notes see Hellerstein (1998), Datasource: NAMSCd91
 
 Table 3 shows the absolute number of observations and the share of generics over all drugs as well as the 8 largest drug categories. We see an overall similar generic share over all drug classes compared to [@hellerstein_importance_1998]. Yet in the drug class pain relief we see an increase of generic share by about $9%$. 
 
 
 **Table 3 - Frequency of Generic Prescription by Drug Class**
+
 
 |                                     |     Observations    |     %   Generics    |
 |-------------------------------------|---------------------|---------------------|
@@ -237,6 +242,7 @@ Table 3 shows the absolute number of observations and the share of generics over
 
 **Figure 1 - Distribution of Physician Generic Prescription Rates (Source: NAMSCd91)**
 
+
 The distribution of physicians over the different generic prescription rates (figure 1) is similar to Hellerstein (1998).
 
 
@@ -248,6 +254,7 @@ knitr::include_graphics(paste(path,"/Hellerstein_Fig_1.png",sep=""))
 
 
 **Figure 2 - Physician decisions for physicians who prescribe a drug to at least six patients (Source: NAMSCd91)**
+
 
 When looking at figure 2, we see a decrease from about 90% to about 50% in *"only trade name"* prescriptions by physicians. This seems to be driven by a rather small increase of prescription of *"both versions"* and *"only generics"*. 
 
@@ -265,6 +272,7 @@ This restricts us from comparing the results of the years 1991 and 1989, however
 
 
 **Table 4 Estimated Coefficients on Demographic Variables, Geographic Variables, and Average Characteristics for Full Sample, excluding regional identifiers**
+
 
 |                                |     Random-Effects   Probit Coefficient    |                |     %   Change in Generic    |                |
 |--------------------------------|--------------------------------------------|----------------|------------------------------|----------------|
@@ -286,6 +294,7 @@ This restricts us from comparing the results of the years 1991 and 1989, however
 |     South                      |     -0.206*                                |     (-2.28)    |     -0.052*                  |     (-2.29)    |
 |     West                       |     0.065                                  |     (0.67)     |     0.016                    |     (0.67)     |
 
+
 Notes: $*p < 0.05, **p < 0.01, ***p < 0.001$; The sample size is 7,715. For further notes see Hellerstein (1998); Datasource: NAMSCd91
 
 
@@ -293,6 +302,7 @@ Table 5 shows the estimated coefficients for the 8 largest drug classes as well 
 
 
 **Table 5 - Estimated Coefficients for Drug-Class Dummy Variable for Full Sample**
+
 
 |                                     |     Random-Effects   Probit Coefficient    |                |     %   Change in Generic    |                |
 |-------------------------------------|--------------------------------------------|----------------|------------------------------|----------------|
@@ -306,12 +316,14 @@ Table 5 shows the estimated coefficients for the 8 largest drug classes as well 
 |     Resperatory tract               |     -0.675***                              |     (-4.79)    |     -0.171***                |     (-4.80)    |
 
 	
+	
 Notes: $*p < 0.05, **p < 0.01, ***p < 0.001$; The sample size is 7,715. Omitted category is pain relief. For further notes see Hellerstein (1998); Datasource: NAMSCd91
 
 
 
 
 **Table 6 - Tests for Moral Hazard for the Full Sample Equality of Individual Insurance Variables with Self-Payment Random-Effects Probit Results**
+
 
 |                    |     Antimicrobial    |     %   change    |     Cardiovaskulars    |     %   change    |     Central   Nervous System    |     %   change    |     Hormones    |     %   change    |     Skin/Muchous   Membranes    |     %   change    |     Ophthalmics    |     %   change    |     Pain   relief    |     %   change    |     Respiratory   Tract    |     %   change    |
 |--------------------|----------------------|-------------------|------------------------|-------------------|---------------------------------|-------------------|-----------------|-------------------|---------------------------------|-------------------|--------------------|-------------------|----------------------|-------------------|----------------------------|-------------------|
@@ -330,6 +342,7 @@ Notes: $*p < 0.05, **p < 0.01, ***p < 0.001$; The sample size is 7,715. Omitted 
 |     HMO/Prepaid    |                      |                   |                        |                   |                                 |                   |                 |                   |                                 |                   |                    |                   |                      |                   |                            |                   |
 |     Coefficient    |     0.22             |     0.06          |     -0.14              |     -0.03         |     0.32                        |     0.06          |     -0.33       |     -0.07         |     -0.42                       |     -0.04         |     -0.57          |     -0.11         |     0.28             |     0.04          |     -0.26                  |     -0.02         |
 |                    |     1.78             |     1.78          |     -0.56              |     -0.56         |     1.04                        |     1.05          |     -1.09       |     -1.09         |     -0.73                       |     -0.73         |     -0.93          |     -0.93         |     0.71             |     0.72          |     -0.26                  |     -0.25         |
+
 
 Notes: see Hellerstein (1998); Datasource: NAMSCd91
 
