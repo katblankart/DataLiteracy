@@ -20,9 +20,9 @@ The subsequent Stata program reproduces the empirical analyses of: Hellerstein, 
 This file contains program code for data preparation, reproduction of the descriptive tables and figures, and reproduction of the empirical analyses and tables.
 The structure of this file is as follows:
 
-1. Preparing the data (Section \@ref(run-study))
-2. Descriptive statistics (Section \@ref(analyzing))
-3. Empirical analyses (Section \@ref(analyzing) and Section \@ref(report-study))
+1. Preparing the NAMCS and NAMCSd data (Section \@ref(run-study))
+2. Descriptive statistics using NAMCS and NAMCSd data (Section \@ref(analyzing))
+3. Empirical analyses using NAMCSd data (Section \@ref(analyzing) and Section \@ref(report-study))
 		
 		
 ## Preparing the data {#A1}
@@ -71,7 +71,7 @@ save namcs91.dta, replace
 
 
 
-*	Preparing NAMCS91D:
+*	Preparing NAMCS91d:
 ****************************
 cd $raw
 use namcs91d_raw.dta , clear
@@ -166,7 +166,7 @@ save namcs91d.dta, replace
 
 ```{stata, collectcode=TRUE}
 
-* 		Table 1:
+* 	Table 1:
 ****************
 
 /* Comment:
@@ -291,7 +291,6 @@ collabels("Observations" "% Generics") noobs nonumber gaps refcat(3 "By drug cla
 
 * 	Figure 1:
 *****************
-
 /* Comment:
 Visualizations of kernel densities vary heavily depending on the underlying specifications. 
 The three key specifications for recreating the figure are the density function, the bandwidth and whether/how to round the data.
@@ -319,7 +318,6 @@ xlabel(0 (0.1) 1) lc(black)
 
 cd $descriptive_figures
 graph export "Figure_1.png", replace
-
 
 
 
@@ -395,9 +393,9 @@ global R midwest south west											/* region */
 
 global X_dash mean_age mean_female mean_nonwhite mean_hispanic 							/* patient avgs */
 
-global P_dash mean_medicaid mean_medicare  mean_private_ins mean_hmo_pre_paid 		 			/* insurance avgs */
+global P_dash mean_medicaid mean_medicare mean_private_ins mean_hmo_pre_paid 		 			/* insurance avgs */
 
-* M and T must be ommitted due to missing state id
+* M and T are not included due to missing state id
 
 
 
