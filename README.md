@@ -20,5 +20,5 @@ After reading and applying the principles introduced in this study guide, you wi
 The study guide consists of five chapters that include the essential steps of a reproducible research project. Each step is covered in three parts.
   
 1. An introduction to the basics concepts and key terminology. 
-2. A resources box that includes reference material how to perform this step including main textbooks and references to current web resources with emphasise open source materials.
+2. A resources box that includes reference material on how to perform this step including main textbooks and references to current web resources with emphasise on open source materials.
 3. A showcase example of a reproduced empirical project based on the article of *Hellerstein, Judith K. 1998. “The Importance of the Physician in the Generic versus Trade-Name Prescription Decision.” The RAND Journal of Economics 29 (1): 108–36. https://doi.org/10.2307/2555818*.
