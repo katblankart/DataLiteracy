@@ -179,9 +179,9 @@ Several rankings may help to assess the quality of research you consider
 
 ## Example: Hellerstein (1998)
 
-As an illustration of the research process of formulating a hypothesis, designing the study, running the study and collecting the data, analysing the data and, finally, reporting the study, we provide an example by reproducing the study by Judith K. Hellerstein’s paper “The importance of the Physician in the Generic versus Trade-Name Prescription Decision” of 1998.
+As an illustration of the research process of formulating a hypothesis, designing a study, running a study, collecting and analyzing the data and, finally, reporting the study, we provide an example by reproducing Judith K. Hellerstein’s paper “The importance of the Physician in the Generic versus Trade-Name Prescription Decision” of 1998.
 
-With 434 citations on Google Scholar since 1998 and recent publications in top field journals such as Journal of Public Economics (2021), Journal of Health Economics (2019) and Health Economics (2019), Hellerstein’s (1998) paper has impacted literature over two decades. Using tools like “connected papers” or “citation gecko” can support you in finding the relevant literature that your project is linked to. The work of Hellerstein (1998) has impacted literature researching the role of physician behaviour and its influence on access, adoption and diffusion of health services, moral hazard and incentives in prescription and treatment decisions and the influence of different payment schemes as well as vast body of literature studying the pharmaceutical market.
+With 434 citations on Google Scholar since 1998 and recent publications in top field journals such as Journal of Public Economics (2021), Journal of Health Economics (2019) and Health Economics (2019), Hellerstein’s (1998) paper has impacted literature over two decades. Using tools like “connected papers” or “citation gecko” can support you in finding the relevant literature that your project is linked to. The work of Hellerstein (1998) has impacted literature researching the role of physician behavior and its influence on access, adoption and diffusion of health services, moral hazard and incentives in prescription and treatment decisions and the influence of different payment schemes as well as vast body of literature studying the pharmaceutical market.
 
 This includes research on:
 
@@ -191,11 +191,11 @@ This includes research on:
   - influence of patents and dynamics of market segmentation
 
 
-At the end of each chapter, we demonstrate insights into the study by Judith K. Hellerstein from 1998 [@hellerstein_importance_1998] that we reproduced.
+At the end of each chapter, we demonstrate insights into the study by Judith K. Hellerstein [@hellerstein_importance_1998] that we reproduce.
 
 ### **Relevance of the topic - escalating health expenditures**
 
-Worldwide, health systems face constantly increasing prescription drug expenditures. In the United States, the total prescription drug expenditure in 2020 marked about 358.7 billion US-Dollars [@statista_prescription_2020]. The prescription of generic drugs is an option in reducing the total health care expenditure. Generic drugs are bioequivalent in the active ingredients and can serve as a channel to contain prescription expenditure [@kesselheim_clinical_2008]. This as generic drugs are between 20 to 90 % cheaper than their trade name alternative [@dunne_review_2013].
+Worldwide, health systems face constantly increasing prescription drug expenditures. In the United States, the total prescription drug expenditure in 2020 marked about 358.7 billion US-Dollars [@statista_prescription_2020]. The prescription of generic drugs is an option in reducing the total health care expenditure. Generic drugs are bioequivalent in the active ingredients and can serve as a channel to contain prescription expenditure [@kesselheim_clinical_2008] as generic drugs are between 20 to 90 % cheaper than their trade name alternative [@dunne_review_2013].
  
 ### **Development of a research question - identifying the role of physician practice in choosing generic drugs**
 
