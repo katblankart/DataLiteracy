@@ -15,32 +15,32 @@ path <- "C:/Users/KFischer/Documents/GitHub/DataLiteracy/_bookdown_files/DataLit
 
 ## Basic steps when running the study and collecting the data
 
-In this step it is about to specify which data to use and collect the data. As this study guide focuses on secondary data, you will need to identify relevant data sources, obtain the source data and process the data. As many data sources are not primarily developed for the particular purpose of your study, you often will need to modify the source data to reflect the measurements of your $Y's,X's$ and $Z's$ you wish to examine in your causal model. It is also often that secondary data is not readily available for analysis such that you will need to collect and process these data (for example by writing program that extracts data from a website, search engine, or API, or by applying for permission to access the data).
+This step specifies which data to use and collect. As this study guide focuses on secondary data, you will need to identify relevant data sources, obtain the source data and process them. As many data sources are not primarily developed for the particular purpose of your study, you often will need to modify the source data to reflect the measurements of your $Y's,X's$ and $Z's$ you wish to examine in your causal model. It is also often that secondary data is not readily available for analysis such that you will need to collect and process these data (for example, by writing a program that extracts data from a website, search engine, or API, or by applying for permission to access the data).
 
 
 We will distinguish between **source data set(s)** and the **analysis data set** that you will be using to run the study.
 
 We point to the following distinction that will have implications on the resources needed to collect and process:
 
- - Secondary source data that is readily available and has been documented earlier (for example panels)
- - Secondary source data that you will need to process for the purpose of your study (for example by use of web-scraping, use of web-APIs, or extraction from data warehouses)
+ - Secondary source data that is readily available and has been documented earlier (for example, panels)
+ - Secondary source data that you will need to process for the purpose of your study (for example, by use of web-scraping, use of web-APIs, or extraction from data warehouses)
 
 The following steps are typically performed when collecting the data:
 
 ### Identify secondary data sources
 
-Once you have designed the study, you can now search for appropriate data sources of your $X's$, $Y's$ and $Z's$. That means you investigate which data items of one or multiple secondary data source(s) you are using and how these items can be collected. It is part of this process that you document where, how and which data you gathered and processed. A codebook that includes a description of the content of the data source is such a piece of documentation. Specify exactly the variables that you will be extracting and any exclusions of the data source. If you are generating a dataset yourself from another source through scraping techniques, you equally need to document how the data are collected and processed, for example by sharing the corresponding script and a description of that data.
+Once you have designed the study, you can now search for appropriate data sources of your $X's$, $Y's$ and $Z's$. That means you investigate which data items of one or multiple secondary data source(s) you are using and how these items can be collected. You have to document where, how and which data you gathered and processed.  Specify exactly the variables that you will be extracting and any exclusions of the data source. If you are generating a dataset yourself from another source through scraping techniques, you also need to document how the data are collected and processed, for example, by sharing the corresponding script and a description of that data.
 
-You need to assess the suitability of the potential secondary data sources. Types and use of secondary data sources has been described across different disciplines, for example @hair_nature_2019 for business data, @eriksson_secondary_2016 for drug utilization studies, @fitchett_quantitative_2017 for social studies. It is important to assess the quality of the secondary data sources by criteria like the following [@hair_nature_2019]:
+You need to assess the suitability of the potential secondary data sources. Types and use of secondary data sources has been described across different disciplines, for example, @hair_nature_2019 for business data, @eriksson_secondary_2016 for drug utilization studies, @fitchett_quantitative_2017 for social studies. It is important to assess the quality of the secondary data sources by the following criteria [@hair_nature_2019]:
 
 - **measurement validity**: this may be difficult to assess, but you may want to look out for research that has used the data you aim to use as well
-- **reliability**:  is the source that you are using providing the data at sufficient quality (see more in Hair)
-- **potential bias** arises when the data do not measure what you want to measure. Biases may arise from for example, changes in the sample from which the data is collected (for example if an institution changes the way data are reported, if the sampled population is changing)
+- **reliability**:  is the source that you are using provide the data at sufficient quality (see more in Hair)?
+- **potential bias** arises when the data do not measure what you want to measure. Biases may arise from, for example, changes in the sample from which the data is collected (for example if an institution changes the way data are reported, if the sampled population is changing)
 
 
 ### Develop a data collection and analysis plan
 
-  - Use a data schema to describe how you combine different secondary data sets into your analysis data set.
+  - Use a data scheme to describe how you combine different secondary data sets into your analysis data set.
   - Even if there is only one source data set that you are using, you may need to think about how this data set needs to be processed to be fit for your final analysis purpose.
   - Pay attention to how different data sources are linked, that means are there unique identifiers of the invidual subjects that you are studying (for example identifiers for patients, physicians, firms, products). Are they equal across the different source data?
   - Per each data set, describe which variables or items you plan to collect and how you aim to process the source data to fit the purpose of your study.
