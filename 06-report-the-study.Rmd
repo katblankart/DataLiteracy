@@ -17,7 +17,7 @@ knitr::include_graphics(paste(path,"/comics.png",sep=""))
 
 Source: https://towardsdatascience.com/how-to-keep-your-research-projects-organized-part-1-folder-structure-10bd56034d3a
 
-By reporting your study you provide readers with the information necessary for them to assess the contribution of your study and the soundness of methods used, allows them to reproduce the study if they wish, and decide whether they agree with the conclusions that you draw given your data, methods, and results. Thus, from the instructions from your paper a reader should understand and be able to reproduce every table and figure.  
+By reporting your study you provide readers with the information necessary for them to assess its contribution and the soundness of methods used, allows them to reproduce the study if they wish, and decide whether they agree with the conclusions that you draw given your data, methods, and results. Thus, from the instructions from your paper a reader should understand and be able to reproduce every table and figure.  
 
 A research paper usually includes the following sections:
 
@@ -36,22 +36,22 @@ A research paper usually includes the following sections:
 
 We will briefly summarize each of these items. 
 
-The **Title** should be short (15 words or less) and reflect your research question. It needs to reflect the purpose (what is the question that you are addressing?), scope (i.e. if you cover a specific time period or population) of the study. Sometimes you might want to include the methods of your study in the title, if, e.g. you conduct a cohort study. All this information should help the reader to decide whether or not they are interested in reading it.
+The **Title** should be short (15 words or less) and reflect your research question. It needs to reflect the purpose (what is the question that you are addressing?), scope (i.e. if you cover a specific time period or population) of the study. Sometimes you might want to include the methods of your study in the title, if, e.g., you conduct a cohort study. All this information should help the reader to decide whether or not they are interested in reading it.
 
 The **Abstract** is usually around 300 words and includes a very short summary of your research question, data and methods used, main findings, and conclusions.
 
-The **Introduction** should be part of the paper that is written at the very end. It should motivate your research topic and give a more extensive overview of the context, data, methods and findings. You should provide context by referencing the existing literature regarding the things that we know and things that we do not know and then parlay the latter part into your research question. You need to interest your reader to a degree that they would want to continue reading the rest of your paper. The **Introduction** is said to the most important part of the paper, as you have to grab the readers' attention.
+The **Introduction** should be part of the paper that is written at the very end. It should motivate your research topic and give a more extensive overview of the context, data, methods and findings. You should provide context by referencing the existing literature regarding the things that we know and things that we do not know and then parlay the latter part into your research question. You need rase the interest of your reader to a degree that they would want to continue reading the rest of your paper. The **Introduction** is said to the most important part of the paper, as it has to grab the readers' attention.
 
 
-The **Previous literature review** are standard in economic papers. They are either included in the **Introduction** or are placed in a separate section. It contains a critical review of the most relevant and influential (well-cited) studies on the topic. It should also contain a summary and a connection how your study is related to what has been done before and how your study is going to contribute to it. 
+The **Previous literature review** is a standard in economic papers. It is either included in the **Introduction** or is placed in a separate section. It contains a critical review of the most relevant and influential (well-cited) studies on the topic. It also contains a summary and a connection how your study is related to what has been done before and how your study is going to contribute to it. 
 
-A significant part of your empirical project is conducting a thorough literature review. Once you choose your topic and pose a research question, one of the first thing you usually do is look at the previous research and theories related to the research problem. By doing this, you will create a comprehensive overview of all the published knowledge on your topic available to date. This will provide a description, summary, background, context, relevance, and critical evaluation to the research idea you are working on. The main purpose of the review is to provide an overview of sources you are considering and to convince the reader of the need to conduct the research in question, and to show how it fits into the larger field of study. It will help you to establish whether the topic has been researched before, and show what problems others faced during their research.
+A significant part of your empirical project is conducting a thorough literature review. Once you choose your topic and pose a research question, one of the first thing you usually do is look at the previous research and theories related to the research problem. By doing this, you will create a comprehensive overview of all the published knowledge on your topic available to date. This will provide a description, summary, background, context, relevance, and critical evaluation to the research idea you are working on. The main purpose of the review is to provide an overview of sources you are considering and to convince the reader of the need to conduct the research in question, and to show how it fits into and contributes to the study field. It will help you to establish whether the topic has been researched before, and show what problems others faced during their research.
 
 In a literature review, you need to identify and summarize key scholarly publications from the fields that are pertinent to your research topic. It should involve a thorough search of the main key words in the relevant databases and journals.
 
 The **Data** and variables section should contain a detailed information about the data source used in the paper as well as information about the variables used in the analysis.
 
-Describe the data you are using in your study in great detail. Is it a secondary data? Did you collect it yourself, if yes, how? Describe your sample and variable selection. 
+Describe the data you are using in your study in great detail. Is it a secondary data? Did you collect it yourself, if yes, how? Describe your sample and variable selection, provide descriptive statistics and graphs.
 
 The **Empirical method** section should in great detail describe the statistical method used in the paper and the assumptions that are necessary to be fulfilled in order to get an unbiased and consistent estimation of your parameter of interest. Also describe the limitations and how you addressed them.
 
@@ -75,7 +75,7 @@ You can also discuss implications of your study, for example for public policy. 
 
 Discuss any negative effects in your findings and the impact they had on your conclusion. You can also talk about next steps and the implications of your findings for future research.  
 
-The **Summary and conclusion** section is usually short and contains the most important information on the topic, findings and concluding remarks. It should reflect main points mentioned in the Introduction. 
+The **Summary and conclusion** section is usually short and contains the most important information on the topic, findings and concluding remarks. It should mirror  main points mentioned in the Introduction. 
 
 Here you should underline why your research matters and state the answer to your research question. Also state here any recommendations that can be made based on your findings. 
 
@@ -100,24 +100,24 @@ Source: [Fresno State Graduate Writing Studio.](http://www.fresnostate.edu/acade
 
 - producing a good empirical paper takes time. You should start working on it and drafting as soon as possible. 
 - allow yourself sufficient time for collecting and analyzing the data, writing and revising the paper. Writing a paper is a recursive process that will take many revisions.
-- read the text yourself and let others read it. (*"Is the text fun to read?"*, *"Would I want to read beyond the introduction myself?"*, *"Are the questions guiding the research comprehensible?"*)
-- keep it short. When editing ask yourself whether you can make the same point using fewer words?
+- read the text yourself and let others read it. (*"Is the text fun to read?"*, *"Would you want to read beyond the introduction yourself?"*, *"Are the questions guiding the research comprehensible?"*)
+- keep it short. When editing always ask yourself whether you can make the same point using fewer words. Is your writing clear, concise (not too wordy) and easy to follow?
 - avoid repetition. Repeating things uses extra space and tests readers' patience.  
 - use "I" in a single-author project, and "we" in the project with more than one author. 
 
-More principles on writing in economics are summarized in [Top Ten Rules of Economical Writing](http://www3.nccu.edu.tw/~jthuang/rules.html) and more comprehensively in [@mccloskey_economical_2019] abd by [@hall_how_2013]
+More principles on writing in economics are summarized in [Top Ten Rules of Economical Writing](http://www3.nccu.edu.tw/~jthuang/rules.html) and more comprehensively in @mccloskey_economical_2019 and by @hall_how_2013.
 
 
 ### General guidance on the use of language in the research paper
 
-- use present tense, that means *"in this paper I attempt to..."*
+- use present tense, that means *"in this paper I attempt to..."*, *"Hellerstein (1998) finds that..."* -- even though it was a while ago; *"Table 1 shows..."*, not *"Table 1 will show..."*
 - generally stick to one tense
 - use active voice
-- use in-text citations, that means *"Hellerstein (1998) finds that..."* -- even though it was a while ago; *"Table 1 shows..."*, not *"Table 1 will show..."*
+- use in-text citations, that means *"Hellerstein (1998) finds that..."* 
 - use simple and direct sentences. Keep them short.
 - check your paper for repetition and cut whenever you detect it in your paper.
 - try to be as clear as possible with a few words as possible.
-- place minor or secondary details and digressions from the main paragraph into footnotes.
+- place minor or secondary details and digressions from the main paragraph into footnotes, but use them sparingly.
 
 
 
