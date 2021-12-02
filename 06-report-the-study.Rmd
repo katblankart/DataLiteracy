@@ -256,7 +256,7 @@ knitr::include_graphics(paste(path,"/Hellerstein_Fig_1.png",sep=""))
 **Figure 2 - Physician decisions by physicians who prescribe a drug to at least six patients (Source: NAMSCd91)**
 
 
-When looking at figure 2, we see a decrease from about 90% to about 50% in *"only trade name"* prescriptions by physicians. This seems to be driven by a rather small increase of prescription of *"both versions"* and *"only generics"*. 
+When looking at figure 2, we see a decrease from about 90% to about 50% in *"only trade-name"* prescriptions by physicians. This seems to be driven by a rather small increase of prescription of *"both versions"* and *"only generics"*. 
 
 
 ```{r HellFig2, out.width='100%', fig.align='center', fig.cap='Physician decisions', echo=FALSE}
