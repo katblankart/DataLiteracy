@@ -191,11 +191,11 @@ This includes research on:
   - influence of patents and dynamics of market segmentation
 
 
-At the end of each chapter, we demonstrate insights into the study by Judith K. Hellerstein [@hellerstein_importance_1998] that we reproduce.
+At the end of each chapter, we demonstrate insights into the 1998 study by Judith K. Hellerstein that we reproduce.
 
 ### **Relevance of the topic - escalating health expenditures**
 
-Worldwide, health systems face constantly increasing prescription drug expenditures. In the United States, the total prescription drug expenditure in 2020 marked about 358.7 billion US-Dollars [@statista_prescription_2020]. The prescription of generic drugs is an option in reducing the total health care expenditure. Generic drugs are bioequivalent in the active ingredients and can serve as a channel to contain prescription expenditure [@kesselheim_clinical_2008] as generic drugs are between 20 to 90 % cheaper than their trade name alternative [@dunne_review_2013].
+Worldwide, health systems face constantly increasing prescription drug expenditures. In the United States, the total prescription drug expenditure in 2020 marked about 358.7 billion US-Dollars [@statista_prescription_2020]. The prescription of generic drugs is an option in reducing the total health care expenditure. Generic drugs are bioequivalent in the active ingredients and can serve as a channel to contain prescription expenditure [@kesselheim_clinical_2008] as generic drugs are between 20 to 90 % cheaper than their trade-name alternative [@dunne_review_2013].
  
 ### **Development of a research question - identifying the role of physician practice in choosing generic drugs**
 
@@ -210,7 +210,7 @@ For the purpose of this example we will focus on the reproduction of the second 
 
 ### **Hypothesis - insurance status drives generic drug use**
 
-We laid out the potential role of the physician in the prescription of generic vs. brand name drug, though literature mentions the potential influence of the patient. Hellerstein (1998) discusses that some patients may demand certain care more than others. If the prescription drug is reimbursed by the patient's health insurance, this may cause overconsumption. This behavior can potentially differ by the patient’s insurance scheme. A patient that has no insurance and, thus, does not get any reimbursement for prescription drugs, might have a higher incentive to demand cheaper generic drugs [@danzon_cross-national_2011] than a patient with insurance that covers prescription drugs, either generic or trade name. Given the United States have different insurance schemes with varying prescription drug coverage, it is of interest to investigate the role of a patient's insurance status in the physician's choice between generic vs. brand name drugs.
+We laid out the potential role of the physician in the prescription of generic vs. brand name drug, though literature mentions the potential influence of the patient. Hellerstein (1998) discusses that some patients may demand certain care more than others. If the prescription drug is reimbursed by the patient's health insurance, this may cause overconsumption. This behavior can potentially differ by the patient’s insurance scheme. A patient that has no insurance and, thus, does not get any reimbursement for prescription drugs, might have a higher incentive to demand cheaper generic drugs [@danzon_cross-national_2011] than a patient with insurance that covers prescription drugs, either generic or trade-name. Given the United States have different insurance schemes with varying prescription drug coverage, it is of interest to investigate the role of a patient's insurance status in the physician's choice between generic vs. brand name drugs.
 
 Hellerstein (1998) considers a patient's insurance status as a matter of dividing the study population in groups for which the choice between generic and brand name drugs differs. She hypothesises that *There is a relationship between the prescription of a generic drug and insurance status of the patient. * [@hellerstein_importance_1998].
 
