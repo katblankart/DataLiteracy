@@ -127,7 +127,7 @@ label variable drug_class_19 "Respiratory Test"
 *** 2.3.1) Create id for drugs with multiple ingrediants
 replace ingredients = generic_id if ingredients == .
 
-*** 2.3.2) Check whether there are both generic and tradename drugs for each ingredients
+*** 2.3.2) Check whether there are both generic and trade-name drugs for each ingredients
 bys ingredients: egen counter = mean(generic_status) 
 bys ingredients: gen multisource = (counter >0 & counter <1)
 drop counter
