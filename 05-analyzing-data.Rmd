@@ -154,7 +154,7 @@ Hellerstein applies a random effects probit regression model aggregated on physi
 
 **Dependent variable ($Y$)**
 
-  - $G$: *Generic compared to brand name drug use*
+  - $G$: *Generic compared to brand-name drug use*
   
 *Note that Hellerstein uses a somewhat different notation for the outcome variable which is denoted as $G$. Today, it is often common to denote this variable by $Y$.*
 	
