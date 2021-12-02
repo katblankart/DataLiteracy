@@ -219,7 +219,7 @@ Table 2 shows very similar statistics for the patients of the NAMCSd sample comp
 
 Notes: The sample size is 7,715. For further notes see Hellerstein (1998), Data source: NAMSCd91
 
-Table 3 shows the absolute number of observations and the share of generics over all drugs as well as the 8 largest drug categories. We see an overall similar generic share over all drug classes compared to @hellerstein_importance_1998. Yet in the drug class pain relief we see an increase of generic share by about $8.55$percentage points. 
+Table 3 shows the absolute number of observations and the share of generics over all drugs as well as the 8 largest drug categories. We see an overall similar generic share over all drug classes compared to @hellerstein_importance_1998. Yet in the drug class pain relief we see an increase of generic share by about $9$ percentage points. 
 
 
 **Table 3 - Frequency of Generic Prescription by Drug Class**
