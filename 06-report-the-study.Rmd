@@ -108,61 +108,28 @@ Source: [Fresno State Graduate Writing Studio.](http://www.fresnostate.edu/acade
 More principles on writing in economics are summarized in [Top Ten Rules of Economical Writing](http://www3.nccu.edu.tw/~jthuang/rules.html) and more comprehensively in @mccloskey_economical_2019 and by @hall_how_2013.
 
 
-### General guidance on the use of language in the research paper ([Lund Uniiversity](https://www.awelu.lu.se/language/register-and-style/dos-donts/))
+### General guidance on writing and use of language in a research paper ([Lund Uniiversity](https://www.awelu.lu.se/language/register-and-style/dos-donts/))
 
-- Do not use slang, jargon, or colloquialisms. Always us formal language.
+- Do not use slang, jargon, or colloquialisms. Always use formal language.
+- Do not use common vocabulary, such as *have got, the other thing*. Make more formal vocabulary choices, e.g., *have found, the other issue/problem/notion/idea  etc..*
 - Do not use shortened verb forms, such as *they're, isn't, can’t, don’t*. Use the full verb form instead, e.g., *they are, is not, cannot.*
-- Do not use common vocabulary, such as *have got, a lot, nice, the other thing*. Make more formal vocabulary choices, e.g., *have found, a great deal, attractive/ advantageous, the other issue/problem/notion/idea/topic etc..*
 - Do not use subjective language, i.e., *I think, we assume.* Use objective language.
+- Avoid using past or future tenses. Use present tense and generally stick to one tense: *"This paper attempts to..."*, *"Hellerstein (1998) finds that..."*; *"Table 1 shows..."*
 - Do not use passive voice, i.e., *It has been shown in the paper by Hellerstein (1998).* Use active voice, i.e., *Hellerstein (1998) shows…*
+- Do not use needless words and information that clutter the writing. Use simple and direct sentences, and keep them short. Make your writing clear and concise. For example, change *“in order to” to “to”, ”whether or not” to “whether”, “is equal to” to “equals”, “it should be noted” to “notably”.* Remove repetitive and redundant information.
+- Place minor or secondary details and digressions from the main text into footnotes, but use them sparingly.
+- Do not plagiarize. Provide references and citations whenever you say something that is not your own. Proper referencing and citations prevent acusations of plagiarisms, allow to acknowledge your sources, give credibility to your work, and demostrate your knowledge in the subject area. 
+- Use in-text citations: *"Hellerstein (1998) finds that..."* 
 - Do not mix British and American English, citation styles, tenses, and different word spellings. Be consistent in the use of language and style.
-- Do not use needless words and information that clutter the writing. Make your writing clear and concise. For example, change *“in order to” to “to”, ”whether or not” to “whether”, “is equal to” to “equals”, “it should be noted” to “notably”.* Remove repetitive and redundant information.
-- Do not get complacent after finishing the first draft of the manuscript. Revise, rewrite, polish, carefully proofread and spellcheck your work. Control the word count.
-- Do not plagiarize. Provide references and citations whenever you say something that is not your own.
-- Do not take for granted that the spell check on your computer is accurate or will spot all spelling
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-- use present tense: *"in this paper I attempt to..."*, *"Hellerstein (1998) finds that..."* -- even though it was a while ago; *"Table 1 shows..."*, not *"Table 1 will show..."*
-- generally stick to one tense
-- use active voice
-- use in-text citations: *"Hellerstein (1998) finds that..."* 
-- use simple and direct sentences. Keep them short.
-- check your paper for repetition and cut whenever you detect it in your paper.
-- try to be as clear as possible with a few words as possible.
-- place minor or secondary details and digressions from the main paragraph into footnotes, but use them sparingly.
-
+- Use automatic spellcheck, but never rely on it completely. Always double check for tricky words and proofread the text.
+- Do not get complacent after finishing the first draft of the manuscript. Revise, rewrite, polish, carefully proofread and spellcheck your work. Control the word count. 
 
 
 ### Tables
 
-- each table should be self-explanatory
-- use 2 to 4 digits after the comma when reporting the results, not all the numbers produced by the statistical program. 
-- show results with and without controls. For example, start with a column that includes only the main coeffitient(s) of interest and then progressively inlcude various controls (for example patient characteristics, hospital FEs, etc.) in subsequent columns. 
+- each table should be self-explanatory,
+- use 2 to 4 digits after the comma when reporting the results, not all the numbers produced by the statistical program,
+- show results with and without controls. For example, start with a column that includes only the main coeffitient(s) of interest and then progressively inlcude various controls (for example, patient characteristics, hospital/physician fixed effects, etc.) in subsequent columns. 
 
 
 ### Figures
