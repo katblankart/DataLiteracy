@@ -14,8 +14,9 @@ After reading and applying the principles introduced in this study guide, you wi
 
 1. Recognize the features of using secondary (health care) data in empirical research.
 2. Execute the steps of a reproducible research project.
-3. Be able to implement an empirical research project.
+3. Implement an empirical research project.
 4. Recall the steps taken to execute a reproducible research project using secondary data.
+
 
 ## Structure of the study guide
 
