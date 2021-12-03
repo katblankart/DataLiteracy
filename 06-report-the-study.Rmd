@@ -17,7 +17,7 @@ knitr::include_graphics(paste(path,"/comics.png",sep=""))
 
 Source: https://towardsdatascience.com/how-to-keep-your-research-projects-organized-part-1-folder-structure-10bd56034d3a
 
-By reporting your study you provide readers with the information necessary for them to assess its contribution and the soundness of methods used, allows them to reproduce the study if they wish, and decide whether they agree with the conclusions that you draw given your data, methods, and results. Thus, from the instructions from your paper a reader should understand and be able to reproduce every table and figure.  
+When reporting the study you should provide readers with the necessary information to reproduce every table and figure; to assess the appropriateness of methods used given your settings and data, and its contribution and conclusions, given your results.   
 
 A research paper usually includes the following sections:
 
@@ -34,7 +34,7 @@ A research paper usually includes the following sections:
 - Appendices 
 
 
-We will briefly summarize each of these items. 
+We briefly summarize each of these items (the following is based on @Greg Martin (2018)(https://www.youtube.com/watch?v=Vky9PDKx5KU)).
 
 The **Title** should be short (15 words or less) and reflect your research question. It needs to reflect the purpose (what is the question that you are addressing?), scope (i.e. if you cover a specific time period or population) of the study. Sometimes you might want to include the methods of your study in the title, if, e.g., you conduct a cohort study. All this information should help the reader to decide whether or not they are interested in reading it.
 
