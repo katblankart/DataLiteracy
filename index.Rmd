@@ -18,9 +18,9 @@ biblio-style: apalike
 
 ## Objective {-}
 
-The objective of this study guide is to provide a resource to graduate students, early career PhD candidates and researchers performing applied empirical research in economics and management sciences. The pratical application is in the field of analysis of health care markets using secondary data. Many textbook examples use readily available data sets for analysis of econometric problems. For students aiming to conduct research by generating their own analysis data set, important steps that lead to a final analysis data set are missing. Besides, many resources focus on labour economics problems. Resources that consider processing and generating secondary data are scarce. One reason is that often these data sources are subject to confientiality and data protection issues such these cannot be made available.
+The objective of this study guide is to provide a resource to graduate students, early career PhD candidates and researchers performing applied empirical research in economics and management sciences. The pratical application is in the field of analysis of health care markets using secondary data. Many textbook examples use readily available datasets for analysis of econometric problems. For students aiming to conduct research by generating their own analysis dataset, important steps that lead to a final analysis dataset are missing. Besides, many resources focus on labor economics problems. Resources that consider processing and generating secondary data are scarce. One reason is that often these data sources are subject to confientiality and data protection issues and as such cannot be made easily available.
 
-The objective of this study guide is to provide a resource that covers the major steps of a reproducible research project in 5 steps. We will introduce important terminology, highlight the relevant taks to be performed, and to provide key resources in the form of text books and websites available via open access. We aim to provide a concise guide that user of this guide can easily access when starting academic research. Each section is to be read within 10-15 minutes. For this reason, we will not cover any specific data science or econometric method, but point to the relevant resources. Therefore, users of this guide should have basic knowledge in statistics, econometrics and program evaluation. We further recommend basic knowledge in a statistical package such as R or Stata. For the study guide to be of most benefit, readers should have background knowledge and a research idea in mind while reading.
+This guide explains the 5 major steps needed to create a reproducible research project. We introduce important terminology, highlight the relevant tasks to be performed, and provide key resources in the form of text books and websites available via open access. We provide a concise guide that users can easily access when starting academic research. Each section takes about 10-15 minutes to read. We do not cover any specific data science or econometric method, but point to the relevant resources. Users of this guide should have basic knowledge in statistics, econometrics and program evaluation, as well as basic knowledge in statistical packages such as R or Stata. For the study guide to be of most benefit, readers should have background knowledge and a research idea in mind while reading.
 
 ## Learning objectives {-}
 
@@ -44,7 +44,7 @@ The study guide consists of five chapters that include the essential steps of a 
 
 ## This is a living document {-}
 
-How you can contribute to this study guide? Best practices how to perform reproducible research are constantly developing. We aim to keep resources up to date. If you come across a good open access resource or suggestions for improvement, please share it by emailing to:
+How can you contribute to this study guide? Best practices how to perform reproducible research are constantly developing. We aim to keep resources up to date. If you come across a good open access resource or suggestions for improvement, please share it by emailing to: elearning@fosteropenscience.eu
 
 # Acknowledgements {-}
 
@@ -54,7 +54,7 @@ Development of this resource has received funding by [*Data Literacy Education.n
 
 <!--## Open License and Credits
 
-This concise guide to reproducible research using secondary data is written as an Open Educational Resource to enable you to use this book in the best possible way. This work is therefore made available under Creative Commons Public Domain Dedication (CC0 1.0 Universal). You do not have to ask us permission to re-use and copy information from this handbook. Feel free to use information from the content session for your training slides or images that seem fitting in your training. Take note that some materials cited in this book might be copyright protected. If so, this will be indicated in the text. Please consider citing the handbook when using the content.
+This concise guide to reproducible research using secondary data is written as an Open Educational Resource to enable you to use this book in the best possible way. This work is therefore made available under Creative Commons Public Domain Dedication (CC0 1.0 Universal). You do not have to ask us permission to re-use and copy information from this handbook. Feel free to use information from the content section for your training slides or images that seem fitting in your training. Take note that some materials cited in this book might be copyright protected. If so, this will be indicated in the text. Please consider citing the handbook when using the content.
 
 We have tried to acknowledge all of our sources. If for some reason we have forgotten to provide you with proper credits it has not been done with malicious intent. Feel free to contact us at elearning@fosteropenscience.eu for any corrections.-->
 
