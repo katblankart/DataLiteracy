@@ -101,7 +101,7 @@ Source: [Fresno State Graduate Writing Studio.](http://www.fresnostate.edu/acade
 - producing a good empirical paper takes time. You should start working on it and drafting it as soon as possible. 
 - allow yourself sufficient time for collecting and analyzing the data, writing and revising the paper. Writing a paper is a recursive process that will take many revisions.
 - read the text yourself and let others read it. (*"Is the text interesting to read?"*, *"Would you want to read beyond the introduction yourself?"*)
-- keep it short. When editing always ask yourself whether you can make the same point using fewer words. Is your writing clear, concise (not too wordy) and easy to follow?
+- keep it short. When editing always ask yourself whether you can make the same point with fewer words. Is your writing clear, concise and easy to follow?
 - avoid repetition. Repeating things uses extra space and tests readers' patience.  
 - use "I" in a single-author project, and "we" in the project with more than one author. 
 
@@ -116,7 +116,7 @@ More principles on writing in economics are summarized in [Top Ten Rules of Econ
 - Do not use subjective language, i.e., *I think, we assume.* Use objective language.
 - Avoid using past or future tenses. Use present tense and generally stick to one tense: *"This paper attempts to..."*, *"Hellerstein (1998) finds that..."*; *"Table 1 shows..."*
 - Do not use passive voice, i.e., *It has been shown in the paper by Hellerstein (1998).* Use active voice, i.e., *Hellerstein (1998) shows…*
-- Do not use needless words and information that clutter the writing. Use simple and direct sentences, and keep them short. Make your writing clear and concise. For example, change *“in order to” to “to”, ”whether or not” to “whether”, “is equal to” to “equals”, “it should be noted” to “notably”.* Remove repetitive and redundant information.
+- Do not use needless words and information that clutter the writing. Use simple and direct sentences, and keep them short. For example, change *“in order to” to “to”, ”whether or not” to “whether”, “is equal to” to “equals”, “it should be noted” to “notably”.* Remove repetitive and redundant information.
 - Place minor or secondary details and digressions from the main text into footnotes, but use them sparingly.
 - Do not plagiarize. Provide references and citations whenever you say something that is not your own. Proper referencing and citations prevent acusations of plagiarisms, allow to acknowledge your sources, give credibility to your work, and demostrate your knowledge in the subject area. 
 - Use in-text citations: *"Hellerstein (1998) finds that..."* 
@@ -134,7 +134,7 @@ More principles on writing in economics are summarized in [Top Ten Rules of Econ
 
 ### Figures
 
-- use figures to show patterns in the data--they demonstrate it better that big tables with a lots of numbers, 
+- use figures to show patterns in the data--they demonstrate it better than big tables with numbers, 
 - label the axes properly,
 - provide self-explanatory captions.
 
@@ -157,6 +157,10 @@ More principles on writing in economics are summarized in [Top Ten Rules of Econ
 ### Videos
 
 - [Greg Martin (2018). How to write a paper.](https://www.youtube.com/watch?v=Vky9PDKx5KU)
+
+### Website
+
+- [Lund University. Academic Writing in English.](https://www.awelu.lu.se/language/register-and-style/dos-donts/)
 
 
 ## Example: Hellerstein (1998)
