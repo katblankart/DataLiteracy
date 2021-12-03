@@ -34,59 +34,56 @@ A research paper usually includes the following sections:
 - Appendices 
 
 
-We briefly summarize each of these items (the following is based on @Greg Martin (2018)(https://www.youtube.com/watch?v=Vky9PDKx5KU)).
+We briefly summarize each of these items (the following is based on [Greg Martin (2018)](https://www.youtube.com/watch?v=Vky9PDKx5KU)).
 
-The **Title** should be short (15 words or less) and reflect your research question. It needs to reflect the purpose (what is the question that you are addressing?), scope (i.e. if you cover a specific time period or population) of the study. Sometimes you might want to include the methods of your study in the title, if, e.g., you conduct a cohort study. All this information should help the reader to decide whether or not they are interested in reading it.
+The **Title** should be short (15 words or less) and reflect your research question. It usually contains the purpose (what is the question you are addressing?) and scope (if you cover a specific time period or population) of the study. You might also include the methods of your study in the title, if, e.g., you conduct a cohort study. All this information should help readers to decide whether or not they are interested in reading the paper.
 
 The **Abstract** is usually around 300 words and includes a very short summary of your research question, data and methods used, main findings, and conclusions.
 
-The **Introduction** should be part of the paper that is written at the very end. It should motivate your research topic and give a more extensive overview of the context, data, methods and findings. You should provide context by referencing the existing literature regarding the things that we know and things that we do not know and then parlay the latter part into your research question. You need rase the interest of your reader to a degree that they would want to continue reading the rest of your paper. The **Introduction** is said to the most important part of the paper, as it has to grab the readers' attention.
+The **Introduction** is said to the most important part of the paper as it has to grab the readers' attention. It should motivate your research topic and give a more extensive overview of the context, data, methods and findings. You should provide context by referencing the existing literature regarding the things that we know and things that we do not know and then parlay the latter part into your research question. You need to raise the interest of your readers to a degree that they would want to continue reading the rest of your paper. The **Introduction** should be written at the very end.
 
 
 The **Previous literature review** is a standard in economic papers. It is either included in the **Introduction** or is placed in a separate section. It contains a critical review of the most relevant and influential (well-cited) studies on the topic. It also contains a summary and a connection how your study is related to what has been done before and how your study is going to contribute to it. 
 
-A significant part of your empirical project is conducting a thorough literature review. Once you choose your topic and pose a research question, one of the first thing you usually do is look at the previous research and theories related to the research problem. By doing this, you will create a comprehensive overview of all the published knowledge on your topic available to date. This will provide a description, summary, background, context, relevance, and critical evaluation to the research idea you are working on. The main purpose of the review is to provide an overview of sources you are considering and to convince the reader of the need to conduct the research in question, and to show how it fits into and contributes to the study field. It will help you to establish whether the topic has been researched before, and show what problems others faced during their research.
+A thorough literature review constitutes a significant part of your empirical project. Once you choose your topic and pose a research question, the first thing you usually do is look at the previous literature related to the research problem. By doing this, you create a comprehensive overview of all published knowledge on your topic available to date. The main purpose of the review is to provide an overview of sources you are considering and to convince the reader of the need to conduct the research in question, and to show how it fits into and contributes to the study field. It helps you to establish whether the topic has been researched before, shows what problems others faced during their research, and helps to identify still open research gaps.
 
 In a literature review, you need to identify and summarize key scholarly publications from the fields that are pertinent to your research topic. It should involve a thorough search of the main key words in the relevant databases and journals.
 
-The **Data** and variables section should contain a detailed information about the data source used in the paper as well as information about the variables used in the analysis.
+The **Data** and variables section should contain a detailed information about the data sources used in the paper as well as information about the variables used in the analysis.
 
-Describe the data you are using in your study in great detail. Is it a secondary data? Did you collect it yourself, if yes, how? Describe your sample and variable selection, provide descriptive statistics and graphs.
+Describe the data you are using in your study in great detail. Is it a secondary data? Did you collect it yourself? If yes, how? Describe your sample and variable selection, provide descriptive statistics and graphs.
 
-The **Empirical method** section should in great detail describe the statistical method used in the paper and the assumptions that are necessary to be fulfilled in order to get an unbiased and consistent estimation of your parameter of interest. Also describe the limitations and how you addressed them.
+The **Empirical method** section should in great detail describe the statistical method used in the paper and the assumptions that are necessary to be fulfilled in order to get an unbiased and consistent estimation of your parameter of interest. Also describe the limitations and how you address them.
 
 Ideally, you should describe each step that readers should perform, if they would like to reproduce your results and conclusions.
 
 
-The **Results** section should contain a set of tables and figures that show your empirical results. Make sure that tables are reader-friendly and are easy to comprehend. Place figures and tables as close as possible to the place in the text where you first referred to them. 
+The **Results** section should contain a set of tables and figures that show your empirical results. Make sure that tables are reader-friendly and are easy to comprehend. Place figures and tables as close as possible to the place in the text where you first refer to them. 
 
 
-Do not discuss or explain the results in this section, and do not provide any interpretation or speculation here. Keep it factual and simply describe in words what the tables display. 
+Do not discuss or explain the results in this section, and do not provide any interpretation or speculation here. Keep it factual and simply describe in words what the tables and figures display. 
 
 
 The **Discussion** section should contain the interpretation and discussion of the results, as well as potential mechanisms, and suggest a direction for future research.
 
-You should start your discussion by reiterating your research question and based on your findings, state what you think an answer to your question is. Do not introduce any new data or results in this section. It should reflect only the results already presented in the paper. You need to interpret your results in the context of the literature that you identified and discussed in the Introduction and the Related Literature sections. 
+You should start your discussion by reiterating your research question and, based on your findings, state what you think an answer to your question is. Do not introduce any new data or results in this section. It should reflect only the results already presented in the paper. You need to interpret your results in the context of the literature that you identified and discussed in the **Introduction** and the **Related Literature** sections. 
 
-Are your findings consistent with what the other literature have found? Do your data fill the gap in the knowledge that you identified? Here you want to show how your work added to and extended the knowledge on the topic.
+Are your findings consistent with what the other literature has found? Do your data fill the gap in the knowledge that you identified? Here you want to show how your work adds to and extends the knowledge on the topic.
 
-You can also discuss implications of your study, for example for public policy. You also should acknowledge and discuss the limitations of the study here and what implications these limitations might have for the results. The more accurate, open and detailed you are about the limitations, the more credibility your results will have. Offer any alternative explanations for your findings. 
- 
+You can also discuss implications of your study, for example, for public policy. You also should acknowledge and discuss the limitations of the study here and what implications these limitations might have for the results. The more accurate, open and detailed you are about the limitations, the more credibility your results will have. Offer any alternative explanations for your findings. You can also talk about next steps and the implications of your findings for future research.  
 
-Discuss any negative effects in your findings and the impact they had on your conclusion. You can also talk about next steps and the implications of your findings for future research.  
-
-The **Summary and conclusion** section is usually short and contains the most important information on the topic, findings and concluding remarks. It should mirror  main points mentioned in the Introduction. 
+The **Summary and conclusion** section is usually short and contains the most important information on the topic, findings and concluding remarks. It should mirror  main points mentioned in the **Introduction**. 
 
 Here you should underline why your research matters and state the answer to your research question. Also state here any recommendations that can be made based on your findings. 
 
 At the very end of your paper you need to provide a complete list of **References**. The bibliography includes a compete list of academic papers and books referenced and cited in your study. 
 
-The easiest way to keep track of your reference list is to write down the information, i.e. the title, author(s), journal/book, publisher, and publication date, about the original source each time you use it. Decide in advance on one citation and reference style and follow it throughout the paper. 
+The easiest way to keep track of your reference list is to write down the information, i.e. the title, author(s), journal/book, publisher, and publication date, about the original source each time you use it. Decide in advance on one citation and reference style and follow it consistently throughout the paper. 
 
 
 The **Appendices** are a handy tool. In order to keep your main part of the paper focused, of reasonable length, and not overburdened, you can place all the still relevant, but secondary and less critical information, i.e. various robustness checks, descriptive statistics, etc., in appendices.
 
-As a careful researcher you will conduct and document a number of various robustness checks of your main results. However, once you confirm and verified that your results are robust, it does not make sense to keep all of the robustness checks in the main body of the paper. Appendices allow you to save space. You can just summarize what you did and refer to the tables in the appendix. Most journals provide possibilities of an online appendix or supplementary material. 
+As a careful researcher you will conduct and document a number of various robustness checks of your main results. However, once you confirm and verify that your results are robust, it does not make sense to keep all of the robustness checks in the main body of the paper. Appendices allow you to save space. You can just summarize what you did and refer to the tables in the appendix. Most journals provide possibilities of an online appendix or supplementary material. 
 
 
 ```{r paper_structure, out.width='80%', fig.align='center', fig.cap='Paper Structure', echo=FALSE}
