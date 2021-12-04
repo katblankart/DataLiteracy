@@ -45,7 +45,7 @@ The **Introduction** is said to the most important part of the paper as it has t
 
 The **Previous literature review** is a standard in economic papers. It is either included in the **Introduction** or is placed in a separate section. It contains a critical review of the most relevant and influential (well-cited) studies on the topic. It also contains a summary and a connection how your study is related to what has been done before and how your study is going to contribute to it. 
 
-A thorough literature review constitutes a significant part of your empirical project. Once you choose your topic and pose a research question, the first thing you usually do is look at the previous literature related to the research problem. By doing this, you create a comprehensive overview of all published knowledge on your topic available to date. The main purpose of the review is to provide an overview of sources you are considering and to convince the reader of the need to conduct the research in question, and to show how it fits into and contributes to the study field. It helps you to establish whether the topic has been researched before, shows what problems others faced during their research, and helps to identify still open research gaps.
+A thorough literature review constitutes a significant part of your empirical project. Once you choose your topic and pose a research question, the first thing you usually do is look at the previous literature related to the research problem. By doing this, you create a comprehensive overview of all published knowledge on your topic available to date. The main purpose of the review is to provide an overview of sources you are considering and to convince the reader of the need to conduct the research in question, and to show how it fits into and contributes to the study field. It helps you to establish whether the topic has been researched before, helps to identify limitations of previous research and still open research gaps.
 
 In a literature review, you need to identify and summarize key scholarly publications from the fields that are pertinent to your research topic. It should involve a thorough search of the main key words in the relevant databases and journals.
 
@@ -64,13 +64,13 @@ The **Results** section should contain a set of tables and figures that show you
 Do not discuss or explain the results in this section, and do not provide any interpretation or speculation here. Keep it factual and simply describe in words what the tables and figures display. 
 
 
-The **Discussion** section should contain the interpretation and discussion of the results, as well as potential mechanisms, and suggest a direction for future research.
+The **Discussion** section contains the interpretation and discussion of the results, as well as potential mechanisms, and suggest a direction for future research.
 
-You should start your discussion by reiterating your research question and, based on your findings, state what you think an answer to your question is. Do not introduce any new data or results in this section. It should reflect only the results already presented in the paper. You need to interpret your results in the context of the literature that you identified and discussed in the **Introduction** and the **Related Literature** sections. 
+Start your discussion by reiterating your research question and, based on your findings, state what you think an answer to your question is. Do not introduce any new data or results in this section. It should reflect only the results already presented in the paper. Interpret your results in the context of the literature that you identify and discuss in the **Introduction** and the **Related Literature** sections. 
 
-Are your findings consistent with what the other literature has found? Do your data fill the gap in the knowledge that you identified? Here you want to show how your work adds to and extends the knowledge on the topic.
+Are your findings consistent with what the other literature has found? Do your data fill the gap in the knowledge that you identify? Here you want to show how your work adds to and extends the knowledge on the topic.
 
-You can also discuss implications of your study, for example, for public policy. You also should acknowledge and discuss the limitations of the study here and what implications these limitations might have for the results. The more accurate, open and detailed you are about the limitations, the more credibility your results will have. Offer any alternative explanations for your findings. You can also talk about next steps and the implications of your findings for future research.  
+You can also discuss implications of your study for public policy. You also should acknowledge and discuss the limitations of the study here and what implications these limitations might have for the results. The more accurate, open and detailed you are about the limitations, the more credibility your results will have. Offer any alternative explanations for your findings. You can also talk about next steps and the implications of your findings for future research.  
 
 The **Summary and conclusion** section is usually short and contains the most important information on the topic, findings and concluding remarks. It should mirror  main points mentioned in the **Introduction**. 
 
@@ -93,13 +93,13 @@ knitr::include_graphics(paste(path,"/paperstructure.png",sep=""))
 Source: [Fresno State Graduate Writing Studio.](http://www.fresnostate.edu/academics/gradstudies/graduatewritingstudio.html) [Elements of a Research Paper.](https://fresnostategraduatewritingstudio.files.wordpress.com/2015/09/elements-of-a-research-paper.pdf)  
 
 
-### The writing process
+### The writing process CITE
 
 - producing a good empirical paper takes time. You should start working on it and drafting it as soon as possible. 
-- allow yourself sufficient time for collecting and analyzing the data, writing and revising the paper. Writing a paper is a recursive process that will take many revisions.
+- allow yourself sufficient time for collecting and analyzing the data, writing and revising the paper. Writing a paper is a recursive process that takes many revisions.
 - read the text yourself and let others read it. (*"Is the text interesting to read?"*, *"Would you want to read beyond the introduction yourself?"*)
 - keep it short. When editing always ask yourself whether you can make the same point with fewer words. Is your writing clear, concise and easy to follow?
-- avoid repetition. Repeating things uses extra space and tests readers' patience.  
+- avoid repetition. It uses extra space and tests readers' patience.  
 - use "I" in a single-author project, and "we" in the project with more than one author. 
 
 More principles on writing in economics are summarized in [Top Ten Rules of Economical Writing](http://www3.nccu.edu.tw/~jthuang/rules.html) and more comprehensively in @mccloskey_economical_2019 and by @hall_how_2013.
