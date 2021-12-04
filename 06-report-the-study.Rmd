@@ -34,13 +34,13 @@ A research paper usually includes the following sections:
 - Appendices 
 
 
-We briefly summarize each of these items (the following is based on [Greg Martin (2018)](https://www.youtube.com/watch?v=Vky9PDKx5KU)).
+We briefly summarize each of these items (the following is based on [Cochrane, 2005](http://mayoral.iae-csic.org/timeseries_bgse13/phd_paper_writing.pdf), [Martin, 2018](https://www.youtube.com/watch?v=Vky9PDKx5KU), and [Nikolov, 2020](https://mpra.ub.uni-muenchen.de/105088/1/MPRA_paper_105088.pdf)).
 
 The **Title** should be short (15 words or less) and reflect your research question. It usually contains the purpose (what is the question you are addressing?) and scope (if you cover a specific time period or population) of the study. You might also include the methods of your study in the title, if, e.g., you conduct a cohort study. All this information should help readers to decide whether or not they are interested in reading the paper.
 
-The **Abstract** is usually around 300 words and includes a very short summary of your research question, data and methods used, main findings, and conclusions.
+The **Abstract** is usually around 100-150 words and includes a very short summary of your research question, main contribution, data and methods used, main findings, and conclusions.
 
-The **Introduction** is said to the most important part of the paper as it has to grab the readers' attention. It should motivate your research topic and give a more extensive overview of the context, data, methods and findings. You should provide context by referencing the existing literature regarding the things that we know and things that we do not know and then parlay the latter part into your research question. You need to raise the interest of your readers to a degree that they would want to continue reading the rest of your paper. The **Introduction** should be written at the very end.
+The **Introduction** is said to the most important part of the paper as it has to grab the readers' attention. It should motivate your research topic and give a more extensive overview of the context, data, methods and findings. You should provide context by referencing the existing literature regarding the things that we know and things that we do not know and then parlay the latter part into your research question. You need to raise the interest of your readers to a degree that they would want to continue reading the rest of your paper. The **Introduction** should be written at the very end and should not take up more than 3 pages. 
 
 
 The **Previous literature review** is a standard in economic papers. It is either included in the **Introduction** or is placed in a separate section. It contains a critical review of the most relevant and influential (well-cited) studies on the topic. It also contains a summary and a connection how your study is related to what has been done before and how your study is going to contribute to it. 
@@ -53,15 +53,15 @@ The **Data** and variables section should contain a detailed information about t
 
 Describe the data you are using in your study in great detail. Is it a secondary data? Did you collect it yourself? If yes, how? Describe your sample and variable selection, provide descriptive statistics and graphs.
 
-The **Empirical method** section should in great detail describe the statistical method used in the paper and the assumptions that are necessary to be fulfilled in order to get an unbiased and consistent estimation of your parameter of interest. Also describe the limitations and how you address them.
+The **Empirical method** section should in great detail describe the statistical method used in the paper and the assumptions that are necessary to be fulfilled in order to get an unbiased and consistent estimation of your parameter of interest. Also describe the empirical problems and how you address them.
 
 Ideally, you should describe each step that readers should perform, if they would like to reproduce your results and conclusions.
 
 
-The **Results** section should contain a set of tables and figures that show your empirical results. Make sure that tables are reader-friendly and are easy to comprehend. Place figures and tables as close as possible to the place in the text where you first refer to them. 
+The **Results** section should contain a set of tables and figures that show your main empirical results. Explain the economic significance of your results, not just their statistical significance. Make sure that tables are reader-friendly and are easy to comprehend. Place figures and tables as close as possible to the place in the text where you first refer to them. Follow the main results with limited responses to potential criticisms and robustness checks (most of these should go in your Appendix). 
 
 
-Do not discuss or explain the results in this section, and do not provide any interpretation or speculation here. Keep it factual and simply describe in words what the tables and figures display. 
+Do not discuss the results in this section, and do not provide any interpretation or speculation here. Keep it factual and simply describe in words what the tables and figures display. 
 
 
 The **Discussion** section contains the interpretation and discussion of the results, as well as potential mechanisms, and suggest a direction for future research.
@@ -72,7 +72,7 @@ Are your findings consistent with what the other literature has found? Do your d
 
 You can also discuss implications of your study for public policy. You also should acknowledge and discuss the limitations of the study here and what implications these limitations might have for the results. The more accurate, open and detailed you are about the limitations, the more credibility your results will have. Offer any alternative explanations for your findings. You can also talk about next steps and the implications of your findings for future research.  
 
-The **Summary and conclusion** section is usually short and contains the most important information on the topic, findings and concluding remarks. It should mirror  main points mentioned in the **Introduction**. 
+The **Summary and conclusion** section should be short and sweet (a paragraph or two). It contains the most important information on the topic, findings and concluding remarks. It should mirror main points mentioned in the **Introduction**. 
 
 Here you should underline why your research matters and state the answer to your research question. Also state here any recommendations that can be made based on your findings. 
 
@@ -93,19 +93,24 @@ knitr::include_graphics(paste(path,"/paperstructure.png",sep=""))
 Source: [Fresno State Graduate Writing Studio.](http://www.fresnostate.edu/academics/gradstudies/graduatewritingstudio.html) [Elements of a Research Paper.](https://fresnostategraduatewritingstudio.files.wordpress.com/2015/09/elements-of-a-research-paper.pdf)  
 
 
-### The writing process CITE
+### The writing process ([Cochrane, 2005](http://mayoral.iae-csic.org/timeseries_bgse13/phd_paper_writing.pdf) and [Dudenhefer, 2009](https://econ.duke.edu/sites/econ.duke.edu/files/file-attachments/Dudenhefer%2C%20Paul%20-%20Guide%20to%20Writing%20in%20Economics.pdf))
 
-- producing a good empirical paper takes time. You should start working on it and drafting it as soon as possible. 
-- allow yourself sufficient time for collecting and analyzing the data, writing and revising the paper. Writing a paper is a recursive process that takes many revisions.
-- read the text yourself and let others read it. (*"Is the text interesting to read?"*, *"Would you want to read beyond the introduction yourself?"*)
-- keep it short. When editing always ask yourself whether you can make the same point with fewer words. Is your writing clear, concise and easy to follow?
-- avoid repetition. It uses extra space and tests readers' patience.  
-- use "I" in a single-author project, and "we" in the project with more than one author. 
+- Producing a good empirical paper takes time. You should start working on it and drafting it as soon as possible. 
+- Allow yourself sufficient time for collecting and analyzing the data, writing and revising the paper. Writing a paper is a recursive process that takes many revisions.
+- Read the text yourself and let others read it. (*"Is the text interesting to read?"*, *"Would you want to read beyond the introduction yourself?"*)
+- Shorter is better: keep the paper short as possible. Every word must count. When editing always ask yourself whether you can make the same point with fewer words. Is your writing clear, concise and easy to follow? 
+- Avoid repetition. It uses extra space and tests readers' patience. If it is possible to cut a word, sentence or paragraph, then cut them out. 
+- Use "I" in a single-author project, and "we" in the project with more than one author. 
+- Pay attention to the writing style in the papers you read and admire.
+- Keep track of your resources as you work on your ideas. Do not rely on your memory when you come across information you might use in your paper. Invest in acurate note-keeping from the start. It will save you time and extra work when you draft your paper.
+
+
+
 
 More principles on writing in economics are summarized in [Top Ten Rules of Economical Writing](http://www3.nccu.edu.tw/~jthuang/rules.html) and more comprehensively in @mccloskey_economical_2019 and by @hall_how_2013.
 
 
-### General guidance on writing and use of language in a research paper ([Lund Uniiversity](https://www.awelu.lu.se/language/register-and-style/dos-donts/))
+### General guidance on writing and use of language in a research paper ([Cochrane, 2005](http://mayoral.iae-csic.org/timeseries_bgse13/phd_paper_writing.pdf), [Lund Uniiversity](https://www.awelu.lu.se/language/register-and-style/dos-donts/), and [Nikolov, 2020](https://mpra.ub.uni-muenchen.de/105088/1/MPRA_paper_105088.pdf))
 
 - Do not use slang, jargon, or colloquialisms. Always use formal language.
 - Do not use common vocabulary, such as *have got, the other thing*. Make more formal vocabulary choices, e.g., *have found, the other issue/problem/notion/idea  etc..*
@@ -113,23 +118,25 @@ More principles on writing in economics are summarized in [Top Ten Rules of Econ
 - Do not use subjective language, i.e., *I think, we assume.* Use objective language.
 - Avoid using past or future tenses. Use present tense and generally stick to one tense: *"This paper attempts to..."*, *"Hellerstein (1998) finds that..."*; *"Table 1 shows..."*
 - Do not use passive voice, i.e., *It has been shown in the paper by Hellerstein (1998).* Use active voice, i.e., *Hellerstein (1998) shows…*
-- Do not use needless words and information that clutter the writing. Use simple and direct sentences, and keep them short. For example, change *“in order to” to “to”, ”whether or not” to “whether”, “is equal to” to “equals”, “it should be noted” to “notably”.* Remove repetitive and redundant information.
-- Place minor or secondary details and digressions from the main text into footnotes, but use them sparingly.
+- Do not use needless words and information that clutter the writing. Use simple and direct sentences, and keep them short. For example, change *“in order to” to “to”, ”whether or not” to “whether”, “is equal to” to “equals”, “it should be noted” to “notably”.* 
+- Place minor or secondary details and digressions from the main text into footnotes, but use them sparingly. 
 - Do not plagiarize. Provide references and citations whenever you say something that is not your own. Proper referencing and citations prevent acusations of plagiarisms, allow to acknowledge your sources, give credibility to your work, and demostrate your knowledge in the subject area. 
-- Use in-text citations: *"Hellerstein (1998) finds that..."* 
-- Do not mix British and American English, citation styles, tenses, and different word spellings. Be consistent in the use of language and style.
+- Use in-text citations: *"Hellerstein (1998) finds that..."* Do not write *"Judith Hellerstein in 1998 journal article finds that..."*
+- Do not mix British and American English, citation styles, tenses, and different word spellings (e.g., health care vs healthcare, data set vs dataset, policy makers vs policymakers, sociao-economic vs socioeconomic, etc.). Be consistent in the use of language and style.
+- Remember that "long-run" as an adjective uses hyphen, while "long run" as a noun does not. 
 - Use automatic spellcheck, but never rely on it completely. Always double check for tricky words and proofread the text.
 - Do not get complacent after finishing the first draft of the manuscript. Revise, rewrite, polish, carefully proofread and spellcheck your work. Control the word count. 
+- Read a copy of [Strunk, W. Jr & White E. B. (1972). The Elements of Style](http://www.jlakes.org/ch/web/The-elements-of-style.pdf) and [Zinsser, W. (2001). On Writing Well](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwiCztfjrsr0AhXvR_EDHU3aAYsQFnoECA4QAQ&url=https%3A%2F%2Fteamwork.jacobs-university.de%2Fdownload%2Fattachments%2F49185212%2Fon-writing-well.pdf%3Fversion%3D1%26modificationDate%3D1527540932000%26api%3Dv2&usg=AOvVaw3eFZJabrSvWpKo5WxCAS6t).
 
 
-### Tables
+### Tables ([Cochrane, 2005.](http://mayoral.iae-csic.org/timeseries_bgse13/phd_paper_writing.pdf))
 
 - each table should be self-explanatory,
 - use 2 to 4 digits after the comma when reporting the results, not all the numbers produced by the statistical program,
 - show results with and without controls. For example, start with a column that includes only the main coeffitient(s) of interest and then progressively inlcude various controls (for example, patient characteristics, hospital/physician fixed effects, etc.) in subsequent columns. 
 
 
-### Figures
+### Figures ([Cochrane, 2005.](http://mayoral.iae-csic.org/timeseries_bgse13/phd_paper_writing.pdf))
 
 - use figures to show patterns in the data--they demonstrate it better than big tables with numbers, 
 - label the axes properly,
@@ -142,7 +149,7 @@ More principles on writing in economics are summarized in [Top Ten Rules of Econ
 
 - Varian, H. R. (2016). [How to build an economic model in your spare time.](https://journals.sagepub.com/doi/pdf/10.1177/0569434515627089) The American Economist, 61(1), 81-90.
 - Dudenhefer, P. (2009). [A guide to Writing in Economics. EcoTeach Center and Department of Economics, Duke University.](https://econ.duke.edu/sites/econ.duke.edu/files/file-attachments/Dudenhefer%2C%20Paul%20-%20Guide%20to%20Writing%20in%20Economics.pdf)
-- Nikolov, P. (2020). [Writing tips for economics research papers](http://www.people.fas.harvard.edu/~pnikolov/resources/writingtips.pdf)
+- Nikolov, P. (2020). [Writing tips for economics research papers](https://mpra.ub.uni-muenchen.de/105088/1/MPRA_paper_105088.pdf)
 - [Cochrane, J. H.](https://www.johnhcochrane.com/) (2005). [Writing tips for Ph.D. students.](http://mayoral.iae-csic.org/timeseries_bgse13/phd_paper_writing.pdf) Chicago, IL: University of Chicago.
 
 
@@ -150,10 +157,14 @@ More principles on writing in economics are summarized in [Top Ten Rules of Econ
 
 - Hall, G. M. (Ed.). (2013). [How to write a paper (5th ed). Wiley-Blackwell.](https://onlinelibrary.wiley.com/doi/book/10.1002/9781118488713)
 - McCloskey, D. N., & Ziliak, S. T. (2019). Economical Writing, Third Edition: Thirty-Five Rules for Clear and Persuasive Prose (Third Edition). University of Chicago Press.
+- Strunk, W. Jr & White E. B. (1972). [The Elements of Style](http://www.jlakes.org/ch/web/The-elements-of-style.pdf) - great general writing style book
+- Zinsser, W. (2001). [On Writing Well](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwiCztfjrsr0AhXvR_EDHU3aAYsQFnoECA4QAQ&url=https%3A%2F%2Fteamwork.jacobs-university.de%2Fdownload%2Fattachments%2F49185212%2Fon-writing-well.pdf%3Fversion%3D1%26modificationDate%3D1527540932000%26api%3Dv2&usg=AOvVaw3eFZJabrSvWpKo5WxCAS6t)
+
+
 
 ### Videos
 
-- [Greg Martin (2018). How to write a paper.](https://www.youtube.com/watch?v=Vky9PDKx5KU)
+- [Martin, G. (2018). How to write a paper.](https://www.youtube.com/watch?v=Vky9PDKx5KU)
 
 ### Website
 
