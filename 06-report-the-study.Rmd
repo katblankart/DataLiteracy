@@ -62,12 +62,19 @@ In a literature review, you need to identify and summarize key scholarly publica
 Importantly, a literature review should not simply consist of a series of paragraphs that summarize papers in no particular order. Instead, a good iterature review should be carefully constructed to tell a specific story: this is what others have done on my topic; this is what is unsatisfactory or missing from that research; and here is how I am going to fill this researh gap. Thus, through your literature review you should "sell" the value addded of your paper.
 
 A review serves a few functions. It gives you an opportunity to show that you are familiar with the main scholarly work in the field; to critically analyze and organize the body of research; to place your study in the context of other studies; and to lay a foundation and prime the reader about your contribution.
+ 
+You need to explain the appropriatness of the specific method you choose for the specific context. 
+
+Here you need to writ down your specific econometric equation and explain how variables are defines and measured. Mention key parameters of interest. 
+
+Sometimes a paper might contain a **Background** section that provides background information about a historical event or context, a specific country's health care system, or details about a specific policy or program in question. 
 
 
-Sometimes a paper might contain a **Background** section that provides background information about a (historical) event, health care system, etc. or details about a specific policy or program in question. 
+The **Data** and variables section should contain a detailed information about the data sources used in the paper as well as information about the variables used in the analysis. Identify your data sources and describe them, i.e. data-generating process, the unit and the number of observations, the population groups sampled, the time period during which the data were collected, the method of data collection, type of data (cross-sectional, panel, time series), main variables for your reseaarch question, etc. Mention any data limitations that might influence your results, i.e. small number of observations, survey response, missing observations, attrition or selection bias, over or underrepresentation of certain populations, etc. 
 
+Describe your sample and variable selection in great detail: how you construct your sample and which data manupulations you make. Provide descriptive statistics and graphs. Descriptive statistics usually includes means and standatd deviations of variables you use in your analysis. Sometimes you need to present this statistics for different subgroups, e.g., treatment and control, post and pre treatment. Point to the patterns that are easily observable from the summary statistics that can hep the reader better understand your analysis. 
 
-The **Data** and variables section should contain a detailed information about the data sources used in the paper as well as information about the variables used in the analysis. Identify your data sources and describe them, i.e. the number of observations, the population groups sampled, the time period during which the data were collected, the method of data collection, etc. Mention any data features that might influence your results, i.e. attrition or selection bias, over or underrepresentation of certain populations, self-reported variables. Describe your sample and variable selection in great detail: how you construct your sample and which data manupulations you make. Provide descriptive statistics and graphs. Generally, a good way to learn how to write a data section is to look in the related literature and pay attention to the information it includes. 
+Generally, a good way to learn how to write a data section is to look in the related literature and pay attention to the information it includes. 
 
 
 
@@ -83,6 +90,11 @@ The **Results** section should contain a set of tables and figures that show you
 
 Do not discuss the results in this section, and do not provide any interpretation or speculation here. Keep it factual and simply describe in words what the tables and figures display. 
 
+Present only the results and parameters that directly relate to your main hypothethis and story. Move secondary results into Appendix.Including too namy parameters and results can distract the reader from your main point. 
+
+You can describe your results in the framework of your main hypothesis narrative. You can guide the readers and focus their attention on the most important results from your anaylsis and in the right order. Interpret the coefficients only on the key variables.
+
+Discuss potentia biases and shortcoming to the internal validity and suggest ways to check them.
 
 The **Discussion** section contains the interpretation and discussion of the results, as well as potential mechanisms, and suggest a direction for future research.
 
@@ -92,16 +104,18 @@ Are your findings consistent with what the other literature has found? Do your d
 
 You can also discuss implications of your study for public policy. You also should acknowledge and discuss the limitations of the study here and what implications these limitations might have for the results. The more accurate, open and detailed you are about the limitations, the more credibility your results will have. Offer any alternative explanations for your findings. You can also talk about next steps and the implications of your findings for future research.  
 
-The **Summary and conclusion** section should be short and sweet (a paragraph or two). It contains the most important information on the topic, findings and concluding remarks. It should mirror main points mentioned in the **Introduction**. 
+Suggest different interpretation  and  any other possible mechnism that can explain the relationship between your main variables of interest.
+
+The **Summary and conclusion** section should be short and sweet (a few tight paragraphs). It contains the most important information on the topic, findings and concluding remarks. It should mirror main points mentioned in the **Introduction**. 
 
 Here you should underline why your research matters and state the answer to your research question. Also state here any recommendations that can be made based on your findings. 
 
-At the very end of your paper you need to provide a complete list of **References**. The bibliography includes a compete list of academic papers and books referenced and cited in your study. 
+At the very end of your paper you need to provide a complete list of **References**. The bibliography includes a compete list of academic papers and books referenced and cited in your study. Make sure that all your in-text citations  appear in the Reference list at the end of the paper. 
 
 The easiest way to keep track of your reference list is to write down the information, i.e. the title, author(s), journal/book, publisher, and publication date, about the original source each time you use it. Decide in advance on one citation and reference style and follow it consistently throughout the paper. 
 
 
-The **Appendices** are a handy tool. In order to keep your main part of the paper focused, of reasonable length, and not overburdened, you can place all the still relevant, but secondary and less critical information, i.e. various robustness checks, descriptive statistics, etc., in appendices.
+The **Appendices** are a handy tool. In order to keep your main part of the paper focused, of reasonable length, and not overburdened, you can place all the still relevant, but secondary and less critical information, i.e. various robustness checks, descriptive statistics, etc., in appendices. Make sure that you invoke the information located in the  Appendix with the in-text reference in your main body of teh paper.
 
 As a careful researcher you will conduct and document a number of various robustness checks of your main results. However, once you confirm and verify that your results are robust, it does not make sense to keep all of the robustness checks in the main body of the paper. Appendices allow you to save space. You can just summarize what you did and refer to the tables in the appendix. Most journals provide possibilities of an online appendix or supplementary material. 
 
@@ -155,16 +169,22 @@ More principles on writing in economics are summarized in [Top Ten Rules of Econ
 
 ### Tables ([Cochrane, 2005.](http://mayoral.iae-csic.org/timeseries_bgse13/phd_paper_writing.pdf))
 
-- each table should be self-explanatory,
-- use 2 to 4 digits after the comma when reporting the results, not all the numbers produced by the statistical program,
-- show results with and without controls. For example, start with a column that includes only the main coeffitient(s) of interest and then progressively inlcude various controls (for example, patient characteristics, hospital/physician fixed effects, etc.) in subsequent columns. 
+- Each table should be self-explanatory.
+- Use 2 to 4 digits after the comma when reporting the results, not all the numbers produced by the statistical program. Apply this rule consistentyl for all the tablles in your paper.
+- Show results with and without controls. For example, start with a column that includes only the main coeffitient(s) of interest and then progressively inlcude various controls (for example, patient characteristics, hospital/physician fixed effects, etc.) in subsequent columns. 
+- Name your variables in the table that they are self-explanatory.
+- Include standard errors together with your coefficients.
+- Indicate the source of the data at the bottom.
 
 
 ### Figures ([Cochrane, 2005.](http://mayoral.iae-csic.org/timeseries_bgse13/phd_paper_writing.pdf))
 
-- use figures to show patterns in the data--they demonstrate it better than big tables with numbers, 
-- label the axes properly,
-- provide self-explanatory captions.
+- Use figures to show patterns in the data--they demonstrate it better than big tables with numbers, 
+- Label the axes properly,
+- Add clear legends,
+- Do not color your figures since some readers will view/print your paper in the black-and-white mode,
+- Provide self-explanatory captions,
+- Indicate the source of the data at the bottom.
 
 
 ## Resources box
