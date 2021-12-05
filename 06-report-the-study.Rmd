@@ -45,16 +45,23 @@ The **Introduction** is the most important part of the paper as it has to grab t
 
 You need to raise the interest of your readers to a degree that they would want to continue reading the rest of your paper. The **Introduction** should be written at the very end and should not take up more than 3 pages. 
 
+**Introoductin** should be structured as a newspaper article -- where you first deliver the main message and information, and then provide details -- rather than a novel- -- where you first build up the narrative and only reach the story punchline at the very end.
 
-The **Previous literature review** is a standard in economic papers. It is either included in the **Introduction** or is placed in a separate section. It contains a critical review of the most relevant and influential (well-cited) studies on the topic. It also contains a summary and a connection how your study is related to what has been done before and how your study is going to contribute to it. 
+ An important aspect of introduction is to highlight your paper's contribution: how you improve the existing body of literature.
 
-A thorough literature review constitutes a significant part of your empirical project. Once you choose your topic and pose a research question, the first thing you usually do is look at the previous literature related to the research problem. By doing this, you create a comprehensive overview of all published knowledge on your topic available to date. The main purpose of the review is to provide an overview of sources you are considering and to convince the reader of the need to conduct the research in question, and to show how it fits into and contributes to the study field. It helps you to establish whether the topic has been researched before, helps to identify limitations of previous research and still open research gaps.
+The **Previous literature review** is a standard in economic papers. It is either included in the **Introduction** or is placed in a separate section. It contains a critical review of the most relevant and influential (well-cited) studies on the topic. It also contains a summary and a connection how your study is related to what has been done before and how your study is going to contribute to it (are you using new data? nre identification strategy? are youanswering a question more specifically? hw are you improving on a previous paper? ). 
+
+A thorough literature review constitutes a significant part of your empirical project. Once you choose your topic and pose a research question, the first thing you usually do is look at the previous literature related to the research problem. By doing this, you create a comprehensive overview of all published knowledge on your topic available to date. You can create a spreadsheet to organize your literature search, where you should include study and author(s) names, publication journal and year, identification strategy, main resuts, caveats and comments. Take notes on the papers you read. This will help you to summarize and organize your review once you are ready to write it.
+
+The main purpose of the review is to provide an overview of sources you are considering and to convince the reader of the need to conduct the research in question, and to show how it fits into and contributes to the study field. It helps you to establish whether the topic has been researched before, to identify limitations of previous research and still open research gaps. You do not need to mention every published paper on the topic, but you do need to cite the most important studies in the area and distinguish your paper from them. Literature reviews are selective: you only include papers that are useful for your argument.
+
+
 
 In a literature review, you need to identify and summarize key scholarly publications from the fields that are pertinent to your research topic. It should involve a thorough search of the main key words in the relevant databases and journals.
 
 Importantly, a literature review should not simply consist of a series of paragraphs that summarize papers in no particular order. Instead, a good iterature review should be carefully constructed to tell a specific story: this is what others have done on my topic; this is what is unsatisfactory or missing from that research; and here is how I am going to fill this researh gap. Thus, through your literature review you should "sell" the value addded of your paper.
 
-A review achieves a few things. It gives you an opportunity to show that you are familiar with the main literature in the field; to critically analyze and organize the body of research; to place your study in the context of other studies; and to highlight your contribution.
+A review serves a few functions. It gives you an opportunity to show that you are familiar with the main scholarly work in the field; to critically analyze and organize the body of research; to place your study in the context of other studies; and to lay a foundation and prime the reader about your contribution.
 
 
 Sometimes a paper might contain a **Background** section that provides background information about a (historical) event, health care system, etc. or details about a specific policy or program in question. 
