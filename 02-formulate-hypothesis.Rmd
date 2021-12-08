@@ -19,29 +19,28 @@ Source: [DLPNG](https://dlpng.com/png/6808837)
 
 ## Basic steps to formulate a hypothesis
 
-You decided to undertake a scientific project. Where do you start? First, you need to find a research question that interests you and formulate a hypothesis. We will introduce some key terminology, steps you can undertake and examples how to develop research questions. Note that there is no single best way to develop a research idea [@pischke_how_2012].
+You decide to undertake a scientific project. Where do you start? First, you need to find a research question that interests you and formulate a hypothesis. We will introduce some key terminology, steps you can take, and examples how to develop research questions. Note that there is no single best way to develop a research idea [@pischke_how_2012].
 
 *What if someone assigns a topic to me? For students attending undergraduate and graduate courses that often pick topics from a list, all of these steps are equally important and necessary. You still need to formulate a research question and a hypothesis. And it is important to clarify the relevance of your topic for yourself.*
 
 ### What is a hypothesis?
 
-A hypothesis is a statement that introduces your research question and suggests the results you might find in your research. You will test your hypothesis with your empirical analysis. Thus, hypothesis constitutes the main basis of your scientific investigation. You should be careful when creating it. 
+A hypothesis is a statement that introduces your research question and suggests the results you might find. It is an educated guess. You start by posing an economic question and formulate a hypothesis about this question. Then you test it with your data and empirical analysis and either accept or reject the hypothesis. It constitutes the main basis of your scientific investigation and you should be careful when creating it. 
 
-A hypothesis is an educated guess. You start by posing an economic question and formulate a hypothesis about this question. Then you test it with your data and analyses and either accept or reject the hypothesis.
 
 
 ### How do you develop a research question and formulate a hypothesis?
 
 When thinking about a research question [@trochim_problem_nodate],  you need to identify a topic that is
 
-- *Relevant*, important in the world and interesting to you as researcher: Does working on the topic excites you? You will spend many hours working on it. Therefore, it should be interesting and engaging enough for you to motivate your continued work on this topic.
+- *Relevant*, important in the world and interesting to you as a researcher: Does working on the topic excites you? You will spend many hours thinking aboout it and working on it. Therefore, it should be interesting and engaging enough for you to motivate your continued work on this topic.
 - *Specific*: not too broad and not too narrow
 - *Feasible* to research within a given timeframe: Is it possible to answer the research question based on your time budget, data and additional resources.
 
 
-How do you find a topic or develop a feasible research idea in the first place? Finding an idea is not difficult, the critical part is to find a **good** idea. How do you do that? There is no one specific way how one gets an idea, rather there is a myriad of ways how people come up with potential ideas [@varian_how_2016]. Once you decide on an idea, run it by a few people. That means approach your supervisor and other fellow students to see whether it is interesting enough to pursue it.
+How do you find a topic or develop a feasible research idea in the first place? Finding an idea is not difficult, the critical part is to find a **good** idea. How do you do that? There is no one specific way how one gets an idea, rather there is a myriad of ways how people come up with potential ideas (see, e.g., [@varian_how_2016]). Once you decide on an idea, run it by a few people: approach your supervisor and other fellow students to see whether it is interesting enough to pursue it.
 
-For example, you can find inspiration by
+You can find inspiration by
 
 - Looking at insights from the world around you: your own life and experiences, observe the behavior of people around you
 - Talking to people around you, experts, other students, family members
@@ -53,9 +52,9 @@ For example, you can find inspiration by
 	- How do these issues affect people's lives?
 
 
-You could in addition
+In addition you could
 
-- Go to virtual and in-person seminars, for example the [Essen Health Economics Seminar](https://www.goek.wiwi.uni-due.de/forschung/essen-health-economics-seminar/winter-2020-21/) 
+- Go to virtual and in-person seminars, for example, the [Essen Health Economics Seminar](https://www.goek.wiwi.uni-due.de/forschung/essen-health-economics-seminar/winter-2020-21/) 
 - Look at abstracts of scientific articles and working papers
 - Look at the literature in a specific field you are interested in, for example sceening complete issues of journals or editorials about certain research advancements. By reading this literature you might come up with the idea on how to extend and refine previous research.
 	
@@ -74,11 +73,11 @@ You could in addition
 - is possible to execute with the existing data sources.
 -->
 
-### Develop a Hypothesis
+### Develop a hypothesis
 
-Before you formulate your hypothesis, read up on the topic of interest. This reading should provide you with sufficient information to narrow down your research question. The research question comes from the topic you are contemplating. Once you find your question you need to develop a hypothesis. A hypothesis is your research question distilled into a one sentence statement. It presents a statement of your expectations regarding your research question's results. You propose to prove your hypothesis with your research by testing the relationship between two variables of interest. Thus, a hypothesis should be testable with the data at hand. There are two types of hypotheses: alternative or null. Null states that there is no effect. Alternative states that there is an effect. 
+Before you formulate your hypothesis, read up on the topic of interest. This should provide you with sufficient information to narrow down your research question.  Once you find your question you need to develop a hypothesis, which contains a statement of your expectations regarding your research question's results. You propose to prove your hypothesis with your research by testing the relationship between two variables of interest. Thus, a hypothesis should be testable with the data at hand. There are two types of hypotheses: alternative or null. Null states that there is no effect. Alternative states that there is an effect. 
 
-It should be noted that there is an alternative view on this that suggests one should not look at the literature too early on in the idea-generating process in order not to be influenced and shaped by someone else's ideas. According to this view you can spend some time (i.e. a few weeks) trying to develop your own original idea. Even if you end up with an idea that has already been pursued by someone else, this will still provide you with good practice in developing publishable ideas. After you have developed an idea and made sure that it was not yet investigated in the literature, you can start conducting a systematic literature review. By doing this, you can find some other interesting insights from the work of others that you can synthesize in your own work to produce something novel and original.
+There is an alternative view on this that suggests one should not look at the literature too early on in the idea-generating process to not be influenced and shaped by someone else's ideas ([@varian_how_2016].). According to this view you can spend some time (i.e. a few weeks) trying to develop your own original idea. Even if you end up with an idea that has already been pursued by someone else, this will still provide you with good practice in developing publishable ideas. After you have developed an idea and made sure that it was not yet investigated in the literature, you can start conducting a systematic literature review. By doing this, you can find some other interesting insights from the work of others that you can synthesize in your own work to produce something novel and original.
 
 
 <!--References
@@ -88,18 +87,18 @@ It should be noted that there is an alternative view on this that suggests one s
 -->
 
 
-### Identify Relevant Literature
+### Identify relevant literature
 
 For your research project you will need to identify and collect previous relevant literature. It should involve a thorough search of the keywords in relevant databases and journals. Place emphasis on articles from high-ranking journals with significant numbers of citations. This will give you an indication of the most influential and important work in the field. Once you identify and collect the relevant literature for your topic, you will need to **critically** synthesize it in your literature review.
 
-When you perform your literature review, consider theories that may inform your research question. For example when studying physician behavior, you may consider approaches made using principal-agency theory.
+When you perform your literature review, consider theories that may inform your research question. For example, when studying physician behavior you may consider  principal-agency theory.
 
 
-### Research question or literature review, a hen and egg problem?
+### Research question or literature review: a hen and egg problem?
 
-Whether you start reading the literature first or by developing an idea may depend on your stage (graduate student, early career researcher) and other goals. However, thinking freely about what you like to investigate first may help to critically develop a feasible and interesting research question.
+Whether you start reading the literature first or by developing an idea may depend on your level (graduate student, early career researcher) and other goals. However, thinking freely about what you like to investigate first may help to critically develop a feasible and interesting research question.
 
-We highlight an example how to start with investigating the real-world and subsequently posing a research question [@noauthor_how_2019;@noauthor_developing_2019;@schilbach_5_2019]. For example, based on your own observation you notice that people seem to spend extensive amount of time looking at their smartphones. Maybe even you yourself engage in the same behavior. In addition, you  read a BBC News article [Social media damages teenagers' mental health, report says](https://www.bbc.com/news/technology-55826238).
+We highlight an example how to start with investigating the real-world and subsequently posing a research question [@noauthor_how_2019;@noauthor_developing_2019;@schilbach_5_2019]. For example, based on your observation you notice that people spend extensive amount of time looking at their smartphones. Maybe even you yourself engage in the same behavior. In addition, you  read a BBC News article [Social media damages teenagers' mental health, report says](https://www.bbc.com/news/technology-55826238).
 
 ```{r social_media, out.width='100%', fig.align='center', fig.cap='Social media and mental health', echo=FALSE}
 knitr::include_graphics(paste(path,"/Social_media.png",sep=""))
@@ -107,19 +106,19 @@ knitr::include_graphics(paste(path,"/Social_media.png",sep=""))
 
 Source: [BBC](https://www.bbc.com/news/technology-55826238)
 
-You decided to translate this article and your observations into a research question. A **research question** could be: *How does daily social media use influence our mental health?* Before you formulate your hypothesis, read up on the topic of interest. This reading should provide you with sufficient information to narrow down your research question. Read economic, medical and other social science literature on the topic. There is likely to be a vast amount of non-econ literature from non-econ fields that are doing research on your topic of interest, for example psychology or neuroscience. Familiarize yourself with it and master it. Do not get distracted by different scientific methodologies and techniques that might seem not up-to-par to the economic studies (small sample sizes, endogeneity, uncovering association rather than causation, etc.), but rather focus on suggestions of potential mechanisms.
+You decide to translate this article and your observations into a **research question**: *How does social media use affect mental health?* Before you formulate your hypothesis, read up on the topic of interest. Read economic, medical and other social science literature on the topic. There is likely to be a vast amount of literature from non-econ fields that are doing research on your topic of interest, for example, psychology or neuroscience. Familiarize yourself with it and master it. Do not get distracted by different scientific methodologies and techniques that might seem not up-to-par to the economic studies (small sample sizes, endogeneity, uncovering association rather than causation, etc.), but rather focus on suggestions of potential mechanisms.
 
-A hypothesis is then your research question distilled into a one sentence statement. It presents a statement of your expectations regarding your research question's results. You propose to prove your hypothesis with your research by testing the relationship between two variables of interest. Thus, a hypothesis should be testable with the data at hand. There are two types of hypotheses: alternative or null. The **null*** hypothesis states that there is no effect. The **alternative** hypothesis states that there is an effect.
+A hypothesis is then your research question distilled into a one sentence statement, which presents your expectations regarding the results. You propose to prove your hypothesis by testing the relationship between two variables of interest with the data at hand. There are two types of hypotheses: alternative or null. The **null*** hypothesis states that there is no effect. The **alternative** hypothesis states that there is an effect.
 
 
-A hypothesis related to the above-stated research question could be: *The increased use of social media among teenagers leads to (is associated with) worse mental health outcomes, i.e. increased incidence of depression, worse well-being and lower self-esteem.* Your hypothesis suggests a direction of a relationship that you expect to find. It is not a blind guess, but is guided by your observations and existing evidence, that means the reports that you have collected. It is testable with scientific research methods, that means by using statistical analysis of the relevant data.  
+A hypothesis related to the above-stated research question could be: *The increased use of social media among teenagers leads to (is associated with) worse mental health outcomes, i.e. increased incidence of depression, eating disorders, worse well-being and lower self-esteem.* It suggests a direction of a relationship that you expect to find that is guided by your observations and existing evidence. It is testable with scientific research methods by using statistical analysis of the relevant data.  
 
-Your hypothesis suggests a relationship between two variables: social media use (your independent variable $X$) and mental health (dependent variable $Y$). Note, that this hypothesis could be framed in terms of correlation (is associated with) or causation (leads to). This should be reflected in the choice of scientific investigation you decide to undertake.
+Your hypothesis suggests a relationship between two variables: social media use (your independent variable $X$) and mental health (dependent variable $Y$). It could be framed in terms of correlation (is associated with) or causation (leads to). This should be reflected in the choice of scientific investigation you decide to undertake.
 
 
 The **null** hypothesis is: *There is no relationship between social media use among teenagers and their mental health*.
 
-It should be noted that there is an alternative view on this idea - a hypothesis-generating process that suggests that one should not look at the literature too early on in the idea-generating process not to be influenced and shaped by someone else's ideas. According to this view you can spend some time like a few weeks trying to develop your own original idea. Even if you end up with an idea that has already been pursued by someone else and published, this will still provide you with good practice in developing publishable ideas. After you have developed an idea and made sure that it was not yet investigated in the literature, you can start conducting a systematic literature review. By doing this, you can find some other interesting insights from the work of others that you can synthesize in your own work to produce something novel and original. 
+<!--It should be noted that there is an alternative view on this idea - a hypothesis-generating process that suggests that one should not look at the literature too early on in the idea-generating process not to be influenced and shaped by someone else's ideas. According to this view you can spend some time like a few weeks trying to develop your own original idea. Even if you end up with an idea that has already been pursued by someone else and published, this will still provide you with good practice in developing publishable ideas. After you have developed an idea and made sure that it was not yet investigated in the literature, you can start conducting a systematic literature review. By doing this, you can find some other interesting insights from the work of others that you can synthesize in your own work to produce something novel and original.-->
 
 
 
@@ -135,7 +134,7 @@ It should be noted that there is an alternative view on this idea - a hypothesis
 ### How to develop strong research questions
 
 - [The form of the research process](https://www.economicsnetwork.ac.uk/handbook/ugresearch/31)
-
+- Varian, H. R. (2016). [How to build an economic model in your spare time.](https://journals.sagepub.com/doi/pdf/10.1177/0569434515627089) The American Economist, 61(1), 81-90.
 
 
 ### Identify relevant literature from major general interest and field literature
@@ -152,12 +151,12 @@ To identify the relevant literature you can
 Several rankings may help to assess the quality of research you consider
 
  - Journals of general interest and by field in economics and management
-        - For German speaking countries, consider the [VWL / BWL Handelsblatt Ranking](https://www.forschungsmonitoring.org/) for economics and management
-        - The German Association of Management Scholars provides an expert based ranking[VHB JourQual 3.0, Teilranking Management im Gesundheitswesen](https://vhbonline.org/vhb4you/vhb-jourqual/vhb-jourqual-3/tabellen-zum-download)
+        - For German-speaking countries, consider the [VWL / BWL Handelsblatt Ranking](https://www.forschungsmonitoring.org/) for economics and management
+        - The German Association of Management Scholars provides an expert-based ranking[VHB JourQual 3.0, Teilranking Management im Gesundheitswesen](https://vhbonline.org/vhb4you/vhb-jourqual/vhb-jourqual-3/tabellen-zum-download)
         - Web of Science Impact Factors
         - Scimago
  - Health Economics, Health Services and Health Care Managment Research: [Health Economics Journals List](https://www.mthooddiabeteschallenge.com/journal-list)
- - Be aware that like in any other domain, there are [predatory publishing practices](https://predatoryjournals.com/).
+ - Be aware that like in any other domain there are [predatory publishing practices](https://predatoryjournals.com/).
  
  
 ### Investigate how a journal article is connected to other works
@@ -180,9 +179,9 @@ Several rankings may help to assess the quality of research you consider
 
 ## Example: Hellerstein (1998)
 
-As an illustration of the research process of formulating a hypothesis, designing the study, running the study and collecting the data, analysing the data and, finally, reporting the study, we provide an example by reproducing the study by Judith K. Hellerstein’s paper “The importance of the Physician in the Generic versus Trade-Name Prescription Decision” of 1998.
+As an illustration of the research process of formulating a hypothesis, designing a study, running a study, collecting and analyzing the data and, finally, reporting the study, we provide an example by reproducing 1998 Judith K. Hellerstein’s paper “The importance of the Physician in the Generic versus Trade-Name Prescription Decision”.
 
-With 434 citations on Google Scholar since 1998 and recent publications in top field journals such as Journal of Public Economics (2021), Journal of Health Economics (2019) and Health Economics (2019), Hellerstein’s (1998) paper has impacted literature over two decades. Using tools like “connected papers” or “citation gecko” can support you in finding the relevant literature that your project is linked to. The work of Hellerstein (1998) has impacted literature researching the role of physician behaviour and its influence on access, adoption and diffusion of health services, moral hazard and incentives in prescription and treatment decisions and the influence of different payment schemes as well as vast body of literature studying the pharmaceutical market.
+With 441 citations on Google Scholar since 1998 and recent mentions in top field journals such as Journal of Public Economics (2021), Journal of Health Economics (2019), and Health Economics (2019), Hellerstein’s (1998) paper has impacted literature over two decades. Using tools like “connected papers” or “citation gecko” can support you in finding the relevant literature that your project is linked to. The work of Hellerstein (1998) has impacted literature researching the role of physician behavior and its influence on access, adoption and diffusion of health services, moral hazard and incentives in prescription and treatment decisions and the influence of different payment schemes as well as vast body of literature studying the pharmaceutical market.
 
 This includes research on:
 
@@ -192,31 +191,35 @@ This includes research on:
   - influence of patents and dynamics of market segmentation
 
 
-At the end of each chapter, we demonstrate insights into the study by Judith K. Hellerstein from 1998 [@hellerstein_importance_1998] that we reproduced.
+At the end of each chapter, we demonstrate insights into the 1998 study by Judith K. Hellerstein that we reproduce.
 
 ### **Relevance of the topic - escalating health expenditures**
 
-Worldwide, health systems face constantly increasing prescription drug expenditures. In the United States, the total prescription drug expenditure in 2020 marked about 358.7 billion US-Dollars [@statista_prescription_2020]. The prescription of generic drugs is an option in reducing the total health care expenditure. Generic drugs are bioequivalent in the active ingredients and can serve as a channel to contain prescription expenditure [@kesselheim_clinical_2008]. This as generic drugs are between 20 to 90 % cheaper than their trade name alternative [@dunne_review_2013].
+Worldwide, health systems face constantly increasing prescription drug expenditures. In the United States, the total prescription drug expenditure in 2020 marked about 358.7 billion US-Dollars [@statista_prescription_2020]. The prescription of generic drugs is an option in reducing the total health care expenditure. Generic drugs are bioequivalent in the active ingredients and can serve as a channel to contain prescription expenditure [@kesselheim_clinical_2008] as generic drugs are between 20 to 90 % cheaper than their trade-name alternative [@dunne_review_2013].
  
-### **Development of a research question - identifying the role of physician practice in choosing generic drugs**
+### **Development of a research question - How does a patient's insurance status influence the physician's choice between generic vs brand-name drugs?**
 
-Physicians are faced with a multitude of different medication options, including the choice between generic and trade-name drugs. Physicians ideally act as agents for their patients to identify the best available treatment option. However, choosing the best treatment entails cost of coordination and cognition. The prescription of generic drugs may serve as an example to what extent physicians customize treatments according to patient's needs with regards to cost. From an economic point of view one might suggest that once a generic drug is available, a perfectly rational agent (i.e. physician) would prescribe a generic drug instead of the trade-name version if therapeutically identical [@dranove_medicaid_1989]. This asks for the research question, whether *"physicians vary their prescription decisions on a patient-by-patient basis or whether they systematically prescribe the same version, trade-name or generic, to all patients"*. 
+Physicians are faced with a multitude of different medication options, including the choice between generic and trade-name drugs. Physicians ideally act as agents for their patients to identify the best available treatment option. However, choosing the best treatment entails cost of coordination and cognition. The prescription of generic drugs may serve as an example to what extent physicians customize treatments according to patients' needs with regards to cost. From an economic point of view one might suggest that once a generic drug is available, a perfectly rational agent (i.e. physician) would prescribe a generic drug instead of the trade-name version if therapeutically identical [@dranove_medicaid_1989]. This leads us to a question: *"Do physicians vary their prescription decisions on a patient-by-patient basis or do they systematically prescribe the same version, trade-name or generic, to all patients?"*. 
 
-The study of Hellerstein (1998) focuses on two aspects:
+The 1998 Hellerstein's study focuses on two aspects:
 
-1. To identify the role of the physician in prescribing a generic over a brand name drug
-2. To investigate the role of a patient's insurance status in the physician's choice between generic vs. brand name drugs.
+1. The role of the physician in prescribing a generic over a brand-name drug
+2. The role of a patient's insurance status in the physician's choice between generic vs brand-name drugs.
 
-For the purpose of this example we will focus on the reproduction of the second aspect.  
+For the purpose of this example we focus on the latter aspect.  
 
-### **Hypothesis - insurance status drives generic drug use**
+### **Hypothesis - Physicians are more likely to prescribe generics to patients who do not have insurance coverage for prescription pharmaceuticals (moral hazard in insurance).**
 
-We laid out the potential role of the physician in the prescription of generic vs. brand name drug, though literature mentions the potential influence of the patient. Hellerstein (1998) discusses that some patients may demand certain care more than others. If the prescription drug is reimbursed by the patient's health insurance, this may cause overconsumption. This behaviour can potentially differ by the patient’s insurance scheme. A patient that has no insurance and, thus, does not get any reimbursement for prescription drugs, might have a higher incentive to demand cheaper generic drugs [@danzon_cross-national_2011] than a patient with insurance that covers prescription drugs, either generic or trade name. Given the United States have different insurance schemes with varying prescription drug coverage, it is of interest to investigate the role of a patient's insurance status in the physician's choice between generic vs. brand name drugs.
 
-Hellerstein (1998) considers a patient's insurance status as a matter of dividing the study population in groups for which the choice between generic and brand name drugs differs. She hypothesises that *There is a relationship between the prescription of a generic drug and insurance status of the patient. * [@hellerstein_importance_1998].
 
-Providing answers to such a research question requires formulating and testing a hypothesis. Based on logic, theory or previous research, a hypothesis proposes an expected relationship within the given data. According to her research question, Hellerstein hypothesizes that:
-*Physicians are more likely to prescribe generics to patients who do not have insurance coverage for prescription pharmaceuticals.*
-In other terms, we would expect the effect of the insurance status on whether a patient receives a generic to be different from zero, with patients that obtain insurance coverage having a higher likelihood of receiving a generic drug. To obtain a testable null hypothesis, we must now reformulate this relationship so that we reject, if our expectations were correct. This means, if we expect to see an effect of insurance on prescriptions of generics, our null hypothesis is, that insurance status has no effect on the outcome (prescription of generic drug).
+Hellerstein (1998) discusses that, based on their insurance status, some patients may demand certain care more than others. If, for example, the prescription drug is reimbursed by the patient's health insurance, this may cause overconsumption. This behavior can potentially differ by the patient’s insurance scheme. A patient that has no insurance and, thus, does not get any reimbursement for prescription drugs, might have a higher incentive to demand cheaper generic drugs [@danzon_cross-national_2011] than a patient with insurance that covers prescription drugs, either generic or trade-name. Given that the United States have different insurance schemes with varying prescription drug coverage, it is of interest to investigate the role of a patient's insurance status in the physician's choice between generic vs brand-name drugs.
+
+Hellerstein (1998) considers a patient's insurance status as a matter of dividing the study population in groups for which the choice between generic and brand-name drugs differs. She suggests that *There is a relationship between the prescription of a generic drug and insurance status of a patient.*  [@hellerstein_importance_1998].
+
+Providing answers to a research question requires formulating and testing a hypothesis. Based on logic, theory or previous research, a hypothesis proposes an expected relationship within the given data. According to her research question, Hellerstein hypothesizes that: *Physicians are more likely to prescribe generics to patients who do not have insurance coverage for prescription pharmaceuticals.*
+
+Specifically, she writes *"if there is moral hazard in insurance when it comes to physician prescription behavior, there will be differences in the propensity of physicians to prescribe low-cost generic drugs, and these differences will be (partially) a function of the insurance held by the patient. In particular, if moral hazard exists, patients with extensive insurance coverage for prescription drugs (like those on Medicaid in 1989) should receive prescriptions written for generic drugs less frequently than patients with no prescription drug coverage."*
+
+In other terms, we would expect the effect of the insurance status on whether a patient receives a generic to be different from zero. To obtain a testable null hypothesis, we reformulate this relationship so that we reject if our expectations are correct. This means, if we expect to see an effect of insurance on prescriptions of generics, our null hypothesis is that insurance status has no effect on the outcome (prescription of generic drugs). Thus, there is no moral hazard in insurance.
 
 

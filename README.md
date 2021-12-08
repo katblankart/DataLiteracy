@@ -1,8 +1,10 @@
 Data Science Campus - A study guide for reproducible research using secondary (health care) data
 
-The objective of this study guide is to provide a resource to graduate students, early career PhD candidates and researchers performing applied empirical research in economics and management sciences. The pratical application is in the field of analysis of health care markets using secondary data. Many textbook examples use readily available data sets for analysis of econometric problems. For students aiming to conduct research by generating their own analysis data set, important steps that lead to a final analysis data set are missing. Besides, many resources focus on labour economics problems. Resources that consider processing and generating secondary data are scarce. One reason is that often these data sources are subject to confientiality and data protection issues such these cannot be made available.
+This study guide is a resource for graduate students, PhD candidates, and researchers performing applied empirical research in economics and management sciences. The guide is meant for the field of analysis of health care markets using secondary data. Many textbook examples use readily available datasets for analysis of econometric problems. For students generating their own analysis dataset, important steps that lead to a final analysis dataset are often missing. Additionally, many resources focus on labor economics problems. Resources that consider processing and generating secondary data are scarce. One reason is that these data sources are often subject to confidentiality and data protection issues.
 
-The objective of this study guide is to provide a resource that covers the major steps of a reproducible research project in 5 steps. We will introduce important terminology, highlight the relevant taks to be performed, and to provide key resources in the form of text books and websites available via open access. We aim to provide a concise guide that user of this guide can easily access when starting academic research. Each section is to be read within 10-15 minutes. For this reason, we will not cover any specific data science or econometric method, but point to the relevant resources. Therefore, users of this guide should have basic knowledge in statistics, econometrics and program evaluation. We further recommend basic knowledge in a statistical package such as R or Stata. For the study guide to be of most benefit, readers should have background knowledge and a research idea in mind while reading.
+
+This guide explains the 5 major steps needed to create a reproducible research project. We introduce important terminology, highlight relevant tasks, and provide key resources in the form of text books and websites available via open access. We provide a concise guide that users can easily access when starting academic research. Each section takes about 10 to 15 minutes to read. We do not cover any specific data science or econometric method, but point to the relevant resources. Guide users should have basic knowledge in statistics, econometrics and program evaluation, as well as in statistical packages such as R or Stata. For maximum benefit readers should have background knowledge and a research idea in mind.
+
 
 ## Learning objectives
 
@@ -12,13 +14,15 @@ After reading and applying the principles introduced in this study guide, you wi
 
 1. Recognize the features of using secondary (health care) data in empirical research.
 2. Execute the steps of a reproducible research project.
-3. Be able to implement an empirical research project.
+3. Implement an empirical research project.
 4. Recall the steps taken to execute a reproducible research project using secondary data.
 
-## Structure of the study guide
+## Structure of the study guide {-}
 
-The study guide consists of five chapters that include the essential steps of a reproducible research project. Each step of reproducible research is covered in three parts.
+The study guide consists of five chapters that include the essential steps of a reproducible research project. Each step is covered in three parts.
   
 1. An introduction to the basics concepts and key terminology. 
-2. A resources box that includes reference material how to perform this step including main textbooks and references to current web resources. We will emphasize open source materials.
-3. A showcase example of an empirical project reproduced based on the article: *Hellerstein, Judith K. 1998. “The Importance of the Physician in the Generic versus Trade-Name Prescription Decision.” The RAND Journal of Economics 29 (1): 108–36. https://doi.org/10.2307/2555818*.
+2. A resources box that includes textbooks, articles and references to current web resources with emphasis on open access material.
+3. A showcase example of an empirical project reproduced based on the article of *Hellerstein, Judith K. 1998. “The Importance of the Physician in the Generic versus Trade-Name Prescription Decision.” The RAND Journal of Economics 29 (1): 108–36. https://doi.org/10.2307/2555818*.
+
+

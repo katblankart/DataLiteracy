@@ -11,7 +11,10 @@ path <- "C:/Users/KFischer/Documents/GitHub/DataLiteracy/_bookdown_files/DataLit
 <!--C:/Users/KFischer/sciebo/Date Literacy Project/06 Manuscript/bookdown/DataLiteracy/_book/DataLiteracy_files/figure-html-->
 
 
-# Introduction to reproducible research {#intro}
+
+
+# Introduction to Reproducible Research {#intro}
+
 
 *“Only results that can be replicated are truly scientific results. If there is no chance to replicate research results, they can be regarded as no more than personal views in the opinion or review section of a daily newspaper.”* [@huschka_why_2013]
 
@@ -23,7 +26,7 @@ Efforts to increase reproducability have been expressed by multiple institutions
 
 - The best practices statement by the [Social Science Data Editors](https://social-science-data-editors.github.io/template_README/),
 - In Germany, by the German Research Foundation (DFG) and the Consortium for the Social, Behavioural, Educational and Economic Sciences [RatWSD](https://www.ratswd.de/en/publikationen/output)
-- In editorial statement of journals, for example American Economic Review, Management Science or the Journal of International Business Studies [@meyer_whats_2017;@orozco_how_2020]
+- In editorial statement of journals, for example, American Economic Review, Management Science or the Journal of International Business Studies [@meyer_whats_2017;@orozco_how_2020]
 
 
 <!-- Show recent advancements in health econ, health services research, health care management
@@ -60,7 +63,7 @@ There is a number of threats to reproducible research process that can undermine
 
 Following the reproducible research principles allows you to be a part of a good academic practice that strives to improve the quality, efficiency and reliability of scientific research.
 
-## Main steps to produce reproducible research
+## Main steps to generate reproducible research
 
 To follow the best practices of reproducible research, you will need to consider ***how*** to perform your project and the ***steps a reproducible research project*** contains.
 

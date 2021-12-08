@@ -16,7 +16,8 @@ library(Statamarkdown)
 
 # Stata reproduction code of Hellerstein (1998)
 
-The subsequent Stata program reproduces the empirical analyses of: Hellerstein, Judith K. 1998. “The Importance of the Physician in the Generic versus Trade-Name Prescription Decision.” The RAND Journal of Economics 29(1):108–36. doi: 10.2307/2555818.
+The following Stata program reproduces the empirical analyses of Hellerstein, Judith K. 1998. “The Importance of the Physician in the Generic versus Trade-Name Prescription Decision,” The RAND Journal of Economics 29(1):108–36, doi: 10.2307/2555818.
+
 This file contains program code for data preparation, reproduction of the descriptive tables and figures, and reproduction of the empirical analyses and tables.
 The structure of this file is as follows:
 
@@ -126,7 +127,7 @@ label variable drug_class_19 "Respiratory Test"
 *** 2.3.1) Create id for drugs with multiple ingrediants
 replace ingredients = generic_id if ingredients == .
 
-*** 2.3.2) Check whether there are both generic and tradename drugs for each ingredients
+*** 2.3.2) Check whether there are both generic and trade-name drugs for each ingredients
 bys ingredients: egen counter = mean(generic_status) 
 bys ingredients: gen multisource = (counter >0 & counter <1)
 drop counter
@@ -170,11 +171,11 @@ save namcs91d.dta, replace
 ****************
 
 /* Comment:
-All information required to recreate table 1 can be found in the footer of table 1 in the paper by Hellerstein (1998).
+All information required to recreate table 1 can be found in the footenote of table 1 in the paper by Hellerstein (1998).
 It is stated that the table only uses data without missing values. This applies to all tables and figures and was done in the initial data preparation already.
 
 Further the footnote defines that the dummy variable "specialist" indicates whether a physician is
-not a general practice, family practice, or basic pediatrics. The dummy medicare only takes the value of 1 if medicare was the only source of payment
+not a general practice, family practice, or basic pediatrics. The dummy medicare only takes the value of 1 if medicare was the only source of payment.
 
 Last, the footnote mentions that observations of patient visits in which the patient was not charged were excluded.
 */
@@ -188,7 +189,7 @@ cd $descriptive_tables
 esttab table1 using Table_1.rtf, replace  title("Summary Statistics for Overall NAMCS Patient Sample") cells ("mean(fmt(%12.2f)) sd(fmt(%12.2f))") nonumber noobs ///
 coeflabels(age "Age" female "Female" nonwhite "Nonwhite" hispanic "Hispanic" selfpay "Self-pay" medicare "Medicare" medicaid "Medicaid" private_ins "Private/commercial" ///
 other_gov_ins "Other government insurance" hmo_pre_paid "HMO/prepaid plan" specialist "Specialist" northeast "Northeast" midwest "Midwest" south "South" west "West" ) ///
-addnote("Notes: Sample size is 32,407. For further notes see table 1 notes in Hellerstein (1998); Sample size differs as data from different years is used" "Datasource: NAMSC91")
+addnote("Notes: Sample size is 32,407. For further notes see table 1 notes in Hellerstein (1998); Sample size differs as data from different years is used" "Data source: NAMSC91")
 
 
 
@@ -295,8 +296,8 @@ collabels("Observations" "% Generics") noobs nonumber gaps refcat(3 "By drug cla
 Visualizations of kernel densities vary heavily depending on the underlying specifications. 
 The three key specifications for recreating the figure are the density function, the bandwidth and whether/how to round the data.
 Hellerstein does not provide information on either of these specifications.
-We can visually rule out that she rounds on the first decimal place, since there are fluctuations between the first decimal places.
-Rounding to the third or higher decimal places produces much more noisy curves, hence we infer that she rounded to the second decimal place.
+We can visually rule out that she rounds to the first decimal place, since there are fluctuations between the first decimal places.
+Rounding to the third or higher decimal places produces much noisier curves, hence, we infer that she rounded to the second decimal place.
 Regarding bandwidth and density function, there are no obvious clues, so that the reproduction relies on visual approximation of the original figure.
 */
 
@@ -458,5 +459,5 @@ mtitle("Antimicrobial" "% change" "Cardiovaskulars" "% change" "Central Nervous 
 "% change" "Pain relief" "% change" "Respiratory Tract" "% change" ) nonumbers eqlabels(none) collabels(none) nonumbers compress
 
 
-* Tables 7, 8 and 9 are not reproducible, due to missing state id in the publically available data sets
+* Tables 7, 8 and 9 are not reproducible due to missing state id in the publicly available datasets
 ```

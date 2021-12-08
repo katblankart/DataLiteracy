@@ -17,14 +17,15 @@ knitr::include_graphics(paste(path,"/comics.png",sep=""))
 
 Source: https://towardsdatascience.com/how-to-keep-your-research-projects-organized-part-1-folder-structure-10bd56034d3a
 
-By reporting your study you provide readers with the information necessary for them to assess the contribution of your study and the soundness of methods used, allows them to reproduce the study if they wish, and decide whether they agree with the conclusions that you draw given your data, methods, and results. Thus, from the instructions from your paper a reader should understand and be able to reproduce every table and figure.  
+When reporting the study you should provide readers with the necessary information to reproduce every table and figure; to assess the appropriateness of methods used, given your settings and data, and its contribution and conclusions, given your results.   
 
 A research paper usually includes the following sections:
 
 - Title
 - Abstract
 - Introduction
-- Previous Literature Review
+- Previous Literature 
+- Background (optional)
 - Data and Variables
 - Empirical Methods
 - Results
@@ -34,59 +35,101 @@ A research paper usually includes the following sections:
 - Appendices 
 
 
-We will briefly summarize each of these items. 
-
-The **Title** should be short (15 words or less) and reflect your research question. It needs to reflect the purpose (what is the question that you are addressing?), scope (i.e. if you cover a specific time period or population) of the study. Sometimes you might want to include the methods of your study in the title, if, e.g. you conduct a cohort study. All this information should help the reader to decide whether or not they are interested in reading it.
-
-The **Abstract** is usually around 300 words and includes a very short summary of your research question, data and methods used, main findings, and conclusions.
-
-The **Introduction** should be part of the paper that is written at the very end. It should motivate your research topic and give a more extensive overview of the context, data, methods and findings. You should provide context by referencing the existing literature regarding the things that we know and things that we do not know and then parlay the latter part into your research question. You need to interest your reader to a degree that they would want to continue reading the rest of your paper. The **Introduction** is said to the most important part of the paper, as you have to grab the readers' attention.
+We briefly summarize each of these items (the following is based on [Cochrane, 2005](http://mayoral.iae-csic.org/timeseries_bgse13/phd_paper_writing.pdf), [Dudenhefer, 2009](https://econ.duke.edu/sites/econ.duke.edu/files/file-attachments/Dudenhefer%2C%20Paul%20-%20Guide%20to%20Writing%20in%20Economics.pdf), [Martin, 2018](https://www.youtube.com/watch?v=Vky9PDKx5KU), and [Nikolov, 2020](https://mpra.ub.uni-muenchen.de/105088/1/MPRA_paper_105088.pdf)).
 
 
-The **Previous literature review** are standard in economic papers. They are either included in the **Introduction** or are placed in a separate section. It contains a critical review of the most relevant and influential (well-cited) studies on the topic. It should also contain a summary and a connection how your study is related to what has been done before and how your study is going to contribute to it. 
 
-A significant part of your empirical project is conducting a thorough literature review. Once you choose your topic and pose a research question, one of the first thing you usually do is look at the previous research and theories related to the research problem. By doing this, you will create a comprehensive overview of all the published knowledge on your topic available to date. This will provide a description, summary, background, context, relevance, and critical evaluation to the research idea you are working on. The main purpose of the review is to provide an overview of sources you are considering and to convince the reader of the need to conduct the research in question, and to show how it fits into the larger field of study. It will help you to establish whether the topic has been researched before, and show what problems others faced during their research.
-
-In a literature review, you need to identify and summarize key scholarly publications from the fields that are pertinent to your research topic. It should involve a thorough search of the main key words in the relevant databases and journals.
-
-The **Data** and variables section should contain a detailed information about the data source used in the paper as well as information about the variables used in the analysis.
-
-Describe the data you are using in your study in great detail. Is it a secondary data? Did you collect it yourself, if yes, how? Describe your sample and variable selection. 
-
-The **Empirical method** section should in great detail describe the statistical method used in the paper and the assumptions that are necessary to be fulfilled in order to get an unbiased and consistent estimation of your parameter of interest. Also describe the limitations and how you addressed them.
-
-Ideally, you should describe each step that readers should perform, if they would like to reproduce your results and conclusions.
+The **Title** should be short (15 words or less) and reflect your research question. It usually contains the purpose (what is the question you are addressing?) and scope (if you cover a specific time period or population) of the study. You might also include the methods of your study in the title, if, e.g., you conduct a cohort study. All this information should help readers to decide whether or not they are interested in reading the paper.
 
 
-The **Results** section should contain a set of tables and figures that show your empirical results. Make sure that tables are reader-friendly and are easy to comprehend. Place figures and tables as close as possible to the place in the text where you first referred to them. 
+The **Abstract** is usually around 150 words or less and includes a very short summary of your research question, main contribution, data and methods used, main findings, and conclusions.
 
 
-Do not discuss or explain the results in this section, and do not provide any interpretation or speculation here. Keep it factual and simply describe in words what the tables display. 
+
+The **Introduction** is the most important part of the paper as it has to grab the readers' attention. It should motivate your research topic and give a more extensive overview of the context, data, methods and findings. You provide context by referencing the existing literature regarding what we know and what we do not know about the topic. You parlay the latter part into your research question. An important aspect of introduction is to highlight what contribution your paper makes, and how it relates to and improves previous work on the topic.
+
+You need to raise the interest of your readers to a degree that they would want to continue reading the rest of your paper. Therefore, it is advisable that you write this section at the very end.
+
+It should be structured as a newspaper article -- where you first deliver the main message and information, and then provide details -- rather than a novel- -- where you first build up the narrative and only reach the story punchline at the very end.
+
+At the end of this section you could write a roadmap that briefly guides the reader through your paper. Overall, the whole section should not take up more than 3 pages. 
 
 
-The **Discussion** section should contain the interpretation and discussion of the results, as well as potential mechanisms, and suggest a direction for future research.
 
-You should start your discussion by reiterating your research question and based on your findings, state what you think an answer to your question is. Do not introduce any new data or results in this section. It should reflect only the results already presented in the paper. You need to interpret your results in the context of the literature that you identified and discussed in the Introduction and the Related Literature sections. 
 
-Are your findings consistent with what the other literature have found? Do your data fill the gap in the knowledge that you identified? Here you want to show how your work added to and extended the knowledge on the topic.
 
-You can also discuss implications of your study, for example for public policy. You also should acknowledge and discuss the limitations of the study here and what implications these limitations might have for the results. The more accurate, open and detailed you are about the limitations, the more credibility your results will have. Offer any alternative explanations for your findings. 
+Once you choose your topic and pose a research question, the first thing you usually do is look at the related previous literature. The **Previous literature** review is a standard in economic papers and constitutes a significant part of your empirical project. It is either included in the **Introduction** or is placed in a separate section.
+
+The main purpose of the review is to show the reader that you are familiar with the main scholarly work in the field; to critically review the most relevant and influential (well-cited) studies on the topic; to place your study in the context of other studies; and to convince the reader of the need to conduct the research in question, and to show how it fits into and contributes to the study field (Are you using new data or identification strategy? Are you answering a question more specifically? How are you improving on previous papers?). 
+
+It helps you to establish whether the topic has been researched before, to identify limitations of previous research and still open research gaps. You do not need to mention every published paper on the topic, but you do need to cite the most important studies in the area and distinguish your paper from them. Literature reviews are selective: you only include papers that are relevant for your argument.
+
+
+Importantly, a literature review should not simply consist of a series of paragraphs that summarize papers in no particular order. Instead, a good iterature review should be carefully constructed to tell a specific story: this is what others have done on my topic; this is what is unsatisfactory or missing from that research; and here is how I am going to fill this researh gap. Thus, through your literature review you "sell" the value addded of your paper.
+
+
+In a literature review, you need to identify and summarize key scholarly publications from the fields that are pertinent to your research topic. It should involve a thorough search of the main key words in the relevant databases and journals. To organize your literature search, you can create a spreadsheet, where you include study and author(s) names, publication journal and year, identification strategy, main resuts, caveats and comments. Always take notes on the papers you read. This will help you to summarize and organize your review once you are ready to write it.
+
+
+
+
+
+
+Sometimes a paper might contain a **Background** section that provides background information about a historical event or context, a specific country's health care system, or details about a specific policy or program in question. 
+
+
+The **Data and Variables** section should contain a detailed information about the data sources used in the paper as well as information about the variables used in the analysis. Identify your data sources and describe them, i.e. data-generating process, the unit and the number of observations, the population groups sampled, the time period during which the data were collected, the method of data collection, type of data (cross-sectional, panel, time series), main variables for your reseaarch question, etc. Mention any data limitations that might influence your results, i.e. small number of observations, survey response, missing observations, attrition or selection bias, over or underrepresentation of certain populations, etc. 
+
+Describe your sample and variable selection in great detail: how you construct your sample and which data manupulations you perform. Provide descriptive statistics and graphs. Descriptive statistics usually includes means and standard deviations of variables you use in your analysis. Sometimes you need to present this statistics for different subgroups, e.g., treatment and control, post and pre treatment. Point here to the patterns that are easily observable from the summary statistics that can help the reader better understand your analysis. 
+
+Generally, a good way to learn how to write a data section is to look in the related literature and pay attention to the information it includes. 
+
+
+
+
+The **Empirical method** section should in great detail describe the statistical method used in the paper and the assumptions that are necessary to be fulfilled in order to get an unbiased and consistent estimation of your parameter of interest. Write whether you weight the data or use certain fixed effects. Also describe the empirical problems and how you address them. Ideally, you should describe each step that readers should perform, if they would like to reproduce your results and conclusions.
+
+You need to explain the appropriatness of the method you choose for the specific context. You need to write down your econometric equation and explain how variables are defined and measured. Mention key parameters of interest. 
+
+
+
+The **Results** section should contain a set of tables and figures that show your main empirical results. Make sure that tables are reader-friendly and are easy to comprehend. Place figures and tables as close as possible to the place in the text where you first refer to them. Do not report all the variables incuded in the regression, but only present the results and parameters that directly relate to your main hypothethis and story. Including too namy parameters and results can distract the readers from your main point. Thus, guide the readers and focus their attention only on the most important results from your anaylsis and in the right order. 
  
-
-Discuss any negative effects in your findings and the impact they had on your conclusion. You can also talk about next steps and the implications of your findings for future research.  
-
-The **Summary and conclusion** section is usually short and contains the most important information on the topic, findings and concluding remarks. It should reflect main points mentioned in the Introduction. 
-
-Here you should underline why your research matters and state the answer to your research question. Also state here any recommendations that can be made based on your findings. 
-
-At the very end of your paper you need to provide a complete list of **References**. The bibliography includes a compete list of academic papers and books referenced and cited in your study. 
-
-The easiest way to keep track of your reference list is to write down the information, i.e. the title, author(s), journal/book, publisher, and publication date, about the original source each time you use it. Decide in advance on one citation and reference style and follow it throughout the paper. 
+Do not provide any interpretations or speculations here. Keep it factual and simply describe in words what the tables and figures display. Comment on the economic significance of your results, not just their statistical significance.  After the main results, discuss potential biases and shortcoming to the internal validity and suggest ways to check them. Place secondary results and your response to potential criticisms and robustness checks into your Appendix.
 
 
-The **Appendices** are a handy tool. In order to keep your main part of the paper focused, of reasonable length, and not overburdened, you can place all the still relevant, but secondary and less critical information, i.e. various robustness checks, descriptive statistics, etc., in appendices.
 
-As a careful researcher you will conduct and document a number of various robustness checks of your main results. However, once you confirm and verified that your results are robust, it does not make sense to keep all of the robustness checks in the main body of the paper. Appendices allow you to save space. You can just summarize what you did and refer to the tables in the appendix. Most journals provide possibilities of an online appendix or supplementary material. 
+
+
+
+
+
+
+The **Discussion** section contains the interpretation and discussion of the results, as well as potential mechanisms, and suggests a direction for future research.
+
+Start your discussion by reiterating your research question and, based on your findings, state what you think an answer to your question is. Do not introduce any new data or results in this section. It should reflect only the results already presented in the paper. Interpret your results in the context of the literature that you identify and discuss in the **Introduction** and the **Previous Literature** sections (Are your findings consistent with what the other literature has found? Do your data fill the gap in the knowledge that you identify?). Here you want to show how your work adds to and extends the knowledge on the topic.
+
+You can also discuss implications of your study for public policy. You also should acknowledge and discuss the limitations of the study here and what implications these limitations might have for the results. The more accurate, open and detailed you are about the limitations, the more credibility your results will have. Suggest  alternative interpretations and other possible mechanisms that can explain your findings. You can also talk about next steps and the implications of your findings for future research.  
+
+
+
+
+The **Summary and Conclusion** section should be short and sweet (a few concise paragraphs). It contains the most important information on the topic, findings and concluding remarks. It should mirror main points mentioned in the **Introduction**. You should underline why your research matters and state the answer to your research question. Also state here any recommendations that can be made based on your findings. 
+
+
+
+
+At the very end of your paper you need to provide a complete list of **References**. The bibliography includes a compete list of academic papers and books referenced and cited in your study. Make sure that all your in-text citations  appear in the Reference list at the end of the paper. 
+
+The easiest way to keep track of your reference list is to write down the information, i.e. the title, author(s), journal/book, publisher, and publication date, about the original source each time you use it. Decide in advance on one citation and reference style and follow it consistently throughout the paper. 
+
+
+
+
+
+The **Appendices** are a handy tool that allows you to save space. As a careful researcher you will conduct a series of robustness checks of your main results. However, once you confirm that the results are stable, to keep your paper focused and not too long you can move all the still relevant, but secondary and less critical information in appendices. You should summarize what you did in the main body of your paper and include an in-text reference to the information in the appendix. Most journals provide possibilities of an online appendix or supplementary material. 
+
+
 
 
 ```{r paper_structure, out.width='80%', fig.align='center', fig.cap='Paper Structure', echo=FALSE}
@@ -96,52 +139,74 @@ knitr::include_graphics(paste(path,"/paperstructure.png",sep=""))
 Source: [Fresno State Graduate Writing Studio.](http://www.fresnostate.edu/academics/gradstudies/graduatewritingstudio.html) [Elements of a Research Paper.](https://fresnostategraduatewritingstudio.files.wordpress.com/2015/09/elements-of-a-research-paper.pdf)  
 
 
-### The writing process
-
-- producing a good empirical paper takes time. You should start working on it and drafting as soon as possible. 
-- allow yourself sufficient time for collecting and analyzing the data, writing and revising the paper. Writing a paper is a recursive process that will take many revisions.
-- read the text yourself and let others read it. (*"Is the text fun to read?"*, *"Would I want to read beyond the introduction myself?"*, *"Are the questions guiding the research comprehensible?"*)
-- keep it short. When editing ask yourself whether you can make the same point using fewer words?
-- avoid repetition. Repeating things uses extra space and tests readers' patience.  
-- use "I" in a single-author project, and "we" in the project with more than one author. 
-
-More principles on writing in economics are summarized in [Top Ten Rules of Economical Writing](http://www3.nccu.edu.tw/~jthuang/rules.html) and more comprehensively in [@mccloskey_economical_2019] abd by [@hall_how_2013]
-
-
-### General guidance on the use of language in the research paper
-
-- use present tense, that means *"in this paper I attempt to..."*
-- generally stick to one tense
-- use active voice
-- use in-text citations, that means *"Hellerstein (1998) finds that..."* -- even though it was a while ago; *"Table 1 shows..."*, not *"Table 1 will show..."*
-- use simple and direct sentences. Keep them short.
-- check your paper for repetition and cut whenever you detect it in your paper.
-- try to be as clear as possible with a few words as possible.
-- place minor or secondary details and digressions from the main paragraph into footnotes.
 
 
 
-### Tables
+### The writing process ([Cochrane, 2005](http://mayoral.iae-csic.org/timeseries_bgse13/phd_paper_writing.pdf) and [Dudenhefer, 2009](https://econ.duke.edu/sites/econ.duke.edu/files/file-attachments/Dudenhefer%2C%20Paul%20-%20Guide%20to%20Writing%20in%20Economics.pdf))
 
-- each table should be self-explanatory
-- use 2 to 4 digits after the comma when reporting the results, not all the numbers produced by the statistical program. 
-- show results with and without controls. For example, start with a column that includes only the main coeffitient(s) of interest and then progressively inlcude various controls (for example patient characteristics, hospital FEs, etc.) in subsequent columns. 
+- Producing a good empirical paper takes time. You should start working on it and drafting it as soon as possible. 
+- Allow yourself sufficient time for collecting and analyzing the data, writing and revising the paper. Writing a paper is a recursive process that takes many revisions.
+- Read the text yourself and let others read it. (*"Is the text interesting to read?"*, *"Would you want to read beyond the introduction yourself?"*)
+- Shorter is better: keep the paper short as possible. Every word must count. When editing always ask yourself whether you can make the same point with fewer words. 
+- Avoid repetition. It uses extra space and tests readers' patience. If it is possible to cut a word, sentence or paragraph, then cut them out. 
+- Keep track of your resources as you work on your ideas. Do not rely on your memory when you come across information you might use in your paper. Invest in acurate note-keeping from the start. It will save you time and extra work when you draft your paper.
+- Pay attention to the writing style in the papers you read and admire; carefully analyze what information they contain and how they put it together.
+- Remember, no one can learn to write simply by reading a few manuals and tips on the topic. You can only do it by practicing. 
 
 
-### Figures
 
-- use figures to show patterns in the data--they demonstrate it better that big tables with a lots of numbers, 
-- label the axes properly,
-- provide self-explanatory captions.
+
+
+
+
+More principles on writing in economics are summarized in [Top Ten Rules of Economical Writing](http://www3.nccu.edu.tw/~jthuang/rules.html) and more comprehensively in @mccloskey_economical_2019 and by @hall_how_2013.
+
+
+### General guidance on writing and use of language in a research paper ([Cochrane, 2005](http://mayoral.iae-csic.org/timeseries_bgse13/phd_paper_writing.pdf), [Lund Uniiversity](https://www.awelu.lu.se/language/register-and-style/dos-donts/), and [Nikolov, 2020](https://mpra.ub.uni-muenchen.de/105088/1/MPRA_paper_105088.pdf))
+
+- Do not use slang, jargon, or colloquialisms. Always use formal language.
+- Do not use common vocabulary, such as *have got, the other thing*. Make more formal vocabulary choices, e.g., *have found, the other issue/problem/notion/idea  etc..*
+- Do not use shortened verb forms, such as *they're, isn't, can’t, don’t*. Use the full verb form instead, e.g., *they are, is not, cannot.*
+- Do not use subjective language, i.e., *I think, we assume.* Use objective language.
+- Avoid using past or future tenses. Use present tense and generally stick to one tense: *"This paper attempts to..."*, *"Hellerstein (1998) finds that..."*; *"Table 1 shows..."*
+- Do not use passive voice, i.e., *It has been shown in the paper by Hellerstein (1998).* Use active voice, i.e., *Hellerstein (1998) shows…*
+- Do not use needless words and information that clutter the writing. Use simple and direct sentences, and keep them short. For example, change *“in order to” to “to”, ”whether or not” to “whether”, “is equal to” to “equals”, “it should be noted” to “notably”.* 
+- Place minor or secondary details and digressions from the main text into footnotes, but use them sparingly. 
+- Use "I" in a single-author project, and "we" in the project with more than one author. 
+- Do not plagiarize. Provide references and citations whenever you say something that is not your own. Proper referencing and citations prevent acusations of plagiarisms, allow to acknowledge your sources, give credibility to your work, and demostrate your knowledge in the subject area. 
+- Use in-text citations: *"Hellerstein (1998) finds that..."* Do not write *"Judith Hellerstein in 1998 journal article finds that..."*
+- Do not mix British and American English, citation styles, tenses, and different word spellings (e.g., health care vs healthcare, data set vs dataset, policy makers vs policymakers, socio-economic vs socioeconomic, etc.). Be consistent in the use of language and style.
+- Remember that "long-run" as an adjective uses hyphen, while "long run" as a noun does not. 
+- Use automatic spellcheck, but never rely on it completely. Always double check for tricky words and proofread the text. Ask others to read it.
+- Do not get complacent after finishing the first draft of the manuscript. Revise, rewrite, polish, carefully proofread and spellcheck. Control the word count. 
+- Read a copy of [Strunk, W. Jr & White E. B. (1972). The Elements of Style](http://www.jlakes.org/ch/web/The-elements-of-style.pdf) and [Zinsser, W. (2001). On Writing Well](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwiCztfjrsr0AhXvR_EDHU3aAYsQFnoECA4QAQ&url=https%3A%2F%2Fteamwork.jacobs-university.de%2Fdownload%2Fattachments%2F49185212%2Fon-writing-well.pdf%3Fversion%3D1%26modificationDate%3D1527540932000%26api%3Dv2&usg=AOvVaw3eFZJabrSvWpKo5WxCAS6t).
+
+
+### Tables ([Cochrane, 2005.](http://mayoral.iae-csic.org/timeseries_bgse13/phd_paper_writing.pdf))
+
+- Each table should be self-explanatory. Give your variables in the table self-explanatory names.
+- Use 2 to 4 digits after the comma when reporting the results, not all the numbers produced by the statistical program. Apply this rule consistently for all the tablles in your paper.
+- Show results with and without controls. For example, start with a column that includes only the main coeffitient(s) of interest and then progressively inlcude various controls (for example, patient characteristics, hospital/physician fixed effects, etc.) in subsequent columns. 
+- Include standard errors together with your coefficients.
+- Indicate the source of the data at the bottom.
+
+
+### Figures ([Cochrane, 2005.](http://mayoral.iae-csic.org/timeseries_bgse13/phd_paper_writing.pdf))
+
+- Use figures to show patterns in the data -- they demonstrate it better than tables with numbers, 
+- Label the axes properly,
+- Add clear legends,
+- Do not color your figures since some readers will view/print your paper in the black-and-white mode,
+- Provide self-explanatory captions,
+- Indicate the source of the data at the bottom.
 
 
 ## Resources box
 
 ### Collections of writing tips and short articles
 
-- Varian, H. R. (2016). [How to build an economic model in your spare time.](https://journals.sagepub.com/doi/pdf/10.1177/0569434515627089) The American Economist, 61(1), 81-90.
 - Dudenhefer, P. (2009). [A guide to Writing in Economics. EcoTeach Center and Department of Economics, Duke University.](https://econ.duke.edu/sites/econ.duke.edu/files/file-attachments/Dudenhefer%2C%20Paul%20-%20Guide%20to%20Writing%20in%20Economics.pdf)
-- Nikolov, P. (2020). [Writing tips for economics research papers](http://www.people.fas.harvard.edu/~pnikolov/resources/writingtips.pdf)
+- Nikolov, P. (2020). [Writing tips for economics research papers](https://mpra.ub.uni-muenchen.de/105088/1/MPRA_paper_105088.pdf)
 - [Cochrane, J. H.](https://www.johnhcochrane.com/) (2005). [Writing tips for Ph.D. students.](http://mayoral.iae-csic.org/timeseries_bgse13/phd_paper_writing.pdf) Chicago, IL: University of Chicago.
 
 
@@ -149,19 +214,27 @@ More principles on writing in economics are summarized in [Top Ten Rules of Econ
 
 - Hall, G. M. (Ed.). (2013). [How to write a paper (5th ed). Wiley-Blackwell.](https://onlinelibrary.wiley.com/doi/book/10.1002/9781118488713)
 - McCloskey, D. N., & Ziliak, S. T. (2019). Economical Writing, Third Edition: Thirty-Five Rules for Clear and Persuasive Prose (Third Edition). University of Chicago Press.
+- Strunk, W. Jr & White E. B. (1972). [The Elements of Style](http://www.jlakes.org/ch/web/The-elements-of-style.pdf) - great general writing style book
+- Zinsser, W. (2001). [On Writing Well](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwiCztfjrsr0AhXvR_EDHU3aAYsQFnoECA4QAQ&url=https%3A%2F%2Fteamwork.jacobs-university.de%2Fdownload%2Fattachments%2F49185212%2Fon-writing-well.pdf%3Fversion%3D1%26modificationDate%3D1527540932000%26api%3Dv2&usg=AOvVaw3eFZJabrSvWpKo5WxCAS6t)
+
+
 
 ### Videos
 
-- [Greg Martin (2018). How to write a paper.](https://www.youtube.com/watch?v=Vky9PDKx5KU)
+- [Martin, G. (2018). How to write a paper.](https://www.youtube.com/watch?v=Vky9PDKx5KU)
+
+### Website
+
+- [Lund University. Academic Writing in English.](https://www.awelu.lu.se/language/register-and-style/dos-donts/)
 
 
 ## Example: Hellerstein (1998)
 
-We show the results of the reproduction of tables 1-3 and figures 1-2 of the descriptive analysis, and the reproduction of the empirical analysis in table 4-6. Please keep in mind that our results are based on data from 1991. This in contrast to [@hellerstein_importance_1998] which is based on three datasets of the year 1989. As the confidential data is key to identifying physicians and patients in the data of 1989 we resorted to the 1991 data, that provide state identifiers in two publically available datasets. We present our results and discuss the differences compared to [@hellerstein_importance_1998] briefly. For a detailed discussion and interpretation, we refer to the original study.
+We show the results of the reproduction of tables 1-3 and figures 1-2 of the descriptive analysis, and the reproduction of the empirical analysis in tables 4-6. Please keep in mind that our results are based on data from 1991. This is in contrast to @hellerstein_importance_1998, which is based on three datasets from 1989. As the confidential data are the key to identifying physicians and patients in the 1989 data, we resort to the 1991 data that provide state identifiers in two publicly available datasets. We present our results and briefly discuss the differences compared to @hellerstein_importance_1998. For a detailed discussion and interpretation  please refer to the original study.
  
 ### Descriptive Analysis
 
-The summary statistics shown in Table 1, representing the overall NAMCS patient sample of the year 1991 are similar to the summary statistics shown by [@hellerstein_importance_1998]. However, some categories for the sources of payment differ slightly. Four categories, Self-pay, Medicare, Madicaid and HMO/prepaid plan match. The categories Blue Cross/ Blue Shild and Other commerical insurer seem to have merged into the category seem to have merged into the category Private/Commercial.
+The summary statistics shown in Table 1, representing the overall NAMCS patient sample of the year 1991 are similar to the summary statistics shown by @hellerstein_importance_1998. However, some categories for the sources of payment differ slightly. Four categories, Self-pay, Medicare, Madicaid and HMO/prepaid plan match. The categories Blue Cross/ Blue Shild and Other commerical insurer seem to have merged into the category seem to have merged into the category Private/Commercial.
 When looking at the distribution of insurance coverage, we see that the frequency of Private/Commercial perfectly adds up to the frequencies of Blue Cross and other commercial insurer. Differences in the distribution of other covariates are slim. The most noticable differnce lies in the share of specialist, which account for X% of visited physicians in our 1991 sample and for 55% in Hellerstein’s sample from 1989
 
 
@@ -188,10 +261,11 @@ When looking at the distribution of insurance coverage, we see that the frequenc
 
 
 
-Notes: Sample size is 29,854. For further notes see table 1 notes in Hellerstein (1998); Sample size differs as we use data from a different year. However, the public data from 1989 (the one Hellerstein uses) allows for reproduction of table 1. With the specifications we infer from her paper, we cannot perfectly reproduce the table.  (Datasource: NAMSC91)
+Notes: Sample size is 29,854. For further notes see table 1 notes in Hellerstein (1998); Sample size differs as we use data from a different year. However, the public data from 1989 (the one Hellerstein uses) allows for reproduction of table 1. With the specifications we infer from her paper, we cannot perfectly reproduce the table. (Data source: NAMSC91)
 
 
-Table 2 shows very similar statistics for the patients of the NAMCSd sample compared to the data from 1989. We see a $5%$ increase in the proportion of generic drug prescription in specialist compared to [@hellerstein_importance_1998]. Compared to 1989, we observe a slightly smaller sample size in the 1991 data.
+Table 2 shows very similar statistics for the patients of the NAMCSd sample compared to the 1989 data, though, we observe a slightly smaller sample size in the 1991 data.
+
 
 
 **Table 2 - Summary Statistics for Patients in NAMCS Drug Sample**
@@ -216,9 +290,9 @@ Table 2 shows very similar statistics for the patients of the NAMCSd sample comp
 | Full sample        |       |                    | 0.28               |
 
 
-Notes: The sample size is 7,715. For further notes see Hellerstein (1998), Datasource: NAMSCd91
+Notes: The sample size is 7,715. For further notes see Hellerstein (1998), Data source: NAMSCd91
 
-Table 3 shows the absolute number of observations and the share of generics over all drugs as well as the 8 largest drug categories. We see an overall similar generic share over all drug classes compared to [@hellerstein_importance_1998]. Yet in the drug class pain relief we see an increase of generic share by about $9%$. 
+Table 3 shows the absolute number of observations and the share of generics over all drugs as well as the 8 largest drug categories. We see an overall similar generic share over all drug classes compared to @hellerstein_importance_1998. Yet in the drug class pain relief we see an increase of generic share by about $9$ percentage points. 
 
 
 **Table 3 - Frequency of Generic Prescription by Drug Class**
@@ -253,10 +327,10 @@ knitr::include_graphics(paste(path,"/Hellerstein_Fig_1.png",sep=""))
 
 
 
-**Figure 2 - Physician decisions for physicians who prescribe a drug to at least six patients (Source: NAMSCd91)**
+**Figure 2 - Physician decisions by physicians who prescribe a drug to at least six patients (Source: NAMSCd91)**
 
 
-When looking at figure 2, we see a decrease from about 90% to about 50% in *"only trade name"* prescriptions by physicians. This seems to be driven by a rather small increase of prescription of *"both versions"* and *"only generics"*. 
+When looking at figure 2, we see a decrease from about 90% to about 50% in *"only trade-name"* prescriptions by physicians. This seems to be driven by a rather small increase of prescription of *"both versions"* and *"only generics"*. 
 
 
 ```{r HellFig2, out.width='100%', fig.align='center', fig.cap='Physician decisions', echo=FALSE}
@@ -267,8 +341,8 @@ knitr::include_graphics(paste(path,"/Hellerstein_Fig_2.png",sep=""))
 ### Empirical Analysis
 
 
-Please keep in mind, that, due to data restrictions, we were not able to control for certain covariates that Hellerstein (1998) included. An example of such are legislation laws like mandatory or permissive substitution, and one- or two-line prescription. For this reason, we cannot present all tables produced by Hellerstein (1998). Given these restrictions, we cannot run the analysis with the same underlying model specifications. 
-This restricts us from comparing the results of the years 1991 and 1989, however for the completion of this example we represent the results of table 4, 5 and 6 in the following: 
+Please keep in mind that, due to data restrictions, we were not able to control for certain covariates that Hellerstein (1998) included. An example of such are legislation laws like mandatory or permissive substitution, and one- or two-line prescription. For this reason, we cannot present all tables produced by Hellerstein (1998). Given these restrictions, we cannot run the analysis with the same underlying model specifications. 
+This restricts us from comparing the results from 1991 and 1989. However, for the completion of this example we present the results from tables 4, 5 and 6: 
 
 
 **Table 4 Estimated Coefficients on Demographic Variables, Geographic Variables, and Average Characteristics for Full Sample, excluding regional identifiers**
@@ -295,7 +369,7 @@ This restricts us from comparing the results of the years 1991 and 1989, however
 |     West                       |     0.065                                  |     (0.67)     |     0.016                    |     (0.67)     |
 
 
-Notes: $*p < 0.05, **p < 0.01, ***p < 0.001$; The sample size is 7,715. For further notes see Hellerstein (1998); Datasource: NAMSCd91
+Notes: $*p < 0.05, **p < 0.01, ***p < 0.001$; The sample size is 7,715. For further notes see Hellerstein (1998); Data source: NAMSCd91
 
 
 Table 5 shows the estimated coefficients for the 8 largest drug classes as well as the % change in the generic share. The greatest change compared to Hellerstein (1998) is the change in sign from positive to negative for cardiovascular/renals, though not significant in our model. 
@@ -317,7 +391,7 @@ Table 5 shows the estimated coefficients for the 8 largest drug classes as well 
 
 	
 	
-Notes: $*p < 0.05, **p < 0.01, ***p < 0.001$; The sample size is 7,715. Omitted category is pain relief. For further notes see Hellerstein (1998); Datasource: NAMSCd91
+Notes: $*p < 0.05, **p < 0.01, ***p < 0.001$; The sample size is 7,715. Omitted category is pain relief. For further notes see Hellerstein (1998); Data source: NAMSCd91
 
 
 
@@ -344,6 +418,6 @@ Notes: $*p < 0.05, **p < 0.01, ***p < 0.001$; The sample size is 7,715. Omitted 
 |                    |     1.78             |     1.78          |     -0.56              |     -0.56         |     1.04                        |     1.05          |     -1.09       |     -1.09         |     -0.73                       |     -0.73         |     -0.93          |     -0.93         |     0.71             |     0.72          |     -0.26                  |     -0.25         |
 
 
-Notes: see Hellerstein (1998); Datasource: NAMSCd91
+Notes: see Hellerstein (1998); Data source: NAMSCd91
 
 

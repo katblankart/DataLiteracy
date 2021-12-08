@@ -11,24 +11,24 @@ output:
 
 Think again about your research question and what you are trying to learn or discover. How can you use your data to answer this question?
 
-The data to be analyzed should correspond to the core elements of the hypothesis to be investigated. You investigate whether the postulated cause-effect relationship exists, or quantitatively identify the strength of the effect. To perform a reproducible research project, you will need to create a set of programs that describes how the secondary data used was synthesized, process and analysed. To document all steps of your analysis, you should use programs like Stata or R.
+The data to be analyzed should correspond to the core elements of the hypothesis to be investigated. You investigate whether the postulated cause-effect relationship exists, or quantitatively identify the strength of the effect. To perform a reproducible research project, you will need to create a set of programs that describes how the secondary data used was synthesized, processed and analyzed. To document all steps of your analysis, you should use programs like Stata or R.
 
-Across all steps, try to use data visualization using tables and diagrams. These are an essential part of your work and not an accessory. Visualizations help to support the argumentation in the text and visualize complex facts in a simple form. In the following, we describe the three major tasks for data analysis
+Across all steps, try to use data visualization with tables and graphs. They are an essential part of your work and not an accessory. Visualizations help to support the argumentation in the text and visualize complex facts in a simple form. In the following, we describe the three major tasks for data analysis
 
-1. Generate the analysis data set
+1. Generate the analysis dataset
 2. Describe your data, assess validity and plausiblity
 3. Generate estimates of your investigated effect using regression techniques
 
 <!--[Example of visualized vs. non-visualized data]-->
 
-### Generate the analysis data set
+### Generate the analysis dataset
 
 There are three major tasks that are typically needed to generate the analysis data set:
 
 **1. Clean your data.**
 
-  - get/collect the data and transfer them in a format you use, for example to .dta from .xlsx (if neccessary)
-  - Make sure that you link different data sets correctly using correct identifiers.
+  - get/collect the data and transfer them in a format you use, for example, to .dta from .xlsx (if neccessary)
+  - Make sure that you link different datasets correctly using correct identifiers.
   - Take time to look through the data, check them, and delete anything that looks suspicious. 
   - Select your sample of interest.
   - Generate and leave only variables necessary for your anaylsis.
@@ -38,16 +38,16 @@ There are three major tasks that are typically needed to generate the analysis d
 **2. Structuring and aggregating of the analysis data**
 
 
-  - Only include variables of your empirical model to be included to the analysis data set!
-  - Aggregate your data to the level of analysis. For example, if you aim to analyse physician behavior over time, there should be one observation for each time period and physician (panel data). If your data is purely cross-sectional, there should not be multiple time periods in your data. That means in a cross-section of physicians, one row represents one physician.
+  - Only include variables of your empirical model in the analysis dataset!
+  - Aggregate your data to the level of analysis. For example, if you aim to analyze physician behavior over time, there should be one observation for each time period and physician (panel data). If your data is purely cross-sectional, there should not be multiple time periods in your data. That means in a cross-section of physicians, one row represents one physician.
 
 
 **4. Store your data**
 
-  - Your analysis data set is the most important piece for your analyis.
-  - Physically store the version of your analysis data set that you are using.
-  - Use version control if you are modifying your analysis data set.
-  - Ensure that the code to create your analysis data set is complete and can reproduce the analysis data set completely.
+  - Your analysis dataset is the most important piece for your analyis.
+  - Physically store the version of your analysis dataset that you are using.
+  - Use version control if you are modifying your analysis dataset.
+  - Ensure that the code to create your analysis dataset is complete and can reproduce the analysis dataset completely.
 
 
 ### Describe your data, assess validity and plausiblity
@@ -63,9 +63,9 @@ Start the data analysis by doing some descriptive analyses of your data and samp
 
 - Once you have decided on the type of empirical analyses you would like to perform, run the regressions.
 - Perform the regression analyses, that means by using the appropriate procedure to estimate regressions that reflect your empirical strategy.
-- Create output tables that report your results which outsiders can understand, for example label your variables properly
+- Create output tables that report your results which outsiders can understand, for example, label your variables properly
 - Concentrate on analyzing and interpreting the effects of your variable of interest ($X$)
-  - interpret and show in tables ony most important and relevant coefficients related to the research question. For example, you do not need to interpret and display coefficients for all of the incuded control variables, just the main variables of interest. 
+  - interpret and show in tables only most important and relevant coefficients related to the research question. For example, you do not need to interpret and display coefficients for all of the incuded control variables, just the main variables of interest. 
 - Think about how to interpret your estimates.
 - Challenge your approach. Investigate why your estimates could not be plausible?
 - Again, compare with existing literature.
@@ -117,11 +117,11 @@ Start the data analysis by doing some descriptive analyses of your data and samp
 
 ## Example: Hellerstein (1998)
 
-Hellerstein's (1998) study aims to identify the role the physician plays in prescribing a generic over a trade-name drug and the role of a patient's insurance status. To identify this, we analyse the secondary data on physician level in cross-sectional format (NAMCS and NAMCSd, described in the chapter “running the study and collecting the data”). The primary interest is to investigate if physicians do or do not prescribe a generic drug and whether this is influenced by the patient’s insurance status. We are not investigating prescription behaviour of physicians over time using panel data.
+Hellerstein's (1998) study aims to identify the role the physician plays in prescribing a generic over a trade-name drug and the role of a patient's insurance status. To identify this, we analyze the secondary data on physician level in cross-sectional format (NAMCS and NAMCSd, described in the chapter “running the study and collecting the data”). The primary interest is to investigate if physicians do or do not prescribe a generic drug and whether this is influenced by the patient’s insurance status. We are not investigating prescription behavior of physicians over time using panel data.
 
-Over the course of the analysis, we want to explore the dataset. This includes describing and assessing the validity and plausibility. Thus before generating estimates of the effect of interest using regression techniques, we describe the data using descriptive statistics presented in tables and figures.
+Over the course of the analysis, we want to explore the dataset. This includes describing and assessing the validity and plausibility. Thus, before generating estimates of the effect of interest using regression techniques, we describe the data using descriptive statistics presented in tables and figures.
 
-We first reproduce the descriptive statistics of Hellerstein (1998), namely table 1-3 and figure 1-2. Details of created variables can be found in the data preparation .do-file (Sections \@ref(A1)-\@ref(A3)) and the notes of the tables and figures in Hellerstein's (1998) paper. The code for the reproduction of the descriptive statistics (i.e. the reproduction of tables and figures), can be found in (Section \@ref(2). Please keep in mind that we used the data of 1991. Thus, our numbers are not matching with the numbers provided in the original paper. 
+We first reproduce the descriptive statistics of Hellerstein (1998), namely table 1-3 and figure 1-2. Details of created variables can be found in the data preparation do-file (Sections \@ref(A1)-\@ref(A3)) and the notes of the tables and figures in Hellerstein's (1998) paper. The code for the reproduction of the descriptive statistics (i.e. the reproduction of tables and figures), can be found in (Section \@ref(2). Please keep in mind that we used the data from 1991. Thus, our numbers are not matching with the numbers provided in the original paper. 
 
 ### Describe your data, assess validity and plausiblity
 
@@ -145,7 +145,7 @@ For each physician, we compute the mean of the generic indicator and drop duplic
 
 **Figure 2**
 
-To display Figure 2, we only keep physicians that prescribe the same multisource drug to at least six patients, independent of whether it is in its generic or trade-name form. We compute the mean of the generic share for each remaining physician and create a categorical variable on whether this mean is 0 indicating only trade name drugs, 1 indicating a mix of generic and brand name versions and 2 indicating only generic drugs. We plot the frequencies of these three categories across physicians in a bar plot (Section \@ref(A2) line 299-342).
+To display Figure 2, we only keep physicians that prescribe the same multisource drug to at least six patients, independent of whether it is in its generic or trade-name form. We compute the mean of the generic share for each remaining physician and create a categorical variable on whether this mean is 0, indicating only trade-name drugs; 1, indicating a mix of generic and brand-name versions; or 2, indicating only generic drugs. We plot the frequencies of these three categories across physicians in a bar plot (Section \@ref(A2) line 299-342).
 
 
 ### Generate estimates of your investigated effect using regression techniques
@@ -154,17 +154,17 @@ Hellerstein applies a random effects probit regression model aggregated on physi
 
 **Dependent variable ($Y$)**
 
-  - $G$: *Generic compared to brand name drug use*
+  - $G$: *Generic compared to brand-name drug use*
   
-*Note that Hellerstein uses a somewhat different notation for the outcome variable which is denoted as $G$. Today, it is often common to denote this variably by $Y$.*
+*Note that Hellerstein uses a somewhat different notation for the outcome variable which is denoted as $G$. Today, it is often common to denote this variable by $Y$.*
 	
 **Variable of interest or treatment ($X$)**
 
-  - $P$:	*Insurance status by: Medicare, Medicaid, HMO/prepaid, private insurance, self-paid (this is the omitted category)*
-  *Note that Hellerstein (1998) uses a somewhat different notation for the variable of interest which is denoted as $P$. Today, it is often common to denote this variably by $X$ or $D$. Though for the purpose of the reproduction and to avoid confusion we take on Hellerstein’s notation in the following.*
+  - $P$:	*Insurance status by: Medicare, Medicaid, HMO/prepaid, private insurance, self-paid (this is the omitted category).*
+  *Note that Hellerstein (1998) uses a somewhat different notation for the variable of interest which is denoted as $P$. Today, it is often common to denote this variable by $X$ or $D$. Though for the purpose of the reproduction and to avoid confusion we take on Hellerstein’s notation in the following.*
   
 
-**Confounders $Z$ of the effect of insurance status $P$ and generic compared to brand name drug use $Y$.**
+**Confounders $Z$ of the effect of insurance status $P$ and generic vs brand-name drug use $Y$.**
 
 -	$C$: 	*Drug class identifiers among 8 classes (Pain relief omitted, see footnote table 5)*
 -	$X$:	*Patient characteristics: age, sex, race*
@@ -176,7 +176,7 @@ Hellerstein applies a random effects probit regression model aggregated on physi
   
 *Note that Hellerstein uses a somewhat different notation for confounding variables. It is often common to denote the variable of interest using the index $X$, but not necessarily confounders.*
 
-**Table 4 and 5**
+**Tables 4 and 5**
 
 We estimate the regression coefficients, t-statistics and marginal effects of the regression model. It is not specified whether the model for both tables contain all covariates specified in equation 10 or just the variables mentioned in the tables. We decided to use the full model for both tables. Marginal effects are the average marginal effects across individuals (footnote table 4) (Section \@ref(A3) line 373-405).
 
