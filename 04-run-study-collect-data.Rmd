@@ -13,9 +13,11 @@ path <- "C:/Users/KFischer/Documents/GitHub/DataLiteracy/_bookdown_files/DataLit
 <!--C:/Users/KFischer/sciebo/Date Literacy Project/06 Manuscript/bookdown/DataLiteracy/_book/DataLiteracy_files/figure-html-->
 
 
-## Basic steps when running the study and collecting the data
+In this chapter we specify how to collect and use the data. As this study guide focuses on secondary data, you will need to identify relevant data sources, obtain the source data and process them.
 
-This step specifies which data to use and collect. As this study guide focuses on secondary data, you will need to identify relevant data sources, obtain the source data and process them. As many data sources are not primarily developed for the particular purpose of your study, you often will need to modify the source data to reflect the measurements of your $Y's,X's$ and $Z's$ you wish to examine in your causal model. It is also often that secondary data is not readily available for analysis such that you will need to collect and process these data (for example, by writing a program that extracts data from a website, search engine, or API, or by applying for permission to access the data).
+## Basic steps when collecting the data
+
+As many data sources are not primarily developed for the particular purpose of your study, you often will need to modify the source data to reflect the measurements of your $Y's,X's$ and $Z's$ you wish to examine in your causal model. It is also often that secondary data is not readily available for analysis such that you will need to collect and process these data (for example, by writing a program that extracts data from a website, search engine, or API, or by applying for permission to access the data).
 
 
 We will distinguish between **source data set(s)** and the **analysis data set** that you will be using to run the study.
@@ -52,9 +54,9 @@ You need to assess the suitability of the potential secondary data sources. Type
 - Note that many data sources require registration and/or charge fees for obtaining access and processing requests. Special conditions for academics and students often apply. You may need to describe your research project and ask for permission. Allow these steps to take considerable time.
 
 
-### Process and prepare the source data
+## Basic steps when processing and preparing the data
 
-Once the source data has arrived, been extracted or simply you hit the download button, you need to develop a program (Stata do-file, R-code or code using other software) that documents the data extraction steps and that leads to an analysis dataset. Make sure you save all raw source data in a safe place that in terms of data protection it is ensured, that you do not accidentally delete or overwrite these data.
+Once the **source data** has arrived, been extracted or simply you hit the download button, you need to develop a program (Stata do-file, R-code or code using other software) that documents the data extraction steps and that leads to an analysis dataset. Make sure you save all raw source data in a safe place that in terms of data protection it is ensured, that you do not accidentally delete or overwrite these data.
 
 When you develop the program, you will need to make decisions informed by the previous steps related to
 
