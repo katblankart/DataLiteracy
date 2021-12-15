@@ -33,9 +33,9 @@ Once you have designed the study, you can now search for appropriate data source
 
 You need to assess the suitability of the potential secondary data sources. Types and use of secondary data sources has been described across different disciplines, for example, @hair_nature_2019 for business data, @eriksson_secondary_2016 for drug utilization studies, @fitchett_quantitative_2017 for social studies. It is important to assess the quality of the secondary data sources by the following criteria [@hair_nature_2019]:
 
-- **measurement validity**: this may be difficult to assess, but you may want to look out for research that has used the data you aim to use as well
-- **reliability**:  is the source that you are using provide the data at sufficient quality (see more in Hair)?
-- **potential bias** arises when the data do not measure what you want to measure. Biases may arise from, for example, changes in the sample from which the data is collected (for example if an institution changes the way data are reported, if the sampled population is changing)
+- **measurement validity**: This may be difficult to assess, but you may want to look out for research that has used the data you aim to use as well
+- **reliability**:  Does the source that you are using provide the data at sufficient quality?
+- **potential bias** This arises when the data do not measure what you want to measure. Biases may arise from, for example, changes in the sample of which the data is collected (for example if an institution changes the way data are reported or if the sampled population is changing)
 
 
 ### Develop a data collection and analysis plan
