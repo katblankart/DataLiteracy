@@ -54,7 +54,7 @@ You need to assess the suitability of the potential secondary data sources. Type
 
 ### Process and prepare the source data
 
-Once the source data has arrived, been extracted or simply you hit the download button, at this stage you need to develop a program (Stata do-file, R-code or code using other software) that documents the data extraction steps and that leads to an analysis dataset. Make sure you save all raw source data in a safe place that in terms of data protection. Ensure, that you do not accidentally delete or overwrite these data.
+Once the source data has arrived, been extracted or simply you hit the download button, you need to develop a program (Stata do-file, R-code or code using other software) that documents the data extraction steps and that leads to an analysis dataset. Make sure you save all raw source data in a safe place that in terms of data protection it is ensured, that you do not accidentally delete or overwrite these data.
 
 When you develop the program, you will need to make decisions informed by the previous steps related to
 
@@ -68,6 +68,34 @@ When you develop the program, you will need to make decisions informed by the pr
 - Defining exclusion criteria (for example teens or adults only, general practicioners or physicinas)
 - Aggregating to the appropriate level (individual, family, county, state, country, patient, physician, or hospital, etc.)
 - Specifying the final analysis data set: what outcomes ($Y$), variables of interest ($X$), confounders (other $X$'s), instruments ($Z$) are possible to use from the data?
+
+
+### Generate the analysis dataset 
+
+There are three major tasks that are typically needed to generate the analysis data set:
+
+**1. Clean your data.**
+
+  - get/collect the data and transfer them in a format you use, for example, to .dta from .xlsx (if neccessary)
+  - Make sure that you link different datasets correctly using correct identifiers.
+  - Take time to look through the data, check them, and delete anything that looks suspicious. 
+  - Select your sample of interest.
+  - Generate and leave only variables necessary for your anaylsis.
+  - Ensure that you make plausible and relevant exclusion decisions, for example regarding the time period studied, products, health conditions, age groups.
+  
+  
+**2. Structuring and aggregating of the analysis data**
+
+  - Only include variables of your empirical model in the analysis dataset!
+  - Aggregate your data to the level of analysis. For example, if you aim to analyze physician behavior over time, there should be one observation for each time period and physician (panel data). If your data is purely cross-sectional, there should not be multiple time periods in your data. That means in a cross-section of physicians, one row represents one physician.
+
+
+**4. Store your data**
+
+  - Your analysis dataset is the most important piece for your analyis.
+  - Physically store the version of your analysis dataset that you are using.
+  - Use version control if you are modifying your analysis dataset.
+  - Ensure that the code to create your analysis dataset is complete and can reproduce the analysis dataset completely.
 
 
 ## Resources Box
