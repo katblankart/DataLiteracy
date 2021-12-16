@@ -11,7 +11,7 @@ output:
 
 Think again about your research question and what you are trying to learn or discover. How can you use your data to answer this question?
 
-The data to be analyzed should correspond to the core elements of the hypothesis to be investigated. You investigate whether the postulated cause-effect relationship exists, or quantitatively identify the strength of the effect. To perform a reproducible research project, you need to generate an **analysis dataset**. For information on how to generate an analysis dataset and how to create a set of programs that describes how the secondary data used was synthesized, processed and analyzed, go to [XXX](#XX-XX-XX).
+The data to be analyzed should correspond to the core elements of the hypothesis to be investigated. You investigate whether the postulated cause-effect relationship exists, or quantitatively identify the strength of the effect. To perform a reproducible research project, you need to generate an **analysis dataset**. For information on how to generate an analysis dataset and how to create a set of programs that describes how the secondary data used was synthesized, processed and analyzed, go to [Basic steps when processing and preparing the data](##-Basic-steps-when-processing-and-preparing-the-data).
 
 Using your **analysis dataset** you perfrom two more steps to examine your research question. Across both steps, try to use data visualization with tables and graphs. They are an essential part of your work and not an accessory. Visualizations help to support the argumentation in the text and visualize complex facts in a simple form. 
 
