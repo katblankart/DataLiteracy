@@ -11,43 +11,15 @@ output:
 
 Think again about your research question and what you are trying to learn or discover. How can you use your data to answer this question?
 
-The data to be analyzed should correspond to the core elements of the hypothesis to be investigated. You investigate whether the postulated cause-effect relationship exists, or quantitatively identify the strength of the effect. To perform a reproducible research project, you will need to create a set of programs that describes how the secondary data used was synthesized, processed and analyzed. To document all steps of your analysis, you should use programs like Stata or R.
+The data to be analyzed should correspond to the core elements of the hypothesis to be investigated. You investigate whether the postulated cause-effect relationship exists, or quantitatively identify the strength of the effect. To perform a reproducible research project, you need to generate an **analysis dataset**. For information on how to generate an analysis dataset and how to create a set of programs that describes how the secondary data used was synthesized, processed and analyzed, go to [XXX](#XX-XX-XX).
 
-Across all steps, try to use data visualization with tables and graphs. They are an essential part of your work and not an accessory. Visualizations help to support the argumentation in the text and visualize complex facts in a simple form. In the following, we describe the three major tasks for data analysis
+Using your **analysis dataset** you perfrom two more steps to examine your research question. Across both steps, try to use data visualization with tables and graphs. They are an essential part of your work and not an accessory. Visualizations help to support the argumentation in the text and visualize complex facts in a simple form. 
 
-1. Generate the analysis dataset
-2. Describe your data, assess validity and plausiblity
-3. Generate estimates of your investigated effect using regression techniques
+In the following, we describe the two major tasks for data analysis
 
-<!--[Example of visualized vs. non-visualized data]-->
+1. Describe your data, assess validity and plausiblity
+2. Generate estimates of your investigated effect using regression techniques
 
-### Generate the analysis dataset
-
-There are three major tasks that are typically needed to generate the analysis data set:
-
-**1. Clean your data.**
-
-  - get/collect the data and transfer them in a format you use, for example, to .dta from .xlsx (if neccessary)
-  - Make sure that you link different datasets correctly using correct identifiers.
-  - Take time to look through the data, check them, and delete anything that looks suspicious. 
-  - Select your sample of interest.
-  - Generate and leave only variables necessary for your anaylsis.
-  - Ensure that you make plausible and relevant exclusion decisions, for example regarding the time period studied, products, health conditions, age groups.
-  
-  
-**2. Structuring and aggregating of the analysis data**
-
-
-  - Only include variables of your empirical model in the analysis dataset!
-  - Aggregate your data to the level of analysis. For example, if you aim to analyze physician behavior over time, there should be one observation for each time period and physician (panel data). If your data is purely cross-sectional, there should not be multiple time periods in your data. That means in a cross-section of physicians, one row represents one physician.
-
-
-**4. Store your data**
-
-  - Your analysis dataset is the most important piece for your analyis.
-  - Physically store the version of your analysis dataset that you are using.
-  - Use version control if you are modifying your analysis dataset.
-  - Ensure that the code to create your analysis dataset is complete and can reproduce the analysis dataset completely.
 
 
 ### Describe your data, assess validity and plausiblity
@@ -82,7 +54,6 @@ Start the data analysis by doing some descriptive analyses of your data and samp
 
 **Data Analysis**
 
-
 - [Princeton University Library: Getting Started in Data Analysis using Stata and R](https://dss.princeton.edu/training/)
 - [Data Analysis for Business, Economics, and Policy](https://gabors-data-analysis.com/)
 
@@ -94,25 +65,18 @@ Start the data analysis by doing some descriptive analyses of your data and samp
 - [In Stata coding, Style is the Essential: A brief commentary on do-file style](https://michaelshill.net/2015/07/31/in-stata-coding-style-is-the-essential/)
 
 
-
 **Data Visualization**
 
 - The chapter [Data Visualization Basics by Hans Sievertsen](https://hhsievertsen.github.io/EconDataBook/data-visualization-basics.html) includes important resources for the fundamentals of data visualization
 - [Stata Cheat Sheet on Visualization](https://www.stata.com/bookstore/stata-cheat-sheets/) provides an overview of the technical implementation
 - [Jones AM. Data visualization and health econometrics. Foundations and Trends in Econometrics. 2017](https://doi.org/10.1561/0800000033)
 
+
 **Create journal submission ready output tables**
 
 - [Creating Publication-Quality Tables in Stata](https://ssc.wisc.edu/sscc/pubs/stata_tables.htm)
 - [Stata commands to plot regression coefficients, make regression tables and visualize results by Ben Jann](http://repec.sowi.unibe.ch/stata/)
 
-
-
-<!--References:
-
-- Fresno State Graduate Writing Studio. [A Statistical Checklist for Your Spring Thesis](https://fresnostategraduatewritingstudio.wordpress.com/)
-
-- https://blog.feedspot.com/data_visualization_blogs/-->
 
 
 ## Example: Hellerstein (1998)
