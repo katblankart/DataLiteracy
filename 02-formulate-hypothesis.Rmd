@@ -118,16 +118,7 @@ Your hypothesis suggests a relationship between two variables: social media use 
 
 The **null** hypothesis is: *There is no relationship between social media use among teenagers and their mental health*.
 
-<!--It should be noted that there is an alternative view on this idea - a hypothesis-generating process that suggests that one should not look at the literature too early on in the idea-generating process not to be influenced and shaped by someone else's ideas. According to this view you can spend some time like a few weeks trying to develop your own original idea. Even if you end up with an idea that has already been pursued by someone else and published, this will still provide you with good practice in developing publishable ideas. After you have developed an idea and made sure that it was not yet investigated in the literature, you can start conducting a systematic literature review. By doing this, you can find some other interesting insights from the work of others that you can synthesize in your own work to produce something novel and original.-->
 
-
-
-<!-- https://people.ischool.berkeley.edu/~hal/Papers/how.pdf
--->
-<!-- https://libguides.usc.edu/writingguide/researchproblem
--->
-<!--  https://www.editage.com/insights/how-to-write-the-literature-review-of-your-research-paper -->
-<!--  [How to write the literature review of your research paper](https://www.editage.com/insights/how-to-write-the-literature-review-of-your-research-paper) -->
 
 ## Resources box
 
