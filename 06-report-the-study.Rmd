@@ -228,3 +228,114 @@ More principles on writing in economics are summarized in [Top Ten Rules of Econ
 - [Lund University. Academic Writing in English.](https://www.awelu.lu.se/language/register-and-style/dos-donts/)
 
 
+## Example Hellerstein
+
+In the following, we go over each chapter to highlight its contribution to Hellerstein’s research article. The structure of Hellerstein contains the following chapters: 
+
+Abstract
+Introduction
+Background and related literature
+Medical
+Legal
+Institutional
+Empirical motivation and summary statistics
+The model
+Empirical implementation
+Estimation results
+Conclusion
+Appendices
+References
+
+
+
+## Abstract
+
+In the abstract Hellerstein gives a quick overview on her appear by mentioning the topic, the data, the results and their takeaway
+
+
+## Introduction
+
+The introduction of Hellerstein is rather on the short sight. She starts it by highlighting a welfare enhancing potential of substituting trade-name drugs with generics, creating relevance for her topic. Next, she elaborates her research question, followed by a short overview of the results and their implications. She finalizes with a structural overview of the rest of her paper.
+Other common features of an introduction are missing here. These include among others an overview of the pre-existing research, her contribution to different fields of the literature and an overview of the methodological approach.
+
+
+## Background and related literature
+
+The background section is divided into three parts:
+- A quick summary on the history of generics
+- An overview of different legal systems around generic prescription and generic substitution
+- An institutional background, that includes:
+- A discussion on the decision situation physicians face
+- A list of health insurance types with their respective coverage of prescription drugs.
+
+By providing these background information Hellerstein familiarizes her readers with key aspects of her topic and creates further relevance for her research. She uses descriptive statistics on generic prescription and substitution laws for different legal systems to justify her approach to include geographical covariates in her analysis. Analogously, she argues for the importance to consider the type of insurance by discussing differences between these insurance systems, especially with regard to coverage rates.
+
+
+## Empirical motivation and summary statistics
+
+Hellerstein uses this chapter for two things: to introduce her sample and to show heterogeneities in generic prescription rates in her sample. The first part chapter is thereby built as follows:
+
+- An introduction of the raw data
+- An elaboration on data clearing processes
+- A descriptive overview on the patient sample (NAMCS) and the drug-level subsample (NAMCSd). The variables used for descriptive statistics will later reappear as covariates in the analysis.
+
+The data introduction helps readers to understand the sample Hellerstein uses for her analysis; how it originates, what its properties are and how valid is might be for this particular research topic. The remaining part of the chapter emphasises on descriptive differences in generic prescription rates. The heterogeneities Hellerstein focusses on are in particular:
+
+- In generic prescription rates across drug classes.
+- How frequent physicians prescribe generics.
+- Whether physicians prescribe the same medication sometimes as generic and sometimes as trade-name version, or whether they stick with one option all the time.
+These patterns lay the foundation on why her empirical analysis is important. Further, the statistics in this chapter introduce and justify the inclusion of covariates in her model.
+
+
+## The model
+
+In this chapter, Hellerstein clarifies from a theoretical perspective, what factors might determine a physician’s decision to prescribe a generic.
+Beyond clarifying the decision situation Hellerstein’s analysis revolved around, the model also serves as a hypothesis for her research question. In the formula, it is clearly defined when the insurance coverage (that closely correlated with the insurance status) nudges a physician towards prescribing a generic.
+Last, the model serves as an additional argument, what variables should be considered when empirically modelling the behaviour of physicians.
+
+
+## Empirical implementation
+
+In the first part of this chapter, Hellerstein elaborates how her theory lays framework for empirical application. Most parameters of her theoretical model are not included in the NAMCS data. She therefore discusses how to proxy missing elements using available variables.
+Next, she introduces her empirical model. First, she describes all variables and variable vectors that are included. Next, she discusses her choice of using a random effects estimator.
+The chapter concludes with a discussion of limitations and possible extensions to her empirical approach.
+
+
+## Estimation results
+
+In the results-chapter, Hellerstein again describes her regression model and presents the results. Further she discusses concerns on her estimates and uses other specifications of her model to show her result being robust to them. Some results of the robustness test are also reported.
+The chapter starts with a respecification of her empirical application. It is noteworthy, that the model described here deviates from the equation presented in the previous chapter. All estimated coefficients of this single regression are the reported in 3 separate tables:
+
+- Table 4: Coefficients of demographic variables and frequency of demographics per physician
+- Table 5: Coefficients of drug class dummies
+- Table 6 Coefficients of drug class x insurance type interactions.
+
+In the text accompanying the tables, she picks numerous coefficients, provides possible explanations for them, and derives their implications.
+Next, Hellerstein mentions multiple concerns on her model. She addresses them with different robustness checks. 
+These include:
+
+- Use a subsample of patients below age 65
+- Use a subsample of physicians with more than 20/30 patients in the overall NAMCS (Results for both of these robustness tests are not reported)
+- Use a subsample of observations from states with a special legal system (These results are reported)
+- 
+With that, Hellerstein not only uses her Results-chapter to report her findings, but also to discuss their implications and limitations. Commonly, this is rather done in a separate Discussion-chapter.
+
+
+## Conclusion
+
+Hellerstein starts her conclusion with a quick summary of her research article.
+- What is the aim of her analysis?
+- What are the key findings?
+- What is the takeaway?
+
+Hellerstein then finalizes her article with a discussion on how findings are relevant for future research and policy.
+
+
+## Appendices
+
+The appendix the paper consists of two parts:
+
+- A methodological background on the random effects estimator Hellerstein uses
+- Additional background information on the data and the data clearing processes
+
+
