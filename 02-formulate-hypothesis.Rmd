@@ -17,28 +17,23 @@ knitr::include_graphics(paste(path,"/idea.png",sep=""))
 Source: [DLPNG](https://dlpng.com/png/6808837)
 
 
-## Basic steps to formulate a hypothesis
+
 
 You decide to undertake a scientific project. Where do you start? First, you need to find a research question that interests you and formulate a hypothesis. We will introduce some key terminology, steps you can take, and examples how to develop research questions. Note that there is no single best way to develop a research idea [@pischke_how_2012].
 
 *What if someone assigns a topic to me? For students attending undergraduate and graduate courses that often pick topics from a list, all of these steps are equally important and necessary. You still need to formulate a research question and a hypothesis. And it is important to clarify the relevance of your topic for yourself.*
 
-### What is a hypothesis?
 
-A hypothesis is a statement that introduces your research question and suggests the results you might find. It is an educated guess. You start by posing an economic question and formulate a hypothesis about this question. Then you test it with your data and empirical analysis and either accept or reject the hypothesis. It constitutes the main basis of your scientific investigation and you should be careful when creating it. 
+## How do you develop a research question and formulate a hypothesis?
 
+When thinking about a research question [@trochim_problem_nodate], you need to identify a topic that is
 
-
-### How do you develop a research question and formulate a hypothesis?
-
-When thinking about a research question [@trochim_problem_nodate],  you need to identify a topic that is
-
-- *Relevant*, important in the world and interesting to you as a researcher: Does working on the topic excites you? You will spend many hours thinking aboout it and working on it. Therefore, it should be interesting and engaging enough for you to motivate your continued work on this topic.
+- *Relevant*, important in the world and interesting to you as a researcher: Does working on the topic excites you? You will spend many hours thinking about it and working on it. Therefore, it should be interesting and engaging enough for you to motivate your continued work on this topic.
 - *Specific*: not too broad and not too narrow
 - *Feasible* to research within a given timeframe: Is it possible to answer the research question based on your time budget, data and additional resources.
 
 
-How do you find a topic or develop a feasible research idea in the first place? Finding an idea is not difficult, the critical part is to find a **good** idea. How do you do that? There is no one specific way how one gets an idea, rather there is a myriad of ways how people come up with potential ideas (see, e.g., [@varian_how_2016]). Once you decide on an idea, run it by a few people: approach your supervisor and other fellow students to see whether it is interesting enough to pursue it.
+How do you find a topic or develop a feasible research idea in the first place? Finding an idea is not difficult, the critical part is to find a **good** idea. How do you do that? There is no one specific way how one gets an idea, rather there is a myriad of ways how people come up with potential ideas (see, e.g., [@varian_how_2016]). 
 
 You can find inspiration by
 
@@ -56,35 +51,21 @@ In addition you could
 
 - Go to virtual and in-person seminars, for example, the [Essen Health Economics Seminar](https://www.goek.wiwi.uni-due.de/forschung/essen-health-economics-seminar/winter-2020-21/) 
 - Look at abstracts of scientific articles and working papers
-- Look at the literature in a specific field you are interested in, for example sceening complete issues of journals or editorials about certain research advancements. By reading this literature you might come up with the idea on how to extend and refine previous research.
-	
+- Look at the literature in a specific field you are interested in, for example screening complete issues of journals or editorials about certain research advancements. By reading this literature you might come up with the idea on how to extend and refine previous research.
+
+Once you identified a research question that is of interest to you, you need to define a hypothesis.
 
 
-<!--Once you choose a topic, you need to ask an empirical research question that 
+## What is a hypothesis?
 
-- is interesting, feasible and original
-- is not too broad or too narrow
-- focuses on one economic issue
-- is analytical in nature: should drive you, as a researcher, to explain rather than describe the issue
-- is interesting and significant to motivate you, as a researcher, and engage the audience
-- is possible to answer within a given time frame
-- does not have an obvious answer
-- generates new insights and implications for future research
-- is possible to execute with the existing data sources.
--->
+A hypothesis is a statement that introduces your research question and suggests the results you might find. It is an educated guess. You start by posing an economic question and formulate a hypothesis about this question. Then you test it with your data and empirical analysis and either accept or reject the hypothesis. It constitutes the main basis of your scientific investigation and you should be careful when creating it. 
+
 
 ### Develop a hypothesis
 
 Before you formulate your hypothesis, read up on the topic of interest. This should provide you with sufficient information to narrow down your research question.  Once you find your question you need to develop a hypothesis, which contains a statement of your expectations regarding your research question's results. You propose to prove your hypothesis with your research by testing the relationship between two variables of interest. Thus, a hypothesis should be testable with the data at hand. There are two types of hypotheses: alternative or null. Null states that there is no effect. Alternative states that there is an effect. 
 
 There is an alternative view on this that suggests one should not look at the literature too early on in the idea-generating process to not be influenced and shaped by someone else's ideas ([@varian_how_2016].). According to this view you can spend some time (i.e. a few weeks) trying to develop your own original idea. Even if you end up with an idea that has already been pursued by someone else, this will still provide you with good practice in developing publishable ideas. After you have developed an idea and made sure that it was not yet investigated in the literature, you can start conducting a systematic literature review. By doing this, you can find some other interesting insights from the work of others that you can synthesize in your own work to produce something novel and original.
-
-
-<!--References
-- https://www.economicsnetwork.ac.uk/handbook/ugresearch/31
-- [Forming Hypotheses & Questions About Economic Issues](https://study.com/academy/lesson/forming-hypotheses-questions-about-economic-issues.html)
-- [RESEARCH HYPOTHESIS](https://oakland.edu/Assets/upload/docs/AIS/Syllabi/Tayler_Research_Hypothesis.pdf)
--->
 
 
 ### Identify relevant literature
@@ -143,7 +124,7 @@ Several rankings may help to assess the quality of research you consider
 
  - Journals of general interest and by field in economics and management
         - For German-speaking countries, consider the [VWL / BWL Handelsblatt Ranking](https://www.forschungsmonitoring.org/) for economics and management
-        - The German Association of Management Scholars provides an expert-based ranking[VHB JourQual 3.0, Teilranking Management im Gesundheitswesen](https://vhbonline.org/vhb4you/vhb-jourqual/vhb-jourqual-3/tabellen-zum-download)
+        - The German Association of Management Scholars provides an expert-based ranking [VHB JourQual 3.0, Teilranking Management im Gesundheitswesen](https://vhbonline.org/vhb4you/vhb-jourqual/vhb-jourqual-3/tabellen-zum-download)
         - Web of Science Impact Factors
         - Scimago
  - Health Economics, Health Services and Health Care Managment Research: [Health Economics Journals List](https://www.mthooddiabeteschallenge.com/journal-list)
@@ -156,6 +137,7 @@ Several rankings may help to assess the quality of research you consider
  - [Connected papers](https://www.connectedpapers.com)
  - [scite_](https://scite.ai/) -- a tool to get a first impression whether a study is disputed or academic consensus
 
+
 ### Organize your literature
 
 - [Zotero](https://www.zotero.org/) (free of charge)
@@ -164,8 +146,6 @@ Several rankings may help to assess the quality of research you consider
 - [Citavi](https://www.citavi.com/de) (potentially free of charge via your university)
 - BibTEX if you work with TEX
 - Excel spread sheet
-<!--- https://www.uni-due.de/ub/abisz/literaturverwaltung.shtml-->
-
 
 
 ## Example: Hellerstein (1998)
@@ -184,6 +164,7 @@ This includes research on:
 
 At the end of each chapter, we demonstrate insights into the 1998 study by Judith K. Hellerstein that we reproduce.
 
+
 ### **Relevance of the topic - escalating health expenditures**
 
 Worldwide, health systems face constantly increasing prescription drug expenditures. In the United States, the total prescription drug expenditure in 2020 marked about 358.7 billion US-Dollars [@statista_prescription_2020]. The prescription of generic drugs is an option in reducing the total health care expenditure. Generic drugs are bioequivalent in the active ingredients and can serve as a channel to contain prescription expenditure [@kesselheim_clinical_2008] as generic drugs are between 20 to 90 % cheaper than their trade-name alternative [@dunne_review_2013].
@@ -192,15 +173,15 @@ Worldwide, health systems face constantly increasing prescription drug expenditu
 
 Physicians are faced with a multitude of different medication options, including the choice between generic and trade-name drugs. Physicians ideally act as agents for their patients to identify the best available treatment option. However, choosing the best treatment entails cost of coordination and cognition. The prescription of generic drugs may serve as an example to what extent physicians customize treatments according to patients' needs with regards to cost. From an economic point of view one might suggest that once a generic drug is available, a perfectly rational agent (i.e. physician) would prescribe a generic drug instead of the trade-name version if therapeutically identical [@dranove_medicaid_1989]. This leads us to a question: *"Do physicians vary their prescription decisions on a patient-by-patient basis or do they systematically prescribe the same version, trade-name or generic, to all patients?"*. 
 
-The 1998 Hellerstein's study focuses on two aspects:
+The 1998 Hellerstein's study focuses on two aspects (two hypotheses):
 
 1. The role of the physician in prescribing a generic over a brand-name drug
 2. The role of a patient's insurance status in the physician's choice between generic vs brand-name drugs.
 
 For the purpose of this example we focus on the latter aspect.  
 
-### **Hypothesis - Physicians are more likely to prescribe generics to patients who do not have insurance coverage for prescription pharmaceuticals (moral hazard in insurance).**
 
+### **Hypothesis - Physicians are more likely to prescribe generics to patients who do not have insurance coverage for prescription pharmaceuticals (moral hazard in insurance).**
 
 
 Hellerstein (1998) discusses that, based on their insurance status, some patients may demand certain care more than others. If, for example, the prescription drug is reimbursed by the patient's health insurance, this may cause overconsumption. This behavior can potentially differ by the patient’s insurance scheme. A patient that has no insurance and, thus, does not get any reimbursement for prescription drugs, might have a higher incentive to demand cheaper generic drugs [@danzon_cross-national_2011] than a patient with insurance that covers prescription drugs, either generic or trade-name. Given that the United States have different insurance schemes with varying prescription drug coverage, it is of interest to investigate the role of a patient's insurance status in the physician's choice between generic vs brand-name drugs.
