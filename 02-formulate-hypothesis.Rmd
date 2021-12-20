@@ -130,8 +130,7 @@ Several rankings may help to assess the quality of research you consider
  - Health Economics, Health Services and Health Care Managment Research: [Health Economics Journals List](https://www.mthooddiabeteschallenge.com/journal-list)
  - Be aware that like in any other domain there are [predatory publishing practices](https://predatoryjournals.com/).
  
- 
-### Investigate how a journal article is connected to other works
+ Investigate how a journal article is connected to other works
 
  - [Citationgecko](https://citationgecko.azurewebsites.net/)
  - [Connected papers](https://www.connectedpapers.com)
