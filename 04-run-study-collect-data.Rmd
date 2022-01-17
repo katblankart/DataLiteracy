@@ -69,7 +69,7 @@ When you develop the program, you will need to make decisions informed by the pr
 - Defining the study period
 - Defining exclusion criteria (for example teens or adults only, general practicioners or physicinas)
 - Aggregating to the appropriate level (individual, family, county, state, country, patient, physician, or hospital, etc.)
-- Specifying the final analysis data set: what outcomes ($Y$), variables of interest ($X$), confounders (other $X$'s), instruments ($Z$) are possible to use from the data?
+- Specifying the final analysis dataset: what outcomes ($Y$), variables of interest ($X$), confounders (other $X$'s), instruments ($Z$) are possible to use from the data?
 
 
 ### Generate the analysis dataset 
@@ -134,23 +134,24 @@ General principles on **How to code well**
 
 ## Example: Hellerstein (1998)
 
-The empirical application of Hellerstein (1998) is based on three datasets as provided by the National Ambulatory Care Survey from the year 1989:
+The empirical application of Hellerstein (1998) is based on three datasets as provided by the National Ambulatory Care Survey (NAMCS) from the year 1989:
 
 -	**NAMCS**, containing demographic and medical information on the full sample of patients
 -	**NAMCSd**, containing information on medications prescribed or given to a subsample of patients of the NAMCS data.
 -	**NAMCS confidential data**, key to identifying physicians state of origin 
 
-The confidential data are not publicly available but are key to identifying physicians and patients. Thus, for the purpose of reproducing Hellerstein's results, we resort to the publicly available data of 1991, that provides these identifiers in two publicly available datasets:
+The confidential data are not publicly available but are key to identifying physicians and patients. Thus, for the purpose of reproducing Hellerstein's results, we resort to the publicly available data of 1991, that provide these identifiers in two publicly available datasets:
 
 -	**NAMCS**, containing demographic and medical information on the full sample of patients (documentation can be found [here]( https://www.cdc.gov/nchs/ahcd/datasets_documentation_related.htm)).
 -	**NAMCSd**, containing information on medications prescribed or given to a subsample of patients of the NAMCS data (documentation can be found [here]( https://www.cdc.gov/nchs/ahcd/datasets_documentation_related.htm)).
 
-The NAMCS data contain data on patient visits to non-federally employed physicians in the United States. For each visit, the physician or other staff members have to complete a one-page survey form containing inter alia patient demographics including the patient’s insurance status, diagnoses, types of health behaviour counselling or medications ordered or provided as well as provider characteristics. As the physicians are randomly chosen and randomly assigned to a two-week reporting period, the NAMCS is able to create a nationally representative sample.
+The NAMCS contains data on patient visits to non-federally employed physicians in the United States. For each visit, the physician or other staff members have to complete a one-page survey form containing inter alia patient demographics including the patient’s insurance status, diagnoses, types of health behavior counselling, medications ordered or provided, as well as provider characteristics. As the physicians are randomly chosen and randomly assigned to a two-week reporting period, the NAMCS is able to create a nationally representative sample.
 
 The publicly available data of NAMCS and NAMCSd come in an .exe format and can be downloaded at the [Centers for Disease Control and Prevention (CDC) website](https://www.cdc.gov/nchs/ahcd/datasets_documentation_related.htm). We use the unpacking software 7-zip to convert the files in a .txt format. The NAMCS dataset contains demographic and medical information on the full sample of patients and is mainly used to introduce the sample. The NAMCSd is a subsample of patients of the NAMCS data. It is the sample used for all estimations later on. In it, each observation covers one medication, that was mentioned, prescribed or given to a patient, and comes along with further information on both the medication and the patient receiving it.
+
 Usually, certain transformations need to be performed to be able to use the raw dataset. This can apply to the file or data format, the structure of the dataset or you might need to combine different datasets.
 
-After downloading the raw data from the CDC website, a challenge is to structure the raw dataset to be able to use the relevant variables in Stata. After importing the text file, all data were condensed to one string of characters in a single column. This means that we first need to indicate the different data items (variables) for the individual information (i.e. patient characteristics). Therefore, to be able to use the data, we need to manually split the string into the desired format, so the information is split in separate variables. Which digits in the initial string belong to one data item is defined in the documentation files (also often referred to as a codebook), provided by the [CDC](https://www.cdc.gov/nchs/ahcd) website. Almost every dataset comes with a codebook, containing useful information on the coding or handling of the data. This can often help and provide the necessary information needed to successfully prepare your data for empirical analysis.
+After downloading the raw data from the CDC website, a challenge is to structure the raw dataset to be able to use the relevant variables in Stata. After importing the text file, all data were condensed to one string of characters in a single column. This means that we first need to indicate the different data items (variables) for the individual information (i.e. patient characteristics). Therefore, to be able to use the data, we need to manually split the string into the desired format, so the information is split in separate variables. Which digits in the initial string belong to one data item is defined in the documentation files (also often referred to as a codebook) provided by the [CDC](https://www.cdc.gov/nchs/ahcd) website. Almost every dataset comes with a codebook, containing useful information on the coding or handling of the data. This can often help and provide the necessary information needed to successfully prepare your data for empirical analysis.
 
 For the reproduction of Hellerstein (1998) we use Stata, creating a do-file containing the code (Section \@ref(A1)). It is important to develop a program file of your code containing every step you performed to manipulate and analyze your data. This ensures the reproducibility of your research and enables you to go back to earlier versions of your data preparation and analysis, if necessary.
 
@@ -158,12 +159,12 @@ Before going into further detail on the data preparation, we want to emphasize o
 
 The Stata code is the heart of your empirical analysis. To make it as comprehensible as possible, we divided the code into four parts. The first part translates the raw data into a readable format, the second one applies Hellerstein’s preparatory processes, the third reproduces the descriptive statistics and the last contains the code to run the empirical analysis. Corresponding to these do-files, we created sub-folders that contain required data or offer a place to store the output. By saving the paths to all your relevant subfolders as global, you can easily navigate through your working directory. Setting up your working directory at the start of a project will also help you to keep an overview on what is done and what is to come. You can find an example of the pathing and setup in (Section \@ref(A1) line 12 to 21).
 
-Once the NAMCS and NAMCSd are turned into readable formats we performed the following cleaning (i.e. exclusion of certain observations), transforming and preparation steps, that are needed to reproduce the tables and figures originally produced by Hellerstein (1998):
+Once the NAMCS and NAMCSd are turned into readable formats we perform the following cleaning (i.e. exclusion of certain observations), transforming and preparation steps, that are needed to reproduce the tables and figures originally produced by Hellerstein (1998):
 
 For the NAMCS, used exclusively for the reproduction of table 1 (Section \@ref(A1)):
 
   - Missing data must be relabelled according to the syntax of the statistical software and observations with missing data were not considered.
-  - Keep only those observations that uniquely identify a single source of payment, meaning to drop observations with (A) missing insurance status, or (B) multiple insurance statuses. Step (B) is not mentioned in the text but can be inferred by the values of Table 1. Despite some observations reporting multiple sources of payment, the means of the mentioned payment/insurance options aggrgate to 1. Thus, Hellerstein must have treated these observations as invalid.
+  - Keep only those observations that uniquely identify a single source of payment, meaning to drop observations with (A) missing insurance status, or (B) multiple insurance statuses. Step (B) is not mentioned in the text but can be inferred by the values of Table 1. Despite some observations reporting multiple sources of payment, the means of the mentioned payment/insurance options aggregate to 1. Thus, Hellerstein must have treated these observations as invalid.
   - The setup of the dummy variables for Medicare and Specialists underlie special conditions (details can be found in the do-file attached), whereas the remaining dummies were not created straight away.
 
 For the NAMCSd, used for all other figures and tables,
@@ -171,8 +172,8 @@ For the NAMCSd, used for all other figures and tables,
   - Clear missing values and perform steps (A) and (B) as in the NAMCS data.
   - Although reported in the table 1, drop observations that report 'other government insurance' as a source of payment.
   - Keep only those observations of drugs that are the first mentioned drug in a patient visit. 
-  - Keep only those observations of drug mentions, that are part of the eight largest drug classes. The names of the included drug classes can be found in table 3 and the labels the data uses in the documentation files.
-  - Keep only those observations of drugs, that were prescribed.
+  - Keep only those observations of drug mentions, that are part of the eight largest drug classes. The names of the included drug classes can be found in table 3 and the labels the data use in the documentation files.
+  - Keep only those observations of drugs that were prescribed.
   - Create the same dummies as in the preparation of the NAMCS data (footnote table 2)
   - Create an indicator on whether a drug is a multisource drug (definition given in ch.1 paragr. 1: "We categorized drugs with the same ingredients and define drugs in an ingredient-group as multisource if there is at least one generic and one tradename drug within a group.").
   - Drop observations of medications that are not multisource drugs. 
@@ -213,9 +214,9 @@ The NAMCSd dataset serves as a source for the empirical analysis of Hellerstein 
 | mean_female       | Mean percentage of females in an individual practice                            |
 | mean_nonwhite     | Mean percentage of nonwhites in an individual practice                          |
 | mean_hispanic     | Mean percentage of hispanics in an individual practice                          |
-| mean_medicare     | Mean percentage of patients with medicare insurance in an individual   practice |
-| mean_medicaid     | Mean percentage of patients with medicaid insurance in an individual   practice |
+| mean_medicare     | Mean percentage of patients with medicare insurance in an individual practice   |
+| mean_medicaid     | Mean percentage of patients with medicaid insurance in an individual practice   |
 | mean_hmo_pre_paid | Mean percentage of patients with HMO insurance in an individual practice        |
-| mean_private_ins  | Mean percentage of patients with private insurance in an individual   practice  |
+| mean_private_ins  | Mean percentage of patients with private insurance in an individual practice    |
 
 
