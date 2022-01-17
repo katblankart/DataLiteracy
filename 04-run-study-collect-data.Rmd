@@ -17,10 +17,10 @@ In this chapter we specify how to collect and use the data. As this study guide 
 
 ## Basic steps when collecting the data
 
-As many data sources are not primarily developed for the particular purpose of your study, you often will need to modify the source data to reflect the measurements of your $Y's,X's$ and $Z's$ you wish to examine in your causal model. It is also often that secondary data is not readily available for analysis such that you will need to collect and process these data (for example, by writing a program that extracts data from a website, search engine, or API, or by applying for permission to access the data).
+As many data sources are not primarily developed for the particular purpose of your study, you often will need to modify the source data to reflect the measurements of your $Y's$, $X's$ and $Z's$ you wish to examine in your causal model. It is also often that secondary data is not readily available for analysis such that you will need to collect and process these data (for example, by writing a program that extracts data from a website, search engine, or API, or by applying for permission to access the data).
 
 
-We will distinguish between **source data set(s)** and the **analysis data set** that you will be using to run the study.
+We distinguish between **source dataset(s)** and the **analysis dataset** that you will be using to run the study.
 
 We point to the following distinction that will have implications on the resources needed to collect and process:
 
@@ -33,17 +33,17 @@ The following steps are typically performed when collecting the data:
 
 Once you have designed the study, you can now search for appropriate data sources of your $X's$, $Y's$ and $Z's$. That means you investigate which data items of one or multiple secondary data source(s) you are using and how these items can be collected. You have to document where, how and which data you gathered and processed.  Specify exactly the variables that you will be extracting and any exclusions of the data source. If you are generating a dataset yourself from another source through scraping techniques, you also need to document how the data are collected and processed, for example, by sharing the corresponding script and a description of that data.
 
-You need to assess the suitability of the potential secondary data sources. Types and use of secondary data sources has been described across different disciplines, for example, @hair_nature_2019 for business data, @eriksson_secondary_2016 for drug utilization studies, @fitchett_quantitative_2017 for social studies. It is important to assess the quality of the secondary data sources by the following criteria [@hair_nature_2019]:
+You need to assess the suitability of the potential secondary data sources. Types and use of secondary data sources have been described across different disciplines, for example, @hair_nature_2019 for business data, @eriksson_secondary_2016 for drug utilization studies, @fitchett_quantitative_2017 for social studies. It is important to assess the quality of the secondary data sources by the following criteria [@hair_nature_2019]:
 
-- **measurement validity**: This may be difficult to assess, but you may want to look out for research that has used the data you aim to use as well
-- **reliability**:  Does the source that you are using provide the data at sufficient quality?
-- **potential bias** This arises when the data do not measure what you want to measure. Biases may arise from, for example, changes in the sample of which the data is collected (for example if an institution changes the way data are reported or if the sampled population is changing)
+- **measurement validity**: This may be difficult to assess, but you may want to look for research that has used the data you aim to use 
+- **reliability**: Does the source that you are using provide the data of sufficient quality?
+- **potential bias** This arises when the data do not measure what you want to measure. Biases may arise from, for example, changes in the sample from which the data are collected (for example, if an institution changes the way data are reported or if the sampled population is changing)
 
 
 ### Develop a data collection and analysis plan
 
-  - Use a data scheme to describe how you combine different secondary data sets into your analysis data set.
-  - Even if there is only one source dataset that you are using, you may need to think about how this data set needs to be processed to be fit for your final analysis purpose.
+  - Use a data scheme to describe how you combine different secondary datasets into your analysis dataset.
+  - Even if there is only one source dataset that you are using, you may need to think about how this dataset needs to be processed to be fit for your final analysis purpose.
   - Pay attention to how different data sources are linked: are there unique identifiers of the invidual subjects that you are studying (for example, identifiers for patients, physicians, firms, products). Are they the same across the different source data?
   - Per each dataset, describe which variables or items you plan to collect and how you aim to process the source data to fit the purpose of your study.
 
@@ -67,14 +67,14 @@ When you develop the program, you will need to make decisions informed by the pr
   - Creating new variables
   - Labeling the variables 
 - Defining the study period
-- Defining exclusion criteria (for example teens or adults only, general practicioners or physicinas)
+- Defining exclusion criteria (for example, teens or adults only, general practicioners or physicians)
 - Aggregating to the appropriate level (individual, family, county, state, country, patient, physician, or hospital, etc.)
-- Specifying the final analysis data set: what outcomes ($Y$), variables of interest ($X$), confounders (other $X$'s), instruments ($Z$) are possible to use from the data?
+- Specifying the final analysis dataset: what outcomes ($Y$), variables of interest ($X$), confounders (other $X$'s), instruments ($Z$) are possible to use from the data?
 
 
 ### Generate the analysis dataset 
 
-There are three major tasks that are typically needed to generate the analysis data set:
+There are three major tasks that are typically needed to generate the analysis dataset:
 
 **1. Clean your data.**
 
@@ -83,18 +83,18 @@ There are three major tasks that are typically needed to generate the analysis d
   - Take time to look through the data, check them, and delete anything that looks suspicious. 
   - Select your sample of interest.
   - Generate and leave only variables necessary for your anaylsis.
-  - Ensure that you make plausible and relevant exclusion decisions, for example regarding the time period studied, products, health conditions, age groups.
+  - Ensure that you make plausible and relevant exclusion decisions, for example, regarding the time period studied, products, health conditions, age groups.
   
   
 **2. Structuring and aggregating of the analysis data**
 
   - Only include variables of your empirical model in the analysis dataset!
-  - Aggregate your data to the level of analysis. For example, if you aim to analyze physician behavior over time, there should be one observation for each time period and physician (panel data). If your data is purely cross-sectional, there should not be multiple time periods in your data. That means in a cross-section of physicians, one row represents one physician.
+  - Aggregate your data to the level of analysis. For example, if you aim to analyze physician behavior over time, there should be one observation for each time period and physician (panel data). If your data are purely cross-sectional, there should not be multiple time periods in your data. That means in a cross-section of physicians, one row represents one physician.
 
 
 **4. Store your data**
 
-  - Your analysis dataset is the most important piece for your analyis.
+  - Your analysis dataset is the most important piece for your analysis.
   - Physically store the version of your analysis dataset that you are using.
   - Use version control if you are modifying your analysis dataset.
   - Ensure that the code to create your analysis dataset is complete and can reproduce the analysis dataset completely.
