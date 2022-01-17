@@ -20,7 +20,8 @@ path <- "C:/Users/KFischer/Documents/GitHub/DataLiteracy/_bookdown_files/DataLit
 
 ## Basic steps in designing your study
 
-You have chosen your research questions and formulated a hypothesis. You also have collected and reviewed all the relevant literature on the topic. Now, you need to decide on your research design. Are you planning to uncover associations, or do you want to examine a causal relationship between your variables of interest [@pearl_causality_2009;@pearl_causal_2016]? We will focus on investigating causal relationships. To translate direct observations in data to investigate cause-and-effect relationships, you will need to rely on a workable model that describes the elements and relationships of concepts reflected in your hypothesis. For that reason, it is recommended that you first describe the causal structures of the elements that you are studying, including any other observed or unobserved structures that may disturb the cause-and-effect relationship under investigation.
+You have chosen your research question and formulated a hypothesis. You also have collected and reviewed all the relevant literature on the topic. Now, you need to decide on your research design. Are you planning to uncover associations, or do you want to examine a causal relationship between your variables of interest [@pearl_causality_2009;@pearl_causal_2016]? We will focus on investigating causal relationships. To translate direct observations in data to investigate cause-and-effect relationships, you will need to rely on a workable model that describes the elements and relationships of concepts reflected in your hypothesis. For that reason, it is recommended that you first describe the causal structures of the elements that you are studying, including any other observed or unobserved structures that may disturb the cause-and-effect relationship under investigation.
+
 One way of describing your causal structure is by creating causal diagrams, also referred to as directed acyclic graphs [DAG](https://cran.r-project.org/web/packages/ggdag/vignettes/intro-to-dags.html). A DAG is a systematic representation of a causal relationship between two variables ($X$ and $Y$) with a focus on minimizing statistical bias by potential confounding variables ($Z$). It is recommended to do this step before data collection. That way, you avoid collection of data that may not be needed. You also avoid forgetting variables that are necessary for causal effect identification. And you may [check for so-called bad controls](https://ftp.cs.ucla.edu/pub/stat_ser/r493.pdf) that may bias your estimates.
 
  
@@ -28,8 +29,10 @@ One way of describing your causal structure is by creating causal diagrams, also
 knitr::include_graphics(paste(path,"/basic_DAG.PNG",sep=""))
 ```
 
-To define the causal parameters that you aim to identify in your empirical analysis, the potential outcomes framework uses the potential values of the outcomes given a certain treatment [@ doi:10.1146/annurev-economics-080217-053402]. This framework is particularly suited for evaluating the effect of policies (governmental, firm policies). In short, you would like to compare outcomes given a subject (individual, firm, region) has received a treatment and compare this to the outcomes when the subject has not received a treatment. The difference between the two will tell you the treatment effect from having received the treatment or policy under investigation by defining potential and realized outcomes.  Using the potential outcomes framework helps you to specify and assess whether you can conclude that your estimands are coming from a population where the treatment has been randomly assigned to subjects.
+To define the causal parameters that you aim to identify in your empirical analysis, the potential outcomes framework uses the potential values of the outcomes given a certain treatment [@ doi:10.1146/annurev-economics-080217-053402]. This framework is particularly suited for evaluating the effect of policies (governmental, firm policies). In short, you would like to compare outcomes given a subject (individual, firm, region) has received a treatment to the outcomes when the subject has not received a treatment. The difference between the two will tell you the treatment effect from having received the treatment or policy under investigation by defining potential and realized outcomes. Using the potential outcomes framework helps you to specify and assess whether you can conclude that your estimands are coming from a population where the treatment has been randomly assigned to subjects.
+
 In summary, both directed acyclic graphs and the potential outcomes framework are the prime tools when performing empirical analyses to specify a) the effects that you aim to identify and b) the structural relationships between the concepts (dependent variables, variables of interests and confounders) under evaluation and c) whether your results allow for causal inference. Both approaches are powerful and comprehensive. We provide references to major resources below.
+
 The design of your study will depend on the causal model that suggests which effects are estimable, given that there are suitable data to empirically identify the effect. Consider that you describe cause-and-effect relationship first, assess how it is estimable (that means that you ask the question "Can you infer a causal effect from your data?") and then investigate the effect by direct observations using secondary data. 
 
 We focus on study designs that use secondary data with the aim to identify the magnitude of effects of causal relationships between a variable of interest $X$ and a certain outcome $Y$, controlling for potential confounders $Z$. Note that there is extensive literature and guidance about designing and performing causal inference studies, some of which we guide you to below. We will highlight the most important elements and point to the relevant resources.
@@ -43,10 +46,10 @@ You should specify a causal model that describes the relationships between the e
 
 Generally speaking, you need to specify your
 
-- main outcomes variable of interest ($Y$)
+- main outcome variable of interest ($Y$)
 - main independent variable of interest ($X$)
 - other independent variables (confounders of the effect of $X$ on $Y$), that means any additional $Z$'s
-- unobserved variables ($U$)
+- unobserved variable ($U$)
 
 You need to think about how these concepts can be measured and what the relationships between these concepts are.
 
@@ -54,19 +57,19 @@ You need to think about how these concepts can be measured and what the relation
 
 ### Develop the empirical strategy to investigate causal effects
 
-After you have specified your causal model, ask yourself how you can capture the causal relationship between $X$ and $Y$? In other words, can you apply an appropriate research design that can accommodate you in determining causality with the data at hand? Following the classification by @matthay_alternative_2020, that means by performing, for example a
+After you have specified your causal model, ask yourself how you can capture the causal relationship between $X$ and $Y$? In other words, can you apply an appropriate research design that can accommodate you in determining causality with the data at hand? Following the classification by @matthay_alternative_2020, that means performing, for example, a
 
 
 - Randomized Controlled Trial (RCT): this would be the ideal world case where we could randomize treatments to study effect where you actively assign a treatment to subjects by chance.
 
-Most secondary data is collected retrospectively and thus will not allow performing a RCT. You will not be able to randomly assign subjects ahead of time, such that you typically need to search for the best available quasi-experiment to identify treatment effects using a
+Most secondary data are collected retrospectively and thus will not allow performing a RCT. You will not be able to randomly assign subjects ahead of time, such that you typically need to search for the best available quasi-experiment to identify treatment effects using a
 
 - Confounder Control Study
 
   - Regression adjustment
   - Matching Techniques
   - Simulation
-  - Random- or Fixed effects regressions
+  - Random or Fixed effects regressions
   - Instruments
   - Regression discontinuity design (RDD)
   - Difference-in-difference (DiD) analysis
@@ -84,16 +87,18 @@ Common types of treatment effect parameters are
 - marginal treatment effects (MTE)
 - local average treatment effects (LATE)
 - quantile treatment effects (QTE)
+- intention to treat effect (ITT)
 
 
 
 ### Investigate suitable source data
 
-You need to find and collect suitable data to populate your causal model. This might take some time, and not all of the variables can be found in one dataset. Frequently, different data sources need to be collected and combined. You need to decide on what aggregation level you need to conduct your analysis to estimate the cause-and-effect relationships postulated, for example individual (patient, student), organization (hosptial), regional (country, state). Given that, you need to identify appropriate data sources that contain your variables of interest at the given aggregation level.
+You need to find and collect suitable data to populate your causal model. This might take some time, and not all of the variables can be found in one dataset. Frequently, different data sources need to be collected and combined. You need to decide on what aggregation level you need to conduct your analysis to estimate the cause-and-effect relationships postulated, for example, individual (patient, student), organization (hosptial), regional (country, state). Given that, you need to identify appropriate data sources that contain your variables of interest at the given aggregation level.
 
-When searching for the data sources, you can turn to already existing datasets specifically designed for scientific use, for example surveys ([NAMCS](https://www.cdc.gov/nchs/ahcd/ahcd_questionnaires.htm), [CPS](https://www.census.gov/programs-surveys/cps.html), [NLSY](https://www.nlsinfo.org/), 
-[HILDA](https://melbourneinstitute.unimelb.edu.au/hilda), [RLMS]( https://rlms-hse.cpc.unc.edu/), [KiGGS](https://www.kiggs-studie.de/english/home.html)); panels (for example [GSOEP](https://www.eui.eu/Research/Library/ResearchGuides/Economics/Statistics/DataPortal/GSOEP), [SHARE](http://www.share-project.org/home0.html), [HRS](https://hrs.isr.umich.edu/data-products), [ELSA](https://www.elsa-project.ac.uk/)); censuses (e.g. Microcensus).
-Some data are available from statistical offices (Eurostat in the European Union, DESTATIS for Germany), private companies (health insurances), Social Media and App-based data (Mappiness, Fitbit, Facebook, Twitter, WayBetter) or governmental and non-governmental institutions (European Medicines Agency, Food and Drug Administration). Sometimes you have to hand-collect and digitize the necessary data, for example from historical documents, data from governmental and non-governmental agencies, commercial providers and library search engines, archives; download statistical tables from INKAR's or Unemployment Agency's websites. Therefore, you need to plan whether and how these can be accessed and how much time is needed for extraction. Consider automated tools like scraping.
+When searching for the data sources, you can turn to already existing datasets specifically designed for scientific use, for example, surveys ([NAMCS](https://www.cdc.gov/nchs/ahcd/ahcd_questionnaires.htm), [CPS](https://www.census.gov/programs-surveys/cps.html), [NLSY](https://www.nlsinfo.org/), 
+[HILDA](https://melbourneinstitute.unimelb.edu.au/hilda), [RLMS]( https://rlms-hse.cpc.unc.edu/), [KiGGS](https://www.kiggs-studie.de/english/home.html)); panels (for example, [GSOEP](https://www.eui.eu/Research/Library/ResearchGuides/Economics/Statistics/DataPortal/GSOEP), [SHARE](http://www.share-project.org/home0.html), [HRS](https://hrs.isr.umich.edu/data-products), [ELSA](https://www.elsa-project.ac.uk/)); censuses (e.g., Microcensus).
+
+Some data are available from statistical offices (Eurostat in the European Union, DESTATIS for Germany), private companies (health insurances), Social Media and App-based data (Mappiness, Fitbit, Facebook, Twitter, WayBetter) or governmental and non-governmental institutions (European Medicines Agency, Food and Drug Administration). Sometimes you have to hand-collect and digitize the necessary data, for example, from historical documents, data from governmental and non-governmental agencies, commercial providers and library search engines, archives; download statistical tables from INKAR's or Unemployment Agency's websites. Therefore, you need to plan whether and how these can be accessed and how much time is needed for extraction. Consider automated tools like scraping.
 
 
 ## Resources box
@@ -107,9 +112,9 @@ Some data are available from statistical offices (Eurostat in the European Union
 - **Exogenous versus endogenous variables**: These terms are common in economics, where a variable is described as exogenous if its values are not determined by other variables in the causal model. The variable is called endogenous if it is influenced by other variables in the causal model. If a third variable influences both the exposure and outcome, this implies the exposure is endogenous.
 
 
-### Openly-available textbooks and resources on econometrics with a causal inference focus
+### Openly available textbooks and resources on econometrics with a causal inference focus
 
-- [Causal Inference: The Mixtape](https://mixtape.scunning.com/)  by [Scott Cunningham](http://www.scunning.com/)
+- [Causal Inference: The Mixtape](https://mixtape.scunning.com/) by [Scott Cunningham](http://www.scunning.com/)
 - [What If](https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/) by Jamie Robin and Miguel Hernan
 - [The Effect: An Introduction to Research Design and Causality](http://nickchk.com/causalitybook.html) by [Nick Huntington-Klein](http://nickchk.com/)
 - [How Do We Know if a Program Made a Difference? A Guide to Statistical Methods for Program Impact Evaluation](https://www.measureevaluation.org/resources/publications/ms-14-87-en.html) by MEASURE Evaluation
@@ -141,11 +146,13 @@ The identified research question and the hypothesis that physicians are more lik
 knitr::include_graphics(paste(path,"/DAG.PNG",sep=""))
 ```
 
-Hellerstein sets up an observational, retrospective analysis of secondary data, including patient and physician characteristics. The goal of the analysis is to identify a causal effect of the patient's insurance status (independent variable, $X$) on the prescription of a generic over a trade-name drug (dependent variable, $Y$). As the prescription decision of the physician is prone to involve information imperfections and agency problems, the empirical model needs to control for physician specific effects among other possible influencing factors (confounders $Z$). Another factor Hellerstein is concerned about is random variation at physician level in the choice between generic and trade-name drugs.
+Hellerstein sets up an observational, retrospective analysis of secondary data, including patient and physician characteristics. The goal of the analysis is to identify a causal effect of the patient's insurance status (independent variable, $X$) on the prescription of a generic over a trade-name drug (dependent variable, $Y$). As the physician's prescription decision is prone to involve information imperfections and agency problems, the empirical model needs to control for physician-specific effects among other possible influencing factors (confounders $Z$). Another factor Hellerstein is concerned about is random variation at physician level in the choice between generic and trade-name drugs.
 
 
-The study is based on data from the National Ambulatory Medical Care Survey (NAMCS) 1991. The NAMCS is a national sample survey administered by the National Center for Health Statistics. The NAMCS data contain all actions taken by a physician in this period and, thus, allows to control for physician specific behaviour. This is necessary to draw conclusions of our estimand, namely the effect of the patient’s insurance status. 
-The confounder control study design chosen by Hellerstein (1998) uses a random effects probit specification at physician level to estimate the effect of insurance status on generic compared to trade-name drug choice. This includes the outcome variable ($Y$), a binary variable, which indicates whether a patient got a trade-name or a generic drug prescribed. $Y$ takes the value $1$ if a generic drug or the value $0$ if a trade-name drug was prescribed. Of interest is the causal effect of the patient’s different insurance types. Those include Medicare, Medicaid, HMO/prepaid and private insurance. Other independent variables included in the analysis for the purpose of reducing possible bias are the drug class as proxy for prices, patient characteristics (age, gender, race), physician specialist status, the region and the averages of patient characteristics per physician. These help portraying the physicians practice as a whole, as they contain all patients of the practice, including the patients that did not receive any drug prescription. 
+The study is based on data from the National Ambulatory Medical Care Survey (NAMCS) 1991. The NAMCS is a national sample survey administered by the National Center for Health Statistics. The NAMCS data contain all actions taken by a physician in this period and, thus, allows to control for physician-specific behavior. This is necessary to draw conclusions of our estimand, namely the effect of the patient’s insurance status. 
+
+The confounder control study design chosen by Hellerstein (1998) uses a random effects probit specification at physician level to estimate the effect of insurance status on generic compared to trade-name drug choice. This includes the outcome variable ($Y$), a binary variable, which indicates whether a patient has been prescribed a trade-name or a generic drug. $Y$ takes the value $1$ if a generic drug or the value $0$ if a trade-name drug was prescribed. Of interest is the causal effect of the patients’ different insurance types. Those include Medicare, Medicaid, HMO/prepaid and private insurance. Other independent variables included in the analysis for the purpose of reducing possible bias are the drug class as proxy for prices, patient characteristics (age, gender, race), physician specialist status, the region and the averages of patient characteristics per physician. These help portraying the physician’s practice as a whole, as they contain all patients of the practice, including the patients that did not receive any drug prescription. 
+
 Hellerstein (1998) specified the following equation:
 
 
@@ -158,19 +165,19 @@ knitr::include_graphics(paste(path,"/Regression Equation.PNG",sep=""))
 - $C_k$: drug classes
 - $X_i$: patient demographics
 - $\overline{P}_j$: insurance categories
-- $S_j$: indicator if the physician is a specialist
+- $S_j$: indicator if a physician is a specialist
 - $R_j$: region
 - $X_i$: average patient characteristics in one practice
-- $\overline{P}_j$: share of patients in each insurance category in the physician's practice
+- $\overline{P}_j$: share of patients in each insurance category in a physician's practice
 
-Contrary to Hellerstein (1998), this equation leaves out indicators for mandatory substitution laws, $M$ and $T$, as this was information of the confidential data files. Hellerstein describes that she uses a random effects probit specification at physician level, however the specified equation looks different than the usual random effects specification. You can find more information on random effect models in Cameron and Trivedi [@book].
+Contrary to Hellerstein (1998), this equation leaves out indicators for mandatory substitution laws, $M$ and $T$, as this information was in confidential data files. Hellerstein describes that she uses a random effects probit specification at physician level, however, the specified equation looks different than the usual random effects specification. You can find more information on random effect models in Cameron and Trivedi [@book].
 
 
 
-The choice of the covariates depends on the underlying causal model that is rooted by theoretical considerations.
-Often you will not find all variables that are potential confounders directly. Thus, your creativity is needed to find appropriate proxies, to use the data at hand to be able to account for any relevant possible biases. An example from Hellerstein's (1998) study design is the need to include prices into the empirical analysis. Hellerstein assumes in her model, that physicians are price sensitive and, though the physicians might not know the true price difference between trade-name and generic drug, they have an expectation of this difference in prices. This poses potential bias, as the physician might alter her prescription style to these expectations. Though prices are not provided in NAMCS, unobservable price differences are accounted for by including drug class dummy variables assuming that prices vary across different drug classes. This way, though we cannot capture variation in the prices of products directly, we account for possible bias of the different price level by drug classes.
+The choice of the covariates depends on the underlying causal model that is rooted in theoretical considerations.
+Often you will not find all variables that are potential confounders directly. Thus, your creativity is needed to find appropriate proxies in the data at hand to account for any relevant possible biases. An example from Hellerstein's (1998) study design is the need to include prices into the empirical analysis. Hellerstein assumes in her model, that physicians are price sensitive and, though the physicians might not know the true price difference between trade-name and generic drug, they have an expectation of this difference in prices. This poses a potential bias, as the physician might alter her prescription style to these expectations. Though prices are not provided in NAMCS, unobservable price differences are accounted for by including drug class dummy variables assuming that prices vary across different drug classes. This way, though we cannot capture variation in the prices of products directly, we account for possible bias of the different price level by drug classes.
 
-The empirical specification by Hellerstein uses a random effects probit estimator that is efficient under certain assumptions. However, Hellerstein does not explicitly discuss the identifiability of the effect generic compared to brand name products. The specification of the estimator is described in [include source from Kai]. Note that while random effects estimators are typically used in panel data that use a time dimension. Hellerstein uses multiple observations at drug class level instead of the time dimensions.[^1] 
+The empirical specification by Hellerstein uses a random effects probit estimator that is efficient under certain assumptions. However, Hellerstein does not explicitly discuss the identifiability of the effect generic compared to brand-name products. The specification of the estimator is described in [include source from Kai]. Note that while random effects estimators are typically used in panel data that use a time dimension, Hellerstein uses multiple observations at drug class level instead of the time dimensions.[^1] 
 
 
 [^1] While a fixed effects estimator using physician-level fixed effects and additional specifications would be considered more appropriate nowadays, we will not discuss alternative estimators contrary to Hellerstein’s approach, but concentrate on the initial design.
