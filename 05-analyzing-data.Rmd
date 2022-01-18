@@ -11,7 +11,7 @@ output:
 
 Think again about your research question and what you are trying to learn or discover. How can you use your data to answer this question?
 
-The data to be analyzed should correspond to the core elements of the hypothesis to be investigated. You investigate whether the postulated cause-effect relationship exists, or quantitatively identify the strength of the effect. To perform a reproducible research project, you need to generate an **analysis dataset**. For information on how to generate an analysis dataset and how to create a set of programs that describes how the secondary data used was synthesized, processed and analyzed, go to [Basic steps when processing and preparing the data](##-Basic-steps-when-processing-and-preparing-the-data).
+The data to be analyzed should correspond to the core elements of the hypothesis to be investigated. You investigate whether the postulated cause-effect relationship exists, or quantitatively identify the strength of the effect. To perform a reproducible research project, you need to generate an **analysis dataset**. For information on how to generate an analysis dataset and how to create a set of programs that describes how the secondary data used were synthesized, processed and analyzed, go to [Basic steps when processing and preparing the data](##-Basic-steps-when-processing-and-preparing-the-data).
 
 Using your **analysis dataset** you perfrom two more steps to examine your research question. Across both steps, try to use data visualization with tables and graphs. They are an essential part of your work and not an accessory. Visualizations help to support the argumentation in the text and visualize complex facts in a simple form. 
 
@@ -34,8 +34,8 @@ Start the data analysis by doing some descriptive analyses of your data and samp
 ### Generate estimates of your investigated effect using regression techniques
 
 - Once you have decided on the type of empirical analyses you would like to perform, run the regressions.
-- Perform the regression analyses, that means by using the appropriate procedure to estimate regressions that reflect your empirical strategy.
-- Create output tables that report your results which outsiders can understand, for example, label your variables properly
+- Perform the regression analyses. That means use the appropriate procedure to estimate regressions that reflect your empirical strategy.
+- Create output tables that report your results which outsiders can understand. Label your variables properly
 - Concentrate on analyzing and interpreting the effects of your variable of interest ($X$)
   - interpret and show in tables only most important and relevant coefficients related to the research question. For example, you do not need to interpret and display coefficients for all of the incuded control variables, just the main variables of interest. 
 - Think about how to interpret your estimates.
@@ -43,9 +43,9 @@ Start the data analysis by doing some descriptive analyses of your data and samp
 - Again, compare with existing literature.
 
 
-- What does your data say? After you run the regressions, look at the results:
+- What do your data say? After you run the regressions, look at the results:
 
-    - Are your main coefficients of interest statistically significant, that means is the p-value smaller than 0.05 or any other pre-defined level of significance?
+    - Are your main coefficients of interest statistically significant: is the p-value smaller than 0.05 or any other pre-defined level of significance?
     - Consider also the economic significance of your results. Is the effect you are measuring large or small? 
     - Do your results make sense or are they counterintuitive? This might give you a clue that you might have misspecified your regression or made a mistake in your analysis.
 
@@ -72,7 +72,7 @@ Start the data analysis by doing some descriptive analyses of your data and samp
 - [Jones AM. Data visualization and health econometrics. Foundations and Trends in Econometrics. 2017](https://doi.org/10.1561/0800000033)
 
 
-**Create journal submission ready output tables**
+**Create journal submission-ready output tables**
 
 - [Creating Publication-Quality Tables in Stata](https://ssc.wisc.edu/sscc/pubs/stata_tables.htm)
 - [Stata commands to plot regression coefficients, make regression tables and visualize results by Ben Jann](http://repec.sowi.unibe.ch/stata/)
@@ -81,27 +81,27 @@ Start the data analysis by doing some descriptive analyses of your data and samp
 
 ## Example: Hellerstein (1998)
 
-Hellerstein's (1998) study aims to identify the role the physician plays in prescribing a generic over a trade-name drug and the role of a patient's insurance status. To identify this, we analyze the secondary data on physician level in cross-sectional format (NAMCS and NAMCSd, described in the chapter “running the study and collecting the data”). The primary interest is to investigate if physicians do or do not prescribe a generic drug and whether this is influenced by the patient’s insurance status. We are not investigating prescription behavior of physicians over time using panel data.
+Hellerstein's 1998 study aims to identify the role the physician plays in prescribing a generic over a trade-name drug and the role of a patient's insurance status. To identify this, we analyze the secondary data on physician level in cross-sectional format (NAMCS and NAMCSd, described in the chapter “running the study and collecting the data”). The primary interest is to investigate if physicians do or do not prescribe a generic drug and whether this is influenced by the patient’s insurance status. We are not investigating prescription behavior of physicians over time using panel data.
 
 Over the course of the analysis, we want to explore the dataset. This includes describing and assessing the validity and plausibility. Thus, before generating estimates of the effect of interest using regression techniques, we describe the data using descriptive statistics presented in tables and figures.
 
-We first reproduce the descriptive statistics of Hellerstein (1998), namely table 1-3 and figure 1-2. Details of created variables can be found in the data preparation do-file (Sections \@ref(A1)-\@ref(A3)) and the notes of the tables and figures in Hellerstein's (1998) paper. The code for the reproduction of the descriptive statistics (i.e. the reproduction of tables and figures), can be found in (Section \@ref(2). Please keep in mind that we used the data from 1991. Thus, our numbers are not matching with the numbers provided in the original paper. 
+We first reproduce the descriptive statistics of Hellerstein (1998), namely tables 1-3 and figures 1-2. Details on created variables can be found in the data preparation do-file (Sections \@ref(A1)-\@ref(A3)) and the notes to the tables and figures in Hellerstein's 1998 paper. The code for the reproduction of the descriptive statistics (i.e. the reproduction of tables and figures), can be found in (Section \@ref(2). Please keep in mind that we use the data from 1991. Thus, our numbers are not matching with the numbers provided in the original paper. 
 
 ### Describe your data, assess validity and plausiblity
 
 **Table 1**
-We compute the mean and summary statistics for the age and the previously established dummies in the NAMCS data (Section \@ref(A2) line 144-165).
+We compute the mean and summary statistics for the age and the previously established dummies in the NAMCS data (Section \@ref(A2) lines 144-165).
 
 **Table 2**
-For the first two columns, we repeat the procedure of table 1 using the NAMCSd data. For the third column, we compute the mean of the generic indicator for all subpopulations defined by the dummies (Section \@ref(A2) line 170-235).
+For the first two columns, we repeat the procedure of table 1 using the NAMCSd data. For the third column, we compute the mean of the generic indicator for all subpopulations defined by the dummies (Section \@ref(A2) lines 170-235).
 
 **Table 3**
 
-Using the summary statistics command, we count the number of observations for the full sample and for each of the eight defined drug classes. Further, we compute the mean of the generic indicator in the full sample and each drug class subsample (Section \@ref(A2) line 239-260). 
+Using the summary statistics command, we count the number of observations for the full sample and for each of the eight defined drug classes. Further, we compute the mean of the generic indicator in the full sample and each drug class subsample (Section \@ref(A2) lines 239-260). 
 
 **Figure 1**
 
-For each physician, we compute the mean of the generic indicator and drop duplicate observations per physician. This way, every physician has a unique observation with a respective share of generic prescriptions (Section \@ref(A2) line 265-294). To approximate the distribution shown in figure 1, we chose the following specifications based on visual approximation like:
+For each physician, we compute the mean of the generic indicator and drop duplicate observations per physician. This way, every physician has a unique observation with a respective share of generic prescriptions (Section \@ref(A2) lines 265-294). To approximate the distribution shown in Figure 1, we chose the following specifications based on visual approximation like:
 
   - The decimal places at which the average generic share was rounded: $.01$
   - The bandwidth: $0.02$
@@ -109,7 +109,7 @@ For each physician, we compute the mean of the generic indicator and drop duplic
 
 **Figure 2**
 
-To display Figure 2, we only keep physicians that prescribe the same multisource drug to at least six patients, independent of whether it is in its generic or trade-name form. We compute the mean of the generic share for each remaining physician and create a categorical variable on whether this mean is 0, indicating only trade-name drugs; 1, indicating a mix of generic and brand-name versions; or 2, indicating only generic drugs. We plot the frequencies of these three categories across physicians in a bar plot (Section \@ref(A2) line 299-342).
+To display Figure 2, we only keep physicians that prescribe the same multisource drug to at least six patients, independent of whether it is in its generic or trade-name form. We compute the mean of the generic share for each remaining physician and create a categorical variable on whether this mean is 0, indicating only trade-name drugs; 1, indicating a mix of generic and brand-name versions; or 2, indicating only generic drugs. We plot the frequencies of these three categories across physicians in a bar plot (Section \@ref(A2) lines 299-342).
 
 
 ### Generate estimates of your investigated effect using regression techniques
