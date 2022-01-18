@@ -196,14 +196,15 @@ More principles on writing in economics are summarized in [Top Ten Rules of Econ
 
 ## Example: Hellerstein (1998)
 
-In the following, we go over each chapter to highlight its contribution to Hellerstein’s research article. The structure of Hellerstein (1998) contains the following chapters: 
+In the following, we go over each part to highlight its contribution to Hellerstein’s research article. The structure of Hellerstein (1998) contains the following parts: 
 
+- Title
 - Abstract
 - Introduction
 - Background and related literature
-- Medical
-- Legal
-- Institutional
+-- Medical
+-- Legal
+-- Institutional
 - Empirical motivation and summary statistics
 - The model
 - Empirical implementation
@@ -213,6 +214,9 @@ In the following, we go over each chapter to highlight its contribution to Helle
 - References
 
 
+## Title
+
+The paper titel consists of 12 words that reflect the paper's research question.
 
 ## Abstract
 
@@ -306,3 +310,6 @@ The paper appendix consists of two parts:
 - Additional background information on the data and the data clearing processes
 
 
+## References
+
+Here Hellerstein lists all in-text references used in the paper in alphabetical order. 
