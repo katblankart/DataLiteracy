@@ -41,9 +41,7 @@ We briefly summarize each of these items (the following is based on @cochrane200
 
 The **Title** should be short (15 words or less) and reflect your research question. It usually contains the purpose (what is the question you are addressing?) and scope (if you cover a specific time period or population) of the study. You might also include the methods of your study in the title, if, e.g., you conduct a cohort study. All this information should help readers to decide whether or not they are interested in reading the paper.
 
-
 The **Abstract** is usually around 150 words or less and includes a very short summary of your research question, main contribution, data and methods used, main findings, and conclusions.
-
 
 
 The **Introduction** is the most important part of the paper as it has to grab the readers' attention. It should motivate your research topic and give a more extensive overview of the context, data, methods and findings. You provide context by referencing the existing literature regarding what we know and what we do not know about the topic. You parlay the latter part into your research question. An important aspect of introduction is to highlight what contribution your paper makes, and how it relates to and improves previous work on the topic.
@@ -55,24 +53,15 @@ It should be structured as a newspaper article -- where you first deliver the ma
 At the end of this section you could write a roadmap that briefly guides the reader through your paper. Overall, the whole section should not take up more than 3 pages. 
 
 
-
-
-
 Once you choose your topic and pose a research question, the first thing you usually do is look at the related previous literature. The **Previous literature** review is a standard in economic papers and constitutes a significant part of your empirical project. It is either included in the **Introduction** or is placed in a separate section.
 
 The main purpose of the review is to show the reader that you are familiar with the main scholarly work in the field; to critically review the most relevant and influential (well-cited) studies on the topic; to place your study in the context of other studies; and to convince the reader of the need to conduct the research in question, and to show how it fits into and contributes to the study field (Are you using new data or identification strategy? Are you answering a question more specifically? How are you improving on previous papers?). 
 
 It helps you to establish whether the topic has been researched before, to identify limitations of previous research and still open research gaps. You do not need to mention every published paper on the topic, but you do need to cite the most important studies in the area and distinguish your paper from them. Literature reviews are selective: you only include papers that are relevant for your argument.
 
-
 Importantly, a literature review should not simply consist of a series of paragraphs that summarize papers in no particular order. Instead, a good iterature review should be carefully constructed to tell a specific story: this is what others have done on my topic; this is what is unsatisfactory or missing from that research; and here is how I am going to fill this researh gap. Thus, through your literature review you "sell" the value addded of your paper.
 
-
 In a literature review, you need to identify and summarize key scholarly publications from the fields that are pertinent to your research topic. It should involve a thorough search of the main key words in the relevant databases and journals. To organize your literature search, you can create a spreadsheet, where you include study and author(s) names, publication journal and year, identification strategy, main resuts, caveats and comments. Always take notes on the papers you read. This will help you to summarize and organize your review once you are ready to write it.
-
-
-
-
 
 
 Sometimes a paper might contain a **Background** section that provides background information about a historical event or context, a specific country's health care system, or details about a specific policy or program in question. 
@@ -85,46 +74,29 @@ Describe your sample and variable selection in great detail: how you construct y
 Generally, a good way to learn how to write a data section is to look in the related literature and pay attention to the information it includes. 
 
 
-
-
 The **Empirical method** section should in great detail describe the statistical method used in the paper and the assumptions that are necessary to be fulfilled in order to get an unbiased and consistent estimation of your parameter of interest. Write whether you weight the data or use certain fixed effects. Also describe the empirical problems and how you address them. Ideally, you should describe each step that readers should perform, if they would like to reproduce your results and conclusions.
 
 You need to explain the appropriatness of the method you choose for the specific context. You need to write down your econometric equation and explain how variables are defined and measured. Mention key parameters of interest. 
 
 
-
 The **Results** section should contain a set of tables and figures that show your main empirical results. Make sure that tables are reader-friendly and are easy to comprehend. Place figures and tables as close as possible to the place in the text where you first refer to them. Do not report all the variables incuded in the regression, but only present the results and parameters that directly relate to your main hypothethis and story. Including too namy parameters and results can distract the readers from your main point. Thus, guide the readers and focus their attention only on the most important results from your anaylsis and in the right order. 
  
-Do not provide any interpretations or speculations here. Keep it factual and simply describe in words what the tables and figures display. Comment on the economic significance of your results, not just their statistical significance.  After the main results, discuss potential biases and shortcoming to the internal validity and suggest ways to check them. Place secondary results and your response to potential criticisms and robustness checks into your Appendix.
-
-
-
-
-
-
-
+Do not provide any interpretations or speculations here. Keep it factual and simply describe in words what the tables and figures display. Comment on the economic significance of your results, not just their statistical significance. After the main results, discuss potential biases and shortcoming to the internal validity and suggest ways to check them. Place secondary results and your response to potential criticisms and robustness checks into your Appendix.
 
 
 The **Discussion** section contains the interpretation and discussion of the results, as well as potential mechanisms, and suggests a direction for future research.
 
 Start your discussion by reiterating your research question and, based on your findings, state what you think an answer to your question is. Do not introduce any new data or results in this section. It should reflect only the results already presented in the paper. Interpret your results in the context of the literature that you identify and discuss in the **Introduction** and the **Previous Literature** sections (Are your findings consistent with what the other literature has found? Do your data fill the gap in the knowledge that you identify?). Here you want to show how your work adds to and extends the knowledge on the topic.
 
-You can also discuss implications of your study for public policy. You also should acknowledge and discuss the limitations of the study here and what implications these limitations might have for the results. The more accurate, open and detailed you are about the limitations, the more credibility your results will have. Suggest  alternative interpretations and other possible mechanisms that can explain your findings. You can also talk about next steps and the implications of your findings for future research.  
-
-
+You can also discuss implications of your study for public policy. You also should acknowledge and discuss the limitations of the study here and what implications these limitations might have for the results. The more accurate, open and detailed you are about the limitations, the more credibility your results will have. Suggest alternative interpretations and other possible mechanisms that can explain your findings. You can also talk about next steps and the implications of your findings for future research.  
 
 
 The **Summary and Conclusion** section should be short and sweet (a few concise paragraphs). It contains the most important information on the topic, findings and concluding remarks. It should mirror main points mentioned in the **Introduction**. You should underline why your research matters and state the answer to your research question. Also state here any recommendations that can be made based on your findings. 
 
 
-
-
-At the very end of your paper you need to provide a complete list of **References**. The bibliography includes a compete list of academic papers and books referenced and cited in your study. Make sure that all your in-text citations  appear in the Reference list at the end of the paper. 
+At the very end of your paper you need to provide a complete list of **References**. The bibliography includes a compete list of academic papers and books referenced and cited in your study. Make sure that all your in-text citations appear in the Reference list at the end of the paper. 
 
 The easiest way to keep track of your reference list is to write down the information, i.e. the title, author(s), journal/book, publisher, and publication date, about the original source each time you use it. Decide in advance on one citation and reference style and follow it consistently throughout the paper. 
-
-
-
 
 
 The **Appendices** are a handy tool that allows you to save space. As a careful researcher you will conduct a series of robustness checks of your main results. However, once you confirm that the results are stable, to keep your paper focused and not too long you can move all the still relevant, but secondary and less critical information in appendices. You should summarize what you did in the main body of your paper and include an in-text reference to the information in the appendix. Most journals provide possibilities of an online appendix or supplementary material. 
@@ -141,8 +113,8 @@ Source: [Fresno State Graduate Writing Studio.](http://www.fresnostate.edu/acade
 
 
 
-
 ### The writing process (@cochrane2005writing and @dudenhefer2009guide)
+
 
 - Producing a good empirical paper takes time. You should start working on it and drafting it as soon as possible. 
 - Allow yourself sufficient time for collecting and analyzing the data, writing and revising the paper. Writing a paper is a recursive process that takes many revisions.
@@ -153,23 +125,19 @@ Source: [Fresno State Graduate Writing Studio.](http://www.fresnostate.edu/acade
 - Pay attention to the writing style in the papers you read and admire; carefully analyze what information they contain and how they put it together.
 - Remember, no one can learn to write simply by reading a few manuals and tips on the topic. You can only do it by practicing. 
 
-
-
-
-
-
-
 More principles on writing in economics are summarized in [Top Ten Rules of Economical Writing](http://www3.nccu.edu.tw/~jthuang/rules.html) and more comprehensively in @mccloskey_economical_2019 and by @hall_how_2013.
+
 
 
 ### General guidance on writing and use of language in a research paper (@cochrane2005writing, [Lund Uniiversity](https://www.awelu.lu.se/language/register-and-style/dos-donts/), and @nikolov2020writing)
 
+
 - Do not use slang, jargon, or colloquialisms. Always use formal language.
 - Do not use common vocabulary, such as *have got, the other thing*. Make more formal vocabulary choices, e.g., *have found, the other issue/problem/notion/idea  etc..*
 - Do not use shortened verb forms, such as *they're, isn't, can’t, don’t*. Use the full verb form instead, e.g., *they are, is not, cannot.*
-- Do not use subjective language, i.e., *I think, we assume.* Use objective language.
+- Do not use subjective language, i.e. *I think, we assume.* Use objective language.
 - Avoid using past or future tenses. Use present tense and generally stick to one tense: *"This paper attempts to..."*, *"Hellerstein (1998) finds that..."*; *"Table 1 shows..."*
-- Do not use passive voice, i.e., *It has been shown in the paper by Hellerstein (1998).* Use active voice, i.e., *Hellerstein (1998) shows…*
+- Do not use passive voice, i.e. *It has been shown in the paper by Hellerstein (1998).* Use active voice, i.e. *Hellerstein (1998) shows…*
 - Do not use needless words and information that clutter the writing. Use simple and direct sentences, and keep them short. For example, change *“in order to” to “to”, ”whether or not” to “whether”, “is equal to” to “equals”, “it should be noted” to “notably”.* 
 - Place minor or secondary details and digressions from the main text into footnotes, but use them sparingly. 
 - Use "I" in a single-author project, and "we" in the project with more than one author. 
@@ -182,16 +150,18 @@ More principles on writing in economics are summarized in [Top Ten Rules of Econ
 - Read a copy of [Strunk, W. Jr & White E. B. (1972). The Elements of Style](http://www.jlakes.org/ch/web/The-elements-of-style.pdf) and [Zinsser, W. (2001). On Writing Well](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwiCztfjrsr0AhXvR_EDHU3aAYsQFnoECA4QAQ&url=https%3A%2F%2Fteamwork.jacobs-university.de%2Fdownload%2Fattachments%2F49185212%2Fon-writing-well.pdf%3Fversion%3D1%26modificationDate%3D1527540932000%26api%3Dv2&usg=AOvVaw3eFZJabrSvWpKo5WxCAS6t).
 
 
+
 ### Tables (@cochrane2005writing)
 
 - Each table should be self-explanatory. Give your variables in the table self-explanatory names.
-- Use 2 to 4 digits after the comma when reporting the results, not all the numbers produced by the statistical program. Apply this rule consistently for all the tablles in your paper.
-- Show results with and without controls. For example, start with a column that includes only the main coeffitient(s) of interest and then progressively inlcude various controls (for example, patient characteristics, hospital/physician fixed effects, etc.) in subsequent columns. 
+- Use 2 to 4 digits after the comma when reporting the results, not all the numbers produced by the statistical program. Apply this rule consistently for all the tables in your paper.
+- Show results with and without controls. For example, start with a column that includes only the main coeffitient(s) of interest and then progressively inlcude various controls (e.g., patient characteristics, hospital/physician fixed effects, etc.) in subsequent columns. 
 - Include standard errors together with your coefficients.
 - Indicate the source of the data at the bottom.
 
 
 ### Figures (@cochrane2005writing)
+
 
 - Use figures to show patterns in the data -- they demonstrate it better than tables with numbers, 
 - Label the axes properly,
@@ -228,34 +198,39 @@ More principles on writing in economics are summarized in [Top Ten Rules of Econ
 - [Lund University. Academic Writing in English.](https://www.awelu.lu.se/language/register-and-style/dos-donts/)
 
 
-## Example Hellerstein
+## Example: Hellerstein (1998)
 
-In the following, we go over each chapter to highlight its contribution to Hellerstein’s research article. The structure of Hellerstein contains the following chapters: 
+In the following, we go over each part to highlight its contribution to Hellerstein’s research article. The structure of Hellerstein (1998) contains the following parts: 
 
-Abstract
-Introduction
-Background and related literature
-Medical
-Legal
-Institutional
-Empirical motivation and summary statistics
-The model
-Empirical implementation
-Estimation results
-Conclusion
-Appendices
-References
+- Title
+- Abstract
+- Introduction
+- Background and related literature
+-- Medical
+-- Legal
+-- Institutional
+- Empirical motivation and summary statistics
+- The model
+- Empirical implementation
+- Estimation results
+- Conclusion
+- Appendices
+- References
 
 
+## Title
+
+The paper titel consists of 12 words that reflect the paper's research question.
 
 ## Abstract
 
-In the abstract Hellerstein gives a quick overview on her appear by mentioning the topic, the data, the results and their takeaway
+In the abstract Hellerstein gives a quick overview on her paper by mentioning the topic, the data, the results and their takeaway.
 
 
 ## Introduction
 
-The introduction of Hellerstein is rather on the short sight. She starts it by highlighting a welfare enhancing potential of substituting trade-name drugs with generics, creating relevance for her topic. Next, she elaborates her research question, followed by a short overview of the results and their implications. She finalizes with a structural overview of the rest of her paper.
+The introduction of Hellerstein is rather short. She starts it by highlighting a welfare-enhancing potential of substituting trade-name drugs with generics, creating relevance for her topic. Next, she elaborates her research question, followed by a short overview of the results and their implications. She finalizes with a structural overview of the rest of her paper.
+
 Other common features of an introduction are missing here. These include among others an overview of the pre-existing research, her contribution to different fields of the literature and an overview of the methodological approach.
 
 
@@ -265,21 +240,21 @@ The background section is divided into three parts:
 - A quick summary on the history of generics
 - An overview of different legal systems around generic prescription and generic substitution
 - An institutional background, that includes:
-- A discussion on the decision situation physicians face
-- A list of health insurance types with their respective coverage of prescription drugs.
+-- A discussion on the decision situation physicians face
+-- A list of health insurance types with their respective coverage of prescription drugs.
 
 By providing these background information Hellerstein familiarizes her readers with key aspects of her topic and creates further relevance for her research. She uses descriptive statistics on generic prescription and substitution laws for different legal systems to justify her approach to include geographical covariates in her analysis. Analogously, she argues for the importance to consider the type of insurance by discussing differences between these insurance systems, especially with regard to coverage rates.
 
 
 ## Empirical motivation and summary statistics
 
-Hellerstein uses this chapter for two things: to introduce her sample and to show heterogeneities in generic prescription rates in her sample. The first part chapter is thereby built as follows:
+Hellerstein uses this chapter for two things: to introduce her sample and to show heterogeneities in generic prescription rates in her sample. The first part of the chapter is thereby built as follows:
 
 - An introduction of the raw data
 - An elaboration on data clearing processes
 - A descriptive overview on the patient sample (NAMCS) and the drug-level subsample (NAMCSd). The variables used for descriptive statistics will later reappear as covariates in the analysis.
 
-The data introduction helps readers to understand the sample Hellerstein uses for her analysis; how it originates, what its properties are and how valid is might be for this particular research topic. The remaining part of the chapter emphasises on descriptive differences in generic prescription rates. The heterogeneities Hellerstein focusses on are in particular:
+The data introduction helps readers to understand the sample Hellerstein uses for her analysis; how it originates, what its properties are and how valid it might be for this particular research topic. The remaining part of the chapter emphasises on descriptive differences in generic prescription rates. The heterogeneities Hellerstein focusses on are in particular:
 
 - In generic prescription rates across drug classes.
 - How frequent physicians prescribe generics.
@@ -290,8 +265,8 @@ These patterns lay the foundation on why her empirical analysis is important. Fu
 ## The model
 
 In this chapter, Hellerstein clarifies from a theoretical perspective, what factors might determine a physician’s decision to prescribe a generic.
-Beyond clarifying the decision situation Hellerstein’s analysis revolved around, the model also serves as a hypothesis for her research question. In the formula, it is clearly defined when the insurance coverage (that closely correlated with the insurance status) nudges a physician towards prescribing a generic.
-Last, the model serves as an additional argument, what variables should be considered when empirically modelling the behaviour of physicians.
+Beyond clarifying the decision situation Hellerstein’s analysis revolved around the model also serves as a hypothesis for her research question. In the formula, it is clearly defined when the insurance coverage (that closely correlates with the insurance status) nudges a physician towards prescribing a generic.
+Last, the model serves as an additional argument, what variables should be considered when empirically modelling the behavior of physicians.
 
 
 ## Empirical implementation
@@ -303,22 +278,22 @@ The chapter concludes with a discussion of limitations and possible extensions t
 
 ## Estimation results
 
-In the results-chapter, Hellerstein again describes her regression model and presents the results. Further she discusses concerns on her estimates and uses other specifications of her model to show her result being robust to them. Some results of the robustness test are also reported.
-The chapter starts with a respecification of her empirical application. It is noteworthy, that the model described here deviates from the equation presented in the previous chapter. All estimated coefficients of this single regression are the reported in 3 separate tables:
+In the results chapter, Hellerstein again describes her regression model and presents the results. Further she discusses concerns about her estimates and uses other specifications of her model to show the robustness of her results. Some results of the robustness tests are also reported.
+The chapter starts with a re-specification of her empirical application. It is noteworthy, that the model described here deviates from the equation presented in the previous chapter. All estimated coefficients of this single regression are reported in 3 separate tables:
 
 - Table 4: Coefficients of demographic variables and frequency of demographics per physician
 - Table 5: Coefficients of drug class dummies
 - Table 6 Coefficients of drug class x insurance type interactions.
 
 In the text accompanying the tables, she picks numerous coefficients, provides possible explanations for them, and derives their implications.
-Next, Hellerstein mentions multiple concerns on her model. She addresses them with different robustness checks. 
+Next, Hellerstein mentions multiple concerns about her model. She addresses them with different robustness checks. 
 These include:
 
-- Use a subsample of patients below age 65
-- Use a subsample of physicians with more than 20/30 patients in the overall NAMCS (Results for both of these robustness tests are not reported)
-- Use a subsample of observations from states with a special legal system (These results are reported)
+- Using a subsample of patients below age 65.
+- Using a subsample of physicians with more than 20/30 patients in the overall NAMCS (results for both of these robustness tests are not reported).
+- Using a subsample of observations from states with a special legal system (these results are reported).
 - 
-With that, Hellerstein not only uses her Results-chapter to report her findings, but also to discuss their implications and limitations. Commonly, this is rather done in a separate Discussion-chapter.
+With that, Hellerstein not only uses her Results chapter to report her findings, but also to discuss their implications and limitations. Commonly, this is usually done in a separate Discussion chapter.
 
 
 ## Conclusion
@@ -333,9 +308,12 @@ Hellerstein then finalizes her article with a discussion on how findings are rel
 
 ## Appendices
 
-The appendix the paper consists of two parts:
+The paper appendix consists of two parts:
 
 - A methodological background on the random effects estimator Hellerstein uses
 - Additional background information on the data and the data clearing processes
 
 
+## References
+
+Here Hellerstein lists all in-text references used in the paper in alphabetical order. 
