@@ -35,7 +35,7 @@ A research paper usually includes the following sections:
 - Appendices 
 
 
-We briefly summarize each of these items (the following is based on [Cochrane, 2005](http://mayoral.iae-csic.org/timeseries_bgse13/phd_paper_writing.pdf), [Dudenhefer, 2009](https://econ.duke.edu/sites/econ.duke.edu/files/file-attachments/Dudenhefer%2C%20Paul%20-%20Guide%20to%20Writing%20in%20Economics.pdf), [Martin, 2018](https://www.youtube.com/watch?v=Vky9PDKx5KU), and [Nikolov, 2020](https://mpra.ub.uni-muenchen.de/105088/1/MPRA_paper_105088.pdf)).
+We briefly summarize each of these items (the following is based on @cochrane2005writing, @dudenhefer2009guide, [Martin, 2018](https://www.youtube.com/watch?v=Vky9PDKx5KU), and @nikolov2020writing).
 
 
 
@@ -113,8 +113,8 @@ Source: [Fresno State Graduate Writing Studio.](http://www.fresnostate.edu/acade
 
 
 
+### The writing process (@cochrane2005writing and @dudenhefer2009guide)
 
-### The writing process (based on [Cochrane, 2005](http://mayoral.iae-csic.org/timeseries_bgse13/phd_paper_writing.pdf) and [Dudenhefer, 2009](https://econ.duke.edu/sites/econ.duke.edu/files/file-attachments/Dudenhefer%2C%20Paul%20-%20Guide%20to%20Writing%20in%20Economics.pdf))
 
 - Producing a good empirical paper takes time. You should start working on it and drafting it as soon as possible. 
 - Allow yourself sufficient time for collecting and analyzing the data, writing and revising the paper. Writing a paper is a recursive process that takes many revisions.
@@ -128,7 +128,9 @@ Source: [Fresno State Graduate Writing Studio.](http://www.fresnostate.edu/acade
 More principles on writing in economics are summarized in [Top Ten Rules of Economical Writing](http://www3.nccu.edu.tw/~jthuang/rules.html) and more comprehensively in @mccloskey_economical_2019 and by @hall_how_2013.
 
 
-### General guidance on writing and use of language in a research paper (based on [Cochrane, 2005](http://mayoral.iae-csic.org/timeseries_bgse13/phd_paper_writing.pdf), [Lund Uniiversity](https://www.awelu.lu.se/language/register-and-style/dos-donts/), and [Nikolov, 2020](https://mpra.ub.uni-muenchen.de/105088/1/MPRA_paper_105088.pdf))
+
+### General guidance on writing and use of language in a research paper (@cochrane2005writing, [Lund Uniiversity](https://www.awelu.lu.se/language/register-and-style/dos-donts/), and @nikolov2020writing)
+
 
 - Do not use slang, jargon, or colloquialisms. Always use formal language.
 - Do not use common vocabulary, such as *have got, the other thing*. Make more formal vocabulary choices, e.g., *have found, the other issue/problem/notion/idea  etc..*
@@ -148,7 +150,8 @@ More principles on writing in economics are summarized in [Top Ten Rules of Econ
 - Read a copy of [Strunk, W. Jr & White E. B. (1972). The Elements of Style](http://www.jlakes.org/ch/web/The-elements-of-style.pdf) and [Zinsser, W. (2001). On Writing Well](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwiCztfjrsr0AhXvR_EDHU3aAYsQFnoECA4QAQ&url=https%3A%2F%2Fteamwork.jacobs-university.de%2Fdownload%2Fattachments%2F49185212%2Fon-writing-well.pdf%3Fversion%3D1%26modificationDate%3D1527540932000%26api%3Dv2&usg=AOvVaw3eFZJabrSvWpKo5WxCAS6t).
 
 
-### Tables (based oon [Cochrane, 2005.](http://mayoral.iae-csic.org/timeseries_bgse13/phd_paper_writing.pdf))
+
+### Tables (@cochrane2005writing)
 
 - Each table should be self-explanatory. Give your variables in the table self-explanatory names.
 - Use 2 to 4 digits after the comma when reporting the results, not all the numbers produced by the statistical program. Apply this rule consistently for all the tables in your paper.
@@ -157,7 +160,8 @@ More principles on writing in economics are summarized in [Top Ten Rules of Econ
 - Indicate the source of the data at the bottom.
 
 
-### Figures (based on [Cochrane, 2005.](http://mayoral.iae-csic.org/timeseries_bgse13/phd_paper_writing.pdf))
+### Figures (@cochrane2005writing)
+
 
 - Use figures to show patterns in the data -- they demonstrate it better than tables with numbers, 
 - Label the axes properly,
