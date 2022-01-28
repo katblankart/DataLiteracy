@@ -93,7 +93,9 @@ We first reproduce the descriptive statistics of Hellerstein (1998), namely tabl
 We compute the mean and summary statistics for the age and the previously established dummies in the NAMCS data (Section \@ref(A2) lines 144-165).
 
 **Table 2**
-For the first two columns, we repeat the procedure of table 1 using the NAMCSd data. For the third column, we compute the mean of the generic indicator for all subpopulations defined by the dummies (Section \@ref(A2) lines 170-235).
+
+For the first two columns, we repeat the procedure of Table 1 using the NAMCSd data. For the third column, we compute the mean of the generic indicator for all subpopulations defined by the dummies (Section \@ref(A2) lines 170-235).
+
 
 **Table 3**
 
@@ -101,7 +103,9 @@ Using the summary statistics command, we count the number of observations for th
 
 **Figure 1**
 
+
 For each physician, we compute the mean of the generic indicator and drop duplicate observations per physician. This way, every physician has a unique observation with a respective share of generic prescriptions (Section \@ref(A2) lines 265-294). To approximate the distribution shown in Figure 1, we chose the following specifications based on visual approximation like:
+
 
   - The decimal places at which the average generic share was rounded: $.01$
   - The bandwidth: $0.02$
@@ -125,30 +129,31 @@ Hellerstein applies a random effects probit regression model aggregated on physi
 **Variable of interest or treatment ($X$)**
 
   - $P$:	*Insurance status by: Medicare, Medicaid, HMO/prepaid, private insurance, self-paid (this is the omitted category).*
+  
   *Note that Hellerstein (1998) uses a somewhat different notation for the variable of interest which is denoted as $P$. Today, it is often common to denote this variable by $X$ or $D$. Though for the purpose of the reproduction and to avoid confusion we take on Hellerstein’s notation in the following.*
   
 
 **Confounders $Z$ of the effect of insurance status $P$ and generic vs brand-name drug use $Y$.**
 
--	$C$: 	*Drug class identifiers among 8 classes (Pain relief omitted, see footnote table 5)*
+-	$C$: 	*Drug class identifiers among 8 classes (Pain relief (omitted), see footnote Table 5)*
 -	$X$:	*Patient characteristics: age, sex, race*
 -	$S$:	*Physician specialist status: Specialist, general practitioner (omitted)*
 -	$R$:	*Region as classified by: Midwest, South, West, Northeast (omitted)*
 -	Vector $X$	 *Average patient characteristics in one practice*
--	Vector $P$:	*Average of a physician’s patients in each insurance category *
+-	Vector $P$:	*Average of a physician’s patients in each insurance category*
 
   
 *Note that Hellerstein uses a somewhat different notation for confounding variables. It is often common to denote the variable of interest using the index $X$, but not necessarily confounders.*
 
 **Tables 4 and 5**
 
-We estimate the regression coefficients, t-statistics and marginal effects of the regression model. It is not specified whether the model for both tables contain all covariates specified in equation 10 or just the variables mentioned in the tables. We decided to use the full model for both tables. Marginal effects are the average marginal effects across individuals (footnote table 4) (Section \@ref(A3) line 373-405).
+We estimate the regression coefficients, t-statistics and marginal effects of the regression model. It is not indicated whether the model for both tables contain all covariates specified in equation 10 or just the variables mentioned in the tables. We decide to use the full model for both tables. Marginal effects are the average marginal effects across individuals (footnote Table 4) (Section \@ref(A3) lines 373-405).
 
 **Table 6**
 
-We run a separate regression using only observations of a single drug class and report the coefficients of the payment dummies and their average marginal effects (Section \@ref(A2) line 409-429).
+We run a separate regression using only observations of a single drug class and report the coefficients of the payment dummies and their average marginal effects (Section \@ref(A2) lines 409-429).
 
 
-*Please mind that Table 7, 8 and 9 cannot be reproduced. The publicly available data of NACMSd does not provide a variable to identify physicians and patients by region. *
+*Please mind that Tables 7, 8 and 9 cannot be reproduced. The publicly available data of NACMSd does not provide a variable to identify physicians and patients by region. *
 
 
