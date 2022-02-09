@@ -12,36 +12,34 @@ path <- "C:/Users/KFischer/Documents/GitHub/DataLiteracy/_bookdown_files/DataLit
 
 
 
-# Introduction to reproducible research {#intro}
+
+# Introduction to Reproducible Research {#intro}
+
 
 *“Only results that can be replicated are truly scientific results. If there is no chance to replicate research results, they can be regarded as no more than personal views in the opinion or review section of a daily newspaper.”* [@huschka_why_2013]
 
 ## What is reproducible research?
 
-Scientific journal editors and research funders are increasingly promoting transparency in research. To encourage the principles of reproducible research, the related institutions are requesting authors to make their research reproducible. To overcome criticisms regarding the validity and power of empirical tests, this means that data and program code need to be shared upon manuscript acceptance, or earlier stages of the submission process. The purpose is that third-parties have the possibility to reproduce the content and analysis of a study, and conclusions of a study on their own.
+Scientific journal editors and research funders are increasingly promoting transparency in research. To encourage the principles of reproducible research, the related institutions are requesting authors to make their research reproducible. To overcome criticisms regarding the validity and power of empirical tests, this means that data and program code need to be shared upon manuscript acceptance, or at earlier stages of the submission process. The purpose is that third-parties have the possibility to reproduce the content, analysis, and conclusions of a study on their own.
 
 Efforts to increase reproducability have been expressed by multiple institutions within the social sciences, for example:
 
 - The best practices statement by the [Social Science Data Editors](https://social-science-data-editors.github.io/template_README/),
 - In Germany, by the German Research Foundation (DFG) and the Consortium for the Social, Behavioural, Educational and Economic Sciences [RatWSD](https://www.ratswd.de/en/publikationen/output)
-- In editorial statement of journals, for example American Economic Review, Management Science or the Journal of International Business Studies [@meyer_whats_2017;@orozco_how_2020]
-
-
-<!-- Show recent advancements in health econ, health services research, health care management
--->
+- In editorial statement of journals, for example, American Economic Review, Management Science or the Journal of International Business Studies [@meyer_whats_2017;@orozco_how_2020]
 
 
 Generally, ***reproducibility*** of research can be defined as “the ability of a researcher to duplicate the results of a prior study using the same materials and procedures as were used by the original investigator. In an attempt to reproduce a published statistical analysis, a second researcher might use the same raw data to build the same analysis files and implement the same statistical analysis to determine whether they yield the same results.” [@bollen_social_2015]. Study results are considered reproducible if after an article publication another researcher can conduct the analyses using identical data and obtain the same results using the material provided.
 
 Since empirical economic research is based on the application of a code to a dataset to answer a pre-defined research question, ensuring the reproducibility includes sharing the data and code to allow others to re-analyze the data and to reproduce the reported results [@orozco_how_2020]. To achieve this, the data and code need to be properly managed while working on a project. 
 
-Another concept closely related to ***reproducibility*** is the concept of ***replicability*** that "refers to the ability of a researcher to duplicate the results of a prior study if the same procedures are followed but new data are collected." [@bollen_social_2015]. Thus, for example, if an investigator tries to replicate a scientific finding that documents a relationship between two or more variables by using the same scientific methodology but in a new setting, i.e. with new data, and fails and to reach a similar conclusion, i.e. replicate it -- a failure to replicate occurs. The opposite is said to be true if the results are replicated. Thus, ***reproducibility*** and ***replicability*** are considered to be the two main elements of empirical research.
+Another concept closely related to ***reproducibility*** is the concept of ***replicability*** that "refers to the ability of a researcher to duplicate the results of a prior study if the same procedures are followed but new data are collected." [@bollen_social_2015]. Thus, for example, if an investigator tries to replicate a scientific finding that documents a relationship between two or more variables by using the same scientific methodology but in a new setting, i.e. with new data, and fails to reach a similar conclusion, i.e. replicate it -- a failure to replicate occurs. The opposite is said to be true if the results are replicated. Thus, ***reproducibility*** and ***replicability*** are considered to be the two main elements of empirical research.
 
-To adapt reproducible practices early on, undergraduate and graduate students are encouraged to perform reproducible research in their term papers, theses, and practical applications as soon as possbile. For this reason, university teachers are increasingly asking to submit reproduction material (source data information, data programming and analysis code) at all stages of study.
+To adapt reproducible practices early on, undergraduate and graduate students are encouraged to perform reproducible research in their term papers, theses, and practical applications as soon as possbile. For this reason, university teachers are increasingly asking to submit reproduction material (source data information, data programming and analysis code) at all stages of a study.
 
-The concept of reproducible research is not new and goes back as far as the late 1800s [@vilhuber_reproducibility_2020]. However, reproducibility studies have disclosed that many rearchers do not follow the principles of reproducible research. At the same time, the increase in availability and use of public and especially non-public data sources, and the increase in the reliance of research methods based on specific software bringing the principles of reproducible research on the agenda of many researchers.
+The concept of reproducible research is not new and goes back as far as the late 1800s [@vilhuber_reproducibility_2020]. However, reproducibility studies have disclosed that many rearchers do not follow the principles of reproducible research. At the same time, the increase in availability and use of public and especially non-public data sources, and the increase in the reliance of research methods based on specific software brings the principles of reproducible research on the agenda of many researchers.
 
-The resources box in each chapter provides material of best practices in data and code management to perform a reproducible research project, as well as provides resources for best practices in cleaning the data and conducting data analysis. 
+The resources boxes in each chapter provide material for best practices in data and code management to perform a reproducible research project, as well as in cleaning the data and conducting data analysis. 
 
 
 ## Why you, as a student and researcher, should care about reproducible research?
@@ -53,7 +51,7 @@ The resources box in each chapter provides material of best practices in data an
 knitr::include_graphics(paste(path,"/munafo.png",sep=""))
 ```
 
-There is a number of threats to reproducible research process that can undermine scientific research or lead to false or biased conclusions and publications. Figure \@ref(fig:munafo) illustrates the main threats to reproducible science [@munafo_manifesto_2017].
+There is a number of threats to the reproducible research process that can undermine scientific research or lead to false or biased conclusions and publications. Figure \@ref(fig:munafo) illustrates the main threats to reproducible science [@munafo_manifesto_2017].
 
 
 ### Increase productivity of your work and the work of the scientific community by performing reproducible research
@@ -61,7 +59,7 @@ There is a number of threats to reproducible research process that can undermine
 
 Following the reproducible research principles allows you to be a part of a good academic practice that strives to improve the quality, efficiency and reliability of scientific research.
 
-## Main steps to produce reproducible research
+## Main steps to generate reproducible research
 
 To follow the best practices of reproducible research, you will need to consider ***how*** to perform your project and the ***steps a reproducible research project*** contains.
 
@@ -87,7 +85,6 @@ In this study guide we follow the main steps of performing a reproducible data s
 5. ***Reporting the study*** (Section \@ref(report-study))
 
 
-
 ## Secondary (health care) data
 
 This study guide concentrates on empirical investigation using secondary data, that means data that is not originally collected or generated by the researcher for the purpose of the study. Secondary data covers any existing data generated by companies, institutions, and individuals.
@@ -99,10 +96,10 @@ Examples of secondary data sources are routinelly collected health data (adminis
 
 Before you start running the study you should assess your available resources, that means time and own expertise to see whether the study design is feasible. If there is an opportunity to work collaboratively and you think that the project can benefit from the expertise of another researcher, you can approach the person and ask whether they would be interested to work together on the project. Joining resources might relax your resource availability contraints. It may further ensure that you engage in a reproducible research process.
 
+
 ## Resources Box
 
 - An overview article of the principles of reproducible reserach and practical application: Orozco V, Bontemps C, Maigné E, Piguet V, Hofstetter A, Lacroix A, et al. How to Make a Pie: Reproducible Research for Empirical Economics and Econometrics. Journal of Economic Surveys. 2020;34(5):1134–69. https://doi.org/10.1111/joes.12389
-
 
 - A guideline to minimize the risk of reporting false positives (type I errors), improve the quality of hypothesis-testing research and statistical reporting: Meyer, Klaus E., Arjen van Witteloostuijn, and Sjoerd Beugelsdijk. 2017. “What’s in a p? Reassessing Best Practices for Conducting and Reporting Hypothesis-Testing Research.” Journal of International Business Studies 48 (5): 535–51. https://doi.org/10.1057/s41267-017-0078-8.
 
