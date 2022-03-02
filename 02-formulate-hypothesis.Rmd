@@ -3,37 +3,39 @@ output:
   pdf_document: default
   html_document: default
 ---
+
 # Formulating a hypothesis {#hypothesis}
 
 ```{r path2, echo=FALSE}
-path <- "C:/Users/KFischer/Documents/GitHub/DataLiteracy/_bookdown_files/DataLiteracy_files/figure-html"
+path <- "C:/Users/KFischer/Documents/GitHub/DataLiteracy/images"
 ```
 
 <!--C:/Users/KFischer/sciebo/Date Literacy Project/06 Manuscript/bookdown/DataLiteracy/_book/DataLiteracy_files/figure-html-->
 
-```{r, out.width='100%', fig.align='center', fig.cap='idea', echo=FALSE}
-knitr::include_graphics(paste(path,"/idea.png",sep=""))
+```{r, out.width='100%', fig.align='center', echo=FALSE}
+knitr::include_graphics(paste(path,"/idea4.png",sep=""))
 ```
-Source: [DLPNG](https://dlpng.com/png/6808837)
 
 
-
-
-You decide to undertake a scientific project. Where do you start? First, you need to find a research question that interests you and formulate a hypothesis. We will introduce some key terminology, steps you can take, and examples how to develop research questions. Note that there is no single best way to develop a research idea [@pischke_how_2012].
-
-*What if someone assigns a topic to me? For students attending undergraduate and graduate courses that often pick topics from a list, all of these steps are equally important and necessary. You still need to formulate a research question and a hypothesis. And it is important to clarify the relevance of your topic for yourself.*
+*"There is no single best way to develop a research idea."* [@pischke_how_2012]
 
 
 ## How do you develop a research question and formulate a hypothesis?
 
-When thinking about a research question, you need to identify a topic that is [based on @trochim_problem_nodate]
+You decide to undertake a scientific project. Where do you start? First, you need to find a research question that interests you and formulate a hypothesis. We will introduce some key terminology, steps you can take, and examples how to develop research questions. Note that .
+
+*What if someone assigns a topic to me? For students attending undergraduate and graduate courses that often pick topics from a list, all of these steps are equally important and necessary. You still need to formulate a research question and a hypothesis. And it is important to clarify the relevance of your topic for yourself.*
+
+
+
+When thinking about a research question, you need to identify a topic that is [based on [find source]]
 
 - *Relevant*, important in the world and interesting to you as a researcher: Does working on the topic excites you? You will spend many hours thinking about it and working on it. Therefore, it should be interesting and engaging enough for you to motivate your continued work on this topic.
 - *Specific*: not too broad and not too narrow
 - *Feasible* to research within a given timeframe: Is it possible to answer the research question based on your time budget, data and additional resources.
 
 
-How do you find a topic or develop a feasible research idea in the first place? Finding an idea is not difficult, the critical part is to find a **good** idea. How do you do that? There is no one specific way how one gets an idea, rather there is a myriad of ways how people come up with potential ideas (see, e.g., [@varian_how_2016]). 
+How do you find a topic or develop a feasible research idea in the first place? Finding an idea is not difficult, the critical part is to find a **good** idea. How do you do that? There is no one specific way how one gets an idea, rather there is a myriad of ways how people come up with potential ideas (for example as stated by [@varian_how_2016]). 
 
 You can find inspiration by
 
@@ -89,7 +91,7 @@ Source: [BBC](https://www.bbc.com/news/technology-55826238)
 
 You decide to translate this article and your observations into a **research question**: *How does social media use affect mental health?* Before you formulate your hypothesis, read up on the topic of interest. Read economic, medical and other social science literature on the topic. There is likely to be a vast amount of literature from non-economic fields that are doing research on your topic of interest, for example, psychology or neuroscience. Familiarize yourself with it and master it. Do not get distracted by different scientific methodologies and techniques that might seem not up-to-par to the economic studies (small sample sizes, endogeneity, uncovering association rather than causation, etc.), but rather focus on suggestions of potential mechanisms.
 
-A hypothesis is then your research question distilled into a one sentence statement, which presents your expectations regarding the results. You propose to prove your hypothesis by testing the relationship between two variables of interest with the data at hand. There are two types of hypotheses: alternative or null. The **null*** hypothesis states that there is no effect. The **alternative** hypothesis states that there is an effect.
+A hypothesis is then your research question distilled into a one sentence statement, which presents your expectations regarding the results. You propose to prove your hypothesis by testing the relationship between two variables of interest with the data at hand. There are two types of hypotheses: alternative or null. The **null** hypothesis states that there is no effect. The **alternative** hypothesis states that there is an effect.
 
 
 A hypothesis related to the above-stated research question could be: *The increased use of social media among teenagers leads to (is associated with) worse mental health outcomes, i.e. increased incidence of depression, eating disorders, worse well-being and lower self-esteem.* It suggests a direction of a relationship that you expect to find that is guided by your observations and existing evidence. It is testable with scientific research methods by using statistical analysis of the relevant data.  
@@ -130,7 +132,7 @@ Several rankings may help to assess the quality of research you consider
  - Health Economics, Health Services and Health Care Managment Research: [Health Economics Journals List](https://www.mthooddiabeteschallenge.com/journal-list)
  - Be aware that like in any other domain there are [predatory publishing practices](https://predatoryjournals.com/).
  
- Investigate how a journal article is connected to other works
+ Use tools to investigate how a journal article is connected to other works
 
  - [Citationgecko](https://citationgecko.azurewebsites.net/)
  - [Connected papers](https://www.connectedpapers.com)
@@ -146,51 +148,74 @@ Several rankings may help to assess the quality of research you consider
 - BibTEX if you work with TEX
 - Excel spread sheet
 
+## Checklist to get started with formulating your hypothesis
+
+- Find an interesting and relevant research topic, if not assigned
+- Try to suck up all information you can easily obtain from various sources within and outside academic literature
+- Formulate one compelling research question
+- Find the best available empirical and theoretical evidence that is related to your research question
+- Formulate a hypothesis
+- Check whether data are available for analysis
+- Challenge your idea with your fellows or senior researchers
+
 
 ## Example: Hellerstein (1998)
 
-As an illustration of the research process of formulating a hypothesis, designing a study, running a study, collecting and analyzing the data and, finally, reporting the study, we provide an example by reproducing 1998 Judith K. Hellerstein’s paper “The Importance of the Physician in the Generic versus Trade-Name Prescription Decision”.
+As an illustration of the research process of formulating a hypothesis, designing a study, running a study, collecting and analyzing the data and, finally, reporting the study, we provide an example by replicating Judith K. Hellerstein’s paper “The Importance of the Physician in the Generic versus Trade-Name Prescription Decision” that was edited in 1998 in the The RAND Journal of Economics.
 
-With 443 citations on Google Scholar since 1998 and recent mentions in top field journals such as Journal of Public Economics (2021), Journal of Health Economics (2019), and Health Economics (2019), Hellerstein’s 1998 paper has impacted literature over two decades. Using tools like “connected papers” or “citation gecko” can support you in finding the relevant literature that your project is linked to. This 1998 Hellerstein's work has impacted the literature researching the role of physician behavior and its influence on access, adoption and diffusion of health services, moral hazard and incentives in prescription and treatment decisions and the influence of different payment schemes as well as a vast body of literature studying the pharmaceutical market.
+Hellerstein’s 1998 paper has impacted discussion about behavioral factors of physician decisions and pharmaceutical markets over two decades. The study received 446 citations on [Google Scholar since 1998](https://scholar.google.de/scholar?cites=9301208853808127317&as_sdt=2005&sciodt=0,5&hl=de) by 22/02/2022, including recent mentions in top field journals such as [Journal of Public Economics (2021)](https://www.sciencedirect.com/science/article/abs/pii/S0047272718301968), [Journal of Health Economics (2019)](https://www.sciencedirect.com/science/article/pii/S0167629617307348), and [Health Economics (2019)](https://onlinelibrary.wiley.com/doi/full/10.1002/hec.3774).
 
-This includes research on:
-
-  - generic drug entries
-  - pharmaceutical promotion
-  - price regulations
-  - influence of patents and dynamics of market segmentation
+```{r hellconnect, out.width='100%', fig.cap='Connected graph of Hellerstein (1998), February 2022', fig.align='center', echo=FALSE}
+knitr::include_graphics(paste(path,"/Hellerstein-connected-papers.jpg",sep=""))
+```
 
 
-At the end of each chapter, we demonstrate insights into the 1998 study by Judith K. Hellerstein that we reproduce.
+Figure \@ref(fig:hellconnect) shows a connected graph of prior and derivate works related to the study. 
+
+The work has impacted the literature researching the role of physician behavior and its influence on access, adoption and diffusion of health services, moral hazard and incentives in prescription and treatment decisions and the influence of different payment schemes, and a vast body of literature studying the pharmaceutical market.
+
+The research that has been influenced by Hellerstein includes evidence on:
+
+  - generic drug entries and market efficiency
+  - the effectiveness of pharmaceutical promotion
+  - the effectiveness of price regulations
+  - the role of patents and dynamics of market segmentation
 
 
-### **Relevance of the topic - escalating health expenditures**
+At the end of each chapter, we demonstrate insights into this study that we replicated.
 
-Worldwide, health systems face constantly increasing prescription drug expenditures. In the United States, the total prescription drug expenditure in 2020 marked about 358.7 billion US Dollars [@statista_prescription_2020]. The prescription of generic drugs is an option in reducing the total health care expenditure. Generic drugs are bioequivalent in the active ingredients and can serve as a channel to contain prescription expenditure [@kesselheim_clinical_2008] as generic drugs are between 20 to 90 % cheaper than their trade-name alternatives [@dunne_review_2013].
+
+### **Context of the study - escalating health expenditures**
+
+In the United States, the total prescription drug expenditure in 2020 marked about 358.7 billion US Dollars [@statista_prescription_nodate]. The prescription of generic drugs in comparison to more expensive brand name versions is an option in reducing the total health care expenditure. Generic drugs are bioequivalent in the active ingredients and can serve as a channel to contain prescription expenditure [@kesselheim_clinical_2008] as generic drugs are between 20 and 90% cheaper than their trade-name alternatives [@dunne_review_2013].
  
-### **Development of a research question - How does a patient's insurance status influence the physician's choice between generic vs brand-name drugs?**
+### **Research question - How does a patient's insurance status influence the physician's choice between generic compared to brand-name drugs?**
 
-Physicians are faced with a multitude of different medication options, including the choice between generic and trade-name drugs. Physicians ideally act as agents for their patients to identify the best available treatment option. However, choosing the best treatment entails cost of coordination and cognition. The prescription of generic drugs may serve as an example to what extent physicians customize treatments according to patients' needs with regards to cost. From an economic point of view one might suggest that once a generic drug is available, a perfectly rational agent (i.e. physician) would prescribe a generic drug instead of the trade-name version if therapeutically identical [@dranove_medicaid_1989]. This leads us to a question: *"Do physicians vary their prescription decisions on a patient-by-patient basis or do they systematically prescribe the same version, trade-name or generic, to all patients?"*. 
+Physicians are faced with a multitude of  medication options, including the choice between generic and trade-name drugs. Physicians ideally act as agents for their patients to identify the best available treatment option based on their needs.  Choosing the best treatment entails cost of coordination and cognition. The prescription of generic drugs may serve as an example to what extent physicians customize treatments according to patients' needs with regards to cost. From an economic point of view we may expect that once a generic drug is available, a perfectly rational agent (i.e. physician) would prescribe a generic drug instead of the trade-name version if therapeutically identical [@dranove_medicaid_1989]. This leads to the following research question: *"Do physicians vary their prescription decisions on a patient-by-patient basis or do they systematically prescribe the same version, trade-name or generic, to all patients?"*. 
 
-The 1998 Hellerstein's study focuses on two aspects (two hypotheses):
+The 1998 Hellerstein's study examines two hypotheses:
 
-1. The role of the physician in prescribing a generic over a brand-name drug
-2. The role of a patient's insurance status in the physician's choice between generic vs brand-name drugs.
+1. The physician prescribing choice influences the selection of a generic over a brand-name drug
+2. The patient's insurance status influences the physician's choice between generic and brand-name drugs.
 
-For the purpose of this example we focus on the latter aspect.  
-
-
-### **Hypothesis - Physicians are more likely to prescribe generics to patients who do not have insurance coverage for prescription pharmaceuticals (moral hazard in insurance).**
+For the purpose of this example and in the replication exercise we focus on the second aspect.  
 
 
-Hellerstein (1998) discusses that, based on their insurance status, some patients may demand certain care more than others. If, for example, the prescription drug is reimbursed by the patient's health insurance, this may cause overconsumption. This behavior can potentially differ by the patient’s insurance scheme. A patient that has no insurance and, thus, does not get any reimbursement for prescription drugs, might have a higher incentive to demand cheaper generic drugs [@danzon_cross-national_2011] than a patient with insurance that covers prescription drugs, either generic or trade-name. Given that the United States have different insurance schemes with varying prescription drug coverage, it is of interest to investigate the role of a patient's insurance status in the physician's choice between generic vs brand-name drugs.
+### **Hypothesis**
+
+The paper formulates the following hypothesis:
+
+**Physicians are more likely to prescribe generics to patients who do not have insurance coverage for prescription pharmaceuticals (moral hazard in insurance)**
+
+
+Hellerstein (1998) discusses that, based on insurance status, some patients may demand certain care more than others. If, for example, the prescription drug is reimbursed by the patient's health insurance, this may cause overconsumption. This behavior can potentially differ by the patient’s insurance scheme. A patient that has no insurance and, thus, does not get any reimbursement for prescription drugs, might have a higher incentive to demand cheaper generic drugs [@danzon_cross-national_2011] than a patient with insurance that covers prescription drugs, either generic or trade-name. Given that the United States have different insurance schemes with varying prescription drug coverage, it is of interest to investigate the role of a patient's insurance status in the physician's choice between generic compared to brand-name drugs.
 
 Hellerstein (1998) considers a patient's insurance status as a matter of dividing the study population in groups for which the choice between generic and brand-name drugs differs. She suggests that *There is a relationship between the prescription of a generic drug and insurance status of a patient.*  [@hellerstein_importance_1998].
 
 Providing answers to a research question requires formulating and testing a hypothesis. Based on logic, theory or previous research, a hypothesis proposes an expected relationship within the given data. According to her research question, Hellerstein hypothesizes that: *Physicians are more likely to prescribe generics to patients who do not have insurance coverage for prescription pharmaceuticals.*
 
-Specifically, she writes *"if there is moral hazard in insurance when it comes to physician prescription behavior, there will be differences in the propensity of physicians to prescribe low-cost generic drugs, and these differences will be (partially) a function of the insurance held by the patient. In particular, if moral hazard exists, patients with extensive insurance coverage for prescription drugs (like those on Medicaid in 1989) should receive prescriptions written for generic drugs less frequently than patients with no prescription drug coverage."*
+Specifically, she writes *"if there is moral hazard in insurance when it comes to physician prescription behavior, there will be differences in the propensity of physicians to prescribe low-cost generic drugs, and these differences will be (partially) a function of the insurance held by the patient. In particular, if moral hazard exists, patients with extensive insurance coverage for prescription drugs (like those on Medicaid in 1989) should receive prescriptions written for generic drugs less frequently than patients with no prescription drug coverage."* [@hellerstein_importance_1998, p.113]
 
-In other terms, we would expect the effect of the insurance status on whether a patient receives a generic to be different from zero. To obtain a testable null hypothesis, we reformulate this relationship so that we reject if our expectations are correct. This means, if we expect to see an effect of insurance on prescriptions of generics, our null hypothesis is that insurance status has no effect on the outcome (prescription of generic drugs). Thus, there is no moral hazard in insurance.
+Based on Hellerstein's considerations, we expect the effect of the insurance status on whether a patient receives a generic to be different from zero. To obtain a testable null hypothesis, we reformulate this relationship so that we reject the hypothesis if our expectations are correct. This means, if we expect to see an effect of insurance on prescriptions of generics, our null hypothesis is that insurance status has no effect on the outcome (prescription of generic drugs). No moral hazard arises from having obtained insurance.
 
 

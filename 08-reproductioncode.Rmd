@@ -4,7 +4,9 @@ output:
   pdf_document: default
 ---
 
-<!-- Stata and Markdown: https://www.ssc.wisc.edu/~hemken/Stataworkshops/Stata%20and%20R%20Markdown/StataMarkdown-->
+<!-- Call Stata engine: https://www.ssc.wisc.edu/~hemken/Stataworkshops/Stata%20and%20R%20Markdown/StataMarkdown-->
+
+
 
 ```{r, echo=FALSE, message=FALSE}
 stataexe <- "Y:/STATA16/Windows 10 (x64)/StataMP-64.exe"
@@ -14,11 +16,12 @@ library(Statamarkdown)
 
 
 
-# Stata reproduction code of Hellerstein (1998)
+# Stata replication code of Hellerstein (1998)
 
-The following Stata program reproduces the empirical analyses of Hellerstein, Judith K. 1998. “The Importance of the Physician in the Generic versus Trade-Name Prescription Decision,” The RAND Journal of Economics 29(1):108–36, doi: 10.2307/2555818.
+The following Stata program replicates the empirical analyses of Hellerstein, Judith K. 1998.
+“The Importance of the Physician in the Generic versus Trade-Name Prescription Decision,” The RAND Journal of Economics 29(1):108–36, doi: 10.2307/2555818.
 
-This file contains program code for data preparation, reproduction of the descriptive tables and figures, and reproduction of the empirical analyses and tables.
+This file contains program code for data preparation, replication of descriptive tables and figures, and replication of the empirical analyses and tables.
 The structure of this file is as follows:
 
 1. Preparing the NAMCS and NAMCSd data (Section \@ref(run-study))
@@ -26,25 +29,32 @@ The structure of this file is as follows:
 3. Empirical analyses using NAMCSd data (Section \@ref(analyzing) and Section \@ref(report-study))
 		
 		
-## Preparing the data {#A1}
+## Preparing the analysis data set {#A1}
 		
-```{stata, collectcode=TRUE, error=FALSE}
+```{stata preparing, collectcode=TRUE, error=FALSE, warning=FALSE}
 * Pathing and setup
 log close _all
 snapshot erase _all
 clear all
 
-global raw  				`"  "C:\Users\my name\my project\raw data\" "'
-global data 				`"  "C:\Users\my name\my project\data\" "'
-global descriptive_tables  		`"  "C:\Users\my name\my project\descriptive tables\" "'
-global descriptive_figures		`"  "C:\Users\my name\my project\descriptive figures\" "'
-global results  			`"  "C:\Users\my name\my project\descriptive figures\estimation results\" "'
+*storage of NAMCsd raw data
+global r  				`"  "C:\Users\my name\my project\raw data\" "'
 
+*analysis data
+global d 				`"  "C:\Users\my name\my project\data\" "'
+
+
+*results
+global tab  		`"  "C:\Users\my name\my project\tables\" "'
+global fig		`"  "C:\Users\my name\my project\figures\" "'
+
+
+*Data were downloaded from https://ftp.cdc.gov/pub/Health_Statistics/NCHS/namcs_public_use_files/*
+*1991 datasets and documentation: namcs91.exe; namcs91d.exe; namcs91doc.pdf*
 
 *	Preparing NAMCS91:
 ******************************
-cd $raw
-use namcs91_raw.dta , clear
+use "$r\namcs91_raw.dta" , clear
 
 * 1) Set up relevant dummies
 gen female = sex == 1
@@ -54,7 +64,8 @@ gen northeast = geo_reg == 1
 gen midwest = geo_reg == 2
 gen south = geo_reg == 3
 gen west = geo_reg == 4
-//Hellerstein defines specialists as physicians who are not in general practice, family practice, or basic pediatrics.
+//Hellerstein defines specialists as 
+//physicians who are not in general practice, family practice, or basic pediatrics.
 gen specialist = (phys_special != "GP" & phys_special != "FP" & phys_special != "PD") 
 //Medicare patients 
 gen temp = selfpay + medicaid + other_gov_ins + private_ins + hmo_pre_paid
@@ -66,16 +77,14 @@ gen temp1 = selfpay + medicaid  + medicare + other_gov_ins + private_ins + hmo_p
 keep if temp1 == 1
 
 compress
-cd $data
-save namcs91.dta, replace
+save "$d\namcs91.dta", replace
 
 
 
 
 *	Preparing NAMCS91d:
 ****************************
-cd $raw
-use namcs91d_raw.dta , clear
+use "$r\namcs91d_raw.dta" , clear
 
 
 * 1) Removing observations with missing values:
@@ -85,7 +94,8 @@ replace generic_status = .b if generic_status == 3
 replace prescription_status = .b if prescription_status == 3
 replace composition_status = .b if composition_status == 3 | composition_status == 6
 
-drop if missing(generic_id) |  missing(generic_status) | missing(prescription_status) | missing(composition_status)
+drop if missing(generic_id)|missing(generic_status)|///
+  missing(prescription_status)|missing(composition_status)
 
  
 * 2) Creating required variables:
@@ -155,8 +165,7 @@ selfpay medicare medicaid private_ins hmo_pre_paid   ///
 geo_reg phys_special phys_type physician_id patient_id
 
 compress
-cd $data
-save namcs91d.dta, replace
+save "$d\namcs91d.dta", replace
 ```
 
 
@@ -165,31 +174,39 @@ save namcs91d.dta, replace
 ## Descriptive statistics {#A2}
 
 
-```{stata, collectcode=TRUE}
+```{stata descriptive, collectcode=TRUE, warning=FALSE}
 
 * 	Table 1:
 ****************
 
 /* Comment:
-All information required to recreate Table 1 can be found in the footenote of Table 1 in the Hellerstein (1998) paper.
-It is stated that the table only uses data without missing values. This applies to all tables and figures and was done in the initial data preparation already.
+Information was obtained from the footnote of Table 1, p. 115 of the original study.
+The text stats that only uses data without missing values.
+This applies to all tables and figures and was done in the initial data preparation.
 
-Further the footnote defines that the dummy variable "specialist" indicates whether a physician is
-not a general practice, family practice, or basic pediatrics. The dummy medicare only takes the value of 1 if medicare was the only source of payment.
+The footnote defines the dummy variable "specialist":
+whether a physician is not a general practice, family practice, or basic pediatrics.
+The dummy medicare takes the value of 1 if medicare was the only source of payment.
 
-Last, the footnote mentions that observations of patient visits in which the patient was not charged were excluded.
+Observations of patient visits in which the patient was not charged were excluded.
 */
-cd $data
-use namcs91.dta, clear
+  
+  
+use "$d\namcs91.dta", clear
 
-qui eststo table1: estpost summarize age female nonwhite hispanic selfpay medicare medicaid private_ins other_gov_ins  hmo_pre_paid specialist northeast midwest south west
+qui eststo table1: estpost summarize age female nonwhite hispanic selfpay medicare medicaid ///
+private_ins other_gov_ins  hmo_pre_paid specialist northeast midwest south west
 
-cd $descriptive_tables
- 
-esttab table1 using Table_1.rtf, replace  title("Summary Statistics for Overall NAMCS Patient Sample") cells ("mean(fmt(%12.2f)) sd(fmt(%12.2f))") nonumber noobs ///
-coeflabels(age "Age" female "Female" nonwhite "Nonwhite" hispanic "Hispanic" selfpay "Self-pay" medicare "Medicare" medicaid "Medicaid" private_ins "Private/commercial" ///
-other_gov_ins "Other government insurance" hmo_pre_paid "HMO/prepaid plan" specialist "Specialist" northeast "Northeast" midwest "Midwest" south "South" west "West" ) ///
-addnote("Notes: Sample size is 32,407. For further notes see table 1 notes in Hellerstein (1998); Sample size differs as data from different years is used" "Data source: NAMSC91")
+esttab table1 using "$tab\Table_1.rtf", replace  ///
+title("Summary Statistics for Overall NAMCS Patient Sample") ///
+cells ("mean(fmt(%12.2f)) sd(fmt(%12.2f))") nonumber noobs ///
+coeflabels(age "Age" female "Female" nonwhite "Nonwhite" hispanic "Hispanic" ///
+selfpay "Self-pay" medicare "Medicare" medicaid "Medicaid" private_ins "Private/commercial" ///
+other_gov_ins "Other government insurance" hmo_pre_paid "HMO/prepaid plan" ///
+  specialist "Specialist" ///
+northeast "Northeast" midwest "Midwest" south "South" west "West" ) ///
+addnote("Notes: Sample size is 32,407. For further notes see table 1 notes in Hellerstein (1998); ///
+        Sample size differs as data from different years is used" "Data source: NAMSC91")
 
 
 
@@ -200,10 +217,9 @@ addnote("Notes: Sample size is 32,407. For further notes see table 1 notes in He
 /* Comment:
 Variables and data preparing processes equivalent to Table 1.
 
-For the reproduction, create a matrix resembling the table and store each value in its respective cell.
+Create a matrix resembling the table and store each value in its respective cell.
 */
-cd $data
-use namcs91d.dta, clear
+use "$d\namcs91d.dta", clear
 
 
 * 1) Saving all values in locals:
@@ -252,22 +268,19 @@ mat input table2 = ( ///
 * 3) Labelling and exporting:
 **************************************
 matrix rownames table2 = ///
-"Age" "Female" "Nonwhite" "Hispanic" "Self-Pay" "Medicare" "Medicaid" "Private/Commercial" "HMO/prepaid plan" ///
+"Age" "Female" "Nonwhite" "Hispanic" "Self-Pay" "Medicare" "Medicaid" "Private/Commercial" ///
+"HMO/prepaid plan" ///
 "Specialist" "Northeast" "Midwest" "South" "West" "Full sample"
+
 matrix colnames table2 = "Mean" "Standard Deviation" "Proportion Generic"
 
-cd $descriptive_tables
-putexcel set Table_2, replace
+putexcel set "$tab\Table_2.xlsx", replace
 putexcel A1 = matrix(table2 ), names
-cd $data
-
-
 
 
 * 	Table 3:
 ****************
-cd $data
-use namcs91d.dta, clear
+use "$d\namcs91d.dta", clear
 return clear
 ereturn clear
 
@@ -282,10 +295,13 @@ statistics(mean N) columns(statistics) listwise
 eststo t20: quietly estpost tabstat All_drugs, by(drug_class) ///
 statistics(mean N) columns(statistics) listwise notot
 
-cd $descriptive_tables
-esttab t10 t20 using "Table_3.rtf", replace   cells("count(fmt(%12.0f)) mean(fmt(%12.2f))") title("Table 3 - Frequency of Generic Prescription by Drug Class") ///
-collabels("Observations" "% Generics") noobs nonumber gaps refcat(3 "By drug class" , nolabel) coeflabels(generic "All drugs" 3 "Antimicrobials" 5 "Cardiovascular-renals" ///
- 6 "Central Nervous System" 10 "Hormones/Hormonal mechanisms" 12 "Skin/Mucous membrane" 15 "Ophthalmics" 17 "Pain relief" 19 "Resperatory tract") 
+esttab t10 t20 using "$tab\Table_3.rtf", replace ///
+cells("count(fmt(%12.0f)) mean(fmt(%12.2f))") ///
+title("Table 3 - Frequency of Generic Prescription by Drug Class") ///
+collabels("Observations" "% Generics") noobs nonumber gaps refcat(3 "By drug class" , nolabel) ///
+coeflabels(generic "All drugs" 3 "Antimicrobials" 5 "Cardiovascular-renals" ///
+ 6 "Central Nervous System" 10 "Hormones/Hormonal mechanisms" ///
+ 12 "Skin/Mucous membrane" 15 "Ophthalmics" 17 "Pain relief" 19 "Resperatory tract") 
 
 
 
@@ -293,12 +309,15 @@ collabels("Observations" "% Generics") noobs nonumber gaps refcat(3 "By drug cla
 * 	Figure 1:
 *****************
 /* Comment:
-Visualizations of kernel densities vary heavily depending on the underlying specifications. 
-The three key specifications for recreating the figure are the density function, the bandwidth and whether/how to round the data.
-Hellerstein does not provide information on either of these specifications.
-We can visually rule out that she rounds to the first decimal place, since there are fluctuations between the first decimal places.
-Rounding to the third or higher decimal places produces much noisier curves, hence, we infer that she rounded to the second decimal place.
-Regarding bandwidth and density function, there are no obvious clues, so that the reproduction relies on visual approximation of the original figure.
+Visualizations of kernel densities vary depending on the specifications. 
+Two parameters define the density function: Bandwidth and whether/how to round the data.
+Hellerstein does not provide information about the density function.
+We  visually rule out that she rounds to the first decimal place.
+There are fluctuations between the first decimal places.
+Rounding to the third or higher decimal places produces much noisier curves.
+Hence, we assume that she rounded to the second decimal place.
+For the bandwidth and density function, there are no obvious clues.
+That the reproduction relies on visual approximation of the original figure.
 */
 
 
@@ -317,19 +336,18 @@ twoway kdensity generic_share, range(0 1) bw( 0.02) kernel(bi)  ///
 xtitle("Physician generic prescription rates") ytitle("Percent of physicians") ///
 xlabel(0 (0.1) 1) lc(black)
 
-cd $descriptive_figures
-graph export "Figure_1.png", replace
+graph export "$fig\Figure_1.png", replace
 
 
 
 * 	Figure 2:
 *****************
-cd $data
-use namcs91d.dta, clear
+use "$d\namcs91d.dta", clear
 
 /* Comment:
-The figure only uses observations if the respective drug was prescribed a minimum of 6 times by a single physician. 
-In Hellerstein, 158 unique physicians remain, whereas we are left with 122 physicians (see p. 116 first paragraph).
+The figure uses observations of drugs with > 6 prescriptions by a single physician. 
+158 unique physicians remain in Hellerstein (1998).
+We are left with 122 physicians (see p. 116 first paragraph).
 */
 
 
@@ -364,37 +382,43 @@ set scheme  s1manual
 graph bar (count), over(counter) ///
 ytitle("") intensity(60) lintensity(100) bar(1, color("black") fcolor("gs5")) ylab(, nogrid)
 
-cd $descriptive_figures
-graph export "Figure_2.png", replace
+graph export "$fig\Figure_2.png", replace
 ```
 
 
 ## Empirical analyses and tables {#A3}
 
-```{stata, collectcode=TRUE}
+```{stata analysis, collectcode=TRUE, warning=FALSE}
 
 * Setting up the regression input, equivalent to the notation in the paper
-cd $data 
-use namcs91d.dta, clear
+
+use "$d\namcs91d.dta", clear
 xtset physician_id
 
 
 
 gen G = generic_status
 
-global C drug_class_3 drug_class_5 drug_class_6 drug_class_10 drug_class_12 drug_class_15 drug_class_19 	/* drug classes */
+/* drug classes */
+global C drug_class_3 drug_class_5 drug_class_6 drug_class_10 drug_class_12 drug_class_15 drug_class_19 	
 
-global X age female hispanic nonwhite 										/* patient demographics */
+/* patient demographics */
+global X age female hispanic nonwhite 										
 
-global P medicare medicaid hmo_pre_paid private_ins								/* insurance */
+/* insurance */
+global P medicare medicaid hmo_pre_paid private_ins								
 
-global S specialist												/* is phys a specialist */
+/* is phys a specialist */
+global S specialist												
 
-global R midwest south west											/* region */
+/* region */
+global R midwest south west											
 
-global X_dash mean_age mean_female mean_nonwhite mean_hispanic 							/* patient avgs */
+/* patient avgs */
+global X_dash mean_age mean_female mean_nonwhite mean_hispanic 							
 
-global P_dash mean_medicaid mean_medicare mean_private_ins mean_hmo_pre_paid 		 			/* insurance avgs */
+/* insurance avgs */
+global P_dash mean_medicaid mean_medicare mean_private_ins mean_hmo_pre_paid 		 			
 
 * M and T are not included due to missing state id
 
@@ -411,11 +435,16 @@ eststo table4: xtprobit G $C $X $P $S $X_dash $P_dash $R, re
 eststo marginstable4: margins, dydx( $X $S $X_dash $P_dash $R) post
 
 *Reporting Table 4
-esttab table4 marginstable4 using Table-4.rtf, replace wide keep(_cons $X $S $X_dash $P_dash $R) stats(rho) noobs b(3) order(_cons) ///
-coeflabels(_cons "Constant" age "Age" female "Female" nonwhite "Nonwhite" hispanic "Hispanic" specialist "Specialist" mean_age "Mean age" /// 
-mean_female "Percent female" mean_nonwhite "Percent black" mean_hispanic "Percent Hispanic" mean_medicaid "Percent Medicaid" mean_medicare ///
-"Percent Medicare" mean_private_ins "Percent private insured" mean_hmo_pre_paid "Percent HMO/prepaid"  northeast "Northeast" midwest ///
-"Midwest" south "South" west "West") mtitles("Random-Effects Probit Coefficient" "% Change in Generic") nonumber addnote("Datasource: NAMSC91") 
+esttab table4 marginstable4 using "$tab\Table-4.rtf", replace wide ///
+keep(_cons $X $S $X_dash $P_dash $R) stats(rho) noobs b(3) order(_cons) ///
+coeflabels(_cons "Constant" age "Age" female "Female" nonwhite "Nonwhite" hispanic "Hispanic" ///
+              specialist "Specialist" mean_age "Mean age" /// 
+mean_female "Percent female" mean_nonwhite "Percent black" ///
+  mean_hispanic "Percent Hispanic" mean_medicaid "Percent Medicaid" mean_medicare ///
+"Percent Medicare" mean_private_ins "Percent private insured" ///
+  mean_hmo_pre_paid "Percent HMO/prepaid"  northeast "Northeast" midwest ///
+"Midwest" south "South" west "West") ///
+  mtitles("Random-Effects Probit Coefficient" "% Change in Generic") nonumber addnote("Datasource: NAMSC91") 
 
 
 
@@ -430,8 +459,9 @@ eststo table5: 	 xtprobit G $C $X $P $S $R $X_dash $P_dash, re
 eststo marginstable5: margins, dydx($C) post
 
 *Reporting Table 5
-esttab table5 marginstable5 using Table-5.rtf, replace noobs wide keep($C) nonumber ///
-coeflabels(drug_class_1 "Antimicrobials" drug_class_2 "Cardiovascular-renals" drug_class_3 "Central Nervous System" drug_class_4 ///
+esttab table5 marginstable5 using "$tab\Table-5.rtf", replace noobs wide keep($C) nonumber ///
+coeflabels(drug_class_1 "Antimicrobials" drug_class_2 "Cardiovascular-renals"///
+             drug_class_3 "Central Nervous System" drug_class_4 ///
 "Hormones/Hormonal mechanisms" drug_class_5 "Skin/Mucous membrane" drug_class_6 "Ophthalmics" drug_class_8 "Resperatory tract") ///
 addnote("Notes: The ommitted drug category is pain relief" "Datasource: NAMSC91") mtitles("Random-Effects Probit Coefficient" "% Change in Generic") 
 
@@ -451,7 +481,7 @@ eststo m_`x': qui margins, dydx($P) post
 }
 
 
-esttab c_3 m_3 c_5 m_5 c_6 m_6 c_10 m_10 c_12 m_12 c_15 m_15 c_17 m_17 c_19 m_19 using Table6.rtf, replace ///
+esttab c_3 m_3 c_5 m_5 c_6 m_6 c_10 m_10 c_12 m_12 c_15 m_15 c_17 m_17 c_19 m_19 using "$tab\Table6.rtf", replace ///
 nostar nopar  keep($P)  noobs b(2)  order(medicaid medicare private_ins hmo_pre_paid) ///
 refcat(medicare "Medicare" medicaid "Medicaid" hmo_pre_paid "HMO/Prepaid" private_ins "Private", nolabel) ///
 coeflabels(medicare "Coefficient" medicaid "Coefficient" hmo_pre_paid "Coefficient" private_ins "Coefficient") ///

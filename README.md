@@ -23,6 +23,7 @@ The study guide consists of five chapters that include the essential steps of a 
   
 1. An introduction to the basic concepts and key terminology. 
 2. A resources box that includes textbooks, articles and references to current web resources with emphasis on open access material.
-3. A showcase example of an empirical project reproduced based on the article of *Hellerstein, Judith K. 1998. “The Importance of the Physician in the Generic versus Trade-Name Prescription Decision.” The RAND Journal of Economics 29 (1): 108–36. https://doi.org/10.2307/2555818*.
+3. A checklist for each step of the reproducible research project to follow.
+4. A showcase example of an empirical project reproduced based on the article of *Hellerstein, Judith K. 1998. “The Importance of the Physician in the Generic versus Trade-Name Prescription Decision.” The RAND Journal of Economics 29 (1): 108–36. https://doi.org/10.2307/2555818*.
 
 

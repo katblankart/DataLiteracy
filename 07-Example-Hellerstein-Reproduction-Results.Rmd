@@ -1,15 +1,25 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 
-# Example: Hellerstein (1998)
+```{r path7, echo=FALSE}
+path <- "C:/Users/KFischer/Documents/GitHub/DataLiteracy/images"
+```
 
-We show the results of the reproduction of Tables 1-3 and Figures 1-2 of the descriptive analysis, and the reproduction of the empirical analysis in Tables 4-6. Please keep in mind that our results are based on data from 1991. This is in contrast to @hellerstein_importance_1998, which is based on three datasets from 1989. As the confidential data are the key to identifying physicians and patients in the 1989 data, we resort to the 1991 data that provide state identifiers in two publicly available datasets. We present our results and briefly discuss the differences compared to @hellerstein_importance_1998. For a detailed discussion and interpretation please refer to the original study.
+# Replication results of Hellerstein (1998)
+
+We show the results of the replication of Tables 1-3 and Figures 1-2 of the descriptive analysis, and the replication of the empirical analysis in Tables 4-6 in this document). Our results are based on data from 1991 which  is in contrast to @hellerstein_importance_1998 that used three datasets from 1989. As access to confidential data is required to identify physicians and patients in the 1989 data, we resort to 1991 that provide state identifiers in two publicly available datasets. We present our results and discuss deviations from @hellerstein_importance_1998. A detailed discussion and interpretation is provided in the original study.
  
 ## Descriptive Analysis
 
-The summary statistics shown in Table 1, representing the overall NAMCS patient sample of the year 1991 are similar to the summary statistics shown by @hellerstein_importance_1998. However, some categories for the sources of payment differ slightly. Four categories -- Self-pay, Medicare, Madicaid and HMO/prepaid plan -- match. The categories Blue Cross/ Blue Shield and Other commerical insurer seem to have merged into the category Private/Commercial.
-When looking at the distribution of insurance coverage, we see that the frequency of Private/Commercial perfectly adds up to the frequencies of Blue Cross and other commercial insurer. Differences in the distribution of other covariates are slim. The most noticable differnce lies in the share of specialist, which account for 68% of visited physicians in our 1991 sample and for 55% in Hellerstein’s sample from 1989.
+Summary statistics are shown in Table 1. They represent the sample of patients represented in NAMCS in the year 1991. Results are similar to the summary statistics shown by @hellerstein_importance_1998. Some categories of the payment sources differ slightly. Four categories -- Self-pay, Medicare, Madicaid and HMO/prepaid plan -- match. The categories Blue Cross/ Blue Shield and Other commerical insurer seem to have merged into the category Private/Commercial.
+When looking at the distribution of insurance coverage, we see that the frequency of patients with status *Private/Commercial* adds up to the frequencies of Blue Cross and other commercial insurers. Differences in the distribution of other covariates are slim. The most noticable difference lies in the share of specialist physicians, which account for 68% of visited physicians in the 1991 sample compared to 55% in 1989.
 
 
-**Table 1 - Summary Statistics for Overall NAMCS Patient Sample**
+
+**Hellerstein Table 1 - Summary Statistics for Overall NAMCS Patient Sample**
 
 
 |    Variable                       |     mean     |     sd       |
@@ -32,14 +42,14 @@ When looking at the distribution of insurance coverage, we see that the frequenc
 
 
 
-Notes: Sample size is 29,854. For further information see Table 1 notes in Hellerstein (1998); Sample size differs as we use data from a different year. However, the public data from 1989 (the one Hellerstein use) allow for reproduction of Table 1. With the specifications we infer from her paper, we cannot perfectly reproduce the table. (Data source: NAMSC91).
+Notes: Data source: NAMSC91. Sample size is 29,854. Sample size differs as we use data from a different year. However, the public data from 1989 (the one Hellerstein uses) allow for reproduction of Table 1. For further information see Table 1 notes in Hellerstein (1998); With the specifications stated in the manuscript, we cannot reproduce table 1 completely.
 
 
-Table 2 shows very similar statistics for the patients of the NAMCSd sample compared to the 1989 data, though, we observe a slightly smaller sample size in the 1991 data.
+Table 2 shows very similar statistics for the patients of the NAMCSd sample compared to the 1989 data. We observe a smaller sample size in the 1991 data.
 
 
 
-**Table 2 - Summary Statistics for Patients in NAMCS Drug Sample**
+**Hellerstein Table 2 - Summary Statistics for Patients in NAMCS Drug Sample**
 
 
 |                    | Mean  | Standard Deviation | Proportion Generic |
@@ -66,7 +76,7 @@ Notes: The sample size is 7,715. For further notes see Hellerstein (1998), Data 
 Table 3 shows the absolute number of observations and the share of generics over all drugs as well as the eight largest drug categories. We see an overall similar generic share over all drug classes compared to @hellerstein_importance_1998. Yet in the drug class pain relief we see an increase of generic share by about $9$ percentage points. 
 
 
-**Table 3 - Frequency of Generic Prescription by Drug Class**
+**Hellerstein Table 3 - Frequency of Generic Prescription by Drug Class**
 
 
 |                                     |     Observations    |     %   Generics    |
@@ -81,45 +91,44 @@ Table 3 shows the absolute number of observations and the share of generics over
 |     Skin/Mucous membrane            |     530             |     9.06            |
 |     Ophthalmics                     |     295             |     13.90           |
 |     Pain relief                     |     634             |     21.29           |
-|     Resperatory tract               |     251             |     10.76           |
+|     Respiratory tract               |     251             |     10.76           |
 
 
 
-**Figure 1 - Distribution of Physician Generic Prescription Rates (Source: NAMSCd91)**
+****
 
 
-The distribution of physicians over the different generic prescription rates (Figure 1) is similar to Hellerstein (1998).
+The distribution of physicians over the different generic prescription rates (Figure \@ref(fig:HellFig1)) is similar to Hellerstein (1998).
 
 
-```{r HellFig1, out.width='100%', fig.align='center', fig.cap='Generic prescription rates', echo=FALSE}
+```{r HellFigR1, out.width='100%', fig.align='center', fig.cap='Hellerstein Figure 1 - Distribution of Physician Generic Prescription Rates (Source: NAMSCd91)', echo=FALSE}
 knitr::include_graphics(paste(path,"/Hellerstein_Fig_1.png",sep=""))
 ```
 
 
 
 
-**Figure 2 - Physician decisions by physicians who prescribe a drug to at least six patients (Source: NAMSCd91)**
+**Figure 2**
 
-
-When looking at Figure 2, we see a decrease from about 90% to about 50% in *"only trade-name"* prescriptions by physicians. This seems to be driven by a rather small increase of prescription of *"both versions"* and *"only generics"*. 
-
-
-```{r HellFig2, out.width='100%', fig.align='center', fig.cap='Physician decisions', echo=FALSE}
+```{r HellFigR2, out.width='100%', fig.align='center', fig.cap='Hellerstein Figure 2 - Physician decisions by physicians who prescribe a drug to at least six patients (Source: NAMSCd91)', echo=FALSE}
 knitr::include_graphics(paste(path,"/Hellerstein_Fig_2.png",sep=""))
 ```
+
+When looking at Figure \@ref(fig:HellFig2), we see a decrease from about 90% to about 50% in *"only trade-name"* prescriptions by physicians. This seems to be driven by a rather small increase of prescription of *"both versions"* and *"only generics"*. 
+
 
  
 ## Empirical Analysis
 
 
-Please keep in mind that, due to data restrictions, we were not able to control for certain covariates that Hellerstein (1998) includes. An example of such are legislation laws like mandatory or permissive substitution, and one- or two-line prescription. For this reason, we cannot present all tables produced by Hellerstein (1998). Given these restrictions, we cannot run the analysis with the same underlying model specifications. 
+Keep in mind that due to data restrictions, we were not able to control for certain covariates that Hellerstein (1998) includes. An example of such are legislation laws like mandatory or permissive substitution, and one- or two-line prescription. For this reason, we cannot present all tables produced by Hellerstein (1998). Given these restrictions, we cannot run the analysis with the same underlying model specifications. 
 This restricts us from comparing the results from 1991 and 1989. However, for the completion of this example we present the results from Tables 4, 5 and 6: 
 
 
-**Table 4 Estimated Coefficients on Demographic Variables, Geographic Variables, and Average Characteristics for Full Sample, excluding regional identifiers**
+**Hellerstein Table 4 - Estimated Coefficients on Demographic Variables, Geographic Variables, and Average Characteristics for Full Sample, excluding regional identifiers**
 
 
-|                                |     Random-Effects   Probit Coefficient    |                |     %   Change in Generic    |                |
+|                                |     Random-Effects   Probit Coefficient    |                |     Percent change in Generic    |                |
 |--------------------------------|--------------------------------------------|----------------|------------------------------|----------------|
 |     Constant                   |     -0.556**                               |     (-3.17)    |                              |                |
 |     Age                        |     -0.002*                                |     (-1.99)    |     -0.001*                  |     (-1.99)    |
@@ -146,7 +155,7 @@ Notes: $*p < 0.05, **p < 0.01, ***p < 0.001$; The sample size is 7,715. For furt
 Table 5 shows the estimated coefficients for the eight largest drug classes as well as the % change in the generic share. The greatest change compared to Hellerstein (1998) is the change in sign from positive to negative for cardiovascular/renals, though not significant in our model. 
 
 
-**Table 5 - Estimated Coefficients for Drug-Class Dummy Variable for Full Sample**
+**Hellerstein Table 5 - Estimated Coefficients for Drug-Class Dummy Variable for Full Sample**
 
 
 |                                     |     Random-Effects   Probit Coefficient    |                |     %   Change in Generic    |                |
@@ -167,7 +176,7 @@ Notes: $*p < 0.05, **p < 0.01, ***p < 0.001$; The sample size is 7,715. Omitted 
 
 
 
-**Table 6 - Tests for Moral Hazard for the Full Sample Equality of Individual Insurance Variables with Self-Payment Random-Effects Probit Results**
+**Hellerstein Table 6 - Tests for Moral Hazard for the Full Sample Equality of Individual Insurance Variables with Self-Payment Random-Effects Probit Results**
 
 
 |                    |     Antimicrobial    |     %   change    |     Cardiovasculars    |     %   change    |     Central   Nervous System    |     %   change    |     Hormones    |     %   change    |     Skin/Muchous   Membranes    |     %   change    |     Ophthalmics    |     %   change    |     Pain   relief    |     %   change    |     Respiratory   Tract    |     %   change    |

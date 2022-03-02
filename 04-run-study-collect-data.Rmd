@@ -7,8 +7,16 @@ output:
 # Running the study and collecting the data {#run-study}
 
 ```{r path4, echo=FALSE}
-path <- "C:/Users/KFischer/Documents/GitHub/DataLiteracy/_bookdown_files/DataLiteracy_files/figure-html"
+path <- "C:/Users/KFischer/Documents/GitHub/DataLiteracy/images"
 ```
+
+
+```{r, out.width='100%', fig.align='center', echo=FALSE}
+knitr::include_graphics(paste(path,"/kaleidico-26MJGnCM0Wc-unsplash.jpg",sep=""))
+```
+
+
+
 
 <!--C:/Users/KFischer/sciebo/Date Literacy Project/06 Manuscript/bookdown/DataLiteracy/_book/DataLiteracy_files/figure-html-->
 
@@ -125,11 +133,23 @@ General principles on **How to code well**
 
 ### Data cleaning
 
--  [Cleaning data in STATA](https://mdl.library.utoronto.ca/technology/tutorials/cleaning-data-stata)
+- [LOST Library of Statistical Technqiues - Data Manipulation Section](https://lost-stats.github.io/Data_Manipulation/data_manipulation.html)
+- [Cleaning data in STATA](https://mdl.library.utoronto.ca/technology/tutorials/cleaning-data-stata)
+
 
 ### Collecting data from meta-data and web-scraping
 
 -  [Introduction to web scraping: Resources](https://librarycarpentry.org/lc-webscraping/reference)
+
+
+## Checklist to running the study and collecting the data
+
+- Develop a data extraction and analysis plan by describing how your final analysis data set should look like
+- Set up data extraction methods if your data is not readily available to use, for example a scraping algorithm
+- Go back to your causal model and identification strategy: Does the analysis data allow the analysis you like to perform? Most importantly, is it collased at the level needed?
+- Set up a reproducible program code of all steps that you take to clean, combine and aggregate the data
+- Store and document your analysis data set in a codebook
+
 
 
 ## Example: Hellerstein (1998)
@@ -174,17 +194,17 @@ For the NAMCSd, used for all other figures and tables,
   - Keep only those observations of drugs that are the first mentioned drug in a patient visit. 
   - Keep only those observations of drug mentions, that are part of the eight largest drug classes. The names of the included drug classes can be found in table 3 and the labels the data use in the documentation files.
   - Keep only those observations of drugs that were prescribed.
-  - Create the same dummies as in the preparation of the NAMCS data (footnote table 2)
+  - Create the same dummies as in the preparation of the NAMCS data (footnote table 2, \@ref(tab:HellTab2))
   - Create an indicator on whether a drug is a multisource drug (definition given in ch.1 paragr. 1: "We categorized drugs with the same ingredients and define drugs in an ingredient-group as multisource if there is at least one generic and one tradename drug within a group.").
   - Drop observations of medications that are not multisource drugs. 
   - Use the variable on whether a drug is a generic or trade-name drug to create an indicator on whether the drug is a generic (dependent variable).
   - Create physician averages of variables listed on p. 123 in Hellerstein (1998).
 
 After completion of these steps, the analysis dataset NAMCS includes 43 variables and 33,123 observations and NAMCSd 29 variables and 8,397 observations. The dataset is aggregated on patient level and is now ready for statistical analysis (see at the end of the next chapter). Of importance is to ensure that the raw data, the data preparation do-file and the analysis dataset are stored safely.  
-The NAMCSd dataset serves as a source for the empirical analysis of Hellerstein (1998). Table 1 shows the variables included in the dataset. 
+The NAMCSd dataset serves as a source for the empirical analysis of Hellerstein (1998).  
 
 
-**Table 1 - NAMCSd - variables of the analysis dataset**
+**Table (#tab:analysisdat): Variables of the analysis dataset based on NAMCSd**
 
 
 | Variable Name     | Label                                                                           |
@@ -219,4 +239,4 @@ The NAMCSd dataset serves as a source for the empirical analysis of Hellerstein 
 | mean_hmo_pre_paid | Mean percentage of patients with HMO insurance in an individual practice        |
 | mean_private_ins  | Mean percentage of patients with private insurance in an individual practice    |
 
-
+Table \@ref(tab:analysisdat) shows the variables included in the dataset.

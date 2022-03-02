@@ -4,21 +4,21 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 2 Formulating a hypothesis | A concise guide to reproducible research using secondary data</title>
-  <meta name="description" content="Chapter 2 Formulating a hypothesis | A concise guide to reproducible research using secondary data in health economics and management" />
+  <title>Chapter 8 Stata replication code of Hellerstein (1998) | A concise guide to reproducible research using secondary data</title>
+  <meta name="description" content="Chapter 8 Stata replication code of Hellerstein (1998) | A concise guide to reproducible research using secondary data in health economics and management" />
   <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 2 Formulating a hypothesis | A concise guide to reproducible research using secondary data" />
+  <meta property="og:title" content="Chapter 8 Stata replication code of Hellerstein (1998) | A concise guide to reproducible research using secondary data" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="Chapter 2 Formulating a hypothesis | A concise guide to reproducible research using secondary data in health economics and management" />
+  <meta property="og:description" content="Chapter 8 Stata replication code of Hellerstein (1998) | A concise guide to reproducible research using secondary data in health economics and management" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 Formulating a hypothesis | A concise guide to reproducible research using secondary data" />
+  <meta name="twitter:title" content="Chapter 8 Stata replication code of Hellerstein (1998) | A concise guide to reproducible research using secondary data" />
   
-  <meta name="twitter:description" content="Chapter 2 Formulating a hypothesis | A concise guide to reproducible research using secondary data in health economics and management" />
+  <meta name="twitter:description" content="Chapter 8 Stata replication code of Hellerstein (1998) | A concise guide to reproducible research using secondary data in health economics and management" />
   
 
 <meta name="author" content="Katharina Blankart, Maryna Ivets, Eva Goetjes, Kai Miele" />
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="intro.html"/>
-<link rel="next" href="designstudy.html"/>
+<link rel="prev" href="replication-results-of-hellerstein-1998.html"/>
+<link rel="next" href="references-1.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -282,217 +282,480 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="hypothesis" class="section level1">
-<h1><span class="header-section-number">Chapter 2</span> Formulating a hypothesis</h1>
-<!--C:/Users/KFischer/sciebo/Date Literacy Project/06 Manuscript/bookdown/DataLiteracy/_book/DataLiteracy_files/figure-html-->
-<p><img src="images/idea4.png" width="100%" style="display: block; margin: auto;" /></p>
-<p><em>“There is no single best way to develop a research idea.”</em> <span class="citation">(Pischke <a href="#ref-pischke_how_2012" role="doc-biblioref">2012</a>)</span></p>
-<div id="how-do-you-develop-a-research-question-and-formulate-a-hypothesis" class="section level2">
-<h2><span class="header-section-number">2.1</span> How do you develop a research question and formulate a hypothesis?</h2>
-<p>You decide to undertake a scientific project. Where do you start? First, you need to find a research question that interests you and formulate a hypothesis. We will introduce some key terminology, steps you can take, and examples how to develop research questions. Note that .</p>
-<p><em>What if someone assigns a topic to me? For students attending undergraduate and graduate courses that often pick topics from a list, all of these steps are equally important and necessary. You still need to formulate a research question and a hypothesis. And it is important to clarify the relevance of your topic for yourself.</em></p>
-<p>When thinking about a research question, you need to identify a topic that is [based on [find source]]</p>
-<ul>
-<li><em>Relevant</em>, important in the world and interesting to you as a researcher: Does working on the topic excites you? You will spend many hours thinking about it and working on it. Therefore, it should be interesting and engaging enough for you to motivate your continued work on this topic.</li>
-<li><em>Specific</em>: not too broad and not too narrow</li>
-<li><em>Feasible</em> to research within a given timeframe: Is it possible to answer the research question based on your time budget, data and additional resources.</li>
-</ul>
-<p>How do you find a topic or develop a feasible research idea in the first place? Finding an idea is not difficult, the critical part is to find a <strong>good</strong> idea. How do you do that? There is no one specific way how one gets an idea, rather there is a myriad of ways how people come up with potential ideas (for example as stated by <span class="citation">(Varian <a href="#ref-varian_how_2016" role="doc-biblioref">2016</a>)</span>).</p>
-<p>You can find inspiration by</p>
-<ul>
-<li>Looking at insights from the world around you: your own life and experiences, observe the behavior of people around you</li>
-<li>Talking to people around you, experts, other students, family members</li>
-<li>Talking to individuals outside your field (non-economists)</li>
-<li>Talking to professionals working in the area you are interested in (you may use social media and professional platforms like LinkedIN or Twitter to make contact)</li>
-<li>Reading journal articles from other non-economic social sciences and the medical literature</li>
-<li>Reading economic and non-economic newspapers and magazine articles (e.g., Süddeutsche, Frankfurter Allgemeine, Tagesspiegel, The Economist, the Wall Street Journal, The New York Times, The Guardian), watching TV programs
-<ul>
-<li>What are the issues being discussed?</li>
-<li>How do these issues affect people’s lives?</li>
-</ul></li>
-</ul>
-<p>In addition you could</p>
-<ul>
-<li>Go to virtual and in-person seminars, for example, the <a href="https://www.goek.wiwi.uni-due.de/forschung/essen-health-economics-seminar/winter-2020-21/">Essen Health Economics Seminar</a></li>
-<li>Look at abstracts of scientific articles and working papers</li>
-<li>Look at the literature in a specific field you are interested in, for example, screening complete issues of journals or editorials about certain research advancements. By reading this literature you might come up with the idea on how to extend and refine previous research.</li>
-</ul>
-<p>Once you identified a research question that is of interest to you, you need to define a hypothesis.</p>
-</div>
-<div id="what-is-a-hypothesis" class="section level2">
-<h2><span class="header-section-number">2.2</span> What is a hypothesis?</h2>
-<p>A hypothesis is a statement that introduces your research question and suggests the results you might find. It is an educated guess. You start by posing an economic question and formulate a hypothesis about this question. Then you test it with your data and empirical analysis and either accept or reject the hypothesis. It constitutes the main basis of your scientific investigation and you should be careful when creating it.</p>
-<div id="develop-a-hypothesis" class="section level3">
-<h3><span class="header-section-number">2.2.1</span> Develop a hypothesis</h3>
-<p>Before you formulate your hypothesis, read up on the topic of interest. This should provide you with sufficient information to narrow down your research question. Once you find your question you need to develop a hypothesis, which contains a statement of your expectations regarding your research question’s results. You propose to prove your hypothesis with your research by testing the relationship between two variables of interest. Thus, a hypothesis should be testable with the data at hand. There are two types of hypotheses: alternative or null. Null states that there is no effect. Alternative states that there is an effect.</p>
-<p>There is an alternative view on this that suggests one should not look at the literature too early on in the idea-generating process to not be influenced and shaped by someone else’s ideas (<span class="citation">(Varian <a href="#ref-varian_how_2016" role="doc-biblioref">2016</a>)</span>.). According to this view you can spend some time (i.e. a few weeks) trying to develop your own original idea. Even if you end up with an idea that has already been pursued by someone else, this will still provide you with good practice in developing publishable ideas. After you have developed an idea and made sure that it was not yet investigated in the literature, you can start conducting a systematic literature review. By doing this, you can find some other interesting insights from the work of others that you can synthesize in your own work to produce something novel and original.</p>
-</div>
-<div id="identify-relevant-literature" class="section level3">
-<h3><span class="header-section-number">2.2.2</span> Identify relevant literature</h3>
-<p>For your research project you will need to identify and collect previous relevant literature. It should involve a thorough search of the keywords in relevant databases and journals. Place emphasis on articles from high-ranking journals with significant numbers of citations. This will give you an indication of the most influential and important work in the field. Once you identify and collect the relevant literature for your topic, you will need to <strong>critically</strong> synthesize it in your literature review.</p>
-<p>When you perform your literature review, consider theories that may inform your research question. For example, when studying physician behavior you may consider principal-agency theory.</p>
-</div>
-<div id="research-question-or-literature-review-the-chicken-or-the-egg-problem" class="section level3">
-<h3><span class="header-section-number">2.2.3</span> Research question or literature review: the chicken or the egg problem?</h3>
-<p>Whether you start reading the literature first or by developing an idea may depend on your level (graduate student, early career researcher) and other goals. However, thinking freely about what you like to investigate first may help to critically develop a feasible and interesting research question.</p>
-<p>We highlight an example how to start with investigating the real world and subsequently posing a research question <span class="citation">(“How to Write a Strong Hypothesis Steps and Examples” <a href="#ref-noauthor_how_2019" role="doc-biblioref">2019</a>; “Developing Strong Research Questions Criteria and Examples” <a href="#ref-noauthor_developing_2019" role="doc-biblioref">2019</a>; Schilbach <a href="#ref-schilbach_5_2019" role="doc-biblioref">2019</a>)</span>. For example, based on your observation you notice that people spend extensive amount of time looking at their smartphones. Maybe even you yourself engage in the same behavior. In addition, you read a BBC News article <a href="https://www.bbc.com/news/technology-55826238">Social media damages teenagers’ mental health, report says</a>.</p>
-<div class="figure" style="text-align: center">
-<img src="images/Social_media.png" alt="Social media and mental health" width="100%" />
-<p class="caption">
-(#fig:social_media)Social media and mental health
-</p>
-</div>
-<p>Source: <a href="https://www.bbc.com/news/technology-55826238">BBC</a></p>
-<p>You decide to translate this article and your observations into a <strong>research question</strong>: <em>How does social media use affect mental health?</em> Before you formulate your hypothesis, read up on the topic of interest. Read economic, medical and other social science literature on the topic. There is likely to be a vast amount of literature from non-economic fields that are doing research on your topic of interest, for example, psychology or neuroscience. Familiarize yourself with it and master it. Do not get distracted by different scientific methodologies and techniques that might seem not up-to-par to the economic studies (small sample sizes, endogeneity, uncovering association rather than causation, etc.), but rather focus on suggestions of potential mechanisms.</p>
-<p>A hypothesis is then your research question distilled into a one sentence statement, which presents your expectations regarding the results. You propose to prove your hypothesis by testing the relationship between two variables of interest with the data at hand. There are two types of hypotheses: alternative or null. The <strong>null</strong> hypothesis states that there is no effect. The <strong>alternative</strong> hypothesis states that there is an effect.</p>
-<p>A hypothesis related to the above-stated research question could be: <em>The increased use of social media among teenagers leads to (is associated with) worse mental health outcomes, i.e. increased incidence of depression, eating disorders, worse well-being and lower self-esteem.</em> It suggests a direction of a relationship that you expect to find that is guided by your observations and existing evidence. It is testable with scientific research methods by using statistical analysis of the relevant data.</p>
-<p>Your hypothesis suggests a relationship between two variables: social media use (your independent variable <span class="math inline">\(X\)</span>) and mental health (dependent variable <span class="math inline">\(Y\)</span>). It could be framed in terms of correlation (is associated with) or causation (leads to). This should be reflected in the choice of scientific investigation you decide to undertake.</p>
-<p>The <strong>null</strong> hypothesis is: <em>There is no relationship between social media use among teenagers and their mental health</em>.</p>
-</div>
-</div>
-<div id="resources-box-1" class="section level2">
-<h2><span class="header-section-number">2.3</span> Resources box</h2>
-<div id="how-to-develop-strong-research-questions" class="section level3">
-<h3><span class="header-section-number">2.3.1</span> How to develop strong research questions</h3>
-<ul>
-<li><a href="https://www.economicsnetwork.ac.uk/handbook/ugresearch/31">The form of the research process</a></li>
-<li>Varian, H. R. (2016). <a href="https://journals.sagepub.com/doi/pdf/10.1177/0569434515627089">How to build an economic model in your spare time.</a> The American Economist, 61(1), 81-90.</li>
-</ul>
-</div>
-<div id="identify-relevant-literature-from-major-general-interest-and-field-literature" class="section level3">
-<h3><span class="header-section-number">2.3.2</span> Identify relevant literature from major general interest and field literature</h3>
-<p>To identify the relevant literature you can</p>
-<ul>
-<li>use academic search engines such as Google Scholar, Web of Science, EconLit, PubMed. <!--[INCLUDE LINKS]--></li>
-<li>search working paper series such as the <a href="www.nber.org">National Bureau of Economic Research</a>, <a href="http://netec.wustl.edu/NetEc.html">NetEc</a> or <a href="www.iza.org">IZA</a></li>
-<li>search more general resource sites such as <a href="http://rfe.org">Resources for Economists</a></li>
-<li>go to the library/use library database</li>
-</ul>
-</div>
-<div id="assess-the-quality-of-a-journal-article" class="section level3">
-<h3><span class="header-section-number">2.3.3</span> Assess the quality of a journal article</h3>
-<p>Several rankings may help to assess the quality of research you consider</p>
-<ul>
-<li>Journals of general interest and by field in economics and management
-- For German-speaking countries, consider the <a href="https://www.forschungsmonitoring.org/">VWL / BWL Handelsblatt Ranking</a> for economics and management
-- The German Association of Management Scholars provides an expert-based ranking <a href="https://vhbonline.org/vhb4you/vhb-jourqual/vhb-jourqual-3/tabellen-zum-download">VHB JourQual 3.0, Teilranking Management im Gesundheitswesen</a>
-- Web of Science Impact Factors
-- Scimago</li>
-<li>Health Economics, Health Services and Health Care Managment Research: <a href="https://www.mthooddiabeteschallenge.com/journal-list">Health Economics Journals List</a></li>
-<li>Be aware that like in any other domain there are <a href="https://predatoryjournals.com/">predatory publishing practices</a>.</li>
-</ul>
-<p>Use tools to investigate how a journal article is connected to other works</p>
-<ul>
-<li><a href="https://citationgecko.azurewebsites.net/">Citationgecko</a></li>
-<li><a href="https://www.connectedpapers.com">Connected papers</a></li>
-<li><a href="https://scite.ai/">scite_</a> – a tool to get a first impression whether a study is disputed or academic consensus</li>
-</ul>
-</div>
-<div id="organize-your-literature" class="section level3">
-<h3><span class="header-section-number">2.3.4</span> Organize your literature</h3>
-<ul>
-<li><a href="https://www.zotero.org/">Zotero</a> (free of charge)</li>
-<li><a href="https://www.mendeley.com/guides/desktop">Mendeley</a> (free of charge)</li>
-<li><a href="https://endnote.com/">EndNote</a> (potentially free of charge via your university)</li>
-<li><a href="https://www.citavi.com/de">Citavi</a> (potentially free of charge via your university)</li>
-<li>BibTEX if you work with TEX</li>
-<li>Excel spread sheet</li>
-</ul>
-</div>
-</div>
-<div id="checklist-to-get-started-with-formulating-your-hypothesis" class="section level2">
-<h2><span class="header-section-number">2.4</span> Checklist to get started with formulating your hypothesis</h2>
-<ul>
-<li>Find an interesting and relevant research topic, if not assigned</li>
-<li>Try to suck up all information you can easily obtain from various sources within and outside academic literature</li>
-<li>Formulate one compelling research question</li>
-<li>Find the best available empirical and theoretical evidence that is related to your research question</li>
-<li>Formulate a hypothesis</li>
-<li>Check whether data are available for analysis</li>
-<li>Challenge your idea with your fellows or senior researchers</li>
-</ul>
-</div>
-<div id="example-hellerstein-1998" class="section level2">
-<h2><span class="header-section-number">2.5</span> Example: Hellerstein (1998)</h2>
-<p>As an illustration of the research process of formulating a hypothesis, designing a study, running a study, collecting and analyzing the data and, finally, reporting the study, we provide an example by replicating Judith K. Hellerstein’s paper “The Importance of the Physician in the Generic versus Trade-Name Prescription Decision” that was edited in 1998 in the The RAND Journal of Economics.</p>
-<p>Hellerstein’s 1998 paper has impacted discussion about behavioral factors of physician decisions and pharmaceutical markets over two decades. The study received 446 citations on <a href="https://scholar.google.de/scholar?cites=9301208853808127317&amp;as_sdt=2005&amp;sciodt=0,5&amp;hl=de">Google Scholar since 1998</a> by 22/02/2022, including recent mentions in top field journals such as <a href="https://www.sciencedirect.com/science/article/abs/pii/S0047272718301968">Journal of Public Economics (2021)</a>, <a href="https://www.sciencedirect.com/science/article/pii/S0167629617307348">Journal of Health Economics (2019)</a>, and <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/hec.3774">Health Economics (2019)</a>.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:hellconnect"></span>
-<img src="images/Hellerstein-connected-papers.jpg" alt="Connected graph of Hellerstein (1998), February 2022" width="100%" />
-<p class="caption">
-Figure 2.1: Connected graph of Hellerstein (1998), February 2022
-</p>
-</div>
-<p>Figure <a href="hypothesis.html#fig:hellconnect">2.1</a> shows a connected graph of prior and derivate works related to the study.</p>
-<p>The work has impacted the literature researching the role of physician behavior and its influence on access, adoption and diffusion of health services, moral hazard and incentives in prescription and treatment decisions and the influence of different payment schemes, and a vast body of literature studying the pharmaceutical market.</p>
-<p>The research that has been influenced by Hellerstein includes evidence on:</p>
-<ul>
-<li>generic drug entries and market efficiency</li>
-<li>the effectiveness of pharmaceutical promotion</li>
-<li>the effectiveness of price regulations</li>
-<li>the role of patents and dynamics of market segmentation</li>
-</ul>
-<p>At the end of each chapter, we demonstrate insights into this study that we replicated.</p>
-<div id="context-of-the-study---escalating-health-expenditures" class="section level3">
-<h3><span class="header-section-number">2.5.1</span> <strong>Context of the study - escalating health expenditures</strong></h3>
-<p>In the United States, the total prescription drug expenditure in 2020 marked about 358.7 billion US Dollars <span class="citation">(Statista <a href="#ref-statista_prescription_nodate" role="doc-biblioref">n.d.</a>)</span>. The prescription of generic drugs in comparison to more expensive brand name versions is an option in reducing the total health care expenditure. Generic drugs are bioequivalent in the active ingredients and can serve as a channel to contain prescription expenditure <span class="citation">(Kesselheim <a href="#ref-kesselheim_clinical_2008" role="doc-biblioref">2008</a>)</span> as generic drugs are between 20 and 90% cheaper than their trade-name alternatives <span class="citation">(Dunne et al. <a href="#ref-dunne_review_2013" role="doc-biblioref">2013</a>)</span>.</p>
-</div>
-<div id="research-question---how-does-a-patients-insurance-status-influence-the-physicians-choice-between-generic-compared-to-brand-name-drugs" class="section level3">
-<h3><span class="header-section-number">2.5.2</span> <strong>Research question - How does a patient’s insurance status influence the physician’s choice between generic compared to brand-name drugs?</strong></h3>
-<p>Physicians are faced with a multitude of medication options, including the choice between generic and trade-name drugs. Physicians ideally act as agents for their patients to identify the best available treatment option based on their needs. Choosing the best treatment entails cost of coordination and cognition. The prescription of generic drugs may serve as an example to what extent physicians customize treatments according to patients’ needs with regards to cost. From an economic point of view we may expect that once a generic drug is available, a perfectly rational agent (i.e. physician) would prescribe a generic drug instead of the trade-name version if therapeutically identical <span class="citation">(Dranove <a href="#ref-dranove_medicaid_1989" role="doc-biblioref">1989</a>)</span>. This leads to the following research question: <em>“Do physicians vary their prescription decisions on a patient-by-patient basis or do they systematically prescribe the same version, trade-name or generic, to all patients?”</em>.</p>
-<p>The 1998 Hellerstein’s study examines two hypotheses:</p>
+<div id="stata-replication-code-of-hellerstein-1998" class="section level1">
+<h1><span class="header-section-number">Chapter 8</span> Stata replication code of Hellerstein (1998)</h1>
+<p>The following Stata program replicates the empirical analyses of Hellerstein, Judith K. 1998.
+“The Importance of the Physician in the Generic versus Trade-Name Prescription Decision,” The RAND Journal of Economics 29(1):108–36, doi: 10.2307/2555818.</p>
+<p>This file contains program code for data preparation, replication of descriptive tables and figures, and replication of the empirical analyses and tables.
+The structure of this file is as follows:</p>
 <ol style="list-style-type: decimal">
-<li>The physician prescribing choice influences the selection of a generic over a brand-name drug</li>
-<li>The patient’s insurance status influences the physician’s choice between generic and brand-name drugs.</li>
+<li>Preparing the NAMCS and NAMCSd data (Section <a href="run-study.html#run-study">4</a>)</li>
+<li>Descriptive statistics using NAMCS and NAMCSd data (Section <a href="analyzing.html#analyzing">5</a>)</li>
+<li>Empirical analyses using NAMCSd data (Section <a href="analyzing.html#analyzing">5</a> and Section <a href="report-study.html#report-study">6</a>)</li>
 </ol>
-<p>For the purpose of this example and in the replication exercise we focus on the second aspect.</p>
-</div>
-<div id="hypothesis-1" class="section level3">
-<h3><span class="header-section-number">2.5.3</span> <strong>Hypothesis</strong></h3>
-<p>The paper formulates the following hypothesis:</p>
-<p><strong>Physicians are more likely to prescribe generics to patients who do not have insurance coverage for prescription pharmaceuticals (moral hazard in insurance)</strong></p>
-<p>Hellerstein (1998) discusses that, based on insurance status, some patients may demand certain care more than others. If, for example, the prescription drug is reimbursed by the patient’s health insurance, this may cause overconsumption. This behavior can potentially differ by the patient’s insurance scheme. A patient that has no insurance and, thus, does not get any reimbursement for prescription drugs, might have a higher incentive to demand cheaper generic drugs <span class="citation">(Danzon and Furukawa <a href="#ref-danzon_cross-national_2011" role="doc-biblioref">2011</a>)</span> than a patient with insurance that covers prescription drugs, either generic or trade-name. Given that the United States have different insurance schemes with varying prescription drug coverage, it is of interest to investigate the role of a patient’s insurance status in the physician’s choice between generic compared to brand-name drugs.</p>
-<p>Hellerstein (1998) considers a patient’s insurance status as a matter of dividing the study population in groups for which the choice between generic and brand-name drugs differs. She suggests that <em>There is a relationship between the prescription of a generic drug and insurance status of a patient.</em> <span class="citation">(Hellerstein <a href="#ref-hellerstein_importance_1998" role="doc-biblioref">1998</a>)</span>.</p>
-<p>Providing answers to a research question requires formulating and testing a hypothesis. Based on logic, theory or previous research, a hypothesis proposes an expected relationship within the given data. According to her research question, Hellerstein hypothesizes that: <em>Physicians are more likely to prescribe generics to patients who do not have insurance coverage for prescription pharmaceuticals.</em></p>
-<p>Specifically, she writes <em>“if there is moral hazard in insurance when it comes to physician prescription behavior, there will be differences in the propensity of physicians to prescribe low-cost generic drugs, and these differences will be (partially) a function of the insurance held by the patient. In particular, if moral hazard exists, patients with extensive insurance coverage for prescription drugs (like those on Medicaid in 1989) should receive prescriptions written for generic drugs less frequently than patients with no prescription drug coverage.”</em> <span class="citation">(Hellerstein <a href="#ref-hellerstein_importance_1998" role="doc-biblioref">1998</a>, 113)</span></p>
-<p>Based on Hellerstein’s considerations, we expect the effect of the insurance status on whether a patient receives a generic to be different from zero. To obtain a testable null hypothesis, we reformulate this relationship so that we reject the hypothesis if our expectations are correct. This means, if we expect to see an effect of insurance on prescriptions of generics, our null hypothesis is that insurance status has no effect on the outcome (prescription of generic drugs). No moral hazard arises from having obtained insurance.</p>
+<div id="A1" class="section level2">
+<h2><span class="header-section-number">8.1</span> Preparing the analysis data set</h2>
+<pre class="stata"><code>* Pathing and setup
+log close _all
+snapshot erase _all
+clear all
 
+*storage of NAMCsd raw data
+global r                `&quot;  &quot;C:\Users\my name\my project\raw data\&quot; &quot;&#39;
+
+*analysis data
+global d                `&quot;  &quot;C:\Users\my name\my project\data\&quot; &quot;&#39;
+
+
+*results
+global tab          `&quot;  &quot;C:\Users\my name\my project\tables\&quot; &quot;&#39;
+global fig      `&quot;  &quot;C:\Users\my name\my project\figures\&quot; &quot;&#39;
+
+
+*Data were downloaded from https://ftp.cdc.gov/pub/Health_Statistics/NCHS/namcs_public_use_files/*
+*1991 datasets and documentation: namcs91.exe; namcs91d.exe; namcs91doc.pdf*
+
+*   Preparing NAMCS91:
+******************************
+use &quot;$r\namcs91_raw.dta&quot; , clear
+
+* 1) Set up relevant dummies
+gen female = sex == 1
+gen nonwhite = race != 1
+gen hispanic = ethnicity == 1
+gen northeast = geo_reg == 1
+gen midwest = geo_reg == 2
+gen south = geo_reg == 3
+gen west = geo_reg == 4
+//Hellerstein defines specialists as 
+//physicians who are not in general practice, family practice, or basic pediatrics.
+gen specialist = (phys_special != &quot;GP&quot; &amp; phys_special != &quot;FP&quot; &amp; phys_special != &quot;PD&quot;) 
+//Medicare patients 
+gen temp = selfpay + medicaid + other_gov_ins + private_ins + hmo_pre_paid
+replace medicare = 0 if temp != 0  
+
+
+* 2) Drop observations with unknown payment
+gen temp1 = selfpay + medicaid  + medicare + other_gov_ins + private_ins + hmo_pre_paid
+keep if temp1 == 1
+
+compress
+save &quot;$d\namcs91.dta&quot;, replace
+
+
+
+
+*   Preparing NAMCS91d:
+****************************
+use &quot;$r\namcs91d_raw.dta&quot; , clear
+
+
+* 1) Removing observations with missing values:
+***********************************************
+replace generic_id = .b if generic_id == 50000
+replace generic_status = .b if generic_status == 3
+replace prescription_status = .b if prescription_status == 3
+replace composition_status = .b if composition_status == 3 | composition_status == 6
+
+drop if missing(generic_id)|missing(generic_status)|///
+  missing(prescription_status)|missing(composition_status)
+
+ 
+* 2) Creating required variables:
+**********************************
+** 2.1) Define 8 largest drug classes, see Table 3 and page 79 in Hellerstein&#39;s paper
+gen major_drug_class = ///
+    drug_class == 3 | drug_class == 5 | drug_class == 6 | drug_class == 10 | ///
+    drug_class == 12 | drug_class == 15 | drug_class == 17 | drug_class ==  19
+
+
+** 2.2) Creating some dummies
+gen female = sex == 1
+gen nonwhite = race != 1
+gen hispanic = ethnicity == 1
+gen northeast = geo_reg == 1
+gen midwest = geo_reg == 2
+gen south = geo_reg == 3
+gen west = geo_reg == 4
+
+gen specialist = (phys_special != &quot;GP&quot; &amp; phys_special != &quot;FP&quot; &amp; phys_special != &quot;PD&quot;) 
+gen temp = selfpay + medicaid + private_ins + hmo_pre_paid
+replace medicare = 0 if temp != 0
+
+replace generic_status = 0 if generic_status == 2
+replace prescription_status = 0 if prescription_status == 2
+
+tab drug_class, gen (drug_class_)
+label variable drug_class_3 &quot;Antimicrobial&quot;
+label variable drug_class_5 &quot;Cardiovascular-renals&quot;
+label variable drug_class_6 &quot;Central Nervous System&quot;
+label variable drug_class_10 &quot;Hormones&quot;
+label variable drug_class_12 &quot;Skin/Mucous Membranes&quot;
+label variable drug_class_15 &quot;Ophthalmics&quot;
+label variable drug_class_17 &quot;Pain Relief&quot;
+label variable drug_class_19 &quot;Respiratory Test&quot;
+
+
+** 2.3) Create multisource indicator
+*** 2.3.1) Create id for drugs with multiple ingrediants
+replace ingredients = generic_id if ingredients == .
+
+*** 2.3.2) Check whether there are both generic and trade-name drugs for each ingredients
+bys ingredients: egen counter = mean(generic_status) 
+bys ingredients: gen multisource = (counter &gt;0 &amp; counter &lt;1)
+drop counter
+
+
+** 2.4) Set up physician averages
+foreach x in age female nonwhite hispanic medicare medicaid hmo_pre_paid private_ins{
+    cap: drop mean_`x&#39;
+    bys physician_id: egen mean_`x&#39; = mean(`x&#39;)
+}
+
+
+* 3) Keeping relevant variables
+****************************
+//Dropping conditions
+keep if prescription_status == 1 &amp; multisource == 1 &amp; major_drug_class == 1 &amp; order_of_drug == 1  
+* (selfpay == 1 | medicaid == 1 | private_ins == 1 | hmo_pre_paid == 1 | medicare == 1)
+gen temp1 = selfpay + medicaid + medicare + private_ins + hmo_pre_paid
+keep if temp1 == 1
+
+keep ///
+drug_id drug_name generic_id generic_name generic_status drug_class drug_class_* ingredients ///
+age female nonwhite hispanic west northeast midwest south geo_reg specialist mean_* /// 
+selfpay medicare medicaid private_ins hmo_pre_paid   ///
+geo_reg phys_special phys_type physician_id patient_id
+
+compress
+save &quot;$d\namcs91d.dta&quot;, replace</code></pre>
+<pre><code>end of do-file</code></pre>
 </div>
+<div id="A2" class="section level2">
+<h2><span class="header-section-number">8.2</span> Descriptive statistics</h2>
+<pre class="stata"><code>
+*   Table 1:
+****************
+
+/* Comment:
+Information was obtained from the footnote of Table 1, p. 115 of the original study.
+The text stats that only uses data without missing values.
+This applies to all tables and figures and was done in the initial data preparation.
+
+The footnote defines the dummy variable &quot;specialist&quot;:
+whether a physician is not a general practice, family practice, or basic pediatrics.
+The dummy medicare takes the value of 1 if medicare was the only source of payment.
+
+Observations of patient visits in which the patient was not charged were excluded.
+*/
+  
+  
+use &quot;$d\namcs91.dta&quot;, clear
+
+qui eststo table1: estpost summarize age female nonwhite hispanic selfpay medicare medicaid ///
+private_ins other_gov_ins  hmo_pre_paid specialist northeast midwest south west
+
+esttab table1 using &quot;$tab\Table_1.rtf&quot;, replace  ///
+title(&quot;Summary Statistics for Overall NAMCS Patient Sample&quot;) ///
+cells (&quot;mean(fmt(%12.2f)) sd(fmt(%12.2f))&quot;) nonumber noobs ///
+coeflabels(age &quot;Age&quot; female &quot;Female&quot; nonwhite &quot;Nonwhite&quot; hispanic &quot;Hispanic&quot; ///
+selfpay &quot;Self-pay&quot; medicare &quot;Medicare&quot; medicaid &quot;Medicaid&quot; private_ins &quot;Private/commercial&quot; ///
+other_gov_ins &quot;Other government insurance&quot; hmo_pre_paid &quot;HMO/prepaid plan&quot; ///
+  specialist &quot;Specialist&quot; ///
+northeast &quot;Northeast&quot; midwest &quot;Midwest&quot; south &quot;South&quot; west &quot;West&quot; ) ///
+addnote(&quot;Notes: Sample size is 32,407. For further notes see table 1 notes in Hellerstein (1998); ///
+        Sample size differs as data from different years is used&quot; &quot;Data source: NAMSC91&quot;)
+
+
+
+
+*   Table 2:
+****************
+
+/* Comment:
+Variables and data preparing processes equivalent to Table 1.
+
+Create a matrix resembling the table and store each value in its respective cell.
+*/
+use &quot;$d\namcs91d.dta&quot;, clear
+
+
+* 1) Saving all values in locals:
+**********************************
+* For all rows besides the last one
+foreach x in age female nonwhite hispanic selfpay medicare medicaid  private_ins hmo_pre_paid specialist northeast midwest south west {
+    
+    * Computing mean and sd
+    qui: sum `x&#39;
+    local `x&#39;_m = r(mean)
+    local `x&#39;_std = r(sd)
+    
+    * Computing the share of generics for all rows exept for the row age
+    if &quot;`x&#39;&quot; != &quot;age&quot;{
+        qui: sum  generic_status if `x&#39; == 1
+        local `x&#39;_share = r(mean)
+    }
+    }
+    
+* Last row (Share of generics in the full sample)
+qui: sum generic_status
+local fullsample_share = r(mean)
+    
+
+* 2) Filling a matrix with the locals:
+***************************************
+mat input table2 = ( /// 
+`age_m&#39;, `age_std&#39; , . \ ///
+`female_m&#39;, `female_std&#39;, `female_share&#39; \ ///
+`nonwhite_m&#39;, `nonwhite_std&#39;, `nonwhite_share&#39; \ ///
+`hispanic_m&#39;, `hispanic_std&#39;, `hispanic_share&#39; \ ///
+`selfpay_m&#39;, `selfpay_std&#39;, `selfpay_share&#39; \ ///
+`medicare_m&#39;, `medicare_std&#39;, `medicare_share&#39; \ ///
+`medicaid_m&#39;, `medicaid_std&#39;, `medicaid_share&#39; \ ///
+`private_ins_m&#39;, `private_ins_std&#39;, `private_ins_share&#39; \ ///
+`hmo_pre_paid_m&#39;, `hmo_pre_paid_std&#39;, `hmo_pre_paid_share&#39; \ ///
+`specialist_m&#39;, `specialist_std&#39;, `specialist_share&#39; \ ///
+`northeast_m&#39;, `northeast_std&#39;, `northeast_share&#39; \ ///
+`midwest_m&#39;, `midwest_std&#39;, `midwest_share&#39; \ ///
+`south_m&#39;, `south_std&#39;, `south_share&#39; \ ///
+`west_m&#39;, `west_std&#39;, `west_share&#39; \ ///
+. , . , `fullsample_share&#39; ///
+ )
+
+ 
+* 3) Labelling and exporting:
+**************************************
+matrix rownames table2 = ///
+&quot;Age&quot; &quot;Female&quot; &quot;Nonwhite&quot; &quot;Hispanic&quot; &quot;Self-Pay&quot; &quot;Medicare&quot; &quot;Medicaid&quot; &quot;Private/Commercial&quot; ///
+&quot;HMO/prepaid plan&quot; ///
+&quot;Specialist&quot; &quot;Northeast&quot; &quot;Midwest&quot; &quot;South&quot; &quot;West&quot; &quot;Full sample&quot;
+
+matrix colnames table2 = &quot;Mean&quot; &quot;Standard Deviation&quot; &quot;Proportion Generic&quot;
+
+putexcel set &quot;$tab\Table_2.xlsx&quot;, replace
+putexcel A1 = matrix(table2 ), names
+
+
+*   Table 3:
+****************
+use &quot;$d\namcs91d.dta&quot;, clear
+return clear
+ereturn clear
+
+* Turn decimal numbers into percentage
+gen All_drugs = generic_status * 100
+
+* generic share for all drugs
+eststo t10: quietly estpost tabstat All_drugs, ///
+statistics(mean N) columns(statistics) listwise
+
+* generic share by drug class
+eststo t20: quietly estpost tabstat All_drugs, by(drug_class) ///
+statistics(mean N) columns(statistics) listwise notot
+
+esttab t10 t20 using &quot;$tab\Table_3.rtf&quot;, replace ///
+cells(&quot;count(fmt(%12.0f)) mean(fmt(%12.2f))&quot;) ///
+title(&quot;Table 3 - Frequency of Generic Prescription by Drug Class&quot;) ///
+collabels(&quot;Observations&quot; &quot;% Generics&quot;) noobs nonumber gaps refcat(3 &quot;By drug class&quot; , nolabel) ///
+coeflabels(generic &quot;All drugs&quot; 3 &quot;Antimicrobials&quot; 5 &quot;Cardiovascular-renals&quot; ///
+ 6 &quot;Central Nervous System&quot; 10 &quot;Hormones/Hormonal mechanisms&quot; ///
+ 12 &quot;Skin/Mucous membrane&quot; 15 &quot;Ophthalmics&quot; 17 &quot;Pain relief&quot; 19 &quot;Resperatory tract&quot;) 
+
+
+
+
+*   Figure 1:
+*****************
+/* Comment:
+Visualizations of kernel densities vary depending on the specifications. 
+Two parameters define the density function: Bandwidth and whether/how to round the data.
+Hellerstein does not provide information about the density function.
+We  visually rule out that she rounds to the first decimal place.
+There are fluctuations between the first decimal places.
+Rounding to the third or higher decimal places produces much noisier curves.
+Hence, we assume that she rounded to the second decimal place.
+For the bandwidth and density function, there are no obvious clues.
+That the reproduction relies on visual approximation of the original figure.
+*/
+
+
+* 1) Estimate the mean share of prescribed generics per physician
+bys physician_id: egen temp2 = mean(generic_status)
+gen generic_share = round(temp2, .01) 
+
+
+* 2) Collapse the data so that one observation per physician remains
+duplicates drop physician_id, force
+
+
+* 3) Recreate Figure 1
+set scheme  s1manual
+twoway kdensity generic_share, range(0 1) bw( 0.02) kernel(bi)  ///
+xtitle(&quot;Physician generic prescription rates&quot;) ytitle(&quot;Percent of physicians&quot;) ///
+xlabel(0 (0.1) 1) lc(black)
+
+graph export &quot;$fig\Figure_1.png&quot;, replace
+
+
+
+*   Figure 2:
+*****************
+use &quot;$d\namcs91d.dta&quot;, clear
+
+/* Comment:
+The figure uses observations of drugs with &gt; 6 prescriptions by a single physician. 
+158 unique physicians remain in Hellerstein (1998).
+We are left with 122 physicians (see p. 116 first paragraph).
+*/
+
+
+* 1) Apply dropping conditions
+bys physician_id ingredient : gen temp = _N
+drop if temp &lt; 6
+* Check the number of remaining physicians. 158 in Hellerstein
+qui: tab physician_id
+di r(r)
+
+
+* 2) Create the categories for the bars
+** 2.1) Avg generic prescription rate for each per physician
+bys physician_id ingredients: egen temp2 = mean(generic_status) 
+
+ * 2.2) Use the share to set up the groups
+gen counter = .
+replace counter = 0 if temp2 == 0 /* Never generic */
+replace counter = 1 if temp2 &gt; 0 &amp; temp2 &lt; 1 /* Sometimes */
+replace counter = 2 if temp2 == 1 /* Always */
+
+label define l 0 &quot;Only trade names&quot; 1 &quot;Both versions&quot; 2 &quot;Only generics&quot;
+label values counter l
+
+
+* 3) Collapse the data so that one observation per physician remains
+duplicates drop physician_id, force
+
+
+* 4) Recreating the figure
+set scheme  s1manual
+graph bar (count), over(counter) ///
+ytitle(&quot;&quot;) intensity(60) lintensity(100) bar(1, color(&quot;black&quot;) fcolor(&quot;gs5&quot;)) ylab(, nogrid)
+
+graph export &quot;$fig\Figure_2.png&quot;, replace</code></pre>
+<pre><code>invalid &#39;C&#39; 
+r(198);
+
+end of do-file
+r(198);</code></pre>
 </div>
-</div>
-<h3>References</h3>
-<div id="refs" class="references">
-<div id="ref-danzon_cross-national_2011">
-<p>Danzon, Patricia M., and Michael F. Furukawa. 2011. “Cross-National Evidence on Generic Pharmaceuticals: Pharmacy Vs. Physician-Driven Markets.” <em>NBER Working Paper 17226</em>, July, http://www.nber.org/papers/w17226. <a href="http://www.nber.org/papers/w17226">http://www.nber.org/papers/w17226</a>.</p>
-</div>
-<div id="ref-noauthor_developing_2019">
-<p>“Developing Strong Research Questions Criteria and Examples.” 2019. <em>Scribbr</em>. <a href="https://www.scribbr.com/research-process/research-questions/">https://www.scribbr.com/research-process/research-questions/</a>.</p>
-</div>
-<div id="ref-dranove_medicaid_1989">
-<p>Dranove, David. 1989. “Medicaid Drug Formulary Restrictions.” <em>The Journal of Law and Economics</em> 32 (1): 143–62. <a href="https://doi.org/10.1086/467172">https://doi.org/10.1086/467172</a>.</p>
-</div>
-<div id="ref-dunne_review_2013">
-<p>Dunne, Suzanne, Bill Shannon, Colum Dunne, and Walter Cullen. 2013. “A Review of the Differences and Similarities Between Generic Drugs and Their Originator Counterparts, Including Economic Benefits Associated with Usage of Generic Medicines, Using Ireland as a Case Study.” <em>BMC Pharmacology &amp; Toxicology</em> 14 (January): 1. <a href="https://doi.org/10.1186/2050-6511-14-1">https://doi.org/10.1186/2050-6511-14-1</a>.</p>
-</div>
-<div id="ref-hellerstein_importance_1998">
-<p>Hellerstein, Judith K. 1998. “The Importance of the Physician in the Generic Versus Trade-Name Prescription Decision.” <em>The RAND Journal of Economics</em> 29 (1): 108–36. <a href="https://doi.org/10.2307/2555818">https://doi.org/10.2307/2555818</a>.</p>
-</div>
-<div id="ref-noauthor_how_2019">
-<p>“How to Write a Strong Hypothesis Steps and Examples.” 2019. <em>Scribbr</em>. <a href="https://www.scribbr.com/research-process/hypotheses/">https://www.scribbr.com/research-process/hypotheses/</a>.</p>
-</div>
-<div id="ref-kesselheim_clinical_2008">
-<p>Kesselheim, Aaron S. 2008. “Clinical Equivalence of Generic and Brand-Name Drugs Used in Cardiovascular Disease: A Systematic Review and Meta-Analysis.” <em>JAMA</em> 300 (21): 2514. <a href="https://doi.org/10.1001/jama.2008.758">https://doi.org/10.1001/jama.2008.758</a>.</p>
-</div>
-<div id="ref-pischke_how_2012">
-<p>Pischke, Steve. 2012. “How to Get Started on Research in Economics?” <a href="http://econ.lse.ac.uk/staff/spischke/phds/get_started.pdf">http://econ.lse.ac.uk/staff/spischke/phds/get_started.pdf</a>.</p>
-</div>
-<div id="ref-schilbach_5_2019">
-<p>Schilbach, Frank. 2019. “5 Steps Toward a Paper.” MIT 14.192 guest lecture. <a href="https://www.dropbox.com/s/q7wjaidl5w91srt/Guest%20lecture%20FS.pdf?dl=0">https://www.dropbox.com/s/q7wjaidl5w91srt/Guest%20lecture%20FS.pdf?dl=0</a>.</p>
-</div>
-<div id="ref-statista_prescription_nodate">
-<p>Statista. n.d. “Prescription Drug Spending in U.S. 1960-2020.” <em>Statista</em>. Accessed March 1, 2022. <a href="https://www.statista.com/statistics/184914/prescription-drug-expenditures-in-the-us-since-1960/">https://www.statista.com/statistics/184914/prescription-drug-expenditures-in-the-us-since-1960/</a>.</p>
-</div>
-<div id="ref-varian_how_2016">
-<p>Varian, Hal R. 2016. “How to Build an Economic Model in Your Spare Time.” <em>The American Economist</em> 61 (1): 81–90. <a href="https://doi.org/10.1177/0569434515627089">https://doi.org/10.1177/0569434515627089</a>.</p>
+<div id="A3" class="section level2">
+<h2><span class="header-section-number">8.3</span> Empirical analyses and tables</h2>
+<pre class="stata"><code>
+* Setting up the regression input, equivalent to the notation in the paper
+
+use &quot;$d\namcs91d.dta&quot;, clear
+xtset physician_id
+
+
+
+gen G = generic_status
+
+/* drug classes */
+global C drug_class_3 drug_class_5 drug_class_6 drug_class_10 drug_class_12 drug_class_15 drug_class_19     
+
+/* patient demographics */
+global X age female hispanic nonwhite                                       
+
+/* insurance */
+global P medicare medicaid hmo_pre_paid private_ins                             
+
+/* is phys a specialist */
+global S specialist                                             
+
+/* region */
+global R midwest south west                                         
+
+/* patient avgs */
+global X_dash mean_age mean_female mean_nonwhite mean_hispanic                          
+
+/* insurance avgs */
+global P_dash mean_medicaid mean_medicare mean_private_ins mean_hmo_pre_paid                    
+
+* M and T are not included due to missing state id
+
+
+
+
+*   Table 4:
+****************
+return clear
+ereturn clear
+eststo clear
+
+eststo table4: xtprobit G $C $X $P $S $X_dash $P_dash $R, re
+eststo marginstable4: margins, dydx( $X $S $X_dash $P_dash $R) post
+
+*Reporting Table 4
+esttab table4 marginstable4 using &quot;$tab\Table-4.rtf&quot;, replace wide ///
+keep(_cons $X $S $X_dash $P_dash $R) stats(rho) noobs b(3) order(_cons) ///
+coeflabels(_cons &quot;Constant&quot; age &quot;Age&quot; female &quot;Female&quot; nonwhite &quot;Nonwhite&quot; hispanic &quot;Hispanic&quot; ///
+              specialist &quot;Specialist&quot; mean_age &quot;Mean age&quot; /// 
+mean_female &quot;Percent female&quot; mean_nonwhite &quot;Percent black&quot; ///
+  mean_hispanic &quot;Percent Hispanic&quot; mean_medicaid &quot;Percent Medicaid&quot; mean_medicare ///
+&quot;Percent Medicare&quot; mean_private_ins &quot;Percent private insured&quot; ///
+  mean_hmo_pre_paid &quot;Percent HMO/prepaid&quot;  northeast &quot;Northeast&quot; midwest ///
+&quot;Midwest&quot; south &quot;South&quot; west &quot;West&quot;) ///
+  mtitles(&quot;Random-Effects Probit Coefficient&quot; &quot;% Change in Generic&quot;) nonumber addnote(&quot;Datasource: NAMSC91&quot;) 
+
+
+
+
+*   Table 5:
+****************
+return clear
+ereturn clear
+eststo clear
+
+eststo table5:   xtprobit G $C $X $P $S $R $X_dash $P_dash, re
+eststo marginstable5: margins, dydx($C) post
+
+*Reporting Table 5
+esttab table5 marginstable5 using &quot;$tab\Table-5.rtf&quot;, replace noobs wide keep($C) nonumber ///
+coeflabels(drug_class_1 &quot;Antimicrobials&quot; drug_class_2 &quot;Cardiovascular-renals&quot;///
+             drug_class_3 &quot;Central Nervous System&quot; drug_class_4 ///
+&quot;Hormones/Hormonal mechanisms&quot; drug_class_5 &quot;Skin/Mucous membrane&quot; drug_class_6 &quot;Ophthalmics&quot; drug_class_8 &quot;Resperatory tract&quot;) ///
+addnote(&quot;Notes: The ommitted drug category is pain relief&quot; &quot;Datasource: NAMSC91&quot;) mtitles(&quot;Random-Effects Probit Coefficient&quot; &quot;% Change in Generic&quot;) 
+
+
+*   Table 6:
+****************
+return clear
+ereturn clear
+eststo clear
+
+foreach x in 3 5 6 10 12 15 17 19 {
+
+* Estimating and saving the coefs
+eststo c_`x&#39;: quietly xtprobit G $X $P $S $R $X_dash $P_dash  if drug_class_`x&#39; == 1, re
+* Estimating and saving the marginal effects (AME, see table footer)
+eststo m_`x&#39;: qui margins, dydx($P) post
+}
+
+
+esttab c_3 m_3 c_5 m_5 c_6 m_6 c_10 m_10 c_12 m_12 c_15 m_15 c_17 m_17 c_19 m_19 using &quot;$tab\Table6.rtf&quot;, replace ///
+nostar nopar  keep($P)  noobs b(2)  order(medicaid medicare private_ins hmo_pre_paid) ///
+refcat(medicare &quot;Medicare&quot; medicaid &quot;Medicaid&quot; hmo_pre_paid &quot;HMO/Prepaid&quot; private_ins &quot;Private&quot;, nolabel) ///
+coeflabels(medicare &quot;Coefficient&quot; medicaid &quot;Coefficient&quot; hmo_pre_paid &quot;Coefficient&quot; private_ins &quot;Coefficient&quot;) ///
+mtitle(&quot;Antimicrobial&quot; &quot;% change&quot; &quot;Cardiovasculars&quot; &quot;% change&quot; &quot;Central Nervous System&quot; &quot;% change&quot; &quot;Hormones&quot; &quot;% change&quot; &quot;Skin/Muchous Membranes&quot; &quot;% change&quot; &quot;Ophthalmics&quot; ///
+&quot;% change&quot; &quot;Pain relief&quot; &quot;% change&quot; &quot;Respiratory Tract&quot; &quot;% change&quot; ) nonumbers eqlabels(none) collabels(none) nonumbers compress
+
+
+* Tables 7, 8 and 9 are not reproducible due to missing state id in the publicly available datasets</code></pre>
+<pre><code>invalid &#39;C&#39; 
+r(198);
+
+end of do-file
+r(198);</code></pre>
+
 </div>
 </div>
             </section>
@@ -500,8 +763,8 @@ Figure 2.1: Connected graph of Hellerstein (1998), February 2022
           </div>
         </div>
       </div>
-<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="designstudy.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="replication-results-of-hellerstein-1998.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

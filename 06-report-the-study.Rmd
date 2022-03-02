@@ -3,19 +3,20 @@
 ## Basic steps to reporting the study
 
 ```{r path6, echo=FALSE}
-path <- "C:/Users/KFischer/Documents/GitHub/DataLiteracy/_bookdown_files/DataLiteracy_files/figure-html"
+path <- "C:/Users/KFischer/Documents/GitHub/DataLiteracy/images"
 ```
 
 <!--C:/Users/KFischer/sciebo/Date Literacy Project/06 Manuscript/bookdown/DataLiteracy/_book/DataLiteracy_files/figure-html-->
 
 
-At this stage you need to report all your performed work in detail in a scientific research paper.
-
-```{r writepaper, out.width='100%', fig.align='center', fig.cap='How to report your paper', echo=FALSE}
-knitr::include_graphics(paste(path,"/comics.png",sep=""))
+```{r, out.width='100%', fig.align='center', echo=FALSE}
+path <- "C:/Users/KFischer/Documents/GitHub/DataLiteracy/images"
+knitr::include_graphics(paste(path,"/hannah-grace-j9JoYpaJH3A-unsplash-edit.jpg",sep=""))
 ```
 
-Source: https://towardsdatascience.com/how-to-keep-your-research-projects-organized-part-1-folder-structure-10bd56034d3a
+*"Figure out the one central and novel contribution of your paper. Write this down in one paragraph."* [@cochrane_writing_2005, p.1]
+
+At this stage you need to report all your performed work in detail in a scientific research paper.
 
 When reporting the study you should provide readers with the necessary information to reproduce every table and figure; to assess the appropriateness of methods used, given your settings and data, and its contribution and conclusions, given your results.   
 
@@ -35,8 +36,13 @@ A research paper usually includes the following sections:
 - Appendices 
 
 
-We briefly summarize each of these items (the following is based on @cochrane2005writing, @dudenhefer2009guide, [Martin, 2018](https://www.youtube.com/watch?v=Vky9PDKx5KU), and @nikolov2020writing).
+We briefly summarize each of these items, based on @cochrane_writing_2005, @dudenhefer_guide_2014, [Martin, 2018](https://www.youtube.com/watch?v=Vky9PDKx5KU), and @plamen_writing_2020):
 
+```{r writepaper, out.width='100%', fig.align='center', fig.cap='How to report your paper', echo=FALSE}
+knitr::include_graphics(paste(path,"/comics.png",sep=""))
+```
+
+Source: https://towardsdatascience.com/how-to-keep-your-research-projects-organized-part-1-folder-structure-10bd56034d3a
 
 
 The **Title** should be short (15 words or less) and reflect your research question. It usually contains the purpose (what is the question you are addressing?) and scope (if you cover a specific time period or population) of the study. You might also include the methods of your study in the title, if, e.g., you conduct a cohort study. All this information should help readers to decide whether or not they are interested in reading the paper.
@@ -113,7 +119,7 @@ Source: [Fresno State Graduate Writing Studio.](http://www.fresnostate.edu/acade
 
 
 
-### The writing process (@cochrane2005writing and @dudenhefer2009guide)
+### The writing process, tips based on @cochrane_writing_2005 and @dudenhefer_guide_2014
 
 
 - Producing a good empirical paper takes time. You should start working on it and drafting it as soon as possible. 
@@ -129,7 +135,9 @@ More principles on writing in economics are summarized in [Top Ten Rules of Econ
 
 
 
-### General guidance on writing and use of language in a research paper (@cochrane2005writing, [Lund Uniiversity](https://www.awelu.lu.se/language/register-and-style/dos-donts/), and @nikolov2020writing)
+### General guidance on writing and use of language in a research paper
+
+These tips are a collection of @cochrane_writing_2005, [Lund University](https://www.awelu.lu.se/language/register-and-style/dos-donts/), and @plamen_writing_2020.
 
 
 - Do not use slang, jargon, or colloquialisms. Always use formal language.
@@ -151,7 +159,7 @@ More principles on writing in economics are summarized in [Top Ten Rules of Econ
 
 
 
-### Tables (@cochrane2005writing)
+### Tables, tips based on @cochrane_writing_2005
 
 - Each table should be self-explanatory. Give your variables in the table self-explanatory names.
 - Use 2 to 4 digits after the comma when reporting the results, not all the numbers produced by the statistical program. Apply this rule consistently for all the tables in your paper.
@@ -160,7 +168,7 @@ More principles on writing in economics are summarized in [Top Ten Rules of Econ
 - Indicate the source of the data at the bottom.
 
 
-### Figures (@cochrane2005writing)
+### Figures, tips based on @cochrane_writing_2005
 
 
 - Use figures to show patterns in the data -- they demonstrate it better than tables with numbers, 
@@ -175,10 +183,10 @@ More principles on writing in economics are summarized in [Top Ten Rules of Econ
 
 ### Collections of writing tips and short articles
 
-- Dudenhefer, P. (2009). [A guide to Writing in Economics. EcoTeach Center and Department of Economics, Duke University.](https://econ.duke.edu/sites/econ.duke.edu/files/file-attachments/Dudenhefer%2C%20Paul%20-%20Guide%20to%20Writing%20in%20Economics.pdf)
-- Nikolov, P. (2020). [Writing tips for economics research papers](https://mpra.ub.uni-muenchen.de/105088/1/MPRA_paper_105088.pdf)
+- Dudenhefer, P. (2014). [A guide to Writing in Economics. EcoTeach Center and Department of Economics, Duke University.](https://econ.duke.edu/sites/econ.duke.edu/files/file-attachments/Dudenhefer%2C%20Paul%20-%20Guide%20to%20Writing%20in%20Economics.pdf)
+- Plamen, N. (2020). [Writing tips for economics research papers](https://mpra.ub.uni-muenchen.de/105088/1/MPRA_paper_105088.pdf)
 - [Cochrane, J. H.](https://www.johnhcochrane.com/) (2005). [Writing tips for Ph.D. students.](http://mayoral.iae-csic.org/timeseries_bgse13/phd_paper_writing.pdf) Chicago, IL: University of Chicago.
-
+- [Top Ten Rules of Economical Writing](http://www3.nccu.edu.tw/~jthuang/rules.html)
 
 ### Books
 
@@ -193,22 +201,33 @@ More principles on writing in economics are summarized in [Top Ten Rules of Econ
 
 - [Martin, G. (2018). How to write a paper.](https://www.youtube.com/watch?v=Vky9PDKx5KU)
 
-### Website
+### Online resource
 
 - [Lund University. Academic Writing in English.](https://www.awelu.lu.se/language/register-and-style/dos-donts/)
+
+## Checklist to reporting the study
+
+- Start writing early. Edit your text a lot to improve it.
+- Make sure you follow your one central research question.
+- Ensure you cover and include all relevant sections of a research paper.
+- Concentrate on the most important tables and figures for your main text.
+- Plan ahead for proof-reading and editing the text you have written.
+- Be able you read your own paper with some time distance.
 
 
 ## Example: Hellerstein (1998)
 
-In the following, we go over each part to highlight its contribution to Hellerstein’s research article. The structure of Hellerstein (1998) contains the following parts: 
+We go over each section of the manuscript to highlight its role to Hellerstein’s research article. The structure contains the following parts: 
 
 - Title
 - Abstract
 - Introduction
 - Background and related literature
--- Medical
--- Legal
--- Institutional
+
+    - Medical
+    - Legal
+    - Institutional
+
 - Empirical motivation and summary statistics
 - The model
 - Empirical implementation
@@ -218,35 +237,36 @@ In the following, we go over each part to highlight its contribution to Hellerst
 - References
 
 
-## Title
+### Title
 
-The paper titel consists of 12 words that reflect the paper's research question.
+The paper title consists of 12 words that reflect the paper's research question.
 
-## Abstract
+### Abstract
 
-In the abstract Hellerstein gives a quick overview on her paper by mentioning the topic, the data, the results and their takeaway.
-
-
-## Introduction
-
-The introduction of Hellerstein is rather short. She starts it by highlighting a welfare-enhancing potential of substituting trade-name drugs with generics, creating relevance for her topic. Next, she elaborates her research question, followed by a short overview of the results and their implications. She finalizes with a structural overview of the rest of her paper.
-
-Other common features of an introduction are missing here. These include among others an overview of the pre-existing research, her contribution to different fields of the literature and an overview of the methodological approach.
+In the abstract Hellerstein gives a short overview on the paper by mentioning the topic, the data, the results and their takeaway.
 
 
-## Background and related literature
+### Introduction
+
+The introduction to the study is short. Hellerstein starts it by highlighting a welfare-enhancing potential of substituting trade-name drugs with generics, creating relevance for her topic. Next, she elaborates her research question, followed by a short overview of the results and their implications. She finalizes with a structural overview of the rest of her paper.
+
+Other common features of an introduction are missing here. These include an overview of the pre-existing research, contribution to different fields in the literature, and an overview of the methodological approach.
+
+
+### Background and related literature
 
 The background section is divided into three parts:
+
 - A quick summary on the history of generics
 - An overview of different legal systems around generic prescription and generic substitution
 - An institutional background, that includes:
--- A discussion on the decision situation physicians face
--- A list of health insurance types with their respective coverage of prescription drugs.
+- A discussion on the decision situation physicians face
+- A list of health insurance types with their respective coverage of prescription drugs.
 
 By providing these background information Hellerstein familiarizes her readers with key aspects of her topic and creates further relevance for her research. She uses descriptive statistics on generic prescription and substitution laws for different legal systems to justify her approach to include geographical covariates in her analysis. Analogously, she argues for the importance to consider the type of insurance by discussing differences between these insurance systems, especially with regard to coverage rates.
 
 
-## Empirical motivation and summary statistics
+### Empirical motivation and summary statistics
 
 Hellerstein uses this chapter for two things: to introduce her sample and to show heterogeneities in generic prescription rates in her sample. The first part of the chapter is thereby built as follows:
 
@@ -262,21 +282,21 @@ The data introduction helps readers to understand the sample Hellerstein uses fo
 These patterns lay the foundation on why her empirical analysis is important. Further, the statistics in this chapter introduce and justify the inclusion of covariates in her model.
 
 
-## The model
+### The model
 
-In this chapter, Hellerstein clarifies from a theoretical perspective, what factors might determine a physician’s decision to prescribe a generic.
+Hellerstein clarifies from a theoretical perspective, what factors might determine a physician’s decision to prescribe a generic.
 Beyond clarifying the decision situation Hellerstein’s analysis revolved around the model also serves as a hypothesis for her research question. In the formula, it is clearly defined when the insurance coverage (that closely correlates with the insurance status) nudges a physician towards prescribing a generic.
 Last, the model serves as an additional argument, what variables should be considered when empirically modelling the behavior of physicians.
 
 
-## Empirical implementation
+### Empirical implementation
 
 In the first part of this chapter, Hellerstein elaborates how her theory lays framework for empirical application. Most parameters of her theoretical model are not included in the NAMCS data. She therefore discusses how to proxy missing elements using available variables.
 Next, she introduces her empirical model. First, she describes all variables and variable vectors that are included. Next, she discusses her choice of using a random effects estimator.
 The chapter concludes with a discussion of limitations and possible extensions to her empirical approach.
 
 
-## Estimation results
+### Estimation results
 
 In the results chapter, Hellerstein again describes her regression model and presents the results. Further she discusses concerns about her estimates and uses other specifications of her model to show the robustness of her results. Some results of the robustness tests are also reported.
 The chapter starts with a re-specification of her empirical application. It is noteworthy, that the model described here deviates from the equation presented in the previous chapter. All estimated coefficients of this single regression are reported in 3 separate tables:
@@ -285,20 +305,19 @@ The chapter starts with a re-specification of her empirical application. It is n
 - Table 5: Coefficients of drug class dummies
 - Table 6 Coefficients of drug class x insurance type interactions.
 
-In the text accompanying the tables, she picks numerous coefficients, provides possible explanations for them, and derives their implications.
-Next, Hellerstein mentions multiple concerns about her model. She addresses them with different robustness checks. 
+In the text accompanying the tables, she picks numerous coefficients, provides possible explanations, and derives implications. Hellerstein mentions multiple limitations of her model and addresses concerns by a number of robustness checks. 
 These include:
 
 - Using a subsample of patients below age 65.
 - Using a subsample of physicians with more than 20/30 patients in the overall NAMCS (results for both of these robustness tests are not reported).
 - Using a subsample of observations from states with a special legal system (these results are reported).
-- 
-With that, Hellerstein not only uses her Results chapter to report her findings, but also to discuss their implications and limitations. Commonly, this is usually done in a separate Discussion chapter.
+- Hellerstein not only uses the results section to report her findings, but also to discuss their implications and limitations. Typically, this is done in a separate discussion section
 
 
-## Conclusion
+### Conclusion
 
-Hellerstein starts her conclusion with a quick summary of her research article.
+Hellerstein starts her conclusion with a short summary of the research findings:
+
 - What is the aim of her analysis?
 - What are the key findings?
 - What is the takeaway?
@@ -306,7 +325,7 @@ Hellerstein starts her conclusion with a quick summary of her research article.
 Hellerstein then finalizes her article with a discussion on how findings are relevant for future research and policy.
 
 
-## Appendices
+### Appendices
 
 The paper appendix consists of two parts:
 
@@ -314,6 +333,6 @@ The paper appendix consists of two parts:
 - Additional background information on the data and the data clearing processes
 
 
-## References
+### References
 
-Here Hellerstein lists all in-text references used in the paper in alphabetical order. 
+Hellerstein lists all in-text references used in the paper in alphabetical order. 
