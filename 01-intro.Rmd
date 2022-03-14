@@ -56,7 +56,9 @@ The resources boxes in each chapter provide material for best practices in data 
 knitr::include_graphics(paste("C:/Users/KFischer/Documents/GitHub/DataLiteracy/images","/munafo.png",sep=""))
 ```
 
-There is a number of threats to the reproducible research process that can undermine scientific research or lead to false or biased conclusions and publications. Figure \@ref(fig:munafo) illustrates the main threats to reproducible science [@munafo_manifesto_2017].
+There is a number of threats to the reproducible research process that can undermine scientific research or lead to false or biased conclusions and publications. Figure \@ref(fig:munafo) illustrates the main threats to reproducible science [@munafo_manifesto_2017]. 
+
+One of the most fundamental threats when using secondary data is *hidden researcher bias* which occurs when decisions about data collection, preparation and analysis influence data selection and other steps in such a way that the identified empirical effects considerably change from these decisions [@huntingtonklein_influence_2021].
 
 
 ### Increase productivity of your work and the work of the scientific community by performing reproducible research
@@ -101,14 +103,15 @@ Examples of secondary data sources are routinelly collected health data (adminis
 
 ### Consider using agile methods to organize your workflow and tasks
 
-To set up your project, consider engaging project management tools. One suitable method is working agile or based on SCRUM methods [@pirro_how_2019, @santiago-lopez_six_2019]. Originating in software development, working agile is highly suitable in performing research projects. A planning protocol could include the following steps (as adapted from [@pirro_how_2019]).
+To set up your project, consider engaging project management tools. One suitable method is working agile or based on SCRUM methods [@pirro_how_2019;@santiago-lopez_six_2019]. Originating in software development, working agile is highly suitable in performing research projects. A planning protocol could include the following steps (as adapted from [@pirro_how_2019]).
 
 1. **Split the work.** Slice a big chunk of work into several layers of activities, in which each layer is characterized by a tangible result to be obtained.Each layer is addressed in a dedicated, limited period of time (for example, 2–12 weeks), called a sprint.
-2. Sprint planning. Meet your supervisor and any other stakeholders in a short meeting (around 30 minutes) with the aim of defining the goal of your sprint (for example, what you want to investigate) and its duration (1-4 weeks, for instance). Everybody has to agree on these two points, so that expectations are aligned and the whole research team is on the same page. On this occasion, the sprint-review meeting (see step five) can be scheduled. 
+
+2. **Sprint planning.** Meet your supervisor and any other stakeholders in a short meeting (around 30 minutes) with the aim of defining the goal of your sprint (for example, what you want to investigate) and its duration (1-4 weeks, for instance). Everybody has to agree on these two points, so that expectations are aligned and the whole research team is on the same page. On this occasion, the sprint-review meeting (see step five) can be scheduled. 
 
 3. **Sprint execution.** Work! Maximum focus is required on a specific task for a limited amount of time. You can do it, keep momentum.
 
-4. Weekly scrum. Meet your supervisor for a maximum of 15 minutes, but ideally every week (for example, the same time slot every week and outside of conventional working hours to ensure there are no commitments, such as meetings or teaching activities, to get in the way). This meeting has to be short and efficient — try to have a stand-up meeting with no laptops or papers. Only three questions need to be addressed: what was done the previous week to contribute to the goal? (For example, which data programs were developed? Which analyses were performed) What will be done next week to contribute to the goal? (For example, what analyses will be performed next?) And, are there any impediments? (For example, is the set-up working properly? Are all the materials and data needed available?)
+4. **Weekly scrum.** Meet your supervisor for a maximum of 15 minutes, but ideally every week (for example, the same time slot every week and outside of conventional working hours to ensure there are no commitments, such as meetings or teaching activities, to get in the way). This meeting has to be short and efficient — try to have a stand-up meeting with no laptops or papers. Only three questions need to be addressed: what was done the previous week to contribute to the goal? (For example, which data programs were developed? Which analyses were performed) What will be done next week to contribute to the goal? (For example, what analyses will be performed next?) And, are there any impediments? (For example, is the set-up working properly? Are all the materials and data needed available?)
 
 5. **Sprint review, retrospective and planning.** At the end of the sprint, meet all of the stakeholders to discuss results and whether those are in line with expectations (review). Take some time to go into detail and do some analytical brainstorming together. Discuss the difficulties encountered, so that the next sprint is better than the previous one (retrospective). This is the phase for ‘impediment removal’, or problem solving.
 
