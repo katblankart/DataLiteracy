@@ -36,7 +36,7 @@ A research paper usually includes the following sections:
 - Appendices 
 
 
-We briefly summarize each of these items, based on @cochrane_writing_2005, @dudenhefer_guide_2014, [Martin, 2018](https://www.youtube.com/watch?v=Vky9PDKx5KU), and @plamen_writing_2020):
+We briefly summarize each of these items, based on @cochrane_writing_2005, @dudenhefer_guide_2014, [Martin (2018)](https://www.youtube.com/watch?v=Vky9PDKx5KU), and @plamen_writing_2020:
 
 ```{r writepaper, out.width='100%', fig.align='center', fig.cap='How to report your paper', echo=FALSE}
 knitr::include_graphics(paste(path,"/comics.png",sep=""))
