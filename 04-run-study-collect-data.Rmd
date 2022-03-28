@@ -21,25 +21,25 @@ knitr::include_graphics(paste(path,"/kaleidico-26MJGnCM0Wc-unsplash.jpg",sep="")
 <!--C:/Users/KFischer/sciebo/Date Literacy Project/06 Manuscript/bookdown/DataLiteracy/_book/DataLiteracy_files/figure-html-->
 
 
-In this chapter we specify how to collect and use the data. As this study guide focuses on secondary data, you will need to identify relevant data sources, obtain the source data and process them.
+In this chapter we specify how to collect and use the data. As this study guide focuses on secondary data, you need to identify relevant data sources, obtain the source data and process them.
 
 ## Basic steps when collecting the data
 
-As many data sources are not primarily developed for the particular purpose of your study, you often will need to modify the source data to reflect the measurements of your $Y's$, $X's$ and $Z's$ you wish to examine in your causal model. It is also often that secondary data is not readily available for analysis such that you will need to collect and process these data (for example, by writing a program that extracts data from a website, search engine, or API, or by applying for permission to access the data).
+As many data sources are not primarily developed for the particular purpose of your study, you often need to modify the source data to reflect the measurements of your $Y's$, $X's$ and $Z's$ you wish to examine in your causal model. It is also often that secondary data are not readily available for analysis such that you will need to collect and process these data (for example, by writing a program that extracts data from a website, search engine, or API, or by applying for permission to access the data).
 
 
 We distinguish between **source dataset(s)** and the **analysis dataset** that you will be using to run the study.
 
-We point to the following distinction that will have implications on the resources needed to collect and process:
+We point to the following distinction that has implications on the resources needed to collect and process:
 
- - Secondary source data that is readily available and has been documented earlier (for example, panels)
- - Secondary source data that you will need to process for the purpose of your study (for example, by use of web-scraping, use of web-APIs, or extraction from data warehouses)
+ - Secondary source data that are readily available and have been documented earlier (for example, panels)
+ - Secondary source data that you need to process for the purpose of your study (for example, by use of web-scraping, use of web-APIs, or extraction from data warehouses)
 
 The following steps are typically performed when collecting the data:
 
 ### Identify secondary data sources
 
-Once you have designed the study, you can now search for appropriate data sources of your $X's$, $Y's$ and $Z's$. That means you investigate which data items of one or multiple secondary data source(s) you are using and how these items can be collected. You have to document where, how and which data you gathered and processed.  Specify exactly the variables that you will be extracting and any exclusions of the data source. If you are generating a dataset yourself from another source through scraping techniques, you also need to document how the data are collected and processed, for example, by sharing the corresponding script and a description of that data.
+Once you have designed the study, you can now search for appropriate data sources of your $X's$, $Y's$ and $Z's$. That means you investigate which data items of one or multiple secondary data source(s) you are using and how these items can be collected. You have to document where, how and which data you gathered and processed. Specify exactly the variables that you are extracting and any exclusions of the data source. If you are generating a dataset yourself from another source through scraping techniques, you also need to document how the data are collected and processed, for example, by sharing the corresponding script and a description of that data.
 
 You need to assess the suitability of the potential secondary data sources. Types and use of secondary data sources have been described across different disciplines, for example, @hair_nature_2019 for business data, @eriksson_secondary_2016 for drug utilization studies, @fitchett_quantitative_2017 for social studies. It is important to assess the quality of the secondary data sources by the following criteria [@hair_nature_2019]:
 
@@ -51,7 +51,7 @@ You need to assess the suitability of the potential secondary data sources. Type
 ### Develop a data collection and analysis plan
 
   - Use a data scheme to describe how you combine different secondary datasets into your analysis dataset.
-  - Even if there is only one source dataset that you are using, you may need to think about how this dataset needs to be processed to be fit for your final analysis purpose.
+  - Even if there is only one source dataset that you are using, you may need to think about how this dataset needs to be processed to fit your final analysis purpose.
   - Pay attention to how different data sources are linked: are there unique identifiers of the invidual subjects that you are studying (for example, identifiers for patients, physicians, firms, products). Are they the same across the different source data?
   - Per each dataset, describe which variables or items you plan to collect and how you aim to process the source data to fit the purpose of your study.
 
@@ -64,9 +64,9 @@ You need to assess the suitability of the potential secondary data sources. Type
 
 ## Basic steps when processing and preparing the data
 
-Once the **source data** has arrived, been extracted or simply you hit the download button, you need to develop a program (Stata do-file, R-code or code using other software) that documents the data extraction steps and that leads to an analysis dataset. Make sure you save all raw source data in a safe place that in terms of data protection it is ensured, that you do not accidentally delete or overwrite these data.
+Once the **source data** have arrived, been extracted or simply downloaded, you need to develop a program (Stata do-file, R-code or code using other software) that documents the data extraction steps and that leads to an analysis dataset. Make sure you save all raw source data in a safe place to ensure that you do not accidentally delete or overwrite these data.
 
-When you develop the program, you will need to make decisions informed by the previous steps related to
+When you develop the program, you need to make decisions informed by the previous steps related to
 
 - Combining, merging, appending datasets
 - Specifying datasets and variables needed to estimate your regression model
@@ -94,7 +94,7 @@ There are three major tasks that are typically needed to generate the analysis d
   - Ensure that you make plausible and relevant exclusion decisions, for example, regarding the time period studied, products, health conditions, age groups.
   
   
-**2. Structuring and aggregating of the analysis data**
+**2. Structuring and aggregating the analysis data**
 
   - Only include variables of your empirical model in the analysis dataset!
   - Aggregate your data to the level of analysis. For example, if you aim to analyze physician behavior over time, there should be one observation for each time period and physician (panel data). If your data are purely cross-sectional, there should not be multiple time periods in your data. That means in a cross-section of physicians, one row represents one physician.
@@ -128,8 +128,8 @@ General principles on **How to code well**
 - Be consistent
 - Comment and document
 - Use spacing and indentation
-- Do not substitue brevity for readability
-- Beware of error causing codes (small caps, commas, semicolon)
+- Do not substitute brevity for readability
+- Beware of error-causing codes (small caps, commas, semicolon)
 
 ### Data cleaning
 
@@ -144,11 +144,11 @@ General principles on **How to code well**
 
 ## Checklist to running the study and collecting the data
 
-- Develop a data extraction and analysis plan by describing how your final analysis data set should look like
-- Set up data extraction methods if your data is not readily available to use, for example a scraping algorithm
-- Go back to your causal model and identification strategy: Does the analysis data allow the analysis you like to perform? Most importantly, is it collased at the level needed?
+- Develop a data extraction and analysis plan by describing how your final analysis dataset should look like
+- Set up data extraction methods if your data are not readily available to use, for example, a scraping algorithm
+- Go back to your causal model and identification strategy: Do the analysis data allow the analysis you like to perform? Most importantly, are they collased at the level needed?
 - Set up a reproducible program code of all steps that you take to clean, combine and aggregate the data
-- Store and document your analysis data set in a codebook
+- Store and document your analysis dataset in a codebook
 
 
 
@@ -165,42 +165,42 @@ The confidential data are not publicly available but are key to identifying phys
 -	**NAMCS**, containing demographic and medical information on the full sample of patients (documentation can be found [here]( https://www.cdc.gov/nchs/ahcd/datasets_documentation_related.htm)).
 -	**NAMCSd**, containing information on medications prescribed or given to a subsample of patients of the NAMCS data (documentation can be found [here]( https://www.cdc.gov/nchs/ahcd/datasets_documentation_related.htm)).
 
-The NAMCS contains data on patient visits to non-federally employed physicians in the United States. For each visit, the physician or other staff members have to complete a one-page survey form containing inter alia patient demographics including the patient’s insurance status, diagnoses, types of health behavior counselling, medications ordered or provided, as well as provider characteristics. As the physicians are randomly chosen and randomly assigned to a two-week reporting period, the NAMCS is able to create a nationally representative sample.
+The NAMCS contains data on patient visits to non-federally employed physicians in the United States. For each visit, the physician or other staff member has to complete a one-page survey form containing inter alia patient demographics including the patient’s insurance status, diagnoses, types of health behavior counselling, medications ordered or provided, as well as provider characteristics. As the physicians are randomly chosen and randomly assigned to a two-week reporting period, the NAMCS is able to create a nationally representative sample.
 
-The publicly available data of NAMCS and NAMCSd come in an .exe format and can be downloaded at the [Centers for Disease Control and Prevention (CDC) website](https://www.cdc.gov/nchs/ahcd/datasets_documentation_related.htm). We use the unpacking software 7-zip to convert the files in a .txt format. The NAMCS dataset contains demographic and medical information on the full sample of patients and is mainly used to introduce the sample. The NAMCSd is a subsample of patients of the NAMCS data. It is the sample used for all estimations later on. In it, each observation covers one medication, that was mentioned, prescribed or given to a patient, and comes along with further information on both the medication and the patient receiving it.
+The publicly available data of NAMCS and NAMCSd come in an .exe format and can be downloaded at the [Centers for Disease Control and Prevention (CDC) website](https://www.cdc.gov/nchs/ahcd/datasets_documentation_related.htm). We use the unpacking software 7-zip to convert the files in a .txt format. The NAMCS dataset contains demographic and medical information on the full sample of patients and is mainly used to introduce the sample. The NAMCSd is a subsample of patients of the NAMCS data. It is the sample used for all estimations later on. In it each observation covers one medication that is mentioned, prescribed or given to a patient, and comes along with further information on both the medication and the patient receiving it.
 
 Usually, certain transformations need to be performed to be able to use the raw dataset. This can apply to the file or data format, the structure of the dataset or you might need to combine different datasets.
 
-After downloading the raw data from the CDC website, a challenge is to structure the raw dataset to be able to use the relevant variables in Stata. After importing the text file, all data were condensed to one string of characters in a single column. This means that we first need to indicate the different data items (variables) for the individual information (i.e. patient characteristics). Therefore, to be able to use the data, we need to manually split the string into the desired format, so the information is split in separate variables. Which digits in the initial string belong to one data item is defined in the documentation files (also often referred to as a codebook) provided by the [CDC](https://www.cdc.gov/nchs/ahcd) website. Almost every dataset comes with a codebook, containing useful information on the coding or handling of the data. This can often help and provide the necessary information needed to successfully prepare your data for empirical analysis.
+After downloading the raw data from the CDC website, a challenge is to structure the raw dataset to include the relevant variables in Stata. After importing the text file, all data are condensed to one string of characters in a single column. This means that we first need to indicate the different data items (variables) for the individual information (i.e. patient characteristics). Therefore, to be able to use the data, we need to manually split the string into the desired format, so the information is split in separate variables. Which digits in the initial string belong to one data item is defined in the documentation files (also often referred to as a codebook) provided by the [CDC](https://www.cdc.gov/nchs/ahcd) website. Almost every dataset comes with a codebook, containing useful information on the data coding or handling. This can often help and provide the necessary information needed to successfully prepare your data for empirical analysis.
 
 For the reproduction of Hellerstein (1998) we use Stata, creating a do-file containing the code (Section \@ref(A1)). It is important to develop a program file of your code containing every step you performed to manipulate and analyze your data. This ensures the reproducibility of your research and enables you to go back to earlier versions of your data preparation and analysis, if necessary.
 
-Before going into further detail on the data preparation, we want to emphasize on the importance of properly setting up your working directory. In a single project you are likely to save, use, override and delete a multitude of files. Without using a strict system of organizing your files and folders, you will inevitably run into trouble. There is no optimal structure, and you must find what works best for you, but in general, contents of folders and subfolders should be as homogenous as possible. To make this less abstract, let us demonstrate how we manage our working directory on the data-related part of this reproduction paper.
+Before going into further detail on the data preparation, we want to emphasize the importance of properly setting up your working directory. In a single project you are likely to save, use, override and delete a multitude of files. Without using a strict system of organizing your files and folders, you will inevitably run into trouble. There is no optimal structure, and you must find what works best for you, but in general, contents of folders and subfolders should be as homogenous as possible. To make this less abstract, let us demonstrate how we manage our working directory in the data-related part of this reproduction paper.
 
-The Stata code is the heart of your empirical analysis. To make it as comprehensible as possible, we divided the code into four parts. The first part translates the raw data into a readable format, the second one applies Hellerstein’s preparatory processes, the third reproduces the descriptive statistics and the last contains the code to run the empirical analysis. Corresponding to these do-files, we created sub-folders that contain required data or offer a place to store the output. By saving the paths to all your relevant subfolders as global, you can easily navigate through your working directory. Setting up your working directory at the start of a project will also help you to keep an overview on what is done and what is to come. You can find an example of the pathing and setup in (Section \@ref(A1) line 12 to 21).
+The Stata code is the heart of your empirical analysis. To make it as comprehensible as possible, we divide the code into four parts. The first part translates the raw data into a readable format; the second one applies Hellerstein’s preparatory processes; the third reproduces the descriptive statistics and the last contains the code to run the empirical analysis. Corresponding to these do-files, we create sub-folders that contain required data or offer a place to store the output. By saving the paths to all your relevant subfolders as global, you can easily navigate through your working directory. Setting up your working directory at the start of a project also helps you to keep an overview on what is done and what is to come. You can find an example of the pathing and setup in (Section \@ref(A1) lines 12 to 21).
 
 Once the NAMCS and NAMCSd are turned into readable formats we perform the following cleaning (i.e. exclusion of certain observations), transforming and preparation steps, that are needed to reproduce the tables and figures originally produced by Hellerstein (1998):
 
-For the NAMCS, used exclusively for the reproduction of table 1 (Section \@ref(A1)):
+For the NAMCS, used exclusively for the reproduction of Table 1 (Section \@ref(A1)):
 
-  - Missing data must be relabelled according to the syntax of the statistical software and observations with missing data were not considered.
-  - Keep only those observations that uniquely identify a single source of payment, meaning to drop observations with (A) missing insurance status, or (B) multiple insurance statuses. Step (B) is not mentioned in the text but can be inferred by the values of Table 1. Despite some observations reporting multiple sources of payment, the means of the mentioned payment/insurance options aggregate to 1. Thus, Hellerstein must have treated these observations as invalid.
-  - The setup of the dummy variables for Medicare and Specialists underlie special conditions (details can be found in the do-file attached), whereas the remaining dummies were not created straight away.
+  - Missing data must be relabelled according to the syntax of the statistical software and observations with missing data are not considered.
+  - Keep only those observations that uniquely identify a single source of payment, meaning drop observations with (A) missing insurance status, or (B) multiple insurance statuses. Step (B) is not mentioned in the text but can be inferred by the values of Table 1. Despite some observations reporting multiple sources of payment, the means of the mentioned payment/insurance options aggregate to 1. Thus, Hellerstein must have treated these observations as invalid.
+  - The setup of the dummy variables for Medicare and Specialists underlie special conditions (details can be found in the do-file attached), whereas the remaining dummies are not created straight away.
 
 For the NAMCSd, used for all other figures and tables,
 
   - Clear missing values and perform steps (A) and (B) as in the NAMCS data.
-  - Although reported in the table 1, drop observations that report 'other government insurance' as a source of payment.
+  - Although reported in Table 1, drop observations that report 'other government insurance' as a source of payment.
   - Keep only those observations of drugs that are the first mentioned drug in a patient visit. 
-  - Keep only those observations of drug mentions, that are part of the eight largest drug classes. The names of the included drug classes can be found in table 3 and the labels the data use in the documentation files.
-  - Keep only those observations of drugs that were prescribed.
-  - Create the same dummies as in the preparation of the NAMCS data (footnote table 2, \@ref(tab:HellTab2))
+  - Keep only those observations of drug mentions, that are part of the eight largest drug classes. The names of the included drug classes can be found in Table 3 and the labels the data use in the documentation files.
+  - Keep only those observations of drugs that are prescribed.
+  - Create the same dummies as in the preparation of the NAMCS data (footnote Table 2, \@ref(tab:HellTab2))
   - Create an indicator on whether a drug is a multisource drug (definition given in ch.1 paragr. 1: "We categorized drugs with the same ingredients and define drugs in an ingredient-group as multisource if there is at least one generic and one tradename drug within a group.").
   - Drop observations of medications that are not multisource drugs. 
   - Use the variable on whether a drug is a generic or trade-name drug to create an indicator on whether the drug is a generic (dependent variable).
   - Create physician averages of variables listed on p. 123 in Hellerstein (1998).
 
-After completion of these steps, the analysis dataset NAMCS includes 43 variables and 33,123 observations and NAMCSd 29 variables and 8,397 observations. The dataset is aggregated on patient level and is now ready for statistical analysis (see at the end of the next chapter). Of importance is to ensure that the raw data, the data preparation do-file and the analysis dataset are stored safely.  
+After completing these steps, the analysis dataset NAMCS includes 43 variables and 33,123 observations and NAMCSd 29 variables and 8,397 observations. The dataset is aggregated on patient level and is now ready for statistical analysis (see the end of the next chapter). Of importance is to ensure that the raw data, the data preparation do-file and the analysis dataset are stored safely.  
 The NAMCSd dataset serves as a source for the empirical analysis of Hellerstein (1998).  
 
 
