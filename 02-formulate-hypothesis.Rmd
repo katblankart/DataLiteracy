@@ -35,7 +35,7 @@ When thinking about a research question, you need to identify a topic that is [b
 - *Feasible* to research within a given timeframe: Is it possible to answer the research question based on your time budget, data and additional resources.
 
 
-How do you find a topic or develop a feasible research idea in the first place? Finding an idea is not difficult, the critical part is to find a **good** idea. How do you do that? There is no one specific way how one gets an idea, rather there is a myriad of ways how people come up with potential ideas (for example as stated by [@varian_how_2016]). 
+How do you find a topic or develop a feasible research idea in the first place? Finding an idea is not difficult, the critical part is to find a **good** idea. How do you do that? There is no one specific way how one gets an idea, rather there is a myriad of ways how people come up with potential ideas (for example, as stated by @varian_how_2016). 
 
 You can find inspiration by
 
@@ -67,7 +67,7 @@ A hypothesis is a statement that introduces your research question and suggests 
 
 Before you formulate your hypothesis, read up on the topic of interest. This should provide you with sufficient information to narrow down your research question.  Once you find your question you need to develop a hypothesis, which contains a statement of your expectations regarding your research question's results. You propose to prove your hypothesis with your research by testing the relationship between two variables of interest. Thus, a hypothesis should be testable with the data at hand. There are two types of hypotheses: alternative or null. Null states that there is no effect. Alternative states that there is an effect. 
 
-There is an alternative view on this that suggests one should not look at the literature too early on in the idea-generating process to not be influenced and shaped by someone else's ideas ([@varian_how_2016].). According to this view you can spend some time (i.e. a few weeks) trying to develop your own original idea. Even if you end up with an idea that has already been pursued by someone else, this will still provide you with good practice in developing publishable ideas. After you have developed an idea and made sure that it was not yet investigated in the literature, you can start conducting a systematic literature review. By doing this, you can find some other interesting insights from the work of others that you can synthesize in your own work to produce something novel and original.
+There is an alternative view on this that suggests one should not look at the literature too early on in the idea-generating process to not be influenced and shaped by someone else's ideas [@varian_how_2016]. According to this view you can spend some time (i.e. a few weeks) trying to develop your own original idea. Even if you end up with an idea that has already been pursued by someone else, this will still provide you with good practice in developing publishable ideas. After you have developed an idea and made sure that it was not yet investigated in the literature, you can start conducting a systematic literature review. By doing this, you can find some other interesting insights from the work of others that you can synthesize in your own work to produce something novel and original.
 
 
 ### Identify relevant literature
