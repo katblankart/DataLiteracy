@@ -10,11 +10,11 @@ path <- "C:/Users/KFischer/Documents/GitHub/DataLiteracy/images"
 
 # Replication results of Hellerstein (1998)
 
-We show the results of the replication of Tables 1-3 and Figures 1-2 of the descriptive analysis, and the replication of the empirical analysis in Tables 4-6 in this document). Our results are based on data from 1991 which  is in contrast to @hellerstein_importance_1998 that used three datasets from 1989. As access to confidential data is required to identify physicians and patients in the 1989 data, we resort to 1991 that provide state identifiers in two publicly available datasets. We present our results and discuss deviations from @hellerstein_importance_1998. A detailed discussion and interpretation is provided in the original study.
+We show the results of the replication of Tables 1-3 and Figures 1-2 of the descriptive analysis, and the replication of the empirical analysis in Tables 4-6 in this document. Our results are based on data from 1991 which is in contrast to @hellerstein_importance_1998 that uses three datasets from 1989. As access to confidential data is required to identify physicians and patients in the 1989 data, we resort to the 1991 data that provide state identifiers in two publicly available datasets. We present our results and discuss deviations from @hellerstein_importance_1998. A detailed discussion and interpretation is provided in the original study.
  
 ## Descriptive Analysis
 
-Summary statistics are shown in Table 1. They represent the sample of patients represented in NAMCS in the year 1991. Results are similar to the summary statistics shown by @hellerstein_importance_1998. Some categories of the payment sources differ slightly. Four categories -- Self-pay, Medicare, Madicaid and HMO/prepaid plan -- match. The categories Blue Cross/ Blue Shield and Other commerical insurer seem to have merged into the category Private/Commercial.
+Summary statistics are shown in Table 1. They represent the patient sample from NAMCS in the year 1991. Results are similar to the summary statistics shown by @hellerstein_importance_1998. Some categories of the payment sources differ slightly. Four categories -- Self-pay, Medicare, Madicaid and HMO/prepaid plan -- match. The categories Blue Cross/ Blue Shield and Other commerical insurer seem to have merged into the category Private/Commercial.
 When looking at the distribution of insurance coverage, we see that the frequency of patients with status *Private/Commercial* adds up to the frequencies of Blue Cross and other commercial insurers. Differences in the distribution of other covariates are slim. The most noticable difference lies in the share of specialist physicians, which account for 68% of visited physicians in the 1991 sample compared to 55% in 1989.
 
 
@@ -42,7 +42,7 @@ When looking at the distribution of insurance coverage, we see that the frequenc
 
 
 
-Notes: Data source: NAMSC91. Sample size is 29,854. Sample size differs as we use data from a different year. However, the public data from 1989 (the one Hellerstein uses) allow for reproduction of Table 1. For further information see Table 1 notes in Hellerstein (1998); With the specifications stated in the manuscript, we cannot reproduce table 1 completely.
+Notes: Data source: NAMSC91. Sample size is 29,854. Sample size differs as we use data from a different year. However, the public data from 1989 (the one Hellerstein uses) allow for reproduction of Table 1. For further information see Table 1 notes in Hellerstein (1998). With the specifications stated in the manuscript, we cannot reproduce Table 1 completely.
 
 
 Table 2 shows very similar statistics for the patients of the NAMCSd sample compared to the 1989 data. We observe a smaller sample size in the 1991 data.
@@ -71,7 +71,7 @@ Table 2 shows very similar statistics for the patients of the NAMCSd sample comp
 | Full sample        |       |                    | 0.28               |
 
 
-Notes: The sample size is 7,715. For further notes see Hellerstein (1998), Data source: NAMSCd91.
+Notes: The sample size is 7,715. For further notes see Hellerstein (1998). Data source: NAMSCd91.
 
 Table 3 shows the absolute number of observations and the share of generics over all drugs as well as the eight largest drug categories. We see an overall similar generic share over all drug classes compared to @hellerstein_importance_1998. Yet in the drug class pain relief we see an increase of generic share by about $9$ percentage points. 
 
@@ -98,7 +98,7 @@ Table 3 shows the absolute number of observations and the share of generics over
 ****
 
 
-The distribution of physicians over the different generic prescription rates (Figure \@ref(fig:HellFig1)) is similar to Hellerstein (1998).
+The physician distribution over the different generic prescription rates (Figure \@ref(fig:HellFig1)) is similar to Hellerstein (1998).
 
 
 ```{r HellFigR1, out.width='100%', fig.align='center', fig.cap='Hellerstein Figure 1 - Distribution of Physician Generic Prescription Rates (Source: NAMSCd91)', echo=FALSE}
@@ -121,7 +121,7 @@ When looking at Figure \@ref(fig:HellFig2), we see a decrease from about 90% to 
 ## Empirical Analysis
 
 
-Keep in mind that due to data restrictions, we were not able to control for certain covariates that Hellerstein (1998) includes. An example of such are legislation laws like mandatory or permissive substitution, and one- or two-line prescription. For this reason, we cannot present all tables produced by Hellerstein (1998). Given these restrictions, we cannot run the analysis with the same underlying model specifications. 
+Keep in mind that due to data restrictions, we are not able to control for certain covariates that Hellerstein (1998) includes. An example of such are legislation laws like mandatory or permissive substitution, and one- or two-line prescription. For this reason, we cannot present all tables produced by Hellerstein (1998). Given these restrictions, we cannot run the analysis with the same underlying model specifications. 
 This restricts us from comparing the results from 1991 and 1989. However, for the completion of this example we present the results from Tables 4, 5 and 6: 
 
 
@@ -149,10 +149,10 @@ This restricts us from comparing the results from 1991 and 1989. However, for th
 |     West                       |     0.065                                  |     (0.67)     |     0.016                    |     (0.67)     |
 
 
-Notes: $*p < 0.05, **p < 0.01, ***p < 0.001$; The sample size is 7,715. For further notes see Hellerstein (1998); Data source: NAMSCd91.
+Notes: $*p < 0.05, **p < 0.01, ***p < 0.001$. The sample size is 7,715. For further notes see Hellerstein (1998). Data source: NAMSCd91.
 
 
-Table 5 shows the estimated coefficients for the eight largest drug classes as well as the % change in the generic share. The greatest change compared to Hellerstein (1998) is the change in sign from positive to negative for cardiovascular/renals, though not significant in our model. 
+Table 5 shows the estimated coefficients for the eight largest drug classes as well as the percentage change in the generic share. The greatest change compared to Hellerstein (1998) is the change in the sign from positive to negative for cardiovascular/renals, though not significant in our model. 
 
 
 **Hellerstein Table 5 - Estimated Coefficients for Drug-Class Dummy Variable for Full Sample**
@@ -171,7 +171,7 @@ Table 5 shows the estimated coefficients for the eight largest drug classes as w
 
 	
 	
-Notes: $*p < 0.05, **p < 0.01, ***p < 0.001$; The sample size is 7,715. Omitted category is pain relief. For further notes see Hellerstein (1998); Data source: NAMSCd91.
+Notes: $*p < 0.05, **p < 0.01, ***p < 0.001$. The sample size is 7,715. Omitted category is pain relief. For further notes see Hellerstein (1998). Data source: NAMSCd91.
 
 
 
@@ -198,6 +198,6 @@ Notes: $*p < 0.05, **p < 0.01, ***p < 0.001$; The sample size is 7,715. Omitted 
 |                    |     1.78             |     1.78          |     -0.56              |     -0.56         |     1.04                        |     1.05          |     -1.09       |     -1.09         |     -0.73                       |     -0.73         |     -0.93          |     -0.93         |     0.71             |     0.72          |     -0.26                  |     -0.25         |
 
 
-Notes: see Hellerstein (1998); Data source: NAMSCd91.
+Notes: see Hellerstein (1998). Data source: NAMSCd91.
 
 
