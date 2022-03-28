@@ -35,7 +35,7 @@ When thinking about a research question, you need to identify a topic that is [b
 - *Feasible* to research within a given timeframe: Is it possible to answer the research question based on your time budget, data and additional resources.
 
 
-How do you find a topic or develop a feasible research idea in the first place? Finding an idea is not difficult, the critical part is to find a **good** idea. How do you do that? There is no one specific way how one gets an idea, rather there is a myriad of ways how people come up with potential ideas (for example as stated by [@varian_how_2016]). 
+How do you find a topic or develop a feasible research idea in the first place? Finding an idea is not difficult, the critical part is to find a **good** idea. How do you do that? There is no one specific way how one gets an idea, rather there is a myriad of ways how people come up with potential ideas (for example, as stated by [@varian_how_2016]). 
 
 You can find inspiration by
 
@@ -65,16 +65,16 @@ A hypothesis is a statement that introduces your research question and suggests 
 
 ### Develop a hypothesis
 
-Before you formulate your hypothesis, read up on the topic of interest. This should provide you with sufficient information to narrow down your research question.  Once you find your question you need to develop a hypothesis, which contains a statement of your expectations regarding your research question's results. You propose to prove your hypothesis with your research by testing the relationship between two variables of interest. Thus, a hypothesis should be testable with the data at hand. There are two types of hypotheses: alternative or null. Null states that there is no effect. Alternative states that there is an effect. 
+Before you formulate your hypothesis, read up on the topic of interest. This should provide you with sufficient information to narrow down your research question. Once you find your question you need to develop a hypothesis, which contains a statement of your expectations regarding your research question's results. You propose to prove your hypothesis with your research by testing the relationship between two variables of interest. Thus, a hypothesis should be testable with the data at hand. There are two types of hypotheses: alternative or null. Null states that there is no effect. Alternative states that there is an effect. 
 
-There is an alternative view on this that suggests one should not look at the literature too early on in the idea-generating process to not be influenced and shaped by someone else's ideas ([@varian_how_2016].). According to this view you can spend some time (i.e. a few weeks) trying to develop your own original idea. Even if you end up with an idea that has already been pursued by someone else, this will still provide you with good practice in developing publishable ideas. After you have developed an idea and made sure that it was not yet investigated in the literature, you can start conducting a systematic literature review. By doing this, you can find some other interesting insights from the work of others that you can synthesize in your own work to produce something novel and original.
+There is an alternative view on this that suggests one should not look at the literature too early on in the idea-generating process to not be influenced and shaped by someone else's ideas ([@varian_how_2016].). According to this view you can spend some time (i.e. a few weeks) trying to develop your own original idea. Even if you end up with an idea that has already been pursued by someone else, this will still provide you with good practice in developing publishable ideas. After you have developed an idea and made sure that it was not yet investigated in the literature, you can start conducting a literature review. By doing this, you can find some other interesting insights from the work of others that you can synthesize in your own work to produce something novel and original.
 
 
 ### Identify relevant literature
 
 For your research project you will need to identify and collect previous relevant literature. It should involve a thorough search of the keywords in relevant databases and journals. Place emphasis on articles from high-ranking journals with significant numbers of citations. This will give you an indication of the most influential and important work in the field. Once you identify and collect the relevant literature for your topic, you will need to **critically** synthesize it in your literature review.
 
-When you perform your literature review, consider theories that may inform your research question. For example, when studying physician behavior you may consider  principal-agency theory.
+When you perform your literature review, consider theories that may inform your research question. For example, when studying physician behavior you may consider principal-agent theory.
 
 
 ### Research question or literature review: the chicken or the egg problem?
@@ -161,16 +161,16 @@ Several rankings may help to assess the quality of research you consider
 
 ## Example: Hellerstein (1998)
 
-As an illustration of the research process of formulating a hypothesis, designing a study, running a study, collecting and analyzing the data and, finally, reporting the study, we provide an example by replicating Judith K. Hellerstein’s paper “The Importance of the Physician in the Generic versus Trade-Name Prescription Decision” that was edited in 1998 in the The RAND Journal of Economics.
+As an illustration of the research process of formulating a hypothesis, designing a study, running a study, collecting and analyzing the data and, finally, reporting the study, we provide an example by replicating Judith K. Hellerstein’s paper “The Importance of the Physician in the Generic versus Trade-Name Prescription Decision” that was published in 1998 in the RAND Journal of Economics.
 
-Hellerstein’s 1998 paper has impacted discussion about behavioral factors of physician decisions and pharmaceutical markets over two decades. The study received 446 citations on [Google Scholar since 1998](https://scholar.google.de/scholar?cites=9301208853808127317&as_sdt=2005&sciodt=0,5&hl=de) by 22/02/2022, including recent mentions in top field journals such as [Journal of Public Economics (2021)](https://www.sciencedirect.com/science/article/abs/pii/S0047272718301968), [Journal of Health Economics (2019)](https://www.sciencedirect.com/science/article/pii/S0167629617307348), and [Health Economics (2019)](https://onlinelibrary.wiley.com/doi/full/10.1002/hec.3774).
+Hellerstein’s 1998 paper has impacted discussion about behavioral factors of physician decisions and pharmaceutical markets over two decades. The study received 448 citations on [Google Scholar since 1998](https://scholar.google.de/scholar?cites=9301208853808127317&as_sdt=2005&sciodt=0,5&hl=de) by 27/03/2022, including recent mentions in top field journals such as [Journal of Public Economics (2021)](https://www.sciencedirect.com/science/article/abs/pii/S0047272718301968), [Journal of Health Economics (2019)](https://www.sciencedirect.com/science/article/pii/S0167629617307348), and [Health Economics (2019)](https://onlinelibrary.wiley.com/doi/full/10.1002/hec.3774).
 
 ```{r hellconnect, out.width='100%', fig.cap='Connected graph of Hellerstein (1998), February 2022', fig.align='center', echo=FALSE}
 knitr::include_graphics(paste(path,"/Hellerstein-connected-papers.jpg",sep=""))
 ```
 
 
-Figure \@ref(fig:hellconnect) shows a connected graph of prior and derivate works related to the study. 
+Figure \@ref(fig:hellconnect) shows a connected graph of prior and derivative works related to the study. 
 
 The work has impacted the literature researching the role of physician behavior and its influence on access, adoption and diffusion of health services, moral hazard and incentives in prescription and treatment decisions and the influence of different payment schemes, and a vast body of literature studying the pharmaceutical market.
 
@@ -182,16 +182,16 @@ The research that has been influenced by Hellerstein includes evidence on:
   - the role of patents and dynamics of market segmentation
 
 
-At the end of each chapter, we demonstrate insights into this study that we replicated.
+At the end of each chapter, we demonstrate insights into this study that we replicate.
 
 
 ### **Context of the study - escalating health expenditures**
 
-In the United States, the total prescription drug expenditure in 2020 marked about 358.7 billion US Dollars [@statista_prescription_nodate]. The prescription of generic drugs in comparison to more expensive brand name versions is an option in reducing the total health care expenditure. Generic drugs are bioequivalent in the active ingredients and can serve as a channel to contain prescription expenditure [@kesselheim_clinical_2008] as generic drugs are between 20 and 90% cheaper than their trade-name alternatives [@dunne_review_2013].
+In the United States, the total prescription drug expenditure in 2020 marked about 358.7 billion US Dollars [@statista_prescription_nodate]. The prescription of generic drugs in comparison to more expensive brand-name versions is an option in reducing the total health care expenditure. Generic drugs are bioequivalent in the active ingredients and can serve as a channel to contain prescription expenditure [@kesselheim_clinical_2008] as generic drugs are between 20 and 90% cheaper than their trade-name alternatives [@dunne_review_2013].
  
 ### **Research question - How does a patient's insurance status influence the physician's choice between generic compared to brand-name drugs?**
 
-Physicians are faced with a multitude of  medication options, including the choice between generic and trade-name drugs. Physicians ideally act as agents for their patients to identify the best available treatment option based on their needs.  Choosing the best treatment entails cost of coordination and cognition. The prescription of generic drugs may serve as an example to what extent physicians customize treatments according to patients' needs with regards to cost. From an economic point of view we may expect that once a generic drug is available, a perfectly rational agent (i.e. physician) would prescribe a generic drug instead of the trade-name version if therapeutically identical [@dranove_medicaid_1989]. This leads to the following research question: *"Do physicians vary their prescription decisions on a patient-by-patient basis or do they systematically prescribe the same version, trade-name or generic, to all patients?"*. 
+Physicians are faced with a multitude of medication options, including the choice between generic and trade-name drugs. Physicians ideally act as agents for their patients to identify the best available treatment option based on their needs. Choosing the best treatment entails cost of coordination and cognition. The prescription of generic drugs may serve as an example to what extent physicians customize treatments according to patients' needs with regards to cost. From an economic point of view we may expect that once a generic drug is available, a perfectly rational agent (i.e. physician) would prescribe a generic drug instead of the trade-name version if therapeutically identical [@dranove_medicaid_1989]. This leads to the following research question: *"Do physicians vary their prescription decisions on a patient-by-patient basis or do they systematically prescribe the same version, trade-name or generic, to all patients?"*. 
 
 The 1998 Hellerstein's study examines two hypotheses:
 
