@@ -194,7 +194,7 @@ For the NAMCSd, used for all other figures and tables,
   - Keep only those observations of drugs that are the first mentioned drug in a patient visit. 
   - Keep only those observations of drug mentions, that are part of the eight largest drug classes. The names of the included drug classes can be found in table 3 and the labels the data use in the documentation files.
   - Keep only those observations of drugs that were prescribed.
-  - Create the same dummies as in the preparation of the NAMCS data (footnote table 2, \@ref(tab:HellTab2))
+  - Create the same dummies as in the preparation of the NAMCS data (footnote Table 2, \@ref(tab:HellTab2))
   - Create an indicator on whether a drug is a multisource drug (definition given in ch.1 paragr. 1: "We categorized drugs with the same ingredients and define drugs in an ingredient-group as multisource if there is at least one generic and one tradename drug within a group.").
   - Drop observations of medications that are not multisource drugs. 
   - Use the variable on whether a drug is a generic or trade-name drug to create an indicator on whether the drug is a generic (dependent variable).
