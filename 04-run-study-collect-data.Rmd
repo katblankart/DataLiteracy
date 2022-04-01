@@ -152,9 +152,9 @@ General principles on **How to code well**
 
 
 
-## Example: Hellerstein (1998)
+## Example: @hellerstein_importance_1998
 
-The empirical application of Hellerstein (1998) is based on three datasets as provided by the National Ambulatory Care Survey (NAMCS) from the year 1989:
+The empirical application of @hellerstein_importance_1998 is based on three datasets as provided by the National Ambulatory Care Survey (NAMCS) from the year 1989:
 
 -	**NAMCS**, containing demographic and medical information on the full sample of patients
 -	**NAMCSd**, containing information on medications prescribed or given to a subsample of patients of the NAMCS data.
@@ -173,13 +173,13 @@ Usually, certain transformations need to be performed to be able to use the raw 
 
 After downloading the raw data from the CDC website, a challenge is to structure the raw dataset to include the relevant variables in Stata. After importing the text file, all data are condensed to one string of characters in a single column. This means that we first need to indicate the different data items (variables) for the individual information (i.e. patient characteristics). Therefore, to be able to use the data, we need to manually split the string into the desired format, so the information is split in separate variables. Which digits in the initial string belong to one data item is defined in the documentation files (also often referred to as a codebook) provided by the [CDC](https://www.cdc.gov/nchs/ahcd) website. Almost every dataset comes with a codebook, containing useful information on the data coding or handling. This can often help and provide the necessary information needed to successfully prepare your data for empirical analysis.
 
-For the reproduction of Hellerstein (1998) we use Stata, creating a do-file containing the code (Section \@ref(A1)). It is important to develop a program file of your code containing every step you performed to manipulate and analyze your data. This ensures the reproducibility of your research and enables you to go back to earlier versions of your data preparation and analysis, if necessary.
+For the reproduction of @hellerstein_importance_1998 we use Stata, creating a do-file containing the code (Section \@ref(A1)). It is important to develop a program file of your code containing every step you performed to manipulate and analyze your data. This ensures the reproducibility of your research and enables you to go back to earlier versions of your data preparation and analysis, if necessary.
 
 Before going into further detail on the data preparation, we want to emphasize the importance of properly setting up your working directory. In a single project you are likely to save, use, override and delete a multitude of files. Without using a strict system of organizing your files and folders, you will inevitably run into trouble. There is no optimal structure, and you must find what works best for you, but in general, contents of folders and subfolders should be as homogenous as possible. To make this less abstract, let us demonstrate how we manage our working directory in the data-related part of this reproduction paper.
 
 The Stata code is the heart of your empirical analysis. To make it as comprehensible as possible, we divide the code into four parts. The first part translates the raw data into a readable format; the second one applies Hellerstein’s preparatory processes; the third reproduces the descriptive statistics and the last contains the code to run the empirical analysis. Corresponding to these do-files, we create sub-folders that contain required data or offer a place to store the output. By saving the paths to all your relevant subfolders as global, you can easily navigate through your working directory. Setting up your working directory at the start of a project also helps you to keep an overview on what is done and what is to come. You can find an example of the pathing and setup in (Section \@ref(A1) lines 12 to 21).
 
-Once the NAMCS and NAMCSd are turned into readable formats we perform the following cleaning (i.e. exclusion of certain observations), transforming and preparation steps, that are needed to reproduce the tables and figures originally produced by Hellerstein (1998):
+Once the NAMCS and NAMCSd are turned into readable formats we perform the following cleaning (i.e. exclusion of certain observations), transforming and preparation steps, that are needed to reproduce the tables and figures originally produced by @hellerstein_importance_1998:
 
 For the NAMCS, used exclusively for the reproduction of Table 1 (Section \@ref(A1)):
 
@@ -192,16 +192,18 @@ For the NAMCSd, used for all other figures and tables,
   - Clear missing values and perform steps (A) and (B) as in the NAMCS data.
   - Although reported in Table 1, drop observations that report 'other government insurance' as a source of payment.
   - Keep only those observations of drugs that are the first mentioned drug in a patient visit. 
+
   - Keep only those observations of drug mentions, that are part of the eight largest drug classes. The names of the included drug classes can be found in Table 3 and the labels the data use in the documentation files.
   - Keep only those observations of drugs that are prescribed.
   - Create the same dummies as in the preparation of the NAMCS data (footnote Table 2, \@ref(tab:HellTab2))
   - Create an indicator on whether a drug is a multisource drug (definition given in ch.1 paragr. 1: "We categorized drugs with the same ingredients and define drugs in an ingredient-group as multisource if there is at least one generic and one tradename drug within a group.").
   - Drop observations of medications that are not multisource drugs. 
   - Use the variable on whether a drug is a generic or trade-name drug to create an indicator on whether the drug is a generic (dependent variable).
-  - Create physician averages of variables listed on p. 123 in Hellerstein (1998).
+  - Create physician averages of variables listed on p. 123 in @hellerstein_importance_1998.
 
-After completing these steps, the analysis dataset NAMCS includes 43 variables and 33,123 observations and NAMCSd 29 variables and 8,397 observations. The dataset is aggregated on patient level and is now ready for statistical analysis (see the end of the next chapter). Of importance is to ensure that the raw data, the data preparation do-file and the analysis dataset are stored safely.  
-The NAMCSd dataset serves as a source for the empirical analysis of Hellerstein (1998).  
+
+After completion of these steps, the analysis dataset NAMCS includes 43 variables and 33,123 observations and NAMCSd 29 variables and 8,397 observations. The dataset is aggregated on patient level and is now ready for statistical analysis (see at the end of the next chapter). Of importance is to ensure that the raw data, the data preparation do-file and the analysis dataset are stored safely.  
+The NAMCSd dataset serves as a source for the empirical analysis of @hellerstein_importance_1998.  
 
 
 **Table (#tab:analysisdat): Variables of the analysis dataset based on NAMCSd**
