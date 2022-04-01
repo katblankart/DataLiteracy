@@ -27,7 +27,8 @@ knitr::include_graphics(paste(path,"/cdd20-klidkegqfoo-unsplash-cropped.jpg",sep
 
 ## Objective {-}
 
-This study guide is a resource for graduate students, PhD candidates, and researchers performing applied empirical research in economics and management sciences. The guide is meant for the field of analysis of health care markets using secondary data. Many textbook examples use readily available datasets for analysis of econometric problems. For students developing a related research question and generating their own analysis dataset, important steps that lead to a final analysis dataset are often missing. Additionally, many resources focus on problems in labor economics. Resources that showcase processing and generating secondary data are scarce. Reasons are the confidentiality and data protection issues of data sources often used in health care applications.
+This study guide is a resource for graduate students, PhD candidates, and early career researchers performing applied empirical research in economics and management sciences. The guide is meant for the field of analysis of health care markets using secondary data. Many textbook examples use readily available datasets for analysis of econometric problems. For students developing a related research question and generating their own analysis dataset, important steps that lead to a final analysis dataset are often missing. Additionally, many resources focus on labor economics problems. Resources that showcase processing and generating secondary data are scarce. One reason is that data sources used in health care applications are often subject to confidentiality and data protection issues.
+
 
 This guide explains the five essential steps needed to create a reproducible research project. We introduce important terminology, highlight relevant tasks, and provide key resources in the form of textbooks and websites available via open access. We provide a concise guide that users can easily access when starting academic research. Each section takes about 10 to 15 minutes to read. We do not cover any specific data science or econometric method, but point to the relevant resources.
 
@@ -46,12 +47,12 @@ After reading and applying the principles introduced in this study guide, you wi
 
 ## Structure of the study guide {-}
 
-The study guide consists of five chapters that include the essential steps of a reproducible research project. Each step is covered in three parts.
+The study guide consists of five chapters that include the essential steps of a reproducible research project. Each step is covered in four parts.
   
 1. An introduction to the basic concepts and key terminology. 
 2. A resources box that includes textbooks, articles and references to current web resources with emphasis on open access material.
-4. A checklist for each step of the reproducible research project to follow.
-3. A showcase example of an empirical project replicated based on the article of *Hellerstein, Judith K. 1998. “The Importance of the Physician in the Generic versus Trade-Name Prescription Decision.” The RAND Journal of Economics 29 (1): 108–36. https://doi.org/10.2307/2555818*.
+3. A checklist for each step of the reproducible research project to follow.
+4. A showcase example of an empirical project replicated based on the article of *Hellerstein, Judith K. 1998. “The Importance of the Physician in the Generic versus Trade-Name Prescription Decision.” The RAND Journal of Economics 29 (1): 108–36. https://doi.org/10.2307/2555818*.
 
 
 ## This is a living document {-}
@@ -62,11 +63,13 @@ How can you contribute to this study guide? Best practices how to perform reprod
 
 *Katharina Blankart* (katharina.blankart@uni-due.de, katblankart.github.io) is an assistant professor in empirical health economics at the Faculty of Economics and Business Administration at the University of Duisburg-Essen and CINCH Health Economics Research Center. Katharina is an economist with a PhD in Business Administration (both Ludwig-Maximilians University Munich, Germany). Her research studies the institutional settings of determining value of and access to health technology. An important aspect of this research is how providers and patients use technology to improve health and health care. Katharina's research emphasizes the health policies and management of pharmaceutical care using secondary data.
 
-*Maryna Ivets* (maryna.ivets@uni-due.de) is a Ph.D. candidate in economics at the university of Duisburg-Essen, Germany.  She is an applied economist with expertise in secondary data analysis in the fields of behavioral, health, and education economics. Her research uses psychology and economics to improve our understanding of early childcare’s effects on development. She is also researching how to encourage positive health behaviors through novel mechanisms, such as online self-challenges.
+*Maryna Ivets* (maryna.ivets@uni-due.de) is a Ph.D. candidate in economics at the university of Duisburg-Essen, Germany. She is an applied economist with expertise in secondary data analysis in the fields of behavioral, health, and education economics. Her research uses psychology and economics to improve our understanding of early childcare’s effects on development. She is also researching how to encourage positive health behaviors through novel mechanisms, such as online self-challenges.
 
 *Eva Goetjes* (eva.goetjes@uni-due.de) is a Ph.D candidate in economics at the university of Duisburg-Essen, Germany. She has a background in Business Administration and Economics, Healthcare Policy, Innovation and Management and Global Health. Her research focuses on the access to and diffusion of pharmaceutical care. Using secondary data she analyses the influence of physician behaviour and health insurance schemes on access to innovation in ambulatory care settings. A second research focus lies in the collection of drug shortage data of different European countries, to assess how reduced access to care caused by drug shortages impacts the health and health care of patients.    
 
-*Kai Robert Miele* (kai.miele@ibes.uni-due.de) is a master’s student in economics and an upcoming doctorate candidate at University Duisburg-Essen. Kai specialized his studies in applied microeconomics in a health and labour economic context. In one specific project, Kai analyses mental health effects of financial access to education in adulthood. Future projects are planned to cover economic returns and later-in-life health benefits of different education systems in Western countries.
+
+*Kai Robert Miele* (kai.miele@ibes.uni-due.de) is a master’s student in economics and an upcoming doctorate candidate at University Duisburg-Essen. Kai specialized his studies in applied microeconomics in a health and labor economic context. In one specific project, Kai analyzes mental health effects of financial access to education in adulthood. Future projects are planned to cover economic returns and later-in-life health benefits of different education systems in Western countries.
+
 
 
 
