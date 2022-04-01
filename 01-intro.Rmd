@@ -27,7 +27,9 @@ knitr::include_graphics(paste("C:/Users/KFischer/Documents/GitHub/DataLiteracy/i
 
 Scientific journal editors and research funders are increasingly promoting transparency in research. To encourage the principles of reproducible research, the related institutions are requesting authors to make their research reproducible. To overcome criticisms regarding the validity and power of empirical tests, this means that data and program code need to be shared upon manuscript acceptance, or at earlier stages of the submission process. The purpose is that third-parties have the possibility to reproduce the content, analysis, and conclusions of a study on their own.
 
-Efforts to increase reproducibility have been expressed by  institutions within the social sciences including:
+
+Efforts to increase reproducibility have been expressed by institutions within the social sciences including:
+
 
 - The best practices statement by the [Social Science Data Editors](https://social-science-data-editors.github.io/template_README/),
 - In Germany, by the German Research Foundation (DFG) and the Consortium for the Social, Behavioral, Educational and Economic Sciences [RatWSD](https://www.ratswd.de/en/publikationen/output)
