@@ -57,7 +57,7 @@ The study guide consists of five chapters that include the essential steps of a 
 
 ## This is a living document {-}
 
-How can you contribute to this study guide? Best practices how to perform reproducible research are constantly developing. We aim to keep resources up to date. If you come across good resources that serve as additions, preferably open access, or have suggestions for improvement, please share them by emailing to: katharina.blankart@uni-due.de
+How can you contribute to this study guide? Best practices how to perform reproducible research are constantly developing. We aim to keep resources up to date. If you come across good resources that serve as additions, preferably open access, or have suggestions for improvement, please open an issue [in the corresponding github repository](https://github.com/katblankart/DataLiteracy/issues)
 
 # About the authors {-}
 
@@ -82,5 +82,15 @@ Development of this resource has received funding by [*Data Literacy Education.n
 This concise guide to reproducible research using secondary data is written as an Open Educational Resource to enable you to use this book in the best possible way. This work is, therefore, made available under Creative Commons Public Domain Dedication (CC0 1.0 Universal). You do not have to ask us a permission to re-use and copy information from this handbook. Take note that some materials cited in this book might be copyright protected. If so, this is indicated in the text. Please consider citing the handbook when using the content.
 
 We have tried to acknowledge all of our sources. If for some reason we have forgotten to provide you with proper credits it has not been done with malicious intent. Feel free to contact us at katharina.blankart@uni-due.de for any corrections.
+
+**Image sources**
+
+Images were obtained from unsplash.com unless otherwise noted:
+
+- alice-dietrich-FwF_fKj5tBo-unsplash.jpg
+- anastasiia-kamil--uQZPtoJ8nk-unsplash.jpg
+- cdd20-klidkegqfoo-unsplash.jpg
+- hannah-grace-j9JoYpaJH3A-unsplash.jpg
+- mike-u-SGcFBTuSSU4-unsplash.jpg
 
 	    	

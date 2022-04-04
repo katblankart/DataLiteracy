@@ -4,21 +4,21 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Page not found | A concise guide to reproducible research using secondary data</title>
-  <meta name="description" content="Page not found | A concise guide to reproducible research using secondary data in health economics and management" />
+  <title>Chapter 7 Replication results of Hellerstein (1998) | A concise guide to reproducible research using secondary data</title>
+  <meta name="description" content="Chapter 7 Replication results of Hellerstein (1998) | A concise guide to reproducible research using secondary data in health economics and management" />
   <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Page not found | A concise guide to reproducible research using secondary data" />
+  <meta property="og:title" content="Chapter 7 Replication results of Hellerstein (1998) | A concise guide to reproducible research using secondary data" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="Page not found | A concise guide to reproducible research using secondary data in health economics and management" />
+  <meta property="og:description" content="Chapter 7 Replication results of Hellerstein (1998) | A concise guide to reproducible research using secondary data in health economics and management" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Page not found | A concise guide to reproducible research using secondary data" />
+  <meta name="twitter:title" content="Chapter 7 Replication results of Hellerstein (1998) | A concise guide to reproducible research using secondary data" />
   
-  <meta name="twitter:description" content="Page not found | A concise guide to reproducible research using secondary data in health economics and management" />
+  <meta name="twitter:description" content="Chapter 7 Replication results of Hellerstein (1998) | A concise guide to reproducible research using secondary data in health economics and management" />
   
 
 <meta name="author" content="Katharina Blankart, Maryna Ivets, Eva Goetjes, Kai Miele" />
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-
+<link rel="prev" href="report-study.html"/>
+<link rel="next" href="stata-replication-code-of-hellerstein-1998.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -218,19 +218,848 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="page-not-found" class="section level1">
-<h1>Page not found</h1>
-<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
-<p>You may want to try searching to find the page's new location, or use
-the table of contents to find the page you are looking for.</p>
+<div id="replication-results-of-hellerstein_importance_1998" class="section level1">
+<h1><span class="header-section-number">Chapter 7</span> Replication results of <span class="citation">Hellerstein (<a href="#ref-hellerstein_importance_1998" role="doc-biblioref">1998</a>)</span></h1>
+<p>We show the results of the replication of Tables 1-3 and Figures 1-2 of the descriptive analysis, and the replication of the empirical analysis in Tables 4-6 in this document. Our results are based on data from 1991 which is in contrast to <span class="citation">Hellerstein (<a href="#ref-hellerstein_importance_1998" role="doc-biblioref">1998</a>)</span> that uses three datasets from 1989. As access to confidential data is required to identify physicians and patients in the 1989 data, we resort to the 1991 data that provide state identifiers in two publicly available datasets. We present our results and discuss deviations from <span class="citation">Hellerstein (<a href="#ref-hellerstein_importance_1998" role="doc-biblioref">1998</a>)</span>. A detailed discussion and interpretation is provided in the original study.</p>
+<div id="descriptive-analysis" class="section level2">
+<h2><span class="header-section-number">7.1</span> Descriptive Analysis</h2>
+<p>Summary statistics are shown in Table 1. They represent the patient sample from NAMCS in the year 1991. Results are similar to the summary statistics shown by <span class="citation">Hellerstein (<a href="#ref-hellerstein_importance_1998" role="doc-biblioref">1998</a>)</span>. Some categories of the payment sources differ slightly. Four categories – Self-pay, Medicare, Madicaid and HMO/prepaid plan – match. The categories Blue Cross/ Blue Shield and Other commerical insurer seem to have merged into the category Private/Commercial.
+When looking at the distribution of insurance coverage, we see that the frequency of patients with status <em>Private/Commercial</em> adds up to the frequencies of Blue Cross and other commercial insurers. Differences in the distribution of other covariates are slim. The most noticable difference lies in the share of specialist physicians, which account for 68% of visited physicians in the 1991 sample compared to 55% in 1989.</p>
+<p><strong>Hellerstein Table 1 - Summary Statistics for Overall NAMCS Patient Sample</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>mean</th>
+<th>sd</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Age</td>
+<td>43.07</td>
+<td>24.81</td>
+</tr>
+<tr class="even">
+<td>Female</td>
+<td>0.59</td>
+<td>0.49</td>
+</tr>
+<tr class="odd">
+<td>Nonwhite</td>
+<td>0.11</td>
+<td>0.31</td>
+</tr>
+<tr class="even">
+<td>Hispanic</td>
+<td>0.06</td>
+<td>0.23</td>
+</tr>
+<tr class="odd">
+<td>Self-pay</td>
+<td>0.22</td>
+<td>0.41</td>
+</tr>
+<tr class="even">
+<td>Medicare</td>
+<td>0.14</td>
+<td>0.35</td>
+</tr>
+<tr class="odd">
+<td>Medicaid</td>
+<td>0.10</td>
+<td>0.30</td>
+</tr>
+<tr class="even">
+<td>Private/Commercial</td>
+<td>0.37</td>
+<td>0.48</td>
+</tr>
+<tr class="odd">
+<td>Other government insurance</td>
+<td>0.02</td>
+<td>0.15</td>
+</tr>
+<tr class="even">
+<td>HMO/prepaid plan</td>
+<td>0.15</td>
+<td>0.36</td>
+</tr>
+<tr class="odd">
+<td>Specialist</td>
+<td>0.68</td>
+<td>0.46</td>
+</tr>
+<tr class="even">
+<td>Northeast</td>
+<td>0.23</td>
+<td>0.42</td>
+</tr>
+<tr class="odd">
+<td>Midwest</td>
+<td>0.25</td>
+<td>0.44</td>
+</tr>
+<tr class="even">
+<td>South</td>
+<td>0.28</td>
+<td>0.45</td>
+</tr>
+<tr class="odd">
+<td>West</td>
+<td>0.24</td>
+<td>0.43</td>
+</tr>
+</tbody>
+</table>
+<p>Notes: Data source: NAMSC91. Sample size is 29,854. Sample size differs as we use data from a different year. However, the public data from 1989 (the one Hellerstein uses) allow for reproduction of Table 1. For further information see Table 1 notes in <span class="citation">Hellerstein (<a href="#ref-hellerstein_importance_1998" role="doc-biblioref">1998</a>)</span>; With the specifications stated in the manuscript, we cannot reproduce table 1 completely.</p>
+<p>Table 2 shows very similar statistics for the patients of the NAMCSd sample compared to the 1989 data. We observe a smaller sample size in the 1991 data.</p>
+<p><strong>Hellerstein Table 2 - Summary Statistics for Patients in NAMCS Drug Sample</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>Mean</th>
+<th>Standard Deviation</th>
+<th>Proportion Generic</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Age</td>
+<td>43.79</td>
+<td>25.13</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Female</td>
+<td>0.59</td>
+<td>0.49</td>
+<td>0.27</td>
+</tr>
+<tr class="odd">
+<td>Nonwhite</td>
+<td>0.12</td>
+<td>0.32</td>
+<td>0.34</td>
+</tr>
+<tr class="even">
+<td>Hispanic</td>
+<td>0.06</td>
+<td>0.24</td>
+<td>0.33</td>
+</tr>
+<tr class="odd">
+<td>Self-Pay</td>
+<td>0.27</td>
+<td>0.44</td>
+<td>0.29</td>
+</tr>
+<tr class="even">
+<td>Medicare</td>
+<td>0.15</td>
+<td>0.36</td>
+<td>0.21</td>
+</tr>
+<tr class="odd">
+<td>Medicaid</td>
+<td>0.11</td>
+<td>0.31</td>
+<td>0.32</td>
+</tr>
+<tr class="even">
+<td>Private/Commercial</td>
+<td>0.33</td>
+<td>0.47</td>
+<td>0.27</td>
+</tr>
+<tr class="odd">
+<td>HMO/prepaid plan</td>
+<td>0.15</td>
+<td>0.35</td>
+<td>0.34</td>
+</tr>
+<tr class="even">
+<td>Specialist</td>
+<td>0.60</td>
+<td>0.49</td>
+<td>0.26</td>
+</tr>
+<tr class="odd">
+<td>Northeast</td>
+<td>0.21</td>
+<td>0.41</td>
+<td>0.28</td>
+</tr>
+<tr class="even">
+<td>Midwest</td>
+<td>0.27</td>
+<td>0.44</td>
+<td>0.27</td>
+</tr>
+<tr class="odd">
+<td>South</td>
+<td>0.29</td>
+<td>0.46</td>
+<td>0.25</td>
+</tr>
+<tr class="even">
+<td>West</td>
+<td>0.23</td>
+<td>0.42</td>
+<td>0.35</td>
+</tr>
+<tr class="odd">
+<td>Full sample</td>
+<td></td>
+<td></td>
+<td>0.28</td>
+</tr>
+</tbody>
+</table>
+<p>Notes: The sample size is 7,715. For further notes see <span class="citation">Hellerstein (<a href="#ref-hellerstein_importance_1998" role="doc-biblioref">1998</a>)</span>, Data source: NAMSCd91.</p>
+<p>Table 3 shows the absolute number of observations and the share of generics over all drugs as well as the eight largest drug categories. We see an overall similar generic share over all drug classes compared to <span class="citation">Hellerstein (<a href="#ref-hellerstein_importance_1998" role="doc-biblioref">1998</a>)</span>. Yet in the drug class pain relief we see an increase of generic share by about <span class="math inline">\(9\)</span> percentage points.</p>
+<p><strong>Hellerstein Table 3 - Frequency of Generic Prescription by Drug Class</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>Observations</th>
+<th>% Generics</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>All drugs</td>
+<td>7715</td>
+<td>28.37</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>By drug class</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Antimicrobials</td>
+<td>2955</td>
+<td>40.37</td>
+</tr>
+<tr class="odd">
+<td>Cardiovascular-renals</td>
+<td>1344</td>
+<td>16.15</td>
+</tr>
+<tr class="even">
+<td>Central Nervous System</td>
+<td>789</td>
+<td>25.48</td>
+</tr>
+<tr class="odd">
+<td>Hormones/Hormonal mechanisms</td>
+<td>917</td>
+<td>35.66</td>
+</tr>
+<tr class="even">
+<td>Skin/Mucous membrane</td>
+<td>530</td>
+<td>9.06</td>
+</tr>
+<tr class="odd">
+<td>Ophthalmics</td>
+<td>295</td>
+<td>13.90</td>
+</tr>
+<tr class="even">
+<td>Pain relief</td>
+<td>634</td>
+<td>21.29</td>
+</tr>
+<tr class="odd">
+<td>Respiratory tract</td>
+<td>251</td>
+<td>10.76</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>The distribution of physicians over the different generic prescription rates (Figure <a href="#fig:HellFig1"><strong>??</strong></a>) is similar to <span class="citation">Hellerstein (<a href="#ref-hellerstein_importance_1998" role="doc-biblioref">1998</a>)</span>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:HellFigR1"></span>
+<img src="images/Hellerstein_Fig_1.png" alt="Hellerstein Figure 1 - Distribution of Physician Generic Prescription Rates (Source: NAMSCd91)" width="100%" />
+<p class="caption">
+Figure 7.1: Hellerstein Figure 1 - Distribution of Physician Generic Prescription Rates (Source: NAMSCd91)
+</p>
+</div>
+<p><strong>Figure 2</strong></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:HellFigR2"></span>
+<img src="images/Hellerstein_Fig_2.png" alt="Hellerstein Figure 2 - Physician decisions by physicians who prescribe a drug to at least six patients (Source: NAMSCd91)" width="100%" />
+<p class="caption">
+Figure 7.2: Hellerstein Figure 2 - Physician decisions by physicians who prescribe a drug to at least six patients (Source: NAMSCd91)
+</p>
+</div>
+<p>When looking at Figure <a href="#fig:HellFig2"><strong>??</strong></a>, we see a decrease from about 90% to about 50% in <em>“only trade-name”</em> prescriptions by physicians. This seems to be driven by a rather small increase of prescription of <em>“both versions”</em> and <em>“only generics”</em>.</p>
+</div>
+<div id="empirical-analysis" class="section level2">
+<h2><span class="header-section-number">7.2</span> Empirical Analysis</h2>
+<p>Keep in mind that due to data restrictions, we were not able to control for certain covariates that <span class="citation">Hellerstein (<a href="#ref-hellerstein_importance_1998" role="doc-biblioref">1998</a>)</span> includes. An example of such are legislation laws like mandatory or permissive substitution, and one- or two-line prescription. For this reason, we cannot present all tables produced by <span class="citation">Hellerstein (<a href="#ref-hellerstein_importance_1998" role="doc-biblioref">1998</a>)</span>. Given these restrictions, we cannot run the analysis with the same underlying model specifications.</p>
+<p>This restricts us from comparing the results from 1991 and 1989. However, for the completion of this example we present the results from Tables 4, 5 and 6:</p>
+<p><strong>Hellerstein Table 4 - Estimated Coefficients on Demographic Variables, Geographic Variables, and Average Characteristics for Full Sample, excluding regional identifiers</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>Random-Effects Probit Coefficient</th>
+<th></th>
+<th>Percent change in Generic</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Constant</td>
+<td>-0.556**</td>
+<td>(-3.17)</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Age</td>
+<td>-0.002*</td>
+<td>(-1.99)</td>
+<td>-0.001*</td>
+<td>(-1.99)</td>
+</tr>
+<tr class="odd">
+<td>Female</td>
+<td>-0.112**</td>
+<td>(-2.94)</td>
+<td>-0.028**</td>
+<td>(-2.94)</td>
+</tr>
+<tr class="even">
+<td>Hispanic</td>
+<td>0.025</td>
+<td>(0.28)</td>
+<td>0.006</td>
+<td>(0.28)</td>
+</tr>
+<tr class="odd">
+<td>Nonwhite</td>
+<td>0.044</td>
+<td>(0.62)</td>
+<td>0.011</td>
+<td>(0.62)</td>
+</tr>
+<tr class="even">
+<td>Specialist</td>
+<td>0.019</td>
+<td>(0.25)</td>
+<td>0.005</td>
+<td>(0.25)</td>
+</tr>
+<tr class="odd">
+<td>Mean age</td>
+<td>-0.003</td>
+<td>(-1.10)</td>
+<td>-0.001</td>
+<td>(-1.10)</td>
+</tr>
+<tr class="even">
+<td>Percent female</td>
+<td>-0.189</td>
+<td>(-1.16)</td>
+<td>-0.048</td>
+<td>(-1.16)</td>
+</tr>
+<tr class="odd">
+<td>Percent black</td>
+<td>0.075</td>
+<td>(0.41)</td>
+<td>0.019</td>
+<td>(0.41)</td>
+</tr>
+<tr class="even">
+<td>Percent Hispanic</td>
+<td>-0.112</td>
+<td>(-0.45)</td>
+<td>-0.028</td>
+<td>(-0.45)</td>
+</tr>
+<tr class="odd">
+<td>Percent Medicaid</td>
+<td>0.062</td>
+<td>(0.26)</td>
+<td>0.016</td>
+<td>(0.26)</td>
+</tr>
+<tr class="even">
+<td>Percent Medicare</td>
+<td>-0.155</td>
+<td>(-0.71)</td>
+<td>-0.039</td>
+<td>(-0.71)</td>
+</tr>
+<tr class="odd">
+<td>Percent private insured</td>
+<td>0.155</td>
+<td>(1.08)</td>
+<td>0.039</td>
+<td>(1.08)</td>
+</tr>
+<tr class="even">
+<td>Percent HMO/prepaid</td>
+<td>0.054</td>
+<td>(0.30)</td>
+<td>0.014</td>
+<td>(0.30)</td>
+</tr>
+<tr class="odd">
+<td>Midwest</td>
+<td>-0.141</td>
+<td>(-1.53)</td>
+<td>-0.036</td>
+<td>(-1.53)</td>
+</tr>
+<tr class="even">
+<td>South</td>
+<td>-0.206*</td>
+<td>(-2.28)</td>
+<td>-0.052*</td>
+<td>(-2.29)</td>
+</tr>
+<tr class="odd">
+<td>West</td>
+<td>0.065</td>
+<td>(0.67)</td>
+<td>0.016</td>
+<td>(0.67)</td>
+</tr>
+</tbody>
+</table>
+<p>Notes: <span class="math inline">\(*p &lt; 0.05, **p &lt; 0.01, ***p &lt; 0.001\)</span>; The sample size is 7,715. For further notes see <span class="citation">Hellerstein (<a href="#ref-hellerstein_importance_1998" role="doc-biblioref">1998</a>)</span>. Data source: NAMSCd91.</p>
+<p>Table 5 shows the estimated coefficients for the eight largest drug classes as well as the % change in the generic share. The greatest change compared to <span class="citation">Hellerstein (<a href="#ref-hellerstein_importance_1998" role="doc-biblioref">1998</a>)</span> is the change in sign from positive to negative for cardiovascular/renals, though not significant in our model.</p>
+<p><strong>Hellerstein Table 5 - Estimated Coefficients for Drug-Class Dummy Variable for Full Sample</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>Random-Effects Probit Coefficient</th>
+<th></th>
+<th>% Change in Generic</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>main</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Antimicrobials</td>
+<td>0.628***</td>
+<td>(8.47)</td>
+<td>0.159***</td>
+<td>(8.54)</td>
+</tr>
+<tr class="odd">
+<td>Cardiovascular-renals</td>
+<td>-0.147</td>
+<td>(-1.71)</td>
+<td>-0.0371</td>
+<td>(-1.71)</td>
+</tr>
+<tr class="even">
+<td>Central Nervous System</td>
+<td>0.0559</td>
+<td>(0.58)</td>
+<td>0.0141</td>
+<td>(0.58)</td>
+</tr>
+<tr class="odd">
+<td>Hormones/Hormonal mechanisms</td>
+<td>0.584***</td>
+<td>(6.92)</td>
+<td>0.148***</td>
+<td>(6.95)</td>
+</tr>
+<tr class="even">
+<td>Skin/Mucous membrane</td>
+<td>-0.731***</td>
+<td>(-6.26)</td>
+<td>-0.185***</td>
+<td>(-6.28)</td>
+</tr>
+<tr class="odd">
+<td>Ophthalmics</td>
+<td>-0.383*</td>
+<td>(-2.47)</td>
+<td>-0.0968*</td>
+<td>(-2.47)</td>
+</tr>
+<tr class="even">
+<td>Resperatory tract</td>
+<td>-0.675***</td>
+<td>(-4.79)</td>
+<td>-0.171***</td>
+<td>(-4.80)</td>
+</tr>
+</tbody>
+</table>
+<p>Notes: <span class="math inline">\(*p &lt; 0.05, **p &lt; 0.01, ***p &lt; 0.001\)</span>; The sample size is 7,715. Omitted category is pain relief. For further notes see <span class="citation">Hellerstein (<a href="#ref-hellerstein_importance_1998" role="doc-biblioref">1998</a>)</span>. Data source: NAMSCd91.</p>
+<p><strong>Hellerstein Table 6 - Tests for Moral Hazard for the Full Sample Equality of Individual Insurance Variables with Self-Payment Random-Effects Probit Results</strong></p>
+<table>
+<colgroup>
+<col width="5%" />
+<col width="5%" />
+<col width="5%" />
+<col width="6%" />
+<col width="5%" />
+<col width="8%" />
+<col width="5%" />
+<col width="4%" />
+<col width="5%" />
+<col width="8%" />
+<col width="5%" />
+<col width="5%" />
+<col width="5%" />
+<col width="5%" />
+<col width="5%" />
+<col width="7%" />
+<col width="5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Antimicrobial</th>
+<th>% change</th>
+<th>Cardiovasculars</th>
+<th>% change</th>
+<th>Central Nervous System</th>
+<th>% change</th>
+<th>Hormones</th>
+<th>% change</th>
+<th>Skin/Muchous Membranes</th>
+<th>% change</th>
+<th>Ophthalmics</th>
+<th>% change</th>
+<th>Pain relief</th>
+<th>% change</th>
+<th>Respiratory Tract</th>
+<th>% change</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Medicaid</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Coefficient</td>
+<td>0.14</td>
+<td>0.04</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.02</td>
+<td>0.00</td>
+<td>0.38</td>
+<td>0.08</td>
+<td>0.03</td>
+<td>0.00</td>
+<td>-0.25</td>
+<td>-0.05</td>
+<td>0.54</td>
+<td>0.08</td>
+<td>-1.21</td>
+<td>-0.09</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>1.12</td>
+<td>1.13</td>
+<td>0.02</td>
+<td>0.02</td>
+<td>0.08</td>
+<td>0.08</td>
+<td>1.23</td>
+<td>1.23</td>
+<td>0.04</td>
+<td>0.04</td>
+<td>-0.60</td>
+<td>-0.60</td>
+<td>1.12</td>
+<td>1.15</td>
+<td>-1.08</td>
+<td>-1.11</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Medicare</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Coefficient</td>
+<td>0.11</td>
+<td>0.03</td>
+<td>0.05</td>
+<td>0.01</td>
+<td>-0.32</td>
+<td>-0.06</td>
+<td>-0.42</td>
+<td>-0.09</td>
+<td>0.54</td>
+<td>0.05</td>
+<td>-0.41</td>
+<td>-0.08</td>
+<td>0.08</td>
+<td>0.01</td>
+<td>-0.60</td>
+<td>-0.05</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>0.72</td>
+<td>0.72</td>
+<td>0.25</td>
+<td>0.25</td>
+<td>-1.13</td>
+<td>-1.12</td>
+<td>-1.68</td>
+<td>-1.69</td>
+<td>0.89</td>
+<td>0.90</td>
+<td>-0.97</td>
+<td>-0.97</td>
+<td>0.18</td>
+<td>0.18</td>
+<td>-0.67</td>
+<td>-0.68</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Private</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Coefficient</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>-0.06</td>
+<td>-0.01</td>
+<td>-0.06</td>
+<td>-0.01</td>
+<td>-0.16</td>
+<td>-0.03</td>
+<td>0.03</td>
+<td>0.00</td>
+<td>-0.31</td>
+<td>-0.06</td>
+<td>0.18</td>
+<td>0.03</td>
+<td>-1.27</td>
+<td>-0.10</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>0.01</td>
+<td>0.01</td>
+<td>-0.30</td>
+<td>-0.30</td>
+<td>-0.28</td>
+<td>-0.28</td>
+<td>-0.75</td>
+<td>-0.75</td>
+<td>0.07</td>
+<td>0.07</td>
+<td>-0.91</td>
+<td>-0.91</td>
+<td>0.51</td>
+<td>0.51</td>
+<td>-1.45</td>
+<td>-1.56</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>HMO/Prepaid</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Coefficient</td>
+<td>0.22</td>
+<td>0.06</td>
+<td>-0.14</td>
+<td>-0.03</td>
+<td>0.32</td>
+<td>0.06</td>
+<td>-0.33</td>
+<td>-0.07</td>
+<td>-0.42</td>
+<td>-0.04</td>
+<td>-0.57</td>
+<td>-0.11</td>
+<td>0.28</td>
+<td>0.04</td>
+<td>-0.26</td>
+<td>-0.02</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>1.78</td>
+<td>1.78</td>
+<td>-0.56</td>
+<td>-0.56</td>
+<td>1.04</td>
+<td>1.05</td>
+<td>-1.09</td>
+<td>-1.09</td>
+<td>-0.73</td>
+<td>-0.73</td>
+<td>-0.93</td>
+<td>-0.93</td>
+<td>0.71</td>
+<td>0.72</td>
+<td>-0.26</td>
+<td>-0.25</td>
+</tr>
+</tbody>
+</table>
+<p>Notes: see <span class="citation">Hellerstein (<a href="#ref-hellerstein_importance_1998" role="doc-biblioref">1998</a>)</span>. Data source: NAMSCd91.</p>
+
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-hellerstein_importance_1998">
+<p>Hellerstein, Judith K. 1998. “The Importance of the Physician in the Generic Versus Trade-Name Prescription Decision.” <em>The RAND Journal of Economics</em> 29 (1): 108–36. <a href="https://doi.org/10.2307/2555818">https://doi.org/10.2307/2555818</a>.</p>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-
+<a href="report-study.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="stata-replication-code-of-hellerstein-1998.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

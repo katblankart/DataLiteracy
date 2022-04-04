@@ -113,3 +113,8 @@ stata-replication-code-of-hellerstein-1998
 A1
 A2
 A3
+image-sources
+example-hellerstein_importance_1998
+example-hellerstein_importance_1998-1
+example-hellerstein_importance_1998-2
+replication-results-of-hellerstein_importance_1998
