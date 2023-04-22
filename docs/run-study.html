@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 4 Running the study and collecting the data | A concise guide to reproducible research using secondary data</title>
   <meta name="description" content="Chapter 4 Running the study and collecting the data | A concise guide to reproducible research using secondary data in health economics and management" />
-  <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 4 Running the study and collecting the data | A concise guide to reproducible research using secondary data" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Chapter 4 Running the study and collecting the data | A concise guide to reproducible research using secondary data in health economics and management" />
   
@@ -24,7 +23,7 @@
 <meta name="author" content="Katharina Blankart, Maryna Ivets, Eva Goetjes, Kai Miele" />
 
 
-<meta name="date" content="2022-04-04" />
+<meta name="date" content="2023-04-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,6 +33,7 @@
 <link rel="prev" href="designstudy.html"/>
 <link rel="next" href="analyzing.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -49,12 +49,34 @@
 
 
 
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
 
-
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -72,109 +94,131 @@
 <li><a href="./">Reproducible research using 2ndary data</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a>
+<ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#objective"><i class="fa fa-check"></i>Objective</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#learning-objectives"><i class="fa fa-check"></i>Learning objectives</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#structure-of-the-study-guide"><i class="fa fa-check"></i>Structure of the study guide</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#this-is-a-living-document"><i class="fa fa-check"></i>This is a living document</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction to Reproducible Research</a><ul>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction to Reproducible Research</a>
+<ul>
 <li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#what-is-reproducible-research"><i class="fa fa-check"></i><b>1.1</b> What is reproducible research?</a></li>
-<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#why-you-as-a-student-and-researcher-should-care-about-reproducible-research"><i class="fa fa-check"></i><b>1.2</b> Why you, as a student and researcher, should care about reproducible research?</a><ul>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#why-you-as-a-student-and-researcher-should-care-about-reproducible-research"><i class="fa fa-check"></i><b>1.2</b> Why you, as a student and researcher, should care about reproducible research?</a>
+<ul>
 <li class="chapter" data-level="1.2.1" data-path="intro.html"><a href="intro.html#avoid-common-biases-that-lead-to-biased-or-false-research-results"><i class="fa fa-check"></i><b>1.2.1</b> Avoid common biases that lead to biased or false research results</a></li>
 <li class="chapter" data-level="1.2.2" data-path="intro.html"><a href="intro.html#increase-productivity-of-your-work-and-the-work-of-the-scientific-community-by-performing-reproducible-research"><i class="fa fa-check"></i><b>1.2.2</b> Increase productivity of your work and the work of the scientific community by performing reproducible research</a></li>
 </ul></li>
 <li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#main-steps-to-generate-reproducible-research"><i class="fa fa-check"></i><b>1.3</b> Main steps to generate reproducible research</a></li>
 <li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#secondary-health-care-data"><i class="fa fa-check"></i><b>1.4</b> Secondary (health care) data</a></li>
-<li class="chapter" data-level="1.5" data-path="intro.html"><a href="intro.html#creating-an-environment-for-productive-research-projects"><i class="fa fa-check"></i><b>1.5</b> Creating an environment for productive research projects</a><ul>
+<li class="chapter" data-level="1.5" data-path="intro.html"><a href="intro.html#creating-an-environment-for-productive-research-projects"><i class="fa fa-check"></i><b>1.5</b> Creating an environment for productive research projects</a>
+<ul>
 <li class="chapter" data-level="1.5.1" data-path="intro.html"><a href="intro.html#consider-using-agile-methods-to-organize-your-workflow-and-tasks"><i class="fa fa-check"></i><b>1.5.1</b> Consider using agile methods to organize your workflow and tasks</a></li>
 <li class="chapter" data-level="1.5.2" data-path="intro.html"><a href="intro.html#collaborate-with-others-and-get-feedback"><i class="fa fa-check"></i><b>1.5.2</b> Collaborate with others and get feedback</a></li>
 </ul></li>
 <li class="chapter" data-level="1.6" data-path="intro.html"><a href="intro.html#resources-box"><i class="fa fa-check"></i><b>1.6</b> Resources Box</a></li>
 <li class="chapter" data-level="1.7" data-path="intro.html"><a href="intro.html#checklist-to-get-started-with-your-reproducible-project"><i class="fa fa-check"></i><b>1.7</b> Checklist to get started with your reproducible project</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="hypothesis.html"><a href="hypothesis.html"><i class="fa fa-check"></i><b>2</b> Formulating a hypothesis</a><ul>
+<li class="chapter" data-level="2" data-path="hypothesis.html"><a href="hypothesis.html"><i class="fa fa-check"></i><b>2</b> Formulating a hypothesis</a>
+<ul>
 <li class="chapter" data-level="2.1" data-path="hypothesis.html"><a href="hypothesis.html#how-do-you-develop-a-research-question-and-formulate-a-hypothesis"><i class="fa fa-check"></i><b>2.1</b> How do you develop a research question and formulate a hypothesis?</a></li>
-<li class="chapter" data-level="2.2" data-path="hypothesis.html"><a href="hypothesis.html#what-is-a-hypothesis"><i class="fa fa-check"></i><b>2.2</b> What is a hypothesis?</a><ul>
+<li class="chapter" data-level="2.2" data-path="hypothesis.html"><a href="hypothesis.html#what-is-a-hypothesis"><i class="fa fa-check"></i><b>2.2</b> What is a hypothesis?</a>
+<ul>
 <li class="chapter" data-level="2.2.1" data-path="hypothesis.html"><a href="hypothesis.html#develop-a-hypothesis"><i class="fa fa-check"></i><b>2.2.1</b> Develop a hypothesis</a></li>
 <li class="chapter" data-level="2.2.2" data-path="hypothesis.html"><a href="hypothesis.html#identify-relevant-literature"><i class="fa fa-check"></i><b>2.2.2</b> Identify relevant literature</a></li>
 <li class="chapter" data-level="2.2.3" data-path="hypothesis.html"><a href="hypothesis.html#research-question-or-literature-review-the-chicken-or-the-egg-problem"><i class="fa fa-check"></i><b>2.2.3</b> Research question or literature review: the chicken or the egg problem?</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="hypothesis.html"><a href="hypothesis.html#resources-box-1"><i class="fa fa-check"></i><b>2.3</b> Resources box</a><ul>
+<li class="chapter" data-level="2.3" data-path="hypothesis.html"><a href="hypothesis.html#resources-box-1"><i class="fa fa-check"></i><b>2.3</b> Resources box</a>
+<ul>
 <li class="chapter" data-level="2.3.1" data-path="hypothesis.html"><a href="hypothesis.html#how-to-develop-strong-research-questions"><i class="fa fa-check"></i><b>2.3.1</b> How to develop strong research questions</a></li>
 <li class="chapter" data-level="2.3.2" data-path="hypothesis.html"><a href="hypothesis.html#identify-relevant-literature-from-major-general-interest-and-field-literature"><i class="fa fa-check"></i><b>2.3.2</b> Identify relevant literature from major general interest and field literature</a></li>
 <li class="chapter" data-level="2.3.3" data-path="hypothesis.html"><a href="hypothesis.html#assess-the-quality-of-a-journal-article"><i class="fa fa-check"></i><b>2.3.3</b> Assess the quality of a journal article</a></li>
 <li class="chapter" data-level="2.3.4" data-path="hypothesis.html"><a href="hypothesis.html#organize-your-literature"><i class="fa fa-check"></i><b>2.3.4</b> Organize your literature</a></li>
 </ul></li>
 <li class="chapter" data-level="2.4" data-path="hypothesis.html"><a href="hypothesis.html#checklist-to-get-started-with-formulating-your-hypothesis"><i class="fa fa-check"></i><b>2.4</b> Checklist to get started with formulating your hypothesis</a></li>
-<li class="chapter" data-level="2.5" data-path="hypothesis.html"><a href="hypothesis.html#example-hellerstein_importance_1998"><i class="fa fa-check"></i><b>2.5</b> Example: <span class="citation">Hellerstein (<span>1998</span>)</span></a><ul>
+<li class="chapter" data-level="2.5" data-path="hypothesis.html"><a href="hypothesis.html#example-hellerstein_importance_1998"><i class="fa fa-check"></i><b>2.5</b> Example: <span class="citation">Hellerstein (1998)</span></a>
+<ul>
 <li class="chapter" data-level="2.5.1" data-path="hypothesis.html"><a href="hypothesis.html#context-of-the-study---escalating-health-expenditures"><i class="fa fa-check"></i><b>2.5.1</b> <strong>Context of the study - escalating health expenditures</strong></a></li>
 <li class="chapter" data-level="2.5.2" data-path="hypothesis.html"><a href="hypothesis.html#research-question---how-does-a-patients-insurance-status-influence-the-physicians-choice-between-generic-compared-to-brand-name-drugs"><i class="fa fa-check"></i><b>2.5.2</b> <strong>Research question - How does a patient’s insurance status influence the physician’s choice between generic compared to brand-name drugs?</strong></a></li>
 <li class="chapter" data-level="2.5.3" data-path="hypothesis.html"><a href="hypothesis.html#hypothesis-1"><i class="fa fa-check"></i><b>2.5.3</b> <strong>Hypothesis</strong></a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="designstudy.html"><a href="designstudy.html"><i class="fa fa-check"></i><b>3</b> Designing the Study</a><ul>
-<li class="chapter" data-level="3.1" data-path="designstudy.html"><a href="designstudy.html#basic-steps-in-designing-your-study"><i class="fa fa-check"></i><b>3.1</b> Basic steps in designing your study</a><ul>
+<li class="chapter" data-level="3" data-path="designstudy.html"><a href="designstudy.html"><i class="fa fa-check"></i><b>3</b> Designing the Study</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="designstudy.html"><a href="designstudy.html#basic-steps-in-designing-your-study"><i class="fa fa-check"></i><b>3.1</b> Basic steps in designing your study</a>
+<ul>
 <li class="chapter" data-level="3.1.1" data-path="designstudy.html"><a href="designstudy.html#potential-outcomes-framework"><i class="fa fa-check"></i><b>3.1.1</b> Potential Outcomes Framework</a></li>
 <li class="chapter" data-level="3.1.2" data-path="designstudy.html"><a href="designstudy.html#directed-acyclic-graphs"><i class="fa fa-check"></i><b>3.1.2</b> Directed Acyclic Graphs</a></li>
 <li class="chapter" data-level="3.1.3" data-path="designstudy.html"><a href="designstudy.html#develop-a-causal-model-and-identify-estimable-effects"><i class="fa fa-check"></i><b>3.1.3</b> Develop a causal model and identify estimable effects</a></li>
 <li class="chapter" data-level="3.1.4" data-path="designstudy.html"><a href="designstudy.html#develop-the-empirical-strategy-to-investigate-causal-effects"><i class="fa fa-check"></i><b>3.1.4</b> Develop the empirical strategy to investigate causal effects</a></li>
 <li class="chapter" data-level="3.1.5" data-path="designstudy.html"><a href="designstudy.html#investigate-suitable-source-data"><i class="fa fa-check"></i><b>3.1.5</b> Investigate suitable source data</a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="designstudy.html"><a href="designstudy.html#resources-box-2"><i class="fa fa-check"></i><b>3.2</b> Resources box</a><ul>
-<li class="chapter" data-level="3.2.1" data-path="designstudy.html"><a href="designstudy.html#key-terminology-in-causal-inference-based-on-matthay_alternative_2020"><i class="fa fa-check"></i><b>3.2.1</b> Key terminology in causal inference based on <span class="citation">Matthay et al. (<span>2020</span>)</span></a></li>
+<li class="chapter" data-level="3.2" data-path="designstudy.html"><a href="designstudy.html#resources-box-2"><i class="fa fa-check"></i><b>3.2</b> Resources box</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="designstudy.html"><a href="designstudy.html#key-terminology-in-causal-inference-based-on-matthay_alternative_2020"><i class="fa fa-check"></i><b>3.2.1</b> Key terminology in causal inference based on <span class="citation">Matthay et al. (2020)</span></a></li>
 <li class="chapter" data-level="3.2.2" data-path="designstudy.html"><a href="designstudy.html#openly-available-textbooks-and-resources-on-econometrics-with-a-causal-inference-focus"><i class="fa fa-check"></i><b>3.2.2</b> Openly available textbooks and resources on econometrics with a causal inference focus</a></li>
 <li class="chapter" data-level="3.2.3" data-path="designstudy.html"><a href="designstudy.html#ladders-of-causality-and-directed-acyclic-graphs"><i class="fa fa-check"></i><b>3.2.3</b> Ladders of causality and directed acyclic graphs</a></li>
 <li class="chapter" data-level="3.2.4" data-path="designstudy.html"><a href="designstudy.html#potential-outcomes-framework-notation"><i class="fa fa-check"></i><b>3.2.4</b> Potential outcomes framework notation</a></li>
 </ul></li>
 <li class="chapter" data-level="3.3" data-path="designstudy.html"><a href="designstudy.html#checklist-to-get-started-with-designing-your-study"><i class="fa fa-check"></i><b>3.3</b> Checklist to get started with designing your study</a></li>
-<li class="chapter" data-level="3.4" data-path="designstudy.html"><a href="designstudy.html#example-hellerstein_importance_1998-1"><i class="fa fa-check"></i><b>3.4</b> Example: <span class="citation">Hellerstein (<span>1998</span>)</span></a></li>
+<li class="chapter" data-level="3.4" data-path="designstudy.html"><a href="designstudy.html#example-hellerstein_importance_1998-1"><i class="fa fa-check"></i><b>3.4</b> Example: <span class="citation">Hellerstein (1998)</span></a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="run-study.html"><a href="run-study.html"><i class="fa fa-check"></i><b>4</b> Running the study and collecting the data</a><ul>
-<li class="chapter" data-level="4.1" data-path="run-study.html"><a href="run-study.html#basic-steps-when-collecting-the-data"><i class="fa fa-check"></i><b>4.1</b> Basic steps when collecting the data</a><ul>
+<li class="chapter" data-level="4" data-path="run-study.html"><a href="run-study.html"><i class="fa fa-check"></i><b>4</b> Running the study and collecting the data</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="run-study.html"><a href="run-study.html#basic-steps-when-collecting-the-data"><i class="fa fa-check"></i><b>4.1</b> Basic steps when collecting the data</a>
+<ul>
 <li class="chapter" data-level="4.1.1" data-path="run-study.html"><a href="run-study.html#identify-secondary-data-sources"><i class="fa fa-check"></i><b>4.1.1</b> Identify secondary data sources</a></li>
 <li class="chapter" data-level="4.1.2" data-path="run-study.html"><a href="run-study.html#develop-a-data-collection-and-analysis-plan"><i class="fa fa-check"></i><b>4.1.2</b> Develop a data collection and analysis plan</a></li>
 <li class="chapter" data-level="4.1.3" data-path="run-study.html"><a href="run-study.html#obtain-access-to-source-data-or-generate-the-data"><i class="fa fa-check"></i><b>4.1.3</b> Obtain access to source data or generate the data</a></li>
 </ul></li>
-<li class="chapter" data-level="4.2" data-path="run-study.html"><a href="run-study.html#basic-steps-when-processing-and-preparing-the-data"><i class="fa fa-check"></i><b>4.2</b> Basic steps when processing and preparing the data</a><ul>
+<li class="chapter" data-level="4.2" data-path="run-study.html"><a href="run-study.html#basic-steps-when-processing-and-preparing-the-data"><i class="fa fa-check"></i><b>4.2</b> Basic steps when processing and preparing the data</a>
+<ul>
 <li class="chapter" data-level="4.2.1" data-path="run-study.html"><a href="run-study.html#generate-the-analysis-dataset"><i class="fa fa-check"></i><b>4.2.1</b> Generate the analysis dataset</a></li>
 </ul></li>
-<li class="chapter" data-level="4.3" data-path="run-study.html"><a href="run-study.html#resources-box-3"><i class="fa fa-check"></i><b>4.3</b> Resources Box</a><ul>
+<li class="chapter" data-level="4.3" data-path="run-study.html"><a href="run-study.html#resources-box-3"><i class="fa fa-check"></i><b>4.3</b> Resources Box</a>
+<ul>
 <li class="chapter" data-level="4.3.1" data-path="run-study.html"><a href="run-study.html#how-to-organize-your-research-project"><i class="fa fa-check"></i><b>4.3.1</b> How to organize your research project:</a></li>
 <li class="chapter" data-level="4.3.2" data-path="run-study.html"><a href="run-study.html#coding-practices-best-practices-for-data-and-code-management-in-projects"><i class="fa fa-check"></i><b>4.3.2</b> Coding practices: Best Practices for Data and Code Management in Projects</a></li>
 <li class="chapter" data-level="4.3.3" data-path="run-study.html"><a href="run-study.html#data-cleaning"><i class="fa fa-check"></i><b>4.3.3</b> Data cleaning</a></li>
 <li class="chapter" data-level="4.3.4" data-path="run-study.html"><a href="run-study.html#collecting-data-from-meta-data-and-web-scraping"><i class="fa fa-check"></i><b>4.3.4</b> Collecting data from meta-data and web-scraping</a></li>
 </ul></li>
 <li class="chapter" data-level="4.4" data-path="run-study.html"><a href="run-study.html#checklist-to-running-the-study-and-collecting-the-data"><i class="fa fa-check"></i><b>4.4</b> Checklist to running the study and collecting the data</a></li>
-<li class="chapter" data-level="4.5" data-path="run-study.html"><a href="run-study.html#example-hellerstein_importance_1998-2"><i class="fa fa-check"></i><b>4.5</b> Example: <span class="citation">Hellerstein (<span>1998</span>)</span></a></li>
+<li class="chapter" data-level="4.5" data-path="run-study.html"><a href="run-study.html#example-hellerstein_importance_1998-2"><i class="fa fa-check"></i><b>4.5</b> Example: <span class="citation">Hellerstein (1998)</span></a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="analyzing.html"><a href="analyzing.html"><i class="fa fa-check"></i><b>5</b> Analyzing the Data</a><ul>
-<li class="chapter" data-level="5.1" data-path="analyzing.html"><a href="analyzing.html#basic-steps-when-analyzing-the-data"><i class="fa fa-check"></i><b>5.1</b> Basic steps when analyzing the data</a><ul>
+<li class="chapter" data-level="5" data-path="analyzing.html"><a href="analyzing.html"><i class="fa fa-check"></i><b>5</b> Analyzing the Data</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="analyzing.html"><a href="analyzing.html#basic-steps-when-analyzing-the-data"><i class="fa fa-check"></i><b>5.1</b> Basic steps when analyzing the data</a>
+<ul>
 <li class="chapter" data-level="5.1.1" data-path="analyzing.html"><a href="analyzing.html#describe-your-data-assess-validity-and-plausiblity"><i class="fa fa-check"></i><b>5.1.1</b> Describe your data, assess validity and plausiblity</a></li>
 <li class="chapter" data-level="5.1.2" data-path="analyzing.html"><a href="analyzing.html#generate-estimates-of-your-investigated-effect-using-regression-techniques"><i class="fa fa-check"></i><b>5.1.2</b> Generate estimates of your investigated effect using regression techniques</a></li>
 </ul></li>
 <li class="chapter" data-level="5.2" data-path="analyzing.html"><a href="analyzing.html#resources-box-4"><i class="fa fa-check"></i><b>5.2</b> Resources box</a></li>
 <li class="chapter" data-level="5.3" data-path="analyzing.html"><a href="analyzing.html#checklist-to-analyzing-the-data"><i class="fa fa-check"></i><b>5.3</b> Checklist to analyzing the data</a></li>
-<li class="chapter" data-level="5.4" data-path="analyzing.html"><a href="analyzing.html#example-hellerstein-1998"><i class="fa fa-check"></i><b>5.4</b> Example: Hellerstein (1998)</a><ul>
+<li class="chapter" data-level="5.4" data-path="analyzing.html"><a href="analyzing.html#example-hellerstein-1998"><i class="fa fa-check"></i><b>5.4</b> Example: Hellerstein (1998)</a>
+<ul>
 <li class="chapter" data-level="5.4.1" data-path="analyzing.html"><a href="analyzing.html#describe-your-data-assess-validity-and-plausiblity-1"><i class="fa fa-check"></i><b>5.4.1</b> Describe your data, assess validity and plausiblity</a></li>
 <li class="chapter" data-level="5.4.2" data-path="analyzing.html"><a href="analyzing.html#generate-estimates-of-your-investigated-effect-using-regression-techniques-1"><i class="fa fa-check"></i><b>5.4.2</b> Generate estimates of your investigated effect using regression techniques</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="report-study.html"><a href="report-study.html"><i class="fa fa-check"></i><b>6</b> Reporting the Study</a><ul>
-<li class="chapter" data-level="6.1" data-path="report-study.html"><a href="report-study.html#basic-steps-to-reporting-the-study"><i class="fa fa-check"></i><b>6.1</b> Basic steps to reporting the study</a><ul>
-<li class="chapter" data-level="6.1.1" data-path="report-study.html"><a href="report-study.html#the-writing-process-tips-based-on-cochrane_writing_2005-and-dudenhefer_guide_2014"><i class="fa fa-check"></i><b>6.1.1</b> The writing process, tips based on <span class="citation">Cochrane (<span>2005</span>)</span> and <span class="citation">Dudenhefer (<span>2014</span>)</span></a></li>
+<li class="chapter" data-level="6" data-path="report-study.html"><a href="report-study.html"><i class="fa fa-check"></i><b>6</b> Reporting the Study</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="report-study.html"><a href="report-study.html#basic-steps-to-reporting-the-study"><i class="fa fa-check"></i><b>6.1</b> Basic steps to reporting the study</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="report-study.html"><a href="report-study.html#the-writing-process-tips-based-on-cochrane_writing_2005-and-dudenhefer_guide_2014"><i class="fa fa-check"></i><b>6.1.1</b> The writing process, tips based on <span class="citation">Cochrane (2005)</span> and <span class="citation">Dudenhefer (2014)</span></a></li>
 <li class="chapter" data-level="6.1.2" data-path="report-study.html"><a href="report-study.html#general-guidance-on-writing-and-use-of-language-in-a-research-paper"><i class="fa fa-check"></i><b>6.1.2</b> General guidance on writing and use of language in a research paper</a></li>
-<li class="chapter" data-level="6.1.3" data-path="report-study.html"><a href="report-study.html#tables-tips-based-on-cochrane_writing_2005"><i class="fa fa-check"></i><b>6.1.3</b> Tables, tips based on <span class="citation">Cochrane (<span>2005</span>)</span></a></li>
-<li class="chapter" data-level="6.1.4" data-path="report-study.html"><a href="report-study.html#figures-tips-based-on-cochrane_writing_2005"><i class="fa fa-check"></i><b>6.1.4</b> Figures, tips based on <span class="citation">Cochrane (<span>2005</span>)</span></a></li>
+<li class="chapter" data-level="6.1.3" data-path="report-study.html"><a href="report-study.html#tables-tips-based-on-cochrane_writing_2005"><i class="fa fa-check"></i><b>6.1.3</b> Tables, tips based on <span class="citation">Cochrane (2005)</span></a></li>
+<li class="chapter" data-level="6.1.4" data-path="report-study.html"><a href="report-study.html#figures-tips-based-on-cochrane_writing_2005"><i class="fa fa-check"></i><b>6.1.4</b> Figures, tips based on <span class="citation">Cochrane (2005)</span></a></li>
 </ul></li>
-<li class="chapter" data-level="6.2" data-path="report-study.html"><a href="report-study.html#resources-box-5"><i class="fa fa-check"></i><b>6.2</b> Resources box</a><ul>
+<li class="chapter" data-level="6.2" data-path="report-study.html"><a href="report-study.html#resources-box-5"><i class="fa fa-check"></i><b>6.2</b> Resources box</a>
+<ul>
 <li class="chapter" data-level="6.2.1" data-path="report-study.html"><a href="report-study.html#collections-of-writing-tips-and-short-articles"><i class="fa fa-check"></i><b>6.2.1</b> Collections of writing tips and short articles</a></li>
 <li class="chapter" data-level="6.2.2" data-path="report-study.html"><a href="report-study.html#books"><i class="fa fa-check"></i><b>6.2.2</b> Books</a></li>
 <li class="chapter" data-level="6.2.3" data-path="report-study.html"><a href="report-study.html#videos"><i class="fa fa-check"></i><b>6.2.3</b> Videos</a></li>
 <li class="chapter" data-level="6.2.4" data-path="report-study.html"><a href="report-study.html#online-resource"><i class="fa fa-check"></i><b>6.2.4</b> Online resource</a></li>
 </ul></li>
 <li class="chapter" data-level="6.3" data-path="report-study.html"><a href="report-study.html#checklist-to-reporting-the-study"><i class="fa fa-check"></i><b>6.3</b> Checklist to reporting the study</a></li>
-<li class="chapter" data-level="6.4" data-path="report-study.html"><a href="report-study.html#example-hellerstein-1998-1"><i class="fa fa-check"></i><b>6.4</b> Example: Hellerstein (1998)</a><ul>
+<li class="chapter" data-level="6.4" data-path="report-study.html"><a href="report-study.html#example-hellerstein-1998-1"><i class="fa fa-check"></i><b>6.4</b> Example: Hellerstein (1998)</a>
+<ul>
 <li class="chapter" data-level="6.4.1" data-path="report-study.html"><a href="report-study.html#title"><i class="fa fa-check"></i><b>6.4.1</b> Title</a></li>
 <li class="chapter" data-level="6.4.2" data-path="report-study.html"><a href="report-study.html#abstract"><i class="fa fa-check"></i><b>6.4.2</b> Abstract</a></li>
 <li class="chapter" data-level="6.4.3" data-path="report-study.html"><a href="report-study.html#introduction-1"><i class="fa fa-check"></i><b>6.4.3</b> Introduction</a></li>
@@ -188,11 +232,13 @@
 <li class="chapter" data-level="6.4.11" data-path="report-study.html"><a href="report-study.html#references"><i class="fa fa-check"></i><b>6.4.11</b> References</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="replication-results-of-hellerstein_importance_1998.html"><a href="replication-results-of-hellerstein_importance_1998.html"><i class="fa fa-check"></i><b>7</b> Replication results of <span class="citation">Hellerstein (<span>1998</span>)</span></a><ul>
+<li class="chapter" data-level="7" data-path="replication-results-of-hellerstein_importance_1998.html"><a href="replication-results-of-hellerstein_importance_1998.html"><i class="fa fa-check"></i><b>7</b> Replication results of <span class="citation">Hellerstein (1998)</span></a>
+<ul>
 <li class="chapter" data-level="7.1" data-path="replication-results-of-hellerstein_importance_1998.html"><a href="replication-results-of-hellerstein_importance_1998.html#descriptive-analysis"><i class="fa fa-check"></i><b>7.1</b> Descriptive Analysis</a></li>
 <li class="chapter" data-level="7.2" data-path="replication-results-of-hellerstein_importance_1998.html"><a href="replication-results-of-hellerstein_importance_1998.html#empirical-analysis"><i class="fa fa-check"></i><b>7.2</b> Empirical Analysis</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="stata-replication-code-of-hellerstein-1998.html"><a href="stata-replication-code-of-hellerstein-1998.html"><i class="fa fa-check"></i><b>8</b> Stata replication code of Hellerstein (1998)</a><ul>
+<li class="chapter" data-level="8" data-path="stata-replication-code-of-hellerstein-1998.html"><a href="stata-replication-code-of-hellerstein-1998.html"><i class="fa fa-check"></i><b>8</b> Stata replication code of Hellerstein (1998)</a>
+<ul>
 <li class="chapter" data-level="8.1" data-path="stata-replication-code-of-hellerstein-1998.html"><a href="stata-replication-code-of-hellerstein-1998.html#A1"><i class="fa fa-check"></i><b>8.1</b> Preparing the analysis dataset</a></li>
 <li class="chapter" data-level="8.2" data-path="stata-replication-code-of-hellerstein-1998.html"><a href="stata-replication-code-of-hellerstein-1998.html#A2"><i class="fa fa-check"></i><b>8.2</b> Descriptive statistics</a></li>
 <li class="chapter" data-level="8.3" data-path="stata-replication-code-of-hellerstein-1998.html"><a href="stata-replication-code-of-hellerstein-1998.html#A3"><i class="fa fa-check"></i><b>8.3</b> Empirical analyses and tables</a></li>
@@ -218,13 +264,13 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="run-study" class="section level1">
-<h1><span class="header-section-number">Chapter 4</span> Running the study and collecting the data</h1>
+<div id="run-study" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Chapter 4</span> Running the study and collecting the data<a href="run-study.html#run-study" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p><img src="images/kaleidico-26MJGnCM0Wc-unsplash.jpg" width="100%" style="display: block; margin: auto;" /></p>
 <!--C:/Users/KFischer/sciebo/Date Literacy Project/06 Manuscript/bookdown/DataLiteracy/_book/DataLiteracy_files/figure-html-->
 <p>In this chapter we specify how to collect and use the data. As this study guide focuses on secondary data, you need to identify relevant data sources, obtain the source data and process them.</p>
-<div id="basic-steps-when-collecting-the-data" class="section level2">
-<h2><span class="header-section-number">4.1</span> Basic steps when collecting the data</h2>
+<div id="basic-steps-when-collecting-the-data" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Basic steps when collecting the data<a href="run-study.html#basic-steps-when-collecting-the-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>As many data sources are not primarily developed for the particular purpose of your study, you often need to modify the source data to reflect the measurements of your <span class="math inline">\(Y&#39;s\)</span>, <span class="math inline">\(X&#39;s\)</span> and <span class="math inline">\(Z&#39;s\)</span> you wish to examine in your causal model. It is also often that secondary data are not readily available for analysis such that you will need to collect and process these data (for example, by writing a program that extracts data from a website, search engine, or API, or by applying for permission to access the data).</p>
 <p>We distinguish between <strong>source dataset(s)</strong> and the <strong>analysis dataset</strong> that you will be using to run the study.</p>
 <p>We point to the following distinction that has implications on the resources needed to collect and process:</p>
@@ -233,18 +279,18 @@
 <li>Secondary source data that you need to process for the purpose of your study (for example, by use of web-scraping, use of web-APIs, or extraction from data warehouses)</li>
 </ul>
 <p>The following steps are typically performed when collecting the data:</p>
-<div id="identify-secondary-data-sources" class="section level3">
-<h3><span class="header-section-number">4.1.1</span> Identify secondary data sources</h3>
+<div id="identify-secondary-data-sources" class="section level3 hasAnchor" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> Identify secondary data sources<a href="run-study.html#identify-secondary-data-sources" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Once you have designed the study, you can now search for appropriate data sources of your <span class="math inline">\(X&#39;s\)</span>, <span class="math inline">\(Y&#39;s\)</span> and <span class="math inline">\(Z&#39;s\)</span>. That means you investigate which data items of one or multiple secondary data source(s) you are using and how these items can be collected. You have to document where, how and which data you gathered and processed. Specify exactly the variables that you are extracting and any exclusions of the data source. If you are generating a dataset yourself from another source through scraping techniques, you also need to document how the data are collected and processed, for example, by sharing the corresponding script and a description of that data.</p>
-<p>You need to assess the suitability of the potential secondary data sources. Types and use of secondary data sources have been described across different disciplines, for example, <span class="citation">Hair, Page, and Brunsveld (<a href="#ref-hair_nature_2019" role="doc-biblioref">2019</a>)</span> for business data, <span class="citation">Eriksson and Ibáñez (<a href="#ref-eriksson_secondary_2016" role="doc-biblioref">2016</a>)</span> for drug utilization studies, <span class="citation">Fitchett and Heafner (<a href="#ref-fitchett_quantitative_2017" role="doc-biblioref">2017</a>)</span> for social studies. It is important to assess the quality of the secondary data sources by the following criteria <span class="citation">(Hair, Page, and Brunsveld <a href="#ref-hair_nature_2019" role="doc-biblioref">2019</a>)</span>:</p>
+<p>You need to assess the suitability of the potential secondary data sources. Types and use of secondary data sources have been described across different disciplines, for example, <span class="citation">Hair, Page, and Brunsveld (<a href="#ref-hair_nature_2019" role="doc-biblioref">2019</a>)</span> for business data, <span class="citation">Eriksson and Ibáñez (<a href="#ref-eriksson_secondary_2016" role="doc-biblioref">2016</a>)</span> for drug utilization studies, <span class="citation">Fitchett and Heafner (<a href="#ref-fitchett_quantitative_2017" role="doc-biblioref">2017</a>)</span> for social studies. It is important to assess the quality of the secondary data sources by the following criteria <span class="citation">(<a href="#ref-hair_nature_2019" role="doc-biblioref">Hair, Page, and Brunsveld 2019</a>)</span>:</p>
 <ul>
 <li><strong>measurement validity</strong>: This may be difficult to assess, but you may want to look for research that has used the data you aim to use</li>
 <li><strong>reliability</strong>: Does the source that you are using provide the data of sufficient quality?</li>
 <li><strong>potential bias</strong> This arises when the data do not measure what you want to measure. Biases may arise from, for example, changes in the sample from which the data are collected (for example, if an institution changes the way data are reported or if the sampled population is changing)</li>
 </ul>
 </div>
-<div id="develop-a-data-collection-and-analysis-plan" class="section level3">
-<h3><span class="header-section-number">4.1.2</span> Develop a data collection and analysis plan</h3>
+<div id="develop-a-data-collection-and-analysis-plan" class="section level3 hasAnchor" number="4.1.2">
+<h3><span class="header-section-number">4.1.2</span> Develop a data collection and analysis plan<a href="run-study.html#develop-a-data-collection-and-analysis-plan" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li>Use a data scheme to describe how you combine different secondary datasets into your analysis dataset.</li>
 <li>Even if there is only one source dataset that you are using, you may need to think about how this dataset needs to be processed to fit your final analysis purpose.</li>
@@ -252,16 +298,16 @@
 <li>Per each dataset, describe which variables or items you plan to collect and how you aim to process the source data to fit the purpose of your study.</li>
 </ul>
 </div>
-<div id="obtain-access-to-source-data-or-generate-the-data" class="section level3">
-<h3><span class="header-section-number">4.1.3</span> Obtain access to source data or generate the data</h3>
+<div id="obtain-access-to-source-data-or-generate-the-data" class="section level3 hasAnchor" number="4.1.3">
+<h3><span class="header-section-number">4.1.3</span> Obtain access to source data or generate the data<a href="run-study.html#obtain-access-to-source-data-or-generate-the-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li>Investigate how you can obtain access to the data including permissions, fees and any ethical considerations.</li>
 <li>Note that many data sources require registration and/or charge fees for obtaining access and processing requests. Special conditions for academics and students often apply. You may need to describe your research project and ask for permission. Allow these steps to take considerable time.</li>
 </ul>
 </div>
 </div>
-<div id="basic-steps-when-processing-and-preparing-the-data" class="section level2">
-<h2><span class="header-section-number">4.2</span> Basic steps when processing and preparing the data</h2>
+<div id="basic-steps-when-processing-and-preparing-the-data" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Basic steps when processing and preparing the data<a href="run-study.html#basic-steps-when-processing-and-preparing-the-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Once the <strong>source data</strong> have arrived, been extracted or simply downloaded, you need to develop a program (Stata do-file, R-code or code using other software) that documents the data extraction steps and that leads to an analysis dataset. Make sure you save all raw source data in a safe place to ensure that you do not accidentally delete or overwrite these data.</p>
 <p>When you develop the program, you need to make decisions informed by the previous steps related to</p>
 <ul>
@@ -278,8 +324,8 @@
 <li>Aggregating to the appropriate level (individual, family, county, state, country, patient, physician, or hospital, etc.)</li>
 <li>Specifying the final analysis dataset: what outcomes (<span class="math inline">\(Y\)</span>), variables of interest (<span class="math inline">\(X\)</span>), confounders (other <span class="math inline">\(X\)</span>’s), instruments (<span class="math inline">\(Z\)</span>) are possible to use from the data?</li>
 </ul>
-<div id="generate-the-analysis-dataset" class="section level3">
-<h3><span class="header-section-number">4.2.1</span> Generate the analysis dataset</h3>
+<div id="generate-the-analysis-dataset" class="section level3 hasAnchor" number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> Generate the analysis dataset<a href="run-study.html#generate-the-analysis-dataset" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>There are three major tasks that are typically needed to generate the analysis dataset:</p>
 <p><strong>1. Clean your data.</strong></p>
 <ul>
@@ -304,18 +350,18 @@
 </ul>
 </div>
 </div>
-<div id="resources-box-3" class="section level2">
-<h2><span class="header-section-number">4.3</span> Resources Box</h2>
-<div id="how-to-organize-your-research-project" class="section level3">
-<h3><span class="header-section-number">4.3.1</span> How to organize your research project:</h3>
+<div id="resources-box-3" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Resources Box<a href="run-study.html#resources-box-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="how-to-organize-your-research-project" class="section level3 hasAnchor" number="4.3.1">
+<h3><span class="header-section-number">4.3.1</span> How to organize your research project:<a href="run-study.html#how-to-organize-your-research-project" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><a href="https://towardsdatascience.com/how-to-keep-your-research-projects-organized-part-1-folder-structure-10bd56034d3a">Folder structure</a></li>
 <li><a href="https://research.cs.queensu.ca/home/audrey/papers/GHC2009.BOFslides.pdf">Tips, tricks and software for keeping research organized</a></li>
 <li><a href="https://twp.duke.edu/sites/twp.duke.edu/files/file-attachments/research_project.pdf">Organizing a research project</a></li>
 </ul>
 </div>
-<div id="coding-practices-best-practices-for-data-and-code-management-in-projects" class="section level3">
-<h3><span class="header-section-number">4.3.2</span> Coding practices: Best Practices for Data and Code Management in Projects</h3>
+<div id="coding-practices-best-practices-for-data-and-code-management-in-projects" class="section level3 hasAnchor" number="4.3.2">
+<h3><span class="header-section-number">4.3.2</span> Coding practices: Best Practices for Data and Code Management in Projects<a href="run-study.html#coding-practices-best-practices-for-data-and-code-management-in-projects" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>General principles on <strong>How to code well</strong></p>
 <ul>
 <li>Make program files self-contained</li>
@@ -329,32 +375,32 @@
 <li>Beware of error-causing codes (small caps, commas, semicolon)</li>
 </ul>
 </div>
-<div id="data-cleaning" class="section level3">
-<h3><span class="header-section-number">4.3.3</span> Data cleaning</h3>
+<div id="data-cleaning" class="section level3 hasAnchor" number="4.3.3">
+<h3><span class="header-section-number">4.3.3</span> Data cleaning<a href="run-study.html#data-cleaning" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><a href="https://lost-stats.github.io/Data_Manipulation/data_manipulation.html">LOST Library of Statistical Technqiues - Data Manipulation Section</a></li>
 <li><a href="https://mdl.library.utoronto.ca/technology/tutorials/cleaning-data-stata">Cleaning data in STATA</a></li>
 </ul>
 </div>
-<div id="collecting-data-from-meta-data-and-web-scraping" class="section level3">
-<h3><span class="header-section-number">4.3.4</span> Collecting data from meta-data and web-scraping</h3>
+<div id="collecting-data-from-meta-data-and-web-scraping" class="section level3 hasAnchor" number="4.3.4">
+<h3><span class="header-section-number">4.3.4</span> Collecting data from meta-data and web-scraping<a href="run-study.html#collecting-data-from-meta-data-and-web-scraping" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><a href="https://librarycarpentry.org/lc-webscraping/reference">Introduction to web scraping: Resources</a></li>
 </ul>
 </div>
 </div>
-<div id="checklist-to-running-the-study-and-collecting-the-data" class="section level2">
-<h2><span class="header-section-number">4.4</span> Checklist to running the study and collecting the data</h2>
+<div id="checklist-to-running-the-study-and-collecting-the-data" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> Checklist to running the study and collecting the data<a href="run-study.html#checklist-to-running-the-study-and-collecting-the-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li>Develop a data extraction and analysis plan by describing how your final analysis dataset should look like</li>
 <li>Set up data extraction methods if your data are not readily available to use, for example, a scraping algorithm</li>
-<li>Go back to your causal model and identification strategy: Do the analysis data allow the analysis you like to perform? Most importantly, are they collased at the level needed?</li>
+<li>Go back to your causal model and identification strategy: Do the analysis data allow the analysis you like to perform? Most importantly, are they collapsed at the level needed?</li>
 <li>Set up a reproducible program code of all steps that you take to clean, combine and aggregate the data</li>
 <li>Store and document your analysis dataset in a codebook</li>
 </ul>
 </div>
-<div id="example-hellerstein_importance_1998-2" class="section level2">
-<h2><span class="header-section-number">4.5</span> Example: <span class="citation">Hellerstein (<a href="#ref-hellerstein_importance_1998" role="doc-biblioref">1998</a>)</span></h2>
+<div id="example-hellerstein_importance_1998-2" class="section level2 hasAnchor" number="4.5">
+<h2><span class="header-section-number">4.5</span> Example: <span class="citation">Hellerstein (<a href="#ref-hellerstein_importance_1998" role="doc-biblioref">1998</a>)</span><a href="run-study.html#example-hellerstein_importance_1998-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The empirical application of <span class="citation">Hellerstein (<a href="#ref-hellerstein_importance_1998" role="doc-biblioref">1998</a>)</span> is based on three datasets as provided by the National Ambulatory Care Survey (NAMCS) from the year 1989:</p>
 <ul>
 <li><strong>NAMCS</strong>, containing demographic and medical information on the full sample of patients</li>
@@ -371,8 +417,8 @@
 <p>Usually, certain transformations need to be performed to be able to use the raw dataset. This can apply to the file or data format, the structure of the dataset or you might need to combine different datasets.</p>
 <p>After downloading the raw data from the CDC website, a challenge is to structure the raw dataset to include the relevant variables in Stata. After importing the text file, all data are condensed to one string of characters in a single column. This means that we first need to indicate the different data items (variables) for the individual information (i.e. patient characteristics). Therefore, to be able to use the data, we need to manually split the string into the desired format, so the information is split in separate variables. Which digits in the initial string belong to one data item is defined in the documentation files (also often referred to as a codebook) provided by the <a href="https://www.cdc.gov/nchs/ahcd">CDC</a> website. Almost every dataset comes with a codebook, containing useful information on the data coding or handling. This can often help and provide the necessary information needed to successfully prepare your data for empirical analysis.</p>
 <p>For the reproduction of <span class="citation">Hellerstein (<a href="#ref-hellerstein_importance_1998" role="doc-biblioref">1998</a>)</span> we use Stata, creating a do-file containing the code (Section <a href="stata-replication-code-of-hellerstein-1998.html#A1">8.1</a>). It is important to develop a program file of your code containing every step you performed to manipulate and analyze your data. This ensures the reproducibility of your research and enables you to go back to earlier versions of your data preparation and analysis, if necessary.</p>
-<p>Before going into further detail on the data preparation, we want to emphasize the importance of properly setting up your working directory. In a single project you are likely to save, use, override and delete a multitude of files. Without using a strict system of organizing your files and folders, you will inevitably run into trouble. There is no optimal structure, and you must find what works best for you, but in general, contents of folders and subfolders should be as homogenous as possible. To make this less abstract, let us demonstrate how we manage our working directory in the data-related part of this reproduction paper.</p>
-<p>The Stata code is the heart of your empirical analysis. To make it as comprehensible as possible, we divide the code into four parts. The first part translates the raw data into a readable format; the second one applies Hellerstein’s preparatory processes; the third reproduces the descriptive statistics and the last contains the code to run the empirical analysis. Corresponding to these do-files, we create sub-folders that contain required data or offer a place to store the output. By saving the paths to all your relevant subfolders as global, you can easily navigate through your working directory. Setting up your working directory at the start of a project also helps you to keep an overview on what is done and what is to come. You can find an example of the pathing and setup in (Section <a href="stata-replication-code-of-hellerstein-1998.html#A1">8.1</a> lines 12 to 21).</p>
+<p>Before going into further detail on the data preparation, we want to emphasize the importance of properly setting up your working directory. In a single project you are likely to save, use, override and delete a multitude of files. Without using a strict system of organizing your files and folders, you will inevitably run into trouble. There is no optimal structure, and you must find what works best for you, but in general, contents of folders and sub-folders should be as homogeneous as possible. To make this less abstract, let us demonstrate how we manage our working directory in the data-related part of this reproduction paper.</p>
+<p>The Stata code is the heart of your empirical analysis. To make it as comprehensible as possible, we divide the code into four parts. The first part translates the raw data into a readable format; the second one applies Hellerstein’s preparatory processes; the third reproduces the descriptive statistics and the last contains the code to run the empirical analysis. Corresponding to these do-files, we create sub-folders that contain required data or offer a place to store the output. By saving the paths to all your relevant sub-folders as global, you can easily navigate through your working directory. Setting up your working directory at the start of a project also helps you to keep an overview on what is done and what is to come. You can find an example of the pathing and setup in (Section <a href="stata-replication-code-of-hellerstein-1998.html#A1">8.1</a> lines 12 to 21).</p>
 <p>Once the NAMCS and NAMCSd are turned into readable formats we perform the following cleaning (i.e. exclusion of certain observations), transforming and preparation steps, that are needed to reproduce the tables and figures originally produced by <span class="citation">Hellerstein (<a href="#ref-hellerstein_importance_1998" role="doc-biblioref">1998</a>)</span>:</p>
 <p>For the NAMCS, used exclusively for the reproduction of Table 1 (Section <a href="stata-replication-code-of-hellerstein-1998.html#A1">8.1</a>):</p>
 <ul>
@@ -530,19 +576,19 @@ The NAMCSd dataset serves as a source for the empirical analysis of <span class=
 
 </div>
 </div>
-<h3>References</h3>
-<div id="refs" class="references">
-<div id="ref-eriksson_secondary_2016">
-<p>Eriksson, Irene, and Luisa Ibáñez. 2016. “Secondary Data Sources for Drug Utilization Research.” In <em>Drug Utilization Research</em>, 39–48. John Wiley &amp; Sons, Ltd. <a href="https://doi.org/10.1002/9781118949740.ch4">https://doi.org/10.1002/9781118949740.ch4</a>.</p>
+<h3>References<a href="references-1.html#references-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-eriksson_secondary_2016" class="csl-entry">
+Eriksson, Irene, and Luisa Ibáñez. 2016. <span>“Secondary Data Sources for Drug Utilization Research.”</span> In <em>Drug <span>Utilization</span> <span>Research</span></em>, 39–48. John Wiley &amp; Sons, Ltd. <a href="https://doi.org/10.1002/9781118949740.ch4">https://doi.org/10.1002/9781118949740.ch4</a>.
 </div>
-<div id="ref-fitchett_quantitative_2017">
-<p>Fitchett, Paul G., and Tina L. Heafner. 2017. “Quantitative Research and Large-Scale Secondary Analysis in Social Studies.” In <em>The Wiley Handbook of Social Studies Research</em>, 68–94. John Wiley &amp; Sons, Ltd. <a href="https://doi.org/10.1002/9781118768747.ch4">https://doi.org/10.1002/9781118768747.ch4</a>.</p>
+<div id="ref-fitchett_quantitative_2017" class="csl-entry">
+Fitchett, Paul G., and Tina L. Heafner. 2017. <span>“Quantitative <span>Research</span> and <span>Large</span>-<span>Scale</span> <span>Secondary</span> <span>Analysis</span> in <span>Social</span> <span>Studies</span>.”</span> In <em>The <span>Wiley</span> <span>Handbook</span> of <span>Social</span> <span>Studies</span> <span>Research</span></em>, 68–94. John Wiley &amp; Sons, Ltd. <a href="https://doi.org/10.1002/9781118768747.ch4">https://doi.org/10.1002/9781118768747.ch4</a>.
 </div>
-<div id="ref-hair_nature_2019">
-<p>Hair, Joe F., Michael Page, and Niek Brunsveld. 2019. “The Nature and Sources of Secondary Business Data.” In <em>Essentials of Business Research Methods</em>, 4th ed. Routledge.</p>
+<div id="ref-hair_nature_2019" class="csl-entry">
+Hair, Joe F., Michael Page, and Niek Brunsveld. 2019. <span>“The <span>Nature</span> and <span>Sources</span> of <span>Secondary</span> <span>Business</span> <span>Data</span>.”</span> In <em>Essentials of <span>Business</span> <span>Research</span> <span>Methods</span></em>, 4th ed. Routledge.
 </div>
-<div id="ref-hellerstein_importance_1998">
-<p>Hellerstein, Judith K. 1998. “The Importance of the Physician in the Generic Versus Trade-Name Prescription Decision.” <em>The RAND Journal of Economics</em> 29 (1): 108–36. <a href="https://doi.org/10.2307/2555818">https://doi.org/10.2307/2555818</a>.</p>
+<div id="ref-hellerstein_importance_1998" class="csl-entry">
+Hellerstein, Judith K. 1998. <span>“The <span>Importance</span> of the <span>Physician</span> in the <span>Generic</span> Versus <span>Trade</span>-<span>Name</span> <span>Prescription</span> <span>Decision</span>.”</span> <em>The RAND Journal of Economics</em> 29 (1): 108–36. <a href="https://doi.org/10.2307/2555818">https://doi.org/10.2307/2555818</a>.
 </div>
 </div>
             </section>
@@ -555,7 +601,6 @@ The NAMCSd dataset serves as a source for the empirical analysis of <span class=
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -596,7 +641,7 @@ gitbook.start({
 },
 "download": ["DataLiteracy.pdf", "DataLiteracy.epub"],
 "search": {
-"engine": "lunr",
+"engine": "fuse",
 "options": null
 },
 "toc": {
@@ -612,7 +657,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

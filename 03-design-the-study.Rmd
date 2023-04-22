@@ -206,14 +206,14 @@ Some data are available from statistical offices (Eurostat in the European Union
 - Describe your outcomes, variables of interest, confounders and potentially, unobserved variables
 - Identify at which rung in the ladder of causality you will be investigating your research question
 - Get familiar with the foundations of your selected identification and estimation strategy
-- Identify appropriate secondary data sources that populate your causal model. Ensure that access is granted within the given timeframe of your project
-- Challenge your identifiability assumtions
+- Identify appropriate secondary data sources that populate your causal model. Ensure that access is granted within the given time frame of your project
+- Challenge your identifiability assumptions
 - Refer back to similar empirical studies and reflect on their design and identification strategy
 
 
 ## Example: @hellerstein_importance_1998
 
-The identified research question and the hypothesis that physicians are more likely to prescribe generics to patients who do not have insurance coverage for prescription pharmaceuticals can be modelled with the help of a directed acyclic graph (DAG).  
+The identified research question and the hypothesis that physicians are more likely to prescribe generics to patients who do not have insurance coverage for prescription pharmaceuticals can be modeled with the help of a directed acyclic graph (DAG).  
 
 ```{r daghell, out.width='100%', fig.align='center', fig.cap='Directed Acyclic Graph, @hellerstein_importance_1998', echo=TRUE}
 #  set theme of all DAGs to `theme_dag()`--> minimalist 

@@ -146,11 +146,9 @@ General principles on **How to code well**
 
 - Develop a data extraction and analysis plan by describing how your final analysis dataset should look like
 - Set up data extraction methods if your data are not readily available to use, for example, a scraping algorithm
-- Go back to your causal model and identification strategy: Do the analysis data allow the analysis you like to perform? Most importantly, are they collased at the level needed?
+- Go back to your causal model and identification strategy: Do the analysis data allow the analysis you like to perform? Most importantly, are they collapsed at the level needed?
 - Set up a reproducible program code of all steps that you take to clean, combine and aggregate the data
 - Store and document your analysis dataset in a codebook
-
-
 
 ## Example: @hellerstein_importance_1998
 
@@ -175,9 +173,9 @@ After downloading the raw data from the CDC website, a challenge is to structure
 
 For the reproduction of @hellerstein_importance_1998 we use Stata, creating a do-file containing the code (Section \@ref(A1)). It is important to develop a program file of your code containing every step you performed to manipulate and analyze your data. This ensures the reproducibility of your research and enables you to go back to earlier versions of your data preparation and analysis, if necessary.
 
-Before going into further detail on the data preparation, we want to emphasize the importance of properly setting up your working directory. In a single project you are likely to save, use, override and delete a multitude of files. Without using a strict system of organizing your files and folders, you will inevitably run into trouble. There is no optimal structure, and you must find what works best for you, but in general, contents of folders and subfolders should be as homogenous as possible. To make this less abstract, let us demonstrate how we manage our working directory in the data-related part of this reproduction paper.
+Before going into further detail on the data preparation, we want to emphasize the importance of properly setting up your working directory. In a single project you are likely to save, use, override and delete a multitude of files. Without using a strict system of organizing your files and folders, you will inevitably run into trouble. There is no optimal structure, and you must find what works best for you, but in general, contents of folders and sub-folders should be as homogeneous as possible. To make this less abstract, let us demonstrate how we manage our working directory in the data-related part of this reproduction paper.
 
-The Stata code is the heart of your empirical analysis. To make it as comprehensible as possible, we divide the code into four parts. The first part translates the raw data into a readable format; the second one applies Hellerstein’s preparatory processes; the third reproduces the descriptive statistics and the last contains the code to run the empirical analysis. Corresponding to these do-files, we create sub-folders that contain required data or offer a place to store the output. By saving the paths to all your relevant subfolders as global, you can easily navigate through your working directory. Setting up your working directory at the start of a project also helps you to keep an overview on what is done and what is to come. You can find an example of the pathing and setup in (Section \@ref(A1) lines 12 to 21).
+The Stata code is the heart of your empirical analysis. To make it as comprehensible as possible, we divide the code into four parts. The first part translates the raw data into a readable format; the second one applies Hellerstein’s preparatory processes; the third reproduces the descriptive statistics and the last contains the code to run the empirical analysis. Corresponding to these do-files, we create sub-folders that contain required data or offer a place to store the output. By saving the paths to all your relevant sub-folders as global, you can easily navigate through your working directory. Setting up your working directory at the start of a project also helps you to keep an overview on what is done and what is to come. You can find an example of the pathing and setup in (Section \@ref(A1) lines 12 to 21).
 
 Once the NAMCS and NAMCSd are turned into readable formats we perform the following cleaning (i.e. exclusion of certain observations), transforming and preparation steps, that are needed to reproduce the tables and figures originally produced by @hellerstein_importance_1998:
 

@@ -28,11 +28,11 @@ You decide to undertake a scientific project. Where do you start? First, you nee
 
 
 
-When thinking about a research question, you need to identify a topic that is [based on [find source]]
+When thinking about a research question, you need to identify a topic that is:
 
 - *Relevant*, important in the world and interesting to you as a researcher: Does working on the topic excites you? You will spend many hours thinking about it and working on it. Therefore, it should be interesting and engaging enough for you to motivate your continued work on this topic.
 - *Specific*: not too broad and not too narrow
-- *Feasible* to research within a given timeframe: Is it possible to answer the research question based on your time budget, data and additional resources.
+- *Feasible* to research within a given time frame: Is it possible to answer the research question based on your time budget, data and additional resources.
 
 
 

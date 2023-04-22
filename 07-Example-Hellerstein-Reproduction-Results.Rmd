@@ -14,8 +14,8 @@ We show the results of the replication of Tables 1-3 and Figures 1-2 of the desc
  
 ## Descriptive Analysis
 
-Summary statistics are shown in Table 1. They represent the patient sample from NAMCS in the year 1991. Results are similar to the summary statistics shown by @hellerstein_importance_1998. Some categories of the payment sources differ slightly. Four categories -- Self-pay, Medicare, Madicaid and HMO/prepaid plan -- match. The categories Blue Cross/ Blue Shield and Other commerical insurer seem to have merged into the category Private/Commercial.
-When looking at the distribution of insurance coverage, we see that the frequency of patients with status *Private/Commercial* adds up to the frequencies of Blue Cross and other commercial insurers. Differences in the distribution of other covariates are slim. The most noticable difference lies in the share of specialist physicians, which account for 68% of visited physicians in the 1991 sample compared to 55% in 1989.
+Summary statistics are shown in Table 1. They represent the patient sample from NAMCS in the year 1991. Results are similar to the summary statistics shown by @hellerstein_importance_1998. Some categories of the payment sources differ slightly. Four categories -- Self-pay, Medicare, Madicaid and HMO/prepaid plan -- match. The categories Blue Cross/ Blue Shield and Other commercial insurer seem to have merged into the category Private/Commercial.
+When looking at the distribution of insurance coverage, we see that the frequency of patients with status *Private/Commercial* adds up to the frequencies of Blue Cross and other commercial insurers. Differences in the distribution of other covariates are slim. The most notable difference lies in the share of specialist physicians, which account for 68% of visited physicians in the 1991 sample compared to 55% in 1989.
 
 
 
